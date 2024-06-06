@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 
-namespace Speckle.Revit2023.Interfaces;
+namespace Speckle.Revit.Interfaces;
 
 [SuppressMessage("Design", "CA1008:Enums should have zero value")]
 public enum RevitBuiltInCategory

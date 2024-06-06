@@ -1,11 +1,11 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using Autodesk.Revit.DB;
 using Speckle.ProxyGenerator;
-using Speckle.Revit2023.Interfaces;
+using Speckle.Revit.Interfaces;
 #pragma warning disable CA1010
 #pragma warning disable CA1710
 
-namespace Speckle.Revit2023.Api;
+namespace Speckle.Revit.Api;
 
 [Proxy(
   typeof(Document),

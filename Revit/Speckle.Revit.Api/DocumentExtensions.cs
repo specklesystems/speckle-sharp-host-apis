@@ -1,7 +1,7 @@
-﻿using Speckle.Revit2023.Interfaces;
+﻿using Speckle.Revit.Interfaces;
 using DB = Autodesk.Revit.DB;
 
-namespace Speckle.Revit2023.Api;
+namespace Speckle.Revit.Api;
 
 public static class DocumentExtensions
 {

@@ -1,4 +1,4 @@
-﻿namespace Speckle.Revit2023.Interfaces;
+﻿namespace Speckle.Revit.Interfaces;
 
 public interface IRevitElement
 {

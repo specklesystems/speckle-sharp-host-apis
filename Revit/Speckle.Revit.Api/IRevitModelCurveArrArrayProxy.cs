@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using Autodesk.Revit.DB;
 using Speckle.ProxyGenerator;
-using Speckle.Revit2023.Interfaces;
+using Speckle.Revit.Interfaces;
 
-namespace Speckle.Revit2023.Api;
+namespace Speckle.Revit.Api;
 
 [Proxy(
   typeof(ModelCurveArrArray),
