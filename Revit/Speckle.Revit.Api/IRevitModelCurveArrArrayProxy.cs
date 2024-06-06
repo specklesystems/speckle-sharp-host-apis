@@ -8,9 +8,9 @@ namespace Speckle.Revit.Api;
 [Proxy(
   typeof(ModelCurveArrArray),
   ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
-  new[] { "GetEnumerator", "Item", "get_Item", "set_Item" }
+  ["GetEnumerator", "Item", "get_Item", "set_Item"]
 )]
-public partial interface IRevitModelCurveArrArrayProxy : IRevitModelCurveArrArray { }
+public partial interface IRevitModelCurveArrArrayProxy : IRevitModelCurveArrArray;
 
 public partial class ModelCurveArrArrayProxy
 {

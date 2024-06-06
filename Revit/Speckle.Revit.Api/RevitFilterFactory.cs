@@ -38,31 +38,31 @@ public class RevitFilterFactory : IRevitFilterFactory
   typeof(ElementFilter),
   ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
 )]
-public partial interface IRevitElementFilterProxy : IRevitElementFilter { }
+public partial interface IRevitElementFilterProxy : IRevitElementFilter;
 
 [Proxy(
   typeof(ElementIsElementTypeFilter),
   ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
 )]
-public partial interface IRevitElementIsElementTypeFilterProxy : IRevitElementIsElementTypeFilter { }
+public partial interface IRevitElementIsElementTypeFilterProxy : IRevitElementIsElementTypeFilter;
 
 [Proxy(
   typeof(ElementMulticategoryFilter),
   ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
 )]
-public partial interface IRevitElementMulticategoryFilterProxy : IRevitElementMulticategoryFilter { }
+public partial interface IRevitElementMulticategoryFilterProxy : IRevitElementMulticategoryFilter;
 
 [Proxy(
   typeof(LogicalAndFilter),
   ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
 )]
-public partial interface IRevitLogicalAndFilterProxy : IRevitLogicalAndFilterFilter { }
+public partial interface IRevitLogicalAndFilterProxy : IRevitLogicalAndFilterFilter;
 
 [Proxy(
   typeof(FilteredElementCollector),
   ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
 )]
-public partial interface IRevitFilteredElementCollectorProxy : IRevitFilteredElementCollector { }
+public partial interface IRevitFilteredElementCollectorProxy : IRevitFilteredElementCollector;
 
 public partial class FilteredElementCollectorProxy
 {

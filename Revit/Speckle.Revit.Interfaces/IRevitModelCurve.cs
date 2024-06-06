@@ -1,3 +1,3 @@
 namespace Speckle.Revit.Interfaces;
 
-public interface IRevitModelCurve : IRevitCurveElement { }
+public interface IRevitModelCurve : IRevitCurveElement;

@@ -7,6 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{7A91F6
 		.editorconfig = .editorconfig
 		Directory.Build.props = Directory.Build.props
 		global.json = global.json
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Speckle.Revit2023.Api", "Revit\Revit2023\Speckle.Revit2023.Api\Speckle.Revit2023.Api.csproj", "{BE42055B-1D53-49AC-8B76-B55871E24E8B}"

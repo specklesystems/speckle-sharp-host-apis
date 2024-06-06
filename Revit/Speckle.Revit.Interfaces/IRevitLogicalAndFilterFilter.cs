@@ -1,3 +1,3 @@
 ﻿namespace Speckle.Revit.Interfaces;
 
-public interface IRevitLogicalAndFilterFilter : IRevitElementFilter { }
+public interface IRevitLogicalAndFilterFilter : IRevitElementFilter;
