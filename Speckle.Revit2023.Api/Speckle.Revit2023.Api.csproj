@@ -7,7 +7,7 @@
   <Import Project="..\Speckle.Revit.Api\Speckle.Revit.Api.projitems" Label="Shared" />
   <ItemGroup>
     <PackageReference Include="Speckle.ProxyGenerator" />
-    <PackageReference Include="Speckle.Revit.API"  />
+    <PackageReference Include="Speckle.Revit.API" Version="2023.0.0" />
     <PackageReference Include="Mapster"  />
   </ItemGroup>
   <ItemGroup>
