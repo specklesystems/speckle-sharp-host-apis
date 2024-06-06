@@ -8,7 +8,6 @@ const string RESTORE = "restore";
 const string BUILD = "build";
 const string TEST = "test";
 const string FORMAT = "format";
-const string VERSION = "version";
 const string RESTORE_TOOLS = "restore-tools";
 const string PACK = "pack";
 
@@ -35,17 +34,6 @@ Target(
     {
       RemoveDirectory(d);
     }
-  }
-);
-
-Target(
-  VERSION,
-  async () =>
-  {
-    var (output, _) = await ReadAsync("dotnet", "minver -v w").ConfigureAwait(false);
-    output = output.Trim();
-    Console.WriteLine($"Version: {output}");
-    Run("echo", $"\"version={output}\" >> $GITHUB_OUTPUT");
   }
 );
 
@@ -81,13 +69,7 @@ Target(
   Consts.Solutions,
   s =>
   {
-    var version = Environment.GetEnvironmentVariable("GitVersion_FullSemVer") ?? "3.0.0-localBuild";
-    var fileVersion = Environment.GetEnvironmentVariable("GitVersion_AssemblySemFileVer") ?? "3.0.0.0";
-    Console.WriteLine($"Version: {version} & {fileVersion}");
-    Run(
-      "dotnet",
-      $"build {s} -c Release --no-restore -p:IsDesktopBuild=false -p:Version={version} -p:FileVersion={fileVersion} -v:m"
-    );
+    Run("dotnet", $"build {s} -c Release --no-restore");
   }
 );
 
@@ -114,13 +96,7 @@ Target(
   Consts.Solutions,
   s =>
   {
-    var version = Environment.GetEnvironmentVariable("GitVersion_FullSemVer") ?? "3.0.0-localBuild";
-    var fileVersion = Environment.GetEnvironmentVariable("GitVersion_AssemblySemFileVer") ?? "3.0.0.0";
-    Console.WriteLine($"Version: {version} & {fileVersion}");
-    Run(
-      "dotnet",
-      $"build {s} -c Release --no-restore -p:IsDesktopBuild=false -p:Version={version} -p:FileVersion={fileVersion} -v:m"
-    );
+    Run("dotnet", $"pack {s} -c Release -o output --no-build");
   }
 );
 
