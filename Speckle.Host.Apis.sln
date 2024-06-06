@@ -1,6 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Revit", "Revit", "{8F540B7F-7548-46E9-BDEC-4DAB99367908}"
+	ProjectSection(SolutionItems) = preProject
+		Revit\Directory.Build.props = Revit\Directory.Build.props
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{7A91F6BF-EA8A-428E-BB97-B6C448C247EF}"
 	ProjectSection(SolutionItems) = preProject
