@@ -19,7 +19,7 @@ public partial interface IRevitXYZProxy : IRevitXYZ;
 [Proxy(
   typeof(LocationCurve),
   ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
-  ["JoinType", "ElementsAtJoin"]
+  new[] { "JoinType", "ElementsAtJoin" }
 )]
 public partial interface IRevitLocationCurveProxy : IRevitLocationCurve;
 
