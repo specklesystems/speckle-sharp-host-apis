@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Speckle.Revit2023.Api", "Speckle.Revit2023.Api\Speckle.Revit2023.Api.csproj", "{199733E0-5C61-4C9C-A115-0CADD5058F20}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Revit", "Revit", "{8F540B7F-7548-46E9-BDEC-4DAB99367908}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Speckle.Revit2023.Interfaces", "Speckle.Revit2023.Interfaces\Speckle.Revit2023.Interfaces.csproj", "{86D5D9A2-7885-4871-AD5B-081B62E87908}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Speckle.Revit.Interfaces", "Speckle.Revit.Interfaces\Speckle.Revit.Interfaces.shproj", "{E1C43415-3200-45F4-8BF9-A4DD7D7F2ED6}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Speckle.Revit.Api", "Speckle.Revit.Api\Speckle.Revit.Api.shproj", "{E1C43415-3200-45F4-8BF9-A4DD7D7F2ED7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{7A91F6BF-EA8A-428E-BB97-B6C448C247EF}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		Directory.Build.props = Directory.Build.props
+		Directory.Packages.props = Directory.Packages.props
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Versions", "Versions", "{80F2939A-20C8-4128-82EA-F14274D9E57D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{199733E0-5C61-4C9C-A115-0CADD5058F20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{199733E0-5C61-4C9C-A115-0CADD5058F20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{199733E0-5C61-4C9C-A115-0CADD5058F20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{199733E0-5C61-4C9C-A115-0CADD5058F20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86D5D9A2-7885-4871-AD5B-081B62E87908}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86D5D9A2-7885-4871-AD5B-081B62E87908}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86D5D9A2-7885-4871-AD5B-081B62E87908}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86D5D9A2-7885-4871-AD5B-081B62E87908}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E1C43415-3200-45F4-8BF9-A4DD7D7F2ED6} = {8F540B7F-7548-46E9-BDEC-4DAB99367908}
+		{E1C43415-3200-45F4-8BF9-A4DD7D7F2ED7} = {8F540B7F-7548-46E9-BDEC-4DAB99367908}
+		{80F2939A-20C8-4128-82EA-F14274D9E57D} = {8F540B7F-7548-46E9-BDEC-4DAB99367908}
+		{199733E0-5C61-4C9C-A115-0CADD5058F20} = {80F2939A-20C8-4128-82EA-F14274D9E57D}
+		{86D5D9A2-7885-4871-AD5B-081B62E87908} = {80F2939A-20C8-4128-82EA-F14274D9E57D}
+	EndGlobalSection
+EndGlobal
