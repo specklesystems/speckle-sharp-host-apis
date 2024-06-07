@@ -28,3 +28,6 @@ jobs:
               
       - name: 🔫 Build and Pack
         run: ./build.ps1 pack
+
+      - name: Push to nuget.org
+        run: dotnet nuget push output\*.nupkg --source "https://api.nuget.org/v3/index.json" --api-key ${{secrets.CONNECTORS_NUGET_TOKEN }} --skip-duplicate
