@@ -3,9 +3,9 @@
     <PackageVersion Include="Bullseye" Version="5.0.0"/>
     <PackageVersion Include="Glob" Version="1.1.9" />
     <PackageVersion Include="SimpleExec"  Version="12.0.0"/>    
-    <PackageVersion Include="Speckle.ProxyGenerator" Version="0.1.6" PrivateAssets="All"/>
+    <PackageVersion Include="Speckle.ProxyGenerator" Version="0.1.6" />
     <PackageVersion Include="Mapster" Version="7.3.0" />
-    <PackageVersion Include="MinVer" Version="5.0.0" PrivateAssets="All"/> 
-    <PackageVersion Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
+    <PackageVersion Include="MinVer" Version="5.0.0" /> 
+    <PackageVersion Include="Microsoft.SourceLink.GitHub" Version="8.0.0" />
   </ItemGroup>
 </Project>
