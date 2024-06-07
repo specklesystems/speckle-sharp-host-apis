@@ -3,4 +3,5 @@
 public interface IRevitUnitUtils
 {
   double ConvertFromInternalUnits(double value, IRevitForgeTypeId forgeTypeId);
+  IRevitForgeTypeId Length { get; }
 }

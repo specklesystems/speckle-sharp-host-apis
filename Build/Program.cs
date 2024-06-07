@@ -59,7 +59,7 @@ Target(
   Consts.Solutions,
   s =>
   {
-    Run("dotnet", $"restore {s}");
+    Run("dotnet", $"restore {s} --locked-mode");
   }
 );
 
@@ -100,6 +100,6 @@ Target(
   }
 );
 
-Target("default", DependsOn(FORMAT, PACK), () => Console.WriteLine("Done!"));
+Target("default", DependsOn(FORMAT, TEST), () => Console.WriteLine("Done!"));
 
 await RunTargetsAndExitAsync(args).ConfigureAwait(true);
