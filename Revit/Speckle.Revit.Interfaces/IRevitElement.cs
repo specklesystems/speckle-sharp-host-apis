@@ -10,6 +10,19 @@ public interface IRevitElement : IRevitObject
   IRevitDocument Document { get; }
   IRevitElementId GetTypeId();
   string Name { get; }
+
+
+  IRevitFamilySymbol? ToFamilySymbol();
+}
+public interface IRevitElementType
+{
+  string Name { get; }
+  string FamilyName { get; }
+  
+}
+public interface IRevitFamilySymbol : IRevitElementType
+{
+  
 }
 
 public interface IRevitBasePoint : IRevitElement

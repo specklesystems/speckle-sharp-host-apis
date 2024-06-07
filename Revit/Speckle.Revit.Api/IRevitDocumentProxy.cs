@@ -29,6 +29,28 @@ public partial interface IRevitForgeTypeIdProxy : IRevitForgeTypeId;
 )]
 public partial interface IRevitElementProxy : IRevitElement;
 
+public partial class ElementProxy
+{
+  public IRevitFamilySymbol? ToFamilySymbol()
+  {
+    if (_Instance is FamilySymbol s)
+    {
+      return new FamilySymbolProxy(s);
+    }
+
+    return null;
+  }
+}
+[Proxy(
+  typeof(FamilySymbol),
+  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
+)]
+public partial interface IRevitFamilySymbolProxy : IRevitFamilySymbol;
+[Proxy(
+  typeof(ElementType),
+  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
+)]
+public partial interface IRevitElementTypeProxy : IRevitElementType;
 [Proxy(
   typeof(Category),
   ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
