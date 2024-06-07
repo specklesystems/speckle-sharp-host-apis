@@ -24,9 +24,4 @@
   <PropertyGroup>
     <MinVerDefaultPreReleaseIdentifiers>preview.0</MinVerDefaultPreReleaseIdentifiers>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="MinVer" />
-    <PackageReference Include="Microsoft.SourceLink.GitHub" />
-  </ItemGroup>
 </Project>

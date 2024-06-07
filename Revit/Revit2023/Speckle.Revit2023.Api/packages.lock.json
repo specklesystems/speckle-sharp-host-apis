@@ -67,11 +67,7 @@
         "contentHash": "228FG0jLcIwTVJyz8CLFKueVqQK36ANazUManGaJHkO0icjiIypKW7YLWLIWahyIkdh5M7mV2dJepllLyA1SKg=="
       },
       "speckle.revit2023.interfaces": {
-        "type": "Project",
-        "dependencies": {
-          "Microsoft.SourceLink.GitHub": "[8.0.0, )",
-          "MinVer": "[5.0.0, )"
-        }
+        "type": "Project"
       }
     }
   }
