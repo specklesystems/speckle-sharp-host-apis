@@ -1,9 +1,6 @@
-﻿using System.Diagnostics.CodeAnalysis;
+﻿namespace Speckle.Revit.Interfaces;
 
-namespace Speckle.Revit.Interfaces;
-
-[SuppressMessage("Design", "CA1040:Avoid empty interfaces")]
-public interface IRevitFormatOptions
+public interface IRevitFormatOptions : IRevitObject
 {
   IRevitForgeTypeId GetUnitTypeId();
 }

@@ -1,6 +1,6 @@
 ﻿namespace Speckle.Revit.Interfaces;
 
-public interface IRevitCategory
+public interface IRevitCategory : IRevitObject
 {
   string Name { get; }
 }

@@ -1,6 +1,3 @@
-﻿using System.Diagnostics.CodeAnalysis;
+﻿namespace Speckle.Revit.Interfaces;
 
-namespace Speckle.Revit.Interfaces;
-
-[SuppressMessage("Design", "CA1040:Avoid empty interfaces")]
-public interface IRevitLocation;
+public interface IRevitLocation: IRevitObject;

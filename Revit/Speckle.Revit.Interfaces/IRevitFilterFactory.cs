@@ -1,7 +1,7 @@
 ﻿namespace Speckle.Revit.Interfaces;
 
 #pragma warning disable CA1040
-public interface IRevitFilterFactory
+public interface IRevitFilterFactory 
 {
   IRevitElementIsElementTypeFilter CreateElementIsElementTypeFilter(bool inverted);
   IRevitElementMulticategoryFilter CreateElementMulticategoryFilter(
