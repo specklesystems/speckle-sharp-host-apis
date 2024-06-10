@@ -10,23 +10,15 @@ public interface IRevitCurve : IRevitGeometryObject
   IList<IRevitXYZ> Tessellate();
 }
 
-public struct RevitCloudPoint
-{
-  public float X  { get; }
-  public float Y  { get; }
-  public float Z  { get; }
-  public int Color { get; }
-
-  public RevitCloudPoint(float x, float y, float z, int color)
-  {
-    X = x;
-    Y = y;
-    Z = z;
-    Color = color;
-  }
+public interface IRevitCloudPoint
+{   float X  { get; }
+   float Y  { get; }
+   float Z  { get; }
+   int Color { get; }
+  IRevitXYZ ToXYZ();
 }
 
-public interface IRevitCloudPointList : IEnumerable<RevitCloudPoint>
+public interface IRevitCloudPointList : IEnumerable<IRevitCloudPoint>
 {
 }
 

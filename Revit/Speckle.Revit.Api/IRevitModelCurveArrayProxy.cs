@@ -136,7 +136,28 @@ public partial class DoubleArrayProxy
 
   public double this[int index] => _Instance.get_Item(index);
 }
+public struct RevitCloudPoint : IRevitCloudPoint
+{
+  public float X  { get; }
+  public float Y  { get; }
+  public float Z  { get; }
+  public int Color { get; }
 
+  public RevitCloudPoint(float x, float y, float z, int color)
+  {
+    X = x;
+    Y = y;
+    Z = z;
+    Color = color;
+  }
+
+  public IRevitXYZ ToXYZ() => new XYZProxy(new XYZ(X, Y, Z));
+}
+[Proxy(
+  typeof(RevitCloudPoint),
+  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
+)]
+public partial interface IRevitCloudPointProxy : IRevitCloudPointList;
 [Proxy(
   typeof(PointCollection),
   ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
@@ -148,10 +169,10 @@ public partial class PointCollectionProxy
 {
   IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 
-  public IEnumerator<RevitCloudPoint> GetEnumerator() =>
+  public IEnumerator<IRevitCloudPoint> GetEnumerator() =>
     new RevitCloudPointListIterator(_Instance.GetPointIterator());
 
-  private readonly struct RevitCloudPointListIterator : IEnumerator<RevitCloudPoint>
+  private readonly struct RevitCloudPointListIterator : IEnumerator<IRevitCloudPoint>
   {
     private readonly PointIterator _curveArrayIterator;
 
@@ -168,7 +189,7 @@ public partial class PointCollectionProxy
 
     object IEnumerator.Current => Current;
 
-    public RevitCloudPoint Current
+    public IRevitCloudPoint Current
     {
       get
       {
