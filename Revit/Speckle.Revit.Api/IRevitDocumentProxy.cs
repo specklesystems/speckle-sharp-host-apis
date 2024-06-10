@@ -31,11 +31,20 @@ public partial interface IRevitElementProxy : IRevitElement;
 
 public partial class ElementProxy
 {
+  public IRevitBoundingBoxXYZ GetBoundingBox() => new BoundingBoxXYZProxy(_Instance.get_BoundingBox(null));
   public IRevitFamilySymbol? ToFamilySymbol()
   {
     if (_Instance is FamilySymbol s)
     {
       return new FamilySymbolProxy(s);
+    }
+
+    return null;
+  }  public IRevitMaterial? ToMaterial()
+  {
+    if (_Instance is Material m)
+    {
+      return new MaterialProxy(m);
     }
 
     return null;
@@ -73,3 +82,6 @@ public partial interface IRevitWallProxy : IRevitWall;
 
 [Proxy(typeof(HostObject), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
 public partial interface IRevitHostObjectProxy : IRevitHostObject;
+
+[Proxy(typeof(Ellipse), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+public partial interface IRevitEllipseProxy : IRevitEllipse;

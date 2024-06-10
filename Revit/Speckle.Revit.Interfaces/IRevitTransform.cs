@@ -1,6 +1,6 @@
 ﻿namespace Speckle.Revit.Interfaces;
 
-public interface IRevitTransform : IRevitObject
+public interface IRevitTransform : IRevitObject, IDisposable
 {
   IRevitXYZ OfPoint(IRevitXYZ inbound);
   IRevitXYZ OfVector(IRevitXYZ inbound);

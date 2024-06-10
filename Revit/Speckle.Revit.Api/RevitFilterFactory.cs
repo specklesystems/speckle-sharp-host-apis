@@ -1,4 +1,5 @@
 ﻿using Autodesk.Revit.DB;
+using Autodesk.Revit.DB.PointClouds;
 using Speckle.ProxyGenerator;
 using Speckle.Revit.Interfaces;
 
@@ -33,8 +34,17 @@ public class RevitFilterFactory : IRevitFilterFactory
         elementIds.Cast<IRevitElementIdProxy>().Select(x => x._Instance).ToList()
       )
     );
+  public IRevitPointCloudFilter CreateMultiPlaneFilter(params IRevitPlane[] planes
+  ) =>
+    new PointCloudFilterProxy(
+      PointCloudFilterFactory.CreateMultiPlaneFilter(planes.Cast<PlaneProxy>().Select(x => x._Instance).ToList())
+    );
 }
-
+[Proxy(
+  typeof(PointCloudFilter),
+  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
+)]
+public partial interface IRevitPointCloudFilterProxy : IRevitPointCloudFilter;
 [Proxy(
   typeof(ElementFilter),
   ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface

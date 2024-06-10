@@ -10,9 +10,11 @@ public interface IRevitElement : IRevitObject
   IRevitDocument Document { get; }
   IRevitElementId GetTypeId();
   string Name { get; }
+  IRevitBoundingBoxXYZ GetBoundingBox();
 
 
   IRevitFamilySymbol? ToFamilySymbol();
+  IRevitMaterial? ToMaterial();
 }
 public interface IRevitElementType
 {

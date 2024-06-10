@@ -13,4 +13,6 @@ public interface IRevitFilterFactory
     IRevitDocument document,
     params IRevitElementId[] elementIds
   );
+
+  IRevitPointCloudFilter CreateMultiPlaneFilter(params IRevitPlane[] planes);
 }

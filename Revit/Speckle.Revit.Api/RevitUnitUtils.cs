@@ -37,3 +37,8 @@ public class RevitPlaneUtils : IRevitPlaneUtils
   public IRevitPlane CreateByNormalAndOrigin(IRevitXYZ normal, IRevitXYZ center) =>
     new PlaneProxy(Plane.CreateByNormalAndOrigin(((XYZProxy)normal)._Instance, ((XYZProxy)center)._Instance));
 }
+public class RevitNurbSplineUtils : IRevitNurbSplineUtils
+{
+  public IRevitNurbSpline Create(IRevitHermiteSpline hermiteSpline) =>
+    new NurbSplineProxy(NurbSpline.Create(((HermiteSplineProxy)hermiteSpline)._Instance));
+}

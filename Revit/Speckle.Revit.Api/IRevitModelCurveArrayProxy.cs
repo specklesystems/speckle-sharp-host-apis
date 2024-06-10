@@ -1,5 +1,6 @@
 using System.Collections;
 using Autodesk.Revit.DB;
+using Autodesk.Revit.DB.PointClouds;
 using Speckle.ProxyGenerator;
 using Speckle.Revit.Interfaces;
 
@@ -93,6 +94,87 @@ public partial class CurveArrayProxy
     {
       var obj = _Instance.get_Item(index);
       return Mapster.TypeAdapter.Adapt<IRevitCurve>(obj);
+    }
+  }
+}
+
+[Proxy(
+  typeof(DoubleArray),
+  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
+  new[] { "GetEnumerator", "Item", "get_Item", "set_Item" }
+)]
+public partial interface IRevitDoubleArrayProxy : IRevitDoubleArray;
+
+public partial class DoubleArrayProxy
+{
+  IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+
+  public int Count => Size;
+
+  public IEnumerator<double> GetEnumerator() =>
+    new DoubleArrayProxyIterator(_Instance.ForwardIterator());
+
+  private readonly struct DoubleArrayProxyIterator : IEnumerator<double>
+  {
+    private readonly DoubleArrayIterator _curveArrayIterator;
+
+    public DoubleArrayProxyIterator(DoubleArrayIterator doubleArrayIterator)
+    {
+      _curveArrayIterator = doubleArrayIterator;
+    }
+
+    public void Dispose() => _curveArrayIterator.Dispose();
+
+    public bool MoveNext() => _curveArrayIterator.MoveNext();
+
+    public void Reset() => _curveArrayIterator.Reset();
+
+    object IEnumerator.Current => Current;
+
+    public double Current => (double)_curveArrayIterator.Current;
+  }
+
+  public double this[int index] => _Instance.get_Item(index);
+}
+
+[Proxy(
+  typeof(PointCollection),
+  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
+  new[] { "GetEnumerator", "Item", "get_Item", "set_Item" }
+)]
+public partial interface IRevitCloudPointListProxy : IRevitCloudPointList;
+
+public partial class PointCollectionProxy
+{
+  IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+
+  public IEnumerator<RevitCloudPoint> GetEnumerator() =>
+    new RevitCloudPointListIterator(_Instance.GetPointIterator());
+
+  private readonly struct RevitCloudPointListIterator : IEnumerator<RevitCloudPoint>
+  {
+    private readonly PointIterator _curveArrayIterator;
+
+    public RevitCloudPointListIterator(PointIterator curveArrayIterator)
+    {
+      _curveArrayIterator = curveArrayIterator;
+    }
+
+    public void Dispose() => _curveArrayIterator.Dispose();
+
+    public bool MoveNext() => _curveArrayIterator.MoveNext();
+
+    public void Reset() => _curveArrayIterator.Reset();
+
+    object IEnumerator.Current => Current;
+
+    public RevitCloudPoint Current
+    {
+      get
+      {
+        var current = _curveArrayIterator.Current;
+        return new RevitCloudPoint(current.X, current.Y, current.Z, current.Color);
+      }
     }
   }
 }
