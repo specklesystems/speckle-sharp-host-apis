@@ -5,6 +5,9 @@ public interface IRevitTransform : IRevitObject
   IRevitXYZ OfPoint(IRevitXYZ inbound);
   IRevitXYZ OfVector(IRevitXYZ inbound);
   IRevitTransform Multiply(IRevitTransform right);
+  IRevitXYZ Origin { get; }
+  IRevitXYZ BasisX { get; }
+  IRevitXYZ BasisY { get; }
 }
 
 public interface IRevitTransformUtils

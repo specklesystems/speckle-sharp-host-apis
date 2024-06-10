@@ -42,3 +42,30 @@ public partial class ParameterProxy
 {
   public bool IsReadOnly => _Instance.IsReadOnly;
 }
+
+[Proxy(
+  typeof(PolyLine),
+  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
+)]
+public partial interface IRevitPolyLineProxy : IRevitPolyLine;
+[Proxy(
+  typeof(Point),
+  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
+)]
+public partial interface IRevitPointProxy : IRevitPoint;
+[Proxy(
+  typeof(Plane),
+  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
+)]
+public partial interface IRevitPlaneProxy : IRevitPlane;
+[Proxy(
+  typeof(Arc),
+  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
+)]
+public partial interface IRevitArcProxy : IRevitArc;
+[Proxy(
+  typeof(BoundingBoxXYZ),
+  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
+  new [] {"BoundEnabled", "MaxEnabled", "MinEnabled","Bounds"}
+)]
+public partial interface IRevitBoundingBoxXYZProxy : IRevitBoundingBoxXYZ;

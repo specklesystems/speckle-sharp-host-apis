@@ -4,6 +4,7 @@ using Speckle.Revit.Interfaces;
 
 namespace Speckle.Revit.Api;
 
+
 public class RevitFilterFactory : IRevitFilterFactory
 {
   public IRevitElementIsElementTypeFilter CreateElementIsElementTypeFilter(bool inverted) =>

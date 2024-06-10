@@ -13,6 +13,16 @@ public interface IRevitXYZ: IRevitObject
   IRevitXYZ Divide(double value);
   IRevitXYZ Add(IRevitXYZ source);
   IRevitXYZ Subtract(IRevitXYZ source);
+  IRevitXYZ Normalize();
+  double AngleOnPlaneTo(IRevitXYZ right, IRevitXYZ normal);
+}
+
+public interface IRevitBoundingBoxXYZ
+{
+  
+  IRevitXYZ Min { get; }
+  IRevitXYZ Max { get; }
+  IRevitTransform Transform { get; }
 }
 
 public interface IRevitXYZUtils 

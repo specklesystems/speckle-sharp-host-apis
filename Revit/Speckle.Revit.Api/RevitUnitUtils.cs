@@ -27,3 +27,13 @@ public class RevitXYZUtils : IRevitXYZUtils
   public IRevitXYZ BasisY=> new XYZProxy(XYZ.BasisY);
   public IRevitXYZ BasisZ => new XYZProxy(XYZ.BasisZ);
 }
+
+public class RevitPlaneUtils : IRevitPlaneUtils
+{
+  public IRevitPlane CreateByOriginAndBasis(IRevitXYZ center, IRevitXYZ xDirection, IRevitXYZ yDirection) =>
+    new PlaneProxy(Plane.CreateByOriginAndBasis(((XYZProxy)center)._Instance, ((XYZProxy)xDirection)._Instance,
+      ((XYZProxy)yDirection)._Instance));
+
+  public IRevitPlane CreateByNormalAndOrigin(IRevitXYZ normal, IRevitXYZ center) =>
+    new PlaneProxy(Plane.CreateByNormalAndOrigin(((XYZProxy)normal)._Instance, ((XYZProxy)center)._Instance));
+}
