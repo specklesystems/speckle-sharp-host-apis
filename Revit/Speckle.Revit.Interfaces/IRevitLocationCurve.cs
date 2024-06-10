@@ -12,6 +12,7 @@ public interface IRevitPolyLine : IRevitGeometryObject
 
 public interface IRevitGeometryObject : IRevitObject
 {
+  IRevitElementId GraphicsStyleId { get; }
 }
 
 public interface IRevitPoint : IRevitObject
@@ -50,6 +51,7 @@ public interface IRevitMesh : IRevitGeometryObject
   IRevitElementId MaterialElementId {get;}
   int NumTriangles { get; }
   IRevitMeshTriangle GetTriangle(int index);
+  IRevitMesh GetTransformed(IRevitTransform transform);
 }
 public interface IRevitMaterial : IRevitElement
 {
@@ -75,4 +77,15 @@ public interface IRevitNurbSpline : IRevitCurve
 }
 public interface IRevitDoubleArray: IReadOnlyList<double>
 {
+}
+
+public interface IRevitGeometryInstance : IRevitGeometryObject
+{
+  IRevitGeometryElement GetSymbolGeometry();
+  IRevitGeometryElement GetInstanceGeometry();
+}
+
+public interface IRevitGraphicsStyle : IRevitElement
+{
+  IRevitCategory GraphicsStyleCategory { get; }
 }

@@ -32,3 +32,8 @@ public interface IRevitXYZUtils
   IRevitXYZ BasisY { get; }
   IRevitXYZ BasisZ { get; }
 }
+
+public interface IRevitElementIdUtils
+{
+  IRevitElementId InvalidElementId { get; }
+}

@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using Autodesk.Revit.DB;
+using Mapster.Utils;
 using Speckle.ProxyGenerator;
 using Speckle.Revit.Interfaces;
 #pragma warning disable CA1010
@@ -31,7 +32,11 @@ public partial interface IRevitElementProxy : IRevitElement;
 
 public partial class ElementProxy
 {
+  public IRevitParameter GetParameter(RevitBuiltInParameter builtInParameter) => new ParameterProxy(_Instance.get_Parameter(Enum<BuiltInParameter>.Parse(builtInParameter.ToString())));
   public IRevitBoundingBoxXYZ GetBoundingBox() => new BoundingBoxXYZProxy(_Instance.get_BoundingBox(null));
+
+  public IRevitGeometryElement GetGeometry(IRevitOptions options) => new GeometryElementProxy(_Instance.get_Geometry(
+    ((OptionsProxy)options)._Instance));
   public IRevitFamilySymbol? ToFamilySymbol()
   {
     if (_Instance is FamilySymbol s)
@@ -45,6 +50,31 @@ public partial class ElementProxy
     if (_Instance is Material m)
     {
       return new MaterialProxy(m);
+    }
+
+    return null;
+  }public IRevitHostObject? ToHostObject()
+  {
+    if (_Instance is HostObject m)
+    {
+      return new HostObjectProxy(m);
+    }
+
+    return null;
+  }public IRevitGroup? ToGroup()
+  {
+    if (_Instance is Group m)
+{
+      return new GroupProxy(m);
+    }
+
+    return null;
+  }
+  public IRevitGraphicsStyle? ToGraphicsStyle()
+  {
+    if (_Instance is GraphicsStyle m)
+    {
+      return new GraphicsStyleProxy(m);
     }
 
     return null;

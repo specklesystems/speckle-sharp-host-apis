@@ -8,6 +8,7 @@ public interface IRevitTransform : IRevitObject, IDisposable
   IRevitXYZ Origin { get; }
   IRevitXYZ BasisX { get; }
   IRevitXYZ BasisY { get; }
+  IRevitTransform Inverse { get; }
 }
 
 public interface IRevitTransformUtils

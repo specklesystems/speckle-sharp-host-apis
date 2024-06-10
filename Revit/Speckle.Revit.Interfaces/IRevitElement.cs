@@ -5,6 +5,7 @@ public interface IRevitElement : IRevitObject
   IList<IRevitElementId> GetDependentElements(IRevitElementFilter filter);
 
   IRevitElementId Id { get; }
+  string UniqueId { get; }
   IRevitElementId LevelId { get; }
   IRevitCategory Category { get; }
   IRevitDocument Document { get; }
@@ -15,6 +16,20 @@ public interface IRevitElement : IRevitObject
 
   IRevitFamilySymbol? ToFamilySymbol();
   IRevitMaterial? ToMaterial();
+  IRevitHostObject? ToHostObject();
+  IRevitGroup? ToGroup();
+  IRevitGraphicsStyle? ToGraphicsStyle();
+  
+  IRevitParameterSet Parameters { get; }
+
+  IRevitParameter? GetParameter(RevitBuiltInParameter parameter);
+
+  IRevitGeometryElement GetGeometry(IRevitOptions options);
+}
+
+public interface IRevitParameterSet : IEnumerable<IRevitParameter>, IDisposable
+{
+  
 }
 public interface IRevitElementType
 {
@@ -31,15 +46,42 @@ public interface IRevitBasePoint : IRevitElement
 {
   bool IsShared { get; }
   IRevitXYZ Position { get; }
-
-  IRevitParameter? GetParameter(RevitBuiltInParameter parameter);
 }
 
 public interface IRevitParameter
 {
   bool IsReadOnly { get; }
+  bool HasValue { get; }
+  bool IsShared { get; }
+  Guid GUID { get; }
   string? AsString();
 
      int AsInteger();
     double AsDouble();
+    IRevitElementId? AsElementId();
+    IRevitStorageType StorageType { get; }
+    IRevitForgeTypeId GetUnitTypeId();
+    IRevitDefinition Definition { get; }
+}
+
+public interface IRevitDefinition
+{
+  IRevitInternalDefinition? ToInternal();
+  string Name { get; }
+  IRevitForgeTypeId GetGroupTypeId();
+  IRevitForgeTypeId GetDataType();
+}
+
+public interface IRevitInternalDefinition : IRevitDefinition
+{
+  RevitBuiltInParameter BuiltInParameter { get; }
+}
+
+public enum IRevitStorageType
+{
+  None,
+  Integer,
+  Double,
+  String,
+  ElementId,
 }

@@ -50,3 +50,53 @@ public interface IRevitEllipse : IRevitCurve
   double RadiusX { get; }
   double RadiusY { get; }
 }
+
+public interface IRevitLevel : IRevitDatumPlane{}
+
+public interface IRevitDatumPlane : IRevitElement
+{
+}
+
+public interface IRevitFamilyInstance : IRevitInstance
+{
+  IRevitFamilySymbol Symbol { get; }
+  IRevitLocation Location { get; }
+}
+
+public interface IRevitOptionsFactory
+{
+  IRevitOptions Create(RevitViewDetailLevel viewDetailLevel);
+}
+public enum RevitViewDetailLevel
+{
+  Undefined,
+  Coarse,
+  Medium,
+  Fine,
+}
+public interface IRevitOptions
+{
+  RevitViewDetailLevel DetailLevel { get; }
+  bool ComputeReferences { get; set; }
+}
+
+public interface IRevitGroup : IRevitElement
+{
+  IList<IRevitElementId> GetMemberIds();
+}
+
+public interface IRevitSolid : IRevitGeometryObject
+{
+  IRevitFaceArray Faces { get; }
+  double SurfaceArea { get; }
+}
+public interface IRevitFace
+{
+  IRevitMesh Triangulate();
+  IRevitElementId MaterialElementId { get; }
+}
+public interface IRevitFaceArray : IReadOnlyList<IRevitFace> {}
+
+public interface IRevitGeometryElement : IRevitGeometryObject, IEnumerable<IRevitGeometryObject>
+{
+}

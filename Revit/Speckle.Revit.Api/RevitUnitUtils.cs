@@ -27,7 +27,10 @@ public class RevitXYZUtils : IRevitXYZUtils
   public IRevitXYZ BasisY=> new XYZProxy(XYZ.BasisY);
   public IRevitXYZ BasisZ => new XYZProxy(XYZ.BasisZ);
 }
-
+public class RevitElementIdUtils : IRevitElementIdUtils
+{
+  public IRevitElementId InvalidElementId => new ElementIdProxy(ElementId.InvalidElementId);
+}
 public class RevitPlaneUtils : IRevitPlaneUtils
 {
   public IRevitPlane CreateByOriginAndBasis(IRevitXYZ center, IRevitXYZ xDirection, IRevitXYZ yDirection) =>
@@ -41,4 +44,23 @@ public class RevitNurbSplineUtils : IRevitNurbSplineUtils
 {
   public IRevitNurbSpline Create(IRevitHermiteSpline hermiteSpline) =>
     new NurbSplineProxy(NurbSpline.Create(((HermiteSplineProxy)hermiteSpline)._Instance));
+}
+
+public class RevitFormatOptionsUtils : IRevitFormatOptionsUtils
+{
+  public bool CanHaveSymbol(IRevitForgeTypeId forgeTypeId) =>
+    FormatOptions.CanHaveSymbol(((ForgeTypeIdProxy)forgeTypeId)._Instance);
+
+  public IList<IRevitForgeTypeId> GetValidSymbols(IRevitForgeTypeId forgeTypeId) =>
+    FormatOptions.GetValidSymbols(((ForgeTypeIdProxy)forgeTypeId)._Instance).Select(x => new ForgeTypeIdProxy(x))
+      .ToList<IRevitForgeTypeId>();
+
+  public string GetLabelForSymbol(IRevitForgeTypeId symbolId) =>
+    LabelUtils.GetLabelForSymbol(((ForgeTypeIdProxy)symbolId)._Instance);
+}
+
+public class RevitSolidUtils : IRevitSolidUtils
+{
+  public IRevitSolid CreateTransformed(IRevitSolid solid, IRevitTransform inverseTransform) =>
+    new SolidProxy(SolidUtils.CreateTransformed(((SolidProxy)solid)._Instance, ((TransformProxy)inverseTransform)._Instance));
 }
