@@ -1,5 +1,3 @@
 ﻿namespace Speckle.Revit.Interfaces;
 
-public interface IRevitObject
-{
-}
+public interface IRevitObject;

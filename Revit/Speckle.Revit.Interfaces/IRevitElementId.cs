@@ -3,5 +3,4 @@
 public interface IRevitElementId : IRevitObject
 {
   int IntegerValue { get; }
-
 }

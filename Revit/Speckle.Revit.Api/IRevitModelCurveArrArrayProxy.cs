@@ -64,8 +64,7 @@ public partial class CurveArrArrayProxy
 
   public int Count => Size;
 
-  public IEnumerator<IRevitCurveArray> GetEnumerator() =>
-    new RevitCurveArrayIterator(_Instance.ForwardIterator());
+  public IEnumerator<IRevitCurveArray> GetEnumerator() => new RevitCurveArrayIterator(_Instance.ForwardIterator());
 
   private readonly struct RevitCurveArrayIterator : IEnumerator<IRevitCurveArray>
   {

@@ -1,4 +1,6 @@
-﻿namespace Speckle.Revit.Interfaces;
+﻿using System;
+
+namespace Speckle.Revit.Interfaces;
 
 public interface IRevitElementIsElementTypeFilter : IRevitElementFilter;
 

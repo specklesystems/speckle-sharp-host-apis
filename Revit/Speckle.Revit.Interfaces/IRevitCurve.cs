@@ -1,4 +1,6 @@
-﻿namespace Speckle.Revit.Interfaces;
+﻿using System.Collections.Generic;
+
+namespace Speckle.Revit.Interfaces;
 
 public interface IRevitCurve : IRevitGeometryObject
 {
@@ -11,36 +13,29 @@ public interface IRevitCurve : IRevitGeometryObject
 }
 
 public interface IRevitCloudPoint
-{   float X  { get; }
-   float Y  { get; }
-   float Z  { get; }
-   int Color { get; }
+{
+  float X { get; }
+  float Y { get; }
+  float Z { get; }
+  int Color { get; }
   IRevitXYZ ToXYZ();
 }
 
-public interface IRevitCloudPointList : IEnumerable<IRevitCloudPoint>
-{
-}
+public interface IRevitCloudPointList : IEnumerable<IRevitCloudPoint>;
 
 public interface IRevitPointCloudInstance : IRevitInstance
 {
-  IRevitCloudPointList GetPoints(
-   IRevitPointCloudFilter filter,
-    double averageDistance,
-    int numPoints);
+  IRevitCloudPointList GetPoints(IRevitPointCloudFilter filter, double averageDistance, int numPoints);
 }
-public interface IRevitInstance :IRevitElement
+
+public interface IRevitInstance : IRevitElement
 {
   IRevitTransform GetTransform();
 }
-public interface IRevitCurveArray : IReadOnlyList<IRevitCurve>
-{
-  
-}
 
-public interface IRevitCurveArrArray : IReadOnlyList<IRevitCurveArray>
-{
-}
+public interface IRevitCurveArray : IReadOnlyList<IRevitCurve>;
+
+public interface IRevitCurveArrArray : IReadOnlyList<IRevitCurveArray>;
 
 public interface IRevitEllipse : IRevitCurve
 {
@@ -56,9 +51,7 @@ public interface IRevitLevel : IRevitDatumPlane
   double Elevation { get; }
 }
 
-public interface IRevitDatumPlane : IRevitElement
-{
-}
+public interface IRevitDatumPlane : IRevitElement;
 
 public interface IRevitFamilyInstance : IRevitInstance
 {
@@ -67,7 +60,8 @@ public interface IRevitFamilyInstance : IRevitInstance
   bool HandFlipped { get; }
   bool IsSlantedColumn { get; }
   RevitStructuralType StructuralType { get; }
-} 
+}
+
 public enum RevitStructuralType
 {
   NonStructural,
@@ -82,6 +76,7 @@ public interface IRevitOptionsFactory
 {
   IRevitOptions Create(RevitViewDetailLevel viewDetailLevel);
 }
+
 public enum RevitViewDetailLevel
 {
   Undefined,
@@ -89,6 +84,7 @@ public enum RevitViewDetailLevel
   Medium,
   Fine,
 }
+
 public interface IRevitOptions
 {
   RevitViewDetailLevel DetailLevel { get; }
@@ -105,27 +101,24 @@ public interface IRevitSolid : IRevitGeometryObject
   IRevitFaceArray Faces { get; }
   double SurfaceArea { get; }
 }
+
 public interface IRevitFace
 {
   IRevitMesh Triangulate();
   IRevitElementId MaterialElementId { get; }
 }
-public interface IRevitFaceArray : IReadOnlyList<IRevitFace> {}
 
-public interface IRevitGeometryElement : IRevitGeometryObject, IEnumerable<IRevitGeometryObject>
-{
-}
+public interface IRevitFaceArray : IReadOnlyList<IRevitFace>;
+
+public interface IRevitGeometryElement : IRevitGeometryObject, IEnumerable<IRevitGeometryObject>;
 
 public interface IRevitFloor : IRevitCeilingAndFloor
 {
-  
   IRevitElementId SketchId { get; }
-  
 }
-public interface IRevitModelLine : IRevitModelCurve
-{
-  
-}
+
+public interface IRevitModelLine : IRevitModelCurve;
+
 public interface IRevitFootPrintRoof : IRevitRoofBase
 {
   IRevitModelCurveArrArray GetProfiles();

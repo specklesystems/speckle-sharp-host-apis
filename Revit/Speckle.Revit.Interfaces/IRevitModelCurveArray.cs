@@ -1,5 +1,3 @@
-﻿
-
-namespace Speckle.Revit.Interfaces;
+﻿namespace Speckle.Revit.Interfaces;
 
 public interface IRevitModelCurveArray : IReadOnlyList<IRevitModelCurve>;

@@ -1,4 +1,6 @@
-﻿namespace Speckle.Revit.Interfaces;
+﻿using System.Collections.Generic;
+
+namespace Speckle.Revit.Interfaces;
 
 public interface IRevitFormatOptions : IRevitObject
 {

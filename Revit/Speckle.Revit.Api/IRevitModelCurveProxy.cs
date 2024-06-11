@@ -35,7 +35,9 @@ public partial class LocationProxy
       return new LocationPointProxy(point);
     }
     return null;
-  }public IRevitLocationCurve? ToLocationCurve()
+  }
+
+  public IRevitLocationCurve? ToLocationCurve()
   {
     if (_Instance is LocationCurve point)
     {

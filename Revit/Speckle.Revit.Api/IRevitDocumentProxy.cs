@@ -32,11 +32,13 @@ public partial interface IRevitElementProxy : IRevitElement;
 
 public partial class ElementProxy
 {
-  public IRevitParameter GetParameter(RevitBuiltInParameter builtInParameter) => new ParameterProxy(_Instance.get_Parameter(Enum<BuiltInParameter>.Parse(builtInParameter.ToString())));
+  public IRevitParameter GetParameter(RevitBuiltInParameter builtInParameter) =>
+    new ParameterProxy(_Instance.get_Parameter(Enum<BuiltInParameter>.Parse(builtInParameter.ToString())));
+
   public IRevitBoundingBoxXYZ GetBoundingBox() => new BoundingBoxXYZProxy(_Instance.get_BoundingBox(null));
 
-  public IRevitGeometryElement GetGeometry(IRevitOptions options) => new GeometryElementProxy(_Instance.get_Geometry(
-    ((OptionsProxy)options)._Instance));
+  public IRevitGeometryElement GetGeometry(IRevitOptions options) =>
+    new GeometryElementProxy(_Instance.get_Geometry(((OptionsProxy)options)._Instance));
 
   public IRevitFamilySymbol? ToFamilySymbol()
   {
@@ -46,7 +48,9 @@ public partial class ElementProxy
     }
 
     return null;
-  }  public IRevitMaterial? ToMaterial()
+  }
+
+  public IRevitMaterial? ToMaterial()
   {
     if (_Instance is Material m)
     {
@@ -54,7 +58,9 @@ public partial class ElementProxy
     }
 
     return null;
-  }public IRevitHostObject? ToHostObject()
+  }
+
+  public IRevitHostObject? ToHostObject()
   {
     if (_Instance is HostObject m)
     {
@@ -62,15 +68,18 @@ public partial class ElementProxy
     }
 
     return null;
-  }public IRevitGroup? ToGroup()
+  }
+
+  public IRevitGroup? ToGroup()
   {
     if (_Instance is Group m)
-{
+    {
       return new GroupProxy(m);
     }
 
     return null;
   }
+
   public IRevitGraphicsStyle? ToGraphicsStyle()
   {
     if (_Instance is GraphicsStyle m)
@@ -80,6 +89,7 @@ public partial class ElementProxy
 
     return null;
   }
+
   public IRevitElementType? ToType()
   {
     if (_Instance is ElementType m)
@@ -89,6 +99,7 @@ public partial class ElementProxy
 
     return null;
   }
+
   public IRevitSketch? ToSketch()
   {
     if (_Instance is Sketch m)
@@ -98,6 +109,7 @@ public partial class ElementProxy
 
     return null;
   }
+
   public IRevitFloor? ToFloor()
   {
     if (_Instance is Floor m)
@@ -107,6 +119,7 @@ public partial class ElementProxy
 
     return null;
   }
+
   public IRevitModelLine? ToModelLine()
   {
     if (_Instance is ModelLine m)
@@ -117,16 +130,13 @@ public partial class ElementProxy
     return null;
   }
 }
-[Proxy(
-  typeof(FamilySymbol),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
-)]
+
+[Proxy(typeof(FamilySymbol), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
 public partial interface IRevitFamilySymbolProxy : IRevitFamilySymbol;
-[Proxy(
-  typeof(ElementType),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
-)]
+
+[Proxy(typeof(ElementType), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
 public partial interface IRevitElementTypeProxy : IRevitElementType;
+
 [Proxy(
   typeof(Category),
   ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
@@ -146,6 +156,7 @@ public partial interface IRevitCurtainGridProxy : IRevitCurtainGrid;
 
 [Proxy(typeof(Wall), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
 public partial interface IRevitWallProxy : IRevitWall;
+
 [Proxy(typeof(WallType), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
 public partial interface IRevitWallTypeProxy : IRevitWallType;
 

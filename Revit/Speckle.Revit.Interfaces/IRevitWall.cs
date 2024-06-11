@@ -1,4 +1,6 @@
-﻿namespace Speckle.Revit.Interfaces;
+﻿using System.Collections.Generic;
+
+namespace Speckle.Revit.Interfaces;
 
 public interface IRevitWall : IRevitHostObject
 {
@@ -10,6 +12,4 @@ public interface IRevitWall : IRevitHostObject
   IRevitElementId SketchId { get; }
 }
 
-public interface IRevitWallType : IRevitElementType
-{
-}
+public interface IRevitWallType : IRevitElementType;

@@ -1,7 +1,6 @@
 namespace Speckle.Revit.Interfaces;
 
-public interface IRevitUnits: IRevitObject
+public interface IRevitUnits : IRevitObject
 {
   IRevitFormatOptions GetFormatOptions(IRevitForgeTypeId length);
 }
-

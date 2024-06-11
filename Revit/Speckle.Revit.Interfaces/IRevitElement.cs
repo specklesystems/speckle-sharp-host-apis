@@ -1,4 +1,7 @@
-﻿namespace Speckle.Revit.Interfaces;
+﻿using System;
+using System.Collections.Generic;
+
+namespace Speckle.Revit.Interfaces;
 
 public interface IRevitElement : IRevitObject
 {
@@ -13,7 +16,6 @@ public interface IRevitElement : IRevitObject
   string Name { get; }
   IRevitBoundingBoxXYZ GetBoundingBox();
 
-
   IRevitFamilySymbol? ToFamilySymbol();
   IRevitMaterial? ToMaterial();
   IRevitHostObject? ToHostObject();
@@ -23,7 +25,7 @@ public interface IRevitElement : IRevitObject
   IRevitSketch? ToSketch();
   IRevitFloor? ToFloor();
   IRevitModelLine? ToModelLine();
-  
+
   IRevitParameterSet Parameters { get; }
 
   IRevitParameter? GetParameter(RevitBuiltInParameter parameter);
@@ -32,20 +34,15 @@ public interface IRevitElement : IRevitObject
   IRevitLocation Location { get; }
 }
 
-public interface IRevitParameterSet : IEnumerable<IRevitParameter>, IDisposable
-{
-  
-}
+public interface IRevitParameterSet : IEnumerable<IRevitParameter>, IDisposable;
+
 public interface IRevitElementType
 {
   string Name { get; }
   string FamilyName { get; }
-  
 }
-public interface IRevitFamilySymbol : IRevitElementType
-{
-  
-}
+
+public interface IRevitFamilySymbol : IRevitElementType;
 
 public interface IRevitBasePoint : IRevitElement
 {
@@ -61,12 +58,12 @@ public interface IRevitParameter
   Guid GUID { get; }
   string? AsString();
 
-     int AsInteger();
-    double AsDouble();
-    IRevitElementId? AsElementId();
-    IRevitStorageType StorageType { get; }
-    IRevitForgeTypeId GetUnitTypeId();
-    IRevitDefinition Definition { get; }
+  int AsInteger();
+  double AsDouble();
+  IRevitElementId? AsElementId();
+  IRevitStorageType StorageType { get; }
+  IRevitForgeTypeId GetUnitTypeId();
+  IRevitDefinition Definition { get; }
 }
 
 public interface IRevitDefinition

@@ -65,8 +65,7 @@ public partial class CurveArrayProxy
 
   public int Count => Size;
 
-  public IEnumerator<IRevitCurve> GetEnumerator() =>
-    new RevitCurveCollectionIterator(_Instance.ForwardIterator());
+  public IEnumerator<IRevitCurve> GetEnumerator() => new RevitCurveCollectionIterator(_Instance.ForwardIterator());
 
   private readonly struct RevitCurveCollectionIterator : IEnumerator<IRevitCurve>
   {
@@ -111,8 +110,7 @@ public partial class DoubleArrayProxy
 
   public int Count => Size;
 
-  public IEnumerator<double> GetEnumerator() =>
-    new DoubleArrayProxyIterator(_Instance.ForwardIterator());
+  public IEnumerator<double> GetEnumerator() => new DoubleArrayProxyIterator(_Instance.ForwardIterator());
 
   private readonly struct DoubleArrayProxyIterator : IEnumerator<double>
   {
@@ -136,11 +134,12 @@ public partial class DoubleArrayProxy
 
   public double this[int index] => _Instance.get_Item(index);
 }
+
 public struct RevitCloudPoint : IRevitCloudPoint
 {
-  public float X  { get; }
-  public float Y  { get; }
-  public float Z  { get; }
+  public float X { get; }
+  public float Y { get; }
+  public float Z { get; }
   public int Color { get; }
 
   public RevitCloudPoint(float x, float y, float z, int color)
@@ -153,11 +152,13 @@ public struct RevitCloudPoint : IRevitCloudPoint
 
   public IRevitXYZ ToXYZ() => new XYZProxy(new XYZ(X, Y, Z));
 }
+
 [Proxy(
   typeof(RevitCloudPoint),
   ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
 )]
 public partial interface IRevitCloudPointProxy : IRevitCloudPointList;
+
 [Proxy(
   typeof(PointCollection),
   ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
@@ -169,8 +170,7 @@ public partial class PointCollectionProxy
 {
   IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 
-  public IEnumerator<IRevitCloudPoint> GetEnumerator() =>
-    new RevitCloudPointListIterator(_Instance.GetPointIterator());
+  public IEnumerator<IRevitCloudPoint> GetEnumerator() => new RevitCloudPointListIterator(_Instance.GetPointIterator());
 
   private readonly struct RevitCloudPointListIterator : IEnumerator<IRevitCloudPoint>
   {

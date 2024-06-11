@@ -1,6 +1,6 @@
 ﻿namespace Speckle.Revit.Interfaces;
 
-public interface IRevitXYZ: IRevitObject
+public interface IRevitXYZ : IRevitObject
 {
   double Z { get; }
 
@@ -20,13 +20,12 @@ public interface IRevitXYZ: IRevitObject
 
 public interface IRevitBoundingBoxXYZ
 {
-  
   IRevitXYZ Min { get; }
   IRevitXYZ Max { get; }
   IRevitTransform Transform { get; }
 }
 
-public interface IRevitXYZUtils 
+public interface IRevitXYZUtils
 {
   IRevitXYZ Zero { get; }
   IRevitXYZ BasisX { get; }

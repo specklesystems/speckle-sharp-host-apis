@@ -1,4 +1,7 @@
-﻿namespace Speckle.Revit.Interfaces;
+﻿using System;
+using System.Collections.Generic;
+
+namespace Speckle.Revit.Interfaces;
 
 public interface IRevitLocationCurve : IRevitLocation
 {
@@ -20,27 +23,24 @@ public interface IRevitPoint : IRevitObject
   IRevitXYZ Coord { get; }
 }
 
-public interface IRevitPlane : IRevitSurface {
-IRevitXYZ Origin { get; }
+public interface IRevitPlane : IRevitSurface
+{
+  IRevitXYZ Origin { get; }
   IRevitXYZ Normal { get; }
   IRevitXYZ XVec { get; }
   IRevitXYZ YVec { get; }
 }
 
-public interface IRevitSurface : IRevitObject, IDisposable
-{
-}
+public interface IRevitSurface : IRevitObject, IDisposable;
 
-public interface IRevitLine : IRevitCurve
-{
-}
+public interface IRevitLine : IRevitCurve;
 
 public interface IRevitArc : IRevitCurve
 {
   IRevitXYZ Center { get; }
   IRevitXYZ XDirection { get; }
   IRevitXYZ YDirection { get; }
-  
+
   double Radius { get; }
   IRevitXYZ Normal { get; }
 }
@@ -48,11 +48,12 @@ public interface IRevitArc : IRevitCurve
 public interface IRevitMesh : IRevitGeometryObject
 {
   IList<IRevitXYZ> Vertices { get; }
-  IRevitElementId MaterialElementId {get;}
+  IRevitElementId MaterialElementId { get; }
   int NumTriangles { get; }
   IRevitMeshTriangle GetTriangle(int index);
   IRevitMesh GetTransformed(IRevitTransform transform);
 }
+
 public interface IRevitMaterial : IRevitElement
 {
   int Transparency { get; }
@@ -71,9 +72,7 @@ public interface IRevitMeshTriangle
   uint GetIndex(int idx);
 }
 
-public interface IRevitHermiteSpline : IRevitCurve
-{
-}
+public interface IRevitHermiteSpline : IRevitCurve;
 
 public interface IRevitNurbSpline : IRevitCurve
 {
@@ -84,9 +83,8 @@ public interface IRevitNurbSpline : IRevitCurve
   bool IsRational { get; }
   bool IsClosed { get; }
 }
-public interface IRevitDoubleArray: IReadOnlyList<double>
-{
-}
+
+public interface IRevitDoubleArray : IReadOnlyList<double>;
 
 public interface IRevitGeometryInstance : IRevitGeometryObject
 {
@@ -98,6 +96,7 @@ public interface IRevitGraphicsStyle : IRevitElement
 {
   IRevitCategory GraphicsStyleCategory { get; }
 }
+
 public interface IRevitBoundarySegment : IRevitObject
 {
   IRevitCurve GetCurve();
@@ -107,45 +106,39 @@ public interface IRevitCeiling : IRevitCeilingAndFloor
 {
   IRevitElementId SketchId { get; }
 }
-public interface IRevitCeilingAndFloor : IRevitHostObject
-{
-}
+
+public interface IRevitCeilingAndFloor : IRevitHostObject;
+
 public interface IRevitSketch : IRevitSketchBase
 {
   IRevitCurveArrArray Profile { get; }
-  
+
   IList<IRevitElementId> GetAllElements();
 }
-public interface IRevitDirectShape : IRevitElement
-{
-}
+
+public interface IRevitDirectShape : IRevitElement;
+
 public interface IRevitExtrusionRoof : IRevitRoofBase
 {
   IRevitModelCurveArray GetProfile();
 }
-public interface IRevitSketchBase : IRevitElement
-{
-}
-public interface IRevitRoofBase : IRevitHostObject
-{
-}
+
+public interface IRevitSketchBase : IRevitElement;
+
+public interface IRevitRoofBase : IRevitHostObject;
 
 public interface IRevitSketchPlane : IRevitElement
 {
   IRevitPlane GetPlane();
 }
 
-public interface IRevitRoom : IRevitSpatialElement
-{
+public interface IRevitRoom : IRevitSpatialElement;
 
-}
 public interface IRevitSpatialElement : IRevitElement
 {
   IEnumerable<IEnumerable<IRevitBoundarySegment>> GetBoundarySegments();
   string Number { get; }
   IRevitLevel Level { get; }
 }
-public interface IRevitTopographySurface : IRevitElement
-{
 
-}
+public interface IRevitTopographySurface : IRevitElement;
