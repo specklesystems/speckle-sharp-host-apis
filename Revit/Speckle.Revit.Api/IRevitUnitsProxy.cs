@@ -322,3 +322,13 @@ public partial interface IRevitGeometryInstanceProxy : IRevitGeometryInstance;
   ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
 )]
 public partial interface IRevitGraphicsStyleProxy : IRevitGraphicsStyle;
+[Proxy(
+  typeof(BoundarySegment),
+  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
+)]
+public partial interface IRevitBoundarySegmentProxy : IRevitBoundarySegment;
+[Proxy(
+  typeof(Color),
+  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
+)]
+public partial interface IRevitColorProxy : IRevitColor;

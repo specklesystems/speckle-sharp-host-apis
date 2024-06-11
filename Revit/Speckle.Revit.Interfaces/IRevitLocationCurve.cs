@@ -55,6 +55,15 @@ public interface IRevitMesh : IRevitGeometryObject
 }
 public interface IRevitMaterial : IRevitElement
 {
+  int Transparency { get; }
+  IRevitColor Color { get; }
+}
+
+public interface IRevitColor
+{
+  byte Red { get; }
+  byte Green { get; }
+  byte Blue { get; }
 }
 
 public interface IRevitMeshTriangle
@@ -88,4 +97,8 @@ public interface IRevitGeometryInstance : IRevitGeometryObject
 public interface IRevitGraphicsStyle : IRevitElement
 {
   IRevitCategory GraphicsStyleCategory { get; }
+}
+public interface IRevitBoundarySegment : IRevitObject
+{
+  IRevitCurve GetCurve();
 }

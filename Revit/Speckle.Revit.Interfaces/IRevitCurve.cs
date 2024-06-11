@@ -51,7 +51,10 @@ public interface IRevitEllipse : IRevitCurve
   double RadiusY { get; }
 }
 
-public interface IRevitLevel : IRevitDatumPlane{}
+public interface IRevitLevel : IRevitDatumPlane
+{
+  double Elevation { get; }
+}
 
 public interface IRevitDatumPlane : IRevitElement
 {
@@ -61,6 +64,9 @@ public interface IRevitFamilyInstance : IRevitInstance
 {
   IRevitFamilySymbol Symbol { get; }
   IRevitLocation Location { get; }
+  bool FacingFlipped { get; }
+  bool HandFlipped { get; }
+  bool IsSlantedColumn { get; }
 }
 
 public interface IRevitOptionsFactory
