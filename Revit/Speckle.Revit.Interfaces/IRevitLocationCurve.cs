@@ -43,6 +43,7 @@ public interface IRevitArc : IRevitCurve
 
   double Radius { get; }
   IRevitXYZ Normal { get; }
+  bool IsClosed { get; }
 }
 
 public interface IRevitMesh : IRevitGeometryObject
