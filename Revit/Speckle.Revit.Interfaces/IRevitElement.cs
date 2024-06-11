@@ -19,12 +19,17 @@ public interface IRevitElement : IRevitObject
   IRevitHostObject? ToHostObject();
   IRevitGroup? ToGroup();
   IRevitGraphicsStyle? ToGraphicsStyle();
+  IRevitElementType? ToType();
+  IRevitSketch? ToSketch();
+  IRevitFloor? ToFloor();
+  IRevitModelLine? ToModelLine();
   
   IRevitParameterSet Parameters { get; }
 
   IRevitParameter? GetParameter(RevitBuiltInParameter parameter);
 
   IRevitGeometryElement GetGeometry(IRevitOptions options);
+  IRevitLocation Location { get; }
 }
 
 public interface IRevitParameterSet : IEnumerable<IRevitParameter>, IDisposable

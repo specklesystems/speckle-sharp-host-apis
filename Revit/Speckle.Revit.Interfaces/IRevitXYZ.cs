@@ -15,6 +15,7 @@ public interface IRevitXYZ: IRevitObject
   IRevitXYZ Subtract(IRevitXYZ source);
   IRevitXYZ Normalize();
   double AngleOnPlaneTo(IRevitXYZ right, IRevitXYZ normal);
+  IRevitXYZ Negate();
 }
 
 public interface IRevitBoundingBoxXYZ

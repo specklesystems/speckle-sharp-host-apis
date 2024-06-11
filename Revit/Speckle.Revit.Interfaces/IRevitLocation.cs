@@ -3,4 +3,6 @@
 public interface IRevitLocation: IRevitObject
 {
   IRevitLocationPoint? ToLocationPoint();
+  
+    IRevitLocationCurve? ToLocationCurve();
 }

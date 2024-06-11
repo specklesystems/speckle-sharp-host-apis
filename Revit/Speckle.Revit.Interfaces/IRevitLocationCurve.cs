@@ -102,3 +102,50 @@ public interface IRevitBoundarySegment : IRevitObject
 {
   IRevitCurve GetCurve();
 }
+
+public interface IRevitCeiling : IRevitCeilingAndFloor
+{
+  IRevitElementId SketchId { get; }
+}
+public interface IRevitCeilingAndFloor : IRevitHostObject
+{
+}
+public interface IRevitSketch : IRevitSketchBase
+{
+  IRevitCurveArrArray Profile { get; }
+  
+  IList<IRevitElementId> GetAllElements();
+}
+public interface IRevitDirectShape : IRevitElement
+{
+}
+public interface IRevitExtrusionRoof : IRevitRoofBase
+{
+  IRevitModelCurveArray GetProfile();
+}
+public interface IRevitSketchBase : IRevitElement
+{
+}
+public interface IRevitRoofBase : IRevitHostObject
+{
+}
+
+public interface IRevitSketchPlane : IRevitElement
+{
+  IRevitPlane GetPlane();
+}
+
+public interface IRevitRoom : IRevitSpatialElement
+{
+
+}
+public interface IRevitSpatialElement : IRevitElement
+{
+  IEnumerable<IEnumerable<IRevitBoundarySegment>> GetBoundarySegments();
+  string Number { get; }
+  IRevitLevel Level { get; }
+}
+public interface IRevitTopographySurface : IRevitElement
+{
+
+}

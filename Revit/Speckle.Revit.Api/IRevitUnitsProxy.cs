@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using Autodesk.Revit.DB;
+using Autodesk.Revit.DB.Architecture;
 using Mapster.Utils;
 using Speckle.ProxyGenerator;
 using Speckle.Revit.Interfaces;
@@ -209,9 +210,15 @@ public partial interface IRevitLevelProxy : IRevitLevel;
 [Proxy(
   typeof(FamilyInstance),
   ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
-  new [] {"ToRoom", "FromRoom", "Space", "Room"}
+  new [] {"ToRoom", "FromRoom", "Space", "Room", "StructuralType"}
 )]
 public partial interface IRevitFamilyInstanceProxy : IRevitFamilyInstance;
+
+public partial class FamilyInstanceProxy
+{
+
+  public RevitStructuralType StructuralType => Enum<RevitStructuralType>.Parse(_Instance.StructuralType.ToString());
+}
 
 [Proxy(
   typeof(Solid),
@@ -332,3 +339,89 @@ public partial interface IRevitBoundarySegmentProxy : IRevitBoundarySegment;
   ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
 )]
 public partial interface IRevitColorProxy : IRevitColor;
+[Proxy(
+  typeof(Ceiling),
+  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
+)]
+public partial interface IRevitCeilingProxy : IRevitCeiling;
+[Proxy(
+  typeof(CeilingAndFloor),
+  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
+)]
+public partial interface IRevitCeilingAndFloorProxy : IRevitCeilingAndFloor;
+[Proxy(
+  typeof(Sketch),
+  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
+)]
+public partial interface IRevitSketchProxy : IRevitSketch;
+[Proxy(
+  typeof(SketchBase),
+  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
+)]
+public partial interface IRevitSketchBaseProxy : IRevitSketchBase;
+[Proxy(
+  typeof(DirectShape),
+  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
+)]
+public partial interface IRevitDirectShapeProxy : IRevitDirectShape;
+[Proxy(
+  typeof(ExtrusionRoof),
+  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
+)]
+public partial interface IRevitExtrusionRoofProxy : IRevitExtrusionRoof;
+[Proxy(
+  typeof(RoofBase),
+  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
+)]
+public partial interface IRevitRoofBaseProxy : IRevitRoofBase;
+[Proxy(
+  typeof(SketchPlane),
+  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
+)]
+public partial interface IRevitSketchPlaneProxy : IRevitSketchPlane;
+[Proxy(
+  typeof(Floor),
+  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
+)]
+public partial interface IRevitFloorProxy : IRevitFloor;
+[Proxy(
+  typeof(ModelLine),
+  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
+)]
+public partial interface IRevitModelLineProxy : IRevitModelLine;
+[Proxy(
+  typeof(FootPrintRoof),
+  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
+  new [] {"Overhang", "ExtendIntoWall", "Offset", "SlopeAngle", "DefinesSlope"}
+)]
+public partial interface IRevitFootPrintRoofProxy : IRevitFootPrintRoof;
+[Proxy(
+  typeof(Room),
+  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
+)]
+public partial interface IRevitRoomProxy : IRevitRoom;
+[Proxy(
+  typeof(TopographySurface),
+  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
+)]
+public partial interface IRevitTopographySurfaceProxy : IRevitTopographySurface;
+[Proxy(
+  typeof(SpatialElement),
+  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
+  new [] {"GetBoundarySegments"}
+)]
+public partial interface IRevitSpatialElementProxy : IRevitSpatialElement;
+
+public partial class SpatialElementProxy
+{
+  public IEnumerable<IEnumerable<IRevitBoundarySegment>> GetBoundarySegments()
+  {
+    var segments = _Instance.GetBoundarySegments(new SpatialElementBoundaryOptions());
+    foreach (var seg in segments)
+    {
+      yield return GetSegments(seg);
+    }
+  }
+
+  private static IEnumerable<IRevitBoundarySegment> GetSegments(IList<BoundarySegment> segments) => segments.Select(seg => new BoundarySegmentProxy(seg));
+}

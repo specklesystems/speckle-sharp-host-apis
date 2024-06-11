@@ -1,5 +1,6 @@
 ﻿using Autodesk.Revit.DB;
 using Autodesk.Revit.DB.PointClouds;
+using Mapster.Utils;
 using Speckle.ProxyGenerator;
 using Speckle.Revit.Interfaces;
 
@@ -39,6 +40,9 @@ public class RevitFilterFactory : IRevitFilterFactory
     new PointCloudFilterProxy(
       PointCloudFilterFactory.CreateMultiPlaneFilter(planes.Cast<PlaneProxy>().Select(x => x._Instance).ToList())
     );
+  public IRevitElementCategoryFilter CreateElementCategoryFilter(RevitBuiltInCategory category
+  ) =>
+   new ElementCategoryFilterProxy( new ElementCategoryFilter(Enum<BuiltInCategory>.Parse(category.ToString())));
 }
 [Proxy(
   typeof(PointCloudFilter),
@@ -50,6 +54,11 @@ public partial interface IRevitPointCloudFilterProxy : IRevitPointCloudFilter;
   ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
 )]
 public partial interface IRevitElementFilterProxy : IRevitElementFilter;
+[Proxy(
+  typeof(ElementCategoryFilter),
+  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
+)]
+public partial interface IRevitElementCategoryFilterProxy : IRevitElementCategoryFilter;
 
 [Proxy(
   typeof(ElementIsElementTypeFilter),

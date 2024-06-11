@@ -63,10 +63,19 @@ public interface IRevitDatumPlane : IRevitElement
 public interface IRevitFamilyInstance : IRevitInstance
 {
   IRevitFamilySymbol Symbol { get; }
-  IRevitLocation Location { get; }
   bool FacingFlipped { get; }
   bool HandFlipped { get; }
   bool IsSlantedColumn { get; }
+  RevitStructuralType StructuralType { get; }
+} 
+public enum RevitStructuralType
+{
+  NonStructural,
+  Beam,
+  Brace,
+  Column,
+  Footing,
+  UnknownFraming,
 }
 
 public interface IRevitOptionsFactory
@@ -105,4 +114,19 @@ public interface IRevitFaceArray : IReadOnlyList<IRevitFace> {}
 
 public interface IRevitGeometryElement : IRevitGeometryObject, IEnumerable<IRevitGeometryObject>
 {
+}
+
+public interface IRevitFloor : IRevitCeilingAndFloor
+{
+  
+  IRevitElementId SketchId { get; }
+  
+}
+public interface IRevitModelLine : IRevitModelCurve
+{
+  
+}
+public interface IRevitFootPrintRoof : IRevitRoofBase
+{
+  IRevitModelCurveArrArray GetProfiles();
 }

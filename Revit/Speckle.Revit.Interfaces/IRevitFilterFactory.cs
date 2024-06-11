@@ -15,4 +15,5 @@ public interface IRevitFilterFactory
   );
 
   IRevitPointCloudFilter CreateMultiPlaneFilter(params IRevitPlane[] planes);
+  IRevitElementCategoryFilter CreateElementCategoryFilter(RevitBuiltInCategory category);
 }

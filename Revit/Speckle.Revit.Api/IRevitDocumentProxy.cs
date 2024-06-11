@@ -37,6 +37,7 @@ public partial class ElementProxy
 
   public IRevitGeometryElement GetGeometry(IRevitOptions options) => new GeometryElementProxy(_Instance.get_Geometry(
     ((OptionsProxy)options)._Instance));
+
   public IRevitFamilySymbol? ToFamilySymbol()
   {
     if (_Instance is FamilySymbol s)
@@ -79,6 +80,42 @@ public partial class ElementProxy
 
     return null;
   }
+  public IRevitElementType? ToType()
+  {
+    if (_Instance is ElementType m)
+    {
+      return new ElementTypeProxy(m);
+    }
+
+    return null;
+  }
+  public IRevitSketch? ToSketch()
+  {
+    if (_Instance is Sketch m)
+    {
+      return new SketchProxy(m);
+    }
+
+    return null;
+  }
+  public IRevitFloor? ToFloor()
+  {
+    if (_Instance is Floor m)
+    {
+      return new FloorProxy(m);
+    }
+
+    return null;
+  }
+  public IRevitModelLine? ToModelLine()
+  {
+    if (_Instance is ModelLine m)
+    {
+      return new ModelLineProxy(m);
+    }
+
+    return null;
+  }
 }
 [Proxy(
   typeof(FamilySymbol),
@@ -109,6 +146,8 @@ public partial interface IRevitCurtainGridProxy : IRevitCurtainGrid;
 
 [Proxy(typeof(Wall), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
 public partial interface IRevitWallProxy : IRevitWall;
+[Proxy(typeof(WallType), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+public partial interface IRevitWallTypeProxy : IRevitWallType;
 
 [Proxy(typeof(HostObject), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
 public partial interface IRevitHostObjectProxy : IRevitHostObject;
