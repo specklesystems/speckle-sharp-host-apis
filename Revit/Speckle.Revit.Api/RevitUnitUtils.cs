@@ -1,4 +1,5 @@
 ﻿using Autodesk.Revit.DB;
+using Mapster.Utils;
 using Speckle.Revit.Interfaces;
 
 namespace Speckle.Revit.Api;
@@ -85,4 +86,10 @@ public class RevitSolidUtils : IRevitSolidUtils
     new SolidProxy(
       SolidUtils.CreateTransformed(((SolidProxy)solid)._Instance, ((TransformProxy)inverseTransform)._Instance)
     );
+}
+
+public class RevitOptionsFactory : IRevitOptionsFactory
+{
+  public IRevitOptions Create(RevitViewDetailLevel viewDetailLevel) =>
+    new OptionsProxy(new Options() { DetailLevel = Enum<ViewDetailLevel>.Parse(viewDetailLevel.ToString()) });
 }
