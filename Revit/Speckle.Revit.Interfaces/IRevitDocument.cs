@@ -2,7 +2,7 @@
 
 namespace Speckle.Revit.Interfaces;
 
-public interface IRevitDocument
+public interface IRevitDocument : IRevitObject
 {
   string PathName { get; }
   bool IsFamilyDocument { get; }

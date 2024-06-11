@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using Autodesk.Revit.DB;
+using Mapster.Utils;
 using Speckle.ProxyGenerator;
 using Speckle.Revit.Interfaces;
 #pragma warning disable CA1010
@@ -29,6 +30,113 @@ public partial interface IRevitForgeTypeIdProxy : IRevitForgeTypeId;
 )]
 public partial interface IRevitElementProxy : IRevitElement;
 
+public partial class ElementProxy
+{
+  public IRevitParameter GetParameter(RevitBuiltInParameter builtInParameter) =>
+    new ParameterProxy(_Instance.get_Parameter(Enum<BuiltInParameter>.Parse(builtInParameter.ToString())));
+
+  public IRevitBoundingBoxXYZ GetBoundingBox() => new BoundingBoxXYZProxy(_Instance.get_BoundingBox(null));
+
+  public IRevitGeometryElement GetGeometry(IRevitOptions options) =>
+    new GeometryElementProxy(_Instance.get_Geometry(((OptionsProxy)options)._Instance));
+
+  public IRevitFamilySymbol? ToFamilySymbol()
+  {
+    if (_Instance is FamilySymbol s)
+    {
+      return new FamilySymbolProxy(s);
+    }
+
+    return null;
+  }
+
+  public IRevitMaterial? ToMaterial()
+  {
+    if (_Instance is Material m)
+    {
+      return new MaterialProxy(m);
+    }
+
+    return null;
+  }
+
+  public IRevitHostObject? ToHostObject()
+  {
+    if (_Instance is HostObject m)
+    {
+      return new HostObjectProxy(m);
+    }
+
+    return null;
+  }
+
+  public IRevitGroup? ToGroup()
+  {
+    if (_Instance is Group m)
+    {
+      return new GroupProxy(m);
+    }
+
+    return null;
+  }
+
+  public IRevitGraphicsStyle? ToGraphicsStyle()
+  {
+    if (_Instance is GraphicsStyle m)
+    {
+      return new GraphicsStyleProxy(m);
+    }
+
+    return null;
+  }
+
+  public IRevitElementType? ToType()
+  {
+    if (_Instance is ElementType m)
+    {
+      return new ElementTypeProxy(m);
+    }
+
+    return null;
+  }
+
+  public IRevitSketch? ToSketch()
+  {
+    if (_Instance is Sketch m)
+    {
+      return new SketchProxy(m);
+    }
+
+    return null;
+  }
+
+  public IRevitFloor? ToFloor()
+  {
+    if (_Instance is Floor m)
+    {
+      return new FloorProxy(m);
+    }
+
+    return null;
+  }
+
+  public IRevitModelLine? ToModelLine()
+  {
+    if (_Instance is ModelLine m)
+    {
+      return new ModelLineProxy(m);
+    }
+
+    return null;
+  }
+}
+
+[Proxy(typeof(FamilySymbol), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+public partial interface IRevitFamilySymbolProxy : IRevitFamilySymbol;
+
+[Proxy(typeof(ElementType), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+public partial interface IRevitElementTypeProxy : IRevitElementType;
+
 [Proxy(
   typeof(Category),
   ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
@@ -49,5 +157,11 @@ public partial interface IRevitCurtainGridProxy : IRevitCurtainGrid;
 [Proxy(typeof(Wall), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
 public partial interface IRevitWallProxy : IRevitWall;
 
+[Proxy(typeof(WallType), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+public partial interface IRevitWallTypeProxy : IRevitWallType;
+
 [Proxy(typeof(HostObject), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
 public partial interface IRevitHostObjectProxy : IRevitHostObject;
+
+[Proxy(typeof(Ellipse), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+public partial interface IRevitEllipseProxy : IRevitEllipse;

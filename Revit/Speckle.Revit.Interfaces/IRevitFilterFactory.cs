@@ -1,4 +1,6 @@
-﻿namespace Speckle.Revit.Interfaces;
+﻿using System.Collections.Generic;
+
+namespace Speckle.Revit.Interfaces;
 
 #pragma warning disable CA1040
 public interface IRevitFilterFactory
@@ -13,4 +15,7 @@ public interface IRevitFilterFactory
     IRevitDocument document,
     params IRevitElementId[] elementIds
   );
+
+  IRevitPointCloudFilter CreateMultiPlaneFilter(params IRevitPlane[] planes);
+  IRevitElementCategoryFilter CreateElementCategoryFilter(RevitBuiltInCategory category);
 }

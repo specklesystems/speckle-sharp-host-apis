@@ -1,6 +1,8 @@
-﻿namespace Speckle.Revit.Interfaces;
+﻿using System.Collections.Generic;
 
-public interface IRevitCurtainGrid
+namespace Speckle.Revit.Interfaces;
+
+public interface IRevitCurtainGrid : IRevitObject
 {
   ICollection<IRevitElementId> GetMullionIds();
   ICollection<IRevitElementId> GetPanelIds();

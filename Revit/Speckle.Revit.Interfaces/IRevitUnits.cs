@@ -1,11 +1,6 @@
-#pragma warning disable CA1040
-
 namespace Speckle.Revit.Interfaces;
 
-public interface IRevitUnits
+public interface IRevitUnits : IRevitObject
 {
   IRevitFormatOptions GetFormatOptions(IRevitForgeTypeId length);
 }
-
-
-#pragma warning restore CA1040

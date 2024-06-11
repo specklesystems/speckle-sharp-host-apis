@@ -1,6 +1,7 @@
 ﻿namespace Speckle.Revit.Interfaces;
 
-public interface IRevitCurveElement
+public interface IRevitCurveElement : IRevitElement
 {
   IRevitCurve GeometryCurve { get; }
+  IRevitSketchPlane SketchPlane { get; }
 }
