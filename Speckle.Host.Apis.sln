@@ -44,6 +44,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{42C36267
 		.github\workflows\main.yml = .github\workflows\main.yml
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Speckle.Tests", "Speckle.Tests\Speckle.Tests.csproj", "{D909A986-7D4F-45A6-B0A2-D69D4CEF86C5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -70,6 +72,10 @@ Global
 		{00F3BEC6-614D-4AEE-923A-0E2DF40FDE6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00F3BEC6-614D-4AEE-923A-0E2DF40FDE6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00F3BEC6-614D-4AEE-923A-0E2DF40FDE6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D909A986-7D4F-45A6-B0A2-D69D4CEF86C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D909A986-7D4F-45A6-B0A2-D69D4CEF86C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D909A986-7D4F-45A6-B0A2-D69D4CEF86C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D909A986-7D4F-45A6-B0A2-D69D4CEF86C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{CB5177F3-6FA5-4351-8BF1-3F6F2758096D} = {8F540B7F-7548-46E9-BDEC-4DAB99367908}

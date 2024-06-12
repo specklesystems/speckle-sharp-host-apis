@@ -91,5 +91,5 @@ public class RevitSolidUtils : IRevitSolidUtils
 public class RevitOptionsFactory : IRevitOptionsFactory
 {
   public IRevitOptions Create(RevitViewDetailLevel viewDetailLevel) =>
-    new OptionsProxy(new Options() { DetailLevel = Enum<ViewDetailLevel>.Parse(viewDetailLevel.ToString()) });
+    new OptionsProxy(new Options() { DetailLevel = EnumUtility<RevitViewDetailLevel, ViewDetailLevel>.Convert(viewDetailLevel) });
 }

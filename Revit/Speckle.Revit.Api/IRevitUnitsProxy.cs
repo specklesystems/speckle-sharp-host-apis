@@ -72,7 +72,7 @@ public partial interface IRevitParameterProxy : IRevitParameter;
 public partial class ParameterProxy
 {
   public bool IsReadOnly => _Instance.IsReadOnly;
-  public IRevitStorageType StorageType => Enum<IRevitStorageType>.Parse(_Instance.StorageType.ToString());
+  public IRevitStorageType StorageType => EnumUtility<StorageType, IRevitStorageType>.Convert(_Instance.StorageType);
 }
 
 [Proxy(typeof(Definition), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
@@ -102,7 +102,7 @@ public partial interface IRevitInternalDefinitionProxy : IRevitInternalDefinitio
 public partial class InternalDefinitionProxy
 {
   public RevitBuiltInParameter BuiltInParameter =>
-    Enum<RevitBuiltInParameter>.Parse(_Instance.BuiltInParameter.ToString());
+    EnumUtility<BuiltInParameter, RevitBuiltInParameter>.Convert(_Instance.BuiltInParameter);
 }
 
 [Proxy(typeof(PolyLine), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
@@ -197,7 +197,7 @@ public partial interface IRevitFamilyInstanceProxy : IRevitFamilyInstance;
 
 public partial class FamilyInstanceProxy
 {
-  public RevitStructuralType StructuralType => Enum<RevitStructuralType>.Parse(_Instance.StructuralType.ToString());
+  public RevitStructuralType StructuralType => EnumUtility<Autodesk.Revit.DB.Structure.StructuralType, RevitStructuralType>.Convert(_Instance.StructuralType);
 }
 
 [Proxy(typeof(Solid), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
@@ -222,7 +222,7 @@ public partial interface IRevitOptionsProxy : IRevitOptions;
 
 public partial class OptionsProxy
 {
-  public RevitViewDetailLevel DetailLevel => Enum<RevitViewDetailLevel>.Parse(_Instance.DetailLevel.ToString());
+  public RevitViewDetailLevel DetailLevel => EnumUtility<ViewDetailLevel, RevitViewDetailLevel>.Convert(_Instance.DetailLevel);
 }
 
 [Proxy(

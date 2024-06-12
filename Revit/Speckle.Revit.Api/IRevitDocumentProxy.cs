@@ -33,7 +33,7 @@ public partial interface IRevitElementProxy : IRevitElement;
 public partial class ElementProxy
 {
   public IRevitParameter GetParameter(RevitBuiltInParameter builtInParameter) =>
-    new ParameterProxy(_Instance.get_Parameter(Enum<BuiltInParameter>.Parse(builtInParameter.ToString())));
+    new ParameterProxy(_Instance.get_Parameter(EnumUtility<RevitBuiltInParameter, BuiltInParameter>.Convert(builtInParameter)));
 
   public IRevitBoundingBoxXYZ GetBoundingBox() => new BoundingBoxXYZProxy(_Instance.get_BoundingBox(null));
 
