@@ -10,6 +10,11 @@ public interface IRevitCurve : IRevitGeometryObject
   double GetEndParameter(int index);
   bool IsBound { get; }
   IList<IRevitXYZ> Tessellate();
+  IRevitLine? ToLine();
+  IRevitArc? ToArc();
+  IRevitEllipse? ToEllipse();
+  IRevitNurbSpline? ToNurbSpline();
+  IRevitHermiteSpline? ToHermiteSpline();
 }
 
 public interface IRevitCloudPoint
