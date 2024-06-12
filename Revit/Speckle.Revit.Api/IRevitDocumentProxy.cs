@@ -1,6 +1,5 @@
-﻿using System.Diagnostics.CodeAnalysis;
+using System.Diagnostics.CodeAnalysis;
 using Autodesk.Revit.DB;
-using Mapster.Utils;
 using Speckle.ProxyGenerator;
 using Speckle.Revit.Interfaces;
 #pragma warning disable CA1010
@@ -127,6 +126,16 @@ public partial class ElementProxy
     if (_Instance is ModelLine m)
     {
       return new ModelLineProxy(m);
+    }
+
+    return null;
+  }
+
+  public IRevitLevel? ToLevel()
+  {
+    if (_Instance is Level m)
+    {
+      return new LevelProxy(m);
     }
 
     return null;
