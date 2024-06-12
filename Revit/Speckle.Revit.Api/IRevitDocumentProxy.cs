@@ -140,6 +140,25 @@ public partial class ElementProxy
 
     return null;
   }
+
+  public IRevitLocationPoint? GetLocationAsLocationPoint()
+  {
+    if (_Instance.Location is LocationPoint l)
+    {
+      return new LocationPointProxy(l);
+    }
+
+    return null;
+  }
+  public IRevitLocationCurve? GetLocationAsLocationCurve()
+  {
+    if (_Instance.Location is LocationCurve l)
+    {
+      return new LocationCurveProxy(l);
+    }
+
+    return null;
+  }
 }
 
 [Proxy(typeof(FamilySymbol), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
