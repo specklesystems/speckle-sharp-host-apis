@@ -11,7 +11,7 @@ public class EnumUtilityTests
     X = 1,
     Y = 2,
   }
-    
+
   public enum Test2
   {
     X = 3,
@@ -30,7 +30,7 @@ public class EnumUtilityTests
     var x = EnumUtility<Test1, Test2>.Convert(Test1.X);
     x.Should().Be(Test2.X);
   }
-  
+
   [Test]
   public void Fails()
   {

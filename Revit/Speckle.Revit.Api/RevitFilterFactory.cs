@@ -41,7 +41,9 @@ public class RevitFilterFactory : IRevitFilterFactory
     );
 
   public IRevitElementCategoryFilter CreateElementCategoryFilter(RevitBuiltInCategory category) =>
-    new ElementCategoryFilterProxy(new ElementCategoryFilter(EnumUtility<RevitBuiltInCategory, BuiltInCategory>.Convert(category)));
+    new ElementCategoryFilterProxy(
+      new ElementCategoryFilter(EnumUtility<RevitBuiltInCategory, BuiltInCategory>.Convert(category))
+    );
 }
 
 [Proxy(

@@ -7,13 +7,14 @@ namespace Speckle.Revit.Interfaces
     where TDestination : struct, Enum
   {
     private static readonly ConcurrentDictionary<TSource, TDestination> _destinations = new();
+
     static EnumUtility()
     {
-      var sources =
-        ((TSource[])Enum.GetValues(typeof(TSource))).Select(x => (x.ToString().ToUpperInvariant(), x));
-      var destinations =
-        ((TDestination[])Enum.GetValues(typeof(TDestination))).Select(x => (x.ToString().ToUpperInvariant(), x)).ToList();
-      foreach (var (name, val)  in sources)
+      var sources = ((TSource[])Enum.GetValues(typeof(TSource))).Select(x => (x.ToString().ToUpperInvariant(), x));
+      var destinations = ((TDestination[])Enum.GetValues(typeof(TDestination)))
+        .Select(x => (x.ToString().ToUpperInvariant(), x))
+        .ToList();
+      foreach (var (name, val) in sources)
       {
         var d = destinations.Where(x => x.Item1 == name).ToList();
         if (d.Any())

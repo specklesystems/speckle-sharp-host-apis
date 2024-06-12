@@ -197,7 +197,8 @@ public partial interface IRevitFamilyInstanceProxy : IRevitFamilyInstance;
 
 public partial class FamilyInstanceProxy
 {
-  public RevitStructuralType StructuralType => EnumUtility<Autodesk.Revit.DB.Structure.StructuralType, RevitStructuralType>.Convert(_Instance.StructuralType);
+  public RevitStructuralType StructuralType =>
+    EnumUtility<Autodesk.Revit.DB.Structure.StructuralType, RevitStructuralType>.Convert(_Instance.StructuralType);
 }
 
 [Proxy(typeof(Solid), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
@@ -222,7 +223,8 @@ public partial interface IRevitOptionsProxy : IRevitOptions;
 
 public partial class OptionsProxy
 {
-  public RevitViewDetailLevel DetailLevel => EnumUtility<ViewDetailLevel, RevitViewDetailLevel>.Convert(_Instance.DetailLevel);
+  public RevitViewDetailLevel DetailLevel =>
+    EnumUtility<ViewDetailLevel, RevitViewDetailLevel>.Convert(_Instance.DetailLevel);
 }
 
 [Proxy(
