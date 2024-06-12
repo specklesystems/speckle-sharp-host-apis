@@ -10,9 +10,9 @@ namespace Speckle.Revit.Interfaces
 
     static EnumUtility()
     {
-      var sources = ((TSource[])Enum.GetValues(typeof(TSource))).Select(x => (x.ToString().ToUpperInvariant(), x));
-      var destinations = ((TDestination[])Enum.GetValues(typeof(TDestination)))
-        .Select(x => (x.ToString().ToUpperInvariant(), x))
+      var sources = ((TSource[])Enum.GetValues(typeof(TSource))).Select(x => (x.ToString(), x));
+      var destinations = Enum.GetNames(typeof(TDestination))
+        .Select(x => (x, (TDestination)Enum.Parse(typeof(TDestination), x.ToString())))
         .ToList();
       foreach (var (name, val) in sources)
       {
@@ -23,13 +23,8 @@ namespace Speckle.Revit.Interfaces
           {
             destinations.Remove(v);
           }
+          _destinations.TryAdd(val, d.Single().Item2);
         }
-        else
-        {
-          throw new InvalidOperationException($"{name} does not exist in destination enum: {typeof(TDestination)}");
-        }
-
-        _destinations.TryAdd(val, d.First().x);
       }
     }
 
