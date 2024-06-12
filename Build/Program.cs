@@ -83,9 +83,9 @@ Target(
       return Glob.Files(".", d);
     }
 
-    foreach (var file in GetFiles("**/*.Test.csproj"))
+    foreach (var file in GetFiles("**/*.Tests.csproj"))
     {
-      Run("dotnet", $"test {file} -c Release --no-restore --verbosity=normal");
+      Run("dotnet", $"test {file} -c Release --no-build --verbosity=normal");
     }
   }
 );
