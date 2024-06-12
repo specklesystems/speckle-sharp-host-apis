@@ -25,7 +25,7 @@ public partial interface IRevitForgeTypeIdProxy : IRevitForgeTypeId;
 [Proxy(
   typeof(Element),
   ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
-  new[] { "Parameter", "BoundingBox", "Geometry" }
+  new[] { "Parameter", "BoundingBox", "Geometry", "Location" }
 )]
 public partial interface IRevitElementProxy : IRevitElement;
 
@@ -158,6 +158,26 @@ public partial class ElementProxy
     }
 
     return null;
+  }
+
+  //location can be 3 types and need to handle it?
+  public IRevitLocation Location
+  {
+    get
+    {
+      IRevitLocation? location = GetLocationAsLocationPoint();
+      if (location is not null)
+      {
+        return location;
+      }
+      location = GetLocationAsLocationCurve();
+      if (location is not null)
+      {
+        return location;
+      }
+
+      return new LocationProxy(_Instance.Location);
+    }
   }
 }
 

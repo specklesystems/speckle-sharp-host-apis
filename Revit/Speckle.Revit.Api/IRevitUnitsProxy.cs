@@ -191,7 +191,7 @@ public partial interface IRevitLevelProxy : IRevitLevel;
 [Proxy(
   typeof(FamilyInstance),
   ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
-  new[] { "ToRoom", "FromRoom", "Space", "Room", "StructuralType" }
+  new[] { "ToRoom", "FromRoom", "Space", "Room", "StructuralType", "Location"  }
 )]
 public partial interface IRevitFamilyInstanceProxy : IRevitFamilyInstance;
 
@@ -204,7 +204,7 @@ public partial class FamilyInstanceProxy
 [Proxy(typeof(Solid), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
 public partial interface IRevitSolidProxy : IRevitSolid;
 
-[Proxy(typeof(Group), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(Group), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface, new[] { "Location"  })]
 public partial interface IRevitGroupProxy : IRevitGroup;
 
 [Proxy(
@@ -381,7 +381,7 @@ public partial interface IRevitTopographySurfaceProxy : IRevitTopographySurface;
 [Proxy(
   typeof(SpatialElement),
   ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
-  new[] { "GetBoundarySegments" }
+  new[] { "GetBoundarySegments", "Location"  }
 )]
 public partial interface IRevitSpatialElementProxy : IRevitSpatialElement;
 
