@@ -25,6 +25,7 @@ public interface IRevitElement : IRevitObject
   IRevitSketch? ToSketch();
   IRevitFloor? ToFloor();
   IRevitModelLine? ToModelLine();
+  IRevitLevel? ToLevel();
 
   IRevitParameterSet Parameters { get; }
 
