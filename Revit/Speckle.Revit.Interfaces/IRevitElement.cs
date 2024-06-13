@@ -65,7 +65,7 @@ public interface IRevitParameter
   int AsInteger();
   double AsDouble();
   IRevitElementId? AsElementId();
-  IRevitStorageType StorageType { get; }
+  RevitStorageType StorageType { get; }
   IRevitForgeTypeId GetUnitTypeId();
   IRevitDefinition Definition { get; }
 }
@@ -83,7 +83,7 @@ public interface IRevitInternalDefinition : IRevitDefinition
   RevitBuiltInParameter BuiltInParameter { get; }
 }
 
-public enum IRevitStorageType
+public enum RevitStorageType
 {
   None,
   Integer,

@@ -8,5 +8,5 @@ public interface IRevitDocument : IRevitObject
   bool IsFamilyDocument { get; }
   IRevitUnits GetUnits();
 
-  IRevitElement GetElement(IRevitElementId elementId);
+  IRevitElement? GetElement(IRevitElementId elementId);
 }
