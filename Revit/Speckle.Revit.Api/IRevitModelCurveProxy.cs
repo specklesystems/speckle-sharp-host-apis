@@ -74,6 +74,27 @@ public partial interface IRevitLocationCurveProxy : IRevitLocationCurve;
 [Proxy(typeof(Location), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
 public partial interface IRevitLocationProxy : IRevitLocation;
 
+public partial class LocationProxy
+{
+  public IRevitLocationCurve? ToLocationCurve(){
+    if (_Instance is LocationCurve m)
+    {
+      return new LocationCurveProxy(m);
+    }
+
+    return null;
+  }
+  public IRevitLocationPoint? ToLocationPoint()
+  {
+    if (_Instance is LocationPoint m)
+    {
+      return new LocationPointProxy(m);
+    }
+
+    return null;
+  }
+}
+
 [Proxy(
   typeof(LocationPoint),
   ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
