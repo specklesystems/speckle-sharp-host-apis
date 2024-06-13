@@ -229,7 +229,9 @@ public partial class GeometryObjectProxy
 
     return null;
   }
-  public IRevitMesh? ToMesh(){
+
+  public IRevitMesh? ToMesh()
+  {
     if (_Instance is Mesh m)
     {
       return new MeshProxy(m);
@@ -237,7 +239,9 @@ public partial class GeometryObjectProxy
 
     return null;
   }
-  public IRevitGeometryInstance? ToGeometryInstance(){
+
+  public IRevitGeometryInstance? ToGeometryInstance()
+  {
     if (_Instance is GeometryInstance m)
     {
       return new GeometryInstanceProxy(m);
@@ -245,7 +249,9 @@ public partial class GeometryObjectProxy
 
     return null;
   }
-  public IRevitGeometryElement? ToGeometryElement(){
+
+  public IRevitGeometryElement? ToGeometryElement()
+  {
     if (_Instance is GeometryElement m)
     {
       return new GeometryElementProxy(m);
