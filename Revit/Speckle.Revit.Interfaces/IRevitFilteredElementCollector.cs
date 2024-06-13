@@ -2,5 +2,5 @@
 
 public interface IRevitFilteredElementCollector : IRevitElementFilter
 {
-  IEnumerable<T> OfClass<T>(IProxyMap proxyMap) ;
+  IEnumerable<T> OfClass<T>(IProxyMap proxyMap);
 }

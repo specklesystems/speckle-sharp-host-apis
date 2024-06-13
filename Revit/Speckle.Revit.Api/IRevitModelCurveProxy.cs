@@ -23,6 +23,7 @@ public partial class CurveProxy
     }
     return null;
   }
+
   public IRevitArc? ToArc()
   {
     if (_Instance is Arc m)
@@ -31,6 +32,7 @@ public partial class CurveProxy
     }
     return null;
   }
+
   public IRevitEllipse? ToEllipse()
   {
     if (_Instance is Ellipse m)
@@ -39,6 +41,7 @@ public partial class CurveProxy
     }
     return null;
   }
+
   public IRevitNurbSpline? ToNurbSpline()
   {
     if (_Instance is NurbSpline m)
@@ -47,6 +50,7 @@ public partial class CurveProxy
     }
     return null;
   }
+
   public IRevitHermiteSpline? ToHermiteSpline()
   {
     if (_Instance is HermiteSpline m)

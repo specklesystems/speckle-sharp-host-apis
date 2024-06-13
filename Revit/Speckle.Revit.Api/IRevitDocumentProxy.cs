@@ -150,6 +150,7 @@ public partial class ElementProxy
 
     return null;
   }
+
   public IRevitLocationCurve? GetLocationAsLocationCurve()
   {
     if (_Instance.Location is LocationCurve l)

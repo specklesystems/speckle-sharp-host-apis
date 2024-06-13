@@ -19,6 +19,7 @@ public interface IRevitFilterFactory
   IRevitPointCloudFilter CreateMultiPlaneFilter(params IRevitPlane[] planes);
   IRevitElementCategoryFilter CreateElementCategoryFilter(RevitBuiltInCategory category);
 }
+
 public interface IProxyMap
 {
   Type? GetMappedType(Type type);
@@ -26,6 +27,7 @@ public interface IProxyMap
 
   object CreateProxy(Type type, object toWrap);
 }
+
 // ghetto default interface implementation :(
 public static class ProxyMapExtensions
 {

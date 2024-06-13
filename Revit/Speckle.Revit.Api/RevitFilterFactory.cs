@@ -20,7 +20,10 @@ public class RevitFilterFactory : IRevitFilterFactory
     bool inverted
   ) =>
     new ElementMulticategoryFilterProxy(
-      instance: new ElementMulticategoryFilter(categories.Select(EnumUtility<RevitBuiltInCategory, BuiltInCategory>.Convert).ToArray(), inverted)
+      instance: new ElementMulticategoryFilter(
+        categories.Select(EnumUtility<RevitBuiltInCategory, BuiltInCategory>.Convert).ToArray(),
+        inverted
+      )
     );
 
   public IRevitFilteredElementCollector CreateFilteredElementCollector(
@@ -37,11 +40,7 @@ public class RevitFilterFactory : IRevitFilterFactory
         )
       );
     }
-    return new FilteredElementCollectorProxy(
-      new FilteredElementCollector(
-        ((DocumentProxy)document)._Instance
-      )
-    );
+    return new FilteredElementCollectorProxy(new FilteredElementCollector(((DocumentProxy)document)._Instance));
   }
 
   public IRevitPointCloudFilter CreateMultiPlaneFilter(params IRevitPlane[] planes) =>
@@ -99,6 +98,12 @@ public partial interface IRevitFilteredElementCollectorProxy : IRevitFilteredEle
 
 public partial class FilteredElementCollectorProxy
 {
-  public IEnumerable<T> OfClass<T>(IProxyMap proxyMap) => _Instance.OfClass(proxyMap.UnmapType(typeof(T)) ?? throw new InvalidOperationException($"Could not unmap type: {typeof(T).FullName}"))
-    .Select(x => proxyMap.CreateProxy(typeof(T), x)).Cast<T>();
+  public IEnumerable<T> OfClass<T>(IProxyMap proxyMap) =>
+    _Instance
+      .OfClass(
+        proxyMap.UnmapType(typeof(T))
+          ?? throw new InvalidOperationException($"Could not unmap type: {typeof(T).FullName}")
+      )
+      .Select(x => proxyMap.CreateProxy(typeof(T), x))
+      .Cast<T>();
 }
