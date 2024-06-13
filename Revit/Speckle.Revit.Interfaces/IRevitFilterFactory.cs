@@ -22,6 +22,7 @@ public interface IRevitFilterFactory
 public interface IProxyMap
 {
   Type? GetMappedType(Type type);
+  Type? UnmapType(Type type);
 
   object CreateProxy(Type type, object toWrap);
 }
@@ -35,7 +36,6 @@ public static class ProxyMapExtensions
     {
       return (proxyType, proxyMap.CreateProxy(proxyType, toWrap));
     }
-
     return null;
   }
 }
