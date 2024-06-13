@@ -218,6 +218,49 @@ public partial interface IRevitGroupProxy : IRevitGroup;
 )]
 public partial interface IRevitGeometryObjectProxy : IRevitGeometryObject;
 
+public partial class GeometryObjectProxy
+{
+  public IRevitSolid? ToSolid()
+  {
+    if (_Instance is Solid m)
+    {
+      return new SolidProxy(m);
+    }
+
+    return null;
+  }
+
+  public IRevitMesh? ToMesh()
+  {
+    if (_Instance is Mesh m)
+    {
+      return new MeshProxy(m);
+    }
+
+    return null;
+  }
+
+  public IRevitGeometryInstance? ToGeometryInstance()
+  {
+    if (_Instance is GeometryInstance m)
+    {
+      return new GeometryInstanceProxy(m);
+    }
+
+    return null;
+  }
+
+  public IRevitGeometryElement? ToGeometryElement()
+  {
+    if (_Instance is GeometryElement m)
+    {
+      return new GeometryElementProxy(m);
+    }
+
+    return null;
+  }
+}
+
 [Proxy(
   typeof(Options),
   ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,

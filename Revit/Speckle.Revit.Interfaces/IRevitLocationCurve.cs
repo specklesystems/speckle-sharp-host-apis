@@ -16,6 +16,10 @@ public interface IRevitPolyLine : IRevitGeometryObject
 public interface IRevitGeometryObject : IRevitObject
 {
   IRevitElementId GraphicsStyleId { get; }
+  IRevitSolid? ToSolid();
+  IRevitMesh? ToMesh();
+  IRevitGeometryInstance? ToGeometryInstance();
+  IRevitGeometryElement? ToGeometryElement();
 }
 
 public interface IRevitPoint : IRevitObject
