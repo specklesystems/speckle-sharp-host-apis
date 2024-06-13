@@ -98,12 +98,12 @@ public partial interface IRevitFilteredElementCollectorProxy : IRevitFilteredEle
 
 public partial class FilteredElementCollectorProxy
 {
-  public IEnumerable<T> OfClass<T>(IProxyMap proxyMap) =>
+  public IEnumerable<T> OfClass<T>() =>
     _Instance
       .OfClass(
-        proxyMap.GetHostTypeFromMappedType(typeof(T))
+        ProxyMap.GetHostTypeFromMappedType(typeof(T))
           ?? throw new InvalidOperationException($"Could not unmap type: {typeof(T).FullName}")
       )
-      .Select(x => proxyMap.CreateProxy(typeof(T), x))
+      .Select(x => ProxyMap.CreateProxy(typeof(T), x))
       .Cast<T>();
 }

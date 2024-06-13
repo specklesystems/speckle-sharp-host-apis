@@ -101,12 +101,6 @@ public interface IRevitGroup : IRevitElement
   IList<IRevitElementId> GetMemberIds();
 }
 
-public interface IRevitSolid : IRevitGeometryObject
-{
-  IRevitFaceArray Faces { get; }
-  double SurfaceArea { get; }
-}
-
 public interface IRevitFace
 {
   IRevitMesh Triangulate();
