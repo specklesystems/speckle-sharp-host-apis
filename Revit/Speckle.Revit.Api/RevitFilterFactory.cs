@@ -1,6 +1,5 @@
 ﻿using Autodesk.Revit.DB;
 using Autodesk.Revit.DB.PointClouds;
-using Mapster.Utils;
 using Speckle.ProxyGenerator;
 using Speckle.Revit.Interfaces;
 
@@ -13,7 +12,7 @@ public class RevitFilterFactory : IRevitFilterFactory
 
   public IRevitLogicalAndFilterFilter CreateLogicalAndFilter(params IRevitElementFilter[] filters) =>
     new LogicalAndFilterProxy(
-      new LogicalAndFilter(filters.Cast<IRevitElementFilterProxy>().Select(x => x._Instance).ToList())
+      new LogicalAndFilter(filters.Cast<ElementFilterProxy>().Select(x => x._Instance).ToList())
     );
 
   public IRevitElementMulticategoryFilter CreateElementMulticategoryFilter(
@@ -21,19 +20,28 @@ public class RevitFilterFactory : IRevitFilterFactory
     bool inverted
   ) =>
     new ElementMulticategoryFilterProxy(
-      new ElementMulticategoryFilter(categories.Select(x => (BuiltInCategory)x).ToArray(), inverted)
+      instance: new ElementMulticategoryFilter(
+        categories.Select(EnumUtility<RevitBuiltInCategory, BuiltInCategory>.Convert).ToArray(),
+        inverted
+      )
     );
 
   public IRevitFilteredElementCollector CreateFilteredElementCollector(
     IRevitDocument document,
     params IRevitElementId[] elementIds
-  ) =>
-    new FilteredElementCollectorProxy(
-      new FilteredElementCollector(
-        ((IRevitDocumentProxy)document)._Instance,
-        elementIds.Cast<IRevitElementIdProxy>().Select(x => x._Instance).ToList()
-      )
-    );
+  )
+  {
+    if (elementIds.Any())
+    {
+      return new FilteredElementCollectorProxy(
+        new FilteredElementCollector(
+          ((DocumentProxy)document)._Instance,
+          elementIds.Cast<ElementIdProxy>().Select(x => x._Instance).ToList()
+        )
+      );
+    }
+    return new FilteredElementCollectorProxy(new FilteredElementCollector(((DocumentProxy)document)._Instance));
+  }
 
   public IRevitPointCloudFilter CreateMultiPlaneFilter(params IRevitPlane[] planes) =>
     new PointCloudFilterProxy(
@@ -90,5 +98,12 @@ public partial interface IRevitFilteredElementCollectorProxy : IRevitFilteredEle
 
 public partial class FilteredElementCollectorProxy
 {
-  public IEnumerable<T> OfClass<T>() => _Instance.OfClass(typeof(T)).Cast<T>();
+  public IEnumerable<T> OfClass<T>(IProxyMap proxyMap) =>
+    _Instance
+      .OfClass(
+        proxyMap.UnmapType(typeof(T))
+          ?? throw new InvalidOperationException($"Could not unmap type: {typeof(T).FullName}")
+      )
+      .Select(x => proxyMap.CreateProxy(typeof(T), x))
+      .Cast<T>();
 }

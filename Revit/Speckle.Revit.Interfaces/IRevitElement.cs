@@ -25,13 +25,17 @@ public interface IRevitElement : IRevitObject
   IRevitSketch? ToSketch();
   IRevitFloor? ToFloor();
   IRevitModelLine? ToModelLine();
+  IRevitLevel? ToLevel();
+  IRevitLocation Location { get; }
+
+  IRevitLocationPoint? GetLocationAsLocationPoint();
+  IRevitLocationCurve? GetLocationAsLocationCurve();
 
   IRevitParameterSet Parameters { get; }
 
   IRevitParameter? GetParameter(RevitBuiltInParameter parameter);
 
   IRevitGeometryElement GetGeometry(IRevitOptions options);
-  IRevitLocation Location { get; }
 }
 
 public interface IRevitParameterSet : IEnumerable<IRevitParameter>, IDisposable;
