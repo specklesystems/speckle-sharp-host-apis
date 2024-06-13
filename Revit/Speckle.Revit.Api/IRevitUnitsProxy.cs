@@ -72,7 +72,7 @@ public partial interface IRevitParameterProxy : IRevitParameter;
 public partial class ParameterProxy
 {
   public bool IsReadOnly => _Instance.IsReadOnly;
-  public IRevitStorageType StorageType => EnumUtility<StorageType, IRevitStorageType>.Convert(_Instance.StorageType);
+  public RevitStorageType StorageType => EnumUtility<StorageType, RevitStorageType>.Convert(_Instance.StorageType);
 }
 
 [Proxy(typeof(Definition), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
