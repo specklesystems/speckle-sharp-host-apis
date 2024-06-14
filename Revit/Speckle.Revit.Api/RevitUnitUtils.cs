@@ -106,5 +106,6 @@ public class ProxyMapper : IProxyMapper
   public Type? GetHostTypeFromMappedType(Type type) => ProxyMap.GetHostTypeFromMappedType(type);
 
   public object CreateProxy(Type type, object toWrap) => ProxyMap.CreateProxy(type, toWrap);
+
   public T CreateProxy<T>(object toWrap) => ProxyMap.CreateProxy<T>(toWrap);
 }
