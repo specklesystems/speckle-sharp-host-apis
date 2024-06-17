@@ -23,5 +23,8 @@
 
   <PropertyGroup>
     <MinVerDefaultPreReleaseIdentifiers>preview.0</MinVerDefaultPreReleaseIdentifiers>
-  </PropertyGroup>
+  </PropertyGroup>  
+  <ItemGroup>
+    <PackageReference Include="PolySharp" PrivateAssets="All"/>
+  </ItemGroup>
 </Project>
