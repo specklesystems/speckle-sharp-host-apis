@@ -31,7 +31,6 @@ public interface IProxyMapper
   T CreateProxy<T>(object toWrap);
 }
 
-
 public record WrappedType(Type Type, object Target);
 
 // ghetto default interface implementation :(
@@ -42,7 +41,7 @@ public static class ProxyMapExtensions
     var mappedType = proxyMap.GetMappedTypeFromHostType(target);
     if (mappedType is not null)
     {
-      return new (mappedType, proxyMap.CreateProxy(mappedType, toWrap));
+      return new(mappedType, proxyMap.CreateProxy(mappedType, toWrap));
     }
     mappedType = proxyMap.GetMappedTypeFromProxyType(target);
     if (mappedType is not null)

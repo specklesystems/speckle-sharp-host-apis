@@ -3,10 +3,7 @@ using System.Collections.Generic;
 
 namespace Speckle.Revit.Interfaces;
 
-public interface IRevitModelText
-{
-
-}
+public interface IRevitModelText { }
 
 public interface IRevitElement : IRevitObject
 {

@@ -31,10 +31,15 @@ public partial interface IRevitElementProxy : IRevitElement;
 
 public partial class ElementProxy
 {
-  public IRevitParameter?  GetParameter(RevitBuiltInParameter builtInParameter) => A.Call<IRevitParameter>(() =>_Instance.get_Parameter(EnumUtility<RevitBuiltInParameter, BuiltInParameter>.Convert(builtInParameter)));
+  public IRevitParameter? GetParameter(RevitBuiltInParameter builtInParameter) =>
+    A.Call<IRevitParameter>(
+      () => _Instance.get_Parameter(EnumUtility<RevitBuiltInParameter, BuiltInParameter>.Convert(builtInParameter))
+    );
+
   public IRevitBoundingBoxXYZ? GetBoundingBox() => A.Call<IRevitBoundingBoxXYZ>(() => _Instance.get_BoundingBox(null));
 
-  public IRevitGeometryElement? GetGeometry(IRevitOptions options) => A.Call<IRevitGeometryElement>(() => _Instance.get_Geometry(((OptionsProxy)options)._Instance));
+  public IRevitGeometryElement? GetGeometry(IRevitOptions options) =>
+    A.Call<IRevitGeometryElement>(() => _Instance.get_Geometry(((OptionsProxy)options)._Instance));
 
   public IRevitFamilySymbol? ToFamilySymbol() => A.Cast<IRevitFamilySymbol, FamilySymbol>(_Instance);
 
