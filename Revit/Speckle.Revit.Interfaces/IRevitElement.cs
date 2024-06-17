@@ -3,6 +3,11 @@ using System.Collections.Generic;
 
 namespace Speckle.Revit.Interfaces;
 
+public interface IRevitModelText
+{
+
+}
+
 public interface IRevitElement : IRevitObject
 {
   IList<IRevitElementId> GetDependentElements(IRevitElementFilter filter);
@@ -14,7 +19,7 @@ public interface IRevitElement : IRevitObject
   IRevitDocument Document { get; }
   IRevitElementId GetTypeId();
   string Name { get; }
-  IRevitBoundingBoxXYZ GetBoundingBox();
+  IRevitBoundingBoxXYZ? GetBoundingBox();
 
   IRevitFamilySymbol? ToFamilySymbol();
   IRevitMaterial? ToMaterial();
@@ -35,7 +40,7 @@ public interface IRevitElement : IRevitObject
 
   IRevitParameter? GetParameter(RevitBuiltInParameter parameter);
 
-  IRevitGeometryElement GetGeometry(IRevitOptions options);
+  IRevitGeometryElement? GetGeometry(IRevitOptions options);
 }
 
 public interface IRevitParameterSet : IEnumerable<IRevitParameter>, IDisposable;

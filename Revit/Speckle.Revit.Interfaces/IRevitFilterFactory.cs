@@ -31,20 +31,23 @@ public interface IProxyMapper
   T CreateProxy<T>(object toWrap);
 }
 
+
+public record WrappedType(Type Type, object Target);
+
 // ghetto default interface implementation :(
 public static class ProxyMapExtensions
 {
-  public static (Type, object)? WrapIfExists(this IProxyMapper proxyMap, Type target, object toWrap)
+  public static WrappedType? WrapIfExists(this IProxyMapper proxyMap, Type target, object toWrap)
   {
     var mappedType = proxyMap.GetMappedTypeFromHostType(target);
     if (mappedType is not null)
     {
-      return (mappedType, proxyMap.CreateProxy(mappedType, toWrap));
+      return new (mappedType, proxyMap.CreateProxy(mappedType, toWrap));
     }
     mappedType = proxyMap.GetMappedTypeFromProxyType(target);
     if (mappedType is not null)
     {
-      return (mappedType, toWrap);
+      return new(mappedType, toWrap);
     }
     return null;
   }

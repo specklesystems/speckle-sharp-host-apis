@@ -31,120 +31,30 @@ public partial interface IRevitElementProxy : IRevitElement;
 
 public partial class ElementProxy
 {
-  public IRevitParameter? GetParameter(RevitBuiltInParameter builtInParameter)
-  {
-    var param = _Instance.get_Parameter(EnumUtility<RevitBuiltInParameter, BuiltInParameter>.Convert(builtInParameter));
-    if (param is null)
-    {
-      return null;
-    }
-    return new ParameterProxy(param);
-  }
+  public IRevitParameter?  GetParameter(RevitBuiltInParameter builtInParameter) => A.Call<IRevitParameter>(() =>_Instance.get_Parameter(EnumUtility<RevitBuiltInParameter, BuiltInParameter>.Convert(builtInParameter)));
+  public IRevitBoundingBoxXYZ? GetBoundingBox() => A.Call<IRevitBoundingBoxXYZ>(() => _Instance.get_BoundingBox(null));
 
-  public IRevitBoundingBoxXYZ GetBoundingBox() => new BoundingBoxXYZProxy(_Instance.get_BoundingBox(null));
+  public IRevitGeometryElement? GetGeometry(IRevitOptions options) => A.Call<IRevitGeometryElement>(() => _Instance.get_Geometry(((OptionsProxy)options)._Instance));
 
-  public IRevitGeometryElement GetGeometry(IRevitOptions options) =>
-    new GeometryElementProxy(_Instance.get_Geometry(((OptionsProxy)options)._Instance));
+  public IRevitFamilySymbol? ToFamilySymbol() => A.Cast<IRevitFamilySymbol, FamilySymbol>(_Instance);
 
-  public IRevitFamilySymbol? ToFamilySymbol()
-  {
-    if (_Instance is FamilySymbol s)
-    {
-      return new FamilySymbolProxy(s);
-    }
+  public IRevitMaterial? ToMaterial() => A.Cast<IRevitMaterial, Material>(_Instance);
 
-    return null;
-  }
+  public IRevitHostObject? ToHostObject() => A.Cast<IRevitHostObject, HostObject>(_Instance);
 
-  public IRevitMaterial? ToMaterial()
-  {
-    if (_Instance is Material m)
-    {
-      return new MaterialProxy(m);
-    }
+  public IRevitGroup? ToGroup() => A.Cast<IRevitGroup, Group>(_Instance);
 
-    return null;
-  }
+  public IRevitGraphicsStyle? ToGraphicsStyle() => A.Cast<IRevitGraphicsStyle, GraphicsStyle>(_Instance);
 
-  public IRevitHostObject? ToHostObject()
-  {
-    if (_Instance is HostObject m)
-    {
-      return new HostObjectProxy(m);
-    }
+  public IRevitElementType? ToType() => A.Cast<IRevitElementType, ElementType>(_Instance);
 
-    return null;
-  }
+  public IRevitSketch? ToSketch() => A.Cast<IRevitSketch, Sketch>(_Instance);
 
-  public IRevitGroup? ToGroup()
-  {
-    if (_Instance is Group m)
-    {
-      return new GroupProxy(m);
-    }
+  public IRevitFloor? ToFloor() => A.Cast<IRevitFloor, Floor>(_Instance);
 
-    return null;
-  }
+  public IRevitModelLine? ToModelLine() => A.Cast<IRevitModelLine, ModelLine>(_Instance);
 
-  public IRevitGraphicsStyle? ToGraphicsStyle()
-  {
-    if (_Instance is GraphicsStyle m)
-    {
-      return new GraphicsStyleProxy(m);
-    }
-
-    return null;
-  }
-
-  public IRevitElementType? ToType()
-  {
-    if (_Instance is ElementType m)
-    {
-      return new ElementTypeProxy(m);
-    }
-
-    return null;
-  }
-
-  public IRevitSketch? ToSketch()
-  {
-    if (_Instance is Sketch m)
-    {
-      return new SketchProxy(m);
-    }
-
-    return null;
-  }
-
-  public IRevitFloor? ToFloor()
-  {
-    if (_Instance is Floor m)
-    {
-      return new FloorProxy(m);
-    }
-
-    return null;
-  }
-
-  public IRevitModelLine? ToModelLine()
-  {
-    if (_Instance is ModelLine m)
-    {
-      return new ModelLineProxy(m);
-    }
-
-    return null;
-  }
-
-  public IRevitLevel? ToLevel()
-  {
-    if (_Instance is Level m)
-    {
-      return new LevelProxy(m);
-    }
-
-    return null;
-  }
+  public IRevitLevel? ToLevel() => A.Cast<IRevitLevel, Level>(_Instance);
 
   public IRevitLocationPoint? GetLocationAsLocationPoint()
   {
