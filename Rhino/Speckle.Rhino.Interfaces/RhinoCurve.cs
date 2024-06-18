@@ -21,10 +21,11 @@ public interface IRhinoCurve : IRhinoGeometryBase
     double tolerance,
     double minEdgeLength,
     double maxEdgeLength,
-    bool keepStartPoint);
+    bool keepStartPoint
+  );
 
   bool TryGetPolyline(out IRhinoPolyline polyline);
-  
+
   bool IsClosed { get; }
   int Degree { get; }
   bool IsPeriodic { get; }
@@ -139,16 +140,16 @@ public interface IRhinoNurbsSurface : IRhinoSurface
   IRhinoNurbsSurfaceKnotList KnotsV { get; }
   IRhinoNurbsSurfacePointList Points { get; }
 }
-public interface IRhinoNurbsSurfaceKnotList : IReadOnlyList<double>
-{
-  
-}
+
+public interface IRhinoNurbsSurfaceKnotList : IReadOnlyList<double> { }
+
 public interface IRhinoNurbsSurfacePointList : IEnumerable<IRhinoControlPoint>
 {
   int CountU { get; }
   int CountV { get; }
   IRhinoControlPoint GetControlPoint(int i, int j);
 }
+
 public interface IRhinoSurface : IRhinoGeometryBase
 {
   IRhinoNurbsSurface ToNurbsSurface();
@@ -168,26 +169,32 @@ public interface IRhinoMesh : IRhinoGeometryBase
   double Volume();
 }
 
-
 public interface IRhinoMeshVertexColorList : IReadOnlyList<System.Drawing.Color>;
+
 public interface IRhinoPoint2f
 {
   float X { get; }
   float Y { get; }
 }
+
 public interface IRhinoMeshTextureCoordinateList : IReadOnlyList<IRhinoPoint2f>;
+
 public interface IRhinoMeshNgon
 {
   uint[] BoundaryVertexIndexList();
 }
+
 public interface IRhinoPoint3f;
 
 public interface IRhinoMeshVertexList : IReadOnlyList<IRhinoPoint3f>
 {
   IRhinoPoint3d[] ToPoint3dArray();
 }
+
 public interface IRhinoMeshFace;
+
 public interface IRhinoMeshFaceList : IReadOnlyList<IRhinoMeshFace>;
+
 public interface IRhinoRefinementSettings;
 
 public interface IRhinoBrepCurveList : IReadOnlyList<IRhinoCurve>;
@@ -257,8 +264,6 @@ public interface IRhinoControlPoint
 
 public interface IRhinoPolyCurve : IRhinoCurve
 {
-  
-
   IRhinoCurve[] DuplicateSegments();
 }
 
@@ -274,14 +279,10 @@ public interface IRhinoNurbsCurve : IRhinoCurve
   bool IsRational { get; }
 }
 
-public interface IRhinoNurbsCurveKnotList : IReadOnlyList<double>
-{
-  
-}
-public interface IRhinoNurbsCurvePointList : IReadOnlyList<IRhinoControlPoint>
-{
-  
-}
+public interface IRhinoNurbsCurveKnotList : IReadOnlyList<double> { }
+
+public interface IRhinoNurbsCurvePointList : IReadOnlyList<IRhinoControlPoint> { }
+
 public interface IRhinoPoint3dList : IReadOnlyList<IRhinoPoint3d>;
 
 public interface IRhinoPolyline : IRhinoPoint3dList
@@ -290,6 +291,7 @@ public interface IRhinoPolyline : IRhinoPoint3dList
   IRhinoBoundingBox BoundingBox { get; }
   bool IsClosed { get; }
 }
+
 public interface IRhinoLineCurve : IRhinoCurve
 {
   IRhinoLine Line { get; }

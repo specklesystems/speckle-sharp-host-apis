@@ -3,7 +3,6 @@ using System.Runtime.CompilerServices;
 
 namespace Speckle.Shared;
 
-
 public static class NotNullExtensions
 {
   /// <inheritdoc cref="NotNull{T}(T?,string?)"/>
