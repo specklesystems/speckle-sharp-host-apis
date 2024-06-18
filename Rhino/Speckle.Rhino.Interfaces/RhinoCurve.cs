@@ -4,6 +4,7 @@ public interface IRhinoDoc
 {
   double ModelAbsoluteTolerance { get; }
 }
+
 public interface IRhinoCurve : IRhinoGeometryBase
 {
   bool TryGetCircle(out IRhinoCircle circle, double tolerance);
@@ -27,14 +28,12 @@ public interface IRhinoArcCurve : IRhinoCurve
 {
   bool IsCompleteCircle { get; }
   IRhinoArc Arc { get; }
-
 }
 
 public interface IRhinoCircle
 {
   IRhinoPlane Plane { get; }
   double Radius { get; }
-  
 }
 
 public interface IRhinoArc
@@ -81,7 +80,7 @@ public interface IRhinoBoundingBox;
 public interface IRhinoBrep : IRhinoGeometryBase
 {
   bool Repair(double tolerance);
-  
+
   IRhinoBrepVertexList Vertices { get; }
   IRhinoBrepCurveList Curves3D { get; }
   IRhinoBrepSurfaceList Surfaces { get; }
@@ -119,10 +118,13 @@ public interface IRhinoMesh : IRhinoGeometryBase
 {
   void Append(IEnumerable<IRhinoMesh> meshes);
 }
+
 public interface IRhinoRefinementSettings;
 
 public interface IRhinoBrepCurveList : IReadOnlyList<IRhinoCurve>;
+
 public interface IRhinoBrepSurfaceList : IReadOnlyList<IRhinoSurface>;
+
 public interface IRhinoBrepFaceList : IReadOnlyList<IRhinoBrepFace>;
 
 public interface IRhinoSurfaceProxy : IRhinoSurface;
@@ -147,18 +149,21 @@ public interface IRhinoBrepLoop : IRhinoGeometryBase
 }
 
 public interface IRhinoBrepEdgeList : IReadOnlyList<IRhinoBrepEdge>;
+
 public interface IRhinoCurveProxy2 : IRhinoCurve
 {
   bool ProxyCurveIsReversed { get; }
 }
+
 public interface IRhinoBrepEdge : IRhinoCurveProxy2
 {
-    int EdgeIndex { get; }
+  int EdgeIndex { get; }
   int EdgeCurveIndex { get; }
   int[] TrimIndices();
   IRhinoBrepVertex? StartVertex { get; }
   IRhinoBrepVertex? EndVertex { get; }
 }
+
 public interface IRhinoBrepTrim : IRhinoCurveProxy2
 {
   int TrimIndex { get; }
@@ -182,11 +187,10 @@ public interface IRhinoControlPoint
 }
 
 public interface IRhinoPolyCurve : IRhinoCurve;
+
 public interface IRhinoPolylineCurve : IRhinoCurve;
 
-public interface IRhinoNurbsCurve : IRhinoCurve
-{
-}
+public interface IRhinoNurbsCurve : IRhinoCurve { }
 
 public interface IRhinoLineCurve : IRhinoCurve
 {

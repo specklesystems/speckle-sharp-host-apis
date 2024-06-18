@@ -154,12 +154,6 @@ public struct RevitCloudPoint : IRevitCloudPoint
 }
 
 [Proxy(
-  typeof(RevitCloudPoint),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
-)]
-public partial interface IRevitCloudPointProxy : IRevitCloudPointList;
-
-[Proxy(
   typeof(PointCollection),
   ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
   new[] { "GetEnumerator", "Item", "get_Item", "set_Item" }

@@ -29,6 +29,12 @@
         "resolved": "5.0.0",
         "contentHash": "ybkgpQMtt0Fo91l5rYtE3TZtD+Nmy5Ko091xvfXXOosQdMi30XO2EZ2+ShZt89gdu7RMmJqZaJ+e1q6d+6+KNw=="
       },
+      "PolySharp": {
+        "type": "Direct",
+        "requested": "[1.14.1, )",
+        "resolved": "1.14.1",
+        "contentHash": "mOOmFYwad3MIOL14VCjj02LljyF1GNw1wP0YVlxtcPvqdxjGGMNdNJJxHptlry3MOd8b40Flm8RPOM8JOlN2sQ=="
+      },
       "RhinoCommon": {
         "type": "Direct",
         "requested": "[7.13.21348.13001, )",
@@ -46,9 +52,9 @@
       },
       "Speckle.ProxyGenerator": {
         "type": "Direct",
-        "requested": "[0.1.7, )",
-        "resolved": "0.1.7",
-        "contentHash": "CyMcXENu9e5qHPPbcSTMAtYt4AYHaFaeo/WL7Qhw4MiQyEk+j2ZFsDRY3YxWDmrp41gMcOmuXUPzFEWd0A6YYA=="
+        "requested": "[0.1.10, )",
+        "resolved": "0.1.10",
+        "contentHash": "1TDZBvsi3hiRIESwDGLxkKypJYMXt6sdSHzyHajLCDNF8/Vrnc2kuHcxVElkyV+/43D0l8yoVpcR0tN7acxEPA=="
       },
       "Mapster.Core": {
         "type": "Transitive",
