@@ -8,7 +8,7 @@ public interface IRhinoDoc
 public interface IRhinoCurve : IRhinoGeometryBase
 {
   bool TryGetCircle(out IRhinoCircle circle, double tolerance);
-  IRhinoInterval Domain { get; }
+  IRhinoInterval Domain { get; set; }
   IRhinoNurbsCurve ToNurbsCurve();
   double GetLength();
 
@@ -29,6 +29,7 @@ public interface IRhinoCurve : IRhinoGeometryBase
   bool IsClosed { get; }
   int Degree { get; }
   bool IsPeriodic { get; }
+  IRhinoCurve Trim(IRhinoInterval interval);
 }
 
 public interface IRhinoGeometryBase : IRhinoCommonObject
@@ -74,7 +75,11 @@ public interface IRhinoInterval
   double T1 { get; }
 }
 
-public interface IRhinoPoint3d
+public partial interface IRhinoBase
+{
+  
+}
+public interface IRhinoPoint3d : IRhinoBase
 {
   double X { get; }
   double Y { get; }
@@ -141,13 +146,20 @@ public interface IRhinoNurbsSurface : IRhinoSurface
   IRhinoNurbsSurfacePointList Points { get; }
 }
 
-public interface IRhinoNurbsSurfaceKnotList : IReadOnlyList<double> { }
+public interface IRhinoNurbsSurfaceKnotList : IReadOnlyList<double>
+{
+  void SetKnot(int index, double value);
+}
 
 public interface IRhinoNurbsSurfacePointList : IEnumerable<IRhinoControlPoint>
 {
   int CountU { get; }
   int CountV { get; }
   IRhinoControlPoint GetControlPoint(int i, int j);
+  
+  void SetPoint(int u, int v, double x, double y, double z);
+  
+  void SetWeight(int u, int v, double weight);
 }
 
 public interface IRhinoSurface : IRhinoGeometryBase
@@ -265,6 +277,7 @@ public interface IRhinoControlPoint
 public interface IRhinoPolyCurve : IRhinoCurve
 {
   IRhinoCurve[] DuplicateSegments();
+  bool AppendSegment(IRhinoCurve curve);
 }
 
 public interface IRhinoPolylineCurve : IRhinoCurve
@@ -279,17 +292,26 @@ public interface IRhinoNurbsCurve : IRhinoCurve
   bool IsRational { get; }
 }
 
-public interface IRhinoNurbsCurveKnotList : IReadOnlyList<double> { }
+public interface IRhinoNurbsCurveKnotList : IReadOnlyList<double>
+{
+  void SetKnot(int index, double value);
+}
 
-public interface IRhinoNurbsCurvePointList : IReadOnlyList<IRhinoControlPoint> { }
+public interface IRhinoNurbsCurvePointList : IReadOnlyList<IRhinoControlPoint>
+{
+  void SetPoint(int index, IRhinoPoint3d point3d, double weight);
+}
 
-public interface IRhinoPoint3dList : IReadOnlyList<IRhinoPoint3d>;
+public interface IRhinoPoint3dList : IReadOnlyList<IRhinoPoint3d>
+{
+  void Add(IRhinoPoint3d point3d);
+}
 
 public interface IRhinoPolyline : IRhinoPoint3dList
 {
-  void Add(IRhinoPoint3d point);
   IRhinoBoundingBox BoundingBox { get; }
   bool IsClosed { get; }
+  IRhinoPolylineCurve ToPolylineCurve();
 }
 
 public interface IRhinoLineCurve : IRhinoCurve
@@ -325,4 +347,11 @@ public interface IRhinoPointCloud
   IRhinoPoint3d[] GetPoints();
   System.Drawing.Color[] GetColors();
   IRhinoBoundingBox GetBoundingBox(bool b);
+  
+  IRhinoPointCloudItem this[int index] { get; }
+}
+
+public interface IRhinoPointCloudItem
+{
+  System.Drawing.Color Color { get; set; }
 }

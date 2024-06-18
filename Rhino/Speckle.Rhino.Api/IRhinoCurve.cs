@@ -413,7 +413,8 @@ public partial class MeshVertexColorListProxy
   IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 }
 
-[Proxy(typeof(Polyline), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(Polyline), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
+  new []{ "Add"})]
 public partial interface IRhinoPolylineProxy : IRhinoPolyline;
 
 [Proxy(
@@ -466,6 +467,8 @@ public partial class NurbsCurveKnotListProxy
   }
 
   IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+
+  public void SetKnot(int index, double value) => _Instance[index] = value;
 }
 
 [Proxy(
@@ -508,6 +511,8 @@ public partial class NurbsSurfaceKnotListProxy
   }
 
   IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+
+  public void SetKnot(int index, double value) => _Instance[index] = value;
 }
 
 [Proxy(
@@ -544,3 +549,10 @@ public partial interface IRhinoVector3dProxy : IRhinoVector3d;
   new[] { "SolidOrientation" }
 )]
 public partial interface IRhinoPointCloudProxy : IRhinoPointCloud;
+
+[Proxy(
+  typeof(PointCloudItem),
+  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
+  new[] { "SolidOrientation" }
+)]
+public partial interface IRhinoPointCloudItemProxy : IRhinoPointCloudItem;

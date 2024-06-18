@@ -32,6 +32,17 @@ public static class A
     {
       return proxyCast(w);
     }
+
     return default;
+  }
+  
+  public static TProxy To<TProxy>(this object instance)
+  {
+    if (instance is TProxy w)
+    {
+      return w;
+    }
+
+    throw new NotSupportedException();
   }
 }
