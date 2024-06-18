@@ -297,6 +297,9 @@ public partial interface IRhinoNurbsCurveProxy : IRhinoNurbsCurve;
 [Proxy(typeof(LineCurve), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
 public partial interface IRhinoLineCurveProxy : IRhinoLineCurve;
 
+[Proxy(typeof(Transform), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+public partial interface IRhinoTransformProxy : IRhinoTransform;
+
 [Proxy(typeof(Ellipse), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
 public partial interface IRhinoEllipseProxy : IRhinoEllipse;
 

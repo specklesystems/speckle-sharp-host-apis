@@ -35,6 +35,7 @@ public interface IRhinoCurve : IRhinoGeometryBase
 public interface IRhinoGeometryBase : IRhinoCommonObject
 {
   IRhinoBoundingBox GetBoundingBox(bool val);
+  void Transform(IRhinoTransform transform);
 }
 
 public interface IRhinoCommonObject;
@@ -123,6 +124,8 @@ public interface IRhinoBrep : IRhinoGeometryBase
   double GetArea();
   RhinoBrepSolidOrientation SolidOrientation { get; }
 }
+
+public interface IRhinoTransform;
 
 public interface IRhinoPoint : IRhinoGeometryBase
 {
@@ -342,12 +345,10 @@ public interface IRhinoVector3d
   double Z { get; }
 }
 
-public interface IRhinoPointCloud
+public interface IRhinoPointCloud : IRhinoGeometryBase
 {
   IRhinoPoint3d[] GetPoints();
   System.Drawing.Color[] GetColors();
-  IRhinoBoundingBox GetBoundingBox(bool b);
-  
   IRhinoPointCloudItem this[int index] { get; }
 }
 

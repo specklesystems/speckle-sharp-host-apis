@@ -36,6 +36,11 @@ public interface IRhinoIntervalFactory
 {
   IRhinoInterval Create(double x, double y);
 }
+public interface IRhinoTransformFactory
+{
+  IRhinoPoint3d Origin { get; }
+  IRhinoTransform Scale(IRhinoPoint3d origin, double y);
+}
 
 public interface IRhinoCircleFactory
 {
