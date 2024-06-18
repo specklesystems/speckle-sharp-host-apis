@@ -11,6 +11,23 @@ public interface IRhinoCurve : IRhinoGeometryBase
   IRhinoInterval Domain { get; }
   IRhinoNurbsCurve ToNurbsCurve();
   double GetLength();
+
+  IRhinoPolylineCurve ToPolyline(
+    int mainSegmentCount,
+    int subSegmentCount,
+    double maxAngleRadians,
+    double maxChordLengthRatio,
+    double maxAspectRatio,
+    double tolerance,
+    double minEdgeLength,
+    double maxEdgeLength,
+    bool keepStartPoint);
+
+  bool TryGetPolyline(out IRhinoPolyline polyline);
+  
+  bool IsClosed { get; }
+  int Degree { get; }
+  bool IsPeriodic { get; }
 }
 
 public interface IRhinoGeometryBase : IRhinoCommonObject
@@ -63,7 +80,13 @@ public interface IRhinoPoint3d
   double Z { get; }
 }
 
-public interface IRhinoPlane;
+public interface IRhinoPlane
+{
+  IRhinoPoint3d Origin { get; }
+  IRhinoVector3d ZAxis { get; }
+  IRhinoVector3d XAxis { get; }
+  IRhinoVector3d YAxis { get; }
+}
 
 public interface IRhinoBox
 {
@@ -107,18 +130,64 @@ public interface IRhinoBrepVertex : IRhinoPoint
 
 public interface IRhinoBrepVertexList : IReadOnlyList<IRhinoBrepVertex>;
 
-public interface IRhinoNurbsSurface : IRhinoSurface;
-
+public interface IRhinoNurbsSurface : IRhinoSurface
+{
+  int OrderU { get; }
+  int OrderV { get; }
+  bool IsRational { get; }
+  IRhinoNurbsSurfaceKnotList KnotsU { get; }
+  IRhinoNurbsSurfaceKnotList KnotsV { get; }
+  IRhinoNurbsSurfacePointList Points { get; }
+}
+public interface IRhinoNurbsSurfaceKnotList : IReadOnlyList<double>
+{
+  
+}
+public interface IRhinoNurbsSurfacePointList : IEnumerable<IRhinoControlPoint>
+{
+  int CountU { get; }
+  int CountV { get; }
+  IRhinoControlPoint GetControlPoint(int i, int j);
+}
 public interface IRhinoSurface : IRhinoGeometryBase
 {
   IRhinoNurbsSurface ToNurbsSurface();
+  bool IsClosed(int direction);
+  IRhinoInterval Domain(int direction);
 }
 
 public interface IRhinoMesh : IRhinoGeometryBase
 {
   void Append(IEnumerable<IRhinoMesh> meshes);
+  IRhinoMeshVertexList Vertices { get; }
+  IRhinoMeshFaceList Faces { get; }
+  IEnumerable<IRhinoMeshNgon> GetNgonAndFacesEnumerable();
+  IRhinoMeshTextureCoordinateList TextureCoordinates { get; }
+  IRhinoMeshVertexColorList VertexColors { get; }
+  bool IsClosed { get; }
+  double Volume();
 }
 
+
+public interface IRhinoMeshVertexColorList : IReadOnlyList<System.Drawing.Color>;
+public interface IRhinoPoint2f
+{
+  float X { get; }
+  float Y { get; }
+}
+public interface IRhinoMeshTextureCoordinateList : IReadOnlyList<IRhinoPoint2f>;
+public interface IRhinoMeshNgon
+{
+  uint[] BoundaryVertexIndexList();
+}
+public interface IRhinoPoint3f;
+
+public interface IRhinoMeshVertexList : IReadOnlyList<IRhinoPoint3f>
+{
+  IRhinoPoint3d[] ToPoint3dArray();
+}
+public interface IRhinoMeshFace;
+public interface IRhinoMeshFaceList : IReadOnlyList<IRhinoMeshFace>;
 public interface IRhinoRefinementSettings;
 
 public interface IRhinoBrepCurveList : IReadOnlyList<IRhinoCurve>;
@@ -186,12 +255,41 @@ public interface IRhinoControlPoint
   double Weight { get; }
 }
 
-public interface IRhinoPolyCurve : IRhinoCurve;
+public interface IRhinoPolyCurve : IRhinoCurve
+{
+  
 
-public interface IRhinoPolylineCurve : IRhinoCurve;
+  IRhinoCurve[] DuplicateSegments();
+}
 
-public interface IRhinoNurbsCurve : IRhinoCurve { }
+public interface IRhinoPolylineCurve : IRhinoCurve
+{
+  IRhinoPolyline ToPolyline();
+}
 
+public interface IRhinoNurbsCurve : IRhinoCurve
+{
+  IRhinoNurbsCurveKnotList Knots { get; }
+  IRhinoNurbsCurvePointList Points { get; }
+  bool IsRational { get; }
+}
+
+public interface IRhinoNurbsCurveKnotList : IReadOnlyList<double>
+{
+  
+}
+public interface IRhinoNurbsCurvePointList : IReadOnlyList<IRhinoControlPoint>
+{
+  
+}
+public interface IRhinoPoint3dList : IReadOnlyList<IRhinoPoint3d>;
+
+public interface IRhinoPolyline : IRhinoPoint3dList
+{
+  void Add(IRhinoPoint3d point);
+  IRhinoBoundingBox BoundingBox { get; }
+  bool IsClosed { get; }
+}
 public interface IRhinoLineCurve : IRhinoCurve
 {
   IRhinoLine Line { get; }
@@ -211,4 +309,18 @@ public interface IRhinoLine
   IRhinoPoint3d To { get; }
   double Length { get; }
   IRhinoBoundingBox BoundingBox { get; }
+}
+
+public interface IRhinoVector3d
+{
+  double X { get; }
+  double Y { get; }
+  double Z { get; }
+}
+
+public interface IRhinoPointCloud
+{
+  IRhinoPoint3d[] GetPoints();
+  System.Drawing.Color[] GetColors();
+  IRhinoBoundingBox GetBoundingBox(bool b);
 }

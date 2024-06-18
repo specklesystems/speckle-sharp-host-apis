@@ -17,23 +17,21 @@ public static class A
   }
 
   public static TInterface? Cast<TInterface, THostType>(object instance)
-    where TInterface : class
   {
     if (instance is THostType w)
     {
       return ProxyMap.CreateProxy<TInterface>(w);
     }
 
-    return null;
+    return default;
   }
 
   public static THostType? Cast<TProxy, THostType>(object? instance, Func<TProxy, THostType> proxyCast)
-    where THostType : class
   {
     if (instance is TProxy w)
     {
       return proxyCast(w);
     }
-    return null;
+    return default;
   }
 }
