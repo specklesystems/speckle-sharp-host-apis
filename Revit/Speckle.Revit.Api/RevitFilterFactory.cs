@@ -2,6 +2,7 @@
 using Autodesk.Revit.DB.PointClouds;
 using Speckle.ProxyGenerator;
 using Speckle.Revit.Interfaces;
+using Speckle.Shared;
 
 namespace Speckle.Revit.Api;
 

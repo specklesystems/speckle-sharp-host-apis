@@ -2,6 +2,8 @@ using System.Diagnostics.CodeAnalysis;
 using Autodesk.Revit.DB;
 using Speckle.ProxyGenerator;
 using Speckle.Revit.Interfaces;
+using Speckle.Shared;
+
 #pragma warning disable CA1010
 #pragma warning disable CA1710
 

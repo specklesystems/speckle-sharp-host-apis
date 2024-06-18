@@ -7,6 +7,7 @@ using Rhino.Geometry.MeshRefinements;
 using Rhino.Runtime;
 using Speckle.ProxyGenerator;
 using Speckle.Rhino7.Interfaces;
+using Speckle.Shared;
 
 namespace Speckle.Rhino7.Api;
 

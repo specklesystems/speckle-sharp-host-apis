@@ -4,6 +4,7 @@ using Autodesk.Revit.DB.Architecture;
 using Mapster.Utils;
 using Speckle.ProxyGenerator;
 using Speckle.Revit.Interfaces;
+using Speckle.Shared;
 
 namespace Speckle.Revit.Api;
 

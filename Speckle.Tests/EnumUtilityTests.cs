@@ -1,6 +1,6 @@
 using FluentAssertions;
 using NUnit.Framework;
-using Speckle.Revit.Interfaces;
+using Speckle.Shared;
 
 namespace Speckle.Tests;
 
