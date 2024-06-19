@@ -15,9 +15,14 @@ namespace Speckle.Rhino7.Api;
 [Proxy(
   typeof(RhinoDoc),
   ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
-  new[] { "Equals" }
+  new[] { "Equals", "ModelUnitSystem" }
 )]
 public partial interface IRhinoDocProxy : IRhinoDoc;
+
+public partial class RhinoDocProxy
+{
+  public RhinoUnitSystem ModelUnitSystem => EnumUtility<UnitSystem, RhinoUnitSystem>.Convert(_Instance.ModelUnitSystem);
+}
 
 [Proxy(
   typeof(Curve),
@@ -148,10 +153,33 @@ public partial class MeshProxy
 
 [Proxy(
   typeof(MeshNgon),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
-  new[] { "Equals" }
-)]
+  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
+, new[] { "Equals" })]
 public partial interface IRhinoMeshNgonProxy : IRhinoMeshNgon;
+
+
+
+[Proxy(
+  typeof(MeshNgonList),
+  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
+  
+  new[] { "GetEnumerator" }
+)]
+public partial interface IRhinoMeshNgonListProxy : IRhinoMeshNgonList;
+public partial class MeshNgonListProxy
+{
+  IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+  
+  public IEnumerator<IRhinoMeshNgon> GetEnumerator()
+  {
+    var x =
+      A.Cast<IRhinoMeshNgonListProxy, MeshNgonList>(this, x => x._Instance).NotNull();
+    foreach (var e in x)
+    {
+      yield return new MeshNgonProxy(e);
+    }
+  }
+}
 
 [Proxy(
   typeof(RefinementSettings),
@@ -209,12 +237,21 @@ public partial class BrepFaceListProxy
 [Proxy(typeof(BrepFace), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
 public partial interface IRhinoBrepFaceProxy : IRhinoBrepFace;
 
-[Proxy(typeof(BrepLoopList), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(BrepLoopList), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
+  new []{ "Add"})]
 public partial interface IRhinoBrepLoopListProxy : IRhinoBrepLoopList;
 
 public partial class BrepLoopListProxy
 {
   IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+
+
+  public IRhinoBrepLoop Add(RhinoBrepLoopType type, IRhinoBrepFace face)
+  {
+    return A.Cast<IRhinoBrepLoop, BrepLoop>(_Instance.Add(EnumUtility<RhinoBrepLoopType, BrepLoopType>.Convert(type),
+      face.To<IRhinoBrepFaceProxy>()._Instance)).NotNull();
+  }
+
 }
 
 [Proxy(
@@ -250,12 +287,23 @@ public partial interface IRhinoBrepEdgeProxy : IRhinoBrepEdge;
 [Proxy(typeof(CurveProxy), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
 public partial interface IRhinoCurveProxy2Proxy : IRhinoCurveProxy2;
 
-[Proxy(typeof(BrepTrimList), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(BrepTrimList), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
+  new [] {"AddSingularTrim"})]
 public partial interface IRhinoBrepTrimListProxy : IRhinoBrepTrimList;
 
 public partial class BrepTrimListProxy
 {
   IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+  
+
+  public IRhinoBrepTrim AddSingularTrim(IRhinoBrepVertex vertex, IRhinoBrepLoop loop, RhinoIsoStatus status,
+    int curveIndex) =>
+    A.Cast<IRhinoBrepTrim, BrepTrim>(
+      _Instance.AddSingularTrim(
+        vertex.To<IRhinoBrepVertexProxy>()._Instance,
+        loop.To<IRhinoBrepLoopProxy>()._Instance,
+        EnumUtility<RhinoIsoStatus, IsoStatus>.Convert(status),
+        curveIndex)).NotNull();
 }
 
 [Proxy(
@@ -271,8 +319,13 @@ public partial class BrepTrimProxy
   {
     get
     {
-      var x = A.Cast<IRhinoBrepTrimProxy, BrepTrim>(this, x => x._Instance) ?? throw new NullReferenceException();
+      var x = A.Cast<IRhinoBrepTrimProxy, BrepTrim>(this, x => x._Instance).NotNull();
       return EnumUtility<IsoStatus, RhinoIsoStatus>.Convert(x.IsoStatus);
+    }
+    set
+    {
+      var x = A.Cast<IRhinoBrepTrimProxy, BrepTrim>(this, x => x._Instance).NotNull();
+      x.IsoStatus = EnumUtility<RhinoIsoStatus, IsoStatus>.Convert(value);
     }
   }
 
@@ -280,8 +333,13 @@ public partial class BrepTrimProxy
   {
     get
     {
-      var x = A.Cast<IRhinoBrepTrimProxy, BrepTrim>(this, x => x._Instance) ?? throw new NullReferenceException();
+      var x = A.Cast<IRhinoBrepTrimProxy, BrepTrim>(this, x => x._Instance).NotNull();
       return EnumUtility<BrepTrimType, RhinoBrepTrimType>.Convert(x.TrimType);
+    }
+    set
+    {
+      var x = A.Cast<IRhinoBrepTrimProxy, BrepTrim>(this, x => x._Instance).NotNull();
+      x.TrimType = EnumUtility<RhinoBrepTrimType, BrepTrimType>.Convert(value);
     }
   }
 }

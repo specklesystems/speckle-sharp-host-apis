@@ -1,5 +1,9 @@
 ﻿namespace Speckle.Rhino7.Interfaces;
 
+public interface IRhinoDocFactory
+{
+  IRhinoDoc ActiveDoc();
+}
 public interface IRhinoBoxFactory
 {
   IRhinoBox CreateBox(IRhinoBoundingBox boundingBox);
@@ -28,6 +32,7 @@ public interface IRhinoArcFactory
 
 public interface IRhinoPointFactory
 {
+  IRhinoPoint2f Create(double x, double y);
   IRhinoPoint3d Create(double x, double y, double z);
   IRhinoPoint Create(IRhinoPoint3d point3d);
   IRhinoPoint3dList Create(IList<IRhinoPoint3d> list);
@@ -39,6 +44,7 @@ public interface IRhinoIntervalFactory
 public interface IRhinoTransformFactory
 {
   IRhinoPoint3d Origin { get; }
+  IRhinoTransform Identity { get; }
   IRhinoTransform Scale(IRhinoPoint3d origin, double y);
 }
 
@@ -74,4 +80,13 @@ public interface IRhinoVectorFactory
 public interface IRhinoEllipseFactory
 {
   IRhinoEllipse Create(IRhinoPlane plane, double firstRadius, double secondRaduis);
+}
+
+public interface IRhinoBrepFactory
+{
+  IRhinoBrep Create();
+}
+public interface IRhinoNgonFactory
+{
+  IRhinoMeshNgon Create(IList<int> faces, IList<int> indices);
 }

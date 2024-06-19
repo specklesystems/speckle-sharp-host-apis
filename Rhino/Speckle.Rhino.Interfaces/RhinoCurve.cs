@@ -3,6 +3,7 @@
 public interface IRhinoDoc
 {
   double ModelAbsoluteTolerance { get; }
+  RhinoUnitSystem ModelUnitSystem { get; }
 }
 
 public interface IRhinoCurve : IRhinoGeometryBase
@@ -123,6 +124,14 @@ public interface IRhinoBrep : IRhinoGeometryBase
   double GetVolume();
   double GetArea();
   RhinoBrepSolidOrientation SolidOrientation { get; }
+
+  int AddEdgeCurve(IRhinoCurve curve);
+
+  int AddTrimCurve(IRhinoCurve curve);
+
+  int AddSurface(IRhinoSurface curve);
+
+  bool IsValidWithLog(out string reason);
 }
 
 public interface IRhinoTransform;
@@ -137,7 +146,10 @@ public interface IRhinoBrepVertex : IRhinoPoint
   int VertexIndex { get; }
 }
 
-public interface IRhinoBrepVertexList : IReadOnlyList<IRhinoBrepVertex>;
+public interface IRhinoBrepVertexList : IReadOnlyList<IRhinoBrepVertex>
+{
+  IRhinoBrepVertex Add(IRhinoPoint3d vertex, double tolerance);
+}
 
 public interface IRhinoNurbsSurface : IRhinoSurface
 {
@@ -177,6 +189,7 @@ public interface IRhinoMesh : IRhinoGeometryBase
   void Append(IEnumerable<IRhinoMesh> meshes);
   IRhinoMeshVertexList Vertices { get; }
   IRhinoMeshFaceList Faces { get; }
+  IRhinoMeshNgonList Ngons { get; }
   IEnumerable<IRhinoMeshNgon> GetNgonAndFacesEnumerable();
   IRhinoMeshTextureCoordinateList TextureCoordinates { get; }
   IRhinoMeshVertexColorList VertexColors { get; }
@@ -184,7 +197,15 @@ public interface IRhinoMesh : IRhinoGeometryBase
   double Volume();
 }
 
-public interface IRhinoMeshVertexColorList : IReadOnlyList<System.Drawing.Color>;
+public interface IRhinoMeshNgonList : IReadOnlyList<IRhinoMeshNgon>
+{
+  int AddNgon(IRhinoMeshNgon ngon);
+}
+
+public interface IRhinoMeshVertexColorList : IReadOnlyList<System.Drawing.Color>
+{
+  bool SetColors(System.Drawing.Color[] colors);
+}
 
 public interface IRhinoPoint2f
 {
@@ -192,7 +213,10 @@ public interface IRhinoPoint2f
   float Y { get; }
 }
 
-public interface IRhinoMeshTextureCoordinateList : IReadOnlyList<IRhinoPoint2f>;
+public interface IRhinoMeshTextureCoordinateList : IReadOnlyList<IRhinoPoint2f>
+{
+  bool SetTextureCoordinates(IRhinoPoint2f[] textureCoordinates);
+}
 
 public interface IRhinoMeshNgon
 {
@@ -204,11 +228,19 @@ public interface IRhinoPoint3f;
 public interface IRhinoMeshVertexList : IReadOnlyList<IRhinoPoint3f>
 {
   IRhinoPoint3d[] ToPoint3dArray();
+  
+  void AddVertices(IEnumerable<IRhinoPoint3d> points);
 }
 
 public interface IRhinoMeshFace;
 
-public interface IRhinoMeshFaceList : IReadOnlyList<IRhinoMeshFace>;
+public interface IRhinoMeshFaceList : IReadOnlyList<IRhinoMeshFace>
+{
+  int AddFace(IRhinoMeshFace face);
+  int AddFace(int vertex1, int vertex2, int vertex3);
+  int AddFace(int vertex1, int vertex2, int vertex3, int vertex4);
+  int CullDegenerateFaces();
+}
 
 public interface IRhinoRefinementSettings;
 
@@ -216,7 +248,10 @@ public interface IRhinoBrepCurveList : IReadOnlyList<IRhinoCurve>;
 
 public interface IRhinoBrepSurfaceList : IReadOnlyList<IRhinoSurface>;
 
-public interface IRhinoBrepFaceList : IReadOnlyList<IRhinoBrepFace>;
+public interface IRhinoBrepFaceList : IReadOnlyList<IRhinoBrepFace>
+{
+  IRhinoBrepFace Add(int surfaceIndex);
+}
 
 public interface IRhinoSurfaceProxy : IRhinoSurface;
 
@@ -226,10 +261,13 @@ public interface IRhinoBrepFace : IRhinoSurfaceProxy
   int SurfaceIndex { get; }
   IRhinoBrepLoopList Loops { get; }
   IRhinoBrepLoop OuterLoop { get; }
-  bool OrientationIsReversed { get; }
+  bool OrientationIsReversed { get; set; }
 }
 
-public interface IRhinoBrepLoopList : IReadOnlyList<IRhinoBrepLoop>;
+public interface IRhinoBrepLoopList : IReadOnlyList<IRhinoBrepLoop>
+{
+  IRhinoBrepLoop Add(RhinoBrepLoopType type, IRhinoBrepFace face);
+}
 
 public interface IRhinoBrepLoop : IRhinoGeometryBase
 {
@@ -239,7 +277,11 @@ public interface IRhinoBrepLoop : IRhinoGeometryBase
   RhinoBrepLoopType LoopType { get; }
 }
 
-public interface IRhinoBrepEdgeList : IReadOnlyList<IRhinoBrepEdge>;
+public interface IRhinoBrepEdgeList : IReadOnlyList<IRhinoBrepEdge>
+{
+  IRhinoBrepEdge Add(int curve3dIndex);
+  IRhinoBrepEdge Add(int startIndex, int endIndex,int curve3dIndex, IRhinoInterval domain, double tolerance );
+}
 
 public interface IRhinoCurveProxy2 : IRhinoCurve
 {
@@ -262,14 +304,21 @@ public interface IRhinoBrepTrim : IRhinoCurveProxy2
   IRhinoBrepFace Face { get; }
   IRhinoBrepLoop Loop { get; }
   int TrimCurveIndex { get; }
-  RhinoIsoStatus IsoStatus { get; }
-  RhinoBrepTrimType TrimType { get; }
+  RhinoIsoStatus IsoStatus { get; set; }
+  RhinoBrepTrimType TrimType { get; set; }
   bool IsReversed();
   IRhinoBrepVertex? StartVertex { get; }
   IRhinoBrepVertex? EndVertex { get; }
+  void SetTolerances(double toleranceX, double toleranceY);
 }
 
-public interface IRhinoBrepTrimList : IReadOnlyList<IRhinoBrepTrim>;
+public interface IRhinoBrepTrimList : IReadOnlyList<IRhinoBrepTrim>
+{
+  IRhinoBrepTrim Add(IRhinoBrepEdge edge, bool isReversed, IRhinoBrepLoop loop, int curveIndex);
+  IRhinoBrepTrim Add(bool isReversed, IRhinoBrepLoop loop, int curveIndex);
+  IRhinoBrepTrim AddSingularTrim(IRhinoBrepVertex vertex, IRhinoBrepLoop loop, RhinoIsoStatus status, int curveIndex);
+  
+}
 
 public interface IRhinoControlPoint
 {

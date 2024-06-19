@@ -30,6 +30,8 @@ public class RhinoArcFactory : IRhinoArcFactory
 }
 public class RhinoPointFactory : IRhinoPointFactory
 {
+  public IRhinoPoint2f Create(double x, double y) => new Point2fProxy(new Point2f(x, y));
+
   public IRhinoPoint3d Create(double x, double y, double z) =>
     new Point3dProxy(new Point3d(x,y,z));
 
@@ -101,4 +103,42 @@ public class RhinoSurfaceFactory : IRhinoSurfaceFactory
     int controlPointCount0,
     int controlPointCount1) =>
     new NurbsSurfaceProxy(NurbsSurface.Create(dimension, isRational, order0, order1, controlPointCount0, controlPointCount1));
+}
+
+public class RhinoTransformFactory : IRhinoTransformFactory
+{
+  public IRhinoPoint3d Origin => new Point3dProxy(Point3d.Origin);
+  public IRhinoTransform Identity => new TransformProxy(Transform.Identity);
+
+  public IRhinoTransform Scale(IRhinoPoint3d origin, double y) => new TransformProxy(Transform.Scale(
+    origin.To<IRhinoPoint3dProxy>()._Instance, y));
+}
+
+public class RhinoPointCloudFactory : IRhinoPointCloudFactory
+{
+  public IRhinoPointCloud Create(IRhinoPoint3dList list) =>
+    new PointCloudProxy(new PointCloud(list.To<IRhinoPoint3dListProxy>()._Instance));
+}
+
+public class RhinoVectorFactory : IRhinoVectorFactory
+{
+  public IRhinoVector3d Create(double x, double y, double z) => new Vector3dProxy(new Vector3d(x,y,z));
+}
+
+public class RhinoEllipseFactory : IRhinoEllipseFactory
+{
+  public IRhinoEllipse Create(IRhinoPlane plane, double firstRadius, double secondRaduis) => new EllipseProxy(
+    new Ellipse(
+      plane.To<IRhinoPlaneProxy>()._Instance, firstRadius, secondRaduis));
+}
+
+public class RhinoBrepFactory : IRhinoBrepFactory
+{
+  public IRhinoBrep Create() => new BrepProxy(new Brep());
+}
+
+public class RhinoNgonFactory : IRhinoNgonFactory
+{
+  public IRhinoMeshNgon Create(IList<int> faces, IList<int> indices) =>
+    new MeshNgonProxy(MeshNgon.Create(faces, indices));
 }
