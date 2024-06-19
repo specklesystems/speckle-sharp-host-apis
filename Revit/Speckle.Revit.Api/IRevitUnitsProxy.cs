@@ -4,23 +4,17 @@ using Autodesk.Revit.DB.Architecture;
 using Mapster.Utils;
 using Speckle.ProxyGenerator;
 using Speckle.Revit.Interfaces;
+using Speckle.Shared;
 
 namespace Speckle.Revit.Api;
 
-[Proxy(typeof(Units), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(Units))]
 public partial interface IRevitUnitsProxy : IRevitUnits;
 
-[Proxy(
-  typeof(FormatOptions),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
-)]
+[Proxy(typeof(FormatOptions))]
 public partial interface IRevitFormatOptionsProxy : IRevitFormatOptions;
 
-[Proxy(
-  typeof(Transform),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
-  new[] { "Basis" }
-)]
+[Proxy(typeof(Transform), new[] { "Basis" })]
 public partial interface IRevitTransformProxy : IRevitTransform;
 
 public partial class TransformProxy
@@ -28,10 +22,10 @@ public partial class TransformProxy
   public void Dispose() => _Instance.Dispose();
 }
 
-[Proxy(typeof(BasePoint), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(BasePoint))]
 public partial interface IRevitBasePointProxy : IRevitBasePoint;
 
-[Proxy(typeof(ParameterSet), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(ParameterSet))]
 public partial interface IRevitParameterSetProxy : IRevitParameterSet;
 
 public partial class ParameterSetProxy
@@ -62,11 +56,7 @@ public partial class ParameterSetProxy
   }
 }
 
-[Proxy(
-  typeof(Parameter),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
-  new[] { "IsReadOnly", "StorageType" }
-)]
+[Proxy(typeof(Parameter), new[] { "IsReadOnly", "StorageType" })]
 public partial interface IRevitParameterProxy : IRevitParameter;
 
 public partial class ParameterProxy
@@ -75,7 +65,7 @@ public partial class ParameterProxy
   public RevitStorageType StorageType => EnumUtility<StorageType, RevitStorageType>.Convert(_Instance.StorageType);
 }
 
-[Proxy(typeof(Definition), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(Definition))]
 public partial interface IRevitDefinitionProxy : IRevitDefinition;
 
 public partial class DefinitionProxy
@@ -94,7 +84,6 @@ public partial class DefinitionProxy
 
 [Proxy(
   typeof(InternalDefinition),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
   new[] { "ParameterGroup", "Name", "GetGroupTypeId", "BuiltInParameter", "get_ParameterGroup", "set_ParameterGroup" }
 )]
 public partial interface IRevitInternalDefinitionProxy : IRevitInternalDefinition;
@@ -105,13 +94,13 @@ public partial class InternalDefinitionProxy
     EnumUtility<BuiltInParameter, RevitBuiltInParameter>.Convert(_Instance.BuiltInParameter);
 }
 
-[Proxy(typeof(PolyLine), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(PolyLine))]
 public partial interface IRevitPolyLineProxy : IRevitPolyLine;
 
-[Proxy(typeof(Point), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(Point))]
 public partial interface IRevitPointProxy : IRevitPoint;
 
-[Proxy(typeof(Plane), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(Plane))]
 public partial interface IRevitPlaneProxy : IRevitPlane;
 
 public partial class PlaneProxy
@@ -119,24 +108,16 @@ public partial class PlaneProxy
   public void Dispose() => _Instance.Dispose();
 }
 
-[Proxy(typeof(Arc), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(Arc))]
 public partial interface IRevitArcProxy : IRevitArc;
 
-[Proxy(
-  typeof(BoundingBoxXYZ),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
-  new[] { "BoundEnabled", "MaxEnabled", "MinEnabled", "Bounds" }
-)]
+[Proxy(typeof(BoundingBoxXYZ), new[] { "BoundEnabled", "MaxEnabled", "MinEnabled", "Bounds" })]
 public partial interface IRevitBoundingBoxXYZProxy : IRevitBoundingBoxXYZ;
 
-[Proxy(typeof(Line), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(Line))]
 public partial interface IRevitLineProxy : IRevitLine;
 
-[Proxy(
-  typeof(Mesh),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
-  new[] { "Transformed", "Triangle" }
-)]
+[Proxy(typeof(Mesh), new[] { "Transformed", "Triangle" })]
 public partial interface IRevitMeshProxy : IRevitMesh;
 
 public partial class MeshProxy
@@ -147,14 +128,10 @@ public partial class MeshProxy
     new MeshProxy(_Instance.get_Transformed(((TransformProxy)inverseTransform)._Instance));
 }
 
-[Proxy(typeof(Material), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(Material))]
 public partial interface IRevitMaterialProxy : IRevitMaterial;
 
-[Proxy(
-  typeof(MeshTriangle),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
-  new[] { "Vertex", "Index" }
-)]
+[Proxy(typeof(MeshTriangle), new[] { "Vertex", "Index" })]
 public partial interface IRevitMeshTriangleProxy : IRevitMeshTriangle;
 
 public partial class MeshTriangleProxy
@@ -162,7 +139,7 @@ public partial class MeshTriangleProxy
   public uint GetIndex(int index) => _Instance.get_Index(index);
 }
 
-[Proxy(typeof(NurbSpline), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(NurbSpline))]
 public partial interface IRevitNurbSplineProxy : IRevitNurbSpline;
 
 public partial class NurbSplineProxy
@@ -170,29 +147,19 @@ public partial class NurbSplineProxy
   public bool IsRational => _Instance.isRational;
 }
 
-[Proxy(
-  typeof(HermiteSpline),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
-)]
+[Proxy(typeof(HermiteSpline))]
 public partial interface IRevitHermiteSplineProxy : IRevitHermiteSpline;
 
-[Proxy(
-  typeof(PointCloudInstance),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
-)]
+[Proxy(typeof(PointCloudInstance))]
 public partial interface IRevitPointCloudInstanceProxy : IRevitPointCloudInstance;
 
-[Proxy(typeof(Instance), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(Instance))]
 public partial interface IRevitInstanceProxy : IRevitInstance;
 
-[Proxy(typeof(Level), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(Level))]
 public partial interface IRevitLevelProxy : IRevitLevel;
 
-[Proxy(
-  typeof(FamilyInstance),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
-  new[] { "ToRoom", "FromRoom", "Space", "Room", "StructuralType", "Location" }
-)]
+[Proxy(typeof(FamilyInstance), new[] { "ToRoom", "FromRoom", "Space", "Room", "StructuralType", "Location" })]
 public partial interface IRevitFamilyInstanceProxy : IRevitFamilyInstance;
 
 public partial class FamilyInstanceProxy
@@ -201,21 +168,13 @@ public partial class FamilyInstanceProxy
     EnumUtility<Autodesk.Revit.DB.Structure.StructuralType, RevitStructuralType>.Convert(_Instance.StructuralType);
 }
 
-[Proxy(typeof(Solid), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(Solid))]
 public partial interface IRevitSolidProxy : IRevitSolid;
 
-[Proxy(
-  typeof(Group),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
-  new[] { "Location" }
-)]
+[Proxy(typeof(Group), new[] { "Location" })]
 public partial interface IRevitGroupProxy : IRevitGroup;
 
-[Proxy(
-  typeof(GeometryObject),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
-  new[] { "Equals" }
-)]
+[Proxy(typeof(GeometryObject), new[] { "Equals" })]
 public partial interface IRevitGeometryObjectProxy : IRevitGeometryObject;
 
 public partial class GeometryObjectProxy
@@ -261,11 +220,7 @@ public partial class GeometryObjectProxy
   }
 }
 
-[Proxy(
-  typeof(Options),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
-  new[] { "DetailLevel" }
-)]
+[Proxy(typeof(Options), new[] { "DetailLevel" })]
 public partial interface IRevitOptionsProxy : IRevitOptions;
 
 public partial class OptionsProxy
@@ -274,18 +229,10 @@ public partial class OptionsProxy
     EnumUtility<ViewDetailLevel, RevitViewDetailLevel>.Convert(_Instance.DetailLevel);
 }
 
-[Proxy(
-  typeof(Face),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
-  new[] { "Period", "IsCyclic" }
-)]
+[Proxy(typeof(Face), new[] { "Period", "IsCyclic" })]
 public partial interface IRevitFaceProxy : IRevitFace;
 
-[Proxy(
-  typeof(FaceArray),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
-  new[] { "Item", "get_Item", "set_Item" }
-)]
+[Proxy(typeof(FaceArray), new[] { "Item", "get_Item", "set_Item" })]
 public partial interface IRevitFaceArrayProxy : IRevitFaceArray;
 
 public partial class FaceArrayProxy
@@ -317,11 +264,7 @@ public partial class FaceArrayProxy
   }
 }
 
-[Proxy(
-  typeof(GeometryElement),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
-  new[] { "GetEnumerator" }
-)]
+[Proxy(typeof(GeometryElement), new[] { "GetEnumerator" })]
 public partial interface IRevitGeometryElementProxy : IRevitGeometryElement;
 
 public partial class GeometryElementProxy
@@ -352,84 +295,58 @@ public partial class GeometryElementProxy
   }
 }
 
-[Proxy(
-  typeof(GeometryInstance),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
-)]
+[Proxy(typeof(GeometryInstance))]
 public partial interface IRevitGeometryInstanceProxy : IRevitGeometryInstance;
 
-[Proxy(
-  typeof(GraphicsStyle),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
-)]
+[Proxy(typeof(GraphicsStyle))]
 public partial interface IRevitGraphicsStyleProxy : IRevitGraphicsStyle;
 
-[Proxy(
-  typeof(BoundarySegment),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
-)]
+[Proxy(typeof(BoundarySegment))]
 public partial interface IRevitBoundarySegmentProxy : IRevitBoundarySegment;
 
-[Proxy(typeof(Color), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(Color))]
 public partial interface IRevitColorProxy : IRevitColor;
 
-[Proxy(typeof(Ceiling), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(Ceiling))]
 public partial interface IRevitCeilingProxy : IRevitCeiling;
 
-[Proxy(
-  typeof(CeilingAndFloor),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
-)]
+[Proxy(typeof(CeilingAndFloor))]
 public partial interface IRevitCeilingAndFloorProxy : IRevitCeilingAndFloor;
 
-[Proxy(typeof(Sketch), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(Sketch))]
 public partial interface IRevitSketchProxy : IRevitSketch;
 
-[Proxy(typeof(SketchBase), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(SketchBase))]
 public partial interface IRevitSketchBaseProxy : IRevitSketchBase;
 
-[Proxy(typeof(DirectShape), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(DirectShape))]
 public partial interface IRevitDirectShapeProxy : IRevitDirectShape;
 
-[Proxy(
-  typeof(ExtrusionRoof),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
-)]
+[Proxy(typeof(ExtrusionRoof))]
 public partial interface IRevitExtrusionRoofProxy : IRevitExtrusionRoof;
 
-[Proxy(typeof(RoofBase), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(RoofBase))]
 public partial interface IRevitRoofBaseProxy : IRevitRoofBase;
 
-[Proxy(typeof(SketchPlane), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(SketchPlane))]
 public partial interface IRevitSketchPlaneProxy : IRevitSketchPlane;
 
-[Proxy(typeof(Floor), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(Floor))]
 public partial interface IRevitFloorProxy : IRevitFloor;
 
-[Proxy(typeof(ModelLine), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(ModelLine))]
 public partial interface IRevitModelLineProxy : IRevitModelLine;
 
-[Proxy(
-  typeof(FootPrintRoof),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
-  new[] { "Overhang", "ExtendIntoWall", "Offset", "SlopeAngle", "DefinesSlope" }
-)]
+[Proxy(typeof(FootPrintRoof), new[] { "Overhang", "ExtendIntoWall", "Offset", "SlopeAngle", "DefinesSlope" })]
 public partial interface IRevitFootPrintRoofProxy : IRevitFootPrintRoof;
 
-[Proxy(typeof(Room), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(Room))]
 public partial interface IRevitRoomProxy : IRevitRoom;
 
-[Proxy(
-  typeof(TopographySurface),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
-)]
+[Proxy(typeof(TopographySurface))]
 public partial interface IRevitTopographySurfaceProxy : IRevitTopographySurface;
 
-[Proxy(
-  typeof(SpatialElement),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
-  new[] { "GetBoundarySegments", "Location" }
-)]
+[Proxy(typeof(SpatialElement), new[] { "GetBoundarySegments", "Location" })]
 public partial interface IRevitSpatialElementProxy : IRevitSpatialElement;
 
 public partial class SpatialElementProxy
@@ -447,9 +364,5 @@ public partial class SpatialElementProxy
     segments.Select(seg => new BoundarySegmentProxy(seg));
 }
 
-[Proxy(
-  typeof(Panel),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
-  new[] { "GetRefGridLines" }
-)]
+[Proxy(typeof(Panel), new[] { "GetRefGridLines" })]
 public partial interface IRevitPanelProxy : IRevitPanel;

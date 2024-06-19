@@ -2,6 +2,7 @@
 using Autodesk.Revit.DB.PointClouds;
 using Speckle.ProxyGenerator;
 using Speckle.Revit.Interfaces;
+using Speckle.Shared;
 
 namespace Speckle.Revit.Api;
 
@@ -54,46 +55,25 @@ public class RevitFilterFactory : IRevitFilterFactory
     );
 }
 
-[Proxy(
-  typeof(PointCloudFilter),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
-)]
+[Proxy(typeof(PointCloudFilter))]
 public partial interface IRevitPointCloudFilterProxy : IRevitPointCloudFilter;
 
-[Proxy(
-  typeof(ElementFilter),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
-)]
+[Proxy(typeof(ElementFilter))]
 public partial interface IRevitElementFilterProxy : IRevitElementFilter;
 
-[Proxy(
-  typeof(ElementCategoryFilter),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
-)]
+[Proxy(typeof(ElementCategoryFilter))]
 public partial interface IRevitElementCategoryFilterProxy : IRevitElementCategoryFilter;
 
-[Proxy(
-  typeof(ElementIsElementTypeFilter),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
-)]
+[Proxy(typeof(ElementIsElementTypeFilter))]
 public partial interface IRevitElementIsElementTypeFilterProxy : IRevitElementIsElementTypeFilter;
 
-[Proxy(
-  typeof(ElementMulticategoryFilter),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
-)]
+[Proxy(typeof(ElementMulticategoryFilter))]
 public partial interface IRevitElementMulticategoryFilterProxy : IRevitElementMulticategoryFilter;
 
-[Proxy(
-  typeof(LogicalAndFilter),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
-)]
+[Proxy(typeof(LogicalAndFilter))]
 public partial interface IRevitLogicalAndFilterProxy : IRevitLogicalAndFilterFilter;
 
-[Proxy(
-  typeof(FilteredElementCollector),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
-)]
+[Proxy(typeof(FilteredElementCollector))]
 public partial interface IRevitFilteredElementCollectorProxy : IRevitFilteredElementCollector;
 
 public partial class FilteredElementCollectorProxy

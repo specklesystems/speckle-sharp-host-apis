@@ -13,7 +13,5 @@
     <PackageReference Include="coverlet.collector" />
     <PackageReference Include="NUnit3TestAdapter" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Revit\Revit2023\Speckle.Revit2023.Interfaces\Speckle.Revit2023.Interfaces.csproj" />
-  </ItemGroup>
+  <Import Project="..\Speckle.Shared\Speckle.Shared.projitems" Label="Shared" />
 </Project>

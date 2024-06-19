@@ -37,9 +37,9 @@
       },
       "Speckle.ProxyGenerator": {
         "type": "Direct",
-        "requested": "[0.1.8, )",
-        "resolved": "0.1.8",
-        "contentHash": "ZD+6tQXOaaH4oFaVLmN7m0dOfldnKm5e84w5+v84L9kCth073NDlpPEAzYDR3SPIUV4cvaB5cAxi4KozVCi1Pg=="
+        "requested": "[0.1.11, )",
+        "resolved": "0.1.11",
+        "contentHash": "mlojK22Rc1gr5Oxwpq7+3PS91J4EpFND8AP0wmn1JStqTAUbvQRSpNjy/85py5z1q3EjWldc8Aolh3hoKWcdRg=="
       },
       "Speckle.Revit.API": {
         "type": "Direct",

@@ -16,10 +16,10 @@ namespace Speckle.Revit.Api
       return ProxyMap.CreateProxy<T>(obj);
     }
 
-    public static TInterface? Cast<TInterface, TWrapped>(object instance)
+    public static TInterface? Cast<TInterface, THostType>(object instance)
       where TInterface : class
     {
-      if (instance is TWrapped w)
+      if (instance is THostType w)
       {
         return ProxyMap.CreateProxy<TInterface>(w);
       }

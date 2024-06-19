@@ -1,4 +1,3 @@
-#nullable enable
 namespace Speckle.Revit.Interfaces;
 
 public interface IRevitSolid : IRevitGeometryObject

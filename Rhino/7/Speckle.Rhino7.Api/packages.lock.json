@@ -35,17 +35,26 @@
         "resolved": "1.14.1",
         "contentHash": "mOOmFYwad3MIOL14VCjj02LljyF1GNw1wP0YVlxtcPvqdxjGGMNdNJJxHptlry3MOd8b40Flm8RPOM8JOlN2sQ=="
       },
+      "RhinoCommon": {
+        "type": "Direct",
+        "requested": "[7.13.21348.13001, )",
+        "resolved": "7.13.21348.13001",
+        "contentHash": "JQdaNw61ddBqIe08E9O4N/grwrN1hjDHcYW7tWylwCZyFR7SepoCD4NS+6LN6+oSQhNbhLi9Bf+hQOFYFdRAEA=="
+      },
+      "RhinoWindows": {
+        "type": "Direct",
+        "requested": "[7.13.21348.13001, )",
+        "resolved": "7.13.21348.13001",
+        "contentHash": "V94T8emmJmFfmbd5cu+uTNS0neZApx1Q5MXvsQGFtt/mEGEbdHE+dFOETNgbOOJXSdNboAnCR3uo0GosOFX+/g==",
+        "dependencies": {
+          "RhinoCommon": "[7.13.21348.13001]"
+        }
+      },
       "Speckle.ProxyGenerator": {
         "type": "Direct",
         "requested": "[0.1.11, )",
         "resolved": "0.1.11",
         "contentHash": "mlojK22Rc1gr5Oxwpq7+3PS91J4EpFND8AP0wmn1JStqTAUbvQRSpNjy/85py5z1q3EjWldc8Aolh3hoKWcdRg=="
-      },
-      "Speckle.Revit.API": {
-        "type": "Direct",
-        "requested": "[2023.0.0, )",
-        "resolved": "2023.0.0",
-        "contentHash": "tq40eD7psgTbV+epNouYyqfo6+hEi7FmXZqcxEOsAV7zfYyWhL6Rt3vmojkWGNuerGbH6oRI6KIIxrnlCNb8Hw=="
       },
       "Mapster.Core": {
         "type": "Transitive",
@@ -72,7 +81,7 @@
         "resolved": "4.3.0",
         "contentHash": "228FG0jLcIwTVJyz8CLFKueVqQK36ANazUManGaJHkO0icjiIypKW7YLWLIWahyIkdh5M7mV2dJepllLyA1SKg=="
       },
-      "speckle.revit2023.interfaces": {
+      "speckle.rhino7.interfaces": {
         "type": "Project"
       }
     }

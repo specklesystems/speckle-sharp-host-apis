@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <Import Project="..\..\Speckle.Rhino.Api\Speckle.Rhino.Api.projitems" Label="Shared" />
+  <ItemGroup>
+    <PackageReference Include="RhinoCommon"  />
+    <PackageReference Include="RhinoWindows"  />
+    <PackageReference Include="Mapster"  />
+    <PackageReference Include="Speckle.ProxyGenerator" PrivateAssets="All"/>
+    <PackageReference Include="MinVer" PrivateAssets="All"/>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Speckle.Rhino7.Interfaces\Speckle.Rhino7.Interfaces.csproj" />
+  </ItemGroup>
+</Project>

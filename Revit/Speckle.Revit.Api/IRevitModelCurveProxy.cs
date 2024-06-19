@@ -4,13 +4,13 @@ using Speckle.Revit.Interfaces;
 
 namespace Speckle.Revit.Api;
 
-[Proxy(typeof(ModelCurve), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(ModelCurve))]
 public partial interface IRevitModelCurveProxy : IRevitModelCurve;
 
-[Proxy(typeof(CurveElement), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(CurveElement))]
 public partial interface IRevitCurveElementProxy : IRevitCurveElement;
 
-[Proxy(typeof(Curve), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(Curve))]
 public partial interface IRevitCurveProxy : IRevitCurve;
 
 public partial class CurveProxy
@@ -61,17 +61,13 @@ public partial class CurveProxy
   }
 }
 
-[Proxy(typeof(XYZ), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(XYZ))]
 public partial interface IRevitXYZProxy : IRevitXYZ;
 
-[Proxy(
-  typeof(LocationCurve),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
-  new[] { "JoinType", "ElementsAtJoin" }
-)]
+[Proxy(typeof(LocationCurve), new[] { "JoinType", "ElementsAtJoin" })]
 public partial interface IRevitLocationCurveProxy : IRevitLocationCurve;
 
-[Proxy(typeof(Location), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(Location))]
 public partial interface IRevitLocationProxy : IRevitLocation;
 
 public partial class LocationProxy
@@ -97,8 +93,5 @@ public partial class LocationProxy
   }
 }
 
-[Proxy(
-  typeof(LocationPoint),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
-)]
+[Proxy(typeof(LocationPoint))]
 public partial interface IRevitLocationPointProxy : IRevitLocationPoint;
