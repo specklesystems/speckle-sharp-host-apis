@@ -35,7 +35,7 @@ public static class A
 
     return default;
   }
-  
+
   public static TProxy To<TProxy>(this object instance)
   {
     if (instance is TProxy w)

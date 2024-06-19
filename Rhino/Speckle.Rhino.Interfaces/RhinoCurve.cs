@@ -1,4 +1,6 @@
-﻿namespace Speckle.Rhino7.Interfaces;
+﻿using System.Drawing;
+
+namespace Speckle.Rhino7.Interfaces;
 
 public interface IRhinoDoc
 {
@@ -77,10 +79,8 @@ public interface IRhinoInterval
   double T1 { get; }
 }
 
-public partial interface IRhinoBase
-{
-  
-}
+public interface IRhinoBase { }
+
 public interface IRhinoPoint3d : IRhinoBase
 {
   double X { get; }
@@ -171,9 +171,9 @@ public interface IRhinoNurbsSurfacePointList : IEnumerable<IRhinoControlPoint>
   int CountU { get; }
   int CountV { get; }
   IRhinoControlPoint GetControlPoint(int i, int j);
-  
+
   bool SetPoint(int u, int v, double x, double y, double z);
-  
+
   bool SetWeight(int u, int v, double weight);
 }
 
@@ -202,9 +202,9 @@ public interface IRhinoMeshNgonList : IReadOnlyList<IRhinoMeshNgon>
   int AddNgon(IRhinoMeshNgon ngon);
 }
 
-public interface IRhinoMeshVertexColorList : IReadOnlyList<System.Drawing.Color>
+public interface IRhinoMeshVertexColorList : IReadOnlyList<Color>
 {
-  bool SetColors(System.Drawing.Color[] colors);
+  bool SetColors(Color[] colors);
 }
 
 public interface IRhinoPoint2f
@@ -228,7 +228,7 @@ public interface IRhinoPoint3f;
 public interface IRhinoMeshVertexList : IReadOnlyList<IRhinoPoint3f>
 {
   IRhinoPoint3d[] ToPoint3dArray();
-  
+
   void AddVertices(IEnumerable<IRhinoPoint3d> points);
 }
 
@@ -280,7 +280,7 @@ public interface IRhinoBrepLoop : IRhinoGeometryBase
 public interface IRhinoBrepEdgeList : IReadOnlyList<IRhinoBrepEdge>
 {
   IRhinoBrepEdge Add(int curve3dIndex);
-  IRhinoBrepEdge Add(int startIndex, int endIndex,int curve3dIndex, IRhinoInterval domain, double tolerance );
+  IRhinoBrepEdge Add(int startIndex, int endIndex, int curve3dIndex, IRhinoInterval domain, double tolerance);
 }
 
 public interface IRhinoCurveProxy2 : IRhinoCurve
@@ -317,7 +317,6 @@ public interface IRhinoBrepTrimList : IReadOnlyList<IRhinoBrepTrim>
   IRhinoBrepTrim Add(IRhinoBrepEdge edge, bool isReversed, IRhinoBrepLoop loop, int curveIndex);
   IRhinoBrepTrim Add(bool isReversed, IRhinoBrepLoop loop, int curveIndex);
   IRhinoBrepTrim AddSingularTrim(IRhinoBrepVertex vertex, IRhinoBrepLoop loop, RhinoIsoStatus status, int curveIndex);
-  
 }
 
 public interface IRhinoControlPoint
@@ -397,11 +396,11 @@ public interface IRhinoVector3d
 public interface IRhinoPointCloud : IRhinoGeometryBase
 {
   IRhinoPoint3d[] GetPoints();
-  System.Drawing.Color[] GetColors();
+  Color[] GetColors();
   IRhinoPointCloudItem this[int index] { get; }
 }
 
 public interface IRhinoPointCloudItem
 {
-  System.Drawing.Color Color { get; set; }
+  Color Color { get; set; }
 }
