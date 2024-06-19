@@ -56,44 +56,37 @@ public class RevitFilterFactory : IRevitFilterFactory
 }
 
 [Proxy(
-  typeof(PointCloudFilter),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
+  typeof(PointCloudFilter)
 )]
 public partial interface IRevitPointCloudFilterProxy : IRevitPointCloudFilter;
 
 [Proxy(
-  typeof(ElementFilter),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
+  typeof(ElementFilter)
 )]
 public partial interface IRevitElementFilterProxy : IRevitElementFilter;
 
 [Proxy(
-  typeof(ElementCategoryFilter),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
+  typeof(ElementCategoryFilter)
 )]
 public partial interface IRevitElementCategoryFilterProxy : IRevitElementCategoryFilter;
 
 [Proxy(
-  typeof(ElementIsElementTypeFilter),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
+  typeof(ElementIsElementTypeFilter)
 )]
 public partial interface IRevitElementIsElementTypeFilterProxy : IRevitElementIsElementTypeFilter;
 
 [Proxy(
-  typeof(ElementMulticategoryFilter),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
+  typeof(ElementMulticategoryFilter)
 )]
 public partial interface IRevitElementMulticategoryFilterProxy : IRevitElementMulticategoryFilter;
 
 [Proxy(
-  typeof(LogicalAndFilter),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
+  typeof(LogicalAndFilter)
 )]
 public partial interface IRevitLogicalAndFilterProxy : IRevitLogicalAndFilterFilter;
 
 [Proxy(
-  typeof(FilteredElementCollector),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
+  typeof(FilteredElementCollector)
 )]
 public partial interface IRevitFilteredElementCollectorProxy : IRevitFilteredElementCollector;
 

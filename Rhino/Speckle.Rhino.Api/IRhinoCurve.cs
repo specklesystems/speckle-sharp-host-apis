@@ -9,6 +9,8 @@ using Rhino.Runtime;
 using Speckle.ProxyGenerator;
 using Speckle.Rhino7.Interfaces;
 using Speckle.Shared;
+// ReSharper disable RedundantExtendsListEntry
+// ReSharper disable All
 
 namespace Speckle.Rhino7.Api;
 
@@ -32,22 +34,21 @@ public partial class GeometryBaseProxy
     _Instance.Transform(transform.To<IRhinoTransformProxy>().NotNull()._Instance);
 }
 
-[Proxy(typeof(CommonObject), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(CommonObject))]
 public partial interface IRhinoCommonObjectProxy : IRhinoCommonObject;
 
 [Proxy(typeof(RhinoObject), new[] { "ComponentType" })]
 public partial interface IRhinoObjectProxy : IRhinoObject;
 
 [Proxy(
-  typeof(ModelComponent),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
+  typeof(ModelComponent)
 )]
 public partial interface IRhinoModelComponentProxy : IRhinoModelComponent;
 
-[Proxy(typeof(ArcCurve), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(ArcCurve))]
 public partial interface IRhinoArcCurveProxy : IRhinoArcCurve;
 
-[Proxy(typeof(Circle), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(Circle))]
 public partial interface IRhinoCircleProxy : IRhinoCircle;
 
 [Proxy(typeof(Arc), new[] { "Equals" })]
@@ -74,18 +75,17 @@ public partial class BrepProxy
   {
     get
     {
-      var e = A.Cast<IRhinoBrepProxy, Brep>(this, x => x._Instance)?.SolidOrientation;
-      return EnumUtility<BrepSolidOrientation, RhinoBrepSolidOrientation>.Convert(
-        e ?? throw new InvalidOperationException("Invalid null")
+      var e = _Instance.SolidOrientation;
+      return EnumUtility<BrepSolidOrientation, RhinoBrepSolidOrientation>.Convert(e
       );
     }
   }
 }
 
-[Proxy(typeof(NurbsSurface), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(NurbsSurface))]
 public partial interface IRhinoNurbsSurfaceProxy : IRhinoNurbsSurface;
 
-[Proxy(typeof(Surface), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(Surface))]
 public partial interface IRhinoSurfaceProxy : IRhinoSurface;
 
 [Proxy(typeof(Mesh), new[] { "CreateRefinedLoopMesh", "GetNgonAndFacesEnumerable", "SetCachedTextureCoordinates" })]
@@ -95,8 +95,7 @@ public partial class MeshProxy
 {
   public IEnumerable<IRhinoMeshNgon> GetNgonAndFacesEnumerable()
   {
-    var x = A.Cast<IRhinoMeshProxy, Mesh>(this, x => x._Instance).NotNull();
-    foreach (var e in x.GetNgonAndFacesEnumerable())
+    foreach (var e in _Instance.GetNgonAndFacesEnumerable())
     {
       yield return new MeshNgonProxy(e);
     }
@@ -115,8 +114,7 @@ public partial class MeshNgonListProxy
 
   public IEnumerator<IRhinoMeshNgon> GetEnumerator()
   {
-    var x = A.Cast<IRhinoMeshNgonListProxy, MeshNgonList>(this, x => x._Instance).NotNull();
-    foreach (var e in x)
+    foreach (var e in _Instance)
     {
       yield return new MeshNgonProxy(e);
     }
@@ -124,67 +122,103 @@ public partial class MeshNgonListProxy
 }
 
 [Proxy(
-  typeof(RefinementSettings),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
+  typeof(RefinementSettings)
 )]
 public partial interface IRhinoRefinementSettingsProxy : IRhinoRefinementSettings;
 
-[Proxy(typeof(BrepVertex), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(BrepVertex))]
 public partial interface IRhinoBrepVertexProxy : IRhinoBrepVertex;
 
 [Proxy(
   typeof(BrepVertexList),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
+  new[] { "GetEnumerator" }
 )]
 public partial interface IRhinoBrepVertexListProxy : IRhinoBrepVertexList;
 
 public partial class BrepVertexListProxy
 {
   IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+  public IEnumerator<IRhinoBrepVertex> GetEnumerator()
+  {
+    foreach (var e in _Instance)
+    {
+      yield return new BrepVertexProxy(e);
+    }
+  }
 }
 
-[Proxy(typeof(Point), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(Point))]
 public partial interface IRhinoPointProxy : IRhinoPoint;
 
 [Proxy(
   typeof(BrepCurveList),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
+  new[] { "GetEnumerator" }
 )]
 public partial interface IRhinoBrepCurveListProxy : IRhinoBrepCurveList;
 
 public partial class BrepCurveListProxy
 {
   IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+  public IEnumerator<IRhinoCurve> GetEnumerator()
+  {
+    foreach (var e in _Instance)
+    {
+      yield return new CurveProxy(e);
+    }
+  }
 }
 
 [Proxy(
   typeof(BrepSurfaceList),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
+  new[] { "GetEnumerator" }
 )]
 public partial interface IRhinoBrepSurfaceListProxy : IRhinoBrepSurfaceList;
 
 public partial class BrepSurfaceListProxy
 {
   IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+  public IEnumerator<IRhinoSurface> GetEnumerator()
+  {
+    foreach (var e in _Instance)
+    {
+      yield return new SurfaceProxy(e);
+    }
+  }
 }
 
-[Proxy(typeof(BrepFaceList), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(BrepFaceList),
+  new[] { "GetEnumerator" })]
 public partial interface IRhinoBrepFaceListProxy : IRhinoBrepFaceList;
 
 public partial class BrepFaceListProxy
 {
   IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+  public IEnumerator<IRhinoBrepFace> GetEnumerator()
+  {
+    foreach (var e in _Instance)
+    {
+      yield return new BrepFaceProxy(e);
+    }
+  }
 }
 
-[Proxy(typeof(BrepFace), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(BrepFace))]
 public partial interface IRhinoBrepFaceProxy : IRhinoBrepFace;
 
-[Proxy(typeof(BrepLoopList), new[] { "Add" })]
+[Proxy(typeof(BrepLoopList), new[] { "Add",
+  "GetEnumerator"  })]
 public partial interface IRhinoBrepLoopListProxy : IRhinoBrepLoopList;
 
 public partial class BrepLoopListProxy
 {
   IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+  public IEnumerator<IRhinoBrepLoop> GetEnumerator()
+  {
+    foreach (var e in _Instance)
+    {
+      yield return new BrepLoopProxy(e);
+    }
+  }
 
   public IRhinoBrepLoop Add(RhinoBrepLoopType type, IRhinoBrepFace face)
   {
@@ -203,36 +237,45 @@ public partial interface IRhinoBrepLoopProxy : IRhinoBrepLoop;
 
 public partial class BrepLoopProxy
 {
-  public RhinoBrepLoopType LoopType
-  {
-    get
-    {
-      var x = A.Cast<IRhinoBrepLoopProxy, BrepLoop>(this, x => x._Instance) ?? throw new NullReferenceException();
-      return EnumUtility<BrepLoopType, RhinoBrepLoopType>.Convert(x.LoopType);
-    }
-  }
+  public RhinoBrepLoopType LoopType => EnumUtility<BrepLoopType, RhinoBrepLoopType>.Convert(_Instance.LoopType);
 }
 
-[Proxy(typeof(BrepEdgeList), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(BrepEdgeList),
+  new[] { "GetEnumerator" })]
 public partial interface IRhinoBrepEdgeListProxy : IRhinoBrepEdgeList;
 
 public partial class BrepEdgeListProxy
 {
   IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+  public IEnumerator<IRhinoBrepEdge> GetEnumerator()
+  {
+    foreach (var e in _Instance)
+    {
+      yield return new BrepEdgeProxy(e);
+    }
+  }
+
 }
 
-[Proxy(typeof(BrepEdge), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(BrepEdge))]
 public partial interface IRhinoBrepEdgeProxy : IRhinoBrepEdge;
 
-[Proxy(typeof(CurveProxy), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(CurveProxy))]
 public partial interface IRhinoCurveProxy2Proxy : IRhinoCurveProxy2;
 
-[Proxy(typeof(BrepTrimList), new[] { "AddSingularTrim" })]
+[Proxy(typeof(BrepTrimList), new[] { "AddSingularTrim", "GetEnumerator" })]
 public partial interface IRhinoBrepTrimListProxy : IRhinoBrepTrimList;
 
 public partial class BrepTrimListProxy
 {
   IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+  public IEnumerator<IRhinoBrepTrim> GetEnumerator()
+  {
+    foreach (var e in _Instance)
+    {
+      yield return new BrepTrimProxy(e);
+    }
+  }
 
   public IRhinoBrepTrim AddSingularTrim(
     IRhinoBrepVertex vertex,
@@ -258,49 +301,32 @@ public partial class BrepTrimProxy
 {
   public RhinoIsoStatus IsoStatus
   {
-    get
-    {
-      var x = A.Cast<IRhinoBrepTrimProxy, BrepTrim>(this, x => x._Instance).NotNull();
-      return EnumUtility<IsoStatus, RhinoIsoStatus>.Convert(x.IsoStatus);
-    }
-    set
-    {
-      var x = A.Cast<IRhinoBrepTrimProxy, BrepTrim>(this, x => x._Instance).NotNull();
-      x.IsoStatus = EnumUtility<RhinoIsoStatus, IsoStatus>.Convert(value);
-    }
+    get => EnumUtility<IsoStatus, RhinoIsoStatus>.Convert(_Instance.IsoStatus);
+    set => _Instance.IsoStatus = EnumUtility<RhinoIsoStatus, IsoStatus>.Convert(value);
   }
 
   public RhinoBrepTrimType TrimType
   {
-    get
-    {
-      var x = A.Cast<IRhinoBrepTrimProxy, BrepTrim>(this, x => x._Instance).NotNull();
-      return EnumUtility<BrepTrimType, RhinoBrepTrimType>.Convert(x.TrimType);
-    }
-    set
-    {
-      var x = A.Cast<IRhinoBrepTrimProxy, BrepTrim>(this, x => x._Instance).NotNull();
-      x.TrimType = EnumUtility<RhinoBrepTrimType, BrepTrimType>.Convert(value);
-    }
+    get => EnumUtility<BrepTrimType, RhinoBrepTrimType>.Convert(_Instance.TrimType);
+    set => _Instance.TrimType = EnumUtility<RhinoBrepTrimType, BrepTrimType>.Convert(value);
   }
 }
 
-[Proxy(typeof(ControlPoint), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(ControlPoint))]
 public partial interface IRhinoControlPointProxy : IRhinoControlPoint;
 
-[Proxy(typeof(PolyCurve), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(PolyCurve))]
 public partial interface IRhinoPolyCurveProxy : IRhinoPolyCurve;
 
 [Proxy(
-  typeof(PolylineCurve),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface
+  typeof(PolylineCurve)
 )]
 public partial interface IRhinoPolylineCurveProxy : IRhinoPolylineCurve;
 
-[Proxy(typeof(NurbsCurve), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(NurbsCurve))]
 public partial interface IRhinoNurbsCurveProxy : IRhinoNurbsCurve;
 
-[Proxy(typeof(LineCurve), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(LineCurve))]
 public partial interface IRhinoLineCurveProxy : IRhinoLineCurve;
 
 [Proxy(
@@ -329,7 +355,7 @@ public partial interface IRhinoLineCurveProxy : IRhinoLineCurve;
 )]
 public partial interface IRhinoTransformProxy : IRhinoTransform;
 
-[Proxy(typeof(Ellipse), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(Ellipse))]
 public partial interface IRhinoEllipseProxy : IRhinoEllipse;
 
 [Proxy(typeof(Line), new[] { "Equals" })]
@@ -345,9 +371,7 @@ public partial class MeshVertexListProxy
 {
   public IEnumerator<IRhinoPoint3f> GetEnumerator()
   {
-    var x =
-      A.Cast<IRhinoMeshVertexListProxy, MeshVertexList>(this, x => x._Instance) ?? throw new NullReferenceException();
-    foreach (var e in x)
+    foreach (var e in _Instance)
     {
       yield return new Point3fProxy(e);
     }
@@ -366,8 +390,7 @@ public partial class MeshFaceListProxy
 {
   public IEnumerator<IRhinoMeshFace> GetEnumerator()
   {
-    var x = A.Cast<IRhinoMeshFaceListProxy, MeshFaceList>(this, x => x._Instance) ?? throw new NullReferenceException();
-    foreach (var e in x)
+    foreach (var e in _Instance)
     {
       yield return new MeshFaceProxy(e);
     }
@@ -386,8 +409,7 @@ public partial class MeshTextureCoordinateListProxy
 {
   public IEnumerator<IRhinoPoint2f> GetEnumerator()
   {
-    var x = A.Cast<IRhinoMeshTextureCoordinateListProxy, MeshTextureCoordinateList>(this, x => x._Instance).NotNull();
-    foreach (var e in x)
+    foreach (var e in _Instance)
     {
       yield return new Point2fProxy(e);
     }
@@ -403,8 +425,7 @@ public partial class MeshVertexColorListProxy
 {
   public IEnumerator<System.Drawing.Color> GetEnumerator()
   {
-    var x = A.Cast<IRhinoMeshVertexColorListProxy, MeshVertexColorList>(this, x => x._Instance).NotNull();
-    foreach (var e in x)
+    foreach (var e in _Instance)
     {
       yield return e;
     }
@@ -413,8 +434,13 @@ public partial class MeshVertexColorListProxy
   IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 }
 
-[Proxy(typeof(Polyline), new[] { "Add" })]
+[Proxy(typeof(Polyline), new[] { "Add", "GetEnumerator" })]
 public partial interface IRhinoPolylineProxy : IRhinoPolyline;
+
+public partial class PolylineProxy
+{
+  IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+}
 
 [Proxy(typeof(Point3dList), new[] { "Equals", "Duplicate", "GetEnumerator" })]
 public partial interface IRhinoPoint3dListProxy : IRhinoPoint3dList;
@@ -423,8 +449,7 @@ public partial class Point3dListProxy
 {
   public IEnumerator<IRhinoPoint3d> GetEnumerator()
   {
-    var x = A.Cast<IRhinoPoint3dListProxy, Point3dList>(this, x => x._Instance).NotNull();
-    foreach (var e in x)
+    foreach (var e in _Instance)
     {
       yield return new Point3dProxy(e);
     }
@@ -434,12 +459,11 @@ public partial class Point3dListProxy
 
   public int Count => _Instance.Count;
 
-  public IRhinoPoint3d this[int index] => A.Call<IRhinoPoint3d>(() => this[index]).NotNull();
+  public IRhinoPoint3d this[int index] => A.Call<IRhinoPoint3d>(() => _Instance[index]).NotNull();
 
   public void Add(IRhinoPoint3d point3d)
   {
-    var x = A.Cast<IRhinoPoint3dListProxy, Point3dList>(this, x => x._Instance).NotNull();
-    x.Add(A.Cast<IRhinoPoint3dProxy, Point3d>(this, xx => xx._Instance));
+    _Instance.Add(A.Cast<IRhinoPoint3dProxy, Point3d>(point3d, x => x._Instance));
   }
 }
 
@@ -450,8 +474,7 @@ public partial class NurbsCurveKnotListProxy
 {
   public IEnumerator<double> GetEnumerator()
   {
-    var x = A.Cast<IRhinoNurbsCurveKnotListProxy, NurbsCurveKnotList>(this, x => x._Instance).NotNull();
-    foreach (var e in x)
+    foreach (var e in _Instance)
     {
       yield return e;
     }
@@ -469,8 +492,7 @@ public partial class NurbsCurvePointListProxy
 {
   public IEnumerator<IRhinoControlPoint> GetEnumerator()
   {
-    var x = A.Cast<IRhinoNurbsCurvePointListProxy, NurbsCurvePointList>(this, x => x._Instance).NotNull();
-    foreach (var e in x)
+    foreach (var e in _Instance)
     {
       yield return new ControlPointProxy(e);
     }
@@ -486,8 +508,7 @@ public partial class NurbsSurfaceKnotListProxy
 {
   public IEnumerator<double> GetEnumerator()
   {
-    var x = A.Cast<IRhinoNurbsSurfaceKnotListProxy, NurbsSurfaceKnotList>(this, x => x._Instance).NotNull();
-    foreach (var e in x)
+    foreach (var e in _Instance)
     {
       yield return e;
     }
@@ -505,8 +526,7 @@ public partial class NurbsSurfacePointListProxy
 {
   public IEnumerator<IRhinoControlPoint> GetEnumerator()
   {
-    var x = A.Cast<IRhinoNurbsSurfacePointListProxy, NurbsSurfacePointList>(this, x => x._Instance).NotNull();
-    foreach (var e in x)
+    foreach (var e in _Instance)
     {
       yield return new ControlPointProxy(e);
     }

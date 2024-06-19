@@ -92,10 +92,10 @@ public partial class ElementProxy
   }
 }
 
-[Proxy(typeof(FamilySymbol), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(FamilySymbol))]
 public partial interface IRevitFamilySymbolProxy : IRevitFamilySymbol;
 
-[Proxy(typeof(ElementType), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(ElementType))]
 public partial interface IRevitElementTypeProxy : IRevitElementType;
 
 [Proxy(typeof(Category), new[] { "AllowsVisibilityControl", "Visible" })]
@@ -104,17 +104,17 @@ public partial interface IRevitCategoryProxy : IRevitCategory;
 [Proxy(typeof(ElementId), new[] { "Equals" })]
 public partial interface IRevitElementIdProxy : IRevitElementId;
 
-[Proxy(typeof(CurtainGrid), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(CurtainGrid))]
 public partial interface IRevitCurtainGridProxy : IRevitCurtainGrid;
 
-[Proxy(typeof(Wall), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(Wall))]
 public partial interface IRevitWallProxy : IRevitWall;
 
-[Proxy(typeof(WallType), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(WallType))]
 public partial interface IRevitWallTypeProxy : IRevitWallType;
 
-[Proxy(typeof(HostObject), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(HostObject))]
 public partial interface IRevitHostObjectProxy : IRevitHostObject;
 
-[Proxy(typeof(Ellipse), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(Ellipse))]
 public partial interface IRevitEllipseProxy : IRevitEllipse;

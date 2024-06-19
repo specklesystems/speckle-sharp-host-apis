@@ -1,6 +1,9 @@
-﻿using Rhino.Collections;
+﻿using Rhino;
+using Rhino.Collections;
 using Rhino.Geometry;
+using Speckle.ProxyGenerator;
 using Speckle.Rhino7.Interfaces;
+using Speckle.Shared;
 
 namespace Speckle.Rhino7.Api;
 
@@ -142,4 +145,9 @@ public class RhinoNgonFactory : IRhinoNgonFactory
 {
   public IRhinoMeshNgon Create(IList<int> faces, IList<int> indices) =>
     new MeshNgonProxy(MeshNgon.Create(faces, indices));
+}
+
+public class RhinoDocFactory : IRhinoDocFactory
+{
+  public IRhinoDoc ActiveDoc() => new RhinoDocProxy(RhinoDoc.ActiveDoc);
 }
