@@ -5,11 +5,7 @@ using Speckle.Revit.Interfaces;
 
 namespace Speckle.Revit.Api;
 
-[Proxy(
-  typeof(ModelCurveArrArray),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
-  new[] { "GetEnumerator", "Item", "get_Item", "set_Item" }
-)]
+[Proxy(typeof(ModelCurveArrArray), new[] { "GetEnumerator", "Item", "get_Item", "set_Item" })]
 public partial interface IRevitModelCurveArrArrayProxy : IRevitModelCurveArrArray;
 
 public partial class ModelCurveArrArrayProxy
@@ -51,11 +47,7 @@ public partial class ModelCurveArrArrayProxy
   }
 }
 
-[Proxy(
-  typeof(CurveArrArray),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
-  new[] { "GetEnumerator", "Item", "get_Item", "set_Item" }
-)]
+[Proxy(typeof(CurveArrArray), new[] { "GetEnumerator", "Item", "get_Item", "set_Item" })]
 public partial interface IRevitCurveArrArrayProxy : IRevitCurveArrArray;
 
 public partial class CurveArrArrayProxy

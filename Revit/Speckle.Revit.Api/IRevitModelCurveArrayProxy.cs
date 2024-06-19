@@ -6,11 +6,7 @@ using Speckle.Revit.Interfaces;
 
 namespace Speckle.Revit.Api;
 
-[Proxy(
-  typeof(ModelCurveArray),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
-  new[] { "GetEnumerator", "Item", "get_Item", "set_Item" }
-)]
+[Proxy(typeof(ModelCurveArray), new[] { "GetEnumerator", "Item", "get_Item", "set_Item" })]
 public partial interface IRevitModelCurveArrayProxy : IRevitModelCurveArray;
 
 public partial class ModelCurveArrayProxy
@@ -52,11 +48,7 @@ public partial class ModelCurveArrayProxy
   }
 }
 
-[Proxy(
-  typeof(CurveArray),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
-  new[] { "GetEnumerator", "Item", "get_Item", "set_Item" }
-)]
+[Proxy(typeof(CurveArray), new[] { "GetEnumerator", "Item", "get_Item", "set_Item" })]
 public partial interface IRevitCurveArrayProxy : IRevitCurveArray;
 
 public partial class CurveArrayProxy
@@ -97,11 +89,7 @@ public partial class CurveArrayProxy
   }
 }
 
-[Proxy(
-  typeof(DoubleArray),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
-  new[] { "GetEnumerator", "Item", "get_Item", "set_Item" }
-)]
+[Proxy(typeof(DoubleArray), new[] { "GetEnumerator", "Item", "get_Item", "set_Item" })]
 public partial interface IRevitDoubleArrayProxy : IRevitDoubleArray;
 
 public partial class DoubleArrayProxy
@@ -153,11 +141,7 @@ public struct RevitCloudPoint : IRevitCloudPoint
   public IRevitXYZ ToXYZ() => new XYZProxy(new XYZ(X, Y, Z));
 }
 
-[Proxy(
-  typeof(PointCollection),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
-  new[] { "GetEnumerator", "Item", "get_Item", "set_Item" }
-)]
+[Proxy(typeof(PointCollection), new[] { "GetEnumerator", "Item", "get_Item", "set_Item" })]
 public partial interface IRevitCloudPointListProxy : IRevitCloudPointList;
 
 public partial class PointCollectionProxy

@@ -4,9 +4,5 @@ using Speckle.Rhino7.Interfaces;
 
 namespace Speckle.Rhino7.Api;
 
-[Proxy(
-  typeof(Plane),
-  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
-  new[] { "Equals" }
-)]
+[Proxy(typeof(Plane), new[] { "Equals" })]
 public partial interface IRhinoPlaneProxy : IRhinoPlane;

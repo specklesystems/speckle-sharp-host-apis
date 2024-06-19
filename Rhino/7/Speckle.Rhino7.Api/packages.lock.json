@@ -52,9 +52,9 @@
       },
       "Speckle.ProxyGenerator": {
         "type": "Direct",
-        "requested": "[0.1.10, )",
-        "resolved": "0.1.10",
-        "contentHash": "1TDZBvsi3hiRIESwDGLxkKypJYMXt6sdSHzyHajLCDNF8/Vrnc2kuHcxVElkyV+/43D0l8yoVpcR0tN7acxEPA=="
+        "requested": "[0.1.11, )",
+        "resolved": "0.1.11",
+        "contentHash": "mlojK22Rc1gr5Oxwpq7+3PS91J4EpFND8AP0wmn1JStqTAUbvQRSpNjy/85py5z1q3EjWldc8Aolh3hoKWcdRg=="
       },
       "Mapster.Core": {
         "type": "Transitive",

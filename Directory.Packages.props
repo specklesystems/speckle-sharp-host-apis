@@ -4,7 +4,7 @@
     <PackageVersion Include="Glob" Version="1.1.9" />
     <PackageVersion Include="NUnit3TestAdapter" Version="4.5.0" />
     <PackageVersion Include="SimpleExec" Version="12.0.0" />
-    <PackageVersion Include="Speckle.ProxyGenerator" Version="0.1.10" />
+    <PackageVersion Include="Speckle.ProxyGenerator" Version="0.1.11" />
     <PackageVersion Include="Mapster" Version="7.3.0" />
     <PackageVersion Include="MinVer" Version="5.0.0" />
     <PackageVersion Include="Microsoft.SourceLink.GitHub" Version="8.0.0" />
