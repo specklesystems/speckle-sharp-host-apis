@@ -11,9 +11,7 @@ namespace Speckle.Revit.Api;
 [Proxy(typeof(Units))]
 public partial interface IRevitUnitsProxy : IRevitUnits;
 
-[Proxy(
-  typeof(FormatOptions)
-)]
+[Proxy(typeof(FormatOptions))]
 public partial interface IRevitFormatOptionsProxy : IRevitFormatOptions;
 
 [Proxy(typeof(Transform), new[] { "Basis" })]
@@ -149,14 +147,10 @@ public partial class NurbSplineProxy
   public bool IsRational => _Instance.isRational;
 }
 
-[Proxy(
-  typeof(HermiteSpline)
-)]
+[Proxy(typeof(HermiteSpline))]
 public partial interface IRevitHermiteSplineProxy : IRevitHermiteSpline;
 
-[Proxy(
-  typeof(PointCloudInstance)
-)]
+[Proxy(typeof(PointCloudInstance))]
 public partial interface IRevitPointCloudInstanceProxy : IRevitPointCloudInstance;
 
 [Proxy(typeof(Instance))]
@@ -301,19 +295,13 @@ public partial class GeometryElementProxy
   }
 }
 
-[Proxy(
-  typeof(GeometryInstance)
-)]
+[Proxy(typeof(GeometryInstance))]
 public partial interface IRevitGeometryInstanceProxy : IRevitGeometryInstance;
 
-[Proxy(
-  typeof(GraphicsStyle)
-)]
+[Proxy(typeof(GraphicsStyle))]
 public partial interface IRevitGraphicsStyleProxy : IRevitGraphicsStyle;
 
-[Proxy(
-  typeof(BoundarySegment)
-)]
+[Proxy(typeof(BoundarySegment))]
 public partial interface IRevitBoundarySegmentProxy : IRevitBoundarySegment;
 
 [Proxy(typeof(Color))]
@@ -322,9 +310,7 @@ public partial interface IRevitColorProxy : IRevitColor;
 [Proxy(typeof(Ceiling))]
 public partial interface IRevitCeilingProxy : IRevitCeiling;
 
-[Proxy(
-  typeof(CeilingAndFloor)
-)]
+[Proxy(typeof(CeilingAndFloor))]
 public partial interface IRevitCeilingAndFloorProxy : IRevitCeilingAndFloor;
 
 [Proxy(typeof(Sketch))]
@@ -336,9 +322,7 @@ public partial interface IRevitSketchBaseProxy : IRevitSketchBase;
 [Proxy(typeof(DirectShape))]
 public partial interface IRevitDirectShapeProxy : IRevitDirectShape;
 
-[Proxy(
-  typeof(ExtrusionRoof)
-)]
+[Proxy(typeof(ExtrusionRoof))]
 public partial interface IRevitExtrusionRoofProxy : IRevitExtrusionRoof;
 
 [Proxy(typeof(RoofBase))]
@@ -359,9 +343,7 @@ public partial interface IRevitFootPrintRoofProxy : IRevitFootPrintRoof;
 [Proxy(typeof(Room))]
 public partial interface IRevitRoomProxy : IRevitRoom;
 
-[Proxy(
-  typeof(TopographySurface)
-)]
+[Proxy(typeof(TopographySurface))]
 public partial interface IRevitTopographySurfaceProxy : IRevitTopographySurface;
 
 [Proxy(typeof(SpatialElement), new[] { "GetBoundarySegments", "Location" })]

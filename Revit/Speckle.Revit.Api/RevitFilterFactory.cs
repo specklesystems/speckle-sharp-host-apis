@@ -55,39 +55,25 @@ public class RevitFilterFactory : IRevitFilterFactory
     );
 }
 
-[Proxy(
-  typeof(PointCloudFilter)
-)]
+[Proxy(typeof(PointCloudFilter))]
 public partial interface IRevitPointCloudFilterProxy : IRevitPointCloudFilter;
 
-[Proxy(
-  typeof(ElementFilter)
-)]
+[Proxy(typeof(ElementFilter))]
 public partial interface IRevitElementFilterProxy : IRevitElementFilter;
 
-[Proxy(
-  typeof(ElementCategoryFilter)
-)]
+[Proxy(typeof(ElementCategoryFilter))]
 public partial interface IRevitElementCategoryFilterProxy : IRevitElementCategoryFilter;
 
-[Proxy(
-  typeof(ElementIsElementTypeFilter)
-)]
+[Proxy(typeof(ElementIsElementTypeFilter))]
 public partial interface IRevitElementIsElementTypeFilterProxy : IRevitElementIsElementTypeFilter;
 
-[Proxy(
-  typeof(ElementMulticategoryFilter)
-)]
+[Proxy(typeof(ElementMulticategoryFilter))]
 public partial interface IRevitElementMulticategoryFilterProxy : IRevitElementMulticategoryFilter;
 
-[Proxy(
-  typeof(LogicalAndFilter)
-)]
+[Proxy(typeof(LogicalAndFilter))]
 public partial interface IRevitLogicalAndFilterProxy : IRevitLogicalAndFilterFilter;
 
-[Proxy(
-  typeof(FilteredElementCollector)
-)]
+[Proxy(typeof(FilteredElementCollector))]
 public partial interface IRevitFilteredElementCollectorProxy : IRevitFilteredElementCollector;
 
 public partial class FilteredElementCollectorProxy

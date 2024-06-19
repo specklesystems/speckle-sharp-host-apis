@@ -9,6 +9,7 @@ using Rhino.Runtime;
 using Speckle.ProxyGenerator;
 using Speckle.Rhino7.Interfaces;
 using Speckle.Shared;
+
 // ReSharper disable RedundantExtendsListEntry
 // ReSharper disable All
 
@@ -40,9 +41,7 @@ public partial interface IRhinoCommonObjectProxy : IRhinoCommonObject;
 [Proxy(typeof(RhinoObject), new[] { "ComponentType" })]
 public partial interface IRhinoObjectProxy : IRhinoObject;
 
-[Proxy(
-  typeof(ModelComponent)
-)]
+[Proxy(typeof(ModelComponent))]
 public partial interface IRhinoModelComponentProxy : IRhinoModelComponent;
 
 [Proxy(typeof(ArcCurve))]
@@ -76,8 +75,7 @@ public partial class BrepProxy
     get
     {
       var e = _Instance.SolidOrientation;
-      return EnumUtility<BrepSolidOrientation, RhinoBrepSolidOrientation>.Convert(e
-      );
+      return EnumUtility<BrepSolidOrientation, RhinoBrepSolidOrientation>.Convert(e);
     }
   }
 }
@@ -121,23 +119,19 @@ public partial class MeshNgonListProxy
   }
 }
 
-[Proxy(
-  typeof(RefinementSettings)
-)]
+[Proxy(typeof(RefinementSettings))]
 public partial interface IRhinoRefinementSettingsProxy : IRhinoRefinementSettings;
 
 [Proxy(typeof(BrepVertex))]
 public partial interface IRhinoBrepVertexProxy : IRhinoBrepVertex;
 
-[Proxy(
-  typeof(BrepVertexList),
-  new[] { "GetEnumerator" }
-)]
+[Proxy(typeof(BrepVertexList), new[] { "GetEnumerator" })]
 public partial interface IRhinoBrepVertexListProxy : IRhinoBrepVertexList;
 
 public partial class BrepVertexListProxy
 {
   IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+
   public IEnumerator<IRhinoBrepVertex> GetEnumerator()
   {
     foreach (var e in _Instance)
@@ -150,15 +144,13 @@ public partial class BrepVertexListProxy
 [Proxy(typeof(Point))]
 public partial interface IRhinoPointProxy : IRhinoPoint;
 
-[Proxy(
-  typeof(BrepCurveList),
-  new[] { "GetEnumerator" }
-)]
+[Proxy(typeof(BrepCurveList), new[] { "GetEnumerator" })]
 public partial interface IRhinoBrepCurveListProxy : IRhinoBrepCurveList;
 
 public partial class BrepCurveListProxy
 {
   IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+
   public IEnumerator<IRhinoCurve> GetEnumerator()
   {
     foreach (var e in _Instance)
@@ -168,15 +160,13 @@ public partial class BrepCurveListProxy
   }
 }
 
-[Proxy(
-  typeof(BrepSurfaceList),
-  new[] { "GetEnumerator" }
-)]
+[Proxy(typeof(BrepSurfaceList), new[] { "GetEnumerator" })]
 public partial interface IRhinoBrepSurfaceListProxy : IRhinoBrepSurfaceList;
 
 public partial class BrepSurfaceListProxy
 {
   IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+
   public IEnumerator<IRhinoSurface> GetEnumerator()
   {
     foreach (var e in _Instance)
@@ -186,13 +176,13 @@ public partial class BrepSurfaceListProxy
   }
 }
 
-[Proxy(typeof(BrepFaceList),
-  new[] { "GetEnumerator" })]
+[Proxy(typeof(BrepFaceList), new[] { "GetEnumerator" })]
 public partial interface IRhinoBrepFaceListProxy : IRhinoBrepFaceList;
 
 public partial class BrepFaceListProxy
 {
   IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+
   public IEnumerator<IRhinoBrepFace> GetEnumerator()
   {
     foreach (var e in _Instance)
@@ -205,13 +195,13 @@ public partial class BrepFaceListProxy
 [Proxy(typeof(BrepFace))]
 public partial interface IRhinoBrepFaceProxy : IRhinoBrepFace;
 
-[Proxy(typeof(BrepLoopList), new[] { "Add",
-  "GetEnumerator"  })]
+[Proxy(typeof(BrepLoopList), new[] { "Add", "GetEnumerator" })]
 public partial interface IRhinoBrepLoopListProxy : IRhinoBrepLoopList;
 
 public partial class BrepLoopListProxy
 {
   IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+
   public IEnumerator<IRhinoBrepLoop> GetEnumerator()
   {
     foreach (var e in _Instance)
@@ -240,13 +230,13 @@ public partial class BrepLoopProxy
   public RhinoBrepLoopType LoopType => EnumUtility<BrepLoopType, RhinoBrepLoopType>.Convert(_Instance.LoopType);
 }
 
-[Proxy(typeof(BrepEdgeList),
-  new[] { "GetEnumerator" })]
+[Proxy(typeof(BrepEdgeList), new[] { "GetEnumerator" })]
 public partial interface IRhinoBrepEdgeListProxy : IRhinoBrepEdgeList;
 
 public partial class BrepEdgeListProxy
 {
   IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+
   public IEnumerator<IRhinoBrepEdge> GetEnumerator()
   {
     foreach (var e in _Instance)
@@ -254,7 +244,6 @@ public partial class BrepEdgeListProxy
       yield return new BrepEdgeProxy(e);
     }
   }
-
 }
 
 [Proxy(typeof(BrepEdge))]
@@ -269,6 +258,7 @@ public partial interface IRhinoBrepTrimListProxy : IRhinoBrepTrimList;
 public partial class BrepTrimListProxy
 {
   IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+
   public IEnumerator<IRhinoBrepTrim> GetEnumerator()
   {
     foreach (var e in _Instance)
@@ -318,9 +308,7 @@ public partial interface IRhinoControlPointProxy : IRhinoControlPoint;
 [Proxy(typeof(PolyCurve))]
 public partial interface IRhinoPolyCurveProxy : IRhinoPolyCurve;
 
-[Proxy(
-  typeof(PolylineCurve)
-)]
+[Proxy(typeof(PolylineCurve))]
 public partial interface IRhinoPolylineCurveProxy : IRhinoPolylineCurve;
 
 [Proxy(typeof(NurbsCurve))]

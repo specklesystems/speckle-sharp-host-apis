@@ -93,7 +93,5 @@ public partial class LocationProxy
   }
 }
 
-[Proxy(
-  typeof(LocationPoint)
-)]
+[Proxy(typeof(LocationPoint))]
 public partial interface IRevitLocationPointProxy : IRevitLocationPoint;

@@ -11,9 +11,7 @@ public partial interface IRhinoBrepObjectProxy : IRhinoBrepObject;
 [Proxy(typeof(CurveObject))]
 public partial interface IRhinoCurveObjectProxy : IRhinoCurveObject;
 
-[Proxy(
-  typeof(ExtrusionObject)
-)]
+[Proxy(typeof(ExtrusionObject))]
 public partial interface IRhinoExtrusionObjectProxy : IRhinoExtrusionObject;
 
 [Proxy(typeof(Extrusion))]
@@ -22,9 +20,7 @@ public partial interface IRhinoExtrusionProxy : IRhinoExtrusion;
 [Proxy(typeof(MeshObject))]
 public partial interface IRhinoMeshObjectProxy : IRhinoMeshObject;
 
-[Proxy(
-  typeof(PointCloudObject)
-)]
+[Proxy(typeof(PointCloudObject))]
 public partial interface IRhinoPointCloudObjectProxy : IRhinoPointCloudObject;
 
 [Proxy(typeof(PointObject))]
