@@ -35,7 +35,7 @@ public interface IRhinoCurve : IRhinoGeometryBase
 public interface IRhinoGeometryBase : IRhinoCommonObject
 {
   IRhinoBoundingBox GetBoundingBox(bool val);
-  void Transform(IRhinoTransform transform);
+  bool Transform(IRhinoTransform transform);
 }
 
 public interface IRhinoCommonObject;
@@ -160,9 +160,9 @@ public interface IRhinoNurbsSurfacePointList : IEnumerable<IRhinoControlPoint>
   int CountV { get; }
   IRhinoControlPoint GetControlPoint(int i, int j);
   
-  void SetPoint(int u, int v, double x, double y, double z);
+  bool SetPoint(int u, int v, double x, double y, double z);
   
-  void SetWeight(int u, int v, double weight);
+  bool SetWeight(int u, int v, double weight);
 }
 
 public interface IRhinoSurface : IRhinoGeometryBase
@@ -302,7 +302,7 @@ public interface IRhinoNurbsCurveKnotList : IReadOnlyList<double>
 
 public interface IRhinoNurbsCurvePointList : IReadOnlyList<IRhinoControlPoint>
 {
-  void SetPoint(int index, IRhinoPoint3d point3d, double weight);
+  bool SetPoint(int index, IRhinoPoint3d point3d, double weight);
 }
 
 public interface IRhinoPoint3dList : IReadOnlyList<IRhinoPoint3d>

@@ -26,8 +26,15 @@ public partial interface IRhinoDocProxy : IRhinoDoc;
 )]
 public partial interface IRhinoCurveProxy : IRhinoCurve;
 
-[Proxy(typeof(GeometryBase), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(GeometryBase), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
+  new[] { "Transform" })]
 public partial interface IRhinoGeometryBaseProxy : IRhinoGeometryBase;
+
+public partial class GeometryBaseProxy
+{
+  public bool Transform(IRhinoTransform transform) => 
+    _Instance.Transform(transform.To<IRhinoTransformProxy>().NotNull()._Instance);
+}
 
 [Proxy(typeof(CommonObject), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
 public partial interface IRhinoCommonObjectProxy : IRhinoCommonObject;
@@ -123,7 +130,7 @@ public partial interface IRhinoSurfaceProxy : IRhinoSurface;
 [Proxy(
   typeof(Mesh),
   ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
-  new[] { "CreateRefinedLoopMesh", "GetNgonAndFacesEnumerable" }
+  new[] { "CreateRefinedLoopMesh", "GetNgonAndFacesEnumerable", "SetCachedTextureCoordinates" }
 )]
 public partial interface IRhinoMeshProxy : IRhinoMesh;
 
@@ -297,8 +304,17 @@ public partial interface IRhinoNurbsCurveProxy : IRhinoNurbsCurve;
 [Proxy(typeof(LineCurve), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
 public partial interface IRhinoLineCurveProxy : IRhinoLineCurve;
 
-[Proxy(typeof(Transform), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
+[Proxy(typeof(Transform),
+  ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface,
+new[] { "Equals",
+  "M00","M01", "M02", "M03", 
+  "M10", "M11", "M12", "M13",
+  "M20", "M21", "M22", "M23",
+  "M30", "M31", "M32", "M33", 
+  "get_Item"
+})]
 public partial interface IRhinoTransformProxy : IRhinoTransform;
+
 
 [Proxy(typeof(Ellipse), ImplementationOptions.UseExtendedInterfaces | ImplementationOptions.ProxyForBaseInterface)]
 public partial interface IRhinoEllipseProxy : IRhinoEllipse;
