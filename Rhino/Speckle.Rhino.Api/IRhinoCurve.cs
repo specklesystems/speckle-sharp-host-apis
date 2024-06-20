@@ -51,11 +51,19 @@ public partial class GeometryBaseProxy
 [Proxy(typeof(CommonObject))]
 public partial interface IRhinoCommonObjectProxy : IRhinoCommonObject;
 
-[Proxy(typeof(RhinoObject), new[] { "ComponentType" })]
+[Proxy(typeof(RhinoObject), new[] { "ComponentType", "ObjectType" })]
 public partial interface IRhinoObjectProxy : IRhinoObject;
+
+public partial class RhinoObjectProxy
+{
+  public RhinoObjectType ObjectType => EnumUtility<ObjectType, RhinoObjectType>.Convert(_Instance.ObjectType);
+}
 
 [Proxy(typeof(ModelComponent))]
 public partial interface IRhinoModelComponentProxy : IRhinoModelComponent;
+
+[Proxy(typeof(ObjectAttributes))]
+public partial interface IRhinoObjectAttributesProxy : IRhinoObjectAttributes;
 
 [Proxy(typeof(ArcCurve))]
 public partial interface IRhinoArcCurveProxy : IRhinoArcCurve;

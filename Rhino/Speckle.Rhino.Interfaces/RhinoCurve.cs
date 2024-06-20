@@ -8,6 +8,12 @@ public interface IRhinoDoc
   RhinoUnitSystem ModelUnitSystem { get; }
 }
 
+public interface IRhinoObjectAttributes : IRhinoCommonObject
+{
+  string Name { get; }
+  string GetUserString(string key);
+}
+
 public interface IRhinoCurve : IRhinoGeometryBase
 {
   bool TryGetCircle(out IRhinoCircle circle, double tolerance);
@@ -48,7 +54,15 @@ public interface IRhinoGeometryBase : IRhinoCommonObject
 
 public interface IRhinoCommonObject;
 
-public interface IRhinoObject : IRhinoModelComponent;
+public interface IRhinoObject : IRhinoModelComponent
+{
+  Guid Id { get; }
+  IRhinoObjectAttributes Attributes { get; }
+
+  RhinoObjectType ObjectType { get; }
+
+  IRhinoGeometryBase Geometry { get; }
+}
 
 public interface IRhinoModelComponent : IRhinoCommonObject;
 
