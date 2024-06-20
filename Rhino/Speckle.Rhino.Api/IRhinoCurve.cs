@@ -1,7 +1,9 @@
 using System.Collections;
 using Rhino;
 using Rhino.Collections;
+using Rhino.Display;
 using Rhino.DocObjects;
+using Rhino.DocObjects.Tables;
 using Rhino.Geometry;
 using Rhino.Geometry.Collections;
 using Rhino.Geometry.MeshRefinements;
@@ -21,6 +23,62 @@ public partial interface IRhinoDocProxy : IRhinoDoc;
 public partial class RhinoDocProxy
 {
   public RhinoUnitSystem ModelUnitSystem => EnumUtility<UnitSystem, RhinoUnitSystem>.Convert(_Instance.ModelUnitSystem);
+}
+[Proxy(typeof(RhinoView), new[] { "Equals" })]
+public partial interface IRhinoViewProxy : IRhinoView;
+
+[Proxy(typeof(GroupTable), new[] { "Equals", "ComponentType" })]
+public partial interface IRhinoGroupTableProxy : IRhinoGroupTable;
+
+public partial class GroupTableProxy
+{
+  IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+
+  public IEnumerator<IRhinoGroup> GetEnumerator()
+  {
+    foreach (var group in _Instance)
+    {
+      yield return new GroupProxy(group);
+    }
+  }
+
+  public int Count => _Instance.Count;
+}
+
+[Proxy(typeof(Group), new[] { "ComponentType" })]
+public partial interface IRhinoGroupProxy : IRhinoGroup;
+
+[Proxy(typeof(ObjectTable), new[] { "Equals", "ComponentType" })]
+public partial interface IRhinoObjectTableProxy : IRhinoObjectTable;
+
+public partial class ObjectTableProxy
+{
+  IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+
+  public int Count => _Instance.Count;
+}
+
+
+[Proxy(typeof(ViewTable), new[] { "Equals" })]
+public partial interface IRhinoViewTableProxy : IRhinoViewTable;
+
+public partial class ViewTableProxy
+{
+  IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+}
+
+[Proxy(typeof(Layer), new[] { "Equals", "ComponentType" })]
+public partial interface IRhinoLayerProxy : IRhinoLayer;
+
+
+[Proxy(typeof(LayerTable), new[] { "Equals", "ComponentType", "Count" })]
+public partial interface IRhinoLayerTableProxy : IRhinoLayerTable;
+
+public partial class LayerTableProxy
+{
+  IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+
+  public int Count => _Instance.Count;
 }
 
 [Proxy(typeof(Curve), new[] { "Duplicate" })]

@@ -1,5 +1,6 @@
 ﻿using Rhino;
 using Rhino.Collections;
+using Rhino.DocObjects;
 using Rhino.Geometry;
 using Speckle.ProxyGenerator;
 using Speckle.Rhino7.Interfaces;
@@ -150,4 +151,13 @@ public class RhinoNgonFactory : IRhinoNgonFactory
 public class RhinoDocFactory : IRhinoDocFactory
 {
   public IRhinoDoc ActiveDoc() => new RhinoDocProxy(RhinoDoc.ActiveDoc);
+  public IRhinoLayer CreateLayer(string name) => new LayerProxy(new Layer() { Name = name });
+
+  public IRhinoLayer CreateLayer(string name, Guid parentLayerId) => new LayerProxy(new Layer() { Name = name, ParentLayerId = parentLayerId});
+
+  public IRhinoObjectAttributes CreateAttributes(int layerIndex) =>
+    new ObjectAttributesProxy(new ObjectAttributes() { LayerIndex = layerIndex });
+
+  public int UnsetIntIndex => RhinoMath.UnsetIntIndex;
+  public string LayerPathSeparator => Layer.PathSeparator;
 }
