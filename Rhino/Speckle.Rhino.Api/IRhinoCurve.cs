@@ -1,7 +1,9 @@
 using System.Collections;
 using Rhino;
 using Rhino.Collections;
+using Rhino.Display;
 using Rhino.DocObjects;
+using Rhino.DocObjects.Tables;
 using Rhino.Geometry;
 using Rhino.Geometry.Collections;
 using Rhino.Geometry.MeshRefinements;
@@ -21,6 +23,61 @@ public partial interface IRhinoDocProxy : IRhinoDoc;
 public partial class RhinoDocProxy
 {
   public RhinoUnitSystem ModelUnitSystem => EnumUtility<UnitSystem, RhinoUnitSystem>.Convert(_Instance.ModelUnitSystem);
+}
+
+[Proxy(typeof(RhinoView), new[] { "Equals" })]
+public partial interface IRhinoViewProxy : IRhinoView;
+
+[Proxy(typeof(GroupTable), new[] { "Equals", "ComponentType" })]
+public partial interface IRhinoGroupTableProxy : IRhinoGroupTable;
+
+public partial class GroupTableProxy
+{
+  IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+
+  public IEnumerator<IRhinoGroup> GetEnumerator()
+  {
+    foreach (var group in _Instance)
+    {
+      yield return new GroupProxy(group);
+    }
+  }
+
+  public int Count => _Instance.Count;
+}
+
+[Proxy(typeof(Group), new[] { "ComponentType" })]
+public partial interface IRhinoGroupProxy : IRhinoGroup;
+
+[Proxy(typeof(ObjectTable), new[] { "Equals", "ComponentType" })]
+public partial interface IRhinoObjectTableProxy : IRhinoObjectTable;
+
+public partial class ObjectTableProxy
+{
+  IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+
+  public int Count => _Instance.Count;
+}
+
+[Proxy(typeof(ViewTable), new[] { "Equals" })]
+public partial interface IRhinoViewTableProxy : IRhinoViewTable;
+
+public partial class ViewTableProxy
+{
+  IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+}
+
+[Proxy(typeof(Layer), new[] { "Equals", "ComponentType" })]
+public partial interface IRhinoLayerProxy : IRhinoLayer;
+
+[Proxy(typeof(LayerTable), new[] { "Equals", "ComponentType", "Count" })]
+public partial interface IRhinoLayerTableProxy : IRhinoLayerTable;
+
+public partial class LayerTableProxy
+{
+  IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+
+  public int Count => _Instance.Count;
 }
 
 [Proxy(typeof(Curve), new[] { "Duplicate" })]
@@ -44,18 +101,25 @@ public partial interface IRhinoGeometryBaseProxy : IRhinoGeometryBase;
 
 public partial class GeometryBaseProxy
 {
-  public bool Transform(IRhinoTransform transform) =>
-    _Instance.Transform(transform.To<IRhinoTransformProxy>().NotNull()._Instance);
+  public bool Transform(IRhinoTransform transform) => _Instance.Transform(transform.To<TransformProxy>()._Instance);
 }
 
 [Proxy(typeof(CommonObject))]
 public partial interface IRhinoCommonObjectProxy : IRhinoCommonObject;
 
-[Proxy(typeof(RhinoObject), new[] { "ComponentType" })]
+[Proxy(typeof(RhinoObject), new[] { "ComponentType", "ObjectType" })]
 public partial interface IRhinoObjectProxy : IRhinoObject;
+
+public partial class RhinoObjectProxy
+{
+  public RhinoObjectType ObjectType => EnumUtility<ObjectType, RhinoObjectType>.Convert(_Instance.ObjectType);
+}
 
 [Proxy(typeof(ModelComponent))]
 public partial interface IRhinoModelComponentProxy : IRhinoModelComponent;
+
+[Proxy(typeof(ObjectAttributes))]
+public partial interface IRhinoObjectAttributesProxy : IRhinoObjectAttributes;
 
 [Proxy(typeof(ArcCurve))]
 public partial interface IRhinoArcCurveProxy : IRhinoArcCurve;
@@ -226,10 +290,7 @@ public partial class BrepLoopListProxy
   public IRhinoBrepLoop Add(RhinoBrepLoopType type, IRhinoBrepFace face)
   {
     return A.Cast<IRhinoBrepLoop, BrepLoop>(
-        _Instance.Add(
-          EnumUtility<RhinoBrepLoopType, BrepLoopType>.Convert(type),
-          face.To<IRhinoBrepFaceProxy>()._Instance
-        )
+        _Instance.Add(EnumUtility<RhinoBrepLoopType, BrepLoopType>.Convert(type), face.To<BrepFaceProxy>()._Instance)
       )
       .NotNull();
   }
@@ -288,8 +349,8 @@ public partial class BrepTrimListProxy
   ) =>
     A.Cast<IRhinoBrepTrim, BrepTrim>(
         _Instance.AddSingularTrim(
-          vertex.To<IRhinoBrepVertexProxy>()._Instance,
-          loop.To<IRhinoBrepLoopProxy>()._Instance,
+          vertex.To<BrepVertexProxy>()._Instance,
+          loop.To<BrepLoopProxy>()._Instance,
           EnumUtility<RhinoIsoStatus, IsoStatus>.Convert(status),
           curveIndex
         )

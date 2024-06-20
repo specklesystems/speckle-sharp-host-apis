@@ -6,6 +6,58 @@ public interface IRhinoDoc
 {
   double ModelAbsoluteTolerance { get; }
   RhinoUnitSystem ModelUnitSystem { get; }
+
+  IRhinoViewTable Views { get; }
+  IRhinoLayerTable Layers { get; }
+  IRhinoObjectTable Objects { get; }
+  IRhinoGroupTable Groups { get; }
+}
+
+public interface IRhinoGroupTable : IReadOnlyCollection<IRhinoGroup>
+{
+  IRhinoGroup FindIndex(int index);
+  int Add(string name, IEnumerable<Guid> ids);
+}
+
+public interface IRhinoGroup
+{
+  Guid Id { get; }
+}
+
+public interface IRhinoObjectTable : IReadOnlyCollection<IRhinoObject>
+{
+  Guid Add(IRhinoGeometryBase obj, IRhinoObjectAttributes attributes);
+}
+
+public interface IRhinoViewTable : IEnumerable<IRhinoView>
+{
+  void Redraw();
+
+  bool RedrawEnabled { get; set; }
+}
+
+public interface IRhinoView { }
+
+public interface IRhinoLayerTable : IReadOnlyList<IRhinoLayer>
+{
+  int Find(Guid guid, string name, int index);
+  IRhinoLayer FindName(string name);
+  IRhinoLayer FindIndex(int value);
+  bool Purge(int index, bool real);
+  int Add(IRhinoLayer layer);
+}
+
+public interface IRhinoLayer : IRhinoModelComponent
+{
+  IRhinoLayer[]? GetChildren();
+  int Index { get; }
+  Guid Id { get; }
+}
+
+public interface IRhinoObjectAttributes : IRhinoCommonObject
+{
+  string Name { get; }
+  string GetUserString(string key);
 }
 
 public interface IRhinoCurve : IRhinoGeometryBase
@@ -48,7 +100,15 @@ public interface IRhinoGeometryBase : IRhinoCommonObject
 
 public interface IRhinoCommonObject;
 
-public interface IRhinoObject : IRhinoModelComponent;
+public interface IRhinoObject : IRhinoModelComponent
+{
+  Guid Id { get; }
+  IRhinoObjectAttributes Attributes { get; }
+
+  RhinoObjectType ObjectType { get; }
+
+  IRhinoGeometryBase Geometry { get; }
+}
 
 public interface IRhinoModelComponent : IRhinoCommonObject;
 
