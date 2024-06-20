@@ -6,12 +6,13 @@ public interface IRhinoDoc
 {
   double ModelAbsoluteTolerance { get; }
   RhinoUnitSystem ModelUnitSystem { get; }
-  
+
   IRhinoViewTable Views { get; }
   IRhinoLayerTable Layers { get; }
   IRhinoObjectTable Objects { get; }
   IRhinoGroupTable Groups { get; }
 }
+
 public interface IRhinoGroupTable : IReadOnlyCollection<IRhinoGroup>
 {
   IRhinoGroup FindIndex(int index);
@@ -22,20 +23,20 @@ public interface IRhinoGroup
 {
   Guid Id { get; }
 }
+
 public interface IRhinoObjectTable : IReadOnlyCollection<IRhinoObject>
 {
   Guid Add(IRhinoGeometryBase obj, IRhinoObjectAttributes attributes);
 }
+
 public interface IRhinoViewTable : IEnumerable<IRhinoView>
 {
   void Redraw();
-  
+
   bool RedrawEnabled { get; set; }
 }
-public interface IRhinoView
-{
-  
-}
+
+public interface IRhinoView { }
 
 public interface IRhinoLayerTable : IReadOnlyList<IRhinoLayer>
 {
@@ -45,12 +46,14 @@ public interface IRhinoLayerTable : IReadOnlyList<IRhinoLayer>
   bool Purge(int index, bool real);
   int Add(IRhinoLayer layer);
 }
+
 public interface IRhinoLayer : IRhinoModelComponent
 {
   IRhinoLayer[]? GetChildren();
   int Index { get; }
   Guid Id { get; }
 }
+
 public interface IRhinoObjectAttributes : IRhinoCommonObject
 {
   string Name { get; }

@@ -8,7 +8,7 @@ public interface IRhinoDocFactory
   IRhinoLayer CreateLayer(string name, Guid parentLayerId);
 
   IRhinoObjectAttributes CreateAttributes(int layerIndex);
-  
+
   int UnsetIntIndex { get; }
   string LayerPathSeparator { get; }
 }

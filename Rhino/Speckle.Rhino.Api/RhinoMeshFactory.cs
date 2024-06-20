@@ -14,7 +14,7 @@ public class RhinoMeshFactory : IRhinoMeshFactory
 
   public IEnumerable<IRhinoMesh> CreateFromBrep(IRhinoBrep brep, double density, double minimumEdgeLength)
   {
-    var b = brep.To<IRhinoBrepProxy>()._Instance;
+    var b = brep.To<BrepProxy>()._Instance;
     return Mesh.CreateFromBrep(b, new MeshingParameters(density, minimumEdgeLength)).Select(x => new MeshProxy(x));
   }
 }
@@ -24,16 +24,14 @@ public class RhinoArcFactory : IRhinoArcFactory
   public IRhinoArc Create(IRhinoPoint3d startPoint, IRhinoPoint3d midPoint, IRhinoPoint3d endPoint) =>
     new ArcProxy(
       new Arc(
-        startPoint.To<IRhinoPoint3dProxy>()._Instance,
-        midPoint.To<IRhinoPoint3dProxy>()._Instance,
-        endPoint.To<IRhinoPoint3dProxy>()._Instance
+        startPoint.To<Point3dProxy>()._Instance,
+        midPoint.To<Point3dProxy>()._Instance,
+        endPoint.To<Point3dProxy>()._Instance
       )
     );
 
   public IRhinoArcCurve Create(IRhinoArc arc, IRhinoInterval domain) =>
-    new ArcCurveProxy(
-      new ArcCurve(arc.To<IRhinoArcProxy>()._Instance) { Domain = domain.To<IRhinoIntervalProxy>()._Instance }
-    );
+    new ArcCurveProxy(new ArcCurve(arc.To<ArcProxy>()._Instance) { Domain = domain.To<IntervalProxy>()._Instance });
 }
 
 public class RhinoPointFactory : IRhinoPointFactory
@@ -42,11 +40,10 @@ public class RhinoPointFactory : IRhinoPointFactory
 
   public IRhinoPoint3d Create(double x, double y, double z) => new Point3dProxy(new Point3d(x, y, z));
 
-  public IRhinoPoint Create(IRhinoPoint3d point3d) =>
-    new PointProxy(new Point(point3d.To<IRhinoPoint3dProxy>()._Instance));
+  public IRhinoPoint Create(IRhinoPoint3d point3d) => new PointProxy(new Point(point3d.To<Point3dProxy>()._Instance));
 
   public IRhinoPoint3dList Create(IList<IRhinoPoint3d> list) =>
-    new Point3dListProxy(new Point3dList(list.Select(x => x.To<IRhinoPoint3dProxy>()._Instance)));
+    new Point3dListProxy(new Point3dList(list.Cast<Point3dProxy>().Select(x => x._Instance)));
 }
 
 public class RhinoIntervalFactory : IRhinoIntervalFactory
@@ -57,12 +54,10 @@ public class RhinoIntervalFactory : IRhinoIntervalFactory
 public class RhinoCircleFactory : IRhinoCircleFactory
 {
   public IRhinoCircle Create(IRhinoPlane plane, double raduis) =>
-    new CircleProxy(new Circle(plane.To<IRhinoPlaneProxy>()._Instance, raduis));
+    new CircleProxy(new Circle(plane.To<PlaneProxy>()._Instance, raduis));
 
   public IRhinoArcCurve Create(IRhinoCircle arc, IRhinoInterval domain) =>
-    new ArcCurveProxy(
-      new ArcCurve(arc.To<IRhinoCircleProxy>()._Instance) { Domain = domain.To<IRhinoIntervalProxy>()._Instance }
-    );
+    new ArcCurveProxy(new ArcCurve(arc.To<CircleProxy>()._Instance) { Domain = domain.To<IntervalProxy>()._Instance });
 }
 
 public class RhinoCurveFactory : IRhinoCurveFactory
@@ -75,13 +70,12 @@ public class RhinoCurveFactory : IRhinoCurveFactory
 public class RhinoLineFactory : IRhinoLineFactory
 {
   public IRhinoLine Create(IRhinoPoint3d start, IRhinoPoint3d end) =>
-    new LineProxy(new Line(start.To<IRhinoPoint3dProxy>()._Instance, end.To<IRhinoPoint3dProxy>()._Instance));
+    new LineProxy(new Line(start.To<Point3dProxy>()._Instance, end.To<Point3dProxy>()._Instance));
 
-  public IRhinoLineCurve Create(IRhinoLine line) =>
-    new LineCurveProxy(new LineCurve(line.To<IRhinoLineProxy>()._Instance));
+  public IRhinoLineCurve Create(IRhinoLine line) => new LineCurveProxy(new LineCurve(line.To<LineProxy>()._Instance));
 
   public IRhinoPolyline Create(IRhinoPoint3dList list) =>
-    new PolylineProxy(new Polyline(list.Select(x => x.To<IRhinoPoint3dProxy>()._Instance)));
+    new PolylineProxy(new Polyline(list.Select(x => x.To<Point3dProxy>()._Instance)));
 }
 
 public class RhinoPlaneFactory : IRhinoPlaneFactory
@@ -89,9 +83,9 @@ public class RhinoPlaneFactory : IRhinoPlaneFactory
   public IRhinoPlane Create(IRhinoPoint3d origin, IRhinoVector3d xdir, IRhinoVector3d ydir) =>
     new PlaneProxy(
       new Plane(
-        origin.To<IRhinoPoint3dProxy>()._Instance,
-        xdir.To<IRhinoVector3dProxy>()._Instance,
-        ydir.To<IRhinoVector3dProxy>()._Instance
+        origin.To<Point3dProxy>()._Instance,
+        xdir.To<Vector3dProxy>()._Instance,
+        ydir.To<Vector3dProxy>()._Instance
       )
     );
 }
@@ -117,13 +111,13 @@ public class RhinoTransformFactory : IRhinoTransformFactory
   public IRhinoTransform Identity => new TransformProxy(Transform.Identity);
 
   public IRhinoTransform Scale(IRhinoPoint3d origin, double y) =>
-    new TransformProxy(Transform.Scale(origin.To<IRhinoPoint3dProxy>()._Instance, y));
+    new TransformProxy(Transform.Scale(origin.To<Point3dProxy>()._Instance, y));
 }
 
 public class RhinoPointCloudFactory : IRhinoPointCloudFactory
 {
   public IRhinoPointCloud Create(IRhinoPoint3dList list) =>
-    new PointCloudProxy(new PointCloud(list.To<IRhinoPoint3dListProxy>()._Instance));
+    new PointCloudProxy(new PointCloud(list.To<Point3dListProxy>()._Instance));
 }
 
 public class RhinoVectorFactory : IRhinoVectorFactory
@@ -134,7 +128,7 @@ public class RhinoVectorFactory : IRhinoVectorFactory
 public class RhinoEllipseFactory : IRhinoEllipseFactory
 {
   public IRhinoEllipse Create(IRhinoPlane plane, double firstRadius, double secondRaduis) =>
-    new EllipseProxy(new Ellipse(plane.To<IRhinoPlaneProxy>()._Instance, firstRadius, secondRaduis));
+    new EllipseProxy(new Ellipse(plane.To<PlaneProxy>()._Instance, firstRadius, secondRaduis));
 }
 
 public class RhinoBrepFactory : IRhinoBrepFactory
@@ -151,9 +145,11 @@ public class RhinoNgonFactory : IRhinoNgonFactory
 public class RhinoDocFactory : IRhinoDocFactory
 {
   public IRhinoDoc ActiveDoc() => new RhinoDocProxy(RhinoDoc.ActiveDoc);
+
   public IRhinoLayer CreateLayer(string name) => new LayerProxy(new Layer() { Name = name });
 
-  public IRhinoLayer CreateLayer(string name, Guid parentLayerId) => new LayerProxy(new Layer() { Name = name, ParentLayerId = parentLayerId});
+  public IRhinoLayer CreateLayer(string name, Guid parentLayerId) =>
+    new LayerProxy(new Layer() { Name = name, ParentLayerId = parentLayerId });
 
   public IRhinoObjectAttributes CreateAttributes(int layerIndex) =>
     new ObjectAttributesProxy(new ObjectAttributes() { LayerIndex = layerIndex });
