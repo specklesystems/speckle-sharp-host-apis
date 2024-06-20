@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using Rhino;
 using Rhino.Collections;
 using Rhino.DocObjects;
@@ -25,6 +25,19 @@ public partial class RhinoDocProxy
 
 [Proxy(typeof(Curve), new[] { "Duplicate" })]
 public partial interface IRhinoCurveProxy : IRhinoCurve;
+
+public partial class CurveProxy
+{
+  public IRhinoPolyCurve? ToPolyCurve() => A.Call<IRhinoPolyCurve>(() => _Instance as PolyCurve);
+
+  public IRhinoArcCurve? ToArcCurve() => A.Call<IRhinoArcCurve>(() => _Instance as ArcCurve);
+
+  public IRhinoPolylineCurve? ToPolylineCurve() => A.Call<IRhinoPolylineCurve>(() => _Instance as PolylineCurve);
+
+  public IRhinoLineCurve? ToLineCurve() => A.Call<IRhinoLineCurve>(() => _Instance as LineCurve);
+
+  public IRhinoNurbsCurve? ToNurbsCurveReflection() => A.Call<IRhinoNurbsCurve>(() => _Instance as NurbsCurve);
+}
 
 [Proxy(typeof(GeometryBase), new[] { "Transform" })]
 public partial interface IRhinoGeometryBaseProxy : IRhinoGeometryBase;
@@ -249,7 +262,7 @@ public partial class BrepEdgeListProxy
 [Proxy(typeof(BrepEdge))]
 public partial interface IRhinoBrepEdgeProxy : IRhinoBrepEdge;
 
-[Proxy(typeof(CurveProxy))]
+[Proxy(typeof(Rhino.Geometry.CurveProxy))]
 public partial interface IRhinoCurveProxy2Proxy : IRhinoCurveProxy2;
 
 [Proxy(typeof(BrepTrimList), new[] { "AddSingularTrim", "GetEnumerator" })]
