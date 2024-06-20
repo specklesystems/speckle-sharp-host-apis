@@ -1,4 +1,4 @@
-﻿using System.Drawing;
+using System.Drawing;
 
 namespace Speckle.Rhino7.Interfaces;
 
@@ -33,6 +33,11 @@ public interface IRhinoCurve : IRhinoGeometryBase
   int Degree { get; }
   bool IsPeriodic { get; }
   IRhinoCurve Trim(IRhinoInterval interval);
+  IRhinoPolyCurve? ToPolyCurve();
+  IRhinoArcCurve? ToArcCurve();
+  IRhinoPolylineCurve? ToPolylineCurve();
+  IRhinoLineCurve? ToLineCurve();
+  IRhinoNurbsCurve? ToNurbsCurveReflection();
 }
 
 public interface IRhinoGeometryBase : IRhinoCommonObject
