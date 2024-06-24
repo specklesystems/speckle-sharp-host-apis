@@ -358,8 +358,8 @@ public interface IRhinoBrepEdge : IRhinoCurveProxy2
   int EdgeIndex { get; }
   int EdgeCurveIndex { get; }
   int[] TrimIndices();
-  IRhinoBrepVertex? StartVertex { get; }
-  IRhinoBrepVertex? EndVertex { get; }
+  IRhinoBrepVertex StartVertex { get; }
+  IRhinoBrepVertex EndVertex { get; }
 }
 
 public interface IRhinoBrepTrim : IRhinoCurveProxy2
@@ -372,8 +372,8 @@ public interface IRhinoBrepTrim : IRhinoCurveProxy2
   RhinoIsoStatus IsoStatus { get; set; }
   RhinoBrepTrimType TrimType { get; set; }
   bool IsReversed();
-  IRhinoBrepVertex? StartVertex { get; }
-  IRhinoBrepVertex? EndVertex { get; }
+  IRhinoBrepVertex StartVertex { get; }
+  IRhinoBrepVertex EndVertex { get; }
   void SetTolerances(double toleranceX, double toleranceY);
 }
 
