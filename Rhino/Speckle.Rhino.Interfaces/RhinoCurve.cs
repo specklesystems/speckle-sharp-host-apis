@@ -11,7 +11,6 @@ public interface IRhinoDoc
   IRhinoLayerTable Layers { get; }
   IRhinoObjectTable Objects { get; }
   IRhinoGroupTable Groups { get; }
-  
 }
 
 public interface IRhinoGroupTable : IReadOnlyCollection<IRhinoGroup>
