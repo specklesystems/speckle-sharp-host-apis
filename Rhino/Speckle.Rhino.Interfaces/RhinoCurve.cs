@@ -5,12 +5,13 @@ namespace Speckle.Rhino7.Interfaces;
 public interface IRhinoDoc
 {
   double ModelAbsoluteTolerance { get; }
+  string Name { get; }
   RhinoUnitSystem ModelUnitSystem { get; }
-
   IRhinoViewTable Views { get; }
   IRhinoLayerTable Layers { get; }
   IRhinoObjectTable Objects { get; }
   IRhinoGroupTable Groups { get; }
+  
 }
 
 public interface IRhinoGroupTable : IReadOnlyCollection<IRhinoGroup>
@@ -51,6 +52,7 @@ public interface IRhinoLayer : IRhinoModelComponent
 {
   IRhinoLayer[]? GetChildren();
   int Index { get; }
+  string FullPath { get; }
   Guid Id { get; }
 }
 
