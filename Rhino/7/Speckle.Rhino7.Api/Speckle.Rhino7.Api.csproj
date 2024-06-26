@@ -9,8 +9,6 @@
     <PackageReference Include="RhinoWindows"  />
     <PackageReference Include="Mapster"  />
     <PackageReference Include="Speckle.ProxyGenerator" PrivateAssets="All"/>
-    <PackageReference Include="MinVer" PrivateAssets="All"/>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Speckle.Rhino7.Interfaces\Speckle.Rhino7.Interfaces.csproj" />

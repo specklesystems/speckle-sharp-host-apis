@@ -1,9 +1,6 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Revit", "Revit", "{8F540B7F-7548-46E9-BDEC-4DAB99367908}"
-	ProjectSection(SolutionItems) = preProject
-		Revit\Directory.Build.props = Revit\Directory.Build.props
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{7A91F6BF-EA8A-428E-BB97-B6C448C247EF}"
 	ProjectSection(SolutionItems) = preProject
@@ -49,9 +46,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{1A746BD2-E68A-4877-9922-3549F6C00EDF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Rhino", "Rhino", "{72DEFF6C-31DE-4050-8692-AEE8224E9925}"
-	ProjectSection(SolutionItems) = preProject
-		Revit\Directory.Build.props = Revit\Directory.Build.props
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "7", "7", "{BC12C4CA-7065-4B76-9787-E8DA4745AD4E}"
 	ProjectSection(SolutionItems) = preProject

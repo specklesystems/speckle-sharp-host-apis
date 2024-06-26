@@ -7,10 +7,8 @@
   <Import Project="..\..\Speckle.Revit.Api\Speckle.Revit.Api.projitems" Label="Shared" />
   <ItemGroup>
     <PackageReference Include="Speckle.Revit.API" />
-    <PackageReference Include="Mapster"  />    
+    <PackageReference Include="Mapster"  />
     <PackageReference Include="Speckle.ProxyGenerator" PrivateAssets="All"/>
-    <PackageReference Include="MinVer" PrivateAssets="All"/>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Speckle.Revit2023.Interfaces\Speckle.Revit2023.Interfaces.csproj" />
