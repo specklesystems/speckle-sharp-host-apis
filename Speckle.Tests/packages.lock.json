@@ -1,12 +1,12 @@
 {
-  "version": 2,
+  "version": 1,
   "dependencies": {
     "net8.0": {
       "coverlet.collector": {
         "type": "Direct",
-        "requested": "[6.0.2, )",
-        "resolved": "6.0.2",
-        "contentHash": "bJShQ6uWRTQ100ZeyiMqcFlhP7WJ+bCuabUs885dJiBEzMsJMSFr7BOyeCw4rgvQokteGi5rKQTlkhfQPUXg2A=="
+        "requested": "(, )",
+        "resolved": "1.0.0",
+        "contentHash": "GKEJWkEjn46SSeKjFjFWx3xyg215+gVTCoGVJMx8U9bbIB7KqXNMEO41IzK1MWnM9csdzjtBIVRrPKRvSxOWcg=="
       },
       "FluentAssertions": {
         "type": "Direct",
@@ -29,44 +29,27 @@
       },
       "Moq": {
         "type": "Direct",
-        "requested": "[4.20.70, )",
-        "resolved": "4.20.70",
-        "contentHash": "4rNnAwdpXJBuxqrOCzCyICXHSImOTRktCgCWXWykuF1qwoIsVvEnR7PjbMk/eLOxWvhmj5Kwt+kDV3RGUYcNwg==",
-        "dependencies": {
-          "Castle.Core": "5.1.1"
-        }
+        "requested": "(, )",
+        "resolved": "3.1.416.3",
+        "contentHash": "rChp3XDMsDnFaznElHZHqysZpCw0cy5+LHIRHmaoGs/l33QoyJLr+HbZcvlzN5D2fjn/nDA8X939C4QsSNYs4Q=="
       },
       "NUnit": {
         "type": "Direct",
-        "requested": "[4.1.0, )",
-        "resolved": "4.1.0",
-        "contentHash": "MT/DpAhjtiytzhTgTqIhBuWx4y26PKfDepYUHUM+5uv4TsryHC2jwFo5e6NhWkApCm/G6kZ80dRjdJFuAxq3rg=="
+        "requested": "(, )",
+        "resolved": "2.5.7.10213",
+        "contentHash": "4aEVHJ3K6SRvmnUn630f6LMy6wfM5tZyMhSSAcMrOs2EspiwI0wsGtTQkFWizqjhNsO+fn0I/ravWZAAVfXpqg=="
       },
       "NUnit.Analyzers": {
         "type": "Direct",
-        "requested": "[4.2.0, )",
-        "resolved": "4.2.0",
-        "contentHash": "4fJojPkzdoa4nB2+p6U+fITvPnVvwWSnsmiJ/Dl30xqiL3oxNbYvfeSLVd91hOmEjoUqSwN3Z7j1aFedjqWbUA=="
+        "requested": "(, )",
+        "resolved": "0.2.0",
+        "contentHash": "acVz9hPDalPRWMPVqIDkN7+WsLG9RPiFKRW/C8UYalBzHOmfwA7T75CuLtkrRF5dLin29CbQRImo/TOl3rQLwQ=="
       },
       "NUnit3TestAdapter": {
         "type": "Direct",
-        "requested": "[4.5.0, )",
-        "resolved": "4.5.0",
-        "contentHash": "s8JpqTe9bI2f49Pfr3dFRfoVSuFQyraTj68c3XXjIS/MRGvvkLnrg6RLqnTjdShX+AdFUCCU/4Xex58AdUfs6A=="
-      },
-      "PolySharp": {
-        "type": "Direct",
-        "requested": "[1.14.1, )",
-        "resolved": "1.14.1",
-        "contentHash": "mOOmFYwad3MIOL14VCjj02LljyF1GNw1wP0YVlxtcPvqdxjGGMNdNJJxHptlry3MOd8b40Flm8RPOM8JOlN2sQ=="
-      },
-      "Castle.Core": {
-        "type": "Transitive",
-        "resolved": "5.1.1",
-        "contentHash": "rpYtIczkzGpf+EkZgDr9CClTdemhsrwA/W5hMoPjLkRFnXzH44zDLoovXeKtmxb1ykXK9aJVODSpiJml8CTw2g==",
-        "dependencies": {
-          "System.Diagnostics.EventLog": "6.0.0"
-        }
+        "requested": "(, )",
+        "resolved": "3.0.10",
+        "contentHash": "A0FJIyBnjCEftjD6QtlZorqiDw+QoXIW7gWP5Fbh+eB+namKUIXe00zd7XJyx7xzGiyQ6rueQxRGWpc0gBuZOg=="
       },
       "Microsoft.CodeCoverage": {
         "type": "Transitive",
@@ -102,11 +85,6 @@
         "dependencies": {
           "System.Security.Cryptography.ProtectedData": "4.4.0"
         }
-      },
-      "System.Diagnostics.EventLog": {
-        "type": "Transitive",
-        "resolved": "6.0.0",
-        "contentHash": "lcyUiXTsETK2ALsZrX+nWuHSIQeazhqPphLfaRxzdGaG93+0kELqpgEHtwWOlQe7+jSFnKwaCAgL4kjeZCQJnw=="
       },
       "System.Reflection.Metadata": {
         "type": "Transitive",

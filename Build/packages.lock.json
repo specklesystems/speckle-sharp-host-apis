@@ -1,18 +1,24 @@
 {
-  "version": 2,
+  "version": 1,
   "dependencies": {
     "net8.0": {
       "Bullseye": {
         "type": "Direct",
-        "requested": "[5.0.0, )",
-        "resolved": "5.0.0",
-        "contentHash": "bqyt+m17ym+5aN45C5oZRAjuLDt8jKiCm/ys1XfymIXSkrTFwvI/QsbY3ucPSHDz7SF7uON7B57kXFv5H2k1ew=="
+        "requested": "(, )",
+        "resolved": "1.0.0",
+        "contentHash": "T0WIELiOSdLo+CO4N9TR3ffanAv7+SE6pTEut9m9hZ0n9lJ6ni8dZyUpvtc3Z0OTBpsCLnGn0YfGYZcaW2xeuA=="
       },
       "Glob": {
         "type": "Direct",
-        "requested": "[1.1.9, )",
-        "resolved": "1.1.9",
-        "contentHash": "AfK5+ECWYTP7G3AAdnU8IfVj+QpGjrh9GC2mpdcJzCvtQ4pnerAGwHsxJ9D4/RnhDUz2DSzd951O/lQjQby2Sw=="
+        "requested": "(, )",
+        "resolved": "0.2.0",
+        "contentHash": "f7yECPzlD8YFfStf+45qnuac3Bidj2KMCe7wbSEzKmAL8gifi/jrLtKurc0UbvzWsiHLF2ydDnOXTfA5G3PhMg==",
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.IO.FileSystem": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Text.RegularExpressions": "4.3.0"
+        }
       },
       "PolySharp": {
         "type": "Direct",
