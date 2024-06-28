@@ -7,4 +7,5 @@ public partial class ExportLinetypeTable : System.Object
 	public virtual void Add(Autodesk.Revit.DB.ExportLinetypeKey exportLinetypeKey,Autodesk.Revit.DB.ExportLinetypeInfo exportLinetypeInfo) => throw new System.NotImplementedException();
 	public virtual void Remove(Autodesk.Revit.DB.ExportLinetypeKey exportLinetypeKey) => throw new System.NotImplementedException();
 	public virtual void Clear() => throw new System.NotImplementedException();
-		}
+	public virtual void Dispose() => throw new System.NotImplementedException();
+}

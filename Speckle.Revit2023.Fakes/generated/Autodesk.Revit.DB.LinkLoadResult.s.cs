@@ -7,7 +7,8 @@ public partial class LinkLoadResult : System.Object
 	public virtual Autodesk.Revit.DB.ModelPath GetCentralModelName() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ExternalResourceReference GetExternalResourceReference() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.LinkLoadResult GetLinkLoadResult(Autodesk.Revit.DB.ExternalResourceReference matchExtResRef) => throw new System.NotImplementedException();
-		public virtual Autodesk.Revit.DB.LinkLoadResultType LoadResult
+	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.LinkLoadResultType LoadResult
 	{
 		get => throw new System.NotImplementedException();
 	}

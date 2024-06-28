@@ -2,7 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ViewOrientation3D : System.Object
 {
-		public virtual Autodesk.Revit.DB.XYZ ForwardDirection
+	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.XYZ ForwardDirection
 	{
 		get => throw new System.NotImplementedException();
 	}

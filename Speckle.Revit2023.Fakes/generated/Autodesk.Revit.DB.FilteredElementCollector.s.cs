@@ -17,4 +17,5 @@ public partial class FilteredElementCollector : System.Object
 	public virtual Autodesk.Revit.DB.FilteredElementCollector WhereElementIsCurveDriven() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ElementId FirstElementId() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.Element FirstElement() => throw new System.NotImplementedException();
-		}
+	public virtual void Dispose() => throw new System.NotImplementedException();
+}

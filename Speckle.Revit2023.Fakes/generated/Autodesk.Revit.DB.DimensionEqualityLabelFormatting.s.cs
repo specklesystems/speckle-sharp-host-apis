@@ -4,7 +4,8 @@ public partial class DimensionEqualityLabelFormatting : System.Object
 {
 	public virtual Autodesk.Revit.DB.FormatOptions GetFormatOptions() => throw new System.NotImplementedException();
 	public virtual void SetFormatOptions(Autodesk.Revit.DB.FormatOptions formatOptions) => throw new System.NotImplementedException();
-		public virtual Autodesk.Revit.DB.LabelType LabelType
+	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.LabelType LabelType
 	{
 		get => throw new System.NotImplementedException();
 	}

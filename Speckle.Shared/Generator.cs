@@ -119,12 +119,17 @@ public class Generator
 
   }
 
+  //can't get values from enum in reflection
   private string WriteEnum(Type clazz)
   {
     StringBuilder sb = new();
     sb.AppendLine($"namespace {clazz.Namespace};").AppendLine();
     sb.AppendLine($"public enum {clazz.Name}");
     sb.AppendLine("{");
+    foreach (var field in clazz.GetFields(BindingFlags.Public | BindingFlags.Static))
+    {
+      sb.AppendLine($"\t{field.Name},");
+    }
     sb.AppendLine("}");
     return sb.ToString();
   }
@@ -256,9 +261,9 @@ public class Generator
 
   private void WriteMethod(StringBuilder sb, MethodInfo methodInfo)
   {
-    if (methodInfo.IsVirtual)
+    if (methodInfo.GetBaseDefinition().DeclaringType != methodInfo.DeclaringType)
     {
-      return;
+      throw new ApplicationException("not base property?");
     }
     sb.Append($"public virtual {ReturnType(methodInfo.ReturnType)} {methodInfo.Name}(");
     bool isFirst = true;

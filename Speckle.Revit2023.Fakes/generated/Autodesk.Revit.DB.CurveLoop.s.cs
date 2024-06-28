@@ -7,4 +7,5 @@ public partial class CurveLoop : System.Object
 	public virtual void Transform(Autodesk.Revit.DB.Transform transform) => throw new System.NotImplementedException();
 	public virtual void Flip() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.CurveLoopIterator GetCurveLoopIterator() => throw new System.NotImplementedException();
-		}
+	public virtual void Dispose() => throw new System.NotImplementedException();
+}

@@ -8,7 +8,8 @@ public partial class Subelement : System.Object
 	public virtual Autodesk.Revit.DB.GeometryObject GetGeometryObject(Autodesk.Revit.DB.View dbView) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.BoundingBoxXYZ GetBoundingBox(Autodesk.Revit.DB.View dbView) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.Reference GetReference() => throw new System.NotImplementedException();
-		public virtual Autodesk.Revit.DB.Element Element
+	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.Element Element
 	{
 		get => throw new System.NotImplementedException();
 	}

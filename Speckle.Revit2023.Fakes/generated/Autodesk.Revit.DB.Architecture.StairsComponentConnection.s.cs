@@ -2,7 +2,8 @@ namespace Autodesk.Revit.DB.Architecture;
 
 public partial class StairsComponentConnection : System.Object
 {
-		public virtual Autodesk.Revit.DB.Architecture.StairsComponentConnectionEndType PeerConnectionType
+	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.Architecture.StairsComponentConnectionEndType PeerConnectionType
 	{
 		get => throw new System.NotImplementedException();
 	}

@@ -9,7 +9,8 @@ public partial class RenderingSettings : System.Object
 	public virtual Autodesk.Revit.DB.RenderingQualitySettings GetRenderingQualitySettings() => throw new System.NotImplementedException();
 	public virtual void SetRenderingQualitySettings(Autodesk.Revit.DB.RenderingQualitySettings settings) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.Outline GetRenderingRegionOutline() => throw new System.NotImplementedException();
-		public virtual Autodesk.Revit.DB.LightingSource LightingSource
+	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.LightingSource LightingSource
 	{
 		get => throw new System.NotImplementedException();
 		set {}

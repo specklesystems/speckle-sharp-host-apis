@@ -15,7 +15,8 @@ public partial class OverrideGraphicSettings : System.Object
 	public virtual Autodesk.Revit.DB.OverrideGraphicSettings SetSurfaceBackgroundPatternId(Autodesk.Revit.DB.ElementId fillPatternId) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.OverrideGraphicSettings SetCutForegroundPatternId(Autodesk.Revit.DB.ElementId fillPatternId) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.OverrideGraphicSettings SetCutBackgroundPatternId(Autodesk.Revit.DB.ElementId fillPatternId) => throw new System.NotImplementedException();
-		public virtual Autodesk.Revit.DB.ElementId CutBackgroundPatternId
+	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.ElementId CutBackgroundPatternId
 	{
 		get => throw new System.NotImplementedException();
 	}

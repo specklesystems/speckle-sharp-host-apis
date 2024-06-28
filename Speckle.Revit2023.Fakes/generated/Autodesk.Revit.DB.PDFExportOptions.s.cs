@@ -2,7 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class PDFExportOptions : System.Object
 {
-		public virtual Autodesk.Revit.DB.PaperPlacementType PaperPlacement
+	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.PaperPlacementType PaperPlacement
 	{
 		get => throw new System.NotImplementedException();
 		set {}

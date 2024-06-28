@@ -3,7 +3,8 @@ namespace Autodesk.Revit.UI;
 public partial class FilterDialog : System.Object
 {
 	public virtual void Show() => throw new System.NotImplementedException();
-		public virtual Autodesk.Revit.DB.ElementId FilterToSelect
+	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.ElementId FilterToSelect
 	{
 		get => throw new System.NotImplementedException();
 		set {}

@@ -2,7 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class BoundingBoxUV : System.Object
 {
-		public virtual Autodesk.Revit.DB.UV Max
+	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.UV Max
 	{
 		get => throw new System.NotImplementedException();
 		set {}

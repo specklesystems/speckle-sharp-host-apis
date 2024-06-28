@@ -13,4 +13,5 @@ public partial class FailuresAccessor : System.Object
 	public virtual void ResolveFailure(Autodesk.Revit.DB.FailureMessageAccessor failure) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.TransactionStatus CommitPendingTransaction() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.TransactionStatus RollBackPendingTransaction() => throw new System.NotImplementedException();
-	}
+	public virtual void Dispose() => throw new System.NotImplementedException();
+}

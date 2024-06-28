@@ -6,7 +6,8 @@ public partial class Connector : System.Object
 	public virtual void DisconnectFrom(Autodesk.Revit.DB.Connector connector) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.FabricationConnectorInfo GetFabricationConnectorInfo() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.MEPConnectorInfo GetMEPConnectorInfo() => throw new System.NotImplementedException();
-		public virtual Autodesk.Revit.DB.FlowDirectionType Direction
+	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.FlowDirectionType Direction
 	{
 		get => throw new System.NotImplementedException();
 	}

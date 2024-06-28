@@ -2,7 +2,8 @@ namespace Autodesk.Revit.DB.Architecture;
 
 public partial class PostPattern : System.Object
 {
-		public virtual Autodesk.Revit.DB.Architecture.BreakCornerCondition CornerPostCondition
+	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.Architecture.BreakCornerCondition CornerPostCondition
 	{
 		get => throw new System.NotImplementedException();
 		set {}

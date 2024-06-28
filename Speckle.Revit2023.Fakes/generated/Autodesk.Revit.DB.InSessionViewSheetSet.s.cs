@@ -2,7 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class InSessionViewSheetSet : System.Object
 {
-		public virtual Autodesk.Revit.DB.ElementId ViewOrganizationId
+	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.ElementId ViewOrganizationId
 	{
 		get => throw new System.NotImplementedException();
 		set {}

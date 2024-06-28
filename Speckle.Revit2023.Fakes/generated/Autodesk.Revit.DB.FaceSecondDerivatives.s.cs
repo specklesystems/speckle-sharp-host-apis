@@ -2,7 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class FaceSecondDerivatives : System.Object
 {
-		public virtual Autodesk.Revit.DB.XYZ MixedDerivative
+	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.XYZ MixedDerivative
 	{
 		get => throw new System.NotImplementedException();
 	}

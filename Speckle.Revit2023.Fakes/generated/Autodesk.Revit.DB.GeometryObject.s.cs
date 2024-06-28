@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class GeometryObject : Autodesk.Revit.DB.APIObject
 {
-			public virtual Autodesk.Revit.DB.ElementId GraphicsStyleId
+	public virtual Autodesk.Revit.DB.ElementId GraphicsStyleId
 	{
 		get => throw new System.NotImplementedException();
 	}

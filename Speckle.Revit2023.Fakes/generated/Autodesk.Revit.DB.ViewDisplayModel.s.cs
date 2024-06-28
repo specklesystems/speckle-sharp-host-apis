@@ -2,7 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ViewDisplayModel : System.Object
 {
-		public virtual Autodesk.Revit.DB.ShowHiddenLinesValues ShowHiddenLines
+	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.ShowHiddenLinesValues ShowHiddenLines
 	{
 		get => throw new System.NotImplementedException();
 		set {}

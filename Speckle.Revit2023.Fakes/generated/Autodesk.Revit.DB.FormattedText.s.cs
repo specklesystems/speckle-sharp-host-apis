@@ -17,4 +17,5 @@ public partial class FormattedText : System.Object
 	public virtual Autodesk.Revit.DB.FormatStatus GetAllCapsStatus(Autodesk.Revit.DB.TextRange textRange) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ListType GetListType(Autodesk.Revit.DB.TextRange textRange) => throw new System.NotImplementedException();
 	public virtual void SetListType(Autodesk.Revit.DB.TextRange textRange,Autodesk.Revit.DB.ListType listType) => throw new System.NotImplementedException();
-	}
+	public virtual void Dispose() => throw new System.NotImplementedException();
+}

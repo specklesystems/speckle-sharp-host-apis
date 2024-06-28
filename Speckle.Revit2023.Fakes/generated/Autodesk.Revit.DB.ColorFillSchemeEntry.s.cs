@@ -4,7 +4,8 @@ public partial class ColorFillSchemeEntry : System.Object
 {
 	public virtual Autodesk.Revit.DB.ElementId GetElementIdValue() => throw new System.NotImplementedException();
 	public virtual void SetElementIdValue(Autodesk.Revit.DB.ElementId value) => throw new System.NotImplementedException();
-		public virtual Autodesk.Revit.DB.StorageType StorageType
+	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.StorageType StorageType
 	{
 		get => throw new System.NotImplementedException();
 	}

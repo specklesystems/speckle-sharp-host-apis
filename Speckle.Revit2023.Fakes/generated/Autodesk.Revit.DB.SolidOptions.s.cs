@@ -2,7 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class SolidOptions : System.Object
 {
-		public virtual Autodesk.Revit.DB.ElementId GraphicsStyleId
+	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.ElementId GraphicsStyleId
 	{
 		get => throw new System.NotImplementedException();
 		set {}

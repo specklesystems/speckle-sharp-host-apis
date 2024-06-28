@@ -14,7 +14,8 @@ public partial class ScheduleDefinition : System.Object
 	public virtual void ClearSortGroupFields() => throw new System.NotImplementedException();
 	public virtual void AddFilter(Autodesk.Revit.DB.ScheduleFilter filter) => throw new System.NotImplementedException();
 	public virtual void ClearFilters() => throw new System.NotImplementedException();
-		public virtual Autodesk.Revit.DB.ScheduleDefinition EmbeddedDefinition
+	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.ScheduleDefinition EmbeddedDefinition
 	{
 		get => throw new System.NotImplementedException();
 	}

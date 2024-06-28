@@ -10,7 +10,8 @@ public partial class BaseExportOptions : System.Object
 	public virtual void SetExportPatternTable(Autodesk.Revit.DB.ExportPatternTable patternTable) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ExportFontTable GetExportFontTable() => throw new System.NotImplementedException();
 	public virtual void SetExportFontTable(Autodesk.Revit.DB.ExportFontTable fontTable) => throw new System.NotImplementedException();
-		public virtual Autodesk.Revit.DB.ExportColorMode Colors
+	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.ExportColorMode Colors
 	{
 		get => throw new System.NotImplementedException();
 		set {}

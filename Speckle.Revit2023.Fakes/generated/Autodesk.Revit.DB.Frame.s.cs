@@ -3,7 +3,8 @@ namespace Autodesk.Revit.DB;
 public partial class Frame : System.Object
 {
 	public virtual void Transform(Autodesk.Revit.DB.Transform trf) => throw new System.NotImplementedException();
-		public virtual Autodesk.Revit.DB.XYZ BasisZ
+	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.XYZ BasisZ
 	{
 		get => throw new System.NotImplementedException();
 		set {}

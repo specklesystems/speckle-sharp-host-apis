@@ -3,7 +3,8 @@ namespace Autodesk.Revit.DB;
 public partial class ColumnAttachment : System.Object
 {
 	public virtual void SetJustification(Autodesk.Revit.DB.ColumnAttachmentJustification justification) => throw new System.NotImplementedException();
-		public virtual Autodesk.Revit.DB.ColumnAttachmentCutStyle CutStyle
+	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.ColumnAttachmentCutStyle CutStyle
 	{
 		get => throw new System.NotImplementedException();
 	}

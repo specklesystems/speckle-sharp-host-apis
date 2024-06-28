@@ -7,4 +7,5 @@ public partial class FailureMessageAccessor : System.Object
 	public virtual void SetCurrentResolutionType(Autodesk.Revit.DB.FailureResolutionType resolutionType) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.FailureResolutionType GetCurrentResolutionType() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.FailureMessage CloneFailureMessage() => throw new System.NotImplementedException();
-	}
+	public virtual void Dispose() => throw new System.NotImplementedException();
+}

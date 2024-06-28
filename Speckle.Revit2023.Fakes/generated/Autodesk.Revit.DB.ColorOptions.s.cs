@@ -2,7 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ColorOptions : System.Object
 {
-		public virtual Autodesk.Revit.DB.Color EditingColor
+	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.Color EditingColor
 	{
 		get => throw new System.NotImplementedException();
 		set {}

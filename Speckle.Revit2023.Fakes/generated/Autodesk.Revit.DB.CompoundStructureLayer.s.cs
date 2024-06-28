@@ -2,7 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class CompoundStructureLayer : System.Object
 {
-		public virtual Autodesk.Revit.DB.ElementId DeckProfileId
+	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.ElementId DeckProfileId
 	{
 		get => throw new System.NotImplementedException();
 		set {}

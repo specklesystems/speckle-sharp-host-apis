@@ -2,7 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class HomeCamera : System.Object
 {
-		public virtual Autodesk.Revit.DB.ElementId ViewId
+	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.ElementId ViewId
 	{
 		get => throw new System.NotImplementedException();
 	}

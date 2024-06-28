@@ -2,7 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class WallSweepInfo : System.Object
 {
-		public virtual Autodesk.Revit.DB.WallSweepOrientation WallSweepOrientation
+	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.WallSweepOrientation WallSweepOrientation
 	{
 		get => throw new System.NotImplementedException();
 		set {}

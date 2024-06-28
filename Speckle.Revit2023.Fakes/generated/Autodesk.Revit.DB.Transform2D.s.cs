@@ -9,7 +9,8 @@ public partial class Transform2D : System.Object
 	public virtual Autodesk.Revit.DB.UV OfVector(Autodesk.Revit.DB.UV vector) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.Transform2D GetInverse() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.BoundingBoxUV TransformUVDomainIfPossible(Autodesk.Revit.DB.BoundingBoxUV uvDomain) => throw new System.NotImplementedException();
-		public virtual Autodesk.Revit.DB.UV BasisV
+	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.UV BasisV
 	{
 		get => throw new System.NotImplementedException();
 		set {}

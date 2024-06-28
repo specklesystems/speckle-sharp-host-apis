@@ -2,7 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class OrdinateDimensionSetting : System.Object
 {
-		public virtual Autodesk.Revit.DB.ElementId OriginTickMarkId
+	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.ElementId OriginTickMarkId
 	{
 		get => throw new System.NotImplementedException();
 		set {}

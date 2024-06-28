@@ -10,7 +10,8 @@ public partial class Element : System.Object
 	public virtual Autodesk.Revit.DB.ExternalFileReference GetExternalFileReference() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ExternalResourceReference GetExternalResourceReference(Autodesk.Revit.DB.ExternalResourceType resourceType) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.FormatOptions GetParameterFormatOptions(Autodesk.Revit.DB.ElementId parameterId) => throw new System.NotImplementedException();
-		public virtual Autodesk.Revit.DB.ElementId DemolishedPhaseId
+	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.ElementId DemolishedPhaseId
 	{
 		get => throw new System.NotImplementedException();
 		set {}

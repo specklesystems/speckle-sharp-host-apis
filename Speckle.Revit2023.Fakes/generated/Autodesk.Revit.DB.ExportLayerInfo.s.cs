@@ -8,7 +8,8 @@ public partial class ExportLayerInfo : System.Object
 	public virtual void RemoveCutLayerModifier(Autodesk.Revit.DB.LayerModifier layerModifier) => throw new System.NotImplementedException();
 	public virtual void ClearLayerModifiers() => throw new System.NotImplementedException();
 	public virtual void ClearCutLayerModifiers() => throw new System.NotImplementedException();
-		public virtual Autodesk.Revit.DB.LayerCategoryType CategoryType
+	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.LayerCategoryType CategoryType
 	{
 		get => throw new System.NotImplementedException();
 		set {}

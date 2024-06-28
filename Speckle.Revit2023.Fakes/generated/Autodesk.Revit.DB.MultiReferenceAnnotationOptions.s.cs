@@ -2,7 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class MultiReferenceAnnotationOptions : System.Object
 {
-		public virtual Autodesk.Revit.DB.XYZ TagHeadPosition
+	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.XYZ TagHeadPosition
 	{
 		get => throw new System.NotImplementedException();
 		set {}

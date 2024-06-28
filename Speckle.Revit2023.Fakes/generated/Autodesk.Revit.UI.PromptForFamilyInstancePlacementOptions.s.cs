@@ -2,7 +2,8 @@ namespace Autodesk.Revit.UI;
 
 public partial class PromptForFamilyInstancePlacementOptions : System.Object
 {
-		public virtual Autodesk.Revit.UI.FaceBasedPlacementType FaceBasedPlacementType
+	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.UI.FaceBasedPlacementType FaceBasedPlacementType
 	{
 		get => throw new System.NotImplementedException();
 		set {}

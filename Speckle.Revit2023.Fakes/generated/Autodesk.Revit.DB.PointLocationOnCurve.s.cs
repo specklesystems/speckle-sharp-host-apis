@@ -2,7 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class PointLocationOnCurve : System.Object
 {
-		public virtual Autodesk.Revit.DB.PointOnCurveMeasureFrom MeasureFrom
+	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.PointOnCurveMeasureFrom MeasureFrom
 	{
 		get => throw new System.NotImplementedException();
 		set {}

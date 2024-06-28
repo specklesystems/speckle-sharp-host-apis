@@ -7,4 +7,5 @@ public partial class ExportFontTable : System.Object
 	public virtual void Add(Autodesk.Revit.DB.ExportFontKey exportFontKey,Autodesk.Revit.DB.ExportFontInfo exportFontInfo) => throw new System.NotImplementedException();
 	public virtual void Remove(Autodesk.Revit.DB.ExportFontKey exportFontKey) => throw new System.NotImplementedException();
 	public virtual void Clear() => throw new System.NotImplementedException();
-		}
+	public virtual void Dispose() => throw new System.NotImplementedException();
+}

@@ -28,7 +28,8 @@ public partial class Document : System.Object
 	public virtual void AcquireCoordinates(Autodesk.Revit.DB.ElementId linkInstanceId) => throw new System.NotImplementedException();
 	public virtual void PublishCoordinates(Autodesk.Revit.DB.LinkElementId locationId) => throw new System.NotImplementedException();
 	public virtual void ResetSharedCoordinates() => throw new System.NotImplementedException();
-				public virtual Autodesk.Revit.DB.StorageType GetTypeOfStorage(Autodesk.Revit.DB.ForgeTypeId parameterTypeId) => throw new System.NotImplementedException();
+	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.StorageType GetTypeOfStorage(Autodesk.Revit.DB.ForgeTypeId parameterTypeId) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.Family LoadFamily(Autodesk.Revit.DB.Document targetDocument,Autodesk.Revit.DB.IFamilyLoadOptions familyLoadOptions) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.Family LoadFamily(Autodesk.Revit.DB.Document targetDocument) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.Document EditFamily(Autodesk.Revit.DB.Family loadedFamily) => throw new System.NotImplementedException();

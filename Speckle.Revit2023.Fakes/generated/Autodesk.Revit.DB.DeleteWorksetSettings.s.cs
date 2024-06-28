@@ -2,7 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class DeleteWorksetSettings : System.Object
 {
-		public virtual Autodesk.Revit.DB.WorksetId WorksetId
+	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.WorksetId WorksetId
 	{
 		get => throw new System.NotImplementedException();
 		set {}

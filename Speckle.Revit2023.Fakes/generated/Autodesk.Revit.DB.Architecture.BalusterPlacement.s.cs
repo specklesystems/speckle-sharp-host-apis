@@ -2,7 +2,8 @@ namespace Autodesk.Revit.DB.Architecture;
 
 public partial class BalusterPlacement : System.Object
 {
-		public virtual Autodesk.Revit.DB.ElementId BalusterPerTreadFamilyId
+	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.ElementId BalusterPerTreadFamilyId
 	{
 		get => throw new System.NotImplementedException();
 		set {}

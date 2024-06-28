@@ -5,7 +5,7 @@ public partial class Category : Autodesk.Revit.DB.APIObject
 	public virtual Autodesk.Revit.DB.ElementId GetLinePatternId(Autodesk.Revit.DB.GraphicsStyleType graphicsStyleType) => throw new System.NotImplementedException();
 	public virtual void SetLinePatternId(Autodesk.Revit.DB.ElementId linePatternId,Autodesk.Revit.DB.GraphicsStyleType graphicsStyleType) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.GraphicsStyle GetGraphicsStyle(Autodesk.Revit.DB.GraphicsStyleType graphicsStyleType) => throw new System.NotImplementedException();
-		public virtual Autodesk.Revit.DB.BuiltInCategory BuiltInCategory
+	public virtual Autodesk.Revit.DB.BuiltInCategory BuiltInCategory
 	{
 		get => throw new System.NotImplementedException();
 	}

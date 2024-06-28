@@ -2,7 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ConnectorManager : System.Object
 {
-		public virtual Autodesk.Revit.DB.Element Owner
+	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.Element Owner
 	{
 		get => throw new System.NotImplementedException();
 	}

@@ -2,7 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ImageExportOptions : System.Object
 {
-		public virtual Autodesk.Revit.DB.ExportRange ExportRange
+	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.ExportRange ExportRange
 	{
 		get => throw new System.NotImplementedException();
 		set {}

@@ -2,7 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class TextNoteOptions : System.Object
 {
-		public virtual Autodesk.Revit.DB.VerticalTextAlignment VerticalAlignment
+	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.VerticalTextAlignment VerticalAlignment
 	{
 		get => throw new System.NotImplementedException();
 		set {}

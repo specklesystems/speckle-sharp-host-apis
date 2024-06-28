@@ -7,7 +7,8 @@ public partial class ElementRecord : System.Object
 	public virtual Autodesk.Revit.DB.ElementId GetOwnerViewId() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ElementId GetDesignOptionId() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.Outline GetBoundingBox() => throw new System.NotImplementedException();
-		public virtual Autodesk.Revit.DB.WorksetId WorksetId
+	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.WorksetId WorksetId
 	{
 		get => throw new System.NotImplementedException();
 	}

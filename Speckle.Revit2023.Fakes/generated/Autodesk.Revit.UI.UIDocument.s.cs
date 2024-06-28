@@ -15,7 +15,8 @@ public partial class UIDocument : System.Object
 	public virtual void SaveAs(Autodesk.Revit.UI.UISaveAsOptions options) => throw new System.NotImplementedException();
 	public virtual void SaveAs() => throw new System.NotImplementedException();
 	public virtual void UpdateAllOpenViews() => throw new System.NotImplementedException();
-		public virtual Autodesk.Revit.DB.View ActiveGraphicalView
+	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.View ActiveGraphicalView
 	{
 		get => throw new System.NotImplementedException();
 	}

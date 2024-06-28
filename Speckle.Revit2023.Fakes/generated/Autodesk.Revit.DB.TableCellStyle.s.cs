@@ -5,7 +5,8 @@ public partial class TableCellStyle : System.Object
 	public virtual void ResetOverride() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.TableCellStyleOverrideOptions GetCellStyleOverrideOptions() => throw new System.NotImplementedException();
 	public virtual void SetCellStyleOverrideOptions(Autodesk.Revit.DB.TableCellStyleOverrideOptions helper) => throw new System.NotImplementedException();
-		public virtual Autodesk.Revit.DB.VerticalAlignmentStyle FontVerticalAlignment
+	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.VerticalAlignmentStyle FontVerticalAlignment
 	{
 		get => throw new System.NotImplementedException();
 		set {}
