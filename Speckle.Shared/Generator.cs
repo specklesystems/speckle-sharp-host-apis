@@ -60,10 +60,7 @@ public class Generator
       .Where(x => _namespaces.Any(y => x.FullName?.StartsWith(y) ?? false)).ToList();
     foreach (var type in definedTypes)
     {
-      if (type.IsClass)
-      {
-        RenderType(type);
-      }
+      RenderType(type);
     }
   }
 
@@ -83,33 +80,41 @@ public class Generator
       return type;
     }
     _boolDone[type.FullName] = true;
-    if (type.IsEnum)
-    {
-      WriteEnum(type);
-    }
-    else if (type.IsValueType || type.BaseType == typeof(ValueType))
-    {
-      throw new ApplicationException($"Not handling value type: {type}");
-    }
-    else
-    {
-      WriteClass(type);
-    }
-
+    WriteType(type);
     return type;
   }
 
-  private void WriteEnum(Type clazz)
+  private void WriteType(Type type)
+  {
+    string typeString;
+    if (type.IsEnum)
+    {
+      typeString = WriteEnum(type);
+    }
+    else if (type.IsValueType || type.BaseType == typeof(ValueType))
+    {
+      typeString = WriteStruct(type);
+    }
+    else
+    {
+      typeString = WriteClass(type);
+    }
+    File.WriteAllText(Path.Combine(_path, $"{type.FullName}.s.cs"), typeString);
+
+  }
+
+  private string WriteEnum(Type clazz)
   {
     StringBuilder sb = new();
     sb.AppendLine($"namespace {clazz.Namespace};").AppendLine();
     sb.AppendLine($"public enum {clazz.Name}");
     sb.AppendLine("{");
     sb.AppendLine("}");
-    File.WriteAllText(Path.Combine(_path, $"{clazz.FullName}.s.cs"), sb.ToString());
+    return sb.ToString();
   }
-
-  private void WriteClass(Type clazz)
+  
+  
+  private string WriteClass(Type clazz)
   {
     StringBuilder sb = new();
     sb.AppendLine($"namespace {clazz.Namespace};").AppendLine();
@@ -119,6 +124,22 @@ public class Generator
       RenderType(clazz.BaseType);
       sb.Append($" : {clazz.BaseType.FullName}");
     }
+   
+    WriteTypeBody(sb, clazz);
+    return sb.ToString();
+  }
+
+  private string WriteStruct(Type clazz)
+  {
+    StringBuilder sb = new();
+    sb.AppendLine($"namespace {clazz.Namespace};").AppendLine();
+    sb.Append($"public partial struct {clazz.Name}");
+    WriteTypeBody(sb, clazz);
+    return sb.ToString();
+  }
+
+  private void WriteTypeBody( StringBuilder sb, Type clazz)
+  {
     sb.AppendLine();
     sb.AppendLine("{");
     foreach(var method in clazz.GetMethods(BindingFlags.Instance | BindingFlags.DeclaredOnly | BindingFlags.Public))
@@ -141,7 +162,7 @@ public class Generator
       }
     }
     sb.AppendLine("}");
-    File.WriteAllText(Path.Combine(_path, $"{clazz.FullName}.s.cs"), sb.ToString());
+    
   }
 
   private void WriteMethod(StringBuilder sb, MethodInfo methodInfo)
