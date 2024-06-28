@@ -12,13 +12,13 @@ public class Generator
 
   public Generator(string path, Assembly assembly, string[] namespaces)
   {
-    _path = Path.Combine(Environment.CurrentDirectory,  "..", "..", "..", "..", path);
+    _path = Path.Combine(Environment.CurrentDirectory,  "..", "..", "..", "..", path, "generated");
     _assembly = assembly;
     _namespaces = namespaces;
     AppDomain.CurrentDomain.ReflectionOnlyAssemblyResolve += CurrentDomainOnReflectionOnlyAssemblyResolve;
   }
 
-  private Assembly? CurrentDomainOnReflectionOnlyAssemblyResolve(object sender, ResolveEventArgs args)
+  private Assembly? CurrentDomainOnReflectionOnlyAssemblyResolve(object? sender, ResolveEventArgs args)
   {
     string name = args.Name.Split(',')[0];
 
@@ -37,6 +37,16 @@ public class Generator
 
   public void Generate()
   {
+    if (Directory.Exists(_path))
+    {
+      Directory.Delete(_path, true);
+    }
+
+    if (!Directory.Exists(_path))
+    {
+      Directory.CreateDirectory(_path);
+    }
+
     List<Type> definedTypes;
     try
     {
@@ -77,6 +87,10 @@ public class Generator
     {
       WriteEnum(type);
     }
+    else if (type.IsValueType || type.BaseType == typeof(ValueType))
+    {
+      throw new ApplicationException($"Not handling value type: {type}");
+    }
     else
     {
       WriteClass(type);
@@ -109,12 +123,19 @@ public class Generator
     sb.AppendLine("{");
     foreach(var method in clazz.GetMethods(BindingFlags.Instance | BindingFlags.DeclaredOnly | BindingFlags.Public))
     {
-      sb.Append("\t");
       try
       {
-        WriteMethod(sb, method);
+        var methodSb = new StringBuilder();
+        methodSb.Append("\t");
+        WriteMethod(methodSb, method);
+        sb.Append(methodSb);
       }
       catch (FileLoadException)
+      {
+        Console.WriteLine($"Did not write {method.Name} on {clazz.FullName}");
+        
+      }
+      catch (ApplicationException)
       {
         Console.WriteLine($"Did not write {method.Name} on {clazz.FullName}");
       }
@@ -141,7 +162,7 @@ public class Generator
       {
         sb.Append(",");
       }
-      sb.Append(ParameterType(parameter.ParameterType)).Append(" ").Append(parameter.Name);
+      sb.Append(ParameterType(parameter.ParameterType)).Append(" ").Append(FixName(parameter.Name));
     }
 
     sb.AppendLine(") => throw new System.NotImplementedException();");
@@ -153,6 +174,11 @@ public class Generator
     {
       throw new ApplicationException("Not Handling References");
     }
+
+    if (!_namespaces.Contains(type.Namespace))
+    {
+      throw new ApplicationException($"Not Handling: {type.FullName}");
+    }
     return FormGenericType(type);
   }
 
@@ -162,12 +188,7 @@ public class Generator
     {
       return "void";
     }
-
-    if (type.IsByRef)
-    {
-      throw new ApplicationException("Not Handling References");
-    }
-    return FormGenericType(type);
+    return ParameterType(type);
   }
 
   private string FormGenericType(Type type)
@@ -175,10 +196,17 @@ public class Generator
      type = RenderType(type);
      if (!type.IsGenericType)
      {
-       return type.FullName;
+       return type.FullName.NotNull();
      }
 
      var nonGenericName = type.Name.Split('`').First();
-     return $"{nonGenericName}<{string.Join(", ", type.GetGenericArguments().Select(ta => RenderType(ta).Name))}>";
+     return $"{nonGenericName}<{string.Join(", ", type.GetGenericArguments().Select(ta => FormGenericType(ta)))}>";
   }
+
+  private string FixName(string name) =>
+    name switch
+    {
+      "lock" or "params" => "@" + name,
+      _ => name
+    };
 }
