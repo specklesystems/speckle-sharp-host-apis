@@ -7,10 +7,16 @@ public partial class FamilyInstance : Autodesk.Revit.DB.Instance
 	public virtual Autodesk.Revit.DB.MEPModel get_MEPModel() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ElementId get_StructuralMaterialId() => throw new System.NotImplementedException();
 	public virtual void set_StructuralMaterialId(Autodesk.Revit.DB.ElementId value) => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.Architecture.Room get_Room(Autodesk.Revit.DB.Phase phase) => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.Architecture.Room get_Room() => throw new System.NotImplementedException();
 		public virtual Autodesk.Revit.DB.Element get_Host() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.Reference get_HostFace() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.XYZ get_HandOrientation() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.XYZ get_FacingOrientation() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.Architecture.Room get_FromRoom(Autodesk.Revit.DB.Phase phase) => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.Architecture.Room get_FromRoom() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.Architecture.Room get_ToRoom(Autodesk.Revit.DB.Phase phase) => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.Architecture.Room get_ToRoom() => throw new System.NotImplementedException();
 	public virtual void FlipFromToRoom() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.Element get_SuperComponent() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.IExtension get_ExtensionUtility() => throw new System.NotImplementedException();

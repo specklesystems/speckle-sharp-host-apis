@@ -53,6 +53,8 @@ public partial class Document : System.Object
 	public virtual void set_ActiveProjectLocation(Autodesk.Revit.DB.ProjectLocation value) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.SiteLocation get_SiteLocation() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.PrintManager get_PrintManager() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.Architecture.Room GetRoomAtPoint(Autodesk.Revit.DB.XYZ point) => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.Architecture.Room GetRoomAtPoint(Autodesk.Revit.DB.XYZ point,Autodesk.Revit.DB.Phase phase) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.Family get_OwnerFamily() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.GeomCombination CombineElements(Autodesk.Revit.DB.CombinableElementArray members) => throw new System.NotImplementedException();
 	public virtual void SeparateElements(Autodesk.Revit.DB.CombinableElementArray members) => throw new System.NotImplementedException();
