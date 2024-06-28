@@ -3,9 +3,12 @@ using System.Text;
 
 namespace Speckle.Shared;
 
+public record GeneratedMember(string Name);
+public record GeneratedTypeInfo(string Name, string? Base, List<GeneratedMember> Members);
 public class Generator
 {
   private readonly Dictionary<string, bool> _boolDone = new();
+  private readonly Dictionary<string, GeneratedTypeInfo> _info = new();
   private readonly string _path;
   private readonly Assembly[] _assemblies;
   private readonly string[] _namespaces;
@@ -58,7 +61,7 @@ public class Generator
 
     definedTypes = definedTypes.Where(x => x.IsPublic)
       .Where(x => _namespaces.Any(y => x.FullName?.StartsWith(y) ?? false)).ToList();
-    foreach (var type in definedTypes)//.Where(x => x.FullName.EndsWith("ForgeTypeId")))
+    foreach (var type in definedTypes)//.Where(x => x.FullName.EndsWith("ImageView")))
     {
       try
       {
@@ -74,7 +77,17 @@ public class Generator
 
   private Type RenderType(Type type)
   {
+    if (type.FullName.StartsWith("System.Drawing."))
+    {
+      throw new ApplicationException($"Not dealing with base types: {type.FullName}");
+    }
     if (type.FullName.StartsWith("System.Windows") || type.FullName.StartsWith("System.MulticastDelegate"))
+    {
+      throw new ApplicationException($"Not dealing with base WPF types: {type.FullName}");
+    }
+    if (type.FullName.StartsWith("Autodesk.Revit.DB.Plumbing") 
+        || type.FullName.StartsWith("Autodesk.Revit.DB.Electrical")
+        || type.FullName.StartsWith("Autodesk.Revit.DB.Fabrication"))
     {
       throw new ApplicationException($"Not dealing with base WPF types: {type.FullName}");
     }
@@ -96,31 +109,54 @@ public class Generator
       throw new ApplicationException($"Can't use skipped type: {type.FullName}");
     }
     _boolDone[type.FullName] = true;
-    WriteType(type);
+    var generatedInfo = WriteType(type);
+    _info[type.FullName] = generatedInfo;
     return type;
   }
 
-  private void WriteType(Type type)
+  private bool IsMemberOnBaseClass(string? baseClazz, GeneratedMember member)
+  {
+    if (baseClazz is null)
+    {
+      return false;
+    }
+      if (!_info.TryGetValue(baseClazz, out var info))
+      {
+        return false;
+      }
+      if (info.Members.Contains(member))
+      {
+        return true;
+      }
+
+      if (info.Base is null)
+      {
+        return false;
+      }
+      return IsMemberOnBaseClass(info.Base, member);
+  }
+  private GeneratedTypeInfo WriteType(Type type)
   {
     string typeString;
+    GeneratedTypeInfo typeInfo;
     if (type.IsEnum)
     {
-      typeString = WriteEnum(type);
+      (typeString, typeInfo) = WriteEnum(type);
     }
     else if (type.IsValueType || type.BaseType == typeof(ValueType))
     {
-      typeString = WriteStruct(type);
+      (typeString, typeInfo)  = WriteStruct(type);
     }
     else
     {
-      typeString = WriteClass(type);
+      (typeString, typeInfo)  = WriteClass(type);
     }
     File.WriteAllText(Path.Combine(_path, $"{type.FullName}.s.cs"), typeString);
-
+    return typeInfo;
   }
 
   //can't get values from enum in reflection
-  private string WriteEnum(Type clazz)
+  private (string, GeneratedTypeInfo) WriteEnum(Type clazz)
   {
     StringBuilder sb = new();
     sb.AppendLine($"namespace {clazz.Namespace};").AppendLine();
@@ -131,39 +167,42 @@ public class Generator
       sb.AppendLine($"\t{field.Name},");
     }
     sb.AppendLine("}");
-    return sb.ToString();
+    return (sb.ToString(), new (clazz.FullName, null, []));
   }
   
   
-  private string WriteClass(Type clazz)
+  private (string, GeneratedTypeInfo)  WriteClass(Type clazz)
   {
     StringBuilder sb = new();
     sb.AppendLine($"namespace {clazz.Namespace};").AppendLine();
     sb.Append($"public partial class {clazz.Name}");
+    string? baseClazz = null;
     if (clazz.BaseType is not null)
     {
       RenderType(clazz.BaseType);
       sb.Append($" : {clazz.BaseType.FullName}");
+      baseClazz = clazz.BaseType.FullName;
     }
    
-    WriteTypeBody(sb, clazz);
-    return sb.ToString();
+    var members = WriteTypeBody(sb, clazz);
+    return (sb.ToString(), new(clazz.FullName, baseClazz, members));
   }
 
-  private string WriteStruct(Type clazz)
+  private (string, GeneratedTypeInfo)  WriteStruct(Type clazz)
   {
     StringBuilder sb = new();
     sb.AppendLine($"namespace {clazz.Namespace};").AppendLine();
     sb.Append($"public partial struct {clazz.Name}");
-    WriteTypeBody(sb, clazz);
-    return sb.ToString();
+    var members = WriteTypeBody(sb, clazz);
+    return (sb.ToString(), new(clazz.FullName, null, members));
   }
 
-  private void WriteTypeBody( StringBuilder sb, Type clazz)
+  private  List<GeneratedMember>  WriteTypeBody( StringBuilder sb, Type clazz)
   {
     sb.AppendLine();
     sb.AppendLine("{");
-    foreach(var method in clazz.GetMethods(BindingFlags.Instance | BindingFlags.DeclaredOnly | BindingFlags.Public))
+    var members = new List<GeneratedMember>();
+    foreach(var method in clazz.GetMethods(BindingFlags.Instance | BindingFlags.Static | BindingFlags.DeclaredOnly | BindingFlags.Public))
     {
       if (method.IsSpecialName)
       {
@@ -175,6 +214,7 @@ public class Generator
         methodSb.Append("\t");
         WriteMethod(methodSb, method);
         sb.Append(methodSb);
+        members.Add(new (method.Name));
       }
       catch (FileLoadException)
       {
@@ -194,6 +234,7 @@ public class Generator
         methodSb.Append("\t");
         WriteProperty(methodSb, propertyInfo);
         sb.Append(methodSb);
+        members.Add(new (propertyInfo.Name));
       }
       catch (FileLoadException)
       {
@@ -206,7 +247,7 @@ public class Generator
       }
     }
     sb.AppendLine("}");
-    
+    return members;
   }
   
   private void WriteProperty(StringBuilder sb, PropertyInfo propertyInfo)
@@ -215,47 +256,45 @@ public class Generator
     var getMethod = propertyInfo.GetGetMethod(false);
     if (getMethod is not null)
     {
-      if (getMethod.GetBaseDefinition().DeclaringType != propertyInfo.DeclaringType)
-      {
-        throw new ApplicationException("not base property?");
-      }
 
       if (getMethod.GetParameters().Any())
       {
         throw new ApplicationException($"getter has parameters {propertyInfo.Name}");
       }
+      bool isOverriden = getMethod.GetBaseDefinition().DeclaringType != propertyInfo.DeclaringType;
       if (wrotePropHeader is false)
       {
         wrotePropHeader = true;
-        WriteParameterHeader(sb, propertyInfo.Name, getMethod.ReturnType);
+        WritePropertyHeader(sb, propertyInfo,getMethod, isOverriden, getMethod.ReturnType);
       }
       sb.AppendLine("\t\tget => throw new System.NotImplementedException();");
     }
     var setMethod = propertyInfo.GetSetMethod(false);
-    if (setMethod is not null)
+    if (setMethod is not null) 
     {
-      if (setMethod.GetBaseDefinition().DeclaringType != propertyInfo.DeclaringType)
-      {
-        throw new ApplicationException("not base property?");
-      }
-
       var parameters = setMethod.GetParameters();
       if (parameters.Length > 1)
       {
         throw new ApplicationException($"setter has more than one parameter {propertyInfo.Name}");
       }
+      bool isOverriden = setMethod.GetBaseDefinition().DeclaringType != propertyInfo.DeclaringType;
       if (wrotePropHeader is false)
       {
-        WriteParameterHeader(sb, propertyInfo.Name, parameters[0].ParameterType);
+        WritePropertyHeader(sb, propertyInfo, setMethod, isOverriden, parameters[0].ParameterType);
       }
       sb.AppendLine("\t\tset {}");
     }
     sb.AppendLine("\t}");
   }
 
-  private void WriteParameterHeader(StringBuilder sb, string property, Type returnType)
+  private void WritePropertyHeader(StringBuilder sb, PropertyInfo property, MethodInfo methodInfo, bool isOverriden, Type returnType)
   {
-    sb.AppendLine($"public virtual {ReturnType(returnType)} {property}");
+    var extra = isOverriden ? "override" : "virtual";
+    if (IsMemberOnBaseClass(property.DeclaringType?.BaseType?.FullName,new (property.Name)))
+    {
+      extra = "new";
+    }
+    sb.AppendLine($"public {extra} {ReturnType(returnType)} {property.Name}");
     sb.AppendLine("\t{");
   }
 
@@ -265,7 +304,20 @@ public class Generator
     {
       throw new ApplicationException("not base property?");
     }
-    sb.Append($"public virtual {ReturnType(methodInfo.ReturnType)} {methodInfo.Name}(");
+
+    var extras = "virtual";
+    if (methodInfo.IsStatic)
+    {
+      extras = "static";
+
+      if (IsMemberOnBaseClass(methodInfo.DeclaringType?.BaseType?.FullName, new (methodInfo.Name)))
+      {
+        extras = "new " + extras;
+      }
+    }
+
+
+    sb.Append($"public {extras} {ReturnType(methodInfo.ReturnType)} {methodInfo.Name}(");
     bool isFirst = true;
     foreach (var parameter in methodInfo.GetParameters())
     {
@@ -290,7 +342,8 @@ public class Generator
       throw new ApplicationException("Not Handling References");
     }
 
-    if (!_namespaces.Contains(type.Namespace))
+    if (!_namespaces.Contains(type.Namespace) && !type.Namespace.StartsWith("System")
+        && !type.Namespace.StartsWith("System.Drawing"))
     {
       throw new ApplicationException($"Not Handling: {type.FullName}");
     }
@@ -321,7 +374,7 @@ public class Generator
   private string FixName(string name) =>
     name switch
     {
-      "lock" or "params" => "@" + name,
+      "lock" or "params" or "string" => "@" + name,
       _ => name
     };
 }
