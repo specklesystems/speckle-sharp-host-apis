@@ -7,4 +7,9 @@ public partial class LayoutRuleClearSpacing : Autodesk.Revit.DB.LayoutRule
 		get => throw new System.NotImplementedException();
 		set {}
 	}
+	public virtual System.Double Spacing
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 }

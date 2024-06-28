@@ -50,4 +50,9 @@ public partial class MEPCurveType : Autodesk.Revit.DB.HostObjAttributes
 		get => throw new System.NotImplementedException();
 		set {}
 	}
+	public virtual System.Double Roughness
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 }

@@ -7,6 +7,11 @@ public partial class MEPSystemType : Autodesk.Revit.DB.ElementType
 		get => throw new System.NotImplementedException();
 		set {}
 	}
+	public virtual System.Boolean FillVisible
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 	public virtual Autodesk.Revit.DB.ElementId FillPatternId
 	{
 		get => throw new System.NotImplementedException();
@@ -27,8 +32,18 @@ public partial class MEPSystemType : Autodesk.Revit.DB.ElementType
 		get => throw new System.NotImplementedException();
 		set {}
 	}
+	public virtual System.Int32 LineWeight
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 	public virtual Autodesk.Revit.DB.MEPSystemClassification SystemClassification
 	{
 		get => throw new System.NotImplementedException();
+	}
+	public virtual System.String Abbreviation
+	{
+		get => throw new System.NotImplementedException();
+		set {}
 	}
 }

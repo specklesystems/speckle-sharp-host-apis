@@ -13,4 +13,13 @@ public partial class Mullion : Autodesk.Revit.DB.FamilyInstance
 		get => throw new System.NotImplementedException();
 		set {}
 	}
+	public virtual System.Boolean Lockable
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual System.Boolean Lock
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 }

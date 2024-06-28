@@ -6,4 +6,9 @@ public partial class PointOnEdgeFaceIntersection : Autodesk.Revit.DB.PointElemen
 	public virtual void SetEdgeReference(Autodesk.Revit.DB.Reference edgeReference) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.Reference GetFaceReference() => throw new System.NotImplementedException();
 	public virtual void SetFaceReference(Autodesk.Revit.DB.Reference reference) => throw new System.NotImplementedException();
+	public virtual System.Boolean OrientWithEdge
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 }

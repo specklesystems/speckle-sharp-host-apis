@@ -14,4 +14,9 @@ public partial class SymbolicCurve : Autodesk.Revit.DB.CurveElement
 		get => throw new System.NotImplementedException();
 		set {}
 	}
+	public virtual System.Boolean IsDrawnInForeground
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 }

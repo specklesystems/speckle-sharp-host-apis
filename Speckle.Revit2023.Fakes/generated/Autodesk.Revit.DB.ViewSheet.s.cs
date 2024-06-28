@@ -4,6 +4,25 @@ public partial class ViewSheet : Autodesk.Revit.DB.View
 {
 	public virtual void ConvertToRealSheet(Autodesk.Revit.DB.ElementId titleBlockTypeId) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ElementId GetCurrentRevision() => throw new System.NotImplementedException();
+	public virtual System.String GetRevisionNumberOnSheet(Autodesk.Revit.DB.ElementId revisionId) => throw new System.NotImplementedException();
+	public virtual System.String GetRevisionCloudNumberOnSheet(Autodesk.Revit.DB.ElementId revisionCloudId) => throw new System.NotImplementedException();
+	public virtual IList<Autodesk.Revit.DB.ElementId> GetAllRevisionIds() => throw new System.NotImplementedException();
+	public virtual ICollection<Autodesk.Revit.DB.ElementId> GetAdditionalRevisionIds() => throw new System.NotImplementedException();
+	public virtual void SetAdditionalRevisionIds(ICollection<Autodesk.Revit.DB.ElementId> projectRevisionIds) => throw new System.NotImplementedException();
+	public static Autodesk.Revit.DB.ViewSheet CreatePlaceholder(Autodesk.Revit.DB.Document aDoc) => throw new System.NotImplementedException();
+	public static Autodesk.Revit.DB.ViewSheet Create(Autodesk.Revit.DB.Document document,Autodesk.Revit.DB.ElementId titleBlockTypeId) => throw new System.NotImplementedException();
+	public virtual ICollection<Autodesk.Revit.DB.ElementId> GetAllViewports() => throw new System.NotImplementedException();
+	public virtual ISet<Autodesk.Revit.DB.ElementId> GetAllPlacedViews() => throw new System.NotImplementedException();
 	public virtual void DeleteViewport(Autodesk.Revit.DB.Viewport viewport) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ElementId Duplicate(Autodesk.Revit.DB.SheetDuplicateOption duplicateOption) => throw new System.NotImplementedException();
+	public virtual System.Boolean CanBeDuplicated(Autodesk.Revit.DB.SheetDuplicateOption duplicateOption) => throw new System.NotImplementedException();
+	public virtual System.Boolean IsPlaceholder
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual System.String SheetNumber
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 }

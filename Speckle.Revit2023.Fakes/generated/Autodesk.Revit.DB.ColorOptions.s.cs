@@ -2,7 +2,12 @@ namespace Autodesk.Revit.DB;
 
 public partial class ColorOptions : System.Object
 {
+	public static Autodesk.Revit.DB.ColorOptions GetColorOptions() => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual System.Boolean IsValidObject
+	{
+		get => throw new System.NotImplementedException();
+	}
 	public virtual Autodesk.Revit.DB.Color EditingColor
 	{
 		get => throw new System.NotImplementedException();
@@ -19,6 +24,11 @@ public partial class ColorOptions : System.Object
 		set {}
 	}
 	public virtual Autodesk.Revit.DB.Color PreselectionColor
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Boolean SelectionSemitransparent
 	{
 		get => throw new System.NotImplementedException();
 		set {}

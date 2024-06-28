@@ -2,7 +2,9 @@ namespace Autodesk.Revit.DB;
 
 public partial class IExportContext
 {
+	public virtual System.Boolean Start() => throw new System.NotImplementedException();
 	public virtual void Finish() => throw new System.NotImplementedException();
+	public virtual System.Boolean IsCanceled() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.RenderNodeAction OnViewBegin(Autodesk.Revit.DB.ViewNode node) => throw new System.NotImplementedException();
 	public virtual void OnViewEnd(Autodesk.Revit.DB.ElementId elementId) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.RenderNodeAction OnElementBegin(Autodesk.Revit.DB.ElementId elementId) => throw new System.NotImplementedException();

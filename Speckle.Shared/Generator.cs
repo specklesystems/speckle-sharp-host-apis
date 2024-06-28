@@ -184,7 +184,7 @@ public class Generator
       baseClazz = clazz.BaseType.FullName;
     }
    
-    var members = WriteTypeBody(sb, clazz);
+    var members = WriteTypeBody(sb, clazz, false);
     return (sb.ToString(), new(clazz.FullName, baseClazz, members));
   }
 
@@ -193,11 +193,11 @@ public class Generator
     StringBuilder sb = new();
     sb.AppendLine($"namespace {clazz.Namespace};").AppendLine();
     sb.Append($"public partial struct {clazz.Name}");
-    var members = WriteTypeBody(sb, clazz);
+    var members = WriteTypeBody(sb, clazz, true);
     return (sb.ToString(), new(clazz.FullName, null, members));
   }
 
-  private  List<GeneratedMember>  WriteTypeBody( StringBuilder sb, Type clazz)
+  private  List<GeneratedMember>  WriteTypeBody( StringBuilder sb, Type clazz, bool isStruct)
   {
     sb.AppendLine();
     sb.AppendLine("{");
@@ -232,7 +232,7 @@ public class Generator
       {
         var methodSb = new StringBuilder();
         methodSb.Append("\t");
-        WriteProperty(methodSb, propertyInfo);
+        WriteProperty(methodSb, propertyInfo, isStruct);
         sb.Append(methodSb);
         members.Add(new (propertyInfo.Name));
       }
@@ -250,7 +250,7 @@ public class Generator
     return members;
   }
   
-  private void WriteProperty(StringBuilder sb, PropertyInfo propertyInfo)
+  private void WriteProperty(StringBuilder sb, PropertyInfo propertyInfo, bool isStruct)
   {
     var wrotePropHeader = false;
     var getMethod = propertyInfo.GetGetMethod(false);
@@ -265,7 +265,7 @@ public class Generator
       if (wrotePropHeader is false)
       {
         wrotePropHeader = true;
-        WritePropertyHeader(sb, propertyInfo,getMethod, isOverriden, getMethod.ReturnType);
+        WritePropertyHeader(sb, propertyInfo,isStruct, isOverriden, getMethod.ReturnType);
       }
       sb.AppendLine("\t\tget => throw new System.NotImplementedException();");
     }
@@ -280,20 +280,25 @@ public class Generator
       bool isOverriden = setMethod.GetBaseDefinition().DeclaringType != propertyInfo.DeclaringType;
       if (wrotePropHeader is false)
       {
-        WritePropertyHeader(sb, propertyInfo, setMethod, isOverriden, parameters[0].ParameterType);
+        WritePropertyHeader(sb, propertyInfo, isStruct, isOverriden, parameters[0].ParameterType);
       }
       sb.AppendLine("\t\tset {}");
     }
     sb.AppendLine("\t}");
   }
 
-  private void WritePropertyHeader(StringBuilder sb, PropertyInfo property, MethodInfo methodInfo, bool isOverriden, Type returnType)
+  private void WritePropertyHeader(StringBuilder sb, PropertyInfo property, bool isStruct, bool isOverriden, Type returnType)
   {
-    var extra = isOverriden ? "override" : "virtual";
-    if (IsMemberOnBaseClass(property.DeclaringType?.BaseType?.FullName,new (property.Name)))
+    var extra = string.Empty;
+    if (!isStruct)
     {
-      extra = "new";
+      extra = isOverriden ? "override" : "virtual";
+      if (IsMemberOnBaseClass(property.DeclaringType?.BaseType?.FullName, new(property.Name)))
+      {
+        extra = "new";
+      }
     }
+
     sb.AppendLine($"public {extra} {ReturnType(returnType)} {property.Name}");
     sb.AppendLine("\t{");
   }

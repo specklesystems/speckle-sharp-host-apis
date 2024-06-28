@@ -12,4 +12,24 @@ public partial class CutMarkType : Autodesk.Revit.DB.ElementType
 		get => throw new System.NotImplementedException();
 		set {}
 	}
+	public virtual System.Double CutLineDistance
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Double CutLineExtension
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Double CutLineAngle
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Double CutMarkSymbolSize
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 }

@@ -7,4 +7,9 @@ public partial class Profile : Autodesk.Revit.DB.GeometryObject
 	{
 		get => throw new System.NotImplementedException();
 	}
+	public virtual System.Boolean Filled
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 }

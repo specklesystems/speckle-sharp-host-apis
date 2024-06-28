@@ -10,6 +10,10 @@ public partial class RoomTag : Autodesk.Revit.DB.SpatialElementTag
 	{
 		get => throw new System.NotImplementedException();
 	}
+	public virtual System.Boolean IsInRoom
+	{
+		get => throw new System.NotImplementedException();
+	}
 	public virtual Autodesk.Revit.DB.Architecture.RoomTagType RoomTagType
 	{
 		get => throw new System.NotImplementedException();

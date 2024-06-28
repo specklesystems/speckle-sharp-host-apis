@@ -6,6 +6,11 @@ public partial class RoofBase : Autodesk.Revit.DB.HostObject
 	{
 		get => throw new System.NotImplementedException();
 	}
+	public virtual System.Double FasciaDepth
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 	public virtual Autodesk.Revit.DB.EaveCutterType EaveCuts
 	{
 		get => throw new System.NotImplementedException();

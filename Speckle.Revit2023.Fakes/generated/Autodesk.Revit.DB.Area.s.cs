@@ -6,4 +6,8 @@ public partial class Area : Autodesk.Revit.DB.SpatialElement
 	{
 		get => throw new System.NotImplementedException();
 	}
+	public virtual System.Boolean IsGrossInterior
+	{
+		get => throw new System.NotImplementedException();
+	}
 }

@@ -6,6 +6,10 @@ public partial class TableCellStyle : System.Object
 	public virtual Autodesk.Revit.DB.TableCellStyleOverrideOptions GetCellStyleOverrideOptions() => throw new System.NotImplementedException();
 	public virtual void SetCellStyleOverrideOptions(Autodesk.Revit.DB.TableCellStyleOverrideOptions helper) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual System.Boolean IsValidObject
+	{
+		get => throw new System.NotImplementedException();
+	}
 	public virtual Autodesk.Revit.DB.VerticalAlignmentStyle FontVerticalAlignment
 	{
 		get => throw new System.NotImplementedException();
@@ -15,6 +19,40 @@ public partial class TableCellStyle : System.Object
 	{
 		get => throw new System.NotImplementedException();
 		set {}
+	}
+	public virtual System.Boolean IsInactivePhaseload
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Boolean IsFontUnderline
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Boolean IsFontItalic
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Boolean IsFontBold
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Boolean IsReadOnly
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Boolean IsEnabled
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Boolean IsOverridden
+	{
+		get => throw new System.NotImplementedException();
 	}
 	public virtual Autodesk.Revit.DB.ElementId BorderRightLineStyle
 	{
@@ -36,6 +74,11 @@ public partial class TableCellStyle : System.Object
 		get => throw new System.NotImplementedException();
 		set {}
 	}
+	public virtual System.Int32 TextOrientation
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 	public virtual Autodesk.Revit.DB.Color SheetBackgroundColor
 	{
 		get => throw new System.NotImplementedException();
@@ -46,6 +89,16 @@ public partial class TableCellStyle : System.Object
 		set {}
 	}
 	public virtual Autodesk.Revit.DB.Color TextColor
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Double TextSize
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.String FontName
 	{
 		get => throw new System.NotImplementedException();
 		set {}

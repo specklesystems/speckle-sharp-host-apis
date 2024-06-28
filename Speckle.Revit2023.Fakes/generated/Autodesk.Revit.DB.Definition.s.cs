@@ -8,4 +8,8 @@ public partial class Definition : System.Object
 	{
 		get => throw new System.NotImplementedException();
 	}
+	public virtual System.String Name
+	{
+		get => throw new System.NotImplementedException();
+	}
 }

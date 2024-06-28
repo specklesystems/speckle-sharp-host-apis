@@ -19,4 +19,18 @@ public partial class ModelText : Autodesk.Revit.DB.Element
 		get => throw new System.NotImplementedException();
 		set {}
 	}
+	public virtual System.Double Depth
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public new Autodesk.Revit.DB.Location Location
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual System.String Text
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 }

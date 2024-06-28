@@ -13,12 +13,27 @@ public partial class ReferencePoint : Autodesk.Revit.DB.Element
 	public virtual Autodesk.Revit.DB.FamilyElementVisibility GetVisibility() => throw new System.NotImplementedException();
 	public virtual void SetVisibility(Autodesk.Revit.DB.FamilyElementVisibility visibility) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ElementId GetHubId() => throw new System.NotImplementedException();
+	public virtual System.Boolean ShowNormalReferencePlaneOnly
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 	public virtual Autodesk.Revit.DB.CoordinatePlaneVisibility CoordinatePlaneVisibility
 	{
 		get => throw new System.NotImplementedException();
 		set {}
 	}
+	public virtual System.Boolean Visible
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 	public virtual Autodesk.Revit.DB.XYZ Position
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public new System.String Name
 	{
 		get => throw new System.NotImplementedException();
 		set {}

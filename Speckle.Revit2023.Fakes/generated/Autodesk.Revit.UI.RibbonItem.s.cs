@@ -8,4 +8,33 @@ public partial class RibbonItem : System.Object
 	{
 		get => throw new System.NotImplementedException();
 	}
+	public virtual System.Boolean Visible
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Boolean Enabled
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.String LongDescription
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.String ToolTip
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.String ItemText
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.String Name
+	{
+		get => throw new System.NotImplementedException();
+	}
 }

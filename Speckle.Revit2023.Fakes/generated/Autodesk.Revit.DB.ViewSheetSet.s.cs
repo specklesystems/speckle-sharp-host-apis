@@ -2,6 +2,11 @@ namespace Autodesk.Revit.DB;
 
 public partial class ViewSheetSet : Autodesk.Revit.DB.Element
 {
+	public virtual System.Boolean IsAutomatic
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 	public virtual Autodesk.Revit.DB.ElementId ViewOrganizationId
 	{
 		get => throw new System.NotImplementedException();
@@ -12,7 +17,17 @@ public partial class ViewSheetSet : Autodesk.Revit.DB.Element
 		get => throw new System.NotImplementedException();
 		set {}
 	}
+	public virtual IReadOnlyList<Autodesk.Revit.DB.View> OrderedViewList
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 	public virtual Autodesk.Revit.DB.ViewSet Views
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public new System.String Name
 	{
 		get => throw new System.NotImplementedException();
 		set {}

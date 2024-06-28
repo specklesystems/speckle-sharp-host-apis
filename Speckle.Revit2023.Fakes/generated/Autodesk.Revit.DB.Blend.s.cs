@@ -12,6 +12,16 @@ public partial class Blend : Autodesk.Revit.DB.GenericForm
 	{
 		get => throw new System.NotImplementedException();
 	}
+	public virtual System.Double TopOffset
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Double BottomOffset
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 	public virtual Autodesk.Revit.DB.Sketch BottomSketch
 	{
 		get => throw new System.NotImplementedException();

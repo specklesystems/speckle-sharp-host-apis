@@ -7,4 +7,9 @@ public partial class ViewNode : Autodesk.Revit.DB.RenderNode
 	{
 		get => throw new System.NotImplementedException();
 	}
+	public virtual System.Int32 LevelOfDetail
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 }

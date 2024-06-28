@@ -7,6 +7,11 @@ public partial class DWFExportOptions : Autodesk.Revit.DB.CADExportOptions
 		get => throw new System.NotImplementedException();
 		set {}
 	}
+	public virtual System.Boolean CropBoxVisible
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 	public virtual Autodesk.Revit.DB.DWFImageQuality ImageQuality
 	{
 		get => throw new System.NotImplementedException();
@@ -17,7 +22,37 @@ public partial class DWFExportOptions : Autodesk.Revit.DB.CADExportOptions
 		get => throw new System.NotImplementedException();
 		set {}
 	}
+	public virtual System.Boolean PortraitLayout
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 	public virtual Autodesk.Revit.DB.ExportPaperFormat PaperFormat
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Boolean StopOnError
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Boolean ExportObjectData
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Boolean MergedViews
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Boolean ExportTexture
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Boolean ExportingAreas
 	{
 		get => throw new System.NotImplementedException();
 		set {}

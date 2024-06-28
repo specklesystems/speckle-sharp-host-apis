@@ -10,6 +10,14 @@ public partial class RenderingSettings : System.Object
 	public virtual void SetRenderingQualitySettings(Autodesk.Revit.DB.RenderingQualitySettings settings) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.Outline GetRenderingRegionOutline() => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual System.Boolean IsValidObject
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual System.Int32 ResolutionValue
+	{
+		get => throw new System.NotImplementedException();
+	}
 	public virtual Autodesk.Revit.DB.LightingSource LightingSource
 	{
 		get => throw new System.NotImplementedException();
@@ -26,6 +34,11 @@ public partial class RenderingSettings : System.Object
 		set {}
 	}
 	public virtual Autodesk.Revit.DB.BackgroundStyle BackgroundStyle
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Boolean UsesRegionRendering
 	{
 		get => throw new System.NotImplementedException();
 		set {}

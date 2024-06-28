@@ -6,4 +6,8 @@ public partial class Path3d : Autodesk.Revit.DB.SketchBase
 	{
 		get => throw new System.NotImplementedException();
 	}
+	public virtual System.Int32 NumCurveLoops
+	{
+		get => throw new System.NotImplementedException();
+	}
 }

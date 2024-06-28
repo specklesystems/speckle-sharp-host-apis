@@ -2,11 +2,48 @@ namespace Autodesk.Revit.DB;
 
 public partial class FamilyInstance : Autodesk.Revit.DB.Instance
 {
+	public virtual System.Boolean flipHand() => throw new System.NotImplementedException();
+	public virtual System.Boolean flipFacing() => throw new System.NotImplementedException();
+	public virtual System.Boolean rotate() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.ElementId Split(System.Double param) => throw new System.NotImplementedException();
 	public virtual void FlipFromToRoom() => throw new System.NotImplementedException();
+	public virtual ICollection<Autodesk.Revit.DB.ElementId> GetSubComponentIds() => throw new System.NotImplementedException();
+	public virtual ICollection<Autodesk.Revit.DB.ElementId> GetCopingIds() => throw new System.NotImplementedException();
+	public virtual System.Boolean SetCopingIds(ICollection<Autodesk.Revit.DB.ElementId> cutters) => throw new System.NotImplementedException();
+	public virtual System.Boolean AddCoping(Autodesk.Revit.DB.FamilyInstance cutter) => throw new System.NotImplementedException();
+	public virtual System.Boolean RemoveCoping(Autodesk.Revit.DB.FamilyInstance cutter) => throw new System.NotImplementedException();
+	public virtual IList<Autodesk.Revit.DB.FamilyPointPlacementReference> GetFamilyPointPlacementReferences() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.GeometryElement GetOriginalGeometry(Autodesk.Revit.DB.Options options) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.XYZ GetSpatialElementCalculationPoint() => throw new System.NotImplementedException();
+	public virtual IList<Autodesk.Revit.DB.XYZ> GetSpatialElementFromToCalculationPoints() => throw new System.NotImplementedException();
+	public virtual System.Boolean HasModifiedGeometry() => throw new System.NotImplementedException();
+	public virtual System.Boolean HasSweptProfile() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.SweptProfile GetSweptProfile() => throw new System.NotImplementedException();
+	public virtual IList<Autodesk.Revit.DB.Reference> GetReferences(Autodesk.Revit.DB.FamilyInstanceReferenceType referenceType) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.FamilyInstanceReferenceType GetReferenceType(Autodesk.Revit.DB.Reference reference) => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.Reference GetReferenceByName(System.String name) => throw new System.NotImplementedException();
+	public virtual System.String GetReferenceName(Autodesk.Revit.DB.Reference reference) => throw new System.NotImplementedException();
+	public virtual System.Boolean HasSpatialElementFromToCalculationPoints
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual System.Boolean HasSpatialElementCalculationPoint
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual System.Boolean IsWorkPlaneFlipped
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Boolean CanFlipWorkPlane
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual System.Boolean IsSlantedColumn
+	{
+		get => throw new System.NotImplementedException();
+	}
 	public virtual Autodesk.Revit.DB.IExtension ExtensionUtility
 	{
 		get => throw new System.NotImplementedException();
@@ -23,6 +60,38 @@ public partial class FamilyInstance : Autodesk.Revit.DB.Instance
 	{
 		get => throw new System.NotImplementedException();
 	}
+	public virtual System.Boolean CanSplit
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual System.Boolean CanRotate
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual System.Boolean CanFlipFacing
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual System.Boolean CanFlipHand
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual System.Boolean Mirrored
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual System.Boolean Invisible
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual System.Boolean FacingFlipped
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual System.Boolean HandFlipped
+	{
+		get => throw new System.NotImplementedException();
+	}
 	public virtual Autodesk.Revit.DB.XYZ FacingOrientation
 	{
 		get => throw new System.NotImplementedException();
@@ -35,7 +104,15 @@ public partial class FamilyInstance : Autodesk.Revit.DB.Instance
 	{
 		get => throw new System.NotImplementedException();
 	}
+	public virtual System.Double HostParameter
+	{
+		get => throw new System.NotImplementedException();
+	}
 	public virtual Autodesk.Revit.DB.Element Host
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public new Autodesk.Revit.DB.Location Location
 	{
 		get => throw new System.NotImplementedException();
 	}

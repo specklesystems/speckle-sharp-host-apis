@@ -7,7 +7,32 @@ public partial class ACADExportOptions : Autodesk.Revit.DB.BaseExportOptions
 		get => throw new System.NotImplementedException();
 		set {}
 	}
+	public virtual System.Boolean UseHatchBackgroundColor
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 	public virtual Autodesk.Revit.DB.ACADVersion FileVersion
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.String NonplotSuffix
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Boolean MarkNonplotLayers
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Boolean ExportingAreas
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Boolean SharedCoords
 	{
 		get => throw new System.NotImplementedException();
 		set {}
@@ -28,6 +53,11 @@ public partial class ACADExportOptions : Autodesk.Revit.DB.BaseExportOptions
 		set {}
 	}
 	public virtual Autodesk.Revit.DB.TextTreatment TextTreatment
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.String LinetypesFileName
 	{
 		get => throw new System.NotImplementedException();
 		set {}

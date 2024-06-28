@@ -6,4 +6,9 @@ public partial class PrintSetting : Autodesk.Revit.DB.Element
 	{
 		get => throw new System.NotImplementedException();
 	}
+	public new System.String Name
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 }

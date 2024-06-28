@@ -7,4 +7,9 @@ public partial class SplitButton : Autodesk.Revit.UI.PulldownButton
 		get => throw new System.NotImplementedException();
 		set {}
 	}
+	public virtual System.Boolean IsSynchronizedWithCurrentItem
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 }

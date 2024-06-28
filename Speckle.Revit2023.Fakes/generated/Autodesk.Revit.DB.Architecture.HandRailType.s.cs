@@ -12,7 +12,22 @@ public partial class HandRailType : Autodesk.Revit.DB.Architecture.ContinuousRai
 		get => throw new System.NotImplementedException();
 		set {}
 	}
+	public virtual System.Int32 SupportNumber
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 	public virtual Autodesk.Revit.DB.ElementId SupportTypeId
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Double SupportSpacing
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Double Height
 	{
 		get => throw new System.NotImplementedException();
 		set {}

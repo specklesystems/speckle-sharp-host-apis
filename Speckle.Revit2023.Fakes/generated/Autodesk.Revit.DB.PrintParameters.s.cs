@@ -2,6 +2,41 @@ namespace Autodesk.Revit.DB;
 
 public partial class PrintParameters : Autodesk.Revit.DB.APIObject
 {
+	public virtual System.Boolean MaskCoincidentLines
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Boolean ReplaceHalftoneWithThinLines
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Boolean HideCropBoundaries
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Boolean HideScopeBoxes
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Boolean HideUnreferencedViewTags
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Boolean HideReforWorkPlanes
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Boolean ViewLinksinBlue
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 	public virtual Autodesk.Revit.DB.ColorDepthType ColorDepth
 	{
 		get => throw new System.NotImplementedException();
@@ -17,7 +52,32 @@ public partial class PrintParameters : Autodesk.Revit.DB.APIObject
 		get => throw new System.NotImplementedException();
 		set {}
 	}
+	public virtual System.Int32 Zoom
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 	public virtual Autodesk.Revit.DB.ZoomType ZoomType
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Double OriginOffsetY
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Double OriginOffsetX
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Double UserDefinedMarginY
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Double UserDefinedMarginX
 	{
 		get => throw new System.NotImplementedException();
 		set {}

@@ -2,7 +2,48 @@ namespace Autodesk.Revit.DB;
 
 public partial class NavisworksExportOptions : System.Object
 {
+	public virtual ICollection<Autodesk.Revit.DB.ElementId> GetSelectedElementIds() => throw new System.NotImplementedException();
+	public virtual void SetSelectedElementIds(ICollection<Autodesk.Revit.DB.ElementId> ids) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual System.Boolean IsValidObject
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual System.Boolean ConvertLinkedCADFormats
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Boolean ConvertLights
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Double FacetingFactor
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Boolean DivideFileIntoLevels
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Boolean ConvertElementProperties
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Boolean FindMissingMaterials
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Boolean ExportRoomGeometry
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 	public virtual Autodesk.Revit.DB.ElementId ViewId
 	{
 		get => throw new System.NotImplementedException();
@@ -18,7 +59,32 @@ public partial class NavisworksExportOptions : System.Object
 		get => throw new System.NotImplementedException();
 		set {}
 	}
+	public virtual System.Boolean ExportUrls
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Boolean ExportRoomAsAttribute
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Boolean ExportLinks
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 	public virtual Autodesk.Revit.DB.NavisworksParameters Parameters
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Boolean ExportElementIds
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Boolean ExportParts
 	{
 		get => throw new System.NotImplementedException();
 		set {}

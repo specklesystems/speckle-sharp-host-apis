@@ -13,4 +13,8 @@ public partial class BoundingBoxUV : System.Object
 		get => throw new System.NotImplementedException();
 		set {}
 	}
+	public virtual System.Boolean IsSet
+	{
+		get => throw new System.NotImplementedException();
+	}
 }

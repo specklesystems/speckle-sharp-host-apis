@@ -11,4 +11,8 @@ public partial class FloorType : Autodesk.Revit.DB.HostObjAttributes
 		get => throw new System.NotImplementedException();
 		set {}
 	}
+	public virtual System.Boolean IsFoundationSlab
+	{
+		get => throw new System.NotImplementedException();
+	}
 }

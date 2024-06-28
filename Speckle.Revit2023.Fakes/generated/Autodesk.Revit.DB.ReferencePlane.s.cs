@@ -24,4 +24,9 @@ public partial class ReferencePlane : Autodesk.Revit.DB.DatumPlane
 		get => throw new System.NotImplementedException();
 		set {}
 	}
+	public new System.String Name
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 }

@@ -9,4 +9,16 @@ public partial class GenericForm : Autodesk.Revit.DB.CombinableElement
 		get => throw new System.NotImplementedException();
 		set {}
 	}
+	public new System.String Name
+	{
+		set {}
+	}
+	public virtual System.Boolean IsSolid
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual System.Boolean Visible
+	{
+		get => throw new System.NotImplementedException();
+	}
 }
