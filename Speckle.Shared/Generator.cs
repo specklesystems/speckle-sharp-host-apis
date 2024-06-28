@@ -58,7 +58,7 @@ public class Generator
 
     definedTypes = definedTypes.Where(x => x.IsPublic)
       .Where(x => _namespaces.Any(y => x.FullName?.StartsWith(y) ?? false)).ToList();
-    foreach (var type in definedTypes)
+    foreach (var type in definedTypes)//.Where(x => x.FullName.EndsWith("ForgeTypeId")))
     {
       try
       {
@@ -160,6 +160,10 @@ public class Generator
     sb.AppendLine("{");
     foreach(var method in clazz.GetMethods(BindingFlags.Instance | BindingFlags.DeclaredOnly | BindingFlags.Public))
     {
+      if (method.IsSpecialName)
+      {
+        continue;
+      }
       try
       {
         var methodSb = new StringBuilder();
@@ -177,8 +181,77 @@ public class Generator
         Console.WriteLine($"Did not write {method.Name} on {clazz.FullName}");
       }
     }
+    foreach(var propertyInfo in clazz.GetProperties(BindingFlags.Instance | BindingFlags.DeclaredOnly | BindingFlags.Public))
+    {
+      try
+      {
+        var methodSb = new StringBuilder();
+        methodSb.Append("\t");
+        WriteProperty(methodSb, propertyInfo);
+        sb.Append(methodSb);
+      }
+      catch (FileLoadException)
+      {
+        Console.WriteLine($"Did not write {propertyInfo.Name} on {clazz.FullName}");
+        
+      }
+      catch (ApplicationException)
+      {
+        Console.WriteLine($"Did not write {propertyInfo.Name} on {clazz.FullName}");
+      }
+    }
     sb.AppendLine("}");
     
+  }
+  
+  private void WriteProperty(StringBuilder sb, PropertyInfo propertyInfo)
+  {
+    var wrotePropHeader = false;
+    var getMethod = propertyInfo.GetGetMethod(false);
+    if (getMethod is not null)
+    {
+      if (getMethod.GetBaseDefinition().DeclaringType != propertyInfo.DeclaringType)
+      {
+        throw new ApplicationException("not base property?");
+      }
+
+      if (getMethod.GetParameters().Any())
+      {
+        throw new ApplicationException($"getter has parameters {propertyInfo.Name}");
+      }
+      if (wrotePropHeader is false)
+      {
+        wrotePropHeader = true;
+        WriteParameterHeader(sb, propertyInfo.Name, getMethod.ReturnType);
+      }
+      sb.AppendLine("\t\tget => throw new System.NotImplementedException();");
+    }
+    var setMethod = propertyInfo.GetSetMethod(false);
+    if (setMethod is not null)
+    {
+      if (setMethod.GetBaseDefinition().DeclaringType != propertyInfo.DeclaringType)
+      {
+        throw new ApplicationException("not base property?");
+      }
+
+      var parameters = setMethod.GetParameters();
+      if (parameters.Length > 1)
+      {
+        throw new ApplicationException($"setter has more than one parameter {propertyInfo.Name}");
+      }
+      if (wrotePropHeader is false)
+      {
+        WriteParameterHeader(sb, propertyInfo.Name, parameters[0].ParameterType);
+      }
+      sb.AppendLine("\t\tset {}");
+    }
+    sb.AppendLine("\t}");
+  }
+
+  private void WriteParameterHeader(StringBuilder sb, string property, Type returnType)
+  {
+    sb.AppendLine($"public virtual {ReturnType(returnType)} {property}");
+    sb.AppendLine("\t{");
   }
 
   private void WriteMethod(StringBuilder sb, MethodInfo methodInfo)

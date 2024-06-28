@@ -29,33 +29,13 @@ public partial class Document : System.Object
 	public virtual void PublishCoordinates(Autodesk.Revit.DB.LinkElementId locationId) => throw new System.NotImplementedException();
 	public virtual void ResetSharedCoordinates() => throw new System.NotImplementedException();
 				public virtual Autodesk.Revit.DB.StorageType GetTypeOfStorage(Autodesk.Revit.DB.ForgeTypeId parameterTypeId) => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.StorageType get_TypeOfStorage(Autodesk.Revit.DB.BuiltInParameter A_0) => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.Settings get_Settings() => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.DisplayUnit get_DisplayUnitSystem() => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.BindingMap get_ParameterBindings() => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.MullionTypeSet get_MullionTypes() => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.PanelTypeSet get_PanelTypes() => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.PhaseArray get_Phases() => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.ProjectInfo get_ProjectInformation() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.Family LoadFamily(Autodesk.Revit.DB.Document targetDocument,Autodesk.Revit.DB.IFamilyLoadOptions familyLoadOptions) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.Family LoadFamily(Autodesk.Revit.DB.Document targetDocument) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.Document EditFamily(Autodesk.Revit.DB.Family loadedFamily) => throw new System.NotImplementedException();
 	public virtual void Print(Autodesk.Revit.DB.ViewSet views,Autodesk.Revit.DB.View viewTemplate) => throw new System.NotImplementedException();
 	public virtual void Print(Autodesk.Revit.DB.ViewSet views) => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.PlanTopology get_PlanTopology(Autodesk.Revit.DB.Level level,Autodesk.Revit.DB.Phase phase) => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.PlanTopology get_PlanTopology(Autodesk.Revit.DB.Level level) => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.PlanTopologySet get_PlanTopologies(Autodesk.Revit.DB.Phase phase) => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.PlanTopologySet get_PlanTopologies() => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.FamilyManager get_FamilyManager() => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.View get_ActiveView() => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.ProjectLocationSet get_ProjectLocations() => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.ProjectLocation get_ActiveProjectLocation() => throw new System.NotImplementedException();
-	public virtual void set_ActiveProjectLocation(Autodesk.Revit.DB.ProjectLocation value) => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.SiteLocation get_SiteLocation() => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.PrintManager get_PrintManager() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.Architecture.Room GetRoomAtPoint(Autodesk.Revit.DB.XYZ point) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.Architecture.Room GetRoomAtPoint(Autodesk.Revit.DB.XYZ point,Autodesk.Revit.DB.Phase phase) => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.Family get_OwnerFamily() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.GeomCombination CombineElements(Autodesk.Revit.DB.CombinableElementArray members) => throw new System.NotImplementedException();
 	public virtual void SeparateElements(Autodesk.Revit.DB.CombinableElementArray members) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.DetailCurveArray ConvertModelToDetailCurves(Autodesk.Revit.DB.View view,Autodesk.Revit.DB.ModelCurveArray modelCurves) => throw new System.NotImplementedException();
@@ -66,11 +46,75 @@ public partial class Document : System.Object
 	public virtual void AutoJoinElements() => throw new System.NotImplementedException();
 	public virtual void Paint(Autodesk.Revit.DB.ElementId elementId,Autodesk.Revit.DB.Face face,Autodesk.Revit.DB.ElementId materialId) => throw new System.NotImplementedException();
 	public virtual void Paint(Autodesk.Revit.DB.ElementId elementId,Autodesk.Revit.DB.Face face,Autodesk.Revit.DB.FamilyParameter familyParameter) => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.MassDisplayTemporaryOverrideType get_MassDisplayTemporaryOverride() => throw new System.NotImplementedException();
-	public virtual void set_MassDisplayTemporaryOverride(Autodesk.Revit.DB.MassDisplayTemporaryOverrideType displayType) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.WorksetTable GetWorksetTable() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.Units GetUnits() => throw new System.NotImplementedException();
 	public virtual void SetUnits(Autodesk.Revit.DB.Units units) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.WorksetId GetWorksetId(Autodesk.Revit.DB.ElementId id) => throw new System.NotImplementedException();
 	public virtual void Save(Autodesk.Revit.DB.SaveOptions options) => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.MassDisplayTemporaryOverrideType MassDisplayTemporaryOverride
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual Autodesk.Revit.DB.Family OwnerFamily
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.PrintManager PrintManager
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.SiteLocation SiteLocation
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.ProjectLocation ActiveProjectLocation
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual Autodesk.Revit.DB.ProjectLocationSet ProjectLocations
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.View ActiveView
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.FamilyManager FamilyManager
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.PlanTopologySet PlanTopologies
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.ProjectInfo ProjectInformation
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.PhaseArray Phases
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.PanelTypeSet PanelTypes
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.MullionTypeSet MullionTypes
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.BindingMap ParameterBindings
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.DisplayUnit DisplayUnitSystem
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.Settings Settings
+	{
+		get => throw new System.NotImplementedException();
+	}
 }

@@ -2,16 +2,53 @@ namespace Autodesk.Revit.DB;
 
 public partial class Connector : System.Object
 {
-		public virtual void set_Origin(Autodesk.Revit.DB.XYZ origin) => throw new System.NotImplementedException();
-		public virtual Autodesk.Revit.DB.Element get_Owner() => throw new System.NotImplementedException();
-		public virtual Autodesk.Revit.DB.ConnectorSet get_AllRefs() => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.ConnectorType get_ConnectorType() => throw new System.NotImplementedException();
-					public virtual Autodesk.Revit.DB.FlowDirectionType get_AssignedFlowDirection() => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.ConnectorManager get_ConnectorManager() => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.MEPSystem get_MEPSystem() => throw new System.NotImplementedException();
 	public virtual void ConnectTo(Autodesk.Revit.DB.Connector connector) => throw new System.NotImplementedException();
 	public virtual void DisconnectFrom(Autodesk.Revit.DB.Connector connector) => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.FlowDirectionType get_Direction() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.FabricationConnectorInfo GetFabricationConnectorInfo() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.MEPConnectorInfo GetMEPConnectorInfo() => throw new System.NotImplementedException();
+		public virtual Autodesk.Revit.DB.FlowDirectionType Direction
+	{
+		get => throw new System.NotImplementedException();
 	}
+	public virtual Autodesk.Revit.DB.MEPSystem MEPSystem
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.ConnectorManager ConnectorManager
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.FlowDirectionType AssignedFlowDirection
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.ConnectorProfileType Shape
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.ConnectorType ConnectorType
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.ConnectorSet AllRefs
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.Domain Domain
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.Element Owner
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.Transform CoordinateSystem
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.XYZ Origin
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+}

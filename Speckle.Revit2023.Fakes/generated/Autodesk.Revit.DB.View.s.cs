@@ -20,36 +20,10 @@ public partial class View : Autodesk.Revit.DB.Element
 	public virtual Autodesk.Revit.DB.ElementId GetColorFillSchemeId(Autodesk.Revit.DB.ElementId categoryId) => throw new System.NotImplementedException();
 	public virtual void ApplyViewTemplateParameters(Autodesk.Revit.DB.View otherView) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.View CreateViewTemplate() => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.BoundingBoxUV get_Outline() => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.ViewType get_ViewType() => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.BoundingBoxXYZ get_CropBox() => throw new System.NotImplementedException();
-	public virtual void set_CropBox(Autodesk.Revit.DB.BoundingBoxXYZ cropBox) => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.XYZ get_Origin() => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.XYZ get_ViewDirection() => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.XYZ get_RightDirection() => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.XYZ get_UpDirection() => throw new System.NotImplementedException();
 	public virtual void Print(Autodesk.Revit.DB.View viewTemplate) => throw new System.NotImplementedException();
 	public virtual void Print() => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.Level get_GenLevel() => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.SketchPlane get_SketchPlane() => throw new System.NotImplementedException();
-	public virtual void set_SketchPlane(Autodesk.Revit.DB.SketchPlane sketchPlane) => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.SunAndShadowSettings get_SunAndShadowSettings() => throw new System.NotImplementedException();
 	public virtual void ShowActiveWorkPlane() => throw new System.NotImplementedException();
 	public virtual void HideActiveWorkPlane() => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.ElementId get_AssociatedAssemblyInstanceId() => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.PartsVisibility get_PartsVisibility() => throw new System.NotImplementedException();
-	public virtual void set_PartsVisibility(Autodesk.Revit.DB.PartsVisibility partsVisibility) => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.ViewDetailLevel get_DetailLevel() => throw new System.NotImplementedException();
-	public virtual void set_DetailLevel(Autodesk.Revit.DB.ViewDetailLevel detailLevel) => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.ElementId get_AnalysisDisplayStyleId() => throw new System.NotImplementedException();
-	public virtual void set_AnalysisDisplayStyleId(Autodesk.Revit.DB.ElementId value) => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.TemporaryViewModes get_TemporaryViewModes() => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.DisplayStyle get_DisplayStyle() => throw new System.NotImplementedException();
-	public virtual void set_DisplayStyle(Autodesk.Revit.DB.DisplayStyle displayStyle) => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.ViewDiscipline get_Discipline() => throw new System.NotImplementedException();
-	public virtual void set_Discipline(Autodesk.Revit.DB.ViewDiscipline viewDiscipline) => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.ElementId get_ViewTemplateId() => throw new System.NotImplementedException();
-	public virtual void set_ViewTemplateId(Autodesk.Revit.DB.ElementId val) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ViewCropRegionShapeManager GetCropRegionShapeManager() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ElementId GetCalloutParentId() => throw new System.NotImplementedException();
 	public virtual void RemoveCalloutParent() => throw new System.NotImplementedException();
@@ -72,4 +46,84 @@ public partial class View : Autodesk.Revit.DB.Element
 	public virtual Autodesk.Revit.DB.ElementId GetPrimaryViewId() => throw new System.NotImplementedException();
 	public virtual void SetCategoryOverrides(Autodesk.Revit.DB.ElementId categoryId,Autodesk.Revit.DB.OverrideGraphicSettings overrideGraphicSettings) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.OverrideGraphicSettings GetCategoryOverrides(Autodesk.Revit.DB.ElementId categoryId) => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.ElementId ViewTemplateId
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual Autodesk.Revit.DB.ViewDiscipline Discipline
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual Autodesk.Revit.DB.DisplayStyle DisplayStyle
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual Autodesk.Revit.DB.TemporaryViewModes TemporaryViewModes
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.ElementId AnalysisDisplayStyleId
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual Autodesk.Revit.DB.ViewDetailLevel DetailLevel
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual Autodesk.Revit.DB.PartsVisibility PartsVisibility
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual Autodesk.Revit.DB.ElementId AssociatedAssemblyInstanceId
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.SunAndShadowSettings SunAndShadowSettings
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.SketchPlane SketchPlane
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual Autodesk.Revit.DB.Level GenLevel
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.XYZ UpDirection
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.XYZ RightDirection
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.XYZ ViewDirection
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.XYZ Origin
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.BoundingBoxXYZ CropBox
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual Autodesk.Revit.DB.ViewType ViewType
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.BoundingBoxUV Outline
+	{
+		get => throw new System.NotImplementedException();
+	}
 }

@@ -2,6 +2,12 @@ namespace Autodesk.Revit.DB;
 
 public partial class CylindricalFace : Autodesk.Revit.DB.Face
 {
-	public virtual Autodesk.Revit.DB.XYZ get_Origin() => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.XYZ get_Axis() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.XYZ Axis
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.XYZ Origin
+	{
+		get => throw new System.NotImplementedException();
+	}
 }

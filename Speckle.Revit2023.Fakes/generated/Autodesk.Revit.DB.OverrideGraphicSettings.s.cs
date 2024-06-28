@@ -2,19 +2,6 @@ namespace Autodesk.Revit.DB;
 
 public partial class OverrideGraphicSettings : System.Object
 {
-	public virtual Autodesk.Revit.DB.ViewDetailLevel get_DetailLevel() => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.Color get_ProjectionLineColor() => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.ElementId get_ProjectionLinePatternId() => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.Color get_CutLineColor() => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.ElementId get_CutLinePatternId() => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.Color get_SurfaceForegroundPatternColor() => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.Color get_SurfaceBackgroundPatternColor() => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.Color get_CutForegroundPatternColor() => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.Color get_CutBackgroundPatternColor() => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.ElementId get_SurfaceForegroundPatternId() => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.ElementId get_SurfaceBackgroundPatternId() => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.ElementId get_CutForegroundPatternId() => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.ElementId get_CutBackgroundPatternId() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.OverrideGraphicSettings SetDetailLevel(Autodesk.Revit.DB.ViewDetailLevel detailLevel) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.OverrideGraphicSettings SetProjectionLineColor(Autodesk.Revit.DB.Color color) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.OverrideGraphicSettings SetProjectionLinePatternId(Autodesk.Revit.DB.ElementId linePatternId) => throw new System.NotImplementedException();
@@ -28,4 +15,56 @@ public partial class OverrideGraphicSettings : System.Object
 	public virtual Autodesk.Revit.DB.OverrideGraphicSettings SetSurfaceBackgroundPatternId(Autodesk.Revit.DB.ElementId fillPatternId) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.OverrideGraphicSettings SetCutForegroundPatternId(Autodesk.Revit.DB.ElementId fillPatternId) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.OverrideGraphicSettings SetCutBackgroundPatternId(Autodesk.Revit.DB.ElementId fillPatternId) => throw new System.NotImplementedException();
+		public virtual Autodesk.Revit.DB.ElementId CutBackgroundPatternId
+	{
+		get => throw new System.NotImplementedException();
 	}
+	public virtual Autodesk.Revit.DB.ElementId CutForegroundPatternId
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.ElementId SurfaceBackgroundPatternId
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.ElementId SurfaceForegroundPatternId
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.Color CutBackgroundPatternColor
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.Color CutForegroundPatternColor
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.Color SurfaceBackgroundPatternColor
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.Color SurfaceForegroundPatternColor
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.ElementId CutLinePatternId
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.Color CutLineColor
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.ElementId ProjectionLinePatternId
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.Color ProjectionLineColor
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.ViewDetailLevel DetailLevel
+	{
+		get => throw new System.NotImplementedException();
+	}
+}

@@ -2,7 +2,6 @@ namespace Autodesk.Revit.DB;
 
 public partial class DirectShape : Autodesk.Revit.DB.Element
 {
-	public virtual Autodesk.Revit.DB.ElementId get_TypeId() => throw new System.NotImplementedException();
 	public virtual void SetTypeId(Autodesk.Revit.DB.ElementId typeId) => throw new System.NotImplementedException();
 	public virtual void SetShape(Autodesk.Revit.DB.ShapeBuilder pBuilder) => throw new System.NotImplementedException();
 	public virtual void AppendShape(Autodesk.Revit.DB.ShapeBuilder ShapeBuilder) => throw new System.NotImplementedException();
@@ -21,4 +20,8 @@ public partial class DirectShape : Autodesk.Revit.DB.Element
 	public virtual void ResetExternallyTaggedGeometry() => throw new System.NotImplementedException();
 	public virtual void SetOptions(Autodesk.Revit.DB.DirectShapeOptions options) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.DirectShapeOptions GetOptions() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.ElementId TypeId
+	{
+		get => throw new System.NotImplementedException();
+	}
 }

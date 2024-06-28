@@ -2,8 +2,6 @@ namespace Autodesk.Revit.DB;
 
 public partial class DirectShapeType : Autodesk.Revit.DB.ElementType
 {
-	public virtual Autodesk.Revit.DB.DirectShapeTypeUserAssignability get_UserAssignability() => throw new System.NotImplementedException();
-	public virtual void set_UserAssignability(Autodesk.Revit.DB.DirectShapeTypeUserAssignability userAssignability) => throw new System.NotImplementedException();
 	public virtual void SetShape(Autodesk.Revit.DB.ShapeBuilder pBuilder) => throw new System.NotImplementedException();
 	public virtual void AppendShape(Autodesk.Revit.DB.ShapeBuilder ShapeBuilder) => throw new System.NotImplementedException();
 	public virtual void AddReferenceCurve(Autodesk.Revit.DB.Curve refCurve,Autodesk.Revit.DB.DirectShapeReferenceOptions options) => throw new System.NotImplementedException();
@@ -21,4 +19,9 @@ public partial class DirectShapeType : Autodesk.Revit.DB.ElementType
 	public virtual void ResetExternallyTaggedGeometry() => throw new System.NotImplementedException();
 	public virtual void SetOptions(Autodesk.Revit.DB.DirectShapeTypeOptions options) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.DirectShapeTypeOptions GetOptions() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.DirectShapeTypeUserAssignability UserAssignability
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 }
