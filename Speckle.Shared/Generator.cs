@@ -7,13 +7,13 @@ public class Generator
 {
   private readonly Dictionary<string, bool> _boolDone = new();
   private readonly string _path;
-  private readonly Assembly _assembly;
+  private readonly Assembly[] _assemblies;
   private readonly string[] _namespaces;
 
-  public Generator(string path, Assembly assembly, string[] namespaces)
+  public Generator(string path, Assembly[] assemblies, string[] namespaces)
   {
     _path = Path.Combine(Environment.CurrentDirectory,  "..", "..", "..", "..", path, "generated");
-    _assembly = assembly;
+    _assemblies = assemblies;
     _namespaces = namespaces;
     AppDomain.CurrentDomain.ReflectionOnlyAssemblyResolve += CurrentDomainOnReflectionOnlyAssemblyResolve;
   }
@@ -22,7 +22,7 @@ public class Generator
   {
     string name = args.Name.Split(',')[0];
 
-    if (!name.StartsWith("System"))
+    if (!name.StartsWith("System") && !name.StartsWith("Presentation")&& !name.StartsWith("Windows"))
     {
       return null;
     }
@@ -50,7 +50,7 @@ public class Generator
     List<Type> definedTypes;
     try
     {
-      definedTypes = _assembly.GetExportedTypes().ToList();
+      definedTypes = _assemblies.SelectMany(x => x.GetExportedTypes()).ToList();
     }catch (ReflectionTypeLoadException e)
     {
       definedTypes = e.Types.ToList();
@@ -60,24 +60,40 @@ public class Generator
       .Where(x => _namespaces.Any(y => x.FullName?.StartsWith(y) ?? false)).ToList();
     foreach (var type in definedTypes)
     {
-      RenderType(type);
+      try
+      {
+        RenderType(type);
+      }
+      catch (ApplicationException)
+      {
+        Console.WriteLine($"Did not write type {type.FullName}");
+        _boolDone[type.FullName] = false;
+      }
     }
   }
 
   private Type RenderType(Type type)
   {
-    if (type.FullName is null || !_namespaces.Contains(type.Namespace))
+    if (type.FullName.StartsWith("System.Windows") || type.FullName.StartsWith("System.MulticastDelegate"))
     {
-      return type;
+      throw new ApplicationException($"Not dealing with base WPF types: {type.FullName}");
     }
     if (type.FullName.StartsWith("System."))
     {
       return type;
     }
-
-    if (_boolDone.TryGetValue(type.FullName, out _))
+    if (type.FullName is null || !_namespaces.Contains(type.Namespace))
     {
       return type;
+    }
+
+    if (_boolDone.TryGetValue(type.FullName, out var isDone))
+    {
+      if (isDone)
+      {
+        return type;
+      }
+      throw new ApplicationException($"Can't use skipped type: {type.FullName}");
     }
     _boolDone[type.FullName] = true;
     WriteType(type);

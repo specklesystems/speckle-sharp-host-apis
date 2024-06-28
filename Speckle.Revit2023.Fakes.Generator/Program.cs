@@ -2,6 +2,11 @@
 using Speckle.Shared;
 
 var asm = Assembly.GetEntryAssembly();
-var path = Path.Combine(Path.GetDirectoryName(asm.Location), ("RevitAPI.dll"));
-Generator generator = new("Speckle.Revit2023.Fakes", Assembly.ReflectionOnlyLoadFrom(path), ["Autodesk.Revit.DB", "Autodesk.Revit.DB.Architecture"]);
+Assembly GetAssembly(string name)
+{
+  var path = Path.Combine(Path.GetDirectoryName(asm.Location), name);
+  return Assembly.ReflectionOnlyLoadFrom(path);
+}
+
+Generator generator = new("Speckle.Revit2023.Fakes", [GetAssembly("RevitAPI.dll"), GetAssembly("RevitAPIUI.dll")], ["Autodesk.Revit.DB", "Autodesk.Revit.DB.Architecture", "Autodesk.Revit.UI"]);
 generator.Generate();
