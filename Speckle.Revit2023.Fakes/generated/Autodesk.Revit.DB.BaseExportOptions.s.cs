@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class BaseExportOptions : System.Object
+public partial class BaseExportOptions : System.IDisposable
 {
 	public static IList<System.String> GetPredefinedSetupNames(Autodesk.Revit.DB.Document document) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ExportLayerTable GetExportLayerTable() => throw new System.NotImplementedException();

@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class WorksetFilter : System.Object
+public partial class WorksetFilter : System.IDisposable
 {
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject

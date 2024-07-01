@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class ElementId : System.Object
+public partial class ElementId
 {
 	public ElementId(Autodesk.Revit.DB.BuiltInParameter parameterId) => throw new System.NotImplementedException();
 	public ElementId(Autodesk.Revit.DB.BuiltInCategory categoryId) => throw new System.NotImplementedException();

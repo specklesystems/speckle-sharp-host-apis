@@ -1,7 +1,7 @@
 namespace Autodesk.Revit.UI;
 
-public partial class IExternalEventHandler
+public partial interface IExternalEventHandler
 {
-	public virtual void Execute(Autodesk.Revit.UI.UIApplication app) => throw new System.NotImplementedException();
-	public virtual System.String GetName() => throw new System.NotImplementedException();
+	public  void Execute(Autodesk.Revit.UI.UIApplication app);
+	public  System.String GetName();
 }

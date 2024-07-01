@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class ICentralLockedCallback
+public partial interface ICentralLockedCallback
 {
-	public virtual System.Boolean ShouldWaitForLockAvailability() => throw new System.NotImplementedException();
+	public  System.Boolean ShouldWaitForLockAvailability();
 }

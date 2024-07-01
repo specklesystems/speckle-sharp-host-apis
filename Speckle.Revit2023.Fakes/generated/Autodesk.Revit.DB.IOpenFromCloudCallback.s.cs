@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class IOpenFromCloudCallback
+public partial interface IOpenFromCloudCallback
 {
-	public virtual Autodesk.Revit.DB.OpenConflictResult OnOpenConflict(Autodesk.Revit.DB.OpenConflictScenario scenario) => throw new System.NotImplementedException();
+	public  Autodesk.Revit.DB.OpenConflictResult OnOpenConflict(Autodesk.Revit.DB.OpenConflictScenario scenario);
 }

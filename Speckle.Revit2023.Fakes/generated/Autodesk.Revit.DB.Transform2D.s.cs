@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class Transform2D : System.Object
+public partial class Transform2D : System.IDisposable
 {
 	public Transform2D(Autodesk.Revit.DB.UV uVec,Autodesk.Revit.DB.UV vVec,Autodesk.Revit.DB.UV origin) => throw new System.NotImplementedException();
 	public Transform2D(Autodesk.Revit.DB.Transform2D other) => throw new System.NotImplementedException();

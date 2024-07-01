@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class ConfigurationReloadInfo : System.Object
+public partial class ConfigurationReloadInfo : System.IDisposable
 {
 	public ConfigurationReloadInfo() => throw new System.NotImplementedException();
 	public virtual ISet<Autodesk.Revit.DB.ElementId> GetCustomDataChangedElements() => throw new System.NotImplementedException();

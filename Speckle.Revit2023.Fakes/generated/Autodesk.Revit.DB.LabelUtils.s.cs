@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class LabelUtils : System.Object
+public partial class LabelUtils : System.IDisposable
 {
 	public static System.String GetLabelForBuiltInParameter(Autodesk.Revit.DB.ForgeTypeId parameterTypeId) => throw new System.NotImplementedException();
 	public static System.String GetLabelFor(Autodesk.Revit.DB.BuiltInCategory builtInCategory) => throw new System.NotImplementedException();

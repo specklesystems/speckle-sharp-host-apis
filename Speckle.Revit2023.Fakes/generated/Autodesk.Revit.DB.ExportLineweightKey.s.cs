@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class ExportLineweightKey : System.Object
+public partial class ExportLineweightKey : System.IDisposable
 {
 	public ExportLineweightKey(System.Int32 originalLineweight) => throw new System.NotImplementedException();
 	public ExportLineweightKey(Autodesk.Revit.DB.ExportLineweightKey other) => throw new System.NotImplementedException();

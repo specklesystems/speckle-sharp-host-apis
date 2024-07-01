@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.UI;
 
-public partial class ThinLinesOptions : System.Object
+public partial class ThinLinesOptions : System.IDisposable
 {
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject

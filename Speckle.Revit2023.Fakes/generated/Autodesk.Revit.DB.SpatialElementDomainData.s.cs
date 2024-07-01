@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class SpatialElementDomainData : System.Object
+public partial class SpatialElementDomainData : System.IDisposable
 {
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject

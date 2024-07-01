@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class PolymeshTopology : System.Object
+public partial class PolymeshTopology : System.IDisposable
 {
 	public virtual Autodesk.Revit.DB.PolymeshFacet GetFacet(System.Int32 idx) => throw new System.NotImplementedException();
 	public virtual IList<Autodesk.Revit.DB.PolymeshFacet> GetFacets() => throw new System.NotImplementedException();

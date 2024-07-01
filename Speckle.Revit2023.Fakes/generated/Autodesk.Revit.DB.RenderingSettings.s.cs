@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class RenderingSettings : System.Object
+public partial class RenderingSettings : System.IDisposable
 {
 	public virtual Autodesk.Revit.DB.BackgroundSettings GetBackgroundSettings() => throw new System.NotImplementedException();
 	public virtual void SetBackgroundSettings(Autodesk.Revit.DB.BackgroundSettings background) => throw new System.NotImplementedException();

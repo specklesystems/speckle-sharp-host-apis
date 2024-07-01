@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class GuidEnum : System.Object
+public partial class GuidEnum
 {
 	public GuidEnum(System.Guid guid) => throw new System.NotImplementedException();
 	public virtual System.Guid Guid

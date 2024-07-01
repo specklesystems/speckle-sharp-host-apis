@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class FailureMessageKey : System.Object
+public partial class FailureMessageKey : System.IDisposable
 {
 	public FailureMessageKey() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValid() => throw new System.NotImplementedException();

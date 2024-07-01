@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class AdaptiveComponentInstanceUtils : System.Object
+public partial class AdaptiveComponentInstanceUtils
 {
 	public static System.Boolean IsAdaptiveFamilySymbol(Autodesk.Revit.DB.FamilySymbol famSymb) => throw new System.NotImplementedException();
 	public static System.Boolean HasAdaptiveFamilySymbol(Autodesk.Revit.DB.FamilyInstance famInst) => throw new System.NotImplementedException();

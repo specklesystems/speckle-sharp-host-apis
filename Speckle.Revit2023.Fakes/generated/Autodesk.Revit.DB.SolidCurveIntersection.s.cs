@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class SolidCurveIntersection : System.Object
+public partial class SolidCurveIntersection : IEnumerable<Autodesk.Revit.DB.Curve>,System.IDisposable
 {
 	public virtual Autodesk.Revit.DB.Curve GetCurveSegment(System.Int32 index) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.CurveExtents GetCurveSegmentExtents(System.Int32 index) => throw new System.NotImplementedException();

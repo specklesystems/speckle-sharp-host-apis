@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class UV : System.Object
+public partial class UV
 {
 	public UV(System.Double u,System.Double v) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.UV Normalize() => throw new System.NotImplementedException();

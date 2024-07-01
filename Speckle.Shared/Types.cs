@@ -40,6 +40,10 @@ public partial class Generator
     {
       (typeString, typeInfo)  = WriteStruct(type);
     }
+    else if (type.IsInterface)
+    {
+      (typeString, typeInfo)  = WriteInterface(type);
+    }
     else
     {
       (typeString, typeInfo)  = WriteClass(type);
@@ -70,14 +74,39 @@ public partial class Generator
     sb.AppendLine($"namespace {clazz.Namespace};").AppendLine();
     sb.Append($"public partial class {clazz.Name}");
     string? baseClazz = null;
-    if (clazz.BaseType is not null)
+    bool appended = false;
+    bool isFirst = true;
+    if (clazz.BaseType is not null && clazz.BaseType != typeof(object))
     {
       RenderType(clazz.BaseType);
       sb.Append($" : {clazz.BaseType.FullName}");
       baseClazz = clazz.BaseType.FullName;
+      appended = true;
+      isFirst = false;
+    }
+    var interfaces = clazz.GetInterfaces().Except(clazz.BaseType?.GetInterfaces() ?? Enumerable.Empty<Type>()).ToList();
+    interfaces = interfaces.Except(interfaces.SelectMany(i => i.GetInterfaces())).ToList();
+    if (interfaces.Any())
+    {
+      if (!appended)
+      {
+        sb.Append(" : ");
+      }
+      foreach (var i in interfaces)
+      {
+        if (!isFirst)
+        {
+          sb.Append(",");
+        }
+        else
+        {;
+          isFirst = false;
+        }
+        sb.Append(FormGenericType(i));
+      }
     }
    
-    var (constructors, members) = WriteTypeBody(sb, clazz, false);
+    var (constructors, members) = WriteTypeBody(sb, clazz, GeneratedType.Class);
     return (sb.ToString(), new(clazz.FullName, baseClazz, constructors, members));
   }
 
@@ -86,41 +115,29 @@ public partial class Generator
     StringBuilder sb = new();
     sb.AppendLine($"namespace {clazz.Namespace};").AppendLine();
     sb.Append($"public partial struct {clazz.Name}");
-    var (constructors, members) = WriteTypeBody(sb, clazz, true);
+    var (constructors, members) = WriteTypeBody(sb, clazz, GeneratedType.Struct);
+    return (sb.ToString(), new(clazz.FullName, null, constructors, members));
+  }
+  
+  private (string, GeneratedTypeInfo)  WriteInterface(Type clazz)
+  {
+    StringBuilder sb = new();
+    sb.AppendLine($"namespace {clazz.Namespace};").AppendLine();
+    sb.Append($"public partial interface {clazz.Name}");
+    var (constructors, members) = WriteTypeBody(sb, clazz, GeneratedType.Interface);
     return (sb.ToString(), new(clazz.FullName, null, constructors, members));
   }
 
-  private (List<GeneratedConstructor>, List<GeneratedMember>)  WriteTypeBody( StringBuilder sb, Type clazz, bool isStruct)
+  private (List<GeneratedConstructor>, List<GeneratedMember>)  WriteTypeBody( StringBuilder sb, Type clazz, GeneratedType generatedType)
   {
     sb.AppendLine();
     sb.AppendLine("{");
-    var members = new List<GeneratedMember>();
-   var constructors = WriteConstructors(sb, clazz);
-    foreach(var method in clazz.GetMethods(BindingFlags.Instance | BindingFlags.Static | BindingFlags.DeclaredOnly | BindingFlags.Public))
+    List<GeneratedConstructor> constructors = new();
+    if (generatedType != GeneratedType.Interface)
     {
-      if (method.IsSpecialName //special is get/set for properties
-                               || IsExcluded(clazz.Name, method.Name))
-      {
-        continue;
-      }
-      try
-      {
-        var methodSb = new StringBuilder();
-        methodSb.Append("\t");
-        WriteMethod(methodSb, method);
-        sb.Append(methodSb);
-        members.Add(new (method.Name));
-      }
-      catch (FileLoadException)
-      {
-        Console.WriteLine($"Did not write {method.Name} on {clazz.FullName}");
-        
-      }
-      catch (ApplicationException)
-      {
-        Console.WriteLine($"Did not write {method.Name} on {clazz.FullName}");
-      }
+       constructors = WriteConstructors(sb, clazz);
     }
+   var members = WriteMethods(sb, clazz, generatedType);
     foreach(var propertyInfo in clazz.GetProperties(BindingFlags.Instance | BindingFlags.Static | BindingFlags.DeclaredOnly | BindingFlags.Public))
     {
       if (IsExcluded(clazz.Name, propertyInfo.Name))
@@ -131,7 +148,7 @@ public partial class Generator
       {
         var methodSb = new StringBuilder();
         methodSb.Append("\t");
-        WriteProperty(methodSb, propertyInfo, isStruct);
+        WriteProperty(methodSb, propertyInfo, generatedType);
         sb.Append(methodSb);
         members.Add(new (propertyInfo.Name));
       }

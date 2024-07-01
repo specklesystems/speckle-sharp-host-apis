@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class ExportLayerInfo : System.Object
+public partial class ExportLayerInfo : System.IDisposable
 {
 	public ExportLayerInfo() => throw new System.NotImplementedException();
 	public virtual void AddLayerModifier(Autodesk.Revit.DB.LayerModifier layerModifier) => throw new System.NotImplementedException();

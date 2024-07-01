@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.UI;
 
-public partial class FilterDialog : System.Object
+public partial class FilterDialog : System.IDisposable
 {
 	public FilterDialog(Autodesk.Revit.DB.Document doc,System.String name) => throw new System.NotImplementedException();
 	public FilterDialog(Autodesk.Revit.DB.Document doc,Autodesk.Revit.DB.ElementId filterToSelect) => throw new System.NotImplementedException();

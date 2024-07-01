@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class Definitions : System.Object
+public partial class Definitions : IEnumerable<Autodesk.Revit.DB.Definition>,System.IDisposable
 {
 	public Definitions() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.Definition Create(Autodesk.Revit.DB.ExternalDefinitionCreationOptions option) => throw new System.NotImplementedException();

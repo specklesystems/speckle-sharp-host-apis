@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class CopyPasteOptions : System.Object
+public partial class CopyPasteOptions : System.IDisposable
 {
 	public CopyPasteOptions() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.IDuplicateTypeNamesHandler GetDuplicateTypeNamesHandler() => throw new System.NotImplementedException();

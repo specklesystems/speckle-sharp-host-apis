@@ -6,7 +6,7 @@ namespace Speckle.Shared;
 public partial class Generator
 {
    
-  private void WriteProperty(StringBuilder sb, PropertyInfo propertyInfo, bool isStruct)
+  private void WriteProperty(StringBuilder sb, PropertyInfo propertyInfo, GeneratedType generatedType)
   {
     var wrotePropHeader = false;
     var getMethod = propertyInfo.GetGetMethod(false);
@@ -20,9 +20,16 @@ public partial class Generator
       if (wrotePropHeader is false)
       {
         wrotePropHeader = true;
-        WritePropertyHeader(sb, propertyInfo,getMethod.IsStatic, isStruct, isOverriden, getMethod.ReturnType);
+        WritePropertyHeader(sb, propertyInfo,getMethod.IsStatic, generatedType, isOverriden, getMethod.ReturnType);
+      }   
+      if (generatedType == GeneratedType.Interface)
+      {
+        sb.AppendLine("\t\tget;");
       }
-      sb.AppendLine("\t\tget => throw new System.NotImplementedException();");
+      else
+      {
+        sb.AppendLine("\t\tget => throw new System.NotImplementedException();");
+      }
     }
     var setMethod = propertyInfo.GetSetMethod(false);
     if (setMethod is not null) 
@@ -35,17 +42,25 @@ public partial class Generator
       bool isOverriden = setMethod.GetBaseDefinition().DeclaringType != propertyInfo.DeclaringType;
       if (wrotePropHeader is false)
       {
-        WritePropertyHeader(sb, propertyInfo, setMethod.IsStatic, isStruct, isOverriden, parameters[0].ParameterType);
+        WritePropertyHeader(sb, propertyInfo, setMethod.IsStatic, generatedType, isOverriden, parameters[0].ParameterType);
       }
-      sb.AppendLine("\t\tset {}");
+
+      if (generatedType == GeneratedType.Interface)
+      {
+        sb.AppendLine("\t\tset;");
+      }
+      else
+      {
+        sb.AppendLine("\t\tset {}");
+      }
     }
     sb.AppendLine("\t}");
   }
 
-  private void WritePropertyHeader(StringBuilder sb, PropertyInfo property, bool isStatic, bool isStruct, bool isOverriden, Type returnType)
+  private void WritePropertyHeader(StringBuilder sb, PropertyInfo property, bool isStatic, GeneratedType generatedType, bool isOverriden, Type returnType)
   {
     var extra = string.Empty;
-    if (!isStruct)
+    if (generatedType == GeneratedType.Class)
     {
       if (isStatic)
       {

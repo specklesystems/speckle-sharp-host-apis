@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.UI;
 
-public partial class UIDocument : System.Object
+public partial class UIDocument : System.IDisposable
 {
 	public UIDocument(Autodesk.Revit.DB.Document document) => throw new System.NotImplementedException();
 	public static Autodesk.Revit.DB.IFamilyLoadOptions GetRevitUIFamilyLoadOptions() => throw new System.NotImplementedException();

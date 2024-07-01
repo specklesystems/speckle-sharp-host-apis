@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class RoutingPreferenceRule : System.Object
+public partial class RoutingPreferenceRule : System.IDisposable
 {
 	public RoutingPreferenceRule(Autodesk.Revit.DB.ElementId MEPPartId,System.String description) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.RoutingCriterionBase GetCriterion(System.Int32 index) => throw new System.NotImplementedException();

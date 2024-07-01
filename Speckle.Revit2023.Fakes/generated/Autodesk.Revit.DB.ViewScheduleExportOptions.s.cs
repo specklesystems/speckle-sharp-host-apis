@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class ViewScheduleExportOptions : System.Object
+public partial class ViewScheduleExportOptions : System.IDisposable
 {
 	public ViewScheduleExportOptions(Autodesk.Revit.DB.ViewScheduleExportOptions other) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();

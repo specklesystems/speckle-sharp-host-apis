@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class ExternalFileReference : System.Object
+public partial class ExternalFileReference : System.IDisposable
 {
 	public virtual Autodesk.Revit.DB.ModelPath GetPath() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ModelPath GetAbsolutePath() => throw new System.NotImplementedException();

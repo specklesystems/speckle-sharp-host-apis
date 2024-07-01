@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class SolidSolidCutUtils : System.Object
+public partial class SolidSolidCutUtils
 {
 	public static void AddCutBetweenSolids(Autodesk.Revit.DB.Document document,Autodesk.Revit.DB.Element solidToBeCut,Autodesk.Revit.DB.Element cuttingSolid,System.Boolean splitFacesOfCuttingSolid) => throw new System.NotImplementedException();
 	public static void AddCutBetweenSolids(Autodesk.Revit.DB.Document document,Autodesk.Revit.DB.Element solidToBeCut,Autodesk.Revit.DB.Element cuttingSolid) => throw new System.NotImplementedException();

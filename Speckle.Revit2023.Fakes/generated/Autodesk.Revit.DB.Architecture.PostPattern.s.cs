@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB.Architecture;
 
-public partial class PostPattern : System.Object
+public partial class PostPattern : System.IDisposable
 {
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject

@@ -1,7 +1,7 @@
 namespace Autodesk.Revit.UI;
 
-public partial class IExternalApplication
+public partial interface IExternalApplication
 {
-	public virtual Autodesk.Revit.UI.Result OnStartup(Autodesk.Revit.UI.UIControlledApplication application) => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.UI.Result OnShutdown(Autodesk.Revit.UI.UIControlledApplication application) => throw new System.NotImplementedException();
+	public  Autodesk.Revit.UI.Result OnStartup(Autodesk.Revit.UI.UIControlledApplication application);
+	public  Autodesk.Revit.UI.Result OnShutdown(Autodesk.Revit.UI.UIControlledApplication application);
 }

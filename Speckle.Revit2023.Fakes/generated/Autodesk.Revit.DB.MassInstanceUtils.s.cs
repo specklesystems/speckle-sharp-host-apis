@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class MassInstanceUtils : System.Object
+public partial class MassInstanceUtils : System.IDisposable
 {
 	public static Autodesk.Revit.DB.ElementId AddMassLevelDataToMassInstance(Autodesk.Revit.DB.Document document,Autodesk.Revit.DB.ElementId massInstanceId,Autodesk.Revit.DB.ElementId levelId) => throw new System.NotImplementedException();
 	public static void RemoveMassLevelDataFromMassInstance(Autodesk.Revit.DB.Document document,Autodesk.Revit.DB.ElementId massInstanceId,Autodesk.Revit.DB.ElementId levelId) => throw new System.NotImplementedException();

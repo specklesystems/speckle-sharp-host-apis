@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class FaceSecondDerivatives : System.Object
+public partial class FaceSecondDerivatives : System.IDisposable
 {
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject

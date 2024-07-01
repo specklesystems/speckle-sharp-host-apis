@@ -1,5 +1,5 @@
 namespace Autodesk.Revit.UI;
 
-public partial class IExternalCommand
+public partial interface IExternalCommand
 {
 }

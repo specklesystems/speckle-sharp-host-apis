@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class FormatOptions : System.Object
+public partial class FormatOptions : System.IDisposable
 {
 	public FormatOptions(Autodesk.Revit.DB.FormatOptions other) => throw new System.NotImplementedException();
 	public FormatOptions(Autodesk.Revit.DB.ForgeTypeId unitTypeId,Autodesk.Revit.DB.ForgeTypeId symbolTypeId) => throw new System.NotImplementedException();

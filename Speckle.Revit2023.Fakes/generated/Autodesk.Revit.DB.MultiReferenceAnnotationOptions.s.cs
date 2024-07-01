@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class MultiReferenceAnnotationOptions : System.Object
+public partial class MultiReferenceAnnotationOptions : System.IDisposable
 {
 	public MultiReferenceAnnotationOptions(Autodesk.Revit.DB.MultiReferenceAnnotationType multiReferenceAnnotationType) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsAllowedDimensionStyleType(Autodesk.Revit.DB.DimensionStyleType dimensionStyleType) => throw new System.NotImplementedException();

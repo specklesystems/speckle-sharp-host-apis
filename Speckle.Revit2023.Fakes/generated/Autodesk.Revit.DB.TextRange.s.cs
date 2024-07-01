@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class TextRange : System.Object
+public partial class TextRange : System.IDisposable
 {
 	public TextRange(System.Int32 start,System.Int32 length) => throw new System.NotImplementedException();
 	public TextRange(Autodesk.Revit.DB.TextRange other) => throw new System.NotImplementedException();

@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class ExternalDefinitionCreationOptions : System.Object
+public partial class ExternalDefinitionCreationOptions : System.IDisposable
 {
 	public ExternalDefinitionCreationOptions(System.String name,Autodesk.Revit.DB.ForgeTypeId dataType) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ForgeTypeId GetDataType() => throw new System.NotImplementedException();

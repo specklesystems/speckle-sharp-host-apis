@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class ScheduleFieldId : System.Object
+public partial class ScheduleFieldId
 {
 	public ScheduleFieldId(System.Int32 id) => throw new System.NotImplementedException();
 	public static  Autodesk.Revit.DB.ScheduleFieldId InvalidScheduleFieldId

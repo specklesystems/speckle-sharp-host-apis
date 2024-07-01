@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class SolidUtils : System.Object
+public partial class SolidUtils
 {
 	public static Autodesk.Revit.DB.Solid Clone(Autodesk.Revit.DB.Solid solid) => throw new System.NotImplementedException();
 	public static Autodesk.Revit.DB.Solid CreateTransformed(Autodesk.Revit.DB.Solid solid,Autodesk.Revit.DB.Transform transform) => throw new System.NotImplementedException();

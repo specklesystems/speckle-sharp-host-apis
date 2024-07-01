@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class DimensionSegmentArray : Autodesk.Revit.DB.APIObject
+public partial class DimensionSegmentArray : Autodesk.Revit.DB.APIObject,System.Collections.IEnumerable
 {
 	public DimensionSegmentArray() => throw new System.NotImplementedException();
 	public virtual void Clear() => throw new System.NotImplementedException();

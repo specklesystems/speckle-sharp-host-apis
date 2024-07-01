@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class ElementTransformUtils : System.Object
+public partial class ElementTransformUtils
 {
 	public static System.Boolean CanMirrorElements(Autodesk.Revit.DB.Document ADoc,ICollection<Autodesk.Revit.DB.ElementId> elemIds) => throw new System.NotImplementedException();
 	public static System.Boolean CanMirrorElement(Autodesk.Revit.DB.Document ADoc,Autodesk.Revit.DB.ElementId elemId) => throw new System.NotImplementedException();

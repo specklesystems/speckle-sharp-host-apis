@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class PartMakerMethodToDivideVolumes : System.Object
+public partial class PartMakerMethodToDivideVolumes : System.IDisposable
 {
 	public virtual Autodesk.Revit.DB.Plane GetPlaneOfSketch() => throw new System.NotImplementedException();
 	public virtual IDictionary<Autodesk.Revit.DB.ElementId, System.Double> GetSplitRefsOffsets() => throw new System.NotImplementedException();

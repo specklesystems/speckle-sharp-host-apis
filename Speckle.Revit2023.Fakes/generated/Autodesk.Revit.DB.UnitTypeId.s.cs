@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class UnitTypeId : System.Object
+public partial class UnitTypeId
 {
 	public static  Autodesk.Revit.DB.ForgeTypeId WattsPerSquareMeterKelvin
 	{

@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class ComponentRepeater : Autodesk.Revit.DB.Element
+public partial class ComponentRepeater : Autodesk.Revit.DB.Element,IEnumerable<Autodesk.Revit.DB.ComponentRepeaterSlot>
 {
 	public virtual System.Boolean IsTypeValidForRepeater(Autodesk.Revit.DB.ElementId typeId) => throw new System.NotImplementedException();
 	public static System.Boolean CanElementBeRepeated(Autodesk.Revit.DB.Document ADoc,Autodesk.Revit.DB.ElementId elementId) => throw new System.NotImplementedException();

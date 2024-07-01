@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class InSessionPrintSetting : System.Object
+public partial class InSessionPrintSetting : Autodesk.Revit.DB.IPrintSetting,System.IDisposable
 {
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.PrintParameters PrintParameters

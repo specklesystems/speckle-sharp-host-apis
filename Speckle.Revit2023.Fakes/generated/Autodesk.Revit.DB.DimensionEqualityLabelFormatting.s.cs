@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class DimensionEqualityLabelFormatting : System.Object
+public partial class DimensionEqualityLabelFormatting : System.IDisposable
 {
 	public DimensionEqualityLabelFormatting(System.Int32 leadingSpaces,System.String prefix,Autodesk.Revit.DB.LabelType labelType,System.String suffix,Autodesk.Revit.DB.FormatOptions formatOptions) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.FormatOptions GetFormatOptions() => throw new System.NotImplementedException();

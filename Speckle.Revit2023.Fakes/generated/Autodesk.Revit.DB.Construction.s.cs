@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class Construction : System.Object
+public partial class Construction
 {
 	public virtual System.String Name
 	{

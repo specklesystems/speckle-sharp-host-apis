@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class PolylineSegments : System.Object
+public partial class PolylineSegments : System.IDisposable
 {
 	public virtual IList<Autodesk.Revit.DB.XYZ> GetVertices() => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();

@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class BRepBuilderPersistentIds : System.Object
+public partial class BRepBuilderPersistentIds : System.IDisposable
 {
 	public BRepBuilderPersistentIds(Autodesk.Revit.DB.BRepBuilder bRepBuilder) => throw new System.NotImplementedException();
 	public virtual void AddSubTag(Autodesk.Revit.DB.ExternalGeometryId externalGeometryId,Autodesk.Revit.DB.BRepBuilderGeometryId brepBuilderGeometryId) => throw new System.NotImplementedException();

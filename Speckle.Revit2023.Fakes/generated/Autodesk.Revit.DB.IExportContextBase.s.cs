@@ -1,10 +1,10 @@
 namespace Autodesk.Revit.DB;
 
-public partial class IExportContextBase
+public partial interface IExportContextBase
 {
-	public virtual Autodesk.Revit.DB.RenderNodeAction OnCurve(Autodesk.Revit.DB.CurveNode node) => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.RenderNodeAction OnPolyline(Autodesk.Revit.DB.PolylineNode node) => throw new System.NotImplementedException();
-	public virtual void OnLineSegment(Autodesk.Revit.DB.LineSegment segment) => throw new System.NotImplementedException();
-	public virtual void OnPolylineSegments(Autodesk.Revit.DB.PolylineSegments segments) => throw new System.NotImplementedException();
-	public virtual void OnText(Autodesk.Revit.DB.TextNode node) => throw new System.NotImplementedException();
+	public  Autodesk.Revit.DB.RenderNodeAction OnCurve(Autodesk.Revit.DB.CurveNode node);
+	public  Autodesk.Revit.DB.RenderNodeAction OnPolyline(Autodesk.Revit.DB.PolylineNode node);
+	public  void OnLineSegment(Autodesk.Revit.DB.LineSegment segment);
+	public  void OnPolylineSegments(Autodesk.Revit.DB.PolylineSegments segments);
+	public  void OnText(Autodesk.Revit.DB.TextNode node);
 }

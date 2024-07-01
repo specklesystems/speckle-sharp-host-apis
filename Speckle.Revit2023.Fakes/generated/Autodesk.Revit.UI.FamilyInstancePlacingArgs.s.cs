@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.UI;
 
-public partial class FamilyInstancePlacingArgs : System.Object
+public partial class FamilyInstancePlacingArgs : System.IDisposable
 {
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject

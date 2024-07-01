@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class SpecTypeId : System.Object
+public partial class SpecTypeId
 {
 	public static  Autodesk.Revit.DB.ForgeTypeId WireDiameter
 	{

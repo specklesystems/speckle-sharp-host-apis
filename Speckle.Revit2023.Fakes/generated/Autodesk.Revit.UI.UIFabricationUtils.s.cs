@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.UI;
 
-public partial class UIFabricationUtils : System.Object
+public partial class UIFabricationUtils
 {
 	public static void SetOpenConnectorIndicatorPlanColor(Autodesk.Revit.DB.Color color) => throw new System.NotImplementedException();
 	public static Autodesk.Revit.DB.Color GetOpenConnectorIndicatorPlanColor() => throw new System.NotImplementedException();

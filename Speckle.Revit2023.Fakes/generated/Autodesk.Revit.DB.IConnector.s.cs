@@ -1,33 +1,33 @@
 namespace Autodesk.Revit.DB;
 
-public partial class IConnector
+public partial interface IConnector
 {
-	public virtual System.Double Radius
+	public  System.Double Radius
 	{
-		get => throw new System.NotImplementedException();
+		get;
 	}
-	public virtual System.Double Height
+	public  System.Double Height
 	{
-		get => throw new System.NotImplementedException();
+		get;
 	}
-	public virtual System.Double Width
+	public  System.Double Width
 	{
-		get => throw new System.NotImplementedException();
+		get;
 	}
-	public virtual Autodesk.Revit.DB.ConnectorProfileType Shape
+	public  Autodesk.Revit.DB.ConnectorProfileType Shape
 	{
-		get => throw new System.NotImplementedException();
+		get;
 	}
-	public virtual Autodesk.Revit.DB.Domain Domain
+	public  Autodesk.Revit.DB.Domain Domain
 	{
-		get => throw new System.NotImplementedException();
+		get;
 	}
-	public virtual Autodesk.Revit.DB.XYZ Origin
+	public  Autodesk.Revit.DB.XYZ Origin
 	{
-		get => throw new System.NotImplementedException();
+		get;
 	}
-	public virtual Autodesk.Revit.DB.Transform CoordinateSystem
+	public  Autodesk.Revit.DB.Transform CoordinateSystem
 	{
-		get => throw new System.NotImplementedException();
+		get;
 	}
 }

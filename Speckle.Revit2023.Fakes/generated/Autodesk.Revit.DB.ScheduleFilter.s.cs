@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class ScheduleFilter : System.Object
+public partial class ScheduleFilter : System.IDisposable
 {
 	public ScheduleFilter(Autodesk.Revit.DB.ScheduleFieldId fieldId,Autodesk.Revit.DB.ScheduleFilterType filterType,Autodesk.Revit.DB.ElementId value) => throw new System.NotImplementedException();
 	public ScheduleFilter(Autodesk.Revit.DB.ScheduleFieldId fieldId,Autodesk.Revit.DB.ScheduleFilterType filterType,System.String value) => throw new System.NotImplementedException();

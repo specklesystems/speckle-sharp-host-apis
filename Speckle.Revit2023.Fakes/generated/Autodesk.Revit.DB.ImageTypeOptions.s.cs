@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class ImageTypeOptions : System.Object
+public partial class ImageTypeOptions : System.IDisposable
 {
 	public ImageTypeOptions(Autodesk.Revit.DB.ExternalResourceReference resourceReference,Autodesk.Revit.DB.ImageTypeSource sourceType) => throw new System.NotImplementedException();
 	public ImageTypeOptions(System.String path,System.Boolean useRelativePath,Autodesk.Revit.DB.ImageTypeSource sourceType) => throw new System.NotImplementedException();

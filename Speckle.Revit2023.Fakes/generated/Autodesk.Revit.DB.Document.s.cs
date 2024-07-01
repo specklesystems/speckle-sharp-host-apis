@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class Document : System.Object
+public partial class Document : System.IDisposable
 {
 	public virtual void Save() => throw new System.NotImplementedException();
 	public virtual void SaveAs(Autodesk.Revit.DB.ModelPath path,Autodesk.Revit.DB.SaveAsOptions options) => throw new System.NotImplementedException();

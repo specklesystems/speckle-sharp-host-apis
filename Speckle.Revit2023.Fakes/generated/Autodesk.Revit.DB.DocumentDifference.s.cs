@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class DocumentDifference : System.Object
+public partial class DocumentDifference : System.IDisposable
 {
 	public virtual ISet<Autodesk.Revit.DB.ElementId> GetCreatedElementIds() => throw new System.NotImplementedException();
 	public virtual ISet<Autodesk.Revit.DB.ElementId> GetModifiedElementIds() => throw new System.NotImplementedException();

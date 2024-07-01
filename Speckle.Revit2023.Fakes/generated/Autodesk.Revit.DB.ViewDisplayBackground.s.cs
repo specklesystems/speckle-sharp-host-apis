@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class ViewDisplayBackground : System.Object
+public partial class ViewDisplayBackground : System.IDisposable
 {
 	public static Autodesk.Revit.DB.ViewDisplayBackground CreateGradient(Autodesk.Revit.DB.Color skyColor,Autodesk.Revit.DB.Color horizonColor,Autodesk.Revit.DB.Color groundColor) => throw new System.NotImplementedException();
 	public static Autodesk.Revit.DB.ViewDisplayBackground CreateImage(System.String imagePath,Autodesk.Revit.DB.ViewDisplayBackgroundImageFlags flags,Autodesk.Revit.DB.UV imageOffsets,Autodesk.Revit.DB.UV imageScales) => throw new System.NotImplementedException();

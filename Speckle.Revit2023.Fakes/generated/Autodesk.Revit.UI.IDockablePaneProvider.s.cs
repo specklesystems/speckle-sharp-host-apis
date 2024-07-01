@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.UI;
 
-public partial class IDockablePaneProvider
+public partial interface IDockablePaneProvider
 {
-	public virtual void SetupDockablePane(Autodesk.Revit.UI.DockablePaneProviderData data) => throw new System.NotImplementedException();
+	public  void SetupDockablePane(Autodesk.Revit.UI.DockablePaneProviderData data);
 }

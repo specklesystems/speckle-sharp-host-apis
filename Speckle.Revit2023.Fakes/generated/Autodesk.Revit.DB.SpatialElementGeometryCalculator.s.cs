@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class SpatialElementGeometryCalculator : System.Object
+public partial class SpatialElementGeometryCalculator : System.IDisposable
 {
 	public SpatialElementGeometryCalculator(Autodesk.Revit.DB.Document aDoc,Autodesk.Revit.DB.SpatialElementBoundaryOptions options) => throw new System.NotImplementedException();
 	public SpatialElementGeometryCalculator(Autodesk.Revit.DB.Document aDoc) => throw new System.NotImplementedException();

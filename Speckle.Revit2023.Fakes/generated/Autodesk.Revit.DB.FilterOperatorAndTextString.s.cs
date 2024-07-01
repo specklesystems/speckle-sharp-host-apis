@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class FilterOperatorAndTextString : System.Object
+public partial class FilterOperatorAndTextString : System.IDisposable
 {
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject

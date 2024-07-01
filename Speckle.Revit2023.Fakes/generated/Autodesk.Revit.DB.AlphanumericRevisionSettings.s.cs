@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class AlphanumericRevisionSettings : System.Object
+public partial class AlphanumericRevisionSettings : System.IDisposable
 {
 	public AlphanumericRevisionSettings(IList<System.String> sequence,System.String prefix,System.String suffix) => throw new System.NotImplementedException();
 	public AlphanumericRevisionSettings(Autodesk.Revit.DB.AlphanumericRevisionSettings other) => throw new System.NotImplementedException();

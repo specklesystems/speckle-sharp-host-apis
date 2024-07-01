@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class ViewDisplayDepthCueing : System.Object
+public partial class ViewDisplayDepthCueing : System.IDisposable
 {
 	public virtual void SetStartEndPercentages(System.Int32 startPercentage,System.Int32 endPercentage) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();

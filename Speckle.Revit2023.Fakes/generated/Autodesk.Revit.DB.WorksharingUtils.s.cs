@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class WorksharingUtils : System.Object
+public partial class WorksharingUtils : System.IDisposable
 {
 	public static Autodesk.Revit.DB.ModelUpdatesStatus GetModelUpdatesStatus(Autodesk.Revit.DB.Document document,Autodesk.Revit.DB.ElementId elementId) => throw new System.NotImplementedException();
 	public static Autodesk.Revit.DB.CheckoutStatus GetCheckoutStatus(Autodesk.Revit.DB.Document document,Autodesk.Revit.DB.ElementId elementId) => throw new System.NotImplementedException();

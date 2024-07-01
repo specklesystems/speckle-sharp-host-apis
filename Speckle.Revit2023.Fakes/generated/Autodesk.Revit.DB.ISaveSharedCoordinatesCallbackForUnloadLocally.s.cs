@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class ISaveSharedCoordinatesCallbackForUnloadLocally
+public partial interface ISaveSharedCoordinatesCallbackForUnloadLocally
 {
-	public virtual Autodesk.Revit.DB.SaveModifiedLinksOptionsForUnloadLocally GetSaveModifiedLinksOptionForUnloadLocally(Autodesk.Revit.DB.RevitLinkType link) => throw new System.NotImplementedException();
+	public  Autodesk.Revit.DB.SaveModifiedLinksOptionsForUnloadLocally GetSaveModifiedLinksOptionForUnloadLocally(Autodesk.Revit.DB.RevitLinkType link);
 }

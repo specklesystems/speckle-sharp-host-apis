@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class FormatValueOptions : System.Object
+public partial class FormatValueOptions : System.IDisposable
 {
 	public FormatValueOptions() => throw new System.NotImplementedException();
 	public virtual void SetFormatOptions(Autodesk.Revit.DB.FormatOptions formatOptions) => throw new System.NotImplementedException();

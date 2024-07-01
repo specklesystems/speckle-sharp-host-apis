@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class FailureDefinition : System.Object
+public partial class FailureDefinition : System.IDisposable
 {
 	public static Autodesk.Revit.DB.FailureDefinition CreateFailureDefinition(Autodesk.Revit.DB.FailureDefinitionId id,Autodesk.Revit.DB.FailureSeverity severity,System.String messageString) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.FailureDefinition AddResolutionType(Autodesk.Revit.DB.FailureResolutionType type,System.String caption,System.Type classOfResolution) => throw new System.NotImplementedException();

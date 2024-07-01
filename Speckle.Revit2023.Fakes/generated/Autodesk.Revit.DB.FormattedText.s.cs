@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class FormattedText : System.Object
+public partial class FormattedText : System.IDisposable
 {
 	public FormattedText(System.String plainText) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.TextRange Find(System.String searchString,System.Int32 startIndex,System.Boolean matchCase,System.Boolean matchWholeWord) => throw new System.NotImplementedException();

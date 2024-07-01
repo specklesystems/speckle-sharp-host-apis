@@ -1,7 +1,7 @@
 namespace Autodesk.Revit.DB;
 
-public partial class ITransactionFinalizer
+public partial interface ITransactionFinalizer
 {
-	public virtual void OnCommitted(Autodesk.Revit.DB.Document document,System.String strTransactionName) => throw new System.NotImplementedException();
-	public virtual void OnRolledBack(Autodesk.Revit.DB.Document document,System.String strTransactionName) => throw new System.NotImplementedException();
+	public  void OnCommitted(Autodesk.Revit.DB.Document document,System.String strTransactionName);
+	public  void OnRolledBack(Autodesk.Revit.DB.Document document,System.String strTransactionName);
 }

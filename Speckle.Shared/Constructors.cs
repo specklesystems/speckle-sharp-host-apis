@@ -28,7 +28,7 @@ public partial class Generator
         var constructorSb = new StringBuilder();
         constructorSb.Append($"\tpublic {clazz.Name}(");
         var parameters = constructor.GetParameters();
-        WriteMethodBody(constructorSb, parameters, clazz.BaseType);
+        WriteMethodBody(constructorSb, parameters, clazz.BaseType, GeneratedType.Class);
         sb.Append(constructorSb);
         generatedConstructor.Add(new GeneratedConstructor(parameters.Select(x => new GeneratedParameter(x.ParameterType, x.Name)).ToList()));
       }

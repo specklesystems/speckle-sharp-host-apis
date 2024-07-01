@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class RoutingPreferenceManager : System.Object
+public partial class RoutingPreferenceManager : System.IDisposable
 {
 	public virtual System.Int32 GetNumberOfRules(Autodesk.Revit.DB.RoutingPreferenceRuleGroupType eGroupType) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.RoutingPreferenceRule GetRule(Autodesk.Revit.DB.RoutingPreferenceRuleGroupType groupType,System.Int32 index) => throw new System.NotImplementedException();

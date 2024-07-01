@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class BooleanOperationsUtils : System.Object
+public partial class BooleanOperationsUtils : System.IDisposable
 {
 	public static void ExecuteBooleanOperationModifyingOriginalSolid(Autodesk.Revit.DB.Solid solid0,Autodesk.Revit.DB.Solid solid1,Autodesk.Revit.DB.BooleanOperationsType booleanType) => throw new System.NotImplementedException();
 	public static void CutWithHalfSpaceModifyingOriginalSolid(Autodesk.Revit.DB.Solid solid,Autodesk.Revit.DB.Plane plane) => throw new System.NotImplementedException();

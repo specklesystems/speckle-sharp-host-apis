@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.UI;
 
-public partial class UIApplication : System.Object
+public partial class UIApplication : System.IDisposable
 {
 	public static void DoDragDrop(System.Object dropData,Autodesk.Revit.UI.IDropHandler handler) => throw new System.NotImplementedException();
 	public static void DoDragDrop(ICollection<System.String> dropData) => throw new System.NotImplementedException();

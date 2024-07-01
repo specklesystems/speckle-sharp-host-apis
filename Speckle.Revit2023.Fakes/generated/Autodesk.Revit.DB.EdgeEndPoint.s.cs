@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class EdgeEndPoint : System.Object
+public partial class EdgeEndPoint : System.IDisposable
 {
 	public EdgeEndPoint(Autodesk.Revit.DB.EdgeEndPoint otherObject) => throw new System.NotImplementedException();
 	public EdgeEndPoint(Autodesk.Revit.DB.Edge edge,System.Int32 index) => throw new System.NotImplementedException();

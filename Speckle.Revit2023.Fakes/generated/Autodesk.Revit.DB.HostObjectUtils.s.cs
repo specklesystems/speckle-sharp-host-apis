@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class HostObjectUtils : System.Object
+public partial class HostObjectUtils
 {
 	public static IList<Autodesk.Revit.DB.Reference> GetTopFaces(Autodesk.Revit.DB.HostObject hostObject) => throw new System.NotImplementedException();
 	public static IList<Autodesk.Revit.DB.Reference> GetBottomFaces(Autodesk.Revit.DB.HostObject hostObject) => throw new System.NotImplementedException();

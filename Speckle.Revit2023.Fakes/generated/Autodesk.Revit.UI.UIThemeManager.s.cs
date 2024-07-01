@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.UI;
 
-public partial class UIThemeManager : System.Object
+public partial class UIThemeManager
 {
 	public static System.String GetThemeName(Autodesk.Revit.UI.UITheme frameTheme) => throw new System.NotImplementedException();
 	public static  Autodesk.Revit.UI.UITheme CurrentTheme

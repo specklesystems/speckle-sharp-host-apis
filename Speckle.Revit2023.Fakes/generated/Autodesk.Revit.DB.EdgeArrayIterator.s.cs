@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class EdgeArrayIterator : Autodesk.Revit.DB.APIObject
+public partial class EdgeArrayIterator : Autodesk.Revit.DB.APIObject,System.Collections.IEnumerator
 {
 	public EdgeArrayIterator() => throw new System.NotImplementedException();
 	public virtual System.Boolean MoveNext() => throw new System.NotImplementedException();

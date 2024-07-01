@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class UnitUtils : System.Object
+public partial class UnitUtils
 {
 	public static System.Double Convert(System.Double value,Autodesk.Revit.DB.ForgeTypeId currentUnitTypeId,Autodesk.Revit.DB.ForgeTypeId desiredUnitTypeId) => throw new System.NotImplementedException();
 	public static System.Double ConvertFromInternalUnits(System.Double value,Autodesk.Revit.DB.ForgeTypeId unitTypeId) => throw new System.NotImplementedException();

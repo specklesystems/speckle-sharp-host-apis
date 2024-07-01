@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class IFCExportOptions : System.Object
+public partial class IFCExportOptions : System.IDisposable
 {
 	public IFCExportOptions(Autodesk.Revit.DB.IFCExportOptions from) => throw new System.NotImplementedException();
 	public virtual void Assign(Autodesk.Revit.DB.IFCExportOptions sourceOptions) => throw new System.NotImplementedException();

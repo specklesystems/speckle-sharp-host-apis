@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class KeyBasedTreeEntries : System.Object
+public partial class KeyBasedTreeEntries : IEnumerable<Autodesk.Revit.DB.KeyBasedTreeEntry>,System.IDisposable
 {
 	public virtual Autodesk.Revit.DB.KeyBasedTreeEntry FindEntry(System.String key) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.KeyBasedTreeEntriesIterator GetKeyBasedTreeEntriesIterator() => throw new System.NotImplementedException();

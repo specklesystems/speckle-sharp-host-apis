@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class ViewDisplayModel : System.Object
+public partial class ViewDisplayModel : System.IDisposable
 {
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject

@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class ExternalResourceLoadData : System.Object
+public partial class ExternalResourceLoadData : System.IDisposable
 {
 	public virtual Autodesk.Revit.DB.ExternalResourceReference GetExternalResourceReference() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ExternalResourceLoadContent GetLoadContent() => throw new System.NotImplementedException();

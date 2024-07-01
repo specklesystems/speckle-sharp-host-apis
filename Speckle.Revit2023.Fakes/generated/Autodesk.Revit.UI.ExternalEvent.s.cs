@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.UI;
 
-public partial class ExternalEvent : System.Object
+public partial class ExternalEvent : System.IDisposable
 {
 	public static Autodesk.Revit.UI.ExternalEvent Create(Autodesk.Revit.UI.IExternalEventHandler handler) => throw new System.NotImplementedException();
 	public static Autodesk.Revit.UI.ExternalEvent CreateJournalable(Autodesk.Revit.UI.IExternalEventHandler handler) => throw new System.NotImplementedException();

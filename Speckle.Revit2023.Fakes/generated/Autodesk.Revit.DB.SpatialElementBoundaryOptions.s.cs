@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class SpatialElementBoundaryOptions : System.Object
+public partial class SpatialElementBoundaryOptions : System.IDisposable
 {
 	public SpatialElementBoundaryOptions() => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();

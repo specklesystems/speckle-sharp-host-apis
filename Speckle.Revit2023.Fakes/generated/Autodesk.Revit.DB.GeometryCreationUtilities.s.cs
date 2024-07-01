@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class GeometryCreationUtilities : System.Object
+public partial class GeometryCreationUtilities
 {
 	public static Autodesk.Revit.DB.Solid CreateExtrusionGeometry(IList<Autodesk.Revit.DB.CurveLoop> profileLoops,Autodesk.Revit.DB.XYZ extrusionDir,System.Double extrusionDist,Autodesk.Revit.DB.SolidOptions solidOptions) => throw new System.NotImplementedException();
 	public static Autodesk.Revit.DB.Solid CreateExtrusionGeometry(IList<Autodesk.Revit.DB.CurveLoop> profileLoops,Autodesk.Revit.DB.XYZ extrusionDir,System.Double extrusionDist) => throw new System.NotImplementedException();

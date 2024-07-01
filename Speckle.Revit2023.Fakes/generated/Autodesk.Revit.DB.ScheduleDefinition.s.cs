@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class ScheduleDefinition : System.Object
+public partial class ScheduleDefinition : System.IDisposable
 {
 	public virtual System.Boolean CanIncludeLinkedFiles() => throw new System.NotImplementedException();
 	public virtual void AddEmbeddedSchedule(Autodesk.Revit.DB.ElementId categoryId) => throw new System.NotImplementedException();

@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class PrintSetting : Autodesk.Revit.DB.Element
+public partial class PrintSetting : Autodesk.Revit.DB.Element,Autodesk.Revit.DB.IPrintSetting
 {
 	public virtual Autodesk.Revit.DB.PrintParameters PrintParameters
 	{

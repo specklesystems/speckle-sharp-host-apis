@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class SubTransaction : System.Object
+public partial class SubTransaction : System.IDisposable
 {
 	public SubTransaction(Autodesk.Revit.DB.Document document) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.TransactionStatus Start() => throw new System.NotImplementedException();

@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class AssemblyViewUtils : System.Object
+public partial class AssemblyViewUtils
 {
 	public static Autodesk.Revit.DB.View3D Create3DOrthographic(Autodesk.Revit.DB.Document document,Autodesk.Revit.DB.ElementId assemblyInstanceId,Autodesk.Revit.DB.ElementId viewTemplateId,System.Boolean isAssigned) => throw new System.NotImplementedException();
 	public static Autodesk.Revit.DB.View3D Create3DOrthographic(Autodesk.Revit.DB.Document document,Autodesk.Revit.DB.ElementId assemblyInstanceId) => throw new System.NotImplementedException();

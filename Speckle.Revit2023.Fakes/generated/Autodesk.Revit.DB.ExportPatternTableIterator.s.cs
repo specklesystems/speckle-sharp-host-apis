@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class ExportPatternTableIterator : System.Object
+public partial class ExportPatternTableIterator : IEnumerator<KeyValuePair<Autodesk.Revit.DB.ExportPatternKey, Autodesk.Revit.DB.ExportPatternInfo>>
 {
 	public virtual System.Boolean MoveNext() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsDone() => throw new System.NotImplementedException();

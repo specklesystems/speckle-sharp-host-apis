@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class ScheduleField : System.Object
+public partial class ScheduleField : System.IDisposable
 {
 	public virtual System.Boolean IsValidCombinedParameters(IList<Autodesk.Revit.DB.TableCellCombinedParameterData> data) => throw new System.NotImplementedException();
 	public virtual IList<Autodesk.Revit.DB.TableCellCombinedParameterData> GetCombinedParameters() => throw new System.NotImplementedException();

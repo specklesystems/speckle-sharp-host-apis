@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class CombinableElementArrayIterator : Autodesk.Revit.DB.APIObject
+public partial class CombinableElementArrayIterator : Autodesk.Revit.DB.APIObject,System.Collections.IEnumerator
 {
 	public CombinableElementArrayIterator() => throw new System.NotImplementedException();
 	public virtual System.Boolean MoveNext() => throw new System.NotImplementedException();

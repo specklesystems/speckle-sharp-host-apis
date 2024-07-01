@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class ReloadSwapOutInfo : System.Object
+public partial class ReloadSwapOutInfo : System.IDisposable
 {
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject

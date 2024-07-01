@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class RelinquishOptions : System.Object
+public partial class RelinquishOptions : System.IDisposable
 {
 	public RelinquishOptions(System.Boolean relinquishEverything) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();

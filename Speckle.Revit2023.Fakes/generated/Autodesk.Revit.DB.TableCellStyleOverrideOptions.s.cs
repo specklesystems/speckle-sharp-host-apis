@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class TableCellStyleOverrideOptions : System.Object
+public partial class TableCellStyleOverrideOptions : System.IDisposable
 {
 	public TableCellStyleOverrideOptions(Autodesk.Revit.DB.TableCellStyleOverrideOptions other) => throw new System.NotImplementedException();
 	public virtual void SetAllOverrides(System.Boolean bOverride) => throw new System.NotImplementedException();

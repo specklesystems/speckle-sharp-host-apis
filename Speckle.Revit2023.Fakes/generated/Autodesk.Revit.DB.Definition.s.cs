@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class Definition : System.Object
+public partial class Definition
 {
 	public virtual Autodesk.Revit.DB.ForgeTypeId GetGroupTypeId() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ForgeTypeId GetDataType() => throw new System.NotImplementedException();

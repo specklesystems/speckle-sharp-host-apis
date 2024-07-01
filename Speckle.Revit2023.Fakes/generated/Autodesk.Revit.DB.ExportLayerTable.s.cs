@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class ExportLayerTable : System.Object
+public partial class ExportLayerTable : IEnumerable<KeyValuePair<Autodesk.Revit.DB.ExportLayerKey, Autodesk.Revit.DB.ExportLayerInfo>>,System.IDisposable
 {
 	public ExportLayerTable() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ExportLayerTableIterator GetLayerTableIterator() => throw new System.NotImplementedException();

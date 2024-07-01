@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class ViewSheetSet : Autodesk.Revit.DB.Element
+public partial class ViewSheetSet : Autodesk.Revit.DB.Element,Autodesk.Revit.DB.IViewSheetSet
 {
 	public virtual System.Boolean IsAutomatic
 	{

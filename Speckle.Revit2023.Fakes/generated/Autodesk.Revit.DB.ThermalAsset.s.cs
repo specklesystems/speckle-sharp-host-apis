@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class ThermalAsset : System.Object
+public partial class ThermalAsset : System.IDisposable
 {
 	public ThermalAsset(System.String name,Autodesk.Revit.DB.ThermalMaterialType materialType) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ThermalAsset Copy() => throw new System.NotImplementedException();

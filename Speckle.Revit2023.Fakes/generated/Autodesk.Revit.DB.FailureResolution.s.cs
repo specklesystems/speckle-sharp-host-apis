@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class FailureResolution : System.Object
+public partial class FailureResolution : System.IDisposable
 {
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject

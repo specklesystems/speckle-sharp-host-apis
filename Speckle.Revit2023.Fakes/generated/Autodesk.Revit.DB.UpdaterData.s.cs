@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class UpdaterData : System.Object
+public partial class UpdaterData : System.IDisposable
 {
 	public virtual ICollection<Autodesk.Revit.DB.ElementId> GetAddedElementIds() => throw new System.NotImplementedException();
 	public virtual ICollection<Autodesk.Revit.DB.ElementId> GetDeletedElementIds() => throw new System.NotImplementedException();

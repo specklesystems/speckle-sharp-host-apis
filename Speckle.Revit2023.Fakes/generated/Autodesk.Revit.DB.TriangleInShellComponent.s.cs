@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class TriangleInShellComponent : System.Object
+public partial class TriangleInShellComponent : System.IDisposable
 {
 	public TriangleInShellComponent(Autodesk.Revit.DB.TriangleInShellComponent other) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();

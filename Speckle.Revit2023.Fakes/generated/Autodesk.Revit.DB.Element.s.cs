@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class Element : System.Object
+public partial class Element : System.IDisposable
 {
 	public virtual Autodesk.Revit.DB.Parameter GetParameter(Autodesk.Revit.DB.ForgeTypeId parameterTypeId) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsHidden(Autodesk.Revit.DB.View pView) => throw new System.NotImplementedException();

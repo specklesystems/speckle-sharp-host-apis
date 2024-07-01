@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class TessellatedBuildIssue : System.Object
+public partial class TessellatedBuildIssue : System.IDisposable
 {
 	public virtual System.Boolean IsValidIssue() => throw new System.NotImplementedException();
 	public virtual System.String GetIssueDescription() => throw new System.NotImplementedException();

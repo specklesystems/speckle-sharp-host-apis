@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class BaseImportOptions : System.Object
+public partial class BaseImportOptions : System.IDisposable
 {
 	public virtual Autodesk.Revit.DB.ForgeTypeId GetDefaultLengthUnit() => throw new System.NotImplementedException();
 	public virtual void SetDefaultLengthUnit(Autodesk.Revit.DB.ForgeTypeId specTypeId) => throw new System.NotImplementedException();

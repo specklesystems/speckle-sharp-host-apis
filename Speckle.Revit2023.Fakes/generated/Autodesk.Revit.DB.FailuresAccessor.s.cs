@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class FailuresAccessor : System.Object
+public partial class FailuresAccessor : System.IDisposable
 {
 	public virtual System.Boolean IsActive() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.Document GetDocument() => throw new System.NotImplementedException();

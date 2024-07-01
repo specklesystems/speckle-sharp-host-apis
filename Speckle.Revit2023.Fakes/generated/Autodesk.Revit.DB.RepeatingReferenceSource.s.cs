@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class RepeatingReferenceSource : System.Object
+public partial class RepeatingReferenceSource : System.IDisposable
 {
 	public static System.Boolean HasRepeatingReferenceSource(Autodesk.Revit.DB.Document document,Autodesk.Revit.DB.ElementId elementId) => throw new System.NotImplementedException();
 	public static Autodesk.Revit.DB.RepeatingReferenceSource GetDefaultRepeatingReferenceSource(Autodesk.Revit.DB.Document document,Autodesk.Revit.DB.ElementId elementId) => throw new System.NotImplementedException();

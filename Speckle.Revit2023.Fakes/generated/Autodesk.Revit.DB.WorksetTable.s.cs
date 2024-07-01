@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class WorksetTable : System.Object
+public partial class WorksetTable : System.IDisposable
 {
 	public virtual Autodesk.Revit.DB.Workset GetWorkset(System.Guid guid) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.Workset GetWorkset(Autodesk.Revit.DB.WorksetId id) => throw new System.NotImplementedException();

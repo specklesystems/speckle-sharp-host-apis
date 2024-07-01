@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.UI;
 
-public partial class TemporaryGraphicsCommandData : System.Object
+public partial class TemporaryGraphicsCommandData : Autodesk.Revit.DB.ExternalService.IExternalData,System.IDisposable
 {
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject

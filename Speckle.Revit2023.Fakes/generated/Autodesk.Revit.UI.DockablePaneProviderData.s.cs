@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.UI;
 
-public partial class DockablePaneProviderData : System.Object
+public partial class DockablePaneProviderData
 {
 	public DockablePaneProviderData() => throw new System.NotImplementedException();
 	public virtual System.Boolean VisibleByDefault

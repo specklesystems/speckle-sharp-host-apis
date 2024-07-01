@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class LinePattern : System.Object
+public partial class LinePattern : System.IDisposable
 {
 	public LinePattern(System.String name) => throw new System.NotImplementedException();
 	public virtual IList<Autodesk.Revit.DB.LinePatternSegment> GetSegments() => throw new System.NotImplementedException();

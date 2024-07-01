@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class ExportFontTable : System.Object
+public partial class ExportFontTable : IEnumerable<KeyValuePair<Autodesk.Revit.DB.ExportFontKey, Autodesk.Revit.DB.ExportFontInfo>>,System.IDisposable
 {
 	public ExportFontTable() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ExportFontTableIterator GetFontTableIterator() => throw new System.NotImplementedException();

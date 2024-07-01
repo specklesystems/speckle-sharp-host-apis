@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class SymbolTypeId : System.Object
+public partial class SymbolTypeId
 {
 	public static  Autodesk.Revit.DB.ForgeTypeId Yen
 	{

@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class PanelTypeSet : Autodesk.Revit.DB.APIObject
+public partial class PanelTypeSet : Autodesk.Revit.DB.APIObject,System.Collections.IEnumerable
 {
 	public PanelTypeSet() => throw new System.NotImplementedException();
 	public virtual void Clear() => throw new System.NotImplementedException();

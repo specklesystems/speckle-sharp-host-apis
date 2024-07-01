@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class FilteredWorksetIterator : System.Object
+public partial class FilteredWorksetIterator : IEnumerator<Autodesk.Revit.DB.Workset>
 {
 	public virtual Autodesk.Revit.DB.Workset GetCurrent() => throw new System.NotImplementedException();
 	public virtual System.Boolean MoveNext() => throw new System.NotImplementedException();

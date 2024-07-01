@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class ExportUtils : System.Object
+public partial class ExportUtils
 {
 	public static System.Guid GetExportId(Autodesk.Revit.DB.Subelement subelement) => throw new System.NotImplementedException();
 	public static System.Guid GetExportId(Autodesk.Revit.DB.Document document,Autodesk.Revit.DB.ElementId elementId) => throw new System.NotImplementedException();

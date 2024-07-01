@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class FilterableValueProvider : System.Object
+public partial class FilterableValueProvider : System.IDisposable
 {
 	public virtual System.String GetStringValue(Autodesk.Revit.DB.Element element) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsStringValueSupported(Autodesk.Revit.DB.Element element) => throw new System.NotImplementedException();

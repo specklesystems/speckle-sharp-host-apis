@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.UI;
 
-public partial class DoubleClickOptions : System.Object
+public partial class DoubleClickOptions : System.IDisposable
 {
 	public static Autodesk.Revit.UI.DoubleClickOptions GetDoubleClickOptions() => throw new System.NotImplementedException();
 	public virtual System.Boolean GetRenameOnSlowDoubleClickInProjectBrowser() => throw new System.NotImplementedException();

@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class IntegerRange : System.Object
+public partial class IntegerRange : System.IDisposable
 {
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject

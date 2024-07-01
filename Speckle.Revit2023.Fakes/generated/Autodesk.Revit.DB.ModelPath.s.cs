@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class ModelPath : System.Object
+public partial class ModelPath : System.IDisposable
 {
 	public virtual System.Int32 Compare(Autodesk.Revit.DB.ModelPath otherPath) => throw new System.NotImplementedException();
 	public virtual System.Guid GetProjectGUID() => throw new System.NotImplementedException();

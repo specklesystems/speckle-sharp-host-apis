@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class AdaptiveComponentFamilyUtils : System.Object
+public partial class AdaptiveComponentFamilyUtils
 {
 	public static System.Boolean IsAdaptiveComponentFamily(Autodesk.Revit.DB.Family family) => throw new System.NotImplementedException();
 	public static System.Boolean IsAdaptivePoint(Autodesk.Revit.DB.Document doc,Autodesk.Revit.DB.ElementId refPointId) => throw new System.NotImplementedException();

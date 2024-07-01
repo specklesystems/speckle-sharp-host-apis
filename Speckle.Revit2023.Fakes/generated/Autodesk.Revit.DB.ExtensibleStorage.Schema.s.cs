@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB.ExtensibleStorage;
 
-public partial class Schema : System.Object
+public partial class Schema : System.IDisposable
 {
 	public static Autodesk.Revit.DB.ExtensibleStorage.Schema Lookup(System.Guid guid) => throw new System.NotImplementedException();
 	public static IList<Autodesk.Revit.DB.ExtensibleStorage.Schema> ListSchemas() => throw new System.NotImplementedException();

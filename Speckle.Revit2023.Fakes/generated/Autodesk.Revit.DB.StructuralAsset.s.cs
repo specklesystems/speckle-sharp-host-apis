@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class StructuralAsset : System.Object
+public partial class StructuralAsset : System.IDisposable
 {
 	public StructuralAsset(System.String name,Autodesk.Revit.DB.StructuralAssetClass structuralAssetClass) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.StructuralAsset Copy() => throw new System.NotImplementedException();

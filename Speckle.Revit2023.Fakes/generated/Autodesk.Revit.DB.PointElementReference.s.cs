@@ -1,5 +1,5 @@
 namespace Autodesk.Revit.DB;
 
-public partial class PointElementReference : System.Object
+public partial class PointElementReference
 {
 }

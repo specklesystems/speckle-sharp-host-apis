@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class RelinquishedItems : System.Object
+public partial class RelinquishedItems : System.IDisposable
 {
 	public virtual ICollection<Autodesk.Revit.DB.ElementId> GetRelinquishedElements() => throw new System.NotImplementedException();
 	public virtual ICollection<Autodesk.Revit.DB.WorksetId> GetRelinquishedWorksets() => throw new System.NotImplementedException();

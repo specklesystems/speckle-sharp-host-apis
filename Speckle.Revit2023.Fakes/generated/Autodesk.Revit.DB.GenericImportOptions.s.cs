@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class GenericImportOptions : System.Object
+public partial class GenericImportOptions
 {
 	public virtual Autodesk.Revit.DB.XYZ RefPoint
 	{

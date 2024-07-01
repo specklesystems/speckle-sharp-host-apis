@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class ColumnAttachment : System.Object
+public partial class ColumnAttachment : System.IDisposable
 {
 	public static System.Boolean IsValidColumn(Autodesk.Revit.DB.FamilyInstance familyInstance) => throw new System.NotImplementedException();
 	public static System.Boolean IsValidTarget(System.Boolean forSlantedColumn,Autodesk.Revit.DB.Element target) => throw new System.NotImplementedException();

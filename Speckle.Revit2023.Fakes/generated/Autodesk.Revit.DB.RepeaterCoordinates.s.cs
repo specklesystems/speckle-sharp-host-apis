@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class RepeaterCoordinates : System.Object
+public partial class RepeaterCoordinates : System.IDisposable
 {
 	public RepeaterCoordinates(System.Int32 x,System.Int32 y) => throw new System.NotImplementedException();
 	public RepeaterCoordinates(System.Int32 x) => throw new System.NotImplementedException();

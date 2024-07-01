@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class OverrideGraphicSettings : System.Object
+public partial class OverrideGraphicSettings : System.IDisposable
 {
 	public OverrideGraphicSettings(Autodesk.Revit.DB.OverrideGraphicSettings overrideGraphicSettings) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.OverrideGraphicSettings SetHalftone(System.Boolean halftone) => throw new System.NotImplementedException();

@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class ParameterTypeId : System.Object
+public partial class ParameterTypeId
 {
 	public static  Autodesk.Revit.DB.ForgeTypeId ToposolidElevationAtTop
 	{

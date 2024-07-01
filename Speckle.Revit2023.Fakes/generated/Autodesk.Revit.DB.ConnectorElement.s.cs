@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class ConnectorElement : Autodesk.Revit.DB.Element
+public partial class ConnectorElement : Autodesk.Revit.DB.Element,Autodesk.Revit.DB.IConnector
 {
 	public virtual Autodesk.Revit.DB.ConnectorElement GetLinkedConnectorElement() => throw new System.NotImplementedException();
 	public virtual void SetLinkedConnectorElement(Autodesk.Revit.DB.ConnectorElement otherConnector) => throw new System.NotImplementedException();

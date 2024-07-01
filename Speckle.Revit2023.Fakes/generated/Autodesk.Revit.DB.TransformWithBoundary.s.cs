@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class TransformWithBoundary : System.Object
+public partial class TransformWithBoundary : System.IDisposable
 {
 	public TransformWithBoundary(Autodesk.Revit.DB.TransformWithBoundary other) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.Transform GetModelToProjectionTransform() => throw new System.NotImplementedException();

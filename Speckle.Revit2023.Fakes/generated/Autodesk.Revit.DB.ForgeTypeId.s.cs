@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class ForgeTypeId : System.Object
+public partial class ForgeTypeId : System.IDisposable
 {
 	public ForgeTypeId(System.String typeId) => throw new System.NotImplementedException();
 	public virtual System.Boolean Empty() => throw new System.NotImplementedException();

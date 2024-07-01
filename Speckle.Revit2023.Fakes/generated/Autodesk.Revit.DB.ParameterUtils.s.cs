@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class ParameterUtils : System.Object
+public partial class ParameterUtils
 {
 	public static Autodesk.Revit.DB.ForgeTypeId GetParameterTypeId(Autodesk.Revit.DB.BuiltInParameter builtInParam) => throw new System.NotImplementedException();
 	public static Autodesk.Revit.DB.ForgeTypeId GetParameterGroupTypeId(Autodesk.Revit.DB.BuiltInParameterGroup builtInParamGroup) => throw new System.NotImplementedException();

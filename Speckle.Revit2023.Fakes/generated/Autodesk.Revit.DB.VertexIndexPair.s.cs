@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class VertexIndexPair : System.Object
+public partial class VertexIndexPair
 {
 	public VertexIndexPair(System.Int32 iTop,System.Int32 iBottom) => throw new System.NotImplementedException();
 	public virtual System.Int32 Bottom

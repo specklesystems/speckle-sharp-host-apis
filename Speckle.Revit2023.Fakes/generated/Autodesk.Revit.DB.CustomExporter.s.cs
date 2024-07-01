@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class CustomExporter : System.Object
+public partial class CustomExporter : System.IDisposable
 {
 	public CustomExporter(Autodesk.Revit.DB.Document document,Autodesk.Revit.DB.IExportContext context) => throw new System.NotImplementedException();
 	public virtual void Export(IList<Autodesk.Revit.DB.ElementId> viewIds) => throw new System.NotImplementedException();

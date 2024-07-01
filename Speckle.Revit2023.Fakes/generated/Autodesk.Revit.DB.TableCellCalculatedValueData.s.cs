@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class TableCellCalculatedValueData : System.Object
+public partial class TableCellCalculatedValueData : System.IDisposable
 {
 	public virtual System.String GetName() => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();

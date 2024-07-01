@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class FamilySizeTable : System.Object
+public partial class FamilySizeTable : System.IDisposable
 {
 	public virtual Autodesk.Revit.DB.FamilySizeTableColumn GetColumnHeader(System.Int32 index) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidColumnIndex(System.Int32 index) => throw new System.NotImplementedException();

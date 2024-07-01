@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class SlabShapeCrease : System.Object
+public partial class SlabShapeCrease
 {
 	public virtual Autodesk.Revit.DB.SlabShapeVertexArray EndPoints
 	{

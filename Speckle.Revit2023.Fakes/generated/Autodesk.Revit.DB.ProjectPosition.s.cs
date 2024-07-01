@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class ProjectPosition : System.Object
+public partial class ProjectPosition : System.IDisposable
 {
 	public ProjectPosition(System.Double ew,System.Double ns,System.Double elevation,System.Double angle) => throw new System.NotImplementedException();
 	public ProjectPosition(Autodesk.Revit.DB.ProjectPosition other) => throw new System.NotImplementedException();

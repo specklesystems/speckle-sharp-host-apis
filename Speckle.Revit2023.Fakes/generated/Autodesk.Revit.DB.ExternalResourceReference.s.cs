@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class ExternalResourceReference : System.Object
+public partial class ExternalResourceReference : System.IDisposable
 {
 	public ExternalResourceReference(Autodesk.Revit.DB.ExternalResourceReference other) => throw new System.NotImplementedException();
 	public ExternalResourceReference(System.Guid serverId,IDictionary<System.String, System.String> referenceInformation,System.String version,System.String inSessionPath) => throw new System.NotImplementedException();

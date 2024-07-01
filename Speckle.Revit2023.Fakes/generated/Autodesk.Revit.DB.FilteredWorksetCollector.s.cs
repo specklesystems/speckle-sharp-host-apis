@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class FilteredWorksetCollector : System.Object
+public partial class FilteredWorksetCollector : IEnumerable<Autodesk.Revit.DB.Workset>,System.IDisposable
 {
 	public FilteredWorksetCollector(Autodesk.Revit.DB.Document document) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.FilteredWorksetIdIterator GetWorksetIdIterator() => throw new System.NotImplementedException();

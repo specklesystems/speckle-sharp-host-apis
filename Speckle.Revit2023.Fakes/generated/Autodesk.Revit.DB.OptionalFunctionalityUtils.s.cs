@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class OptionalFunctionalityUtils : System.Object
+public partial class OptionalFunctionalityUtils
 {
 	public static System.Boolean IsGraphicsAvailable() => throw new System.NotImplementedException();
 	public static System.Boolean IsFBXExportAvailable() => throw new System.NotImplementedException();

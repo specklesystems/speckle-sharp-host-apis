@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class ShapeImporter : System.Object
+public partial class ShapeImporter : System.IDisposable
 {
 	public ShapeImporter() => throw new System.NotImplementedException();
 	public virtual IList<Autodesk.Revit.DB.GeometryObject> Convert(Autodesk.Revit.DB.Document document,System.String filename) => throw new System.NotImplementedException();

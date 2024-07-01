@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class XYZ : System.Object
+public partial class XYZ
 {
 	public XYZ(System.Double x,System.Double y,System.Double z) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsZeroLength() => throw new System.NotImplementedException();

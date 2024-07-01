@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class FamilyUtils : System.Object
+public partial class FamilyUtils
 {
 	public static void ConvertFamilyToFaceHostBased(Autodesk.Revit.DB.Document document,Autodesk.Revit.DB.ElementId familyId) => throw new System.NotImplementedException();
 	public static System.Boolean FamilyCanConvertToFaceHostBased(Autodesk.Revit.DB.Document document,Autodesk.Revit.DB.ElementId familyId) => throw new System.NotImplementedException();

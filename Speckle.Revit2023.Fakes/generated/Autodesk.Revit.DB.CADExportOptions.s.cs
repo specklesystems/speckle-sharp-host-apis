@@ -1,5 +1,5 @@
 namespace Autodesk.Revit.DB;
 
-public partial class CADExportOptions : System.Object
+public partial class CADExportOptions
 {
 }

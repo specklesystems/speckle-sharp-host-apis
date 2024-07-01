@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class DirectShapeReferenceOptions : System.Object
+public partial class DirectShapeReferenceOptions : System.IDisposable
 {
 	public DirectShapeReferenceOptions(Autodesk.Revit.DB.DirectShapeReferenceOptions other) => throw new System.NotImplementedException();
 	public static System.Boolean IsValidReferenceName(System.String name) => throw new System.NotImplementedException();

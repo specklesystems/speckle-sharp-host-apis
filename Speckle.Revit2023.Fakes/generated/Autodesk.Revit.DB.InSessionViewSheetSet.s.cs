@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class InSessionViewSheetSet : System.Object
+public partial class InSessionViewSheetSet : Autodesk.Revit.DB.IViewSheetSet,System.IDisposable
 {
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsAutomatic

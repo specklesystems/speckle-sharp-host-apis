@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class PartUtils : System.Object
+public partial class PartUtils
 {
 	public static void CreateParts(Autodesk.Revit.DB.Document document,ICollection<Autodesk.Revit.DB.ElementId> elementIds) => throw new System.NotImplementedException();
 	public static void CreateParts(Autodesk.Revit.DB.Document document,ICollection<Autodesk.Revit.DB.LinkElementId> hostOrLinkElementIds) => throw new System.NotImplementedException();

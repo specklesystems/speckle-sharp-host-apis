@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class UpdaterRegistry : System.Object
+public partial class UpdaterRegistry : System.IDisposable
 {
 	public static void RegisterUpdater(Autodesk.Revit.DB.IUpdater updater,Autodesk.Revit.DB.Document document,System.Boolean isOptional) => throw new System.NotImplementedException();
 	public static void RegisterUpdater(Autodesk.Revit.DB.IUpdater updater,System.Boolean isOptional) => throw new System.NotImplementedException();

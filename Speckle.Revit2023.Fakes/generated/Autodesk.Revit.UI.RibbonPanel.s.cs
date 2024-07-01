@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.UI;
 
-public partial class RibbonPanel : System.Object
+public partial class RibbonPanel
 {
 	public virtual IList<Autodesk.Revit.UI.RibbonItem> GetItems() => throw new System.NotImplementedException();
 	public virtual void AddSeparator() => throw new System.NotImplementedException();

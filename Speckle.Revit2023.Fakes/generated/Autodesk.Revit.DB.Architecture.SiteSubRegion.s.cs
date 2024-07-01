@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB.Architecture;
 
-public partial class SiteSubRegion : System.Object
+public partial class SiteSubRegion : System.IDisposable
 {
 	public static Autodesk.Revit.DB.Architecture.SiteSubRegion Create(Autodesk.Revit.DB.Document document,IList<Autodesk.Revit.DB.CurveLoop> curveLoops,Autodesk.Revit.DB.ElementId hostTopoSurfaceId) => throw new System.NotImplementedException();
 	public static Autodesk.Revit.DB.Architecture.SiteSubRegion Create(Autodesk.Revit.DB.Document document,IList<Autodesk.Revit.DB.CurveLoop> curveLoops) => throw new System.NotImplementedException();

@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class DisciplineTypeId : System.Object
+public partial class DisciplineTypeId
 {
 	public static  Autodesk.Revit.DB.ForgeTypeId Structural
 	{

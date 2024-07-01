@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class SlabShapeVertex : System.Object
+public partial class SlabShapeVertex
 {
 	public virtual Autodesk.Revit.DB.SlabShapeVertexType VertexType
 	{

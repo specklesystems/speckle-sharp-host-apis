@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class Subelement : System.Object
+public partial class Subelement : System.IDisposable
 {
 	public static Autodesk.Revit.DB.Subelement Create(Autodesk.Revit.DB.Document aDoc,Autodesk.Revit.DB.Reference reference) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidType(Autodesk.Revit.DB.ElementId typeId) => throw new System.NotImplementedException();

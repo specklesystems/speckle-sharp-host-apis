@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class GroupTypeId : System.Object
+public partial class GroupTypeId
 {
 	public static  Autodesk.Revit.DB.ForgeTypeId LifeSafety
 	{

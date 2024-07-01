@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class Transform1D : System.Object
+public partial class Transform1D : System.IDisposable
 {
 	public Transform1D(System.Double scale) => throw new System.NotImplementedException();
 	public Transform1D(System.Double scale,System.Double translation) => throw new System.NotImplementedException();

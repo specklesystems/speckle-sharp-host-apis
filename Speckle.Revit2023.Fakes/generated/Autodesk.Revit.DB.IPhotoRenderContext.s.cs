@@ -1,5 +1,5 @@
 namespace Autodesk.Revit.DB;
 
-public partial class IPhotoRenderContext
+public partial interface IPhotoRenderContext
 {
 }

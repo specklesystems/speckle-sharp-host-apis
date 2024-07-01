@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class LayerModifier : System.Object
+public partial class LayerModifier : System.IDisposable
 {
 	public LayerModifier(Autodesk.Revit.DB.ModifierType modifierType,System.String separator) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();

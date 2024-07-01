@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class ImageExportOptions : System.Object
+public partial class ImageExportOptions : System.IDisposable
 {
 	public ImageExportOptions() => throw new System.NotImplementedException();
 	public static System.Boolean IsValidForSaveToProjectAsImage(Autodesk.Revit.DB.ImageExportOptions options,Autodesk.Revit.DB.Document doc) => throw new System.NotImplementedException();

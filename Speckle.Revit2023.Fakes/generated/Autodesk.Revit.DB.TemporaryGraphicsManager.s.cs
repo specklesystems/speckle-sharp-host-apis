@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class TemporaryGraphicsManager : System.Object
+public partial class TemporaryGraphicsManager : System.IDisposable
 {
 	public static Autodesk.Revit.DB.TemporaryGraphicsManager GetTemporaryGraphicsManager(Autodesk.Revit.DB.Document document) => throw new System.NotImplementedException();
 	public virtual System.Int32 AddControl(Autodesk.Revit.DB.InCanvasControlData data,Autodesk.Revit.DB.ElementId ownerViewId) => throw new System.NotImplementedException();

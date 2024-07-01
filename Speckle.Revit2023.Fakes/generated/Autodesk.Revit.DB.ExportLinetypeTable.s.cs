@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class ExportLinetypeTable : System.Object
+public partial class ExportLinetypeTable : IEnumerable<KeyValuePair<Autodesk.Revit.DB.ExportLinetypeKey, Autodesk.Revit.DB.ExportLinetypeInfo>>,System.IDisposable
 {
 	public ExportLinetypeTable() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ExportLinetypeTableIterator GetLinetypeTableIterator() => throw new System.NotImplementedException();

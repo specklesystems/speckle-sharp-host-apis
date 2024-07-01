@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.UI;
 
-public partial class IDropHandler
+public partial interface IDropHandler
 {
-	public virtual void Execute(Autodesk.Revit.UI.UIDocument document,System.Object data) => throw new System.NotImplementedException();
+	public  void Execute(Autodesk.Revit.UI.UIDocument document,System.Object data);
 }

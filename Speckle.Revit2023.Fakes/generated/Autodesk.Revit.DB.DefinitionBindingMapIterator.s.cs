@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class DefinitionBindingMapIterator : Autodesk.Revit.DB.APIObject
+public partial class DefinitionBindingMapIterator : Autodesk.Revit.DB.APIObject,System.Collections.IEnumerator
 {
 	public DefinitionBindingMapIterator() => throw new System.NotImplementedException();
 	public virtual System.Boolean MoveNext() => throw new System.NotImplementedException();

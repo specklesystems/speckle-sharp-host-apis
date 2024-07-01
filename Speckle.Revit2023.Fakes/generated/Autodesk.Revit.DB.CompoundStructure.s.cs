@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class CompoundStructure : System.Object
+public partial class CompoundStructure : System.IDisposable
 {
 	public virtual IList<Autodesk.Revit.DB.CompoundStructureLayer> GetLayers() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsEqual(Autodesk.Revit.DB.CompoundStructure otherStructure) => throw new System.NotImplementedException();

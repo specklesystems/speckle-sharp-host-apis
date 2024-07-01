@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.UI;
 
-public partial class SelectionUIOptions : System.Object
+public partial class SelectionUIOptions : System.IDisposable
 {
 	public static Autodesk.Revit.UI.SelectionUIOptions GetSelectionUIOptions() => throw new System.NotImplementedException();
 	public static System.Boolean ElementSelectsAsPinned(Autodesk.Revit.DB.Document document,Autodesk.Revit.DB.Element element) => throw new System.NotImplementedException();

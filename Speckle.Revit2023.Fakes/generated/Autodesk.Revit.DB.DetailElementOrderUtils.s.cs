@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class DetailElementOrderUtils : System.Object
+public partial class DetailElementOrderUtils
 {
 	public static void BringToFront(Autodesk.Revit.DB.Document pDocument,Autodesk.Revit.DB.View pDBView,ICollection<Autodesk.Revit.DB.ElementId> detailElementIds) => throw new System.NotImplementedException();
 	public static void BringToFront(Autodesk.Revit.DB.Document pDocument,Autodesk.Revit.DB.View pDBView,Autodesk.Revit.DB.ElementId detailElementId) => throw new System.NotImplementedException();

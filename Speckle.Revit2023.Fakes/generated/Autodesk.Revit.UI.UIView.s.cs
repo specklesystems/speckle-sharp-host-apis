@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.UI;
 
-public partial class UIView : System.Object
+public partial class UIView : System.IDisposable
 {
 	public virtual Autodesk.Revit.DB.Rectangle GetWindowRectangle() => throw new System.NotImplementedException();
 	public virtual void Close() => throw new System.NotImplementedException();

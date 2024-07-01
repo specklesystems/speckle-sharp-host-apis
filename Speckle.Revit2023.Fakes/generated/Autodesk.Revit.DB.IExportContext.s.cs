@@ -1,22 +1,22 @@
 namespace Autodesk.Revit.DB;
 
-public partial class IExportContext
+public partial interface IExportContext
 {
-	public virtual System.Boolean Start() => throw new System.NotImplementedException();
-	public virtual void Finish() => throw new System.NotImplementedException();
-	public virtual System.Boolean IsCanceled() => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.RenderNodeAction OnViewBegin(Autodesk.Revit.DB.ViewNode node) => throw new System.NotImplementedException();
-	public virtual void OnViewEnd(Autodesk.Revit.DB.ElementId elementId) => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.RenderNodeAction OnElementBegin(Autodesk.Revit.DB.ElementId elementId) => throw new System.NotImplementedException();
-	public virtual void OnElementEnd(Autodesk.Revit.DB.ElementId elementId) => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.RenderNodeAction OnInstanceBegin(Autodesk.Revit.DB.InstanceNode node) => throw new System.NotImplementedException();
-	public virtual void OnInstanceEnd(Autodesk.Revit.DB.InstanceNode node) => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.RenderNodeAction OnLinkBegin(Autodesk.Revit.DB.LinkNode node) => throw new System.NotImplementedException();
-	public virtual void OnLinkEnd(Autodesk.Revit.DB.LinkNode node) => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.RenderNodeAction OnFaceBegin(Autodesk.Revit.DB.FaceNode node) => throw new System.NotImplementedException();
-	public virtual void OnFaceEnd(Autodesk.Revit.DB.FaceNode node) => throw new System.NotImplementedException();
-	public virtual void OnRPC(Autodesk.Revit.DB.RPCNode node) => throw new System.NotImplementedException();
-	public virtual void OnLight(Autodesk.Revit.DB.LightNode node) => throw new System.NotImplementedException();
-	public virtual void OnMaterial(Autodesk.Revit.DB.MaterialNode node) => throw new System.NotImplementedException();
-	public virtual void OnPolymesh(Autodesk.Revit.DB.PolymeshTopology node) => throw new System.NotImplementedException();
+	public  System.Boolean Start();
+	public  void Finish();
+	public  System.Boolean IsCanceled();
+	public  Autodesk.Revit.DB.RenderNodeAction OnViewBegin(Autodesk.Revit.DB.ViewNode node);
+	public  void OnViewEnd(Autodesk.Revit.DB.ElementId elementId);
+	public  Autodesk.Revit.DB.RenderNodeAction OnElementBegin(Autodesk.Revit.DB.ElementId elementId);
+	public  void OnElementEnd(Autodesk.Revit.DB.ElementId elementId);
+	public  Autodesk.Revit.DB.RenderNodeAction OnInstanceBegin(Autodesk.Revit.DB.InstanceNode node);
+	public  void OnInstanceEnd(Autodesk.Revit.DB.InstanceNode node);
+	public  Autodesk.Revit.DB.RenderNodeAction OnLinkBegin(Autodesk.Revit.DB.LinkNode node);
+	public  void OnLinkEnd(Autodesk.Revit.DB.LinkNode node);
+	public  Autodesk.Revit.DB.RenderNodeAction OnFaceBegin(Autodesk.Revit.DB.FaceNode node);
+	public  void OnFaceEnd(Autodesk.Revit.DB.FaceNode node);
+	public  void OnRPC(Autodesk.Revit.DB.RPCNode node);
+	public  void OnLight(Autodesk.Revit.DB.LightNode node);
+	public  void OnMaterial(Autodesk.Revit.DB.MaterialNode node);
+	public  void OnPolymesh(Autodesk.Revit.DB.PolymeshTopology node);
 }

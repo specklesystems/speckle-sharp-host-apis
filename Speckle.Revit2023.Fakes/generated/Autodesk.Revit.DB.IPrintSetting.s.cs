@@ -1,9 +1,9 @@
 namespace Autodesk.Revit.DB;
 
-public partial class IPrintSetting
+public partial interface IPrintSetting
 {
-	public virtual Autodesk.Revit.DB.PrintParameters PrintParameters
+	public  Autodesk.Revit.DB.PrintParameters PrintParameters
 	{
-		get => throw new System.NotImplementedException();
+		get;
 	}
 }

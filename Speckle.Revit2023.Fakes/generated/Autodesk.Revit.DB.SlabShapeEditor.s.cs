@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class SlabShapeEditor : System.Object
+public partial class SlabShapeEditor : System.IDisposable
 {
 	public virtual void Enable() => throw new System.NotImplementedException();
 	public virtual void ModifySubElement(Autodesk.Revit.DB.SlabShapeCrease crease,System.Double offset) => throw new System.NotImplementedException();

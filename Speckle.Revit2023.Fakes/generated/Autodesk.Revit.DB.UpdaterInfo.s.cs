@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class UpdaterInfo : System.Object
+public partial class UpdaterInfo : System.IDisposable
 {
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject

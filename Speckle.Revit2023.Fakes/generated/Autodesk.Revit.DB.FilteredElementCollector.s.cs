@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class FilteredElementCollector : System.Object
+public partial class FilteredElementCollector : IEnumerable<Autodesk.Revit.DB.Element>,System.IDisposable
 {
 	public FilteredElementCollector(Autodesk.Revit.DB.Document document,Autodesk.Revit.DB.ElementId viewId) => throw new System.NotImplementedException();
 	public FilteredElementCollector(Autodesk.Revit.DB.Document document,ICollection<Autodesk.Revit.DB.ElementId> elementIds) => throw new System.NotImplementedException();

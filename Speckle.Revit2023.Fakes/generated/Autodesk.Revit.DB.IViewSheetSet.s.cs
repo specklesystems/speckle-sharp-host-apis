@@ -1,30 +1,30 @@
 namespace Autodesk.Revit.DB;
 
-public partial class IViewSheetSet
+public partial interface IViewSheetSet
 {
-	public virtual System.Boolean IsAutomatic
+	public  System.Boolean IsAutomatic
 	{
-		get => throw new System.NotImplementedException();
-		set {}
+		get;
+		set;
 	}
-	public virtual Autodesk.Revit.DB.ElementId ViewOrganizationId
+	public  Autodesk.Revit.DB.ElementId ViewOrganizationId
 	{
-		get => throw new System.NotImplementedException();
-		set {}
+		get;
+		set;
 	}
-	public virtual Autodesk.Revit.DB.ElementId SheetOrganizationId
+	public  Autodesk.Revit.DB.ElementId SheetOrganizationId
 	{
-		get => throw new System.NotImplementedException();
-		set {}
+		get;
+		set;
 	}
-	public virtual IReadOnlyList<Autodesk.Revit.DB.View> OrderedViewList
+	public  IReadOnlyList<Autodesk.Revit.DB.View> OrderedViewList
 	{
-		get => throw new System.NotImplementedException();
-		set {}
+		get;
+		set;
 	}
-	public virtual Autodesk.Revit.DB.ViewSet Views
+	public  Autodesk.Revit.DB.ViewSet Views
 	{
-		get => throw new System.NotImplementedException();
-		set {}
+		get;
+		set;
 	}
 }

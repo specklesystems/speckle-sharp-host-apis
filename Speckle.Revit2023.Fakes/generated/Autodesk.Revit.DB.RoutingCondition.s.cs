@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class RoutingCondition : System.Object
+public partial class RoutingCondition : System.IDisposable
 {
 	public RoutingCondition(System.Double diameter) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();

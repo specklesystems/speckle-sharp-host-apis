@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.UI;
 
-public partial class AddInCommandBinding : System.Object
+public partial class AddInCommandBinding
 {
 	public virtual Autodesk.Revit.UI.RevitCommandId RevitCommandId
 	{

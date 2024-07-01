@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class ReferenceIntersector : System.Object
+public partial class ReferenceIntersector : System.IDisposable
 {
 	public ReferenceIntersector(Autodesk.Revit.DB.ElementFilter filter,Autodesk.Revit.DB.FindReferenceTarget targetType,Autodesk.Revit.DB.View3D view3d) => throw new System.NotImplementedException();
 	public ReferenceIntersector(ICollection<Autodesk.Revit.DB.ElementId> targetElementIds,Autodesk.Revit.DB.FindReferenceTarget targetType,Autodesk.Revit.DB.View3D view3d) => throw new System.NotImplementedException();

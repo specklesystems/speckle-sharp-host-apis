@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class NurbsSurfaceData : System.Object
+public partial class NurbsSurfaceData : System.IDisposable
 {
 	public NurbsSurfaceData(Autodesk.Revit.DB.NurbsSurfaceData other) => throw new System.NotImplementedException();
 	public static Autodesk.Revit.DB.NurbsSurfaceData Create(System.Int32 degreeU,System.Int32 degreeV,IList<System.Double> knotsU,IList<System.Double> knotsV,IList<Autodesk.Revit.DB.XYZ> controlPoints,IList<System.Double> weights,System.Boolean bReverseOrientation) => throw new System.NotImplementedException();

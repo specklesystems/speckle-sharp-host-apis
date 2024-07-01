@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class ExportFontKey : System.Object
+public partial class ExportFontKey : System.IDisposable
 {
 	public ExportFontKey(System.String originalFontName) => throw new System.NotImplementedException();
 	public ExportFontKey(Autodesk.Revit.DB.ExportFontKey other) => throw new System.NotImplementedException();

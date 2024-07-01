@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class ExtrusionAnalyzer : System.Object
+public partial class ExtrusionAnalyzer : System.IDisposable
 {
 	public static Autodesk.Revit.DB.ExtrusionAnalyzer Create(Autodesk.Revit.DB.Solid solidGeometry,Autodesk.Revit.DB.Plane plane,Autodesk.Revit.DB.XYZ direction) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.Face GetExtrusionBase() => throw new System.NotImplementedException();

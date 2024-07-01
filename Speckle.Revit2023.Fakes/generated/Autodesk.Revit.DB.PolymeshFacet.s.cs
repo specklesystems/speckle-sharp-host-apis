@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class PolymeshFacet : System.Object
+public partial class PolymeshFacet
 {
 	public PolymeshFacet(System.Int32 v1,System.Int32 v2,System.Int32 v3) => throw new System.NotImplementedException();
 	public virtual IList<System.Int32> GetVertices() => throw new System.NotImplementedException();
