@@ -6,11 +6,7 @@
       <IsPackable>false</IsPackable>
     </PropertyGroup>
   <Import Project="..\Speckle.Shared\Speckle.Shared.projitems" Label="Shared" />
-  <ItemGroup>    
-    <PackageReference Include="PolySharp" Version="1.14.1">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
+  <ItemGroup> 
     <PackageReference Include="Speckle.Revit.API" VersionOverride="2023.0.0" />
   </ItemGroup>
 </Project>
