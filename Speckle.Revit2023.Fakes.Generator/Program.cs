@@ -13,6 +13,8 @@ Generator generator = new("Speckle.Revit2023.Fakes", [GetAssembly("RevitAPI.dll"
   ["Autodesk.Revit.DB", "Autodesk.Revit.DB.Architecture", "Autodesk.Revit.UI", "Autodesk.Revit.DB.ExtensibleStorage"],
   [
     new ("WallSweepInfo", []),
+    new ("ToggleButtonData", []),
+    new ("RadioButtonGroup", []),
     new ("ProjectInfo", [new ("Name")]), 
     new ("ImageView", [new ("Create")])]);
 generator.Generate();

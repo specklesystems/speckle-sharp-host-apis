@@ -6,7 +6,9 @@ namespace Speckle.Shared;
 public record ExcludedType(string Name, ExcludedMember[] ExcludedMembers);
 public record ExcludedMember(string Name);
 public record GeneratedMember(string Name);
-public record GeneratedTypeInfo(string Name, string? Base, List<GeneratedMember> Members);
+public record GeneratedParameter(Type param, string Name);
+public record GeneratedConstructor(List<GeneratedParameter> Parameters);
+public record GeneratedTypeInfo(string Name, string? Base, List<GeneratedConstructor> Constructors, List<GeneratedMember> Members);
 public class Generator
 {
   private readonly Dictionary<string, bool> _boolDone = new();
@@ -65,7 +67,7 @@ public class Generator
 
     definedTypes = definedTypes.Where(x => x.IsPublic)
       .Where(x => _namespaces.Any(y => x.FullName?.StartsWith(y) ?? false)).ToList();
-    foreach (var type in definedTypes)//.Where(x => x.FullName.EndsWith("XYZ")))
+    foreach (var type in definedTypes)//.Where(x => x.FullName.EndsWith("DockablePaneId")))
     {
       try
       {
@@ -81,6 +83,10 @@ public class Generator
 
   private Type RenderType(Type type)
   {
+    if (IsExcluded(type.Name, string.Empty))
+    {
+      throw new ApplicationException($"Type is excluded: {type.FullName}");
+    }
     if (type.FullName is null)
     {
       throw new ApplicationException("Type has a null full name");
@@ -175,7 +181,7 @@ public class Generator
       sb.AppendLine($"\t{field.Name},");
     }
     sb.AppendLine("}");
-    return (sb.ToString(), new (clazz.FullName, null, []));
+    return (sb.ToString(), new (clazz.FullName, null, [],  []));
   }
   
   
@@ -192,8 +198,8 @@ public class Generator
       baseClazz = clazz.BaseType.FullName;
     }
    
-    var members = WriteTypeBody(sb, clazz, false);
-    return (sb.ToString(), new(clazz.FullName, baseClazz, members));
+    var (constructors, members) = WriteTypeBody(sb, clazz, false);
+    return (sb.ToString(), new(clazz.FullName, baseClazz, constructors, members));
   }
 
   private (string, GeneratedTypeInfo)  WriteStruct(Type clazz)
@@ -201,8 +207,8 @@ public class Generator
     StringBuilder sb = new();
     sb.AppendLine($"namespace {clazz.Namespace};").AppendLine();
     sb.Append($"public partial struct {clazz.Name}");
-    var members = WriteTypeBody(sb, clazz, true);
-    return (sb.ToString(), new(clazz.FullName, null, members));
+    var (constructors, members) = WriteTypeBody(sb, clazz, true);
+    return (sb.ToString(), new(clazz.FullName, null, constructors, members));
   }
 
   private bool IsExcluded(string type, string member)
@@ -223,12 +229,12 @@ public class Generator
     return excludedType.ExcludedMembers.Any(x => x.Name.Equals(member, StringComparison.CurrentCultureIgnoreCase));
   }
 
-  private  List<GeneratedMember>  WriteTypeBody( StringBuilder sb, Type clazz, bool isStruct)
+  private (List<GeneratedConstructor>, List<GeneratedMember>)  WriteTypeBody( StringBuilder sb, Type clazz, bool isStruct)
   {
     sb.AppendLine();
     sb.AppendLine("{");
     var members = new List<GeneratedMember>();
-    WriteConstructors(sb, clazz);
+   var constructors = WriteConstructors(sb, clazz);
     foreach(var method in clazz.GetMethods(BindingFlags.Instance | BindingFlags.Static | BindingFlags.DeclaredOnly | BindingFlags.Public))
     {
       if (method.IsSpecialName //special is get/set for properties
@@ -279,14 +285,15 @@ public class Generator
       }
     }
     sb.AppendLine("}");
-    return members;
+    return (constructors, members);
   }
 
-  private void WriteConstructors(StringBuilder sb, Type clazz)
+  private List<GeneratedConstructor> WriteConstructors(StringBuilder sb, Type clazz)
   {
+    var generatedConstructor = new List<GeneratedConstructor>();
     if (IsExcluded(clazz.Name, string.Empty))
     {
-      return;
+      return generatedConstructor;
     }
     var constructors = clazz.GetConstructors().ToList();
     var emptyConstructor = constructors.FirstOrDefault(x => !x.GetParameters().Any());
@@ -304,8 +311,10 @@ public class Generator
         
         var constructorSb = new StringBuilder();
         constructorSb.Append($"\tpublic {clazz.Name}(");
-        WriteMethodBody(constructorSb, constructor.GetParameters());
+        var parameters = constructor.GetParameters();
+        WriteMethodBody(constructorSb, parameters, clazz.BaseType);
         sb.Append(constructorSb);
+        generatedConstructor.Add(new GeneratedConstructor(parameters.Select(x => new GeneratedParameter(x.ParameterType, x.Name)).ToList()));
       }
       catch (FileLoadException)
       {
@@ -317,6 +326,8 @@ public class Generator
         Console.WriteLine($"Did not write constructor on {clazz.FullName}");
       }
     }
+
+    return generatedConstructor;
   }
   
   private void WriteProperty(StringBuilder sb, PropertyInfo propertyInfo, bool isStruct)
@@ -398,10 +409,10 @@ public class Generator
 
 
     sb.Append($"public {extras} {ReturnType(methodInfo.ReturnType)} {methodInfo.Name}(");
-    WriteMethodBody(sb, methodInfo.GetParameters());
+    WriteMethodBody(sb, methodInfo.GetParameters(), null);
   }
 
-  private void WriteMethodBody(StringBuilder sb, ParameterInfo[] parameterInfos)
+  private void WriteMethodBody(StringBuilder sb, ParameterInfo[] parameterInfos, Type? baseType)
   {
     
     bool isFirst = true;
@@ -418,7 +429,46 @@ public class Generator
       sb.Append(ParameterType(parameter.ParameterType)).Append(" ").Append(FixName(parameter.Name));
     }
 
-    sb.AppendLine(") => throw new System.NotImplementedException();");
+    if (baseType is not null)
+    {
+      if (_info.TryGetValue(baseType.FullName, out var info))
+      {
+        foreach (var baseConstructors in info.Constructors.Where(x => x.Parameters.Count == parameterInfos.Length))
+        {
+          bool matches = false;
+          for (int i = 0; i < baseConstructors.Parameters.Count; i++)
+          {
+            var typeBase = baseConstructors.Parameters[i].param;
+            var currentType = parameterInfos[i].ParameterType;
+            if (typeBase != currentType)
+            {
+              break;
+            }
+
+            matches = true;
+          }
+
+          if (matches)
+          {
+            sb.Append("):base(");
+            isFirst = true;
+            foreach (var parameter in parameterInfos)
+            {
+              if (isFirst)
+              {
+                isFirst = false;
+              }
+              else
+              {
+                sb.Append(",");
+              }
+              sb.Append(" ").Append(FixName(parameter.Name));
+            }
+          }
+        }
+      }
+    }
+      sb.AppendLine(") => throw new System.NotImplementedException();");
   }
   
   private string ParameterType(Type type)

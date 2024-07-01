@@ -50,8 +50,6 @@ public partial class CompoundStructure : System.Object
 	public virtual void SetExtendableRegionIds(System.Boolean top,IList<System.Int32> regionIds) => throw new System.NotImplementedException();
 	public virtual IList<System.Int32> GetRegionsAlongLevel(System.Double height) => throw new System.NotImplementedException();
 	public virtual System.Boolean ChangeRegionWidth(System.Int32 regionId,System.Double newWidth) => throw new System.NotImplementedException();
-	public virtual IList<Autodesk.Revit.DB.WallSweepInfo> GetWallSweepsInfo(Autodesk.Revit.DB.WallSweepType wallSweepType) => throw new System.NotImplementedException();
-	public virtual void AddWallSweep(Autodesk.Revit.DB.WallSweepInfo wallSweepInfo) => throw new System.NotImplementedException();
 	public virtual void RemoveWallSweep(Autodesk.Revit.DB.WallSweepType wallSweepType,System.Int32 id) => throw new System.NotImplementedException();
 	public virtual void ClearWallSweeps(Autodesk.Revit.DB.WallSweepType wallSweepType) => throw new System.NotImplementedException();
 	public virtual System.Int32 GetPreviousNonZeroLayerIndex(System.Int32 thisIdx) => throw new System.NotImplementedException();
