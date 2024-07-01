@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ScheduleHeightsOnSheet : System.IDisposable
 {
+  public ScheduleHeightsOnSheet() { }
+
   public virtual System.Collections.Generic.IList<System.Double> GetBodyRowHeights() =>
     throw new System.NotImplementedException();
 

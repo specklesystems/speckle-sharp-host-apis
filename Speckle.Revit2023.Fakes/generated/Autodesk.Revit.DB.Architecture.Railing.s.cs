@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Architecture;
 
 public partial class Railing : Autodesk.Revit.DB.Element
 {
+  public Railing() { }
+
   public static System.Collections.Generic.ISet<Autodesk.Revit.DB.ElementId> Create(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.ElementId multistoryStairsId,

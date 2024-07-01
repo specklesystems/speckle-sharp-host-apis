@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class SpotDimension : Autodesk.Revit.DB.Dimension
 {
+  public SpotDimension() { }
+
   public virtual System.Boolean CanFlip() => throw new System.NotImplementedException();
 
   public virtual void Flip() => throw new System.NotImplementedException();

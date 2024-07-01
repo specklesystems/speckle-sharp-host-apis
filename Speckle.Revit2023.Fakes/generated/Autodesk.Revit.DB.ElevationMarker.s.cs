@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ElevationMarker : Autodesk.Revit.DB.Element
 {
+  public ElevationMarker() { }
+
   public static Autodesk.Revit.DB.ElevationMarker CreateElevationMarker(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.ElementId viewFamilyTypeId,

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class UpdaterRegistry : System.IDisposable
 {
+  public UpdaterRegistry() { }
+
   public static void RegisterUpdater(
     Autodesk.Revit.DB.IUpdater updater,
     Autodesk.Revit.DB.Document document,

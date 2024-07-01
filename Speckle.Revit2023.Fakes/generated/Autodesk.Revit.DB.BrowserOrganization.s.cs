@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class BrowserOrganization : Autodesk.Revit.DB.ElementType
 {
+  public BrowserOrganization() { }
+
   public virtual System.Boolean AreFiltersSatisfied(Autodesk.Revit.DB.ElementId elementId) =>
     throw new System.NotImplementedException();
 

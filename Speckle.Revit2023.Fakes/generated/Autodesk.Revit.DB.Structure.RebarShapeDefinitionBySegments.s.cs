@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class RebarShapeDefinitionBySegments : Autodesk.Revit.DB.Structure.RebarShapeDefinition
 {
+  public RebarShapeDefinitionBySegments() { }
+
   public RebarShapeDefinitionBySegments(Autodesk.Revit.DB.Document doc, System.Int32 numberOfSegments) =>
     throw new System.NotImplementedException();
 

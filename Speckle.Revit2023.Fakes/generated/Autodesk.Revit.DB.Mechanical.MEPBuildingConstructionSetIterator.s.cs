@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB.Mechanical;
 
 public partial class MEPBuildingConstructionSetIterator : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerator
 {
-  public MEPBuildingConstructionSetIterator() => throw new System.NotImplementedException();
+  public MEPBuildingConstructionSetIterator() { }
 
   public virtual System.Boolean MoveNext() => throw new System.NotImplementedException();
 

@@ -4,6 +4,8 @@ public partial class ConduitSizes
   : System.Collections.Generic.IEnumerable<Autodesk.Revit.DB.Electrical.ConduitSize>,
     System.IDisposable
 {
+  public ConduitSizes() { }
+
   public virtual System.Boolean Contains(System.Double nominalDiameter) => throw new System.NotImplementedException();
 
   public virtual Autodesk.Revit.DB.Electrical.ConduitSizeIterator GetConduitSizesIterator() =>

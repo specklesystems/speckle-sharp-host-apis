@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class BuildingPadType : Autodesk.Revit.DB.HostObjAttributes
 {
+  public BuildingPadType() { }
+
   public static Autodesk.Revit.DB.BuildingPadType CreateDefault(Autodesk.Revit.DB.Document document) =>
     throw new System.NotImplementedException();
 

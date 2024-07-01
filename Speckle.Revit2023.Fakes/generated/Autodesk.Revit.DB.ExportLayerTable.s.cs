@@ -7,7 +7,7 @@ public partial class ExportLayerTable
   >>,
     System.IDisposable
 {
-  public ExportLayerTable() => throw new System.NotImplementedException();
+  public ExportLayerTable() { }
 
   public virtual Autodesk.Revit.DB.ExportLayerTableIterator GetLayerTableIterator() =>
     throw new System.NotImplementedException();

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ScheduleFilter : System.IDisposable
 {
+  public ScheduleFilter() { }
+
   public ScheduleFilter(
     Autodesk.Revit.DB.ScheduleFieldId fieldId,
     Autodesk.Revit.DB.ScheduleFilterType filterType,
@@ -28,8 +30,6 @@ public partial class ScheduleFilter : System.IDisposable
 
   public ScheduleFilter(Autodesk.Revit.DB.ScheduleFieldId fieldId, Autodesk.Revit.DB.ScheduleFilterType filterType) =>
     throw new System.NotImplementedException();
-
-  public ScheduleFilter() => throw new System.NotImplementedException();
 
   public virtual System.Int32 GetIntegerValue() => throw new System.NotImplementedException();
 

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class CurveElement : Autodesk.Revit.DB.Element
 {
+  public CurveElement() { }
+
   public virtual void SetGeometryCurve(Autodesk.Revit.DB.Curve curve, System.Boolean overrideJoins) =>
     throw new System.NotImplementedException();
 

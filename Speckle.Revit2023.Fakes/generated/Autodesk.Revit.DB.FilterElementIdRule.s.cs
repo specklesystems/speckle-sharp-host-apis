@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class FilterElementIdRule : Autodesk.Revit.DB.FilterNumericValueRule
 {
+  public FilterElementIdRule() { }
+
   public FilterElementIdRule(
     Autodesk.Revit.DB.FilterableValueProvider valueProvider,
     Autodesk.Revit.DB.FilterNumericRuleEvaluator evaluator,

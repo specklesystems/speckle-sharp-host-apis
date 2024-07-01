@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class BoundingBoxIsInsideFilter : Autodesk.Revit.DB.ElementQuickFilter
 {
+  public BoundingBoxIsInsideFilter() { }
+
   public BoundingBoxIsInsideFilter(
     Autodesk.Revit.DB.Outline outline,
     System.Double tolerance,

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Analysis;
 
 public partial class ConceptualConstructionType : Autodesk.Revit.DB.ElementType
 {
+  public ConceptualConstructionType() { }
+
   public static Autodesk.Revit.DB.ElementId GetWallConstructionType(
     Autodesk.Revit.DB.Document ccda,
     Autodesk.Revit.DB.Analysis.ConceptualConstructionWallType typeEnum

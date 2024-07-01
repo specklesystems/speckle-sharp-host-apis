@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class FamilyManager : Autodesk.Revit.DB.APIObject
 {
+  public FamilyManager() { }
+
   public virtual Autodesk.Revit.DB.FamilyType NewType(System.String typeName) =>
     throw new System.NotImplementedException();
 

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class Category : Autodesk.Revit.DB.APIObject
 {
+  public Category() { }
+
   public virtual System.Nullable<System.Int32> GetLineWeight(Autodesk.Revit.DB.GraphicsStyleType graphicsStyleType) =>
     throw new System.NotImplementedException();
 

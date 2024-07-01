@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Architecture;
 
 public partial class BalusterPlacement : System.IDisposable
 {
+  public BalusterPlacement() { }
+
   public virtual void Dispose() => throw new System.NotImplementedException();
 
   public virtual System.Boolean IsValidObject

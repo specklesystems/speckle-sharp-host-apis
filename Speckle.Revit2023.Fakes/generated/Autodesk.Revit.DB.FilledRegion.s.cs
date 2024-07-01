@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class FilledRegion : Autodesk.Revit.DB.Element
 {
+  public FilledRegion() { }
+
   public static Autodesk.Revit.DB.FilledRegion Create(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.ElementId typeId,

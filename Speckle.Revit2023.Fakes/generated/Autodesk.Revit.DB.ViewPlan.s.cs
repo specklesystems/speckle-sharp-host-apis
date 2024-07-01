@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ViewPlan : Autodesk.Revit.DB.View
 {
+  public ViewPlan() { }
+
   public static Autodesk.Revit.DB.ViewPlan Create(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.ElementId viewFamilyTypeId,

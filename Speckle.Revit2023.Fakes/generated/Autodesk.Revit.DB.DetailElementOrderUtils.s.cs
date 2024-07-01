@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class DetailElementOrderUtils
 {
+  public DetailElementOrderUtils() { }
+
   public static void BringToFront(
     Autodesk.Revit.DB.Document pDocument,
     Autodesk.Revit.DB.View pDBView,

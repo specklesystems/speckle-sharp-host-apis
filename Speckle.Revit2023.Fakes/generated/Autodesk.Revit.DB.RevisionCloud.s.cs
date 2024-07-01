@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class RevisionCloud : Autodesk.Revit.DB.Element
 {
+  public RevisionCloud() { }
+
   public static Autodesk.Revit.DB.RevisionCloud Create(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.View view,

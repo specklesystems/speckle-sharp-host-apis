@@ -2,14 +2,14 @@ namespace Autodesk.Revit.DB;
 
 public partial class Frame : System.IDisposable
 {
+  public Frame() { }
+
   public Frame(
     Autodesk.Revit.DB.XYZ origin,
     Autodesk.Revit.DB.XYZ vec1,
     Autodesk.Revit.DB.XYZ vec2,
     Autodesk.Revit.DB.XYZ vec3
   ) => throw new System.NotImplementedException();
-
-  public Frame() => throw new System.NotImplementedException();
 
   public static System.Boolean CanDefineRevitGeometry(Autodesk.Revit.DB.Frame frameOfReference) =>
     throw new System.NotImplementedException();

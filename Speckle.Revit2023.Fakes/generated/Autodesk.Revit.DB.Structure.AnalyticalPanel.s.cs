@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class AnalyticalPanel : Autodesk.Revit.DB.Structure.AnalyticalSurfaceBase
 {
+  public AnalyticalPanel() { }
+
   public static Autodesk.Revit.DB.Structure.AnalyticalPanel Create(
     Autodesk.Revit.DB.Document aDoc,
     Autodesk.Revit.DB.CurveLoop curveLoop

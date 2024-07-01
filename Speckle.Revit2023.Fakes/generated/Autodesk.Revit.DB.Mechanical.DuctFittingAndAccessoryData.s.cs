@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Mechanical;
 
 public partial class DuctFittingAndAccessoryData : System.IDisposable
 {
+  public DuctFittingAndAccessoryData() { }
+
   public virtual Autodesk.Revit.DB.ExtensibleStorage.Entity GetEntity() => throw new System.NotImplementedException();
 
   public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.Mechanical.DuctFittingAndAccessoryConnectorData> GetAllConnectorData() =>

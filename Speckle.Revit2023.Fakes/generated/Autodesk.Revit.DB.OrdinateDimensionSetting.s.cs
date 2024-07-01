@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class OrdinateDimensionSetting : System.IDisposable
 {
-  public OrdinateDimensionSetting() => throw new System.NotImplementedException();
+  public OrdinateDimensionSetting() { }
 
   public virtual void Dispose() => throw new System.NotImplementedException();
 

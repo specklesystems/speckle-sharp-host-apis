@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Plumbing;
 
 public partial class PipeFittingAndAccessoryPressureDropData : System.IDisposable
 {
+  public PipeFittingAndAccessoryPressureDropData() { }
+
   public virtual Autodesk.Revit.DB.Plumbing.PipeFittingAndAccessoryData GetPipeFittingAndAccessoryData() =>
     throw new System.NotImplementedException();
 

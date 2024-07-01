@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class RebarContainerItem : System.IDisposable
 {
+  public RebarContainerItem() { }
+
   public virtual void SetFromRebar(Autodesk.Revit.DB.Structure.Rebar rebar) =>
     throw new System.NotImplementedException();
 

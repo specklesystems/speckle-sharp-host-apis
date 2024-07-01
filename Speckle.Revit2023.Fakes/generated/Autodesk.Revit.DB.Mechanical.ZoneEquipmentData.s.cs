@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Mechanical;
 
 public partial class ZoneEquipmentData : System.IDisposable
 {
+  public ZoneEquipmentData() { }
+
   public virtual System.Boolean IsDataCompleted() => throw new System.NotImplementedException();
 
   public virtual void Dispose() => throw new System.NotImplementedException();

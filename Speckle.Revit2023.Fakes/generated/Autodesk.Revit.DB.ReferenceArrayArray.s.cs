@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class ReferenceArrayArray : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerable
 {
-  public ReferenceArrayArray() => throw new System.NotImplementedException();
+  public ReferenceArrayArray() { }
 
   public virtual void Clear() => throw new System.NotImplementedException();
 

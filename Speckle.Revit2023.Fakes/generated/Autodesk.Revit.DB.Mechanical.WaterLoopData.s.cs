@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Mechanical;
 
 public partial class WaterLoopData : System.IDisposable
 {
+  public WaterLoopData() { }
+
   public virtual void Dispose() => throw new System.NotImplementedException();
 
   public virtual System.Boolean IsValidObject

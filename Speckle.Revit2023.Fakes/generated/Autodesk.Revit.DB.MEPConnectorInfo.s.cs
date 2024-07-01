@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class MEPConnectorInfo : System.IDisposable
 {
+  public MEPConnectorInfo() { }
+
   public virtual void Dispose() => throw new System.NotImplementedException();
 
   public virtual System.Boolean IsValidObject

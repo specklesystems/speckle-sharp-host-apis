@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class RadialArray : Autodesk.Revit.DB.BaseArray
 {
+  public RadialArray() { }
+
   public static Autodesk.Revit.DB.RadialArray Create(
     Autodesk.Revit.DB.Document aDoc,
     Autodesk.Revit.DB.View dBView,

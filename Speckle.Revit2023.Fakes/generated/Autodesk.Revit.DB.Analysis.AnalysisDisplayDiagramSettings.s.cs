@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB.Analysis;
 
 public partial class AnalysisDisplayDiagramSettings : System.IDisposable
 {
-  public AnalysisDisplayDiagramSettings() => throw new System.NotImplementedException();
+  public AnalysisDisplayDiagramSettings() { }
 
   public AnalysisDisplayDiagramSettings(Autodesk.Revit.DB.Analysis.AnalysisDisplayDiagramSettings other) =>
     throw new System.NotImplementedException();

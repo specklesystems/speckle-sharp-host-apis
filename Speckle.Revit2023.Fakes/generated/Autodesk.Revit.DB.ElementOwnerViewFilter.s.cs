@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ElementOwnerViewFilter : Autodesk.Revit.DB.ElementQuickFilter
 {
+  public ElementOwnerViewFilter() { }
+
   public ElementOwnerViewFilter(Autodesk.Revit.DB.ElementId viewId, System.Boolean inverted) =>
     throw new System.NotImplementedException();
 

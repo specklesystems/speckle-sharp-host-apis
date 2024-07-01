@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class StructuralConnectionType : Autodesk.Revit.DB.ElementType
 {
+  public StructuralConnectionType() { }
+
   public static Autodesk.Revit.DB.Structure.StructuralConnectionType Create(
     Autodesk.Revit.DB.Document doc,
     Autodesk.Revit.DB.Structure.StructuralConnectionApplyTo applyTo,

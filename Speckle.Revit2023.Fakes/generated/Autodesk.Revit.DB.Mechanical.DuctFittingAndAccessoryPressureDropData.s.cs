@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Mechanical;
 
 public partial class DuctFittingAndAccessoryPressureDropData : System.IDisposable
 {
+  public DuctFittingAndAccessoryPressureDropData() { }
+
   public virtual Autodesk.Revit.DB.Mechanical.DuctFittingAndAccessoryData GetDuctFittingAndAccessoryData() =>
     throw new System.NotImplementedException();
 

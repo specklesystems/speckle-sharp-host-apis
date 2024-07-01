@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB.PointClouds;
 
 public partial class PointCloudOverrides : System.IDisposable
 {
-  public PointCloudOverrides() => throw new System.NotImplementedException();
+  public PointCloudOverrides() { }
 
   public virtual System.Boolean IsEqual(Autodesk.Revit.DB.PointClouds.PointCloudOverrides other) =>
     throw new System.NotImplementedException();

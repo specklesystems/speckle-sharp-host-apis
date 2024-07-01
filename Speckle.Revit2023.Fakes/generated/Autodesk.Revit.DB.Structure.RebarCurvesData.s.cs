@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class RebarCurvesData : System.IDisposable
 {
+  public RebarCurvesData() { }
+
   public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.Curve> GetAddedBarGeometry(System.Int32 barIndex) =>
     throw new System.NotImplementedException();
 

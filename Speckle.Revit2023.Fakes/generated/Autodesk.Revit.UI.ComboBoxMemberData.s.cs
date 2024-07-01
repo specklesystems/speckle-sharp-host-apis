@@ -2,6 +2,8 @@ namespace Autodesk.Revit.UI;
 
 public partial class ComboBoxMemberData : Autodesk.Revit.UI.RibbonItemData
 {
+  public ComboBoxMemberData() { }
+
   public ComboBoxMemberData(System.String name, System.String text) => throw new System.NotImplementedException();
 
   public virtual System.String GroupName

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class DividedSurface : Autodesk.Revit.DB.Element
 {
+  public DividedSurface() { }
+
   public virtual Autodesk.Revit.DB.UV GetGridNodeUV(Autodesk.Revit.DB.GridNode gridNode) =>
     throw new System.NotImplementedException();
 

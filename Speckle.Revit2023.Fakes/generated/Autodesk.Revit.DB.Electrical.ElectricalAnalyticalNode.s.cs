@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Electrical;
 
 public partial class ElectricalAnalyticalNode : Autodesk.Revit.DB.Element
 {
+  public ElectricalAnalyticalNode() { }
+
   public static Autodesk.Revit.DB.Electrical.ElectricalAnalyticalNode Create(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.Electrical.ElectricalAnalyticalNodeType type,

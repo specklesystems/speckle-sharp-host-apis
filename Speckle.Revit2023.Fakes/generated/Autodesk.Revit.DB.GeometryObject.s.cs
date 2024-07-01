@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class GeometryObject : Autodesk.Revit.DB.APIObject
 {
+  public GeometryObject() { }
+
   public virtual System.Int32 Id
   {
     get => throw new System.NotImplementedException();

@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class ClosestPointsPairBetweenTwoCurves : System.IDisposable
 {
-  public ClosestPointsPairBetweenTwoCurves() => throw new System.NotImplementedException();
+  public ClosestPointsPairBetweenTwoCurves() { }
 
   public ClosestPointsPairBetweenTwoCurves(Autodesk.Revit.DB.ClosestPointsPairBetweenTwoCurves other) =>
     throw new System.NotImplementedException();

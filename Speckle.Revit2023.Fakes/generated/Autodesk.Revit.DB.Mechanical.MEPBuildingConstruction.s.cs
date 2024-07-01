@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Mechanical;
 
 public partial class MEPBuildingConstruction : Autodesk.Revit.DB.ElementType
 {
+  public MEPBuildingConstruction() { }
+
   public virtual System.Collections.Generic.ICollection<Autodesk.Revit.DB.Construction> GetConstructions(
     Autodesk.Revit.DB.Analysis.ConstructionType constructionType
   ) => throw new System.NotImplementedException();

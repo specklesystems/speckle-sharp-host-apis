@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class HostObjectUtils
 {
+  public HostObjectUtils() { }
+
   public static System.Collections.Generic.IList<Autodesk.Revit.DB.Reference> GetTopFaces(
     Autodesk.Revit.DB.HostObject hostObject
   ) => throw new System.NotImplementedException();

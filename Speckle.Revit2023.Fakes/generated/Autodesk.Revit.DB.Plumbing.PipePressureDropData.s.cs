@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Plumbing;
 
 public partial class PipePressureDropData : System.IDisposable
 {
+  public PipePressureDropData() { }
+
   public virtual void Dispose() => throw new System.NotImplementedException();
 
   public virtual System.Boolean IsValidObject

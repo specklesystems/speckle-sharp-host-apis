@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class View3D : Autodesk.Revit.DB.View
 {
+  public View3D() { }
+
   public virtual Autodesk.Revit.DB.RenderingSettings GetRenderingSettings() =>
     throw new System.NotImplementedException();
 

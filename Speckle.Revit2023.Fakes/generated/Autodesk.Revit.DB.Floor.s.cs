@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class Floor : Autodesk.Revit.DB.CeilingAndFloor
 {
+  public Floor() { }
+
   public virtual Autodesk.Revit.DB.XYZ GetVerticalProjectionPoint(
     Autodesk.Revit.DB.XYZ modelLocation,
     Autodesk.Revit.DB.FloorFace floorFace

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Mechanical;
 
 public partial class AirSystemData : System.IDisposable
 {
+  public AirSystemData() { }
+
   public virtual void Dispose() => throw new System.NotImplementedException();
 
   public virtual System.Boolean IsValidObject

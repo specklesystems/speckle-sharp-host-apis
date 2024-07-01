@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class BasicFileInfo : System.IDisposable
 {
+  public BasicFileInfo() { }
+
   public virtual Autodesk.Revit.DB.DocumentVersion GetDocumentVersion() => throw new System.NotImplementedException();
 
   public static Autodesk.Revit.DB.BasicFileInfo Extract(System.String file) =>

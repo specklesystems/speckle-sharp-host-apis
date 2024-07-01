@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class GlobalParametersManager : System.IDisposable
 {
+  public GlobalParametersManager() { }
+
   public static System.Boolean AreGlobalParametersAllowed(Autodesk.Revit.DB.Document document) =>
     throw new System.NotImplementedException();
 

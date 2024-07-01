@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ReferencePoint : Autodesk.Revit.DB.Element
 {
+  public ReferencePoint() { }
+
   public virtual Autodesk.Revit.DB.PointElementReference GetPointElementReference() =>
     throw new System.NotImplementedException();
 

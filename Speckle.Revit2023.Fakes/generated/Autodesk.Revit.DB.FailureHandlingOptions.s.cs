@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class FailureHandlingOptions : System.IDisposable
 {
+  public FailureHandlingOptions() { }
+
   public virtual Autodesk.Revit.DB.FailureHandlingOptions SetForcedModalHandling(System.Boolean bFlag) =>
     throw new System.NotImplementedException();
 

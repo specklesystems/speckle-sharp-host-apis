@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class BRepBuilderEdgeGeometry : System.IDisposable
 {
+  public BRepBuilderEdgeGeometry() { }
+
   public static Autodesk.Revit.DB.BRepBuilderEdgeGeometry Create(
     Autodesk.Revit.DB.XYZ startPoint,
     Autodesk.Revit.DB.XYZ endPoint

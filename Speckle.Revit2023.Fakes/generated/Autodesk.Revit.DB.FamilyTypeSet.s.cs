@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class FamilyTypeSet : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerable
 {
-  public FamilyTypeSet() => throw new System.NotImplementedException();
+  public FamilyTypeSet() { }
 
   public virtual void Clear() => throw new System.NotImplementedException();
 

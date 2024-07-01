@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.ExtensibleStorage;
 
 public partial class Field : System.IDisposable
 {
+  public Field() { }
+
   public virtual System.Boolean CompatibleUnit(Autodesk.Revit.DB.ForgeTypeId unitTypeId) =>
     throw new System.NotImplementedException();
 

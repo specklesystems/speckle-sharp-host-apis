@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class LoadBase : Autodesk.Revit.DB.Element
 {
+  public LoadBase() { }
+
   public virtual System.Boolean IsOrientToPermitted(Autodesk.Revit.DB.Structure.LoadOrientTo orientTo) =>
     throw new System.NotImplementedException();
 

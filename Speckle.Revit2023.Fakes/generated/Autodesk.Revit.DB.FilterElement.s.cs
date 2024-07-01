@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class FilterElement : Autodesk.Revit.DB.Element
 {
+  public FilterElement() { }
+
   public static System.Boolean IsNameUnique(Autodesk.Revit.DB.Document aDocument, System.String name) =>
     throw new System.NotImplementedException();
 

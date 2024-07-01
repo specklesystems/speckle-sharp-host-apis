@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB.Electrical;
 
 public partial class InsulationTypeSet : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerable
 {
-  public InsulationTypeSet() => throw new System.NotImplementedException();
+  public InsulationTypeSet() { }
 
   public virtual void Clear() => throw new System.NotImplementedException();
 

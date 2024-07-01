@@ -2,7 +2,7 @@ namespace Autodesk.Revit.UI;
 
 public partial class ExternalApplicationArray : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerable
 {
-  public ExternalApplicationArray() => throw new System.NotImplementedException();
+  public ExternalApplicationArray() { }
 
   public virtual void Clear() => throw new System.NotImplementedException();
 

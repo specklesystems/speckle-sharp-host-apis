@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class AssemblyMemberDifferentType : Autodesk.Revit.DB.AssemblyMemberDifference
 {
+  public AssemblyMemberDifferentType() { }
+
   public virtual Autodesk.Revit.DB.ElementId TypeId2
   {
     get => throw new System.NotImplementedException();

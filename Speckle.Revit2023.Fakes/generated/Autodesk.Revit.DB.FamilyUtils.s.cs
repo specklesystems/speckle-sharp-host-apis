@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class FamilyUtils
 {
+  public FamilyUtils() { }
+
   public static void ConvertFamilyToFaceHostBased(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.ElementId familyId

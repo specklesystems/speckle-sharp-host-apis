@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class StructuralWallUsageFilter : Autodesk.Revit.DB.ElementSlowFilter
 {
+  public StructuralWallUsageFilter() { }
+
   public StructuralWallUsageFilter(
     Autodesk.Revit.DB.Structure.StructuralWallUsage structuralWallUsage,
     System.Boolean inverted

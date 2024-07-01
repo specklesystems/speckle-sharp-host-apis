@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class AssemblyDifferenceMemberDifference : Autodesk.Revit.DB.AssemblyDifference
 {
+  public AssemblyDifferenceMemberDifference() { }
+
   public virtual Autodesk.Revit.DB.AssemblyMemberDifference MemberDifference
   {
     get => throw new System.NotImplementedException();

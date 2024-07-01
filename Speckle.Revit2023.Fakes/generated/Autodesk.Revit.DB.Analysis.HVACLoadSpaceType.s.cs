@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Analysis;
 
 public partial class HVACLoadSpaceType : Autodesk.Revit.DB.Analysis.HVACLoadType
 {
+  public HVACLoadSpaceType() { }
+
   public static Autodesk.Revit.DB.Analysis.HVACLoadSpaceType Create(
     Autodesk.Revit.DB.Document document,
     System.String name

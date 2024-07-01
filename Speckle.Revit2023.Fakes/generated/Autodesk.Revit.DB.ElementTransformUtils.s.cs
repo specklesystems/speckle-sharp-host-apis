@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ElementTransformUtils
 {
+  public ElementTransformUtils() { }
+
   public static System.Boolean CanMirrorElements(
     Autodesk.Revit.DB.Document ADoc,
     System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> elemIds

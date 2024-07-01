@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class MaterialNode : Autodesk.Revit.DB.RenderNode
 {
+  public MaterialNode() { }
+
   public virtual System.String ThumbnailFile
   {
     get => throw new System.NotImplementedException();

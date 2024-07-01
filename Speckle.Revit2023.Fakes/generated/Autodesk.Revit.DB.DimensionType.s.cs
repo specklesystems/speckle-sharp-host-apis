@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class DimensionType : Autodesk.Revit.DB.ElementType
 {
+  public DimensionType() { }
+
   public virtual Autodesk.Revit.DB.FormatOptions GetAlternateUnitsFormatOptions() =>
     throw new System.NotImplementedException();
 

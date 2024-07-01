@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class RevitLinkType : Autodesk.Revit.DB.ElementType
 {
+  public RevitLinkType() { }
+
   public static Autodesk.Revit.DB.LinkLoadResult Create(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.ExternalResourceReference resourceReference,

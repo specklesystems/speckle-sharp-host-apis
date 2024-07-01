@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Analysis;
 
 public partial class Polyloop : System.IDisposable
 {
+  public Polyloop() { }
+
   public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.XYZ> GetPoints() =>
     throw new System.NotImplementedException();
 

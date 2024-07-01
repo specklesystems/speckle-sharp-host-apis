@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class DirectShapeTypeOptions : System.IDisposable
 {
-  public DirectShapeTypeOptions() => throw new System.NotImplementedException();
+  public DirectShapeTypeOptions() { }
 
   public virtual System.Boolean IsEqualTo(Autodesk.Revit.DB.DirectShapeTypeOptions other) =>
     throw new System.NotImplementedException();

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Analysis;
 
 public partial class SpatialFieldManager : Autodesk.Revit.DB.Element
 {
+  public SpatialFieldManager() { }
+
   public static Autodesk.Revit.DB.Analysis.SpatialFieldManager CreateSpatialFieldManager(
     Autodesk.Revit.DB.View view,
     System.Int32 numberOfMeasurements

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Architecture;
 
 public partial class NonContinuousRailInfo : System.IDisposable
 {
+  public NonContinuousRailInfo() { }
+
   public virtual System.Boolean IsValidNonContinuousRailHeight(System.Double height) =>
     throw new System.NotImplementedException();
 

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.UI;
 
 public partial class ContextualHelp
 {
+  public ContextualHelp() { }
+
   public ContextualHelp(Autodesk.Revit.UI.ContextualHelpType helpType, System.String helpPath) =>
     throw new System.NotImplementedException();
 

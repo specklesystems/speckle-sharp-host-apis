@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class Profile : Autodesk.Revit.DB.GeometryObject
 {
+  public Profile() { }
+
   public virtual Autodesk.Revit.DB.Profile get_Transformed(Autodesk.Revit.DB.Transform transform) =>
     throw new System.NotImplementedException();
 

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class FamilyPointPlacementReference : Autodesk.Revit.DB.APIObject
 {
+  public FamilyPointPlacementReference() { }
+
   public virtual Autodesk.Revit.DB.Reference PointReference
   {
     get => throw new System.NotImplementedException();

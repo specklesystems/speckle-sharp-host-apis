@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB.Electrical;
 
 public partial class WireMaterialTypeSet : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerable
 {
-  public WireMaterialTypeSet() => throw new System.NotImplementedException();
+  public WireMaterialTypeSet() { }
 
   public virtual void Clear() => throw new System.NotImplementedException();
 

@@ -4,6 +4,8 @@ public partial class KeyBasedTreeEntries
   : System.Collections.Generic.IEnumerable<Autodesk.Revit.DB.KeyBasedTreeEntry>,
     System.IDisposable
 {
+  public KeyBasedTreeEntries() { }
+
   public virtual Autodesk.Revit.DB.KeyBasedTreeEntry FindEntry(System.String key) =>
     throw new System.NotImplementedException();
 

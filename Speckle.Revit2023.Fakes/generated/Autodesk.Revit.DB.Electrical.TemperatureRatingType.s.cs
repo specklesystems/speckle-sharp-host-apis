@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Electrical;
 
 public partial class TemperatureRatingType : Autodesk.Revit.DB.ElementType
 {
+  public TemperatureRatingType() { }
+
   public virtual Autodesk.Revit.DB.Electrical.InsulationType AddInsulationType(System.String name) =>
     throw new System.NotImplementedException();
 

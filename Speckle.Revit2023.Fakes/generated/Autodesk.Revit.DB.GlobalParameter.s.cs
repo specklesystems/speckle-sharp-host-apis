@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class GlobalParameter : Autodesk.Revit.DB.ParameterElement
 {
+  public GlobalParameter() { }
+
   public static Autodesk.Revit.DB.GlobalParameter Create(
     Autodesk.Revit.DB.Document document,
     System.String name,

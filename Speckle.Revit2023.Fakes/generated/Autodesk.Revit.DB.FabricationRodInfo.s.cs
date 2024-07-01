@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class FabricationRodInfo : System.IDisposable
 {
+  public FabricationRodInfo() { }
+
   public virtual Autodesk.Revit.DB.LinkElementId GetRodAttachedElementId(System.Int32 rodIndex) =>
     throw new System.NotImplementedException();
 

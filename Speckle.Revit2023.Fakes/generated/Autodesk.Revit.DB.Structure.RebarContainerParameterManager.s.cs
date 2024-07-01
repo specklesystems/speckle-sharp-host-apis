@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class RebarContainerParameterManager : System.IDisposable
 {
+  public RebarContainerParameterManager() { }
+
   public virtual void AddOverride(Autodesk.Revit.DB.ElementId paramId, Autodesk.Revit.DB.ElementId value) =>
     throw new System.NotImplementedException();
 

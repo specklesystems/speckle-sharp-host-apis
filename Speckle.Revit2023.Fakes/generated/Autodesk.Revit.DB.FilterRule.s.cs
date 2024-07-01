@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class FilterRule : System.IDisposable
 {
+  public FilterRule() { }
+
   public virtual System.Boolean ElementPasses(Autodesk.Revit.DB.Element element) =>
     throw new System.NotImplementedException();
 

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class CurtainGrid : Autodesk.Revit.DB.APIObject
 {
+  public CurtainGrid() { }
+
   public virtual System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> GetPanelIds() =>
     throw new System.NotImplementedException();
 

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class FabricationService : System.IDisposable
 {
+  public FabricationService() { }
+
   public virtual System.Boolean IsValidPaletteIndex(System.Int32 paletteIndex) =>
     throw new System.NotImplementedException();
 

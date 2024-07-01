@@ -13,15 +13,21 @@ public partial class Generator
     }
     var constructors = clazz.GetConstructors().ToList();
     var emptyConstructor = constructors.FirstOrDefault(x => !x.GetParameters().Any());
-    if (emptyConstructor is null)
+    if (emptyConstructor is not null)
     {
-      //doens't have empty constructor so make one?
+      constructors.Remove(emptyConstructor);
     }
+
+    var constructorSb = new StringBuilder();
+    constructorSb.Append($"\tpublic {clazz.Name}(");
+    WriteMethodBody(constructorSb, [], clazz.BaseType, GeneratedType.Empty);
+    sb.Append(constructorSb);
+    generatedConstructor.Add(new GeneratedConstructor([]));
     foreach (var constructor in constructors)
     {
       try
       {
-        var constructorSb = new StringBuilder();
+        constructorSb = new StringBuilder();
         constructorSb.Append($"\tpublic {clazz.Name}(");
         var parameters = constructor.GetParameters();
         WriteMethodBody(constructorSb, parameters, clazz.BaseType, GeneratedType.Class);

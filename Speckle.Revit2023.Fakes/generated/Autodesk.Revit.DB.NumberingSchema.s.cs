@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class NumberingSchema : Autodesk.Revit.DB.Element
 {
+  public NumberingSchema() { }
+
   public static System.Collections.Generic.ISet<Autodesk.Revit.DB.ElementId> GetSchemasInDocument(
     Autodesk.Revit.DB.Document document
   ) => throw new System.NotImplementedException();

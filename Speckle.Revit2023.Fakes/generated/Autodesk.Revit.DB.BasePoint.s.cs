@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class BasePoint : Autodesk.Revit.DB.Element
 {
+  public BasePoint() { }
+
   public static Autodesk.Revit.DB.BasePoint GetProjectBasePoint(Autodesk.Revit.DB.Document cda) =>
     throw new System.NotImplementedException();
 

@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class GroupSetIterator : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerator
 {
-  public GroupSetIterator() => throw new System.NotImplementedException();
+  public GroupSetIterator() { }
 
   public virtual System.Boolean MoveNext() => throw new System.NotImplementedException();
 

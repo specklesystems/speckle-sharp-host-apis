@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Plumbing;
 
 public partial class PlumbingUtils
 {
+  public PlumbingUtils() { }
+
   public static System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> ConvertPipePlaceholders(
     Autodesk.Revit.DB.Document document,
     System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> placeholderIds

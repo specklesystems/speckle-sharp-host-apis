@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class CurveArrayIterator : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerator
 {
-  public CurveArrayIterator() => throw new System.NotImplementedException();
+  public CurveArrayIterator() { }
 
   public virtual System.Boolean MoveNext() => throw new System.NotImplementedException();
 

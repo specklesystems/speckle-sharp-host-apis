@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class PlanarFace : Autodesk.Revit.DB.Face
 {
+  public PlanarFace() { }
+
   public virtual Autodesk.Revit.DB.XYZ YVector
   {
     get => throw new System.NotImplementedException();

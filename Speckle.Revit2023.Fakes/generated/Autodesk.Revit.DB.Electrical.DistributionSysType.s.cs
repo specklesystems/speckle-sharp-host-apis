@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Electrical;
 
 public partial class DistributionSysType : Autodesk.Revit.DB.ElementType
 {
+  public DistributionSysType() { }
+
   public virtual System.Boolean IsInUse
   {
     get => throw new System.NotImplementedException();

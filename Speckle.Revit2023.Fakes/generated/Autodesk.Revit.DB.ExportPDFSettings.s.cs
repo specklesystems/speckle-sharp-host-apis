@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ExportPDFSettings : Autodesk.Revit.DB.Element
 {
+  public ExportPDFSettings() { }
+
   public static Autodesk.Revit.DB.ExportPDFSettings Create(
     Autodesk.Revit.DB.Document document,
     System.String name,

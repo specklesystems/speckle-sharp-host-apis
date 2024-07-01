@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class LoadCombination : Autodesk.Revit.DB.Element
 {
+  public LoadCombination() { }
+
   public static Autodesk.Revit.DB.Structure.LoadCombination Create(
     Autodesk.Revit.DB.Document document,
     System.String name,

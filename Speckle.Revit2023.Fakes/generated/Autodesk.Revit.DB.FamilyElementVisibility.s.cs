@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class FamilyElementVisibility : Autodesk.Revit.DB.APIObject
 {
+  public FamilyElementVisibility() { }
+
   public FamilyElementVisibility(Autodesk.Revit.DB.FamilyElementVisibilityType visibilityType) =>
     throw new System.NotImplementedException();
 

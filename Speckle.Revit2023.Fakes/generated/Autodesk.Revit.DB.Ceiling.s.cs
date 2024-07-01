@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class Ceiling : Autodesk.Revit.DB.CeilingAndFloor
 {
+  public Ceiling() { }
+
   public static Autodesk.Revit.DB.Ceiling Create(
     Autodesk.Revit.DB.Document document,
     System.Collections.Generic.IList<Autodesk.Revit.DB.CurveLoop> curveLoops,

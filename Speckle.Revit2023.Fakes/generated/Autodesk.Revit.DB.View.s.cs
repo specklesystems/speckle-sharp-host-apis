@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class View : Autodesk.Revit.DB.Element
 {
+  public View() { }
+
   public virtual System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> GetFilters() =>
     throw new System.NotImplementedException();
 

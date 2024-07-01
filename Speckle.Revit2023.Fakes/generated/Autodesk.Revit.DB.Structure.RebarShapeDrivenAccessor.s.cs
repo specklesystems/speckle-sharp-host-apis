@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class RebarShapeDrivenAccessor : System.IDisposable
 {
+  public RebarShapeDrivenAccessor() { }
+
   public virtual Autodesk.Revit.DB.Line GetDistributionPath() => throw new System.NotImplementedException();
 
   public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.Curve> ComputeDrivingCurves() =>

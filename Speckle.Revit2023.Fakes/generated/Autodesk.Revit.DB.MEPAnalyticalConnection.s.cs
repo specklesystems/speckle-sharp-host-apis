@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class MEPAnalyticalConnection : Autodesk.Revit.DB.MEPCurve
 {
+  public MEPAnalyticalConnection() { }
+
   public static Autodesk.Revit.DB.MEPAnalyticalConnection Create(
     Autodesk.Revit.DB.Document doc,
     Autodesk.Revit.DB.ElementId typeId,

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class RoofBase : Autodesk.Revit.DB.HostObject
 {
+  public RoofBase() { }
+
   public virtual Autodesk.Revit.DB.SlabShapeEditor SlabShapeEditor
   {
     get => throw new System.NotImplementedException();

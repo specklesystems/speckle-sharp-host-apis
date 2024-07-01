@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class PDFExportOptions : System.IDisposable
 {
-  public PDFExportOptions() => throw new System.NotImplementedException();
+  public PDFExportOptions() { }
 
   public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.TableCellCombinedParameterData> GetNamingRule() =>
     throw new System.NotImplementedException();

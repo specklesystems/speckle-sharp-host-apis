@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Architecture;
 
 public partial class CutMarkType : Autodesk.Revit.DB.ElementType
 {
+  public CutMarkType() { }
+
   public virtual Autodesk.Revit.DB.Architecture.CutLineType CutLineType
   {
     get => throw new System.NotImplementedException();

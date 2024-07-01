@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Architecture;
 
 public partial class BalusterInfo : System.IDisposable
 {
+  public BalusterInfo() { }
+
   public static System.String GetReferenceNameForHost() => throw new System.NotImplementedException();
 
   public static System.String GetReferenceNameForTopRail() => throw new System.NotImplementedException();

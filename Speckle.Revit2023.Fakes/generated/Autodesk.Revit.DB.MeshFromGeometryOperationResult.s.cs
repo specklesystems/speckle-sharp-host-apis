@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class MeshFromGeometryOperationResult : System.IDisposable
 {
+  public MeshFromGeometryOperationResult() { }
+
   public virtual Autodesk.Revit.DB.Mesh GetMesh() => throw new System.NotImplementedException();
 
   public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.MeshFromGeometryOperationIssue> GetIssues() =>

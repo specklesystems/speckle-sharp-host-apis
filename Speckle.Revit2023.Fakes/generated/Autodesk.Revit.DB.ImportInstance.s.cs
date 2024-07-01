@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ImportInstance : Autodesk.Revit.DB.Instance
 {
+  public ImportInstance() { }
+
   public virtual Autodesk.Revit.DB.FamilyElementVisibility GetVisibility() =>
     throw new System.NotImplementedException();
 

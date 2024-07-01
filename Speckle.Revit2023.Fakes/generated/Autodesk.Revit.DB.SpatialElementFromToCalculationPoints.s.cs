@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class SpatialElementFromToCalculationPoints : Autodesk.Revit.DB.SpatialElementCalculationLocation
 {
+  public SpatialElementFromToCalculationPoints() { }
+
   public virtual void Flip() => throw new System.NotImplementedException();
 
   public virtual Autodesk.Revit.DB.XYZ MakeFromPositionAcceptable(Autodesk.Revit.DB.XYZ newFromLocation) =>

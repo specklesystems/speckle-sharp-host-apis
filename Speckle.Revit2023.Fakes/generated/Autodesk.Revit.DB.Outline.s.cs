@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class Outline : System.IDisposable
 {
+  public Outline() { }
+
   public Outline(Autodesk.Revit.DB.XYZ minimumPoint, Autodesk.Revit.DB.XYZ maximumPoint) =>
     throw new System.NotImplementedException();
 

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Mechanical;
 
 public partial class ZoneEquipment : Autodesk.Revit.DB.Element
 {
+  public ZoneEquipment() { }
+
   public static Autodesk.Revit.DB.Mechanical.ZoneEquipment Create(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.Mechanical.AnalyticalSystemDomain systemDomain,

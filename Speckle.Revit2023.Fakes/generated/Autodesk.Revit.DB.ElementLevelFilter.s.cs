@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ElementLevelFilter : Autodesk.Revit.DB.ElementSlowFilter
 {
+  public ElementLevelFilter() { }
+
   public ElementLevelFilter(Autodesk.Revit.DB.ElementId levelId, System.Boolean inverted) =>
     throw new System.NotImplementedException();
 

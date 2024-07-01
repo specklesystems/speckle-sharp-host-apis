@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class CurveUV : System.IDisposable
 {
+  public CurveUV() { }
+
   public static Autodesk.Revit.DB.CurveUV Create(Autodesk.Revit.DB.Curve curve3D) =>
     throw new System.NotImplementedException();
 

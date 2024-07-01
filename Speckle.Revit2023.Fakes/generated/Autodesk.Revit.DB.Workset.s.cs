@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class Workset : Autodesk.Revit.DB.WorksetPreview
 {
+  public Workset() { }
+
   public static Autodesk.Revit.DB.Workset Create(Autodesk.Revit.DB.Document document, System.String name) =>
     throw new System.NotImplementedException();
 

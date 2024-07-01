@@ -4,6 +4,8 @@ public partial class RebarContainer
   : Autodesk.Revit.DB.Element,
     System.Collections.Generic.IEnumerable<Autodesk.Revit.DB.Structure.RebarContainerItem>
 {
+  public RebarContainer() { }
+
   public static Autodesk.Revit.DB.Structure.RebarContainer Create(
     Autodesk.Revit.DB.Document aDoc,
     Autodesk.Revit.DB.Element hostElement,

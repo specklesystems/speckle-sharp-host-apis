@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class RebarShapeParameters : System.IDisposable
 {
+  public RebarShapeParameters() { }
+
   public static System.Boolean IsValidExternalDefinition(Autodesk.Revit.DB.ExternalDefinition param) =>
     throw new System.NotImplementedException();
 

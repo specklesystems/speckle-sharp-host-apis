@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Architecture;
 
 public partial class StairsRun : Autodesk.Revit.DB.Element
 {
+  public StairsRun() { }
+
   public static System.Boolean SetLocationPathForStraightRun(
     Autodesk.Revit.DB.Architecture.StairsRun stairsRun,
     Autodesk.Revit.DB.Line locationPath

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ViewSheetSetting : Autodesk.Revit.DB.APIObject
 {
+  public ViewSheetSetting() { }
+
   public virtual System.Boolean Save() => throw new System.NotImplementedException();
 
   public virtual System.Boolean SaveAs(System.String newName) => throw new System.NotImplementedException();

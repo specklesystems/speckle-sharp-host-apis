@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Architecture;
 
 public partial class BuildingPad : Autodesk.Revit.DB.CeilingAndFloor
 {
+  public BuildingPad() { }
+
   public static Autodesk.Revit.DB.Architecture.BuildingPad Create(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.ElementId buildingPadTypeId,

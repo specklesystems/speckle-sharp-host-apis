@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class RevolvedSurface : Autodesk.Revit.DB.Surface
 {
+  public RevolvedSurface() { }
+
   public static Autodesk.Revit.DB.Surface Create(
     Autodesk.Revit.DB.Frame frameOfReference,
     Autodesk.Revit.DB.Curve profileCurve,

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.ExternalService;
 
 public partial class ExternalServiceRegistry
 {
+  public ExternalServiceRegistry() { }
+
   public static System.Guid RegisterService(
     Autodesk.Revit.DB.ExternalService.ISingleServerService service,
     System.Guid defaultServerId,

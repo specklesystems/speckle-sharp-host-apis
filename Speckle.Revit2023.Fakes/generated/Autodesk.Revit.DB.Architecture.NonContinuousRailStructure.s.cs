@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Architecture;
 
 public partial class NonContinuousRailStructure : System.IDisposable
 {
+  public NonContinuousRailStructure() { }
+
   public virtual System.Int32 GetNonContinuousRailCount() => throw new System.NotImplementedException();
 
   public virtual Autodesk.Revit.DB.Architecture.NonContinuousRailInfo AddNonContinuousRail(

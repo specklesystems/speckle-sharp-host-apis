@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Mechanical;
 
 public partial class SpaceTag : Autodesk.Revit.DB.SpatialElementTag
 {
+  public SpaceTag() { }
+
   public virtual Autodesk.Revit.DB.Mechanical.SpaceTagType SpaceTagType
   {
     get => throw new System.NotImplementedException();

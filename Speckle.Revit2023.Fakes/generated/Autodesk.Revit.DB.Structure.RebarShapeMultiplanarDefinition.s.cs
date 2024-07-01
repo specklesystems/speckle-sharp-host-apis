@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class RebarShapeMultiplanarDefinition : System.IDisposable
 {
+  public RebarShapeMultiplanarDefinition() { }
+
   public RebarShapeMultiplanarDefinition(System.Double outOfPlaneBendDiameter) =>
     throw new System.NotImplementedException();
 

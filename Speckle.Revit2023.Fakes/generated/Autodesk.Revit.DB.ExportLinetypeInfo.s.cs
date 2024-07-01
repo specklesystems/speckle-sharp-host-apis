@@ -2,9 +2,9 @@ namespace Autodesk.Revit.DB;
 
 public partial class ExportLinetypeInfo : System.IDisposable
 {
-  public ExportLinetypeInfo(System.String destinationLinetypeName) => throw new System.NotImplementedException();
+  public ExportLinetypeInfo() { }
 
-  public ExportLinetypeInfo() => throw new System.NotImplementedException();
+  public ExportLinetypeInfo(System.String destinationLinetypeName) => throw new System.NotImplementedException();
 
   public ExportLinetypeInfo(Autodesk.Revit.DB.ExportLinetypeInfo other) => throw new System.NotImplementedException();
 

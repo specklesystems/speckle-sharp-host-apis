@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class HostedSweep : Autodesk.Revit.DB.HostObject
 {
+  public HostedSweep() { }
+
   public virtual Autodesk.Revit.DB.Curve get_ReferenceCurve(Autodesk.Revit.DB.Reference targetRef) =>
     throw new System.NotImplementedException();
 

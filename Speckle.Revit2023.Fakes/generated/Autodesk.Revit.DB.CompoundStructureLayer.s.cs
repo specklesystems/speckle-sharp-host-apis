@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class CompoundStructureLayer : System.IDisposable
 {
+  public CompoundStructureLayer() { }
+
   public CompoundStructureLayer(
     System.Double width,
     Autodesk.Revit.DB.MaterialFunctionAssignment function,
@@ -10,8 +12,6 @@ public partial class CompoundStructureLayer : System.IDisposable
 
   public CompoundStructureLayer(Autodesk.Revit.DB.CompoundStructureLayer cs) =>
     throw new System.NotImplementedException();
-
-  public CompoundStructureLayer() => throw new System.NotImplementedException();
 
   public virtual void Dispose() => throw new System.NotImplementedException();
 

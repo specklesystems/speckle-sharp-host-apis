@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class Ellipse : Autodesk.Revit.DB.Curve
 {
+  public Ellipse() { }
+
   public static Autodesk.Revit.DB.Curve CreateCurve(
     Autodesk.Revit.DB.XYZ center,
     System.Double xRadius,

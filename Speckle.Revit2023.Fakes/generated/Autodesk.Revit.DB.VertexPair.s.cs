@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class VertexPair : System.IDisposable
 {
+  public VertexPair() { }
+
   public VertexPair(System.Int32 firstVertexIdx, System.Int32 secondVertexIdx) =>
     throw new System.NotImplementedException();
 

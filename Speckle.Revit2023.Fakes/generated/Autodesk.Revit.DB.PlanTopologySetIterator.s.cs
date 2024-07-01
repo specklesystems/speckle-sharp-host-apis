@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class PlanTopologySetIterator : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerator
 {
-  public PlanTopologySetIterator() => throw new System.NotImplementedException();
+  public PlanTopologySetIterator() { }
 
   public virtual System.Boolean MoveNext() => throw new System.NotImplementedException();
 

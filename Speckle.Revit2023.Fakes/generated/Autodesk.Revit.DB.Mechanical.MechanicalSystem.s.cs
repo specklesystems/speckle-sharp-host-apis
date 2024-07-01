@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Mechanical;
 
 public partial class MechanicalSystem : Autodesk.Revit.DB.MEPSystem
 {
+  public MechanicalSystem() { }
+
   public virtual System.Boolean IsPressureDropServerMissing() => throw new System.NotImplementedException();
 
   public static Autodesk.Revit.DB.Mechanical.MechanicalSystem Create(

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class FilterStringRuleEvaluator : System.IDisposable
 {
+  public FilterStringRuleEvaluator() { }
+
   public virtual System.Boolean Evaluate(System.String lhs, System.String rhs, System.Boolean caseSensitive) =>
     throw new System.NotImplementedException();
 

@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class ProjectLocationSet : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerable
 {
-  public ProjectLocationSet() => throw new System.NotImplementedException();
+  public ProjectLocationSet() { }
 
   public virtual void Clear() => throw new System.NotImplementedException();
 

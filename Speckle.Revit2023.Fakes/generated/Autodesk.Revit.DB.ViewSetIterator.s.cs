@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class ViewSetIterator : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerator
 {
-  public ViewSetIterator() => throw new System.NotImplementedException();
+  public ViewSetIterator() { }
 
   public virtual System.Boolean MoveNext() => throw new System.NotImplementedException();
 

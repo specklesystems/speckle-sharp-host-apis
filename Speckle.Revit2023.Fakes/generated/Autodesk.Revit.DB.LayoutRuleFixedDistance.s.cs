@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class LayoutRuleFixedDistance : Autodesk.Revit.DB.LayoutRule
 {
+  public LayoutRuleFixedDistance() { }
+
   public LayoutRuleFixedDistance(System.Double spacing, Autodesk.Revit.DB.BeamSystemJustifyType justifyType) =>
     throw new System.NotImplementedException();
 

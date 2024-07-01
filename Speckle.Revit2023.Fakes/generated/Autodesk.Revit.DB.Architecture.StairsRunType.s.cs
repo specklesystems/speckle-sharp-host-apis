@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Architecture;
 
 public partial class StairsRunType : Autodesk.Revit.DB.ElementType
 {
+  public StairsRunType() { }
+
   public virtual Autodesk.Revit.DB.Architecture.RiserToTreadConnectionOption RiserToTreadConnect
   {
     get => throw new System.NotImplementedException();

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ModelCurve : Autodesk.Revit.DB.CurveElement
 {
+  public ModelCurve() { }
+
   public virtual Autodesk.Revit.DB.FamilyElementVisibility GetVisibility() =>
     throw new System.NotImplementedException();
 

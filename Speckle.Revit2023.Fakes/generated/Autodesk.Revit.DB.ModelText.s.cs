@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ModelText : Autodesk.Revit.DB.Element
 {
+  public ModelText() { }
+
   public virtual Autodesk.Revit.DB.FamilyElementVisibility GetVisibility() =>
     throw new System.NotImplementedException();
 

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class TessellatedShapeBuilderResult : System.IDisposable
 {
+  public TessellatedShapeBuilderResult() { }
+
   public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.GeometryObject> GetGeometricalObjects() =>
     throw new System.NotImplementedException();
 

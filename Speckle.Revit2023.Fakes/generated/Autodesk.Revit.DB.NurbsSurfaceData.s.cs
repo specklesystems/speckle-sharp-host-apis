@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class NurbsSurfaceData : System.IDisposable
 {
+  public NurbsSurfaceData() { }
+
   public NurbsSurfaceData(Autodesk.Revit.DB.NurbsSurfaceData other) => throw new System.NotImplementedException();
 
   public static Autodesk.Revit.DB.NurbsSurfaceData Create(

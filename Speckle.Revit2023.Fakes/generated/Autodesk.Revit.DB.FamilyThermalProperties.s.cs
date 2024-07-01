@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class FamilyThermalProperties : System.IDisposable
 {
-  public FamilyThermalProperties() => throw new System.NotImplementedException();
+  public FamilyThermalProperties() { }
 
   public virtual System.Boolean IsValid() => throw new System.NotImplementedException();
 

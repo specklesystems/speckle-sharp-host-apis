@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class PerformanceAdviser : System.IDisposable
 {
+  public PerformanceAdviser() { }
+
   public static Autodesk.Revit.DB.PerformanceAdviser GetPerformanceAdviser() =>
     throw new System.NotImplementedException();
 

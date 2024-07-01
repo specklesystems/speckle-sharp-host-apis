@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.ExternalService;
 
 public partial class SingleServerService : Autodesk.Revit.DB.ExternalService.ExternalService
 {
+  public SingleServerService() { }
+
   public virtual System.Guid GetActiveServerId(Autodesk.Revit.DB.Document document) =>
     throw new System.NotImplementedException();
 

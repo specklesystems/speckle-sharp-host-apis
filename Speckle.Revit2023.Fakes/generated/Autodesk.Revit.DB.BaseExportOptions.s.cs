@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class BaseExportOptions : System.IDisposable
 {
+  public BaseExportOptions() { }
+
   public static System.Collections.Generic.IList<System.String> GetPredefinedSetupNames(
     Autodesk.Revit.DB.Document document
   ) => throw new System.NotImplementedException();

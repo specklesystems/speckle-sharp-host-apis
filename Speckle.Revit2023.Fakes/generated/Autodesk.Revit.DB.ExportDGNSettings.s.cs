@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ExportDGNSettings : Autodesk.Revit.DB.Element
 {
+  public ExportDGNSettings() { }
+
   public static Autodesk.Revit.DB.ExportDGNSettings Create(
     Autodesk.Revit.DB.Document document,
     System.String name,

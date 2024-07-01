@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class RebarReinforcementData : Autodesk.Revit.DB.Structure.ReinforcementData
 {
+  public RebarReinforcementData() { }
+
   public static Autodesk.Revit.DB.Structure.RebarReinforcementData Create(
     Autodesk.Revit.DB.ElementId rebarId,
     System.Int32 iEnd

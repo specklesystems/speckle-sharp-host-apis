@@ -2,6 +2,8 @@ namespace Autodesk.Revit.UI;
 
 public partial class ExternalCommandData : Autodesk.Revit.DB.APIObject
 {
+  public ExternalCommandData() { }
+
   public virtual System.Collections.Generic.IDictionary<System.String, System.String> JournalData
   {
     get => throw new System.NotImplementedException();

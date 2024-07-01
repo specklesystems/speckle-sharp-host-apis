@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class PlanCircuit : Autodesk.Revit.DB.APIObject
 {
+  public PlanCircuit() { }
+
   public virtual Autodesk.Revit.DB.UV GetPointInside() => throw new System.NotImplementedException();
 
   public virtual System.Boolean IsRoomLocated

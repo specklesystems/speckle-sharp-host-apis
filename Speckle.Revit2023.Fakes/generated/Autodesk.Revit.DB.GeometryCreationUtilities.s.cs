@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class GeometryCreationUtilities
 {
+  public GeometryCreationUtilities() { }
+
   public static Autodesk.Revit.DB.Solid CreateExtrusionGeometry(
     System.Collections.Generic.IList<Autodesk.Revit.DB.CurveLoop> profileLoops,
     Autodesk.Revit.DB.XYZ extrusionDir,

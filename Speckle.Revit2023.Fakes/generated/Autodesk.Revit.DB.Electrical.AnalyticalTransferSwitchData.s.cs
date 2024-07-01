@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Electrical;
 
 public partial class AnalyticalTransferSwitchData : Autodesk.Revit.DB.Electrical.AnalyticalDistributionNodePropertyData
 {
+  public AnalyticalTransferSwitchData() { }
+
   public virtual System.Double TotalConnectedCurrent
   {
     get => throw new System.NotImplementedException();

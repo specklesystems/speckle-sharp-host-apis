@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class FamilyStructuralMaterialTypeFilter : Autodesk.Revit.DB.ElementSlowFilter
 {
+  public FamilyStructuralMaterialTypeFilter() { }
+
   public FamilyStructuralMaterialTypeFilter(
     Autodesk.Revit.DB.Structure.StructuralMaterialType structuralMaterialType,
     System.Boolean inverted

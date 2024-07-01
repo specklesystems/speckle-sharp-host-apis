@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class AreaLoad : Autodesk.Revit.DB.Structure.LoadBase
 {
+  public AreaLoad() { }
+
   public static Autodesk.Revit.DB.Structure.AreaLoad Create(
     Autodesk.Revit.DB.Document aDoc,
     System.Collections.Generic.IList<Autodesk.Revit.DB.CurveLoop> loops,

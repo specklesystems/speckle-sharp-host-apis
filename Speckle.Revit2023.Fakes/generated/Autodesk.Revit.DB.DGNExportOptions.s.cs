@@ -2,9 +2,9 @@ namespace Autodesk.Revit.DB;
 
 public partial class DGNExportOptions : Autodesk.Revit.DB.BaseExportOptions
 {
-  public DGNExportOptions(Autodesk.Revit.DB.DGNExportOptions option) => throw new System.NotImplementedException();
+  public DGNExportOptions() { }
 
-  public DGNExportOptions() => throw new System.NotImplementedException();
+  public DGNExportOptions(Autodesk.Revit.DB.DGNExportOptions option) => throw new System.NotImplementedException();
 
   public static new System.Collections.Generic.IList<System.String> GetPredefinedSetupNames(
     Autodesk.Revit.DB.Document document

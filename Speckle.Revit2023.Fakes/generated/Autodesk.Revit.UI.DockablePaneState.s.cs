@@ -2,9 +2,9 @@ namespace Autodesk.Revit.UI;
 
 public partial class DockablePaneState : System.IDisposable
 {
-  public DockablePaneState(Autodesk.Revit.UI.DockablePaneState other) => throw new System.NotImplementedException();
+  public DockablePaneState() { }
 
-  public DockablePaneState() => throw new System.NotImplementedException();
+  public DockablePaneState(Autodesk.Revit.UI.DockablePaneState other) => throw new System.NotImplementedException();
 
   public virtual void SetFloatingRectangle(Autodesk.Revit.DB.Rectangle rect) =>
     throw new System.NotImplementedException();

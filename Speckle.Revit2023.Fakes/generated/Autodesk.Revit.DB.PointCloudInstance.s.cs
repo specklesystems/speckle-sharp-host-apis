@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class PointCloudInstance : Autodesk.Revit.DB.Instance
 {
+  public PointCloudInstance() { }
+
   public virtual System.Boolean HasColor() => throw new System.NotImplementedException();
 
   public virtual System.Collections.Generic.IList<System.String> GetScans() =>

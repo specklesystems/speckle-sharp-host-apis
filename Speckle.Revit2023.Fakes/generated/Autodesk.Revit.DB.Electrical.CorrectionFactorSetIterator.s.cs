@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB.Electrical;
 
 public partial class CorrectionFactorSetIterator : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerator
 {
-  public CorrectionFactorSetIterator() => throw new System.NotImplementedException();
+  public CorrectionFactorSetIterator() { }
 
   public virtual System.Boolean MoveNext() => throw new System.NotImplementedException();
 

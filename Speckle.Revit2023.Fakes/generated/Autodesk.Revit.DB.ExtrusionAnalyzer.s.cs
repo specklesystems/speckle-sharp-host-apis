@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ExtrusionAnalyzer : System.IDisposable
 {
+  public ExtrusionAnalyzer() { }
+
   public static Autodesk.Revit.DB.ExtrusionAnalyzer Create(
     Autodesk.Revit.DB.Solid solidGeometry,
     Autodesk.Revit.DB.Plane plane,

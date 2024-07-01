@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ACADExportOptions : Autodesk.Revit.DB.BaseExportOptions
 {
+  public ACADExportOptions() { }
+
   public virtual Autodesk.Revit.DB.Color HatchBackgroundColor
   {
     get => throw new System.NotImplementedException();

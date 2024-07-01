@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Electrical;
 
 public partial class ElectricalSetting : Autodesk.Revit.DB.Element
 {
+  public ElectricalSetting() { }
+
   public virtual Autodesk.Revit.DB.Electrical.VoltageType AddVoltageType(
     System.String name,
     System.Double actualValue,

@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB.Electrical;
 
 public partial class WireSizeSetIterator : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerator
 {
-  public WireSizeSetIterator() => throw new System.NotImplementedException();
+  public WireSizeSetIterator() { }
 
   public virtual System.Boolean MoveNext() => throw new System.NotImplementedException();
 

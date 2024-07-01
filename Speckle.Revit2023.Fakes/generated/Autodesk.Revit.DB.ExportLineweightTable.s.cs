@@ -7,7 +7,7 @@ public partial class ExportLineweightTable
   >>,
     System.IDisposable
 {
-  public ExportLineweightTable() => throw new System.NotImplementedException();
+  public ExportLineweightTable() { }
 
   public virtual Autodesk.Revit.DB.ExportLineweightTableIterator GetLineweightTableIterator() =>
     throw new System.NotImplementedException();

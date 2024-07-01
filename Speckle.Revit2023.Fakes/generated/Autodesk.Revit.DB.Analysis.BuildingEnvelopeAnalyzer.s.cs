@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Analysis;
 
 public partial class BuildingEnvelopeAnalyzer : System.IDisposable
 {
+  public BuildingEnvelopeAnalyzer() { }
+
   public static Autodesk.Revit.DB.Analysis.BuildingEnvelopeAnalyzer Create(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.Analysis.BuildingEnvelopeAnalyzerOptions options

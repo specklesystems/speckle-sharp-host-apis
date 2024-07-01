@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ScheduleSortGroupField : System.IDisposable
 {
+  public ScheduleSortGroupField() { }
+
   public ScheduleSortGroupField(
     Autodesk.Revit.DB.ScheduleFieldId fieldId,
     Autodesk.Revit.DB.ScheduleSortOrder sortOrder
@@ -9,8 +11,6 @@ public partial class ScheduleSortGroupField : System.IDisposable
 
   public ScheduleSortGroupField(Autodesk.Revit.DB.ScheduleFieldId fieldId) =>
     throw new System.NotImplementedException();
-
-  public ScheduleSortGroupField() => throw new System.NotImplementedException();
 
   public virtual void Dispose() => throw new System.NotImplementedException();
 

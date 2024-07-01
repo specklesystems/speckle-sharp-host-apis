@@ -2,6 +2,8 @@ namespace Autodesk.Revit.UI;
 
 public partial class RevitCommandId : System.IDisposable
 {
+  public RevitCommandId() { }
+
   public static Autodesk.Revit.UI.RevitCommandId LookupPostableCommandId(
     Autodesk.Revit.UI.PostableCommand postableCommand
   ) => throw new System.NotImplementedException();

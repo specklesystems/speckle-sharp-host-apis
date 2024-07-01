@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class Sweep : Autodesk.Revit.DB.GenericForm
 {
+  public Sweep() { }
+
   public virtual System.Double MaxSegmentAngle
   {
     get => throw new System.NotImplementedException();

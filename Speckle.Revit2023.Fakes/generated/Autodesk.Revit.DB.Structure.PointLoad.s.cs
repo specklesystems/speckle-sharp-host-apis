@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class PointLoad : Autodesk.Revit.DB.Structure.LoadBase
 {
+  public PointLoad() { }
+
   public static Autodesk.Revit.DB.Structure.PointLoad Create(
     Autodesk.Revit.DB.Document aDoc,
     Autodesk.Revit.DB.XYZ point,

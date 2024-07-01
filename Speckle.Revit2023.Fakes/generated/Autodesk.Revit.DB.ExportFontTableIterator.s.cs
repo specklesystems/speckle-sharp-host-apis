@@ -6,6 +6,8 @@ public partial class ExportFontTableIterator
     Autodesk.Revit.DB.ExportFontInfo
   >>
 {
+  public ExportFontTableIterator() { }
+
   public virtual System.Boolean MoveNext() => throw new System.NotImplementedException();
 
   public virtual System.Boolean IsDone() => throw new System.NotImplementedException();

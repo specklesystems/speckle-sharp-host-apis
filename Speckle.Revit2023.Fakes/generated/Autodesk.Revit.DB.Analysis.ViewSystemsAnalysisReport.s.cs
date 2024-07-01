@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Analysis;
 
 public partial class ViewSystemsAnalysisReport : Autodesk.Revit.DB.View
 {
+  public ViewSystemsAnalysisReport() { }
+
   public static Autodesk.Revit.DB.Analysis.ViewSystemsAnalysisReport Create(
     Autodesk.Revit.DB.Document document,
     System.String viewName

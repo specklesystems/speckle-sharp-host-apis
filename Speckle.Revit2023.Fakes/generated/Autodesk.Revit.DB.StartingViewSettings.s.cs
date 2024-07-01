@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class StartingViewSettings : Autodesk.Revit.DB.Element
 {
+  public StartingViewSettings() { }
+
   public static Autodesk.Revit.DB.StartingViewSettings GetStartingViewSettings(Autodesk.Revit.DB.Document doc) =>
     throw new System.NotImplementedException();
 

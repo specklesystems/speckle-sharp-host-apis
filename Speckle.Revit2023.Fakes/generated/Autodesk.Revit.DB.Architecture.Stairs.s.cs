@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Architecture;
 
 public partial class Stairs : Autodesk.Revit.DB.Element
 {
+  public Stairs() { }
+
   public virtual System.Boolean IsInEditMode() => throw new System.NotImplementedException();
 
   public static System.Boolean IsByComponent(

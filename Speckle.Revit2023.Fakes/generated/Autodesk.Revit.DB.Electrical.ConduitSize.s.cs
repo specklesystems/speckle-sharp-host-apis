@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Electrical;
 
 public partial class ConduitSize : System.IDisposable
 {
+  public ConduitSize() { }
+
   public ConduitSize(
     System.Double nominalDiameter,
     System.Double innerDiameter,

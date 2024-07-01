@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class Element : System.IDisposable
 {
+  public Element() { }
+
   public virtual Autodesk.Revit.DB.Parameter get_Parameter(Autodesk.Revit.DB.BuiltInParameter parameterId) =>
     throw new System.NotImplementedException();
 

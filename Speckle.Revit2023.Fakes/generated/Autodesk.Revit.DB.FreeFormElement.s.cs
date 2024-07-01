@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class FreeFormElement : Autodesk.Revit.DB.GenericForm
 {
+  public FreeFormElement() { }
+
   public static Autodesk.Revit.DB.FreeFormElement Create(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.Solid geometry

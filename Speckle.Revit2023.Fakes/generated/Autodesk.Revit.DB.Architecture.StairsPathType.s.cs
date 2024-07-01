@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Architecture;
 
 public partial class StairsPathType : Autodesk.Revit.DB.ElementType
 {
+  public StairsPathType() { }
+
   public virtual System.Boolean FullStepArrow
   {
     get => throw new System.NotImplementedException();

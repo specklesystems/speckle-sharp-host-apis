@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class CurtainSystem : Autodesk.Revit.DB.CurtainSystemBase
 {
+  public CurtainSystem() { }
+
   public virtual void AddCurtainGrid(Autodesk.Revit.DB.Reference face) => throw new System.NotImplementedException();
 
   public virtual void RemoveCurtainGrid(Autodesk.Revit.DB.Reference face) => throw new System.NotImplementedException();

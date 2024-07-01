@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Mechanical;
 
 public partial class Zone : Autodesk.Revit.DB.Element
 {
+  public Zone() { }
+
   public virtual System.Boolean AddSpaces(Autodesk.Revit.DB.Mechanical.SpaceSet spaces) =>
     throw new System.NotImplementedException();
 

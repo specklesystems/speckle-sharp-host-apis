@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class SaveOptions : System.IDisposable
 {
-  public SaveOptions() => throw new System.NotImplementedException();
+  public SaveOptions() { }
 
   public virtual void Dispose() => throw new System.NotImplementedException();
 

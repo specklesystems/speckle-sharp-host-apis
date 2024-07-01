@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class CylindricalHelix : Autodesk.Revit.DB.Curve
 {
+  public CylindricalHelix() { }
+
   public static Autodesk.Revit.DB.CylindricalHelix Create(
     Autodesk.Revit.DB.XYZ basePoint,
     System.Double radius,

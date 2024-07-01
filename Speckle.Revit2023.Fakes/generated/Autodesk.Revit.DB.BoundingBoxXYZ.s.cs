@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class BoundingBoxXYZ : Autodesk.Revit.DB.APIObject
 {
-  public BoundingBoxXYZ() => throw new System.NotImplementedException();
+  public BoundingBoxXYZ() { }
 
   public virtual Autodesk.Revit.DB.XYZ get_Bounds(System.Int32 bound) => throw new System.NotImplementedException();
 

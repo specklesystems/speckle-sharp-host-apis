@@ -2,6 +2,8 @@ namespace Autodesk.Revit.UI;
 
 public partial class UIControlledApplication
 {
+  public UIControlledApplication() { }
+
   public virtual void CreateRibbonTab(System.String tabName) => throw new System.NotImplementedException();
 
   public virtual Autodesk.Revit.UI.RibbonPanel CreateRibbonPanel(Autodesk.Revit.UI.Tab tab, System.String panelName) =>

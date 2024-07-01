@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class FilledRegionType : Autodesk.Revit.DB.LineAndTextAttrSymbol
 {
+  public FilledRegionType() { }
+
   public static System.Boolean IsValidLineWeight(System.Int32 lineWeight) => throw new System.NotImplementedException();
 
   public virtual Autodesk.Revit.DB.Color BackgroundPatternColor

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Fabrication;
 
 public partial class FabricationPartSizeMap : System.IDisposable
 {
+  public FabricationPartSizeMap() { }
+
   public FabricationPartSizeMap(
     System.String size,
     System.Double widthDiameter,

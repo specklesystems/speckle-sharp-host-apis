@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class FilteredWorksetIdIterator : System.Collections.Generic.IEnumerator<Autodesk.Revit.DB.WorksetId>
 {
+  public FilteredWorksetIdIterator() { }
+
   public virtual Autodesk.Revit.DB.WorksetId GetCurrent() => throw new System.NotImplementedException();
 
   public virtual System.Boolean MoveNext() => throw new System.NotImplementedException();

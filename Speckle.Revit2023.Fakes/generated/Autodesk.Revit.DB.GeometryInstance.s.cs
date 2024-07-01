@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class GeometryInstance : Autodesk.Revit.DB.GeometryObject
 {
+  public GeometryInstance() { }
+
   public virtual Autodesk.Revit.DB.SymbolGeometryId GetSymbolGeometryId() => throw new System.NotImplementedException();
 
   public virtual Autodesk.Revit.DB.Document GetDocument() => throw new System.NotImplementedException();

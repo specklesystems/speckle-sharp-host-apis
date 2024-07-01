@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class Face : Autodesk.Revit.DB.GeometryObject
 {
+  public Face() { }
+
   public virtual Autodesk.Revit.DB.Surface GetSurface() => throw new System.NotImplementedException();
 
   public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.Face> GetRegions() =>

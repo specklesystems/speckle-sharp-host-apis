@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class DirectShape : Autodesk.Revit.DB.Element
 {
+  public DirectShape() { }
+
   public static Autodesk.Revit.DB.DirectShape CreateElement(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.ElementId categoryId

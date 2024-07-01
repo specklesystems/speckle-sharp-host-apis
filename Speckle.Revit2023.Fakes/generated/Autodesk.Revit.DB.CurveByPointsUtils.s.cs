@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class CurveByPointsUtils : System.IDisposable
 {
+  public CurveByPointsUtils() { }
+
   public static Autodesk.Revit.DB.CurveProjectionType GetProjectionType(Autodesk.Revit.DB.CurveElement curveElem) =>
     throw new System.NotImplementedException();
 

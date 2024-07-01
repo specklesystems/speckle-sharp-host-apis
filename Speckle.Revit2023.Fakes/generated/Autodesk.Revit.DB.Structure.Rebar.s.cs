@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class Rebar : Autodesk.Revit.DB.Element
 {
+  public Rebar() { }
+
   public static Autodesk.Revit.DB.Structure.Rebar CreateFreeForm(
     Autodesk.Revit.DB.Document doc,
     System.Guid serverGUID,

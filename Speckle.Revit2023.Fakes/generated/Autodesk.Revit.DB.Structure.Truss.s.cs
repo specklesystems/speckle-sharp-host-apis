@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class Truss : Autodesk.Revit.DB.Element
 {
+  public Truss() { }
+
   public virtual void AttachChord(
     Autodesk.Revit.DB.Element attachToElement,
     Autodesk.Revit.DB.Structure.TrussChordLocation location,

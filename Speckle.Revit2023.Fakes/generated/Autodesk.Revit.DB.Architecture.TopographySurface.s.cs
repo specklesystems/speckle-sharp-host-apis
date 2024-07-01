@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Architecture;
 
 public partial class TopographySurface : Autodesk.Revit.DB.Element
 {
+  public TopographySurface() { }
+
   public static Autodesk.Revit.DB.Architecture.TopographySurface Create(
     Autodesk.Revit.DB.Document document,
     System.Collections.Generic.IList<Autodesk.Revit.DB.XYZ> points,

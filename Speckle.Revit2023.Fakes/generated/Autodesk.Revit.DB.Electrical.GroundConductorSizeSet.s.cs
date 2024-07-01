@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB.Electrical;
 
 public partial class GroundConductorSizeSet : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerable
 {
-  public GroundConductorSizeSet() => throw new System.NotImplementedException();
+  public GroundConductorSizeSet() { }
 
   public virtual void Clear() => throw new System.NotImplementedException();
 

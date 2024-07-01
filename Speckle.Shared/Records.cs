@@ -21,5 +21,6 @@ public enum GeneratedType
 {
   Class,
   Struct,
-  Interface
+  Interface,
+  Empty
 }

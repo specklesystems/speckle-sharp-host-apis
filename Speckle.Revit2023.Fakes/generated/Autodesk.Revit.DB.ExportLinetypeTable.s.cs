@@ -7,7 +7,7 @@ public partial class ExportLinetypeTable
   >>,
     System.IDisposable
 {
-  public ExportLinetypeTable() => throw new System.NotImplementedException();
+  public ExportLinetypeTable() { }
 
   public virtual Autodesk.Revit.DB.ExportLinetypeTableIterator GetLinetypeTableIterator() =>
     throw new System.NotImplementedException();

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class WorksetKindFilter : Autodesk.Revit.DB.WorksetFilter
 {
+  public WorksetKindFilter() { }
+
   public WorksetKindFilter(Autodesk.Revit.DB.WorksetKind worksetKind, System.Boolean inverted) =>
     throw new System.NotImplementedException();
 

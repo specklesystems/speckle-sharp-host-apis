@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class BooleanOperationsUtils : System.IDisposable
 {
+  public BooleanOperationsUtils() { }
+
   public static void ExecuteBooleanOperationModifyingOriginalSolid(
     Autodesk.Revit.DB.Solid solid0,
     Autodesk.Revit.DB.Solid solid1,

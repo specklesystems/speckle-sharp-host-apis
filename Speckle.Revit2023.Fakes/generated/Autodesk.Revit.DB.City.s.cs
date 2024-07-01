@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class City : Autodesk.Revit.DB.APIObject
 {
+  public City() { }
+
   public virtual System.Double TimeZone
   {
     get => throw new System.NotImplementedException();

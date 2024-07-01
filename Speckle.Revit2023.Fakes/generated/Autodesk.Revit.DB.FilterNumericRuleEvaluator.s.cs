@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class FilterNumericRuleEvaluator : System.IDisposable
 {
+  public FilterNumericRuleEvaluator() { }
+
   public virtual System.Boolean Evaluate(System.Int32 lhs, System.Int32 rhs) =>
     throw new System.NotImplementedException();
 

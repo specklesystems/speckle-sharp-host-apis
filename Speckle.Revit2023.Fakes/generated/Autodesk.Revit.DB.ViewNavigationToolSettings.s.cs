@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ViewNavigationToolSettings : Autodesk.Revit.DB.Element
 {
+  public ViewNavigationToolSettings() { }
+
   public static Autodesk.Revit.DB.ViewNavigationToolSettings GetViewNavigationToolSettings(
     Autodesk.Revit.DB.Document pADoc
   ) => throw new System.NotImplementedException();

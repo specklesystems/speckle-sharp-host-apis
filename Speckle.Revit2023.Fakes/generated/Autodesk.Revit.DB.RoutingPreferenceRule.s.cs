@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class RoutingPreferenceRule : System.IDisposable
 {
+  public RoutingPreferenceRule() { }
+
   public RoutingPreferenceRule(Autodesk.Revit.DB.ElementId MEPPartId, System.String description) =>
     throw new System.NotImplementedException();
 

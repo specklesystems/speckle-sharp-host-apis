@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class UnitFormatUtils
 {
+  public UnitFormatUtils() { }
+
   public static System.String Format(
     Autodesk.Revit.DB.Units units,
     Autodesk.Revit.DB.ForgeTypeId specTypeId,

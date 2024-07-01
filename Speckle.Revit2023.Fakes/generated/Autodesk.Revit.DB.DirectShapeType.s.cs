@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class DirectShapeType : Autodesk.Revit.DB.ElementType
 {
+  public DirectShapeType() { }
+
   public static Autodesk.Revit.DB.DirectShapeType Create(
     Autodesk.Revit.DB.Document document,
     System.String name,

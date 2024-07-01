@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class RebarHandlePositionData : System.IDisposable
 {
+  public RebarHandlePositionData() { }
+
   public virtual System.Int32 GetNumberOfBars() => throw new System.NotImplementedException();
 
   public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.Curve> GetBarGeometry(System.Int32 barIndex) =>

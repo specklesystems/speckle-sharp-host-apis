@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class RebarHandlesData : System.IDisposable
 {
+  public RebarHandlesData() { }
+
   public virtual void AddCustomHandle(System.Int32 customHandleTag) => throw new System.NotImplementedException();
 
   public virtual System.Collections.Generic.IList<System.Int32> GetCustomHandles() =>

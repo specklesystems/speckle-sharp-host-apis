@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class LeaderArrayIterator : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerator
 {
-  public LeaderArrayIterator() => throw new System.NotImplementedException();
+  public LeaderArrayIterator() { }
 
   public virtual System.Boolean MoveNext() => throw new System.NotImplementedException();
 

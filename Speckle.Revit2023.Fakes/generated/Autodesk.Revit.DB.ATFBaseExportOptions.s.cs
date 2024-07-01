@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ATFBaseExportOptions : System.IDisposable
 {
+  public ATFBaseExportOptions() { }
+
   public virtual void Dispose() => throw new System.NotImplementedException();
 
   public virtual System.Boolean IsValidObject

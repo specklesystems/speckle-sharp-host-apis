@@ -4,6 +4,8 @@ public partial class ComponentRepeater
   : Autodesk.Revit.DB.Element,
     System.Collections.Generic.IEnumerable<Autodesk.Revit.DB.ComponentRepeaterSlot>
 {
+  public ComponentRepeater() { }
+
   public virtual System.Boolean IsTypeValidForRepeater(Autodesk.Revit.DB.ElementId typeId) =>
     throw new System.NotImplementedException();
 

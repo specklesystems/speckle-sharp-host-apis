@@ -2,6 +2,8 @@ namespace Autodesk.Revit.UI;
 
 public partial class TaskDialog : Autodesk.Revit.DB.APIObject
 {
+  public TaskDialog() { }
+
   public TaskDialog(System.String title) => throw new System.NotImplementedException();
 
   public virtual void AddCommandLink(Autodesk.Revit.UI.TaskDialogCommandLinkId id, System.String mainContent) =>

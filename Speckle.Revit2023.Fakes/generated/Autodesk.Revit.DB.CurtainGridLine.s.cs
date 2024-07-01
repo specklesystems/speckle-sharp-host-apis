@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class CurtainGridLine : Autodesk.Revit.DB.HostObject
 {
+  public CurtainGridLine() { }
+
   public virtual void RemoveSegment(Autodesk.Revit.DB.Curve curve) => throw new System.NotImplementedException();
 
   public virtual void AddSegment(Autodesk.Revit.DB.Curve curve) => throw new System.NotImplementedException();

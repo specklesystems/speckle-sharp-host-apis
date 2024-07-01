@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class CodeCheckingParameterServiceData : System.IDisposable
 {
+  public CodeCheckingParameterServiceData() { }
+
   public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.ElementId> GetCurrentElements() =>
     throw new System.NotImplementedException();
 

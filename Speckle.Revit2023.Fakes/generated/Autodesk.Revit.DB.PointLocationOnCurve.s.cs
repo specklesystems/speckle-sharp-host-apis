@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class PointLocationOnCurve : System.IDisposable
 {
+  public PointLocationOnCurve() { }
+
   public PointLocationOnCurve(
     Autodesk.Revit.DB.PointOnCurveMeasurementType measType,
     System.Double measValue,

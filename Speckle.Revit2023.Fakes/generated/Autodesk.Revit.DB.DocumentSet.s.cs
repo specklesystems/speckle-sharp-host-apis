@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class DocumentSet : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerable
 {
-  public DocumentSet() => throw new System.NotImplementedException();
+  public DocumentSet() { }
 
   public virtual void Clear() => throw new System.NotImplementedException();
 

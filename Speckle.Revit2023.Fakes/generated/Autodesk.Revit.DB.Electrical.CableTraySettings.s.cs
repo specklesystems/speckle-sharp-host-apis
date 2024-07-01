@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Electrical;
 
 public partial class CableTraySettings : Autodesk.Revit.DB.Element
 {
+  public CableTraySettings() { }
+
   public static Autodesk.Revit.DB.Electrical.CableTraySettings GetCableTraySettings(
     Autodesk.Revit.DB.Document document
   ) => throw new System.NotImplementedException();

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class BRepBuilder : Autodesk.Revit.DB.ShapeBuilder
 {
+  public BRepBuilder() { }
+
   public BRepBuilder(Autodesk.Revit.DB.BRepType geomType) => throw new System.NotImplementedException();
 
   public virtual Autodesk.Revit.DB.BRepBuilderGeometryId AddFace(

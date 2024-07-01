@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Electrical;
 
 public partial class CableTrayConduitBase : Autodesk.Revit.DB.MEPCurve
 {
+  public CableTrayConduitBase() { }
+
   public virtual System.Boolean IsWithFitting() => throw new System.NotImplementedException();
 
   public static System.Boolean IsValidLevelId(

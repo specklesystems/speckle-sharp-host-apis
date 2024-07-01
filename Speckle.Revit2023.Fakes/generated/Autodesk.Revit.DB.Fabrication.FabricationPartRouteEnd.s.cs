@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Fabrication;
 
 public partial class FabricationPartRouteEnd : System.IDisposable
 {
+  public FabricationPartRouteEnd() { }
+
   public static Autodesk.Revit.DB.Fabrication.FabricationPartRouteEnd CreateFromConnector(
     Autodesk.Revit.DB.Connector connnector
   ) => throw new System.NotImplementedException();

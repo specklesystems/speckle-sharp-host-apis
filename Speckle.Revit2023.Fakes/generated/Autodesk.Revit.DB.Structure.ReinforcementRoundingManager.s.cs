@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class ReinforcementRoundingManager : System.IDisposable
 {
+  public ReinforcementRoundingManager() { }
+
   public virtual Autodesk.Revit.DB.ForgeTypeId GetLengthUnitTypeId() => throw new System.NotImplementedException();
 
   public virtual void Dispose() => throw new System.NotImplementedException();

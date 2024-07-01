@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class Blend : Autodesk.Revit.DB.GenericForm
 {
+  public Blend() { }
+
   public virtual Autodesk.Revit.DB.VertexIndexPairArray GetVertexConnectionMap() =>
     throw new System.NotImplementedException();
 

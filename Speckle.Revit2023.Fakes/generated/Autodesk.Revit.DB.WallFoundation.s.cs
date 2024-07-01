@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class WallFoundation : Autodesk.Revit.DB.HostObject
 {
+  public WallFoundation() { }
+
   public static Autodesk.Revit.DB.WallFoundation Create(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.ElementId typeId,

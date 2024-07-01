@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Mechanical;
 
 public partial class DuctFittingAndAccessoryPressureDropItem : System.IDisposable
 {
+  public DuctFittingAndAccessoryPressureDropItem() { }
+
   public virtual void Dispose() => throw new System.NotImplementedException();
 
   public virtual System.Boolean IsValidObject

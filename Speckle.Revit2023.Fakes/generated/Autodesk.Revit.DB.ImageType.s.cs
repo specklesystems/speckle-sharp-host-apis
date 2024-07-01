@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ImageType : Autodesk.Revit.DB.ElementType
 {
+  public ImageType() { }
+
   public static Autodesk.Revit.DB.ImageType Create(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.ImageTypeOptions options

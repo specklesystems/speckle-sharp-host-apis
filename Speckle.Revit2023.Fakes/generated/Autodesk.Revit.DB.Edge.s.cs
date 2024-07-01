@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class Edge : Autodesk.Revit.DB.GeometryObject
 {
+  public Edge() { }
+
   public virtual Autodesk.Revit.DB.Face GetFace(System.Int32 index) => throw new System.NotImplementedException();
 
   public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.XYZ> Tessellate() =>

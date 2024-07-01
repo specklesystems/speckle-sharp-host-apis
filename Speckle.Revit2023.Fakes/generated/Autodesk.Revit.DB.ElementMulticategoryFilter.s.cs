@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ElementMulticategoryFilter : Autodesk.Revit.DB.ElementQuickFilter
 {
+  public ElementMulticategoryFilter() { }
+
   public ElementMulticategoryFilter(
     System.Collections.Generic.ICollection<Autodesk.Revit.DB.BuiltInCategory> categories,
     System.Boolean inverted

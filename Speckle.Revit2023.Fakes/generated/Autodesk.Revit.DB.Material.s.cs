@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class Material : Autodesk.Revit.DB.Element
 {
+  public Material() { }
+
   public static Autodesk.Revit.DB.ElementId Create(Autodesk.Revit.DB.Document document, System.String name) =>
     throw new System.NotImplementedException();
 

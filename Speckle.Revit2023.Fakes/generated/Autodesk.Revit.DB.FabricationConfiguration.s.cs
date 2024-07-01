@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class FabricationConfiguration : Autodesk.Revit.DB.Element
 {
+  public FabricationConfiguration() { }
+
   public static Autodesk.Revit.DB.FabricationConfiguration GetFabricationConfiguration(
     Autodesk.Revit.DB.Document doc
   ) => throw new System.NotImplementedException();

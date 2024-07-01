@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class LocationCurve : Autodesk.Revit.DB.Location
 {
+  public LocationCurve() { }
+
   public virtual Autodesk.Revit.DB.ElementArray get_ElementsAtJoin(System.Int32 end) =>
     throw new System.NotImplementedException();
 

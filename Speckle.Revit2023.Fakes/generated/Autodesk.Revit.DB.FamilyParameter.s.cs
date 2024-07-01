@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class FamilyParameter : Autodesk.Revit.DB.APIObject
 {
+  public FamilyParameter() { }
+
   public virtual Autodesk.Revit.DB.ForgeTypeId GetUnitTypeId() => throw new System.NotImplementedException();
 
   public virtual System.Boolean UserModifiable

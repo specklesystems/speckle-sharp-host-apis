@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class FamilyInstance : Autodesk.Revit.DB.Instance
 {
+  public FamilyInstance() { }
+
   public virtual Autodesk.Revit.DB.Architecture.Room get_Room(Autodesk.Revit.DB.Phase phase) =>
     throw new System.NotImplementedException();
 

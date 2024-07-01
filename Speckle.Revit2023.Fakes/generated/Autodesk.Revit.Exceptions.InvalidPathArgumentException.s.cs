@@ -1,3 +1,6 @@
 namespace Autodesk.Revit.Exceptions;
 
-public partial class InvalidPathArgumentException : Autodesk.Revit.Exceptions.ArgumentException { }
+public partial class InvalidPathArgumentException : Autodesk.Revit.Exceptions.ArgumentException
+{
+  public InvalidPathArgumentException() { }
+}

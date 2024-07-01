@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class ElementArray : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerable
 {
-  public ElementArray() => throw new System.NotImplementedException();
+  public ElementArray() { }
 
   public virtual void Clear() => throw new System.NotImplementedException();
 

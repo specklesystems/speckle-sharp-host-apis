@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ElementStructuralTypeFilter : Autodesk.Revit.DB.ElementQuickFilter
 {
+  public ElementStructuralTypeFilter() { }
+
   public ElementStructuralTypeFilter(
     Autodesk.Revit.DB.Structure.StructuralType structuralType,
     System.Boolean inverted

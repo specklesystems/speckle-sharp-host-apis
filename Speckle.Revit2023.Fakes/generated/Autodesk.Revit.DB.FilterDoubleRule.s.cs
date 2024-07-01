@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class FilterDoubleRule : Autodesk.Revit.DB.FilterNumericValueRule
 {
+  public FilterDoubleRule() { }
+
   public FilterDoubleRule(
     Autodesk.Revit.DB.FilterableValueProvider valueProvider,
     Autodesk.Revit.DB.FilterNumericRuleEvaluator evaluator,

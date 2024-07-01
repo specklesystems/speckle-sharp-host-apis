@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class FamilyParameterSet : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerable
 {
-  public FamilyParameterSet() => throw new System.NotImplementedException();
+  public FamilyParameterSet() { }
 
   public virtual void Clear() => throw new System.NotImplementedException();
 

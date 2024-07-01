@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class BaseArray : Autodesk.Revit.DB.Element
 {
+  public BaseArray() { }
+
   public virtual System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> GetOriginalMemberIds() =>
     throw new System.NotImplementedException();
 

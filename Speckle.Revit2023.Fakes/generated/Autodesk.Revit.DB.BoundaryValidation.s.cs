@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class BoundaryValidation : System.IDisposable
 {
+  public BoundaryValidation() { }
+
   public static System.Boolean IsValidHorizontalBoundary(
     System.Collections.Generic.IList<Autodesk.Revit.DB.CurveLoop> curveLoops
   ) => throw new System.NotImplementedException();

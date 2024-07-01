@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class ViewSet : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerable
 {
-  public ViewSet() => throw new System.NotImplementedException();
+  public ViewSet() { }
 
   public virtual void Clear() => throw new System.NotImplementedException();
 

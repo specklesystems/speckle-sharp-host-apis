@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class NurbSpline : Autodesk.Revit.DB.Curve
 {
+  public NurbSpline() { }
+
   public virtual void SetControlPointsAndWeights(
     System.Collections.Generic.IList<Autodesk.Revit.DB.XYZ> ctrlPoints,
     Autodesk.Revit.DB.DoubleArray weights

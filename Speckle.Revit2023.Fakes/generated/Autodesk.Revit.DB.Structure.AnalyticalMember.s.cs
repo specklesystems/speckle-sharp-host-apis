@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class AnalyticalMember : Autodesk.Revit.DB.Structure.AnalyticalElement
 {
+  public AnalyticalMember() { }
+
   public static Autodesk.Revit.DB.Structure.AnalyticalMember Create(
     Autodesk.Revit.DB.Document aDoc,
     Autodesk.Revit.DB.Curve curve

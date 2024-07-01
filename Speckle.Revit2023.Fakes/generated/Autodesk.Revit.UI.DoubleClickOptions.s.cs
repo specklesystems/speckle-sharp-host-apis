@@ -2,6 +2,8 @@ namespace Autodesk.Revit.UI;
 
 public partial class DoubleClickOptions : System.IDisposable
 {
+  public DoubleClickOptions() { }
+
   public static Autodesk.Revit.UI.DoubleClickOptions GetDoubleClickOptions() =>
     throw new System.NotImplementedException();
 

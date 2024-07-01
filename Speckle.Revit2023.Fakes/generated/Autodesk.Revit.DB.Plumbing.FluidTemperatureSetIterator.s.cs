@@ -3,6 +3,8 @@ namespace Autodesk.Revit.DB.Plumbing;
 public partial class FluidTemperatureSetIterator
   : System.Collections.Generic.IEnumerator<Autodesk.Revit.DB.Plumbing.FluidTemperature>
 {
+  public FluidTemperatureSetIterator() { }
+
   public virtual System.Boolean MoveNext() => throw new System.NotImplementedException();
 
   public virtual System.Boolean IsDone() => throw new System.NotImplementedException();

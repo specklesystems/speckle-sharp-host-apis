@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ColorFillScheme : Autodesk.Revit.DB.Element
 {
+  public ColorFillScheme() { }
+
   public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.ColorFillSchemeEntry> GetEntries() =>
     throw new System.NotImplementedException();
 

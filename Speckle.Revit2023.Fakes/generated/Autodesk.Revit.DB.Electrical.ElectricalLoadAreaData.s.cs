@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Electrical;
 
 public partial class ElectricalLoadAreaData : Autodesk.Revit.DB.SpatialElementDomainData
 {
+  public ElectricalLoadAreaData() { }
+
   public virtual System.Collections.Generic.ISet<Autodesk.Revit.DB.ElementId> GetAreaBasedLoadIds() =>
     throw new System.NotImplementedException();
 

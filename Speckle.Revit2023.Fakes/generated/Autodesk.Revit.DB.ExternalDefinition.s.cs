@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ExternalDefinition : Autodesk.Revit.DB.Definition, System.IDisposable
 {
+  public ExternalDefinition() { }
+
   public virtual void Dispose() => throw new System.NotImplementedException();
 
   public virtual System.Boolean IsValidObject

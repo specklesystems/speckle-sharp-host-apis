@@ -4,7 +4,7 @@ public partial class Definitions
   : System.Collections.Generic.IEnumerable<Autodesk.Revit.DB.Definition>,
     System.IDisposable
 {
-  public Definitions() => throw new System.NotImplementedException();
+  public Definitions() { }
 
   public virtual Autodesk.Revit.DB.Definition get_Item(System.String name) =>
     throw new System.NotImplementedException();

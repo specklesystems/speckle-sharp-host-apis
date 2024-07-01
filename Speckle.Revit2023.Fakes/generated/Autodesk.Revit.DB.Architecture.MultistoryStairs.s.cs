@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Architecture;
 
 public partial class MultistoryStairs : Autodesk.Revit.DB.Element
 {
+  public MultistoryStairs() { }
+
   public static Autodesk.Revit.DB.Architecture.MultistoryStairs Create(Autodesk.Revit.DB.Architecture.Stairs stairs) =>
     throw new System.NotImplementedException();
 

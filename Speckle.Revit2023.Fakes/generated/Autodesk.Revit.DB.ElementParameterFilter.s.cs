@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ElementParameterFilter : Autodesk.Revit.DB.ElementSlowFilter
 {
+  public ElementParameterFilter() { }
+
   public ElementParameterFilter(
     System.Collections.Generic.IList<Autodesk.Revit.DB.FilterRule> filterRules,
     System.Boolean inverted

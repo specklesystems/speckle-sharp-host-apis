@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ConnectionValidationWarning : System.IDisposable
 {
+  public ConnectionValidationWarning() { }
+
   public ConnectionValidationWarning(
     Autodesk.Revit.DB.ConnectionResolution resolution,
     Autodesk.Revit.DB.ConnectionWarning reason,

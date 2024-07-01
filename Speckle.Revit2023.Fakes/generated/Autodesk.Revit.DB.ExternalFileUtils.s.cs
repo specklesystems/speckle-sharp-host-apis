@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ExternalFileUtils
 {
+  public ExternalFileUtils() { }
+
   public static System.Boolean IsExternalFileReference(
     Autodesk.Revit.DB.Document aDoc,
     Autodesk.Revit.DB.ElementId elemId

@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class FamilyParameterSetIterator : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerator
 {
-  public FamilyParameterSetIterator() => throw new System.NotImplementedException();
+  public FamilyParameterSetIterator() { }
 
   public virtual System.Boolean MoveNext() => throw new System.NotImplementedException();
 

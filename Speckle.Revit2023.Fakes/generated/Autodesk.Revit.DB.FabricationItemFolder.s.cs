@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class FabricationItemFolder : System.IDisposable
 {
+  public FabricationItemFolder() { }
+
   public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.FabricationItemFolder> GetSubFolders() =>
     throw new System.NotImplementedException();
 

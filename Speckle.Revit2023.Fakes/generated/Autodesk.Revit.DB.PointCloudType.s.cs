@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class PointCloudType : Autodesk.Revit.DB.ElementType
 {
+  public PointCloudType() { }
+
   public static Autodesk.Revit.DB.PointCloudType Create(
     Autodesk.Revit.DB.Document document,
     System.String engineIdentifier,

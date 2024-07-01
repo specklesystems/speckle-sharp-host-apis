@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Electrical;
 
 public partial class AreaBasedLoadBoundaryLineData : System.IDisposable
 {
+  public AreaBasedLoadBoundaryLineData() { }
+
   public virtual System.Boolean IsLevelWithinRange(Autodesk.Revit.DB.ElementId levelId) =>
     throw new System.NotImplementedException();
 

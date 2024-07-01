@@ -4,6 +4,8 @@ public partial class SolidCurveIntersection
   : System.Collections.Generic.IEnumerable<Autodesk.Revit.DB.Curve>,
     System.IDisposable
 {
+  public SolidCurveIntersection() { }
+
   public virtual Autodesk.Revit.DB.Curve GetCurveSegment(System.Int32 index) =>
     throw new System.NotImplementedException();
 

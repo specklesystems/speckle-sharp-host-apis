@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class Arc : Autodesk.Revit.DB.Curve
 {
+  public Arc() { }
+
   public static Autodesk.Revit.DB.Arc Create(
     Autodesk.Revit.DB.XYZ end0,
     Autodesk.Revit.DB.XYZ end1,

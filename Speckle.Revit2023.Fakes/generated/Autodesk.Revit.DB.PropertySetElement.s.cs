@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class PropertySetElement : Autodesk.Revit.DB.Element
 {
+  public PropertySetElement() { }
+
   public virtual Autodesk.Revit.DB.PropertySetElement Duplicate(
     Autodesk.Revit.DB.Document document,
     System.String name

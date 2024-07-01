@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.ExternalService;
 
 public partial class ExternalService : System.IDisposable
 {
+  public ExternalService() { }
+
   public virtual Autodesk.Revit.DB.ExternalService.ExternalServiceOptions GetOptions() =>
     throw new System.NotImplementedException();
 

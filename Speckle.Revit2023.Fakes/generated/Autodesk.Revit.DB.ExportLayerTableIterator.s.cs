@@ -6,6 +6,8 @@ public partial class ExportLayerTableIterator
     Autodesk.Revit.DB.ExportLayerInfo
   >>
 {
+  public ExportLayerTableIterator() { }
+
   public virtual System.Boolean MoveNext() => throw new System.NotImplementedException();
 
   public virtual System.Boolean IsDone() => throw new System.NotImplementedException();

@@ -2,9 +2,9 @@ namespace Autodesk.Revit.DB;
 
 public partial class UV
 {
-  public UV(System.Double u, System.Double v) => throw new System.NotImplementedException();
+  public UV() { }
 
-  public UV() => throw new System.NotImplementedException();
+  public UV(System.Double u, System.Double v) => throw new System.NotImplementedException();
 
   public virtual System.Double get_Item(System.Int32 idx) => throw new System.NotImplementedException();
 

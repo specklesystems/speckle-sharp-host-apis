@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class PhaseArray : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerable
 {
-  public PhaseArray() => throw new System.NotImplementedException();
+  public PhaseArray() { }
 
   public virtual void Clear() => throw new System.NotImplementedException();
 

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class FilterStringRule : Autodesk.Revit.DB.FilterValueRule
 {
+  public FilterStringRule() { }
+
   public FilterStringRule(
     Autodesk.Revit.DB.FilterableValueProvider valueProvider,
     Autodesk.Revit.DB.FilterStringRuleEvaluator evaluator,

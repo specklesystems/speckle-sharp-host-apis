@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class CurveByPoints : Autodesk.Revit.DB.CurveElement
 {
+  public CurveByPoints() { }
+
   public virtual Autodesk.Revit.DB.ReferencePointArray GetPoints() => throw new System.NotImplementedException();
 
   public virtual void SetPoints(Autodesk.Revit.DB.ReferencePointArray points) =>

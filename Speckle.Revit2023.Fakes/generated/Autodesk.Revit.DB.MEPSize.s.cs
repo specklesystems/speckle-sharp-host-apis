@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class MEPSize : System.IDisposable
 {
+  public MEPSize() { }
+
   public MEPSize(
     System.Double nominalDiameter,
     System.Double innerDiameter,

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class StairsEditScope : Autodesk.Revit.DB.EditScope
 {
+  public StairsEditScope() { }
+
   public StairsEditScope(Autodesk.Revit.DB.Document document, System.String transactionName) =>
     throw new System.NotImplementedException();
 

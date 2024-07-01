@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class RepeaterBounds : System.IDisposable
 {
+  public RepeaterBounds() { }
+
   public virtual System.Int32 GetLowerBound(System.Int32 dimension) => throw new System.NotImplementedException();
 
   public virtual System.Int32 GetUpperBound(System.Int32 dimension) => throw new System.NotImplementedException();

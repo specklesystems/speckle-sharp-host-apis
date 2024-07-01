@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class WallSweep : Autodesk.Revit.DB.HostObject
 {
+  public WallSweep() { }
+
   public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.ElementId> GetHostIds() =>
     throw new System.NotImplementedException();
 

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Mechanical;
 
 public partial class MEPSpaceConstruction
 {
+  public MEPSpaceConstruction() { }
+
   public virtual Autodesk.Revit.DB.Mechanical.MEPBuildingConstruction NewConstruction(System.String pName) =>
     throw new System.NotImplementedException();
 

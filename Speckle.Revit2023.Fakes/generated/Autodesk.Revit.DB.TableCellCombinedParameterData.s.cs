@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class TableCellCombinedParameterData : System.IDisposable
 {
+  public TableCellCombinedParameterData() { }
+
   public static Autodesk.Revit.DB.TableCellCombinedParameterData Create() => throw new System.NotImplementedException();
 
   public virtual void Dispose() => throw new System.NotImplementedException();

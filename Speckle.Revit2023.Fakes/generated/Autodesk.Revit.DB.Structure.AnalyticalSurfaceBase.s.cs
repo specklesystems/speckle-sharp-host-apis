@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class AnalyticalSurfaceBase : Autodesk.Revit.DB.Structure.AnalyticalElement
 {
+  public AnalyticalSurfaceBase() { }
+
   public virtual Autodesk.Revit.DB.CurveLoop GetOuterContour() => throw new System.NotImplementedException();
 
   public virtual void SetOuterContour(Autodesk.Revit.DB.CurveLoop outerContour) =>

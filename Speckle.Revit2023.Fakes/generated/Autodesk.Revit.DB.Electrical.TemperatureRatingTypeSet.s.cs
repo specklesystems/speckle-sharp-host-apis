@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB.Electrical;
 
 public partial class TemperatureRatingTypeSet : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerable
 {
-  public TemperatureRatingTypeSet() => throw new System.NotImplementedException();
+  public TemperatureRatingTypeSet() { }
 
   public virtual void Clear() => throw new System.NotImplementedException();
 

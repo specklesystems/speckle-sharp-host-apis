@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class LoadCase : Autodesk.Revit.DB.Element
 {
+  public LoadCase() { }
+
   public static Autodesk.Revit.DB.Structure.LoadCase Create(
     Autodesk.Revit.DB.Document document,
     System.String name,

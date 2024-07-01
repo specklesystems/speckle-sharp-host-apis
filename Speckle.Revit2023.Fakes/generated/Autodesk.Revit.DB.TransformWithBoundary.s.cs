@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class TransformWithBoundary : System.IDisposable
 {
+  public TransformWithBoundary() { }
+
   public TransformWithBoundary(Autodesk.Revit.DB.TransformWithBoundary other) =>
     throw new System.NotImplementedException();
 

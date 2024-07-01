@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class MultiReferenceAnnotationType : Autodesk.Revit.DB.ElementType
 {
+  public MultiReferenceAnnotationType() { }
+
   public static Autodesk.Revit.DB.MultiReferenceAnnotationType CreateDefault(Autodesk.Revit.DB.Document document) =>
     throw new System.NotImplementedException();
 

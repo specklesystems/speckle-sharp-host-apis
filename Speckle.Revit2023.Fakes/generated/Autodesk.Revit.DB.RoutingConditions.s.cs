@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class RoutingConditions : System.IDisposable
 {
+  public RoutingConditions() { }
+
   public RoutingConditions(Autodesk.Revit.DB.RoutingPreferenceErrorLevel errorLevel) =>
     throw new System.NotImplementedException();
 

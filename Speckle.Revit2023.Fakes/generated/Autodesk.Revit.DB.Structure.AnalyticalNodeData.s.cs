@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class AnalyticalNodeData : System.IDisposable
 {
+  public AnalyticalNodeData() { }
+
   public virtual Autodesk.Revit.DB.Structure.AnalyticalNodeConnectionStatus GetConnectionStatus() =>
     throw new System.NotImplementedException();
 

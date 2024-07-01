@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class AnalyticalLinkType : Autodesk.Revit.DB.ElementType
 {
+  public AnalyticalLinkType() { }
+
   public static System.Boolean IsValidAnalyticalFixityState(
     Autodesk.Revit.DB.Structure.AnalyticalFixityState fixityState
   ) => throw new System.NotImplementedException();

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ImageTypeOptions : System.IDisposable
 {
+  public ImageTypeOptions() { }
+
   public ImageTypeOptions(
     Autodesk.Revit.DB.ExternalResourceReference resourceReference,
     Autodesk.Revit.DB.ImageTypeSource sourceType

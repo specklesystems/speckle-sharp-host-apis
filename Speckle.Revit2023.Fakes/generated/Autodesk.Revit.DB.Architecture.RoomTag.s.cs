@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Architecture;
 
 public partial class RoomTag : Autodesk.Revit.DB.SpatialElementTag
 {
+  public RoomTag() { }
+
   public virtual Autodesk.Revit.DB.LinkElementId TaggedRoomId
   {
     get => throw new System.NotImplementedException();

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.Exceptions;
 
 public partial class ArgumentException : Autodesk.Revit.Exceptions.ApplicationException
 {
+  public ArgumentException() { }
+
   public virtual System.String ParamName
   {
     get => throw new System.NotImplementedException();

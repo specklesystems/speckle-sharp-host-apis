@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Electrical;
 
 public partial class CircuitNamingScheme : Autodesk.Revit.DB.Element
 {
+  public CircuitNamingScheme() { }
+
   public static Autodesk.Revit.DB.Electrical.CircuitNamingScheme Create(
     Autodesk.Revit.DB.Document document,
     System.String name,

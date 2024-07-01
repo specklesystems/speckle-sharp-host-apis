@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class SpecTypeId
 {
+  public SpecTypeId() { }
+
   public static Autodesk.Revit.DB.ForgeTypeId WireDiameter
   {
     get => throw new System.NotImplementedException();

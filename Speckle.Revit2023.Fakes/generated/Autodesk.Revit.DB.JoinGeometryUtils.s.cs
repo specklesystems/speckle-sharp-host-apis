@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class JoinGeometryUtils
 {
+  public JoinGeometryUtils() { }
+
   public static void JoinGeometry(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.Element firstElement,

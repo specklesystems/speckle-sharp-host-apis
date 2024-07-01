@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class GeomCombinationSet : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerable
 {
-  public GeomCombinationSet() => throw new System.NotImplementedException();
+  public GeomCombinationSet() { }
 
   public virtual void Clear() => throw new System.NotImplementedException();
 

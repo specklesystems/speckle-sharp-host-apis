@@ -4,6 +4,8 @@ public partial class GeometryElement
   : Autodesk.Revit.DB.GeometryObject,
     System.Collections.Generic.IEnumerable<Autodesk.Revit.DB.GeometryObject>
 {
+  public GeometryElement() { }
+
   public virtual System.Collections.Generic.IEnumerator<Autodesk.Revit.DB.GeometryObject> GetEnumerator() =>
     throw new System.NotImplementedException();
 

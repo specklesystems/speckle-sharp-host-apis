@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class MEPSystemType : Autodesk.Revit.DB.ElementType
 {
+  public MEPSystemType() { }
+
   public virtual Autodesk.Revit.DB.Mechanical.SystemCalculationLevel CalculationLevel
   {
     get => throw new System.NotImplementedException();

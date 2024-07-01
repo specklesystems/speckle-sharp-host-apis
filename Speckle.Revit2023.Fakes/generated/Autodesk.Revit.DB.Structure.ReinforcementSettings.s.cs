@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class ReinforcementSettings : Autodesk.Revit.DB.Element
 {
+  public ReinforcementSettings() { }
+
   public static Autodesk.Revit.DB.Structure.ReinforcementSettings GetReinforcementSettings(
     Autodesk.Revit.DB.Document document
   ) => throw new System.NotImplementedException();

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class TableSectionData : System.IDisposable
 {
+  public TableSectionData() { }
+
   public virtual System.Boolean IsDataOutOfDate() => throw new System.NotImplementedException();
 
   public virtual System.Boolean RefreshData() => throw new System.NotImplementedException();

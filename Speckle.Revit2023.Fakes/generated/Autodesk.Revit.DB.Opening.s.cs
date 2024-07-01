@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class Opening : Autodesk.Revit.DB.Element
 {
+  public Opening() { }
+
   public virtual Autodesk.Revit.DB.ElementId SketchId
   {
     get => throw new System.NotImplementedException();

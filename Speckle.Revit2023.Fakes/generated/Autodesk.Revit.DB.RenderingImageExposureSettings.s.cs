@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class RenderingImageExposureSettings : System.IDisposable
 {
+  public RenderingImageExposureSettings() { }
+
   public virtual void Dispose() => throw new System.NotImplementedException();
 
   public virtual System.Boolean IsValidObject

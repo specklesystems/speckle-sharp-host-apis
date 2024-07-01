@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class ViewScheduleExportOptions : System.IDisposable
 {
-  public ViewScheduleExportOptions() => throw new System.NotImplementedException();
+  public ViewScheduleExportOptions() { }
 
   public ViewScheduleExportOptions(Autodesk.Revit.DB.ViewScheduleExportOptions other) =>
     throw new System.NotImplementedException();

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class RebarShapeConstraintAngleFromFixedDir : Autodesk.Revit.DB.Structure.RebarShapeConstraint
 {
+  public RebarShapeConstraintAngleFromFixedDir() { }
+
   public RebarShapeConstraintAngleFromFixedDir(
     Autodesk.Revit.DB.ElementId paramId,
     System.Int32 sign,

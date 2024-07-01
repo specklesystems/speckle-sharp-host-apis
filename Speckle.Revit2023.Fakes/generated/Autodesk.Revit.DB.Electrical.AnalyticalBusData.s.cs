@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Electrical;
 
 public partial class AnalyticalBusData : Autodesk.Revit.DB.Electrical.AnalyticalDistributionNodePropertyData
 {
+  public AnalyticalBusData() { }
+
   public virtual System.Double TotalConnectedCurrent
   {
     get => throw new System.NotImplementedException();

@@ -148,6 +148,10 @@ public partial class Generator
     {
       sb.AppendLine(");");
     }
+    else if (generatedType == GeneratedType.Empty)
+    {
+      sb.AppendLine(") {}");
+    }
     else
     {
       sb.AppendLine(") => throw new System.NotImplementedException();");

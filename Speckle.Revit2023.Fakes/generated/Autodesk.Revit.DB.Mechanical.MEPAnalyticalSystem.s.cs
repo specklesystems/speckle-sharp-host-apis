@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Mechanical;
 
 public partial class MEPAnalyticalSystem : Autodesk.Revit.DB.Element
 {
+  public MEPAnalyticalSystem() { }
+
   public static Autodesk.Revit.DB.Mechanical.MEPAnalyticalSystem Create(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.Mechanical.AnalyticalSystemDomain domain,

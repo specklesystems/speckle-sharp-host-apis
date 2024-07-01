@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Electrical;
 
 public partial class AnalyticalPowerSourceData : Autodesk.Revit.DB.Electrical.AnalyticalDistributionNodePropertyData
 {
+  public AnalyticalPowerSourceData() { }
+
   public virtual System.Double TotalConnectedCurrent
   {
     get => throw new System.NotImplementedException();

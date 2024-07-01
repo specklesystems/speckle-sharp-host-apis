@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Analysis;
 
 public partial class GenericZone : Autodesk.Revit.DB.Element
 {
+  public GenericZone() { }
+
   public static Autodesk.Revit.DB.Analysis.GenericZone Create(
     Autodesk.Revit.DB.Document doc,
     System.String name,

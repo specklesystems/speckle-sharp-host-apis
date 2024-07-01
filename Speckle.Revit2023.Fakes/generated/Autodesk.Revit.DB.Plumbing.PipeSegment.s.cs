@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Plumbing;
 
 public partial class PipeSegment : Autodesk.Revit.DB.Segment
 {
+  public PipeSegment() { }
+
   public static Autodesk.Revit.DB.Plumbing.PipeSegment Create(
     Autodesk.Revit.DB.Document ADocument,
     Autodesk.Revit.DB.ElementId MaterialId,

@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class SolidCurveIntersectionOptions : System.IDisposable
 {
-  public SolidCurveIntersectionOptions() => throw new System.NotImplementedException();
+  public SolidCurveIntersectionOptions() { }
 
   public virtual void Dispose() => throw new System.NotImplementedException();
 

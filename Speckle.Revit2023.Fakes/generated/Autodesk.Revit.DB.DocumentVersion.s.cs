@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class DocumentVersion : System.IDisposable
 {
+  public DocumentVersion() { }
+
   public virtual System.Boolean IsEqual(Autodesk.Revit.DB.DocumentVersion other) =>
     throw new System.NotImplementedException();
 

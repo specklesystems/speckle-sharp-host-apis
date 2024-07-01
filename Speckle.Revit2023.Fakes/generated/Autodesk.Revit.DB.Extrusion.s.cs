@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class Extrusion : Autodesk.Revit.DB.GenericForm
 {
+  public Extrusion() { }
+
   public virtual System.Double EndOffset
   {
     get => throw new System.NotImplementedException();

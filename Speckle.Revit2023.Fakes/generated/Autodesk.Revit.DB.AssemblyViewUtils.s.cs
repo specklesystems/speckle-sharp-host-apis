@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class AssemblyViewUtils
 {
+  public AssemblyViewUtils() { }
+
   public static Autodesk.Revit.DB.View3D Create3DOrthographic(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.ElementId assemblyInstanceId,

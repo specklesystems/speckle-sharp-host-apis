@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class DividedPath : Autodesk.Revit.DB.Element
 {
+  public DividedPath() { }
+
   public static Autodesk.Revit.DB.DividedPath Create(
     Autodesk.Revit.DB.Document document,
     System.Collections.Generic.IList<Autodesk.Revit.DB.Reference> curveReferences,

@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class ParameterMap : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerable
 {
-  public ParameterMap() => throw new System.NotImplementedException();
+  public ParameterMap() { }
 
   public virtual void Clear() => throw new System.NotImplementedException();
 

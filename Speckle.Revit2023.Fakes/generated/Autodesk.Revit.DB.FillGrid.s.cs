@@ -2,9 +2,9 @@ namespace Autodesk.Revit.DB;
 
 public partial class FillGrid : System.IDisposable
 {
-  public FillGrid(System.Double angle, System.Double offset) => throw new System.NotImplementedException();
+  public FillGrid() { }
 
-  public FillGrid() => throw new System.NotImplementedException();
+  public FillGrid(System.Double angle, System.Double offset) => throw new System.NotImplementedException();
 
   public FillGrid(Autodesk.Revit.DB.FillGrid other) => throw new System.NotImplementedException();
 

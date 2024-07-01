@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class DatumPlane : Autodesk.Revit.DB.Element
 {
+  public DatumPlane() { }
+
   public virtual void ShowBubbleInView(Autodesk.Revit.DB.DatumEnds datumEnd, Autodesk.Revit.DB.View view) =>
     throw new System.NotImplementedException();
 

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Analysis;
 
 public partial class AnalysisDisplayStyle : Autodesk.Revit.DB.Element
 {
+  public AnalysisDisplayStyle() { }
+
   public static Autodesk.Revit.DB.Analysis.AnalysisDisplayStyle CreateAnalysisDisplayStyle(
     Autodesk.Revit.DB.Document document,
     System.String name,

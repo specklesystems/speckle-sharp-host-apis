@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Analysis;
 
 public partial class HVACLoadType : Autodesk.Revit.DB.Element
 {
+  public HVACLoadType() { }
+
   public virtual System.Double DehumidificationSetPoint
   {
     get => throw new System.NotImplementedException();

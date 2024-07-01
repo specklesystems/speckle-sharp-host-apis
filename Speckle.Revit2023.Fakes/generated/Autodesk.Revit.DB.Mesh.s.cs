@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class Mesh : Autodesk.Revit.DB.GeometryObject
 {
+  public Mesh() { }
+
   public virtual Autodesk.Revit.DB.MeshTriangle get_Triangle(System.Int32 idx) =>
     throw new System.NotImplementedException();
 

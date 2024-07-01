@@ -2,6 +2,8 @@ namespace Autodesk.Revit.UI;
 
 public partial class ProjectBrowserOptions : System.IDisposable
 {
+  public ProjectBrowserOptions() { }
+
   public static Autodesk.Revit.UI.ProjectBrowserOptions GetProjectBrowserOptions() =>
     throw new System.NotImplementedException();
 

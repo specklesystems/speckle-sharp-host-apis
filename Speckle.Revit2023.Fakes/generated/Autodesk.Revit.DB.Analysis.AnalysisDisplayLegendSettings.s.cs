@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB.Analysis;
 
 public partial class AnalysisDisplayLegendSettings : System.IDisposable
 {
-  public AnalysisDisplayLegendSettings() => throw new System.NotImplementedException();
+  public AnalysisDisplayLegendSettings() { }
 
   public AnalysisDisplayLegendSettings(Autodesk.Revit.DB.Analysis.AnalysisDisplayLegendSettings other) =>
     throw new System.NotImplementedException();

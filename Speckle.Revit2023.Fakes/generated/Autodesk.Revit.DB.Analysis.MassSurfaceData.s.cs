@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Analysis;
 
 public partial class MassSurfaceData : Autodesk.Revit.DB.Element
 {
+  public MassSurfaceData() { }
+
   public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.Reference> GetFaceReferences() =>
     throw new System.NotImplementedException();
 

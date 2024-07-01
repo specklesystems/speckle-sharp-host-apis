@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class TrussMemberInfo
 {
-  public TrussMemberInfo() => throw new System.NotImplementedException();
+  public TrussMemberInfo() { }
 
   public virtual Autodesk.Revit.DB.Structure.TrussMemberType memberTypeKey
   {

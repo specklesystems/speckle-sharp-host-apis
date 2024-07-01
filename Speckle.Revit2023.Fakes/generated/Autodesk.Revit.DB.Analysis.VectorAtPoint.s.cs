@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Analysis;
 
 public partial class VectorAtPoint : Autodesk.Revit.DB.ValueAtPointBase
 {
+  public VectorAtPoint() { }
+
   public VectorAtPoint(Autodesk.Revit.DB.Analysis.VectorAtPoint otherObject) =>
     throw new System.NotImplementedException();
 

@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class DetailCurveArray : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerable
 {
-  public DetailCurveArray() => throw new System.NotImplementedException();
+  public DetailCurveArray() { }
 
   public virtual void Clear() => throw new System.NotImplementedException();
 

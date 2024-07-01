@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Architecture;
 
 public partial class ContinuousRail : Autodesk.Revit.DB.Element
 {
+  public ContinuousRail() { }
+
   public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.Curve> GetPath() =>
     throw new System.NotImplementedException();
 

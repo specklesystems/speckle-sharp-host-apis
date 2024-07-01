@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Architecture;
 
 public partial class StairsLanding : Autodesk.Revit.DB.Element
 {
+  public StairsLanding() { }
+
   public static System.Collections.Generic.IList<Autodesk.Revit.DB.ElementId> CreateAutomaticLanding(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.ElementId firstRunId,

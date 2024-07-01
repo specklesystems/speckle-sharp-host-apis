@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class SelectionFilterElement : Autodesk.Revit.DB.FilterElement
 {
+  public SelectionFilterElement() { }
+
   public static Autodesk.Revit.DB.SelectionFilterElement Create(
     Autodesk.Revit.DB.Document document,
     System.String name

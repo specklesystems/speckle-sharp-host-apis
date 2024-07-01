@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Architecture;
 
 public partial class RailingType : Autodesk.Revit.DB.ElementType
 {
+  public RailingType() { }
+
   public virtual System.Double SecondaryHandrailHeight
   {
     get => throw new System.NotImplementedException();

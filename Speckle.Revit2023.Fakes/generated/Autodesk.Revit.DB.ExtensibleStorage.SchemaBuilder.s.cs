@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.ExtensibleStorage;
 
 public partial class SchemaBuilder : System.IDisposable
 {
+  public SchemaBuilder() { }
+
   public SchemaBuilder(System.Guid guid) => throw new System.NotImplementedException();
 
   public static System.Boolean GUIDIsValid(System.Guid guid) => throw new System.NotImplementedException();

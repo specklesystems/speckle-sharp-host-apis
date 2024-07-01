@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ExternallyTaggedGeometryObject : System.IDisposable
 {
+  public ExternallyTaggedGeometryObject() { }
+
   public virtual void Dispose() => throw new System.NotImplementedException();
 
   public virtual System.Boolean IsValidObject

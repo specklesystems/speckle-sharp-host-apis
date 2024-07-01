@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class GenericForm : Autodesk.Revit.DB.CombinableElement
 {
+  public GenericForm() { }
+
   public virtual Autodesk.Revit.DB.FamilyElementVisibility GetVisibility() =>
     throw new System.NotImplementedException();
 

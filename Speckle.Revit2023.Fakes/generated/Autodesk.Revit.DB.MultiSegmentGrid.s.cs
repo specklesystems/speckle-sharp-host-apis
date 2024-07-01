@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class MultiSegmentGrid : Autodesk.Revit.DB.Element
 {
+  public MultiSegmentGrid() { }
+
   public static Autodesk.Revit.DB.ElementId Create(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.ElementId typeId,

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class SpatialElement : Autodesk.Revit.DB.Element
 {
+  public SpatialElement() { }
+
   public virtual System.Collections.Generic.IList<System.Collections.Generic.IList<Autodesk.Revit.DB.BoundarySegment>> GetBoundarySegments(
     Autodesk.Revit.DB.SpatialElementBoundaryOptions options
   ) => throw new System.NotImplementedException();

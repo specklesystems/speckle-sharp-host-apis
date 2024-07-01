@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class ReinforcementAbbreviationTag : System.IDisposable
 {
+  public ReinforcementAbbreviationTag() { }
+
   public ReinforcementAbbreviationTag(
     Autodesk.Revit.DB.Structure.ReinforcementAbbreviationTagType typeTag,
     System.String abbreviationTag

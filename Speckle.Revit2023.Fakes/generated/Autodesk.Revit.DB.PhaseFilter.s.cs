@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class PhaseFilter : Autodesk.Revit.DB.Element
 {
+  public PhaseFilter() { }
+
   public virtual Autodesk.Revit.DB.PhaseStatusPresentation GetPhaseStatusPresentation(
     Autodesk.Revit.DB.ElementOnPhaseStatus status
   ) => throw new System.NotImplementedException();

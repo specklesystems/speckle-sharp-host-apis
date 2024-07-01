@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class KeyBasedTreeEntry : System.IDisposable
 {
+  public KeyBasedTreeEntry() { }
+
   public virtual System.Collections.Generic.IList<System.String> GetChildrenKeys() =>
     throw new System.NotImplementedException();
 

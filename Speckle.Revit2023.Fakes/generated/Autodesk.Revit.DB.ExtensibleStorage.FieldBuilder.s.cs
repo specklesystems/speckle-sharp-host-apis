@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.ExtensibleStorage;
 
 public partial class FieldBuilder : System.IDisposable
 {
+  public FieldBuilder() { }
+
   public FieldBuilder(
     Autodesk.Revit.DB.ExtensibleStorage.Field field,
     Autodesk.Revit.DB.ExtensibleStorage.SchemaBuilder builder

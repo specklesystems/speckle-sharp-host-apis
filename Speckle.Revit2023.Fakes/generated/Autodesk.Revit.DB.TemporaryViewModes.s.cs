@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class TemporaryViewModes : Autodesk.Revit.DB.APIObject
 {
+  public TemporaryViewModes() { }
+
   public virtual System.String GetCaption(Autodesk.Revit.DB.TemporaryViewMode mode) =>
     throw new System.NotImplementedException();
 

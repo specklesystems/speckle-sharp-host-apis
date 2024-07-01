@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class PaperSizeSet : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerable
 {
-  public PaperSizeSet() => throw new System.NotImplementedException();
+  public PaperSizeSet() { }
 
   public virtual void Clear() => throw new System.NotImplementedException();
 

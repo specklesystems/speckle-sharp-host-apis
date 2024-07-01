@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class Leader : Autodesk.Revit.DB.APIObject
 {
+  public Leader() { }
+
   public virtual System.Boolean IsValidObject
   {
     get => throw new System.NotImplementedException();

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class BRepBuilderSurfaceGeometry : System.IDisposable
 {
+  public BRepBuilderSurfaceGeometry() { }
+
   public static Autodesk.Revit.DB.BRepBuilderSurfaceGeometry Create(
     Autodesk.Revit.DB.Surface surface,
     Autodesk.Revit.DB.BoundingBoxUV surfaceEnvelope

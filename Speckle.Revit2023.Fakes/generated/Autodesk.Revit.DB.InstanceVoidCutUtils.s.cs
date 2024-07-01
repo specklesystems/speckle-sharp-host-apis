@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class InstanceVoidCutUtils
 {
+  public InstanceVoidCutUtils() { }
+
   public static System.Boolean CanBeCutWithVoid(Autodesk.Revit.DB.Element element) =>
     throw new System.NotImplementedException();
 

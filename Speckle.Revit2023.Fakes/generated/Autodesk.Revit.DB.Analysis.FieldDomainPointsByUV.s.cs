@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Analysis;
 
 public partial class FieldDomainPointsByUV : Autodesk.Revit.DB.Analysis.FieldDomainPoints
 {
+  public FieldDomainPointsByUV() { }
+
   public FieldDomainPointsByUV(
     System.Collections.Generic.IList<Autodesk.Revit.DB.UV> points,
     System.Collections.Generic.ICollection<System.Double> uCoordinates,

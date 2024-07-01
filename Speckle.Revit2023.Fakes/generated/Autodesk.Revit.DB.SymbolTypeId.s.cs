@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class SymbolTypeId
 {
+  public SymbolTypeId() { }
+
   public static Autodesk.Revit.DB.ForgeTypeId Yen
   {
     get => throw new System.NotImplementedException();

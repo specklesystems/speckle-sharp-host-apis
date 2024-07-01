@@ -2,6 +2,8 @@ namespace Autodesk.Revit.UI;
 
 public partial class TextEditorOptions : System.IDisposable
 {
+  public TextEditorOptions() { }
+
   public static Autodesk.Revit.UI.TextEditorOptions GetTextEditorOptions() =>
     throw new System.NotImplementedException();
 

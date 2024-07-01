@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class MultiReferenceAnnotation : Autodesk.Revit.DB.Element
 {
+  public MultiReferenceAnnotation() { }
+
   public static Autodesk.Revit.DB.MultiReferenceAnnotation Create(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.ElementId ownerViewId,

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Mechanical;
 
 public partial class MEPSection : System.IDisposable
 {
+  public MEPSection() { }
+
   public virtual System.Double GetPressureDrop(Autodesk.Revit.DB.ElementId elemId) =>
     throw new System.NotImplementedException();
 

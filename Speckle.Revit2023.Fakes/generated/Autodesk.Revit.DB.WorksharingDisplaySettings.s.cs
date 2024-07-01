@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class WorksharingDisplaySettings : Autodesk.Revit.DB.Element
 {
+  public WorksharingDisplaySettings() { }
+
   public static Autodesk.Revit.DB.WorksharingDisplaySettings GetOrCreateWorksharingDisplaySettings(
     Autodesk.Revit.DB.Document doc
   ) => throw new System.NotImplementedException();

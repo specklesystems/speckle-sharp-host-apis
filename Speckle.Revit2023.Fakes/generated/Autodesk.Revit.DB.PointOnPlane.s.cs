@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class PointOnPlane : Autodesk.Revit.DB.PointElementReference
 {
+  public PointOnPlane() { }
+
   public static Autodesk.Revit.DB.PointOnPlane NewPointOnPlane(
     Autodesk.Revit.DB.Document doc,
     Autodesk.Revit.DB.Reference planeReference,

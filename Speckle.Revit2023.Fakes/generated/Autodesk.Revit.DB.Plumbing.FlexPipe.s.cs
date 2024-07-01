@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Plumbing;
 
 public partial class FlexPipe : Autodesk.Revit.DB.MEPCurve
 {
+  public FlexPipe() { }
+
   public static Autodesk.Revit.DB.Plumbing.FlexPipe Create(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.ElementId systemTypeId,

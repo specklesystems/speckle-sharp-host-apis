@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Analysis;
 
 public partial class MassEnergyAnalyticalModel : Autodesk.Revit.DB.Element
 {
+  public MassEnergyAnalyticalModel() { }
+
   public virtual System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> GetMassZoneIds() =>
     throw new System.NotImplementedException();
 

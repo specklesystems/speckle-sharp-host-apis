@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class PlanViewRange : System.IDisposable
 {
+  public PlanViewRange() { }
+
   public virtual Autodesk.Revit.DB.ElementId GetLevelId(Autodesk.Revit.DB.PlanViewPlane planViewPlane) =>
     throw new System.NotImplementedException();
 

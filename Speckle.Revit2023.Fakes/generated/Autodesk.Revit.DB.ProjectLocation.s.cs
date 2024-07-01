@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ProjectLocation : Autodesk.Revit.DB.Instance
 {
+  public ProjectLocation() { }
+
   public virtual Autodesk.Revit.DB.ProjectPosition GetProjectPosition(Autodesk.Revit.DB.XYZ point) =>
     throw new System.NotImplementedException();
 

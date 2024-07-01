@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ModelPathUtils
 {
+  public ModelPathUtils() { }
+
   public static System.Boolean IsValidUserVisibleFullServerPath(System.String strPath) =>
     throw new System.NotImplementedException();
 

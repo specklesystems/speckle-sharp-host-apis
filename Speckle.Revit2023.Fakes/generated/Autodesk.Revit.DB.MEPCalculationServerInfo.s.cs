@@ -2,13 +2,13 @@ namespace Autodesk.Revit.DB;
 
 public partial class MEPCalculationServerInfo : System.IDisposable
 {
+  public MEPCalculationServerInfo() { }
+
   public MEPCalculationServerInfo(Autodesk.Revit.DB.MEPCalculationServerInfo other) =>
     throw new System.NotImplementedException();
 
   public MEPCalculationServerInfo(Autodesk.Revit.DB.ExternalService.IExternalServer server) =>
     throw new System.NotImplementedException();
-
-  public MEPCalculationServerInfo() => throw new System.NotImplementedException();
 
   public static Autodesk.Revit.DB.MEPCalculationServerInfo GetMEPCalculationServerInfo(
     Autodesk.Revit.DB.FamilyInstance famInst

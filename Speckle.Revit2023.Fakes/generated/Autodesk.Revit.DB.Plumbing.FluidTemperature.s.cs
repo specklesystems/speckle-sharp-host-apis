@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Plumbing;
 
 public partial class FluidTemperature : System.IDisposable
 {
+  public FluidTemperature() { }
+
   public FluidTemperature(System.Double temperature, System.Double viscosity, System.Double density) =>
     throw new System.NotImplementedException();
 

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Architecture;
 
 public partial class TopographyEditScope : Autodesk.Revit.DB.EditScope
 {
+  public TopographyEditScope() { }
+
   public TopographyEditScope(Autodesk.Revit.DB.Document document, System.String transactionName) =>
     throw new System.NotImplementedException();
 

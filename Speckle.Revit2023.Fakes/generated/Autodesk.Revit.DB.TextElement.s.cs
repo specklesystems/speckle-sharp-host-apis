@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class TextElement : Autodesk.Revit.DB.Element
 {
+  public TextElement() { }
+
   public static System.Double GetMinimumAllowedWidth(
     Autodesk.Revit.DB.Document cdda,
     Autodesk.Revit.DB.ElementId typeId

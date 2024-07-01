@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class MathComparisonUtils
 {
+  public MathComparisonUtils() { }
+
   public static System.Boolean IsAlmostEqual(System.Double value1, System.Double value2) =>
     throw new System.NotImplementedException();
 

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.UI;
 
 public partial class PulldownButton : Autodesk.Revit.UI.RibbonButton
 {
+  public PulldownButton() { }
+
   public virtual System.Collections.Generic.IList<Autodesk.Revit.UI.PushButton> GetItems() =>
     throw new System.NotImplementedException();
 

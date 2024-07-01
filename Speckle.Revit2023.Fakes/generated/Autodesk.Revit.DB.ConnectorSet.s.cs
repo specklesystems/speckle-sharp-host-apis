@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class ConnectorSet : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerable
 {
-  public ConnectorSet() => throw new System.NotImplementedException();
+  public ConnectorSet() { }
 
   public virtual Autodesk.Revit.DB.ConnectorSetIterator ForwardIterator() => throw new System.NotImplementedException();
 

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class FabricationPart : Autodesk.Revit.DB.Element
 {
+  public FabricationPart() { }
+
   public virtual System.Boolean RemovePartCustomData(System.Int32 customId) =>
     throw new System.NotImplementedException();
 

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ParameterFilterRuleFactory : System.IDisposable
 {
+  public ParameterFilterRuleFactory() { }
+
   public static Autodesk.Revit.DB.FilterRule CreateSharedParameterApplicableRule(System.String parameterName) =>
     throw new System.NotImplementedException();
 

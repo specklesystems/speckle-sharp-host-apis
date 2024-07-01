@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class FabricationConfigurationInfo : System.IDisposable
 {
+  public FabricationConfigurationInfo() { }
+
   public virtual System.Boolean IsValid() => throw new System.NotImplementedException();
 
   public virtual System.Collections.Generic.IList<System.String> GetProfiles() =>

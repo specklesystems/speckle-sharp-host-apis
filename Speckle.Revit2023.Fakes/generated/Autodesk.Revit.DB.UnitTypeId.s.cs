@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class UnitTypeId
 {
+  public UnitTypeId() { }
+
   public static Autodesk.Revit.DB.ForgeTypeId WattsPerSquareMeterKelvin
   {
     get => throw new System.NotImplementedException();

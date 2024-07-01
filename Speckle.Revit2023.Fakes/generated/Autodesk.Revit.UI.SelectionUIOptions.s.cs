@@ -2,6 +2,8 @@ namespace Autodesk.Revit.UI;
 
 public partial class SelectionUIOptions : System.IDisposable
 {
+  public SelectionUIOptions() { }
+
   public static Autodesk.Revit.UI.SelectionUIOptions GetSelectionUIOptions() =>
     throw new System.NotImplementedException();
 

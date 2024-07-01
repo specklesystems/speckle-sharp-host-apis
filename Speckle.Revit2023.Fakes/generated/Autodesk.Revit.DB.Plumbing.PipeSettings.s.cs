@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Plumbing;
 
 public partial class PipeSettings : Autodesk.Revit.DB.Element
 {
+  public PipeSettings() { }
+
   public static Autodesk.Revit.DB.Plumbing.PipeSettings GetPipeSettings(Autodesk.Revit.DB.Document document) =>
     throw new System.NotImplementedException();
 

@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class IntersectionResult : Autodesk.Revit.DB.APIObject
 {
-  public IntersectionResult() => throw new System.NotImplementedException();
+  public IntersectionResult() { }
 
   public virtual System.Double EdgeParameter
   {

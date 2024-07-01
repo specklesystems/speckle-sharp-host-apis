@@ -4,6 +4,8 @@ public partial class FluidType
   : Autodesk.Revit.DB.ElementType,
     System.Collections.Generic.IEnumerable<Autodesk.Revit.DB.Plumbing.FluidTemperature>
 {
+  public FluidType() { }
+
   public virtual Autodesk.Revit.DB.Plumbing.FluidTemperatureSetIterator GetFluidTemperatureSetIterator() =>
     throw new System.NotImplementedException();
 

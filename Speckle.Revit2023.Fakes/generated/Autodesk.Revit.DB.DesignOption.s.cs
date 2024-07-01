@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class DesignOption : Autodesk.Revit.DB.Element
 {
+  public DesignOption() { }
+
   public static Autodesk.Revit.DB.ElementId GetActiveDesignOptionId(Autodesk.Revit.DB.Document document) =>
     throw new System.NotImplementedException();
 

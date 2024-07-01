@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class KeyBasedTreeEntryTable : Autodesk.Revit.DB.Element
 {
+  public KeyBasedTreeEntryTable() { }
+
   public virtual System.Boolean ServerSupports(Autodesk.Revit.DB.ExternalResourceReference extRef) =>
     throw new System.NotImplementedException();
 

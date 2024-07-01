@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class Connector : Autodesk.Revit.DB.IConnector, System.IDisposable
 {
+  public Connector() { }
+
   public virtual void ConnectTo(Autodesk.Revit.DB.Connector connector) => throw new System.NotImplementedException();
 
   public virtual void DisconnectFrom(Autodesk.Revit.DB.Connector connector) =>

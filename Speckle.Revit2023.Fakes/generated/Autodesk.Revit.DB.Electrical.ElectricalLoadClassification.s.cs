@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Electrical;
 
 public partial class ElectricalLoadClassification : Autodesk.Revit.DB.Element
 {
+  public ElectricalLoadClassification() { }
+
   public static Autodesk.Revit.DB.Electrical.ElectricalLoadClassification Create(
     Autodesk.Revit.DB.Document ADoc,
     System.String strName

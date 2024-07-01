@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.PointClouds;
 
 public partial struct CloudPoint
 {
+  public CloudPoint() { }
+
   public CloudPoint(System.Single x, System.Single y, System.Single z, System.Int32 color) =>
     throw new System.NotImplementedException();
 
