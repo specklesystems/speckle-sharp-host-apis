@@ -41,6 +41,10 @@ public partial class Transform : Autodesk.Revit.DB.APIObject
 	{
 		get => throw new System.NotImplementedException();
 	}
+	public static  Autodesk.Revit.DB.Transform Identity
+	{
+		get => throw new System.NotImplementedException();
+	}
 	public virtual Autodesk.Revit.DB.XYZ Origin
 	{
 		get => throw new System.NotImplementedException();

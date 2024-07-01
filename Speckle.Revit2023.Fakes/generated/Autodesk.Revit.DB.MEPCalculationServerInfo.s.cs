@@ -9,6 +9,10 @@ public partial class MEPCalculationServerInfo : System.Object
 	{
 		get => throw new System.NotImplementedException();
 	}
+	public static  System.Guid PipeUseDefinitionOnTypeGUID
+	{
+		get => throw new System.NotImplementedException();
+	}
 	public virtual System.String Description
 	{
 		get => throw new System.NotImplementedException();

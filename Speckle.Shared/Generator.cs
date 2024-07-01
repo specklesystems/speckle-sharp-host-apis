@@ -65,7 +65,7 @@ public class Generator
 
     definedTypes = definedTypes.Where(x => x.IsPublic)
       .Where(x => _namespaces.Any(y => x.FullName?.StartsWith(y) ?? false)).ToList();
-    foreach (var type in definedTypes)//.Where(x => x.FullName.EndsWith("RoomFilter")))
+    foreach (var type in definedTypes)//.Where(x => x.FullName.EndsWith("XYZ")))
     {
       try
       {
@@ -214,6 +214,12 @@ public class Generator
       return false;
     }
 
+    if (!excludedType.ExcludedMembers.Any())
+    {
+      //none means all
+      return true;
+    }
+
     return excludedType.ExcludedMembers.Any(x => x.Name.Equals(member, StringComparison.CurrentCultureIgnoreCase));
   }
 
@@ -222,35 +228,7 @@ public class Generator
     sb.AppendLine();
     sb.AppendLine("{");
     var members = new List<GeneratedMember>();
-    var constructors = clazz.GetConstructors().ToList();
-    var emptyConstructor = constructors.FirstOrDefault(x => !x.GetParameters().Any());
-    if (emptyConstructor is null)
-    {
-      //doens't have empty constructor so make one?
-    }
-    else if (constructors.Count > 1)
-    {
-      constructors.Remove(emptyConstructor);
-    }
-    foreach (var constructor in constructors)
-    {
-      try {
-        
-        var constructorSb = new StringBuilder();
-        constructorSb.Append($"\tpublic {clazz.Name}(");
-      WriteMethodBody(constructorSb, constructor.GetParameters());
-      sb.Append(constructorSb);
-      }
-      catch (FileLoadException)
-      {
-        Console.WriteLine($"Did not write a constructor on {clazz.FullName}");
-        
-      }
-      catch (ApplicationException)
-      {
-        Console.WriteLine($"Did not write constructor on {clazz.FullName}");
-      }
-    }
+    WriteConstructors(sb, clazz);
     foreach(var method in clazz.GetMethods(BindingFlags.Instance | BindingFlags.Static | BindingFlags.DeclaredOnly | BindingFlags.Public))
     {
       if (method.IsSpecialName //special is get/set for properties
@@ -276,7 +254,7 @@ public class Generator
         Console.WriteLine($"Did not write {method.Name} on {clazz.FullName}");
       }
     }
-    foreach(var propertyInfo in clazz.GetProperties(BindingFlags.Instance | BindingFlags.DeclaredOnly | BindingFlags.Public))
+    foreach(var propertyInfo in clazz.GetProperties(BindingFlags.Instance | BindingFlags.Static | BindingFlags.DeclaredOnly | BindingFlags.Public))
     {
       if (IsExcluded(clazz.Name, propertyInfo.Name))
       {
@@ -303,6 +281,43 @@ public class Generator
     sb.AppendLine("}");
     return members;
   }
+
+  private void WriteConstructors(StringBuilder sb, Type clazz)
+  {
+    if (IsExcluded(clazz.Name, string.Empty))
+    {
+      return;
+    }
+    var constructors = clazz.GetConstructors().ToList();
+    var emptyConstructor = constructors.FirstOrDefault(x => !x.GetParameters().Any());
+    if (emptyConstructor is null)
+    {
+      //doens't have empty constructor so make one?
+    }
+    else if (constructors.Count > 1)
+    {
+      constructors.Remove(emptyConstructor);
+    }
+    foreach (var constructor in constructors)
+    {
+      try {
+        
+        var constructorSb = new StringBuilder();
+        constructorSb.Append($"\tpublic {clazz.Name}(");
+        WriteMethodBody(constructorSb, constructor.GetParameters());
+        sb.Append(constructorSb);
+      }
+      catch (FileLoadException)
+      {
+        Console.WriteLine($"Did not write a constructor on {clazz.FullName}");
+        
+      }
+      catch (ApplicationException)
+      {
+        Console.WriteLine($"Did not write constructor on {clazz.FullName}");
+      }
+    }
+  }
   
   private void WriteProperty(StringBuilder sb, PropertyInfo propertyInfo, bool isStruct)
   {
@@ -310,7 +325,6 @@ public class Generator
     var getMethod = propertyInfo.GetGetMethod(false);
     if (getMethod is not null)
     {
-
       if (getMethod.GetParameters().Any())
       {
         throw new ApplicationException($"getter has parameters {propertyInfo.Name}");
@@ -319,7 +333,7 @@ public class Generator
       if (wrotePropHeader is false)
       {
         wrotePropHeader = true;
-        WritePropertyHeader(sb, propertyInfo,isStruct, isOverriden, getMethod.ReturnType);
+        WritePropertyHeader(sb, propertyInfo,getMethod.IsStatic, isStruct, isOverriden, getMethod.ReturnType);
       }
       sb.AppendLine("\t\tget => throw new System.NotImplementedException();");
     }
@@ -334,22 +348,29 @@ public class Generator
       bool isOverriden = setMethod.GetBaseDefinition().DeclaringType != propertyInfo.DeclaringType;
       if (wrotePropHeader is false)
       {
-        WritePropertyHeader(sb, propertyInfo, isStruct, isOverriden, parameters[0].ParameterType);
+        WritePropertyHeader(sb, propertyInfo, setMethod.IsStatic, isStruct, isOverriden, parameters[0].ParameterType);
       }
       sb.AppendLine("\t\tset {}");
     }
     sb.AppendLine("\t}");
   }
 
-  private void WritePropertyHeader(StringBuilder sb, PropertyInfo property, bool isStruct, bool isOverriden, Type returnType)
+  private void WritePropertyHeader(StringBuilder sb, PropertyInfo property, bool isStatic, bool isStruct, bool isOverriden, Type returnType)
   {
     var extra = string.Empty;
     if (!isStruct)
     {
-      extra = isOverriden ? "override" : "virtual";
-      if (IsMemberOnBaseClass(property.DeclaringType?.BaseType?.FullName, new(property.Name)))
+      if (isStatic)
       {
-        extra = "new";
+        extra += "static ";
+      }
+      else
+      {
+        extra = isOverriden ? "override" : "virtual";
+        if (IsMemberOnBaseClass(property.DeclaringType?.BaseType?.FullName, new(property.Name)))
+        {
+          extra = "new";
+        }
       }
     }
 

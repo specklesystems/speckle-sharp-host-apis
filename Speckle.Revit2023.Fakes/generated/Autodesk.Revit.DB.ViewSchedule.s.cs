@@ -61,6 +61,11 @@ public partial class ViewSchedule : Autodesk.Revit.DB.TableView
 	{
 		get => throw new System.NotImplementedException();
 	}
+	public static  System.Boolean IsHeaderFrozen
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 	public virtual System.Boolean UseStripedRowsOnSheets
 	{
 		get => throw new System.NotImplementedException();

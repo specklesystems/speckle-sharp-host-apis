@@ -7,4 +7,9 @@ public partial class ThinLinesOptions : System.Object
 	{
 		get => throw new System.NotImplementedException();
 	}
+	public static  System.Boolean AreThinLinesEnabled
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 }

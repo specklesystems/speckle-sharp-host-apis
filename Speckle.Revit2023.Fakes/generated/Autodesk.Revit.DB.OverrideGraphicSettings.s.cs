@@ -29,6 +29,10 @@ public partial class OverrideGraphicSettings : System.Object
 	{
 		get => throw new System.NotImplementedException();
 	}
+	public static  System.Int32 InvalidPenNumber
+	{
+		get => throw new System.NotImplementedException();
+	}
 	public virtual Autodesk.Revit.DB.ElementId CutBackgroundPatternId
 	{
 		get => throw new System.NotImplementedException();

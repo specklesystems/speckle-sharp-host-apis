@@ -18,6 +18,18 @@ public partial class UV : System.Object
 	public virtual System.Boolean IsAlmostEqualTo(Autodesk.Revit.DB.UV source) => throw new System.NotImplementedException();
 	public virtual System.Double DistanceTo(Autodesk.Revit.DB.UV source) => throw new System.NotImplementedException();
 	public virtual System.Double AngleTo(Autodesk.Revit.DB.UV source) => throw new System.NotImplementedException();
+	public static  Autodesk.Revit.DB.UV BasisV
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public static  Autodesk.Revit.DB.UV BasisU
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public static  Autodesk.Revit.DB.UV Zero
+	{
+		get => throw new System.NotImplementedException();
+	}
 	public virtual System.Double V
 	{
 		get => throw new System.NotImplementedException();

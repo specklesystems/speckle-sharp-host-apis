@@ -35,6 +35,10 @@ public partial class ImageType : Autodesk.Revit.DB.ElementType
 	{
 		get => throw new System.NotImplementedException();
 	}
+	public static  Autodesk.Revit.DB.ExternalResourceType ExternalResourceType
+	{
+		get => throw new System.NotImplementedException();
+	}
 	public virtual System.Int32 HeightInPixels
 	{
 		get => throw new System.NotImplementedException();

@@ -40,6 +40,16 @@ public partial class TemporaryViewModes : Autodesk.Revit.DB.APIObject
 		get => throw new System.NotImplementedException();
 		set {}
 	}
+	public static  System.Boolean PreviewFamilyVisibilityDefaultUncutState
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public static  System.Boolean PreviewFamilyVisibilityDefaultOnState
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 	public virtual Autodesk.Revit.DB.PreviewFamilyVisibilityMode PreviewFamilyVisibility
 	{
 		get => throw new System.NotImplementedException();

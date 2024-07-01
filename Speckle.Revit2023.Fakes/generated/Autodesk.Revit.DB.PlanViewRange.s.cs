@@ -11,4 +11,20 @@ public partial class PlanViewRange : System.Object
 	{
 		get => throw new System.NotImplementedException();
 	}
+	public static  Autodesk.Revit.DB.ElementId Current
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public static  Autodesk.Revit.DB.ElementId LevelBelow
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public static  Autodesk.Revit.DB.ElementId LevelAbove
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public static  Autodesk.Revit.DB.ElementId Unlimited
+	{
+		get => throw new System.NotImplementedException();
+	}
 }

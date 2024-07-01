@@ -21,6 +21,22 @@ public partial class XYZ : System.Object
 	public virtual System.Double DistanceTo(Autodesk.Revit.DB.XYZ source) => throw new System.NotImplementedException();
 	public virtual System.Double AngleTo(Autodesk.Revit.DB.XYZ source) => throw new System.NotImplementedException();
 	public virtual System.Double AngleOnPlaneTo(Autodesk.Revit.DB.XYZ right,Autodesk.Revit.DB.XYZ normal) => throw new System.NotImplementedException();
+	public static  Autodesk.Revit.DB.XYZ BasisZ
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public static  Autodesk.Revit.DB.XYZ BasisY
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public static  Autodesk.Revit.DB.XYZ BasisX
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public static  Autodesk.Revit.DB.XYZ Zero
+	{
+		get => throw new System.NotImplementedException();
+	}
 	public virtual System.Double Z
 	{
 		get => throw new System.NotImplementedException();

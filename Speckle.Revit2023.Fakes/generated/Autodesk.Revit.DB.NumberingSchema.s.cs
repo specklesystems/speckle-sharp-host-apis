@@ -15,6 +15,10 @@ public partial class NumberingSchema : Autodesk.Revit.DB.Element
 	public virtual void AppendSequence(System.String fromPartition,System.String toPartition) => throw new System.NotImplementedException();
 	public virtual void MergeSequences(IList<System.String> sourcePartitions,System.String newPartition) => throw new System.NotImplementedException();
 	public virtual void AssignElementsToSequence(ISet<Autodesk.Revit.DB.ElementId> elementIds,System.String partitionName) => throw new System.NotImplementedException();
+	public static  System.Int32 MaximumStartingNumber
+	{
+		get => throw new System.NotImplementedException();
+	}
 	public virtual Autodesk.Revit.DB.NumberingSchemaType SchemaType
 	{
 		get => throw new System.NotImplementedException();
