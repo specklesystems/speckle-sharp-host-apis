@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Electrical;
 
 public partial class VoltageType : Autodesk.Revit.DB.ElementType
 {
+  public VoltageType() { }
+
   public virtual void SetVoltageValue(System.Double actualValue, System.Double minValue, System.Double maxValue) =>
     throw new System.NotImplementedException();
 

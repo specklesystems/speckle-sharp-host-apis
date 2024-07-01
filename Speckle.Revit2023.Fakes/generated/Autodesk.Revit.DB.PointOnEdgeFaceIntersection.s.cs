@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class PointOnEdgeFaceIntersection : Autodesk.Revit.DB.PointElementReference
 {
+  public PointOnEdgeFaceIntersection() { }
+
   public virtual Autodesk.Revit.DB.Reference GetEdgeReference() => throw new System.NotImplementedException();
 
   public virtual void SetEdgeReference(Autodesk.Revit.DB.Reference edgeReference) =>

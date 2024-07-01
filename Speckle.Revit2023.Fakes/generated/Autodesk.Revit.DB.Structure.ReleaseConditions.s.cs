@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class ReleaseConditions : System.IDisposable
 {
+  public ReleaseConditions() { }
+
   public ReleaseConditions(
     System.Boolean start,
     System.Boolean fx,

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class Segment : Autodesk.Revit.DB.Element
 {
+  public Segment() { }
+
   public virtual void AddSize(Autodesk.Revit.DB.MEPSize size) => throw new System.NotImplementedException();
 
   public virtual void RemoveSize(System.Double nominalDiameter) => throw new System.NotImplementedException();

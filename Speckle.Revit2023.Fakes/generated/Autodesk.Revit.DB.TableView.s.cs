@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class TableView : Autodesk.Revit.DB.View
 {
+  public TableView() { }
+
   public virtual System.Boolean IsValidSectionType(Autodesk.Revit.DB.SectionType sectionType) =>
     throw new System.NotImplementedException();
 

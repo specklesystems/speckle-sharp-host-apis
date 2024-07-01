@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class AnalyticalLink : Autodesk.Revit.DB.Element
 {
+  public AnalyticalLink() { }
+
   public static Autodesk.Revit.DB.Structure.AnalyticalLink Create(
     Autodesk.Revit.DB.Document doc,
     Autodesk.Revit.DB.ElementId type,

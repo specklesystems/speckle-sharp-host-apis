@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Analysis;
 
 public partial class EnergyAnalysisSpace : Autodesk.Revit.DB.Element
 {
+  public EnergyAnalysisSpace() { }
+
   public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.Analysis.EnergyAnalysisSurface> GetAnalyticalSurfaces() =>
     throw new System.NotImplementedException();
 

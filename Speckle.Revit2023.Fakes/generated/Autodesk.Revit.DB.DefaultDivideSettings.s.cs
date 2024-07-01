@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class DefaultDivideSettings : Autodesk.Revit.DB.Element
 {
+  public DefaultDivideSettings() { }
+
   public static Autodesk.Revit.DB.DefaultDivideSettings GetDefaultDivideSettings(Autodesk.Revit.DB.Document cda) =>
     throw new System.NotImplementedException();
 

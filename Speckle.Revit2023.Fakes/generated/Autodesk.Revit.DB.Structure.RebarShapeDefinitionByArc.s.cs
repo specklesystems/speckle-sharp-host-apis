@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class RebarShapeDefinitionByArc : Autodesk.Revit.DB.Structure.RebarShapeDefinition
 {
+  public RebarShapeDefinitionByArc() { }
+
   public RebarShapeDefinitionByArc(
     Autodesk.Revit.DB.Document doc,
     System.Double height,

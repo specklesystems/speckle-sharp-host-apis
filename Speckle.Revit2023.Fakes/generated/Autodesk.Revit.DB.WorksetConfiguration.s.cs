@@ -2,10 +2,10 @@ namespace Autodesk.Revit.DB;
 
 public partial class WorksetConfiguration : System.IDisposable
 {
+  public WorksetConfiguration() { }
+
   public WorksetConfiguration(Autodesk.Revit.DB.WorksetConfigurationOption option) =>
     throw new System.NotImplementedException();
-
-  public WorksetConfiguration() => throw new System.NotImplementedException();
 
   public WorksetConfiguration(Autodesk.Revit.DB.WorksetConfiguration other) =>
     throw new System.NotImplementedException();

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class MEPCurve : Autodesk.Revit.DB.HostObject
 {
+  public MEPCurve() { }
+
   public virtual Autodesk.Revit.DB.MEPSystem MEPSystem
   {
     get => throw new System.NotImplementedException();

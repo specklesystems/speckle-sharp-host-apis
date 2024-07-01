@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Plumbing;
 
 public partial class Pipe : Autodesk.Revit.DB.MEPCurve
 {
+  public Pipe() { }
+
   public static Autodesk.Revit.DB.Plumbing.Pipe Create(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.ElementId pipeTypeId,

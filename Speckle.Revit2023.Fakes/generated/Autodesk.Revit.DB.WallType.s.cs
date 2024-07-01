@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class WallType : Autodesk.Revit.DB.HostObjAttributes
 {
+  public WallType() { }
+
   public virtual System.Double Width
   {
     get => throw new System.NotImplementedException();

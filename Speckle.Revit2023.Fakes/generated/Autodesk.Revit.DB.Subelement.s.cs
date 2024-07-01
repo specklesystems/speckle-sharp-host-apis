@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class Subelement : System.IDisposable
 {
+  public Subelement() { }
+
   public static Autodesk.Revit.DB.Subelement Create(
     Autodesk.Revit.DB.Document aDoc,
     Autodesk.Revit.DB.Reference reference

@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class DoubleArray : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerable
 {
-  public DoubleArray() => throw new System.NotImplementedException();
+  public DoubleArray() { }
 
   public virtual void Clear() => throw new System.NotImplementedException();
 

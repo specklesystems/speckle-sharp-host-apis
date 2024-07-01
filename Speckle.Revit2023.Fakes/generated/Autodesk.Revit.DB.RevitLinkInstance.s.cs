@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class RevitLinkInstance : Autodesk.Revit.DB.Instance
 {
+  public RevitLinkInstance() { }
+
   public static Autodesk.Revit.DB.RevitLinkInstance Create(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.ElementId revitLinkTypeId,

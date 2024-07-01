@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ElementCategoryFilter : Autodesk.Revit.DB.ElementQuickFilter
 {
+  public ElementCategoryFilter() { }
+
   public ElementCategoryFilter(Autodesk.Revit.DB.BuiltInCategory category, System.Boolean inverted) =>
     throw new System.NotImplementedException();
 

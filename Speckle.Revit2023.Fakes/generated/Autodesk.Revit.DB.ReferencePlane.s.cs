@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ReferencePlane : Autodesk.Revit.DB.DatumPlane
 {
+  public ReferencePlane() { }
+
   public virtual Autodesk.Revit.DB.Plane GetPlane() => throw new System.NotImplementedException();
 
   public virtual Autodesk.Revit.DB.Reference GetReference() => throw new System.NotImplementedException();

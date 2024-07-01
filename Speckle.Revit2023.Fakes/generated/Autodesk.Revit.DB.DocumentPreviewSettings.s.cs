@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class DocumentPreviewSettings : System.IDisposable
 {
+  public DocumentPreviewSettings() { }
+
   public virtual void ForceViewUpdate(System.Boolean forceViewUpdate) => throw new System.NotImplementedException();
 
   public virtual System.Boolean IsViewIdValidForPreview(Autodesk.Revit.DB.ElementId viewId) =>

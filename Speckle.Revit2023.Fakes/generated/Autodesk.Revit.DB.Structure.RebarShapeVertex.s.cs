@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class RebarShapeVertex : System.IDisposable
 {
+  public RebarShapeVertex() { }
+
   public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.Structure.RebarShapeConstraint> GetConstraints() =>
     throw new System.NotImplementedException();
 

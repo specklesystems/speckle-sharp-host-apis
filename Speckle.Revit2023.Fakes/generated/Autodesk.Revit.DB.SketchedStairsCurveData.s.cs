@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class SketchedStairsCurveData : System.IDisposable
 {
+  public SketchedStairsCurveData() { }
+
   public SketchedStairsCurveData(
     Autodesk.Revit.DB.Curve boundaryCurve,
     System.Double height,

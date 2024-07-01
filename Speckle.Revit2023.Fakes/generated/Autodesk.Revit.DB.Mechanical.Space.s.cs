@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Mechanical;
 
 public partial class Space : Autodesk.Revit.DB.SpatialElement
 {
+  public Space() { }
+
   public virtual System.Boolean IsPointInSpace(Autodesk.Revit.DB.XYZ point) =>
     throw new System.NotImplementedException();
 

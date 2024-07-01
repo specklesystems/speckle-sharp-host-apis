@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class MEPAnalyticalConnectionType : Autodesk.Revit.DB.ElementType
 {
+  public MEPAnalyticalConnectionType() { }
+
   public static Autodesk.Revit.DB.MEPAnalyticalConnectionType Create(
     Autodesk.Revit.DB.Document doc,
     System.String name

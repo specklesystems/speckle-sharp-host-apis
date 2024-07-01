@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Analysis;
 
 public partial class MassLevelData : Autodesk.Revit.DB.Element
 {
+  public MassLevelData() { }
+
   public virtual System.Boolean IsEmpty() => throw new System.NotImplementedException();
 
   public static System.Boolean IsMassFamilyInstance(

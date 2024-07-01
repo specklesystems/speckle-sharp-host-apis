@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class FootPrintRoof : Autodesk.Revit.DB.RoofBase
 {
+  public FootPrintRoof() { }
+
   public virtual System.Boolean get_DefinesSlope(Autodesk.Revit.DB.ModelCurve pCurve) =>
     throw new System.NotImplementedException();
 

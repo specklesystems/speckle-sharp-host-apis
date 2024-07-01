@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Electrical;
 
 public partial class AreaBasedLoadType : Autodesk.Revit.DB.Element
 {
+  public AreaBasedLoadType() { }
+
   public static Autodesk.Revit.DB.Electrical.AreaBasedLoadType Create(
     Autodesk.Revit.DB.Document document,
     System.String name

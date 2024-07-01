@@ -2,6 +2,8 @@ namespace Autodesk.Revit.UI;
 
 public partial class IFCExternalServiceUIData : System.IDisposable
 {
+  public IFCExternalServiceUIData() { }
+
   public virtual System.IntPtr GetParentHwnd() => throw new System.NotImplementedException();
 
   public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.ElementId> GetRevitElementIds() =>

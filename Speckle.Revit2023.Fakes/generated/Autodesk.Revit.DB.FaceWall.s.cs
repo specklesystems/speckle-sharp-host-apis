@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class FaceWall : Autodesk.Revit.DB.HostObject
 {
+  public FaceWall() { }
+
   public static Autodesk.Revit.DB.FaceWall Create(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.ElementId wallType,

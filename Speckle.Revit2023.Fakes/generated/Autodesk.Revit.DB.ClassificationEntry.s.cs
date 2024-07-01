@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ClassificationEntry : Autodesk.Revit.DB.KeyBasedTreeEntry
 {
+  public ClassificationEntry() { }
+
   public ClassificationEntry(
     System.String key,
     System.String parentKey,

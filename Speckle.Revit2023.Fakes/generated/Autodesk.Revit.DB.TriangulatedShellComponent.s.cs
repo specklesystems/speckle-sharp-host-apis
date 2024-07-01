@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class TriangulatedShellComponent : System.IDisposable
 {
+  public TriangulatedShellComponent() { }
+
   public virtual Autodesk.Revit.DB.XYZ GetVertex(System.Int32 vertexIndex) =>
     throw new System.NotImplementedException();
 

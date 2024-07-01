@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class SiteLocation : Autodesk.Revit.DB.ElementType
 {
+  public SiteLocation() { }
+
   public virtual System.DateTime ConvertToProjectTime(System.DateTime inputTime) =>
     throw new System.NotImplementedException();
 

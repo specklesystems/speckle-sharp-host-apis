@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Mechanical;
 
 public partial class DuctSettings : Autodesk.Revit.DB.Element
 {
+  public DuctSettings() { }
+
   public static Autodesk.Revit.DB.Mechanical.DuctSettings GetDuctSettings(Autodesk.Revit.DB.Document document) =>
     throw new System.NotImplementedException();
 

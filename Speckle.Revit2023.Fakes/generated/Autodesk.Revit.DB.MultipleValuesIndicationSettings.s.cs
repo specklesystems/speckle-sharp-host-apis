@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class MultipleValuesIndicationSettings : Autodesk.Revit.DB.Element
 {
+  public MultipleValuesIndicationSettings() { }
+
   public static Autodesk.Revit.DB.MultipleValuesIndicationSettings GetMultipleValuesIndicationSettings(
     Autodesk.Revit.DB.Document cda
   ) => throw new System.NotImplementedException();

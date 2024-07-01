@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Architecture;
 
 public partial class ContinuousRailType : Autodesk.Revit.DB.ElementType
 {
+  public ContinuousRailType() { }
+
   public virtual System.Double HandClearance
   {
     get => throw new System.NotImplementedException();

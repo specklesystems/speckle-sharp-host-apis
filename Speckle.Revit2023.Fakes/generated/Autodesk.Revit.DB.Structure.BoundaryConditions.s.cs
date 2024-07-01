@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class BoundaryConditions : Autodesk.Revit.DB.Element
 {
+  public BoundaryConditions() { }
+
   public virtual Autodesk.Revit.DB.Structure.BoundaryConditionsType GetBoundaryConditionsType() =>
     throw new System.NotImplementedException();
 

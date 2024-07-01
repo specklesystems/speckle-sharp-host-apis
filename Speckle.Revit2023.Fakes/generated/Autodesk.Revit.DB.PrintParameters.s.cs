@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class PrintParameters : Autodesk.Revit.DB.APIObject
 {
+  public PrintParameters() { }
+
   public virtual System.Boolean MaskCoincidentLines
   {
     get => throw new System.NotImplementedException();

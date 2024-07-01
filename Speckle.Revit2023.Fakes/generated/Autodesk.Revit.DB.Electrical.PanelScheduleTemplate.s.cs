@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Electrical;
 
 public partial class PanelScheduleTemplate : Autodesk.Revit.DB.Element
 {
+  public PanelScheduleTemplate() { }
+
   public static Autodesk.Revit.DB.Electrical.PanelScheduleTemplate Create(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.Electrical.PanelScheduleType type,

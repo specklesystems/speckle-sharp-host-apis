@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class PaperSourceSet : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerable
 {
-  public PaperSourceSet() => throw new System.NotImplementedException();
+  public PaperSourceSet() { }
 
   public virtual void Clear() => throw new System.NotImplementedException();
 

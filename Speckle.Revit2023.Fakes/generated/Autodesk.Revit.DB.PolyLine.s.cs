@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class PolyLine : Autodesk.Revit.DB.GeometryObject
 {
+  public PolyLine() { }
+
   public virtual Autodesk.Revit.DB.XYZ Evaluate(System.Double param) => throw new System.NotImplementedException();
 
   public virtual Autodesk.Revit.DB.XYZ GetCoordinate(System.Int32 index) => throw new System.NotImplementedException();

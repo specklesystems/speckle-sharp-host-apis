@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class DWFExportOptions : Autodesk.Revit.DB.CADExportOptions
 {
-  public DWFExportOptions() => throw new System.NotImplementedException();
+  public DWFExportOptions() { }
 
   public virtual Autodesk.Revit.DB.ElementId ExportOnlyViewId
   {

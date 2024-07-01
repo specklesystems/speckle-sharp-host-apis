@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class GroupSet : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerable
 {
-  public GroupSet() => throw new System.NotImplementedException();
+  public GroupSet() { }
 
   public virtual void Clear() => throw new System.NotImplementedException();
 

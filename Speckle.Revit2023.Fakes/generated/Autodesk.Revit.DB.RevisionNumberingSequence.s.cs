@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class RevisionNumberingSequence : Autodesk.Revit.DB.Element
 {
+  public RevisionNumberingSequence() { }
+
   public static Autodesk.Revit.DB.RevisionNumberingSequence CreateNumericSequence(
     Autodesk.Revit.DB.Document document,
     System.String name,

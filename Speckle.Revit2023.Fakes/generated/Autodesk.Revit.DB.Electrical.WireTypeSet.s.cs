@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB.Electrical;
 
 public partial class WireTypeSet : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerable
 {
-  public WireTypeSet() => throw new System.NotImplementedException();
+  public WireTypeSet() { }
 
   public virtual void Clear() => throw new System.NotImplementedException();
 

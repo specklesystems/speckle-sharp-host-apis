@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ImageInstance : Autodesk.Revit.DB.Element
 {
+  public ImageInstance() { }
+
   public static Autodesk.Revit.DB.ImageInstance Create(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.View view,

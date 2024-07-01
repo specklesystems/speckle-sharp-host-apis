@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ViewDisplayBackground : System.IDisposable
 {
+  public ViewDisplayBackground() { }
+
   public static Autodesk.Revit.DB.ViewDisplayBackground CreateGradient(
     Autodesk.Revit.DB.Color skyColor,
     Autodesk.Revit.DB.Color horizonColor,

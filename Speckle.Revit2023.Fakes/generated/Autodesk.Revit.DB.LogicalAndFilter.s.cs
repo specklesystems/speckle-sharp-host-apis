@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class LogicalAndFilter : Autodesk.Revit.DB.ElementLogicalFilter
 {
+  public LogicalAndFilter() { }
+
   public LogicalAndFilter(System.Collections.Generic.IList<Autodesk.Revit.DB.ElementFilter> filters) =>
     throw new System.NotImplementedException();
 

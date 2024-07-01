@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Electrical;
 
 public partial class AreaBasedLoadData : Autodesk.Revit.DB.Mechanical.ZoneElementDomainData
 {
+  public AreaBasedLoadData() { }
+
   public virtual void AddElectricalLoadArea(Autodesk.Revit.DB.ElementId electricalLoadAreaId) =>
     throw new System.NotImplementedException();
 

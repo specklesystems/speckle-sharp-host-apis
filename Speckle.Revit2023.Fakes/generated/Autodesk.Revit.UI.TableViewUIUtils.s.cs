@@ -2,6 +2,8 @@ namespace Autodesk.Revit.UI;
 
 public partial class TableViewUIUtils
 {
+  public TableViewUIUtils() { }
+
   public static System.Boolean TestCellAndPromptToEditTypeParameter(
     Autodesk.Revit.DB.TableView tableView,
     Autodesk.Revit.DB.SectionType sectionType,

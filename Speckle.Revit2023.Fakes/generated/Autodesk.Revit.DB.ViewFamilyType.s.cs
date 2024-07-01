@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ViewFamilyType : Autodesk.Revit.DB.ElementType
 {
+  public ViewFamilyType() { }
+
   public virtual System.Boolean IsValidDefaultTemplate(Autodesk.Revit.DB.ElementId templateId) =>
     throw new System.NotImplementedException();
 

@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class CurveLoop : System.Collections.Generic.IEnumerable<Autodesk.Revit.DB.Curve>, System.IDisposable
 {
-  public CurveLoop() => throw new System.NotImplementedException();
+  public CurveLoop() { }
 
   public static Autodesk.Revit.DB.CurveLoop Create(System.Collections.Generic.IList<Autodesk.Revit.DB.Curve> curves) =>
     throw new System.NotImplementedException();

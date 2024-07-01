@@ -2,9 +2,9 @@ namespace Autodesk.Revit.DB;
 
 public partial class TableCellStyle : System.IDisposable
 {
-  public TableCellStyle(Autodesk.Revit.DB.TableCellStyle other) => throw new System.NotImplementedException();
+  public TableCellStyle() { }
 
-  public TableCellStyle() => throw new System.NotImplementedException();
+  public TableCellStyle(Autodesk.Revit.DB.TableCellStyle other) => throw new System.NotImplementedException();
 
   public virtual void ResetOverride() => throw new System.NotImplementedException();
 

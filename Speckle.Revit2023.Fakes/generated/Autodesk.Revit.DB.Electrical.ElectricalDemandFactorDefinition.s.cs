@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB.Electrical;
 
 public partial class ElectricalDemandFactorDefinition : Autodesk.Revit.DB.Element
 {
-  public ElectricalDemandFactorDefinition() => throw new System.NotImplementedException();
+  public ElectricalDemandFactorDefinition() { }
 
   public static Autodesk.Revit.DB.Electrical.ElectricalDemandFactorDefinition Create(
     Autodesk.Revit.DB.Document ADoc,

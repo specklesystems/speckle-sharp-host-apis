@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Analysis;
 
 public partial class MassGBXMLExportOptions : System.IDisposable
 {
+  public MassGBXMLExportOptions() { }
+
   public MassGBXMLExportOptions(System.Collections.Generic.IList<Autodesk.Revit.DB.ElementId> massZoneIds) =>
     throw new System.NotImplementedException();
 

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class AnalyticalElement : Autodesk.Revit.DB.Element
 {
+  public AnalyticalElement() { }
+
   public virtual Autodesk.Revit.DB.Transform GetTransform() => throw new System.NotImplementedException();
 
   public virtual System.Boolean IsValidSelector(Autodesk.Revit.DB.Structure.AnalyticalModelSelector selector) =>

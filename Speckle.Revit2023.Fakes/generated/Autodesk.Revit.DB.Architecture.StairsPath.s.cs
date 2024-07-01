@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Architecture;
 
 public partial class StairsPath : Autodesk.Revit.DB.Element
 {
+  public StairsPath() { }
+
   public static Autodesk.Revit.DB.Architecture.StairsPath Create(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.LinkElementId stairsId,

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class RebarShape : Autodesk.Revit.DB.ElementType
 {
+  public RebarShape() { }
+
   public static Autodesk.Revit.DB.Structure.RebarShape Create(
     Autodesk.Revit.DB.Document doc,
     Autodesk.Revit.DB.Structure.RebarShapeDefinition definition,

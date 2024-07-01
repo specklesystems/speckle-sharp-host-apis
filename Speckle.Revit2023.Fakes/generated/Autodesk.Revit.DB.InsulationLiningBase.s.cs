@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class InsulationLiningBase : Autodesk.Revit.DB.MEPCurve
 {
+  public InsulationLiningBase() { }
+
   public static System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> GetInsulationIds(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.ElementId elemId

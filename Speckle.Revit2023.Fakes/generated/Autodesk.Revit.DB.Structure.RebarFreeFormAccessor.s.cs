@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class RebarFreeFormAccessor : System.IDisposable
 {
+  public RebarFreeFormAccessor() { }
+
   public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.Curve> GetCustomDistributionPath() =>
     throw new System.NotImplementedException();
 

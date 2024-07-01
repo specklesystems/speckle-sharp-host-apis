@@ -2,9 +2,9 @@ namespace Autodesk.Revit.DB;
 
 public partial class DoubleParameterValue : Autodesk.Revit.DB.ParameterValue
 {
-  public DoubleParameterValue(System.Double value) => throw new System.NotImplementedException();
+  public DoubleParameterValue() { }
 
-  public DoubleParameterValue() => throw new System.NotImplementedException();
+  public DoubleParameterValue(System.Double value) => throw new System.NotImplementedException();
 
   public virtual System.Double Value
   {

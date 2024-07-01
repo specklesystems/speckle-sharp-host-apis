@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class AdaptiveComponentFamilyUtils
 {
+  public AdaptiveComponentFamilyUtils() { }
+
   public static System.Boolean IsAdaptiveComponentFamily(Autodesk.Revit.DB.Family family) =>
     throw new System.NotImplementedException();
 

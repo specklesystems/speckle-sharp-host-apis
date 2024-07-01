@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ExternalResourceMatchOptions : System.IDisposable
 {
+  public ExternalResourceMatchOptions() { }
+
   public ExternalResourceMatchOptions(Autodesk.Revit.DB.ExternalResourceType resourceType) =>
     throw new System.NotImplementedException();
 

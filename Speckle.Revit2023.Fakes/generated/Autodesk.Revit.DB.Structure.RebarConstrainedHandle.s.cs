@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class RebarConstrainedHandle : System.IDisposable
 {
+  public RebarConstrainedHandle() { }
+
   public virtual Autodesk.Revit.DB.Structure.RebarHandleType GetHandleType() =>
     throw new System.NotImplementedException();
 

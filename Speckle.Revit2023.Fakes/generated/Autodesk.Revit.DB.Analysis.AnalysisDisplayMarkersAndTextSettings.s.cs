@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB.Analysis;
 
 public partial class AnalysisDisplayMarkersAndTextSettings : System.IDisposable
 {
-  public AnalysisDisplayMarkersAndTextSettings() => throw new System.NotImplementedException();
+  public AnalysisDisplayMarkersAndTextSettings() { }
 
   public AnalysisDisplayMarkersAndTextSettings(
     Autodesk.Revit.DB.Analysis.AnalysisDisplayMarkersAndTextSettings other

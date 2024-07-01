@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class EdgeArrayArray : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerable
 {
-  public EdgeArrayArray() => throw new System.NotImplementedException();
+  public EdgeArrayArray() { }
 
   public virtual void Clear() => throw new System.NotImplementedException();
 

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class StructuralInstanceUsageFilter : Autodesk.Revit.DB.ElementSlowFilter
 {
+  public StructuralInstanceUsageFilter() { }
+
   public StructuralInstanceUsageFilter(
     Autodesk.Revit.DB.Structure.StructuralInstanceUsage structuralUsage,
     System.Boolean inverted

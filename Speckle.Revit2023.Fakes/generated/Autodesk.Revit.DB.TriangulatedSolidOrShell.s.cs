@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class TriangulatedSolidOrShell : System.IDisposable
 {
+  public TriangulatedSolidOrShell() { }
+
   public virtual Autodesk.Revit.DB.TriangulatedShellComponent GetShellComponent(System.Int32 componentIndex) =>
     throw new System.NotImplementedException();
 

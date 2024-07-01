@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Mechanical;
 
 public partial class DuctFittingAndAccessoryConnectorData : System.IDisposable
 {
+  public DuctFittingAndAccessoryConnectorData() { }
+
   public virtual Autodesk.Revit.DB.Transform GetCoordination() => throw new System.NotImplementedException();
 
   public virtual void Dispose() => throw new System.NotImplementedException();

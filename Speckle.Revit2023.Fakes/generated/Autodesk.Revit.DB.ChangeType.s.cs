@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ChangeType : System.IDisposable
 {
+  public ChangeType() { }
+
   public static Autodesk.Revit.DB.ChangeType ConcatenateChangeTypes(
     Autodesk.Revit.DB.ChangeType changeType1,
     Autodesk.Revit.DB.ChangeType changeType2

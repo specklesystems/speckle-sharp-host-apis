@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Analysis;
 
 public partial class RouteAnalysisSettings : Autodesk.Revit.DB.Element
 {
+  public RouteAnalysisSettings() { }
+
   public static Autodesk.Revit.DB.Analysis.RouteAnalysisSettings GetRouteAnalysisSettings(
     Autodesk.Revit.DB.Document cda
   ) => throw new System.NotImplementedException();

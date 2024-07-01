@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ElementPhaseStatusFilter : Autodesk.Revit.DB.ElementSlowFilter
 {
+  public ElementPhaseStatusFilter() { }
+
   public ElementPhaseStatusFilter(
     Autodesk.Revit.DB.ElementId phaseId,
     System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementOnPhaseStatus> phaseStatuses,

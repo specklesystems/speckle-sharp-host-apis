@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class SolidOrShellTessellationControls : System.IDisposable
 {
-  public SolidOrShellTessellationControls() => throw new System.NotImplementedException();
+  public SolidOrShellTessellationControls() { }
 
   public virtual System.Boolean UseLevelOfDetail() => throw new System.NotImplementedException();
 

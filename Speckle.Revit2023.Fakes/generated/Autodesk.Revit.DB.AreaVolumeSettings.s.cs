@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class AreaVolumeSettings : Autodesk.Revit.DB.Element
 {
+  public AreaVolumeSettings() { }
+
   public static Autodesk.Revit.DB.AreaVolumeSettings GetAreaVolumeSettings(Autodesk.Revit.DB.Document aDoc) =>
     throw new System.NotImplementedException();
 

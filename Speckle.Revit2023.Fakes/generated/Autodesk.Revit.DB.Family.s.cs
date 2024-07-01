@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class Family : Autodesk.Revit.DB.Element
 {
+  public Family() { }
+
   public virtual void ExtractPartAtom(System.String xmlFilePath) => throw new System.NotImplementedException();
 
   public virtual System.Boolean CanHaveStructuralSection() => throw new System.NotImplementedException();

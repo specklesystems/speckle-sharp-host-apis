@@ -7,7 +7,7 @@ public partial class ExportFontTable
   >>,
     System.IDisposable
 {
-  public ExportFontTable() => throw new System.NotImplementedException();
+  public ExportFontTable() { }
 
   public virtual Autodesk.Revit.DB.ExportFontTableIterator GetFontTableIterator() =>
     throw new System.NotImplementedException();

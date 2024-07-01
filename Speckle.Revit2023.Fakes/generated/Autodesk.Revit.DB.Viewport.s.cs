@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class Viewport : Autodesk.Revit.DB.Element
 {
+  public Viewport() { }
+
   public static Autodesk.Revit.DB.Viewport Create(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.ElementId viewSheetId,

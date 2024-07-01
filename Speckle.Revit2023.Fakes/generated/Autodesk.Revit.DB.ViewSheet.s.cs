@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ViewSheet : Autodesk.Revit.DB.View
 {
+  public ViewSheet() { }
+
   public virtual void ConvertToRealSheet(Autodesk.Revit.DB.ElementId titleBlockTypeId) =>
     throw new System.NotImplementedException();
 

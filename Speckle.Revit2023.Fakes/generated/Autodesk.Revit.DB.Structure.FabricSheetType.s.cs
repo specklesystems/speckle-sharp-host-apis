@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class FabricSheetType : Autodesk.Revit.DB.ElementType
 {
+  public FabricSheetType() { }
+
   public static Autodesk.Revit.DB.ElementId CreateDefaultFabricSheetType(Autodesk.Revit.DB.Document ADoc) =>
     throw new System.NotImplementedException();
 

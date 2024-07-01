@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class Dimension : Autodesk.Revit.DB.Element
 {
+  public Dimension() { }
+
   public virtual void ResetTextPosition() => throw new System.NotImplementedException();
 
   public virtual System.Boolean IsTextPositionAdjustable() => throw new System.NotImplementedException();

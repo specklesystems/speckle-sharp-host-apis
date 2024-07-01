@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Analysis;
 
 public partial class AnalysisResultSchema : System.IDisposable
 {
+  public AnalysisResultSchema() { }
+
   public AnalysisResultSchema(System.String name, System.String description) =>
     throw new System.NotImplementedException();
 

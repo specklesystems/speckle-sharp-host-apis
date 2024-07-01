@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class RebarConstraint : System.IDisposable
 {
+  public RebarConstraint() { }
+
   public virtual Autodesk.Revit.DB.Structure.RebarConstraintType GetConstraintType() =>
     throw new System.NotImplementedException();
 

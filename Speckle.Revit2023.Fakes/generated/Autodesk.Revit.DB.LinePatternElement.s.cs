@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class LinePatternElement : Autodesk.Revit.DB.Element
 {
+  public LinePatternElement() { }
+
   public static Autodesk.Revit.DB.LinePattern GetLinePattern(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.ElementId elementId

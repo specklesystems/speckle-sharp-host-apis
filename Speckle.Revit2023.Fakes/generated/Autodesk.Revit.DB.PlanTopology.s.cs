@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class PlanTopology : Autodesk.Revit.DB.APIObject
 {
+  public PlanTopology() { }
+
   public virtual System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> GetRoomIds() =>
     throw new System.NotImplementedException();
 

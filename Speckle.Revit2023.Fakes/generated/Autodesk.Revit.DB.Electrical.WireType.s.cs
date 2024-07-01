@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Electrical;
 
 public partial class WireType : Autodesk.Revit.DB.ElementType
 {
+  public WireType() { }
+
   public virtual System.Boolean IsInUse
   {
     get => throw new System.NotImplementedException();

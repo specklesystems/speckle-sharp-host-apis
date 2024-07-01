@@ -2,6 +2,8 @@ namespace Autodesk.Revit.UI;
 
 public partial class RibbonPanel
 {
+  public RibbonPanel() { }
+
   public virtual System.Collections.Generic.IList<Autodesk.Revit.UI.RibbonItem> GetItems() =>
     throw new System.NotImplementedException();
 

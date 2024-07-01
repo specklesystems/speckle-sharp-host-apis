@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class FabricationConnectorInfo : System.IDisposable
 {
+  public FabricationConnectorInfo() { }
+
   public virtual System.Boolean IsValid() => throw new System.NotImplementedException();
 
   public virtual System.Boolean HasDoubleWallConnector() => throw new System.NotImplementedException();

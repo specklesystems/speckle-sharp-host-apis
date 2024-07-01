@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.PointClouds;
 
 public partial class PointCloudFilter : System.IDisposable
 {
+  public PointCloudFilter() { }
+
   public virtual System.Boolean TestPoint(Autodesk.Revit.DB.PointClouds.CloudPoint point) =>
     throw new System.NotImplementedException();
 

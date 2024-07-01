@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class RevisionSettings : Autodesk.Revit.DB.Element
 {
+  public RevisionSettings() { }
+
   public static Autodesk.Revit.DB.RevisionSettings GetRevisionSettings(Autodesk.Revit.DB.Document ccda) =>
     throw new System.NotImplementedException();
 

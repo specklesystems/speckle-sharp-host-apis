@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ParameterFilterUtilities
 {
+  public ParameterFilterUtilities() { }
+
   public static System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> GetAllFilterableCategories() =>
     throw new System.NotImplementedException();
 

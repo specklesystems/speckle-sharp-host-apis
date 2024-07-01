@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Mechanical;
 
 public partial class MechanicalEquipmentSet : Autodesk.Revit.DB.Element
 {
+  public MechanicalEquipmentSet() { }
+
   public static Autodesk.Revit.DB.Mechanical.MechanicalEquipmentSet Create(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.ElementId typeId,

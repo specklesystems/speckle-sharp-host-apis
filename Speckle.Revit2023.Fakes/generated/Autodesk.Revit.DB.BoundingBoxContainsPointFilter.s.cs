@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class BoundingBoxContainsPointFilter : Autodesk.Revit.DB.ElementQuickFilter
 {
+  public BoundingBoxContainsPointFilter() { }
+
   public BoundingBoxContainsPointFilter(
     Autodesk.Revit.DB.XYZ point,
     System.Double tolerance,

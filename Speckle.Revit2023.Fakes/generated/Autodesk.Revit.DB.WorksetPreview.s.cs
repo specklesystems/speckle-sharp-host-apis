@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class WorksetPreview : System.IDisposable
 {
+  public WorksetPreview() { }
+
   public virtual void Dispose() => throw new System.NotImplementedException();
 
   public virtual System.Boolean IsValidObject

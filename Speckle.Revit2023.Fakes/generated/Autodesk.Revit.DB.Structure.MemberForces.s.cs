@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class MemberForces : System.IDisposable
 {
+  public MemberForces() { }
+
   public MemberForces(System.Boolean start, Autodesk.Revit.DB.XYZ force, Autodesk.Revit.DB.XYZ moment) =>
     throw new System.NotImplementedException();
 

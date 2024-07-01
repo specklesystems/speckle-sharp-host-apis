@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ConicalSurface : Autodesk.Revit.DB.Surface
 {
+  public ConicalSurface() { }
+
   public static Autodesk.Revit.DB.ConicalSurface Create(
     Autodesk.Revit.DB.Frame frameOfReference,
     System.Double halfAngle

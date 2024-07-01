@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Analysis;
 
 public partial class EnergyAnalysisDetailModel : Autodesk.Revit.DB.Element
 {
+  public EnergyAnalysisDetailModel() { }
+
   public static Autodesk.Revit.DB.Analysis.EnergyAnalysisDetailModel Create(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.Analysis.EnergyAnalysisDetailModelOptions options

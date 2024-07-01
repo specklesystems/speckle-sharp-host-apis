@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ExternalResourceServerExtensions : System.IDisposable
 {
+  public ExternalResourceServerExtensions() { }
+
   public virtual Autodesk.Revit.DB.RevitLinkOperations GetRevitLinkOperations() =>
     throw new System.NotImplementedException();
 

@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class ConnectionValidationInfo : System.IDisposable
 {
-  public ConnectionValidationInfo() => throw new System.NotImplementedException();
+  public ConnectionValidationInfo() { }
 
   public virtual System.Int32 ManyWarnings() => throw new System.NotImplementedException();
 

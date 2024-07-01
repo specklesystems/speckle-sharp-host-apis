@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class GroupTypeId
 {
+  public GroupTypeId() { }
+
   public static Autodesk.Revit.DB.ForgeTypeId LifeSafety
   {
     get => throw new System.NotImplementedException();

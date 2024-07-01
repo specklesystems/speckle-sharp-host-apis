@@ -2,6 +2,8 @@ namespace Autodesk.Revit.UI;
 
 public partial class PushButton : Autodesk.Revit.UI.RibbonButton
 {
+  public PushButton() { }
+
   public virtual System.String AvailabilityClassName
   {
     get => throw new System.NotImplementedException();

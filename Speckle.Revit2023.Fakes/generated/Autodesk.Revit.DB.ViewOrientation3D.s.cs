@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ViewOrientation3D : System.IDisposable
 {
+  public ViewOrientation3D() { }
+
   public ViewOrientation3D(
     Autodesk.Revit.DB.XYZ eyePosition,
     Autodesk.Revit.DB.XYZ upDirection,

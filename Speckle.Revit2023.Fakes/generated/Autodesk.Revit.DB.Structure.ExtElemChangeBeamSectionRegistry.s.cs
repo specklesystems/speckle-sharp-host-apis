@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class ExtElemChangeBeamSectionRegistry : System.IDisposable
 {
+  public ExtElemChangeBeamSectionRegistry() { }
+
   public static void RegisterInterface(Autodesk.Revit.DB.Structure.IExtElemChangeBeamSection provider) =>
     throw new System.NotImplementedException();
 

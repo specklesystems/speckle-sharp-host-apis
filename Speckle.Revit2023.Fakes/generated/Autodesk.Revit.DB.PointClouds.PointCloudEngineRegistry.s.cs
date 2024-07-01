@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.PointClouds;
 
 public partial class PointCloudEngineRegistry
 {
+  public PointCloudEngineRegistry() { }
+
   public static void RegisterPointCloudEngine(
     System.String identifier,
     Autodesk.Revit.DB.PointClouds.IPointCloudEngine engine,

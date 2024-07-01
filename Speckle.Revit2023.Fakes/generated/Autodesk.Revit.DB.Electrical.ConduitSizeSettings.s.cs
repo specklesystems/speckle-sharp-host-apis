@@ -7,6 +7,8 @@ public partial class ConduitSizeSettings
       Autodesk.Revit.DB.Electrical.ConduitSizes
     >>
 {
+  public ConduitSizeSettings() { }
+
   public static Autodesk.Revit.DB.Electrical.ConduitSizeSettings GetConduitSizeSettings(
     Autodesk.Revit.DB.Document aDoc
   ) => throw new System.NotImplementedException();

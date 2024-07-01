@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class PartUtils
 {
+  public PartUtils() { }
+
   public static void CreateParts(
     Autodesk.Revit.DB.Document document,
     System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> elementIds

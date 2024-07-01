@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class SpatialElementTag : Autodesk.Revit.DB.Element
 {
+  public SpatialElementTag() { }
+
   public virtual Autodesk.Revit.DB.View View
   {
     get => throw new System.NotImplementedException();

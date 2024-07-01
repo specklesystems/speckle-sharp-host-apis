@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ColorOptions : System.IDisposable
 {
+  public ColorOptions() { }
+
   public static Autodesk.Revit.DB.ColorOptions GetColorOptions() => throw new System.NotImplementedException();
 
   public virtual void Dispose() => throw new System.NotImplementedException();

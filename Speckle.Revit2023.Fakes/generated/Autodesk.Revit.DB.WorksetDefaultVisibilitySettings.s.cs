@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class WorksetDefaultVisibilitySettings : Autodesk.Revit.DB.Element
 {
+  public WorksetDefaultVisibilitySettings() { }
+
   public virtual System.Boolean IsWorksetVisible(Autodesk.Revit.DB.WorksetId worksetId) =>
     throw new System.NotImplementedException();
 

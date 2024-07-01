@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class SlabShapeVertexArray : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerable
 {
-  public SlabShapeVertexArray() => throw new System.NotImplementedException();
+  public SlabShapeVertexArray() { }
 
   public virtual void Clear() => throw new System.NotImplementedException();
 

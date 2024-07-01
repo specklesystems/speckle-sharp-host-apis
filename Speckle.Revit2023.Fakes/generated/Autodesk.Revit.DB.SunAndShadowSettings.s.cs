@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class SunAndShadowSettings : Autodesk.Revit.DB.Element
 {
+  public SunAndShadowSettings() { }
+
   public virtual System.String GetMatchingPreset() => throw new System.NotImplementedException();
 
   public virtual System.DateTime GetFrameTime(System.Double frame) => throw new System.NotImplementedException();

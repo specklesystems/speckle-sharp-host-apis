@@ -2,6 +2,8 @@ namespace Autodesk.Revit.UI;
 
 public partial class DockablePane : System.IDisposable
 {
+  public DockablePane() { }
+
   public DockablePane(Autodesk.Revit.UI.DockablePane other) => throw new System.NotImplementedException();
 
   public DockablePane(Autodesk.Revit.UI.DockablePaneId id) => throw new System.NotImplementedException();

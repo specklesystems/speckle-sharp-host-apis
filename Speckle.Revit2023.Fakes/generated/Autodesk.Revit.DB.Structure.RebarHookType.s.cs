@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class RebarHookType : Autodesk.Revit.DB.ElementType
 {
+  public RebarHookType() { }
+
   public static Autodesk.Revit.DB.Structure.RebarHookType Create(
     Autodesk.Revit.DB.Document doc,
     System.Double angle,

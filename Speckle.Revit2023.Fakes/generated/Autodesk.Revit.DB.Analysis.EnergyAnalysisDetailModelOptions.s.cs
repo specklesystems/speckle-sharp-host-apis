@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB.Analysis;
 
 public partial class EnergyAnalysisDetailModelOptions : System.IDisposable
 {
-  public EnergyAnalysisDetailModelOptions() => throw new System.NotImplementedException();
+  public EnergyAnalysisDetailModelOptions() { }
 
   public virtual void Dispose() => throw new System.NotImplementedException();
 

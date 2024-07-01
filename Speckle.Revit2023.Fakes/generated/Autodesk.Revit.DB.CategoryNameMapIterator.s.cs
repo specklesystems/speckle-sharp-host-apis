@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class CategoryNameMapIterator : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerator
 {
-  public CategoryNameMapIterator() => throw new System.NotImplementedException();
+  public CategoryNameMapIterator() { }
 
   public virtual System.Boolean MoveNext() => throw new System.NotImplementedException();
 

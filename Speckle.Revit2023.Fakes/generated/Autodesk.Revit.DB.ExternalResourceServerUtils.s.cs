@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ExternalResourceServerUtils
 {
+  public ExternalResourceServerUtils() { }
+
   public static System.Boolean IsValidShortName(System.Guid serverId, System.String serverName) =>
     throw new System.NotImplementedException();
 

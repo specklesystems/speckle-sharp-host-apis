@@ -2,10 +2,10 @@ namespace Autodesk.Revit.DB;
 
 public partial class LinePatternSegment : System.IDisposable
 {
+  public LinePatternSegment() { }
+
   public LinePatternSegment(Autodesk.Revit.DB.LinePatternSegmentType type, System.Double length) =>
     throw new System.NotImplementedException();
-
-  public LinePatternSegment() => throw new System.NotImplementedException();
 
   public virtual void Dispose() => throw new System.NotImplementedException();
 

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ColumnAttachment : System.IDisposable
 {
+  public ColumnAttachment() { }
+
   public static System.Boolean IsValidColumn(Autodesk.Revit.DB.FamilyInstance familyInstance) =>
     throw new System.NotImplementedException();
 

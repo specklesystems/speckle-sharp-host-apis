@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class FabricationHostedInfo : System.IDisposable
 {
+  public FabricationHostedInfo() { }
+
   public virtual void PlaceOnHost(
     Autodesk.Revit.DB.ElementId hostId,
     Autodesk.Revit.DB.Connector hostConnector,

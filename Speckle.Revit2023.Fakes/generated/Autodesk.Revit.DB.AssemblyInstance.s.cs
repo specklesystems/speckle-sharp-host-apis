@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class AssemblyInstance : Autodesk.Revit.DB.Element
 {
+  public AssemblyInstance() { }
+
   public static Autodesk.Revit.DB.AssemblyInstance Create(
     Autodesk.Revit.DB.Document document,
     System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> assemblyMemberIds,

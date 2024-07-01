@@ -7,6 +7,8 @@ public partial class DuctSizeSettings
       Autodesk.Revit.DB.Mechanical.DuctSizes
     >>
 {
+  public DuctSizeSettings() { }
+
   public virtual Autodesk.Revit.DB.Mechanical.DuctSizeSettingIterator GetDuctSizeSettingIterator() =>
     throw new System.NotImplementedException();
 

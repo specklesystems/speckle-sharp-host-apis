@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Electrical;
 
 public partial class CableTrayType : Autodesk.Revit.DB.MEPCurveType
 {
+  public CableTrayType() { }
+
   public virtual System.Boolean IsValidBendMultiplier(System.Double bendMultiplier) =>
     throw new System.NotImplementedException();
 

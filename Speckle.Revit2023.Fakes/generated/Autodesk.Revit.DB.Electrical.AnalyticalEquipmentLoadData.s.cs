@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Electrical;
 
 public partial class AnalyticalEquipmentLoadData : Autodesk.Revit.DB.Electrical.AnalyticalDistributionNodePropertyData
 {
+  public AnalyticalEquipmentLoadData() { }
+
   public virtual Autodesk.Revit.DB.Electrical.ElectricalLoadType LoadType
   {
     get => throw new System.NotImplementedException();

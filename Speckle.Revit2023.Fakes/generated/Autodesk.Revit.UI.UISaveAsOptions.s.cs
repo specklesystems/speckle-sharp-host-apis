@@ -2,7 +2,7 @@ namespace Autodesk.Revit.UI;
 
 public partial class UISaveAsOptions : System.IDisposable
 {
-  public UISaveAsOptions() => throw new System.NotImplementedException();
+  public UISaveAsOptions() { }
 
   public virtual void Dispose() => throw new System.NotImplementedException();
 

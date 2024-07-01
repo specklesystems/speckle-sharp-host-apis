@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ParameterTypeId
 {
+  public ParameterTypeId() { }
+
   public static Autodesk.Revit.DB.ForgeTypeId ToposolidElevationAtTop
   {
     get => throw new System.NotImplementedException();

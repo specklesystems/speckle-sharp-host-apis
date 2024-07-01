@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Electrical;
 
 public partial class PanelScheduleData : Autodesk.Revit.DB.TableData
 {
+  public PanelScheduleData() { }
+
   public virtual System.Boolean IsSymmetric() => throw new System.NotImplementedException();
 
   public virtual void UpdateIsSectionHidden(Autodesk.Revit.DB.SectionType sectionType, System.Boolean bHide) =>

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class FabricationServiceButton : System.IDisposable
 {
+  public FabricationServiceButton() { }
+
   public static System.Boolean IsValidConditionIndex(
     Autodesk.Revit.DB.FabricationServiceButton button,
     System.Int32 condition

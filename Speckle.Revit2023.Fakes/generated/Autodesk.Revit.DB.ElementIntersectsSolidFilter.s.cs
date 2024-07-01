@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ElementIntersectsSolidFilter : Autodesk.Revit.DB.ElementIntersectsFilter
 {
+  public ElementIntersectsSolidFilter() { }
+
   public ElementIntersectsSolidFilter(Autodesk.Revit.DB.Solid solid, System.Boolean inverted) =>
     throw new System.NotImplementedException();
 

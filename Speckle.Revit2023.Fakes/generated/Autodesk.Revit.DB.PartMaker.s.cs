@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class PartMaker : Autodesk.Revit.DB.Element
 {
+  public PartMaker() { }
+
   public virtual System.Boolean IsSourceElement(Autodesk.Revit.DB.ElementId elemId) =>
     throw new System.NotImplementedException();
 

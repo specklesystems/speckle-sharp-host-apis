@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class DisplacementElement : Autodesk.Revit.DB.Element
 {
+  public DisplacementElement() { }
+
   public static Autodesk.Revit.DB.DisplacementElement Create(
     Autodesk.Revit.DB.Document document,
     System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> elementsToDisplace,

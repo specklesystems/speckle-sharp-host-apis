@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Electrical;
 
 public partial class AnalyticalDistributionNodePropertyData : System.IDisposable
 {
+  public AnalyticalDistributionNodePropertyData() { }
+
   public virtual void Dispose() => throw new System.NotImplementedException();
 
   public virtual System.Boolean IsValidObject

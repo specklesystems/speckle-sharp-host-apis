@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class PathReinforcement : Autodesk.Revit.DB.Element
 {
+  public PathReinforcement() { }
+
   public static Autodesk.Revit.DB.Structure.PathReinforcement Create(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.Element hostElement,

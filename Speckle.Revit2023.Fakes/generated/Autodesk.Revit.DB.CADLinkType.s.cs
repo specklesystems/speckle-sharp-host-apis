@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class CADLinkType : Autodesk.Revit.DB.ElementType
 {
+  public CADLinkType() { }
+
   public virtual Autodesk.Revit.DB.LinkLoadResult Reload(Autodesk.Revit.DB.CADLinkOptions options) =>
     throw new System.NotImplementedException();
 

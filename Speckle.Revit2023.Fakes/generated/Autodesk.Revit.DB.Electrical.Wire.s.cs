@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Electrical;
 
 public partial class Wire : Autodesk.Revit.DB.MEPCurve
 {
+  public Wire() { }
+
   public static Autodesk.Revit.DB.Electrical.Wire Create(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.ElementId wireTypeId,

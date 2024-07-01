@@ -2,9 +2,9 @@ namespace Autodesk.Revit.DB;
 
 public partial class LinkLoadResult : System.IDisposable
 {
-  public LinkLoadResult(Autodesk.Revit.DB.LinkLoadResult other) => throw new System.NotImplementedException();
+  public LinkLoadResult() { }
 
-  public LinkLoadResult() => throw new System.NotImplementedException();
+  public LinkLoadResult(Autodesk.Revit.DB.LinkLoadResult other) => throw new System.NotImplementedException();
 
   public virtual Autodesk.Revit.DB.ModelPath GetModelName() => throw new System.NotImplementedException();
 

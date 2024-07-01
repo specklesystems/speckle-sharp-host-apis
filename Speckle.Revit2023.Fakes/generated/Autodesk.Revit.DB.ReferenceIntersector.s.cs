@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ReferenceIntersector : System.IDisposable
 {
+  public ReferenceIntersector() { }
+
   public ReferenceIntersector(
     Autodesk.Revit.DB.ElementFilter filter,
     Autodesk.Revit.DB.FindReferenceTarget targetType,

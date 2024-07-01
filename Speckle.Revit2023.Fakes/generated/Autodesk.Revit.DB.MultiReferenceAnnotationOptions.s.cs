@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class MultiReferenceAnnotationOptions : System.IDisposable
 {
+  public MultiReferenceAnnotationOptions() { }
+
   public MultiReferenceAnnotationOptions(Autodesk.Revit.DB.MultiReferenceAnnotationType multiReferenceAnnotationType) =>
     throw new System.NotImplementedException();
 

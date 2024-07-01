@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class LoadedFamilyIntegrityCheck
 {
+  public LoadedFamilyIntegrityCheck() { }
+
   public static System.Boolean CheckAllFamilies(
     Autodesk.Revit.DB.Document ADoc,
     System.Collections.Generic.ISet<Autodesk.Revit.DB.ElementId> corruptFamilyIds

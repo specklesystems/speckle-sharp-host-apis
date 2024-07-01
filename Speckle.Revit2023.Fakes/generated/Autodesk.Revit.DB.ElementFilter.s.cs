@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ElementFilter : System.IDisposable
 {
+  public ElementFilter() { }
+
   public virtual System.Boolean PassesFilter(Autodesk.Revit.DB.Document document, Autodesk.Revit.DB.ElementId id) =>
     throw new System.NotImplementedException();
 

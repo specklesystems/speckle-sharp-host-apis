@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class FabricWireItem : System.IDisposable
 {
+  public FabricWireItem() { }
+
   public static Autodesk.Revit.DB.Structure.FabricWireItem Create(
     System.Double distance,
     System.Double wireLength,

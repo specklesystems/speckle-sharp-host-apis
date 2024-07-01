@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Architecture;
 
 public partial class StairsType : Autodesk.Revit.DB.ElementType
 {
+  public StairsType() { }
+
   public virtual System.Boolean HasMiddleSupports
   {
     get => throw new System.NotImplementedException();

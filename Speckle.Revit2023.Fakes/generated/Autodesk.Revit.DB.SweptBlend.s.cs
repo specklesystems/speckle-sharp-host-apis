@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class SweptBlend : Autodesk.Revit.DB.GenericForm
 {
+  public SweptBlend() { }
+
   public virtual Autodesk.Revit.DB.VertexIndexPairArray GetVertexConnectionMap() =>
     throw new System.NotImplementedException();
 

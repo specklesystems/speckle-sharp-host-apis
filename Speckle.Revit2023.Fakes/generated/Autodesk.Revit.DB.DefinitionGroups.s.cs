@@ -4,6 +4,8 @@ public partial class DefinitionGroups
   : System.Collections.Generic.IEnumerable<Autodesk.Revit.DB.DefinitionGroup>,
     System.IDisposable
 {
+  public DefinitionGroups() { }
+
   public virtual Autodesk.Revit.DB.DefinitionGroup get_Item(System.String groupName) =>
     throw new System.NotImplementedException();
 

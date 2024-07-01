@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class SharedParameterElement : Autodesk.Revit.DB.ParameterElement
 {
+  public SharedParameterElement() { }
+
   public static Autodesk.Revit.DB.SharedParameterElement Create(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.ExternalDefinition sharedParameterDefinition

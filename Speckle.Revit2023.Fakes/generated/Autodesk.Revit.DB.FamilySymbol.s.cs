@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class FamilySymbol : Autodesk.Revit.DB.InsertableObject
 {
+  public FamilySymbol() { }
+
   public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.FamilyPointLocation> GetFamilyPointLocations() =>
     throw new System.NotImplementedException();
 

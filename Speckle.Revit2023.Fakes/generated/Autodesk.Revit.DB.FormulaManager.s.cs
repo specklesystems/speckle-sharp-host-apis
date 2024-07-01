@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class FormulaManager : System.IDisposable
 {
+  public FormulaManager() { }
+
   public static System.String Evaluate(
     Autodesk.Revit.DB.ElementId parameterId,
     Autodesk.Revit.DB.Document document,

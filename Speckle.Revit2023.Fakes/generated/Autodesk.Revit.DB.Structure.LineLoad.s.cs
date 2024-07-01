@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class LineLoad : Autodesk.Revit.DB.Structure.LoadBase
 {
+  public LineLoad() { }
+
   public static Autodesk.Revit.DB.Structure.LineLoad Create(
     Autodesk.Revit.DB.Document aDoc,
     Autodesk.Revit.DB.XYZ startPoint,

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class RevitLinkOptions : System.IDisposable
 {
+  public RevitLinkOptions() { }
+
   public RevitLinkOptions(System.Boolean relative) => throw new System.NotImplementedException();
 
   public RevitLinkOptions(System.Boolean relative, Autodesk.Revit.DB.WorksetConfiguration config) =>

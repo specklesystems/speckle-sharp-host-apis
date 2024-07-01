@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class RebarCoupler : Autodesk.Revit.DB.Element
 {
+  public RebarCoupler() { }
+
   public virtual System.Boolean CouplerLinkTwoBars() => throw new System.NotImplementedException();
 
   public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.Structure.ReinforcementData> GetCoupledReinforcementData() =>

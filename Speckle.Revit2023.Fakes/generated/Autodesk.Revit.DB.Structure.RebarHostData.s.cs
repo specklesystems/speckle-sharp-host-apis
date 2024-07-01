@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class RebarHostData : System.IDisposable
 {
+  public RebarHostData() { }
+
   public static Autodesk.Revit.DB.Structure.RebarHostData GetRebarHostData(Autodesk.Revit.DB.Element host) =>
     throw new System.NotImplementedException();
 

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class CurveLoopIterator : System.Collections.Generic.IEnumerator<Autodesk.Revit.DB.Curve>
 {
+  public CurveLoopIterator() { }
+
   public virtual System.Boolean MoveNext() => throw new System.NotImplementedException();
 
   public virtual void Reset() => throw new System.NotImplementedException();

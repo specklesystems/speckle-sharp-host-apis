@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class FailureDefinitionRegistry : System.IDisposable
 {
+  public FailureDefinitionRegistry() { }
+
   public virtual Autodesk.Revit.DB.FailureDefinitionAccessor FindFailureDefinition(
     Autodesk.Revit.DB.FailureDefinitionId id
   ) => throw new System.NotImplementedException();

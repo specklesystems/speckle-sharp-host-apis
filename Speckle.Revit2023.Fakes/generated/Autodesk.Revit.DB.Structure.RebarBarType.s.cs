@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class RebarBarType : Autodesk.Revit.DB.ElementType
 {
+  public RebarBarType() { }
+
   public virtual void SetBarTypeDiameters(Autodesk.Revit.DB.BarTypeDiameterOptions diametersOptions) =>
     throw new System.NotImplementedException();
 

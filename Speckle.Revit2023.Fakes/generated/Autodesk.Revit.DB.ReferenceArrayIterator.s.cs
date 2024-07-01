@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class ReferenceArrayIterator : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerator
 {
-  public ReferenceArrayIterator() => throw new System.NotImplementedException();
+  public ReferenceArrayIterator() { }
 
   public virtual System.Boolean MoveNext() => throw new System.NotImplementedException();
 

@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class CurtainGridSet : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerable
 {
-  public CurtainGridSet() => throw new System.NotImplementedException();
+  public CurtainGridSet() { }
 
   public virtual void Clear() => throw new System.NotImplementedException();
 

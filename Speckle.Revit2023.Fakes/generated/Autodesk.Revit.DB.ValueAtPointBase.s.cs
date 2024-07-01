@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ValueAtPointBase : System.IDisposable
 {
+  public ValueAtPointBase() { }
+
   public virtual void SetFlags(System.Int32 flags, System.Int32 measurement) =>
     throw new System.NotImplementedException();
 

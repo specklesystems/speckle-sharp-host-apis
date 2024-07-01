@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class TableData : System.IDisposable
 {
+  public TableData() { }
+
   public virtual System.Boolean IsEqual(Autodesk.Revit.DB.TableData OtherElem) =>
     throw new System.NotImplementedException();
 

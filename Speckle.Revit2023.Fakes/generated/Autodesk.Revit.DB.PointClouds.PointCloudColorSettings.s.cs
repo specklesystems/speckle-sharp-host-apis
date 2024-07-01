@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.PointClouds;
 
 public partial class PointCloudColorSettings : System.IDisposable
 {
+  public PointCloudColorSettings() { }
+
   public PointCloudColorSettings(Autodesk.Revit.DB.PointClouds.PointCloudColorSettings other) =>
     throw new System.NotImplementedException();
 
@@ -10,8 +12,6 @@ public partial class PointCloudColorSettings : System.IDisposable
 
   public PointCloudColorSettings(Autodesk.Revit.DB.PointCloudColorMode mode) =>
     throw new System.NotImplementedException();
-
-  public PointCloudColorSettings() => throw new System.NotImplementedException();
 
   public virtual void Assign(Autodesk.Revit.DB.PointClouds.PointCloudColorSettings other) =>
     throw new System.NotImplementedException();

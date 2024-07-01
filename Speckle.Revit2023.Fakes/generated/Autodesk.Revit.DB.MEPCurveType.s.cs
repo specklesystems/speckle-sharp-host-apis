@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class MEPCurveType : Autodesk.Revit.DB.HostObjAttributes
 {
+  public MEPCurveType() { }
+
   public virtual Autodesk.Revit.DB.ConnectorProfileType Shape
   {
     get => throw new System.NotImplementedException();

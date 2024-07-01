@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class StructuralConnectionHandlerType : Autodesk.Revit.DB.ElementType
 {
+  public StructuralConnectionHandlerType() { }
+
   public virtual System.Boolean IsCustom() => throw new System.NotImplementedException();
 
   public virtual System.Boolean IsGeneric() => throw new System.NotImplementedException();

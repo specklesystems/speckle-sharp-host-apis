@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class FamilyTypeSetIterator : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerator
 {
-  public FamilyTypeSetIterator() => throw new System.NotImplementedException();
+  public FamilyTypeSetIterator() { }
 
   public virtual System.Boolean MoveNext() => throw new System.NotImplementedException();
 

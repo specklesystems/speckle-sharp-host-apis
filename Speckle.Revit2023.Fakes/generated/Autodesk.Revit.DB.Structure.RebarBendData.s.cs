@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class RebarBendData : System.IDisposable
 {
+  public RebarBendData() { }
+
   public RebarBendData(
     Autodesk.Revit.DB.Structure.RebarBarType barType,
     Autodesk.Revit.DB.Structure.RebarHookType hookType0,
@@ -10,8 +12,6 @@ public partial class RebarBendData : System.IDisposable
     Autodesk.Revit.DB.Structure.RebarHookOrientation hookOrient0,
     Autodesk.Revit.DB.Structure.RebarHookOrientation hookOrient1
   ) => throw new System.NotImplementedException();
-
-  public RebarBendData() => throw new System.NotImplementedException();
 
   public virtual void Dispose() => throw new System.NotImplementedException();
 

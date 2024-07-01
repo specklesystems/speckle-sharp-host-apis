@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class RenderingQualitySettings : System.IDisposable
 {
+  public RenderingQualitySettings() { }
+
   public virtual System.Boolean IsValidRenderLevel(System.Int32 value) => throw new System.NotImplementedException();
 
   public virtual System.Boolean IsValidRenderTime(System.Int32 value) => throw new System.NotImplementedException();

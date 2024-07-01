@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class LoadComponent : System.IDisposable
 {
+  public LoadComponent() { }
+
   public LoadComponent(Autodesk.Revit.DB.ElementId loadCaseOrCombinationId, System.Double factor) =>
     throw new System.NotImplementedException();
 

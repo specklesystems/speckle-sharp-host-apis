@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Electrical;
 
 public partial class ElectricalEquipment : Autodesk.Revit.DB.MEPModel
 {
+  public ElectricalEquipment() { }
+
   public virtual System.Boolean IsValidDistributionSystem(
     Autodesk.Revit.DB.Electrical.DistributionSysType distributionSystem
   ) => throw new System.NotImplementedException();

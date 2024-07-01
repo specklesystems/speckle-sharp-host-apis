@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class SlabShapeCreaseArrayIterator : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerator
 {
-  public SlabShapeCreaseArrayIterator() => throw new System.NotImplementedException();
+  public SlabShapeCreaseArrayIterator() { }
 
   public virtual System.Boolean MoveNext() => throw new System.NotImplementedException();
 

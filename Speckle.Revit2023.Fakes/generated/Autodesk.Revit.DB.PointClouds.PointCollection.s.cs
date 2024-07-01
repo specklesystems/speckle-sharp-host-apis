@@ -4,6 +4,8 @@ public partial class PointCollection
   : System.Collections.Generic.IEnumerable<Autodesk.Revit.DB.PointClouds.CloudPoint>,
     System.IDisposable
 {
+  public PointCollection() { }
+
   public virtual Autodesk.Revit.DB.PointClouds.PointIterator GetPointIterator() =>
     throw new System.NotImplementedException();
 

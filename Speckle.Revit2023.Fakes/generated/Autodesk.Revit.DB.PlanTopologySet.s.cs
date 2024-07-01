@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class PlanTopologySet : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerable
 {
-  public PlanTopologySet() => throw new System.NotImplementedException();
+  public PlanTopologySet() { }
 
   public virtual void Clear() => throw new System.NotImplementedException();
 

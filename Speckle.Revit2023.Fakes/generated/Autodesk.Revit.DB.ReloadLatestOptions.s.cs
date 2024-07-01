@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class ReloadLatestOptions : System.IDisposable
 {
-  public ReloadLatestOptions() => throw new System.NotImplementedException();
+  public ReloadLatestOptions() { }
 
   public virtual void Dispose() => throw new System.NotImplementedException();
 

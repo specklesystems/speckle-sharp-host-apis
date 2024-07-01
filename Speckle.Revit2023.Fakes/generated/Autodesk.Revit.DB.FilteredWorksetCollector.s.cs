@@ -4,6 +4,8 @@ public partial class FilteredWorksetCollector
   : System.Collections.Generic.IEnumerable<Autodesk.Revit.DB.Workset>,
     System.IDisposable
 {
+  public FilteredWorksetCollector() { }
+
   public FilteredWorksetCollector(Autodesk.Revit.DB.Document document) => throw new System.NotImplementedException();
 
   public virtual Autodesk.Revit.DB.FilteredWorksetIdIterator GetWorksetIdIterator() =>

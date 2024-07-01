@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ProjectInfo : Autodesk.Revit.DB.Element
 {
+  public ProjectInfo() { }
+
   public virtual System.String OrganizationDescription
   {
     get => throw new System.NotImplementedException();

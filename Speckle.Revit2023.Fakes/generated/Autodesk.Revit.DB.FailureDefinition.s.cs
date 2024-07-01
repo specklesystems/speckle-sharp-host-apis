@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class FailureDefinition : System.IDisposable
 {
+  public FailureDefinition() { }
+
   public static Autodesk.Revit.DB.FailureDefinition CreateFailureDefinition(
     Autodesk.Revit.DB.FailureDefinitionId id,
     Autodesk.Revit.DB.FailureSeverity severity,

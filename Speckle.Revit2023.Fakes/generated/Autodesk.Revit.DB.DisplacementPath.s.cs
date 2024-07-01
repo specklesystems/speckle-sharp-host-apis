@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class DisplacementPath : Autodesk.Revit.DB.Element
 {
+  public DisplacementPath() { }
+
   public static Autodesk.Revit.DB.ElementId Create(
     Autodesk.Revit.DB.Document aDoc,
     Autodesk.Revit.DB.DisplacementElement displacementElement,

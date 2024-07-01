@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.ExternalService;
 
 public partial class MultiServerService : Autodesk.Revit.DB.ExternalService.ExternalService
 {
+  public MultiServerService() { }
+
   public virtual System.Collections.Generic.IList<System.Guid> GetActiveServerIds(
     Autodesk.Revit.DB.Document document
   ) => throw new System.NotImplementedException();

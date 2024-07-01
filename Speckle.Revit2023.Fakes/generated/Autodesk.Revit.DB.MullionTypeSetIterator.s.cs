@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class MullionTypeSetIterator : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerator
 {
-  public MullionTypeSetIterator() => throw new System.NotImplementedException();
+  public MullionTypeSetIterator() { }
 
   public virtual System.Boolean MoveNext() => throw new System.NotImplementedException();
 

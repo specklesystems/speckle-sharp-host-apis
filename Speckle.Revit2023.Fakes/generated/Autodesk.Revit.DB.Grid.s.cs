@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class Grid : Autodesk.Revit.DB.DatumPlane
 {
+  public Grid() { }
+
   public static Autodesk.Revit.DB.Grid Create(Autodesk.Revit.DB.Document document, Autodesk.Revit.DB.Arc arc) =>
     throw new System.NotImplementedException();
 

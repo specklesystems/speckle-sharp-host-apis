@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Analysis;
 
 public partial class PathOfTravel : Autodesk.Revit.DB.Element
 {
+  public PathOfTravel() { }
+
   public static Autodesk.Revit.DB.Analysis.PathOfTravel Create(
     Autodesk.Revit.DB.View DBView,
     Autodesk.Revit.DB.XYZ pathStart,

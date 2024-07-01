@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class InCanvasControlData : System.IDisposable
 {
+  public InCanvasControlData() { }
+
   public InCanvasControlData(System.String imagePath, Autodesk.Revit.DB.XYZ position) =>
     throw new System.NotImplementedException();
 

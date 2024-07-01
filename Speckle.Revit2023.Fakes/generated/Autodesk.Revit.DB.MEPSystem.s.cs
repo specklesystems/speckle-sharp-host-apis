@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class MEPSystem : Autodesk.Revit.DB.Element
 {
+  public MEPSystem() { }
+
   public virtual void Add(Autodesk.Revit.DB.ConnectorSet connectors) => throw new System.NotImplementedException();
 
   public virtual void Remove(System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> elementIds) =>

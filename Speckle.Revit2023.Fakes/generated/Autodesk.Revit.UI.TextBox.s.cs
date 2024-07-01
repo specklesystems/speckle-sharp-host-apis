@@ -2,6 +2,8 @@ namespace Autodesk.Revit.UI;
 
 public partial class TextBox : Autodesk.Revit.UI.RibbonItem
 {
+  public TextBox() { }
+
   public virtual System.Double Width
   {
     get => throw new System.NotImplementedException();

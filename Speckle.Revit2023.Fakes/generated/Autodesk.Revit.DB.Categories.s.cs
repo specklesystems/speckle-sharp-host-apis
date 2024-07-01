@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class Categories : Autodesk.Revit.DB.CategoryNameMap
 {
+  public Categories() { }
+
   public virtual Autodesk.Revit.DB.Category get_Item(Autodesk.Revit.DB.BuiltInCategory categoryId) =>
     throw new System.NotImplementedException();
 

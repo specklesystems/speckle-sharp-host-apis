@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class RebarPropagation
 {
+  public RebarPropagation() { }
+
   public static System.Collections.Generic.ISet<Autodesk.Revit.DB.ElementId> AlignByHost(
     Autodesk.Revit.DB.Document doc,
     System.Collections.Generic.IList<Autodesk.Revit.DB.Structure.Rebar> sourceRebars,

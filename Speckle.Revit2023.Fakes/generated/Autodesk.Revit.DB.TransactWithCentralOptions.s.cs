@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class TransactWithCentralOptions : System.IDisposable
 {
-  public TransactWithCentralOptions() => throw new System.NotImplementedException();
+  public TransactWithCentralOptions() { }
 
   public virtual void SetLockCallback(Autodesk.Revit.DB.ICentralLockedCallback lockCallback) =>
     throw new System.NotImplementedException();

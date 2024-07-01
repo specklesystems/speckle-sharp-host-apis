@@ -1,3 +1,6 @@
 namespace Autodesk.Revit.DB.Mechanical;
 
-public partial class SpaceTagType : Autodesk.Revit.DB.FamilySymbol { }
+public partial class SpaceTagType : Autodesk.Revit.DB.FamilySymbol
+{
+  public SpaceTagType() { }
+}

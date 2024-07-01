@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Electrical;
 
 public partial class CableTray : Autodesk.Revit.DB.Electrical.CableTrayConduitBase
 {
+  public CableTray() { }
+
   public static Autodesk.Revit.DB.Electrical.CableTray Create(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.ElementId cabletrayType,

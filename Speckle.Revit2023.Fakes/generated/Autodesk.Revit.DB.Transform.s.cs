@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class Transform : Autodesk.Revit.DB.APIObject
 {
+  public Transform() { }
+
   public Transform(Autodesk.Revit.DB.Transform source) => throw new System.NotImplementedException();
 
   public virtual Autodesk.Revit.DB.XYZ get_Basis(System.Int32 idx) => throw new System.NotImplementedException();

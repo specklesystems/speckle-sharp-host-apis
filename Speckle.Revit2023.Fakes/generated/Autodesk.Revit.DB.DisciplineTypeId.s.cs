@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class DisciplineTypeId
 {
+  public DisciplineTypeId() { }
+
   public static Autodesk.Revit.DB.ForgeTypeId Structural
   {
     get => throw new System.NotImplementedException();

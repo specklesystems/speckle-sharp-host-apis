@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Plumbing;
 
 public partial class PipingSystem : Autodesk.Revit.DB.MEPSystem
 {
+  public PipingSystem() { }
+
   public virtual System.Boolean IsFlowServerMissing() => throw new System.NotImplementedException();
 
   public virtual System.Boolean IsPressureDropServerMissing() => throw new System.NotImplementedException();

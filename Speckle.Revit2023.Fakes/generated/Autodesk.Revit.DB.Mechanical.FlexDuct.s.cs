@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Mechanical;
 
 public partial class FlexDuct : Autodesk.Revit.DB.MEPCurve
 {
+  public FlexDuct() { }
+
   public static Autodesk.Revit.DB.Mechanical.FlexDuct Create(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.ElementId systemTypeId,

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class TransactionGroup : System.IDisposable
 {
+  public TransactionGroup() { }
+
   public TransactionGroup(Autodesk.Revit.DB.Document document, System.String transGroupName) =>
     throw new System.NotImplementedException();
 

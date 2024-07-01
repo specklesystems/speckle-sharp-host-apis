@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ElementWorksetFilter : Autodesk.Revit.DB.ElementQuickFilter
 {
+  public ElementWorksetFilter() { }
+
   public ElementWorksetFilter(Autodesk.Revit.DB.WorksetId worksetId, System.Boolean inverted) =>
     throw new System.NotImplementedException();
 

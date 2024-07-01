@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class SynchronizeWithCentralOptions : System.IDisposable
 {
-  public SynchronizeWithCentralOptions() => throw new System.NotImplementedException();
+  public SynchronizeWithCentralOptions() { }
 
   public virtual Autodesk.Revit.DB.RelinquishOptions GetRelinquishOptions() =>
     throw new System.NotImplementedException();

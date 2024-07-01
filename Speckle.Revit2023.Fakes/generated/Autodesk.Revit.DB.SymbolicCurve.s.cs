@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class SymbolicCurve : Autodesk.Revit.DB.CurveElement
 {
+  public SymbolicCurve() { }
+
   public virtual Autodesk.Revit.DB.FamilyElementVisibility GetVisibility() =>
     throw new System.NotImplementedException();
 

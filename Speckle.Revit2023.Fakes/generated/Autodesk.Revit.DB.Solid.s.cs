@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class Solid : Autodesk.Revit.DB.GeometryObject
 {
+  public Solid() { }
+
   public virtual Autodesk.Revit.DB.XYZ ComputeCentroid() => throw new System.NotImplementedException();
 
   public virtual Autodesk.Revit.DB.SolidCurveIntersection IntersectWithCurve(

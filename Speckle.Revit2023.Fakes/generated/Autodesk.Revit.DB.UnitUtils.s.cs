@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class UnitUtils
 {
+  public UnitUtils() { }
+
   public static System.Double Convert(
     System.Double value,
     Autodesk.Revit.DB.ForgeTypeId currentUnitTypeId,

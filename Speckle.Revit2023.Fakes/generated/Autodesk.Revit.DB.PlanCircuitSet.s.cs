@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class PlanCircuitSet : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerable
 {
-  public PlanCircuitSet() => throw new System.NotImplementedException();
+  public PlanCircuitSet() { }
 
   public virtual void Clear() => throw new System.NotImplementedException();
 

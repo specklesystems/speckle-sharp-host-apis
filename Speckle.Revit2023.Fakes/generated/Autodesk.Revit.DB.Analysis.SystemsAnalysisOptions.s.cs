@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB.Analysis;
 
 public partial class SystemsAnalysisOptions : System.IDisposable
 {
-  public SystemsAnalysisOptions() => throw new System.NotImplementedException();
+  public SystemsAnalysisOptions() { }
 
   public virtual void Dispose() => throw new System.NotImplementedException();
 

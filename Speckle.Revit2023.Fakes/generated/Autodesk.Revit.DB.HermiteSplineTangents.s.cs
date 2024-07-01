@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class HermiteSplineTangents : System.IDisposable
 {
-  public HermiteSplineTangents() => throw new System.NotImplementedException();
+  public HermiteSplineTangents() { }
 
   public virtual void Dispose() => throw new System.NotImplementedException();
 

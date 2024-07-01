@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class TextNode : Autodesk.Revit.DB.RenderNode
 {
+  public TextNode() { }
+
   public virtual Autodesk.Revit.DB.FormattedText GetFormattedText() => throw new System.NotImplementedException();
 
   public virtual Autodesk.Revit.DB.VerticalTextAlignment VerticalAlignment

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Plumbing;
 
 public partial class PipeFittingAndAccessoryConnectorData : System.IDisposable
 {
+  public PipeFittingAndAccessoryConnectorData() { }
+
   public virtual Autodesk.Revit.DB.Transform GetCoordination() => throw new System.NotImplementedException();
 
   public virtual void Dispose() => throw new System.NotImplementedException();

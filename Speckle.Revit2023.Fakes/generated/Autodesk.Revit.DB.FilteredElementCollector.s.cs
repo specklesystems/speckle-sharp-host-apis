@@ -4,6 +4,8 @@ public partial class FilteredElementCollector
   : System.Collections.Generic.IEnumerable<Autodesk.Revit.DB.Element>,
     System.IDisposable
 {
+  public FilteredElementCollector() { }
+
   public FilteredElementCollector(Autodesk.Revit.DB.Document document, Autodesk.Revit.DB.ElementId viewId) =>
     throw new System.NotImplementedException();
 

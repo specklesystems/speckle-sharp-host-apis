@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Mechanical;
 
 public partial class MEPHiddenLineSettings : Autodesk.Revit.DB.Element
 {
+  public MEPHiddenLineSettings() { }
+
   public static Autodesk.Revit.DB.Mechanical.MEPHiddenLineSettings GetMEPHiddenLineSettings(
     Autodesk.Revit.DB.Document doc
   ) => throw new System.NotImplementedException();

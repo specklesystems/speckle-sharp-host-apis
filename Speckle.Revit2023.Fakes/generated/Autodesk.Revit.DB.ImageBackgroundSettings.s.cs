@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ImageBackgroundSettings : Autodesk.Revit.DB.BackgroundSettings
 {
+  public ImageBackgroundSettings() { }
+
   public virtual System.Double OffsetHeight
   {
     get => throw new System.NotImplementedException();

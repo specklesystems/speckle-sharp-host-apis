@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class Parameter : Autodesk.Revit.DB.APIObject
 {
+  public Parameter() { }
+
   public virtual Autodesk.Revit.DB.ForgeTypeId GetTypeId() => throw new System.NotImplementedException();
 
   public virtual System.String AsValueString(Autodesk.Revit.DB.FormatOptions formatOptions) =>

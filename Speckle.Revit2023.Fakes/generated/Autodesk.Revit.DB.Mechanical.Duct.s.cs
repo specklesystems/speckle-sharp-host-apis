@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Mechanical;
 
 public partial class Duct : Autodesk.Revit.DB.MEPCurve
 {
+  public Duct() { }
+
   public static Autodesk.Revit.DB.Mechanical.Duct Create(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.ElementId ductTypeId,

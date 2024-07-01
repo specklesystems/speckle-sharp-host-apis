@@ -2,11 +2,11 @@ namespace Autodesk.Revit.DB.ExtensibleStorage;
 
 public partial class Entity : System.IDisposable
 {
+  public Entity() { }
+
   public Entity(System.Guid schemaGUID) => throw new System.NotImplementedException();
 
   public Entity(Autodesk.Revit.DB.ExtensibleStorage.Schema schema) => throw new System.NotImplementedException();
-
-  public Entity() => throw new System.NotImplementedException();
 
   public Entity(Autodesk.Revit.DB.ExtensibleStorage.Entity other) => throw new System.NotImplementedException();
 

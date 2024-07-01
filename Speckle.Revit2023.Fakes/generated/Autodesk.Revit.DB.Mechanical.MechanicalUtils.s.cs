@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Mechanical;
 
 public partial class MechanicalUtils
 {
+  public MechanicalUtils() { }
+
   public static System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> ConvertDuctPlaceholders(
     Autodesk.Revit.DB.Document document,
     System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> placeholderIds

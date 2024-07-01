@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class RebarShapeConstraintDiameter : Autodesk.Revit.DB.Structure.RebarShapeConstraint
 {
+  public RebarShapeConstraintDiameter() { }
+
   public RebarShapeConstraintDiameter(
     Autodesk.Revit.DB.ElementId paramId,
     Autodesk.Revit.DB.Structure.RebarShapeArcReferenceType refType

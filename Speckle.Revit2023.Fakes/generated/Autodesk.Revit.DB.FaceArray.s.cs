@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class FaceArray : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerable
 {
-  public FaceArray() => throw new System.NotImplementedException();
+  public FaceArray() { }
 
   public virtual void Clear() => throw new System.NotImplementedException();
 

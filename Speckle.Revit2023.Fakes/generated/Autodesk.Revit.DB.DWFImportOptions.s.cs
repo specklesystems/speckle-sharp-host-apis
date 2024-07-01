@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class DWFImportOptions : System.IDisposable
 {
+  public DWFImportOptions() { }
+
   public DWFImportOptions(Autodesk.Revit.DB.DWFImportOptions option) => throw new System.NotImplementedException();
 
   public DWFImportOptions(System.Collections.Generic.IList<Autodesk.Revit.DB.ElementId> views) =>

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class SpatialElementBoundarySubface : System.IDisposable
 {
+  public SpatialElementBoundarySubface() { }
+
   public virtual Autodesk.Revit.DB.Face GetSpatialElementFace() => throw new System.NotImplementedException();
 
   public virtual Autodesk.Revit.DB.Face GetSubface() => throw new System.NotImplementedException();

@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class WireframeBuilder : Autodesk.Revit.DB.ShapeBuilder
 {
-  public WireframeBuilder() => throw new System.NotImplementedException();
+  public WireframeBuilder() { }
 
   public virtual void Reset() => throw new System.NotImplementedException();
 

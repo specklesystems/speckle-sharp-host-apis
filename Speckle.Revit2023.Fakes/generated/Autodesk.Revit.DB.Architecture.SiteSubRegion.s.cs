@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Architecture;
 
 public partial class SiteSubRegion : System.IDisposable
 {
+  public SiteSubRegion() { }
+
   public static Autodesk.Revit.DB.Architecture.SiteSubRegion Create(
     Autodesk.Revit.DB.Document document,
     System.Collections.Generic.IList<Autodesk.Revit.DB.CurveLoop> curveLoops,

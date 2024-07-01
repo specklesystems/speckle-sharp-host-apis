@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class ProjectLocationSetIterator : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerator
 {
-  public ProjectLocationSetIterator() => throw new System.NotImplementedException();
+  public ProjectLocationSetIterator() { }
 
   public virtual System.Boolean MoveNext() => throw new System.NotImplementedException();
 

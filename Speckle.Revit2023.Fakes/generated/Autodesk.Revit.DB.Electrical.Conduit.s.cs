@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Electrical;
 
 public partial class Conduit : Autodesk.Revit.DB.Electrical.CableTrayConduitBase
 {
+  public Conduit() { }
+
   public static Autodesk.Revit.DB.Electrical.Conduit Create(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.ElementId conduitType,

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class Wall : Autodesk.Revit.DB.HostObject
 {
+  public Wall() { }
+
   public virtual Autodesk.Revit.DB.Sketch CreateProfileSketch() => throw new System.NotImplementedException();
 
   public virtual void RemoveProfileSketch() => throw new System.NotImplementedException();

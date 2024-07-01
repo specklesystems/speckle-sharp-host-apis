@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ColorFillLegend : Autodesk.Revit.DB.Element
 {
+  public ColorFillLegend() { }
+
   public static Autodesk.Revit.DB.ColorFillLegend Create(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.ElementId viewId,

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class MassInstanceUtils : System.IDisposable
 {
+  public MassInstanceUtils() { }
+
   public static Autodesk.Revit.DB.ElementId AddMassLevelDataToMassInstance(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.ElementId massInstanceId,

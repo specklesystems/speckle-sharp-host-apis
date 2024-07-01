@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Fabrication;
 
 public partial class FabricationNetworkChangeService : System.IDisposable
 {
+  public FabricationNetworkChangeService() { }
+
   public FabricationNetworkChangeService(Autodesk.Revit.DB.Document document) =>
     throw new System.NotImplementedException();
 

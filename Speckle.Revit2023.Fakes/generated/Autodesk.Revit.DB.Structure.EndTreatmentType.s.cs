@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class EndTreatmentType : Autodesk.Revit.DB.ElementType
 {
+  public EndTreatmentType() { }
+
   public static Autodesk.Revit.DB.Structure.EndTreatmentType Create(
     Autodesk.Revit.DB.Document doc,
     System.String strTreatment

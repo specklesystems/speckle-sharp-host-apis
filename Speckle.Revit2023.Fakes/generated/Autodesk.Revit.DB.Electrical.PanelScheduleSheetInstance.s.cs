@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Electrical;
 
 public partial class PanelScheduleSheetInstance : Autodesk.Revit.DB.Element
 {
+  public PanelScheduleSheetInstance() { }
+
   public static Autodesk.Revit.DB.Electrical.PanelScheduleSheetInstance Create(
     Autodesk.Revit.DB.Document ADoc,
     Autodesk.Revit.DB.ElementId scheduleId,

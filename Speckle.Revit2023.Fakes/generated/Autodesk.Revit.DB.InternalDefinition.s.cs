@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class InternalDefinition : Autodesk.Revit.DB.Definition, System.IDisposable
 {
+  public InternalDefinition() { }
+
   public virtual void SetGroupTypeId(Autodesk.Revit.DB.ForgeTypeId groupTypeId) =>
     throw new System.NotImplementedException();
 

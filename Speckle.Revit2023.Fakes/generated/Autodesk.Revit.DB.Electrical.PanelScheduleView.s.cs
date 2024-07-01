@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Electrical;
 
 public partial class PanelScheduleView : Autodesk.Revit.DB.TableView
 {
+  public PanelScheduleView() { }
+
   public static Autodesk.Revit.DB.Electrical.PanelScheduleView CreateInstanceView(
     Autodesk.Revit.DB.Document ADoc,
     Autodesk.Revit.DB.ElementId templateId,

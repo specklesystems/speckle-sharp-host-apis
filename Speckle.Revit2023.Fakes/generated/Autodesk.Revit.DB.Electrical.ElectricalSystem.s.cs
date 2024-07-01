@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Electrical;
 
 public partial class ElectricalSystem : Autodesk.Revit.DB.MEPSystem
 {
+  public ElectricalSystem() { }
+
   public virtual System.Boolean AddToCircuit(Autodesk.Revit.DB.ElementSet components) =>
     throw new System.NotImplementedException();
 

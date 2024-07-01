@@ -7,7 +7,7 @@ public partial class ExportPatternTable
   >>,
     System.IDisposable
 {
-  public ExportPatternTable() => throw new System.NotImplementedException();
+  public ExportPatternTable() { }
 
   public virtual Autodesk.Revit.DB.ExportPatternTableIterator GetPatternTableIterator() =>
     throw new System.NotImplementedException();

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class SolidUtils
 {
+  public SolidUtils() { }
+
   public static Autodesk.Revit.DB.Solid Clone(Autodesk.Revit.DB.Solid solid) =>
     throw new System.NotImplementedException();
 

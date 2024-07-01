@@ -2,9 +2,9 @@ namespace Autodesk.Revit.DB;
 
 public partial class DWGExportOptions : Autodesk.Revit.DB.ACADExportOptions
 {
-  public DWGExportOptions(Autodesk.Revit.DB.DWGExportOptions option) => throw new System.NotImplementedException();
+  public DWGExportOptions() { }
 
-  public DWGExportOptions() => throw new System.NotImplementedException();
+  public DWGExportOptions(Autodesk.Revit.DB.DWGExportOptions option) => throw new System.NotImplementedException();
 
   public static Autodesk.Revit.DB.DWGExportOptions GetPredefinedOptions(
     Autodesk.Revit.DB.Document document,

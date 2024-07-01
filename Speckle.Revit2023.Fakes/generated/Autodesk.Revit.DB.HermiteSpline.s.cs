@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class HermiteSpline : Autodesk.Revit.DB.Curve
 {
+  public HermiteSpline() { }
+
   public static Autodesk.Revit.DB.HermiteSpline Create(
     System.Collections.Generic.IList<Autodesk.Revit.DB.XYZ> controlPoints,
     System.Boolean periodic,

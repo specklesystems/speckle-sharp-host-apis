@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Architecture;
 
 public partial class Room : Autodesk.Revit.DB.SpatialElement
 {
+  public Room() { }
+
   public virtual void Unplace() => throw new System.NotImplementedException();
 
   public virtual System.Boolean IsPointInRoom(Autodesk.Revit.DB.XYZ point) =>

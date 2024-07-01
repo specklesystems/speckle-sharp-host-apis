@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class KeyBasedTreeEntriesLoadContent : Autodesk.Revit.DB.ExternalResourceLoadContent
 {
+  public KeyBasedTreeEntriesLoadContent() { }
+
   public virtual System.Boolean AddEntry(Autodesk.Revit.DB.KeyBasedTreeEntry entry) =>
     throw new System.NotImplementedException();
 

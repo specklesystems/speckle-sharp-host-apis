@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Plumbing;
 
 public partial class PipeFittingAndAccessoryData : System.IDisposable
 {
+  public PipeFittingAndAccessoryData() { }
+
   public virtual Autodesk.Revit.DB.ExtensibleStorage.Entity GetEntity() => throw new System.NotImplementedException();
 
   public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.Plumbing.PipeFittingAndAccessoryConnectorData> GetAllConnectorData() =>

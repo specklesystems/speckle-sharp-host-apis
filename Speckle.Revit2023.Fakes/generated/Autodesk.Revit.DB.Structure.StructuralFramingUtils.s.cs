@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class StructuralFramingUtils
 {
+  public StructuralFramingUtils() { }
+
   public static System.Boolean CanSetEndReference(Autodesk.Revit.DB.FamilyInstance familyInstance, System.Int32 end) =>
     throw new System.NotImplementedException();
 

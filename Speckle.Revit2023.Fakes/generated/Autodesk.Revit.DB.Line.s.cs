@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class Line : Autodesk.Revit.DB.Curve
 {
+  public Line() { }
+
   public static Autodesk.Revit.DB.Line CreateBound(Autodesk.Revit.DB.XYZ endpoint1, Autodesk.Revit.DB.XYZ endpoint2) =>
     throw new System.NotImplementedException();
 

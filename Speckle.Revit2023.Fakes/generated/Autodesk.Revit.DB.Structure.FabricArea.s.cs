@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class FabricArea : Autodesk.Revit.DB.Element
 {
+  public FabricArea() { }
+
   public static Autodesk.Revit.DB.Structure.FabricArea Create(
     Autodesk.Revit.DB.Document aDoc,
     Autodesk.Revit.DB.Element hostElement,

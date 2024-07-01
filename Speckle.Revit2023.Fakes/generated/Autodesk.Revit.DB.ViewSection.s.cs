@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ViewSection : Autodesk.Revit.DB.View
 {
+  public ViewSection() { }
+
   public static Autodesk.Revit.DB.ViewSection CreateSection(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.ElementId viewFamilyTypeId,

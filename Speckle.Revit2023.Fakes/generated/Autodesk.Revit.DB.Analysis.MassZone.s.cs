@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Analysis;
 
 public partial class MassZone : Autodesk.Revit.DB.Element
 {
+  public MassZone() { }
+
   public virtual System.Boolean IsEmpty() => throw new System.NotImplementedException();
 
   public virtual Autodesk.Revit.DB.Reference GetEquivalentReferenceFromMassOrLevel(

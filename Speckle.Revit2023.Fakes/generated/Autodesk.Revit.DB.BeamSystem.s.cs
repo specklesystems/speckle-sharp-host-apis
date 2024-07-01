@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class BeamSystem : Autodesk.Revit.DB.Element
 {
+  public BeamSystem() { }
+
   public virtual System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> GetBeamIds() =>
     throw new System.NotImplementedException();
 

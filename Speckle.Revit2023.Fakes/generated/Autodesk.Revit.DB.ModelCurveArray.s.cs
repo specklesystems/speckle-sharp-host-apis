@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class ModelCurveArray : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerable
 {
-  public ModelCurveArray() => throw new System.NotImplementedException();
+  public ModelCurveArray() { }
 
   public virtual void Clear() => throw new System.NotImplementedException();
 

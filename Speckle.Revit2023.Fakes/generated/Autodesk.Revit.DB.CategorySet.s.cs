@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class CategorySet : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerable
 {
-  public CategorySet() => throw new System.NotImplementedException();
+  public CategorySet() { }
 
   public virtual void Clear() => throw new System.NotImplementedException();
 

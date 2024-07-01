@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class AnalyticalToPhysicalAssociationManager : Autodesk.Revit.DB.Element
 {
+  public AnalyticalToPhysicalAssociationManager() { }
+
   public static Autodesk.Revit.DB.Structure.AnalyticalToPhysicalAssociationManager GetAnalyticalToPhysicalAssociationManager(
     Autodesk.Revit.DB.Document doc
   ) => throw new System.NotImplementedException();

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class TemporaryGraphicsManager : System.IDisposable
 {
+  public TemporaryGraphicsManager() { }
+
   public static Autodesk.Revit.DB.TemporaryGraphicsManager GetTemporaryGraphicsManager(
     Autodesk.Revit.DB.Document document
   ) => throw new System.NotImplementedException();

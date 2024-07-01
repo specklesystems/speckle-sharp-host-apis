@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ConnectorManager : System.IDisposable
 {
+  public ConnectorManager() { }
+
   public virtual Autodesk.Revit.DB.Connector Lookup(System.Int32 index) => throw new System.NotImplementedException();
 
   public virtual void Dispose() => throw new System.NotImplementedException();

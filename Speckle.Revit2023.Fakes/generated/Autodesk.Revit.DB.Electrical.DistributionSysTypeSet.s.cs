@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB.Electrical;
 
 public partial class DistributionSysTypeSet : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerable
 {
-  public DistributionSysTypeSet() => throw new System.NotImplementedException();
+  public DistributionSysTypeSet() { }
 
   public virtual void Clear() => throw new System.NotImplementedException();
 

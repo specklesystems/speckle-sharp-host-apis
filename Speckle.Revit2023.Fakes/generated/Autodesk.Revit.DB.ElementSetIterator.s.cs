@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class ElementSetIterator : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerator
 {
-  public ElementSetIterator() => throw new System.NotImplementedException();
+  public ElementSetIterator() { }
 
   public virtual System.Boolean MoveNext() => throw new System.NotImplementedException();
 

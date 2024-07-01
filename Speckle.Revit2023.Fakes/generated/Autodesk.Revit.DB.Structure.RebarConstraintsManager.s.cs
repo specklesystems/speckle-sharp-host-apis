@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class RebarConstraintsManager : System.IDisposable
 {
+  public RebarConstraintsManager() { }
+
   public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.Structure.RebarConstrainedHandle> GetAllConstrainedHandles() =>
     throw new System.NotImplementedException();
 

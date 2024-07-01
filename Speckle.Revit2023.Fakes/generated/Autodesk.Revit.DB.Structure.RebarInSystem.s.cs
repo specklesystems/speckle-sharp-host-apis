@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class RebarInSystem : Autodesk.Revit.DB.Element
 {
+  public RebarInSystem() { }
+
   public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.Curve> GetCenterlineCurves(
     System.Boolean adjustForSelfIntersection,
     System.Boolean suppressHooks,

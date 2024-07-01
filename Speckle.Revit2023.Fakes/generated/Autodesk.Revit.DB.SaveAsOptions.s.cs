@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class SaveAsOptions : System.IDisposable
 {
-  public SaveAsOptions() => throw new System.NotImplementedException();
+  public SaveAsOptions() { }
 
   public virtual Autodesk.Revit.DB.WorksharingSaveAsOptions GetWorksharingOptions() =>
     throw new System.NotImplementedException();

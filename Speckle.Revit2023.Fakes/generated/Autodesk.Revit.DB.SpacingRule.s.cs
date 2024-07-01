@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class SpacingRule : Autodesk.Revit.DB.APIObject
 {
+  public SpacingRule() { }
+
   public virtual void SetLayoutNone() => throw new System.NotImplementedException();
 
   public virtual void SetLayoutFixedDistance(

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class LinearArray : Autodesk.Revit.DB.BaseArray
 {
+  public LinearArray() { }
+
   public static Autodesk.Revit.DB.LinearArray Create(
     Autodesk.Revit.DB.Document aDoc,
     Autodesk.Revit.DB.View dBView,

@@ -6,6 +6,8 @@ public partial class ExportPatternTableIterator
     Autodesk.Revit.DB.ExportPatternInfo
   >>
 {
+  public ExportPatternTableIterator() { }
+
   public virtual System.Boolean MoveNext() => throw new System.NotImplementedException();
 
   public virtual System.Boolean IsDone() => throw new System.NotImplementedException();

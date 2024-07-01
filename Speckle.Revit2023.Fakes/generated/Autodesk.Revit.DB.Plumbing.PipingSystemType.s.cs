@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Plumbing;
 
 public partial class PipingSystemType : Autodesk.Revit.DB.MEPSystemType
 {
+  public PipingSystemType() { }
+
   public static Autodesk.Revit.DB.Plumbing.PipingSystemType Create(
     Autodesk.Revit.DB.Document ADoc,
     Autodesk.Revit.DB.MEPSystemClassification systemClassification,

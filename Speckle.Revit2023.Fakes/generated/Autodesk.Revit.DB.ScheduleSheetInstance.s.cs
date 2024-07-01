@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ScheduleSheetInstance : Autodesk.Revit.DB.Element
 {
+  public ScheduleSheetInstance() { }
+
   public static Autodesk.Revit.DB.ScheduleSheetInstance Create(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.ElementId viewSheetId,

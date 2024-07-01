@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class DefinitionFile : Autodesk.Revit.DB.APIObject
 {
+  public DefinitionFile() { }
+
   public virtual System.String Filename
   {
     get => throw new System.NotImplementedException();

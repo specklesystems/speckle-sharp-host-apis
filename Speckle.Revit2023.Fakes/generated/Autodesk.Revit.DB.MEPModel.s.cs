@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class MEPModel : Autodesk.Revit.DB.APIObject
 {
+  public MEPModel() { }
+
   public virtual System.Collections.Generic.ISet<Autodesk.Revit.DB.Electrical.ElectricalSystem> GetElectricalSystems() =>
     throw new System.NotImplementedException();
 

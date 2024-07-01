@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB.Electrical;
 
 public partial class WireMaterialTypeSetIterator : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerator
 {
-  public WireMaterialTypeSetIterator() => throw new System.NotImplementedException();
+  public WireMaterialTypeSetIterator() { }
 
   public virtual System.Boolean MoveNext() => throw new System.NotImplementedException();
 

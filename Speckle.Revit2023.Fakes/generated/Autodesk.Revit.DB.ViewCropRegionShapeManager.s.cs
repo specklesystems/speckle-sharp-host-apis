@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ViewCropRegionShapeManager : System.IDisposable
 {
+  public ViewCropRegionShapeManager() { }
+
   public virtual System.Boolean IsCropRegionShapeValid(Autodesk.Revit.DB.CurveLoop boundary) =>
     throw new System.NotImplementedException();
 

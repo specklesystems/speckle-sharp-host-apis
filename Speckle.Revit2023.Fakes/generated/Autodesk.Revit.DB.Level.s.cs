@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class Level : Autodesk.Revit.DB.DatumPlane
 {
+  public Level() { }
+
   public static Autodesk.Revit.DB.Level Create(Autodesk.Revit.DB.Document document, System.Double elevation) =>
     throw new System.NotImplementedException();
 

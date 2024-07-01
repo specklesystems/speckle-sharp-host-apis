@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class RuledSurface : Autodesk.Revit.DB.Surface
 {
+  public RuledSurface() { }
+
   public static Autodesk.Revit.DB.Surface Create(Autodesk.Revit.DB.Curve profileCurve, Autodesk.Revit.DB.XYZ point) =>
     throw new System.NotImplementedException();
 

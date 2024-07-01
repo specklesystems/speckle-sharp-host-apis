@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB.Mechanical;
 
 public partial class SpaceSet : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerable
 {
-  public SpaceSet() => throw new System.NotImplementedException();
+  public SpaceSet() { }
 
   public virtual void Clear() => throw new System.NotImplementedException();
 

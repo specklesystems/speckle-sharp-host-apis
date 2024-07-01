@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Analysis;
 
 public partial class ConceptualSurfaceType : Autodesk.Revit.DB.Element
 {
+  public ConceptualSurfaceType() { }
+
   public static Autodesk.Revit.DB.Analysis.ConceptualSurfaceType GetByMassSubCategoryId(
     Autodesk.Revit.DB.Document cda,
     Autodesk.Revit.DB.ElementId massSubCategoryId

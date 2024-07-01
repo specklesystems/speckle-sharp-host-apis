@@ -2,10 +2,10 @@ namespace Autodesk.Revit.DB;
 
 public partial class ViewShapeBuilder : Autodesk.Revit.DB.ShapeBuilder
 {
+  public ViewShapeBuilder() { }
+
   public ViewShapeBuilder(Autodesk.Revit.DB.DirectShapeTargetViewType targetViewType) =>
     throw new System.NotImplementedException();
-
-  public ViewShapeBuilder() => throw new System.NotImplementedException();
 
   public virtual void Reset() => throw new System.NotImplementedException();
 

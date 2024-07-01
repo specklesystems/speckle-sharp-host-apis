@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ExternalResourceBrowserData : System.IDisposable
 {
+  public ExternalResourceBrowserData() { }
+
   public ExternalResourceBrowserData(
     Autodesk.Revit.DB.Document document,
     System.Guid serverId,

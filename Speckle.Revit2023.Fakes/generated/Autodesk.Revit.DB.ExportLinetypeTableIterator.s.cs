@@ -6,6 +6,8 @@ public partial class ExportLinetypeTableIterator
     Autodesk.Revit.DB.ExportLinetypeInfo
   >>
 {
+  public ExportLinetypeTableIterator() { }
+
   public virtual System.Boolean MoveNext() => throw new System.NotImplementedException();
 
   public virtual System.Boolean IsDone() => throw new System.NotImplementedException();

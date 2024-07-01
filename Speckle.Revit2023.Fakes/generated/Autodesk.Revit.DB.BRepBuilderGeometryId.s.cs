@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class BRepBuilderGeometryId : System.IDisposable
 {
+  public BRepBuilderGeometryId() { }
+
   public BRepBuilderGeometryId(Autodesk.Revit.DB.BRepBuilderGeometryId other) =>
     throw new System.NotImplementedException();
 

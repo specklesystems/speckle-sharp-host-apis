@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Fabrication;
 
 public partial class DesignToFabricationConverter : System.IDisposable
 {
+  public DesignToFabricationConverter() { }
+
   public DesignToFabricationConverter(Autodesk.Revit.DB.Document document) =>
     throw new System.NotImplementedException();
 

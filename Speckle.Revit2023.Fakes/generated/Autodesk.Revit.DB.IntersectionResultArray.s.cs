@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class IntersectionResultArray : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerable
 {
-  public IntersectionResultArray() => throw new System.NotImplementedException();
+  public IntersectionResultArray() { }
 
   public virtual void Clear() => throw new System.NotImplementedException();
 

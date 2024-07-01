@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Analysis;
 
 public partial class EnergyDataSettings : Autodesk.Revit.DB.Element
 {
+  public EnergyDataSettings() { }
+
   public static Autodesk.Revit.DB.Analysis.EnergyDataSettings GetFromDocument(Autodesk.Revit.DB.Document cda) =>
     throw new System.NotImplementedException();
 

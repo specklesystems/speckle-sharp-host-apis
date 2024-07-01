@@ -4,6 +4,8 @@ public partial class CableTraySizes
   : Autodesk.Revit.DB.Element,
     System.Collections.Generic.IEnumerable<Autodesk.Revit.DB.MEPSize>
 {
+  public CableTraySizes() { }
+
   public virtual System.Int32 GetSizeCount() => throw new System.NotImplementedException();
 
   public virtual System.Boolean Contains(System.Double nominalDiameter) => throw new System.NotImplementedException();

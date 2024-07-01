@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class LinkConversionData : System.IDisposable
 {
+  public LinkConversionData() { }
+
   public virtual System.Collections.Generic.IDictionary<System.String, System.String> GetOptions() =>
     throw new System.NotImplementedException();
 

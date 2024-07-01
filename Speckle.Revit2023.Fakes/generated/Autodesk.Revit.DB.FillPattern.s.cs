@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class FillPattern : System.IDisposable
 {
+  public FillPattern() { }
+
   public FillPattern(
     System.String name,
     Autodesk.Revit.DB.FillPatternTarget target,
@@ -24,8 +26,6 @@ public partial class FillPattern : System.IDisposable
     Autodesk.Revit.DB.FillPatternTarget target,
     Autodesk.Revit.DB.FillPatternHostOrientation orientation
   ) => throw new System.NotImplementedException();
-
-  public FillPattern() => throw new System.NotImplementedException();
 
   public FillPattern(Autodesk.Revit.DB.FillPattern other) => throw new System.NotImplementedException();
 

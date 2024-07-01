@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.PointClouds;
 
 public partial class PointIterator : System.Collections.Generic.IEnumerator<Autodesk.Revit.DB.PointClouds.CloudPoint>
 {
+  public PointIterator() { }
+
   public virtual System.Boolean MoveNext() => throw new System.NotImplementedException();
 
   public virtual System.Boolean IsDone() => throw new System.NotImplementedException();

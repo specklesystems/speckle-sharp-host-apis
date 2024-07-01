@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class Form : Autodesk.Revit.DB.GenericForm
 {
+  public Form() { }
+
   public virtual System.Int32 get_ProfileCurveLoopCount(System.Int32 index) =>
     throw new System.NotImplementedException();
 

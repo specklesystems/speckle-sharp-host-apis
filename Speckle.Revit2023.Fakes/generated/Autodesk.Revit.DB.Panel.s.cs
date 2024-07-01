@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class Panel : Autodesk.Revit.DB.FamilyInstance
 {
+  public Panel() { }
+
   public virtual Autodesk.Revit.DB.ElementId FindHostPanel() => throw new System.NotImplementedException();
 
   public virtual Autodesk.Revit.DB.Transform Transform

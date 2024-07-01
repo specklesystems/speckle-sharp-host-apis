@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ComponentRepeaterSlot : Autodesk.Revit.DB.Element
 {
+  public ComponentRepeaterSlot() { }
+
   public virtual System.Boolean IsTypeValidForSlot(Autodesk.Revit.DB.ElementId typeId) =>
     throw new System.NotImplementedException();
 

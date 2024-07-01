@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class Control : Autodesk.Revit.DB.Element
 {
+  public Control() { }
+
   public virtual Autodesk.Revit.DB.View View
   {
     get => throw new System.NotImplementedException();

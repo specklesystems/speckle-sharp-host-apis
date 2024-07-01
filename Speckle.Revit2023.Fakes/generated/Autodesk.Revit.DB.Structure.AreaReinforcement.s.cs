@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class AreaReinforcement : Autodesk.Revit.DB.Element
 {
+  public AreaReinforcement() { }
+
   public static Autodesk.Revit.DB.Structure.AreaReinforcement Create(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.Element hostElement,

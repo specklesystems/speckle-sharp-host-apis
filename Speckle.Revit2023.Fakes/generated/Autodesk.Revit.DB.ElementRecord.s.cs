@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ElementRecord : System.IDisposable
 {
+  public ElementRecord() { }
+
   public virtual Autodesk.Revit.DB.ElementId GetId() => throw new System.NotImplementedException();
 
   public virtual Autodesk.Revit.DB.ElementId GetCategoryId() => throw new System.NotImplementedException();

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Architecture;
 
 public partial class HandRailType : Autodesk.Revit.DB.Architecture.ContinuousRailType
 {
+  public HandRailType() { }
+
   public virtual Autodesk.Revit.DB.Architecture.RailSupportJustification SupportJustification
   {
     get => throw new System.NotImplementedException();

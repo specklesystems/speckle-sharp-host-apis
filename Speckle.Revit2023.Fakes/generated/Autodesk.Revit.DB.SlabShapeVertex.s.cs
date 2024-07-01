@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class SlabShapeVertex
 {
+  public SlabShapeVertex() { }
+
   public virtual Autodesk.Revit.DB.SlabShapeVertexType VertexType
   {
     get => throw new System.NotImplementedException();

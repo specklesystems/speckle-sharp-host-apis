@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class KeyBasedTreeEntriesLoadResults : System.IDisposable
 {
-  public KeyBasedTreeEntriesLoadResults() => throw new System.NotImplementedException();
+  public KeyBasedTreeEntriesLoadResults() { }
 
   public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.FailureMessage> GetFailureMessages() =>
     throw new System.NotImplementedException();

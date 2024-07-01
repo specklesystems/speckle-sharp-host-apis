@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB.Electrical;
 
 public partial class VoltageTypeSet : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerable
 {
-  public VoltageTypeSet() => throw new System.NotImplementedException();
+  public VoltageTypeSet() { }
 
   public virtual void Clear() => throw new System.NotImplementedException();
 

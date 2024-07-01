@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class Revision : Autodesk.Revit.DB.Element
 {
+  public Revision() { }
+
   public static System.Collections.Generic.IList<Autodesk.Revit.DB.ElementId> GetAllRevisionIds(
     Autodesk.Revit.DB.Document document
   ) => throw new System.NotImplementedException();

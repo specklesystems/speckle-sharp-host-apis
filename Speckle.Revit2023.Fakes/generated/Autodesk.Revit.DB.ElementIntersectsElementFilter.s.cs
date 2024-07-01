@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ElementIntersectsElementFilter : Autodesk.Revit.DB.ElementIntersectsFilter
 {
+  public ElementIntersectsElementFilter() { }
+
   public ElementIntersectsElementFilter(Autodesk.Revit.DB.Element element, System.Boolean inverted) =>
     throw new System.NotImplementedException();
 

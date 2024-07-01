@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class StructuralConnectionApprovalType : Autodesk.Revit.DB.ElementType
 {
+  public StructuralConnectionApprovalType() { }
+
   public static Autodesk.Revit.DB.Structure.StructuralConnectionApprovalType Create(
     Autodesk.Revit.DB.Document doc,
     System.String name

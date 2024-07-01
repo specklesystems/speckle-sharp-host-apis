@@ -2,9 +2,9 @@ namespace Autodesk.Revit.DB;
 
 public partial class DGNImportOptions : Autodesk.Revit.DB.BaseImportOptions
 {
-  public DGNImportOptions(Autodesk.Revit.DB.DGNImportOptions option) => throw new System.NotImplementedException();
+  public DGNImportOptions() { }
 
-  public DGNImportOptions() => throw new System.NotImplementedException();
+  public DGNImportOptions(Autodesk.Revit.DB.DGNImportOptions option) => throw new System.NotImplementedException();
 
   public virtual System.String DGNModelViewName
   {

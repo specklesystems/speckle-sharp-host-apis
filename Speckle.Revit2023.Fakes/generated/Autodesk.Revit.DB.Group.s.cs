@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class Group : Autodesk.Revit.DB.Element
 {
+  public Group() { }
+
   public virtual System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> UngroupMembers() =>
     throw new System.NotImplementedException();
 

@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class MullionTypeSet : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerable
 {
-  public MullionTypeSet() => throw new System.NotImplementedException();
+  public MullionTypeSet() { }
 
   public virtual void Clear() => throw new System.NotImplementedException();
 

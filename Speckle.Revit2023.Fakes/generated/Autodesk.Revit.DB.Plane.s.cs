@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class Plane : Autodesk.Revit.DB.Surface
 {
+  public Plane() { }
+
   public static Autodesk.Revit.DB.Plane Create(Autodesk.Revit.DB.Frame frameOfReference) =>
     throw new System.NotImplementedException();
 

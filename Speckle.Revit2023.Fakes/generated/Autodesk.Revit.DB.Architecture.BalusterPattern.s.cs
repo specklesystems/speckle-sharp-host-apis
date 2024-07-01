@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Architecture;
 
 public partial class BalusterPattern : System.IDisposable
 {
+  public BalusterPattern() { }
+
   public virtual System.Int32 GetBalusterCount() => throw new System.NotImplementedException();
 
   public virtual Autodesk.Revit.DB.Architecture.BalusterInfo GetBaluster(System.Int32 index) =>

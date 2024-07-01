@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class FabricSheet : Autodesk.Revit.DB.Element
 {
+  public FabricSheet() { }
+
   public static Autodesk.Revit.DB.Structure.FabricSheet Create(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.ElementId concreteHostElementId,

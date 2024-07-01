@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class Part : Autodesk.Revit.DB.Element
 {
+  public Part() { }
+
   public virtual System.Boolean CanOffsetFace(Autodesk.Revit.DB.Face face) =>
     throw new System.NotImplementedException();
 

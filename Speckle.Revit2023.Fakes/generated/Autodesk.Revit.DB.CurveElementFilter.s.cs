@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class CurveElementFilter : Autodesk.Revit.DB.ElementSlowFilter
 {
+  public CurveElementFilter() { }
+
   public CurveElementFilter(Autodesk.Revit.DB.CurveElementType curveElementType, System.Boolean inverted) =>
     throw new System.NotImplementedException();
 

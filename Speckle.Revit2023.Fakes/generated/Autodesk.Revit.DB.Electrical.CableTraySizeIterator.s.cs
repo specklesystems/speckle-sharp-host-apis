@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Electrical;
 
 public partial class CableTraySizeIterator : System.Collections.Generic.IEnumerator<Autodesk.Revit.DB.MEPSize>
 {
+  public CableTraySizeIterator() { }
+
   public virtual System.Boolean MoveNext() => throw new System.NotImplementedException();
 
   public virtual System.Boolean IsDone() => throw new System.NotImplementedException();

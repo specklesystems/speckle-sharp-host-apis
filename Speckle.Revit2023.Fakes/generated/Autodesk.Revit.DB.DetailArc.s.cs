@@ -1,3 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class DetailArc : Autodesk.Revit.DB.DetailCurve { }
+public partial class DetailArc : Autodesk.Revit.DB.DetailCurve
+{
+  public DetailArc() { }
+}

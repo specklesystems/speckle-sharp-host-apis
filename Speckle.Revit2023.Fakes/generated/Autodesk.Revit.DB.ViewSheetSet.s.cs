@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ViewSheetSet : Autodesk.Revit.DB.Element, Autodesk.Revit.DB.IViewSheetSet
 {
+  public ViewSheetSet() { }
+
   public virtual System.Boolean IsAutomatic
   {
     get => throw new System.NotImplementedException();

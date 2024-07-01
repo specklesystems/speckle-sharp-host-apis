@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class RebarRoundingManager : Autodesk.Revit.DB.Structure.ReinforcementRoundingManager
 {
+  public RebarRoundingManager() { }
+
   public virtual Autodesk.Revit.DB.RoundingMethod ApplicableSegmentLengthRoundingMethod
   {
     get => throw new System.NotImplementedException();

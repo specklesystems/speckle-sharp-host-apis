@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Fabrication;
 
 public partial class FabricationUtils
 {
+  public FabricationUtils() { }
+
   public static System.Boolean ValidateConnectivity(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.Connector connector1,

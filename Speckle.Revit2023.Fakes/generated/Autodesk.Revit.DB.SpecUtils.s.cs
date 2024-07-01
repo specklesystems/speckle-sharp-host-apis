@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class SpecUtils
 {
+  public SpecUtils() { }
+
   public static System.Boolean IsSpec(Autodesk.Revit.DB.ForgeTypeId specTypeId) =>
     throw new System.NotImplementedException();
 

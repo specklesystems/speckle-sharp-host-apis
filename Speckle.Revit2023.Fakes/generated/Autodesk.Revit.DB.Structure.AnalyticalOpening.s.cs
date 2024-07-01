@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class AnalyticalOpening : Autodesk.Revit.DB.Structure.AnalyticalSurfaceBase
 {
+  public AnalyticalOpening() { }
+
   public static Autodesk.Revit.DB.Structure.AnalyticalOpening Create(
     Autodesk.Revit.DB.Document aDoc,
     Autodesk.Revit.DB.CurveLoop curveLoop,

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class LevelAssociationData : System.IDisposable
 {
+  public LevelAssociationData() { }
+
   public virtual Autodesk.Revit.DB.ElementId GetAssociatedLevel() => throw new System.NotImplementedException();
 
   public virtual void SetAssociatedLevel(Autodesk.Revit.DB.ElementId levelId) =>

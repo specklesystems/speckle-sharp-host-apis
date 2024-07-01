@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class BindingMap : Autodesk.Revit.DB.DefinitionBindingMap
 {
+  public BindingMap() { }
+
   public virtual System.Boolean Insert(
     Autodesk.Revit.DB.Definition key,
     Autodesk.Revit.DB.Binding item,

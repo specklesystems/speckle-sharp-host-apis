@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class IndependentTag : Autodesk.Revit.DB.Element
 {
+  public IndependentTag() { }
+
   public static Autodesk.Revit.DB.IndependentTag Create(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.ElementId symId,

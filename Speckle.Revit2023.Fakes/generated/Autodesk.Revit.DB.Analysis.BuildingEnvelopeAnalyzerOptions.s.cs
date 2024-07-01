@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB.Analysis;
 
 public partial class BuildingEnvelopeAnalyzerOptions : System.IDisposable
 {
-  public BuildingEnvelopeAnalyzerOptions() => throw new System.NotImplementedException();
+  public BuildingEnvelopeAnalyzerOptions() { }
 
   public virtual void Dispose() => throw new System.NotImplementedException();
 

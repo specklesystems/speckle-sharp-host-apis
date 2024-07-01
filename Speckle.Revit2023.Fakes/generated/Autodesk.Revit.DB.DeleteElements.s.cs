@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class DeleteElements : Autodesk.Revit.DB.FailureResolution
 {
+  public DeleteElements() { }
+
   public static Autodesk.Revit.DB.FailureResolution Create(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.ElementId id

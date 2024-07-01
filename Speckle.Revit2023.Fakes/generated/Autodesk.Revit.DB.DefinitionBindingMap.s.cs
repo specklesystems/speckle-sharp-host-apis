@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class DefinitionBindingMap : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerable
 {
-  public DefinitionBindingMap() => throw new System.NotImplementedException();
+  public DefinitionBindingMap() { }
 
   public virtual void Clear() => throw new System.NotImplementedException();
 

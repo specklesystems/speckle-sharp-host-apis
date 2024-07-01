@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ParameterFilterElement : Autodesk.Revit.DB.FilterElement
 {
+  public ParameterFilterElement() { }
+
   public static Autodesk.Revit.DB.ParameterFilterElement Create(
     Autodesk.Revit.DB.Document aDocument,
     System.String name,

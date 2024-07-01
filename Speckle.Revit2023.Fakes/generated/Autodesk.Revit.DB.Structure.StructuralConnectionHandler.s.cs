@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class StructuralConnectionHandler : Autodesk.Revit.DB.Element
 {
+  public StructuralConnectionHandler() { }
+
   public static Autodesk.Revit.DB.Structure.StructuralConnectionHandler Create(
     Autodesk.Revit.DB.Document document,
     System.Collections.Generic.IList<Autodesk.Revit.DB.ElementId> idsToConnect,

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ExportDWGSettings : Autodesk.Revit.DB.Element
 {
+  public ExportDWGSettings() { }
+
   public static Autodesk.Revit.DB.ExportDWGSettings Create(
     Autodesk.Revit.DB.Document document,
     System.String name,

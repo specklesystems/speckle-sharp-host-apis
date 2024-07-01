@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ThermalAsset : System.IDisposable
 {
+  public ThermalAsset() { }
+
   public ThermalAsset(System.String name, Autodesk.Revit.DB.ThermalMaterialType materialType) =>
     throw new System.NotImplementedException();
 

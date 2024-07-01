@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class DirectShapeLibrary : System.IDisposable
 {
+  public DirectShapeLibrary() { }
+
   public static Autodesk.Revit.DB.DirectShapeLibrary GetDirectShapeLibrary(Autodesk.Revit.DB.Document ADoc) =>
     throw new System.NotImplementedException();
 

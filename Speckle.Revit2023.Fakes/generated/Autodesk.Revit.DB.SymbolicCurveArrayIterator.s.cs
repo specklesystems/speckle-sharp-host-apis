@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class SymbolicCurveArrayIterator : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerator
 {
-  public SymbolicCurveArrayIterator() => throw new System.NotImplementedException();
+  public SymbolicCurveArrayIterator() { }
 
   public virtual System.Boolean MoveNext() => throw new System.NotImplementedException();
 

@@ -1,3 +1,6 @@
 namespace Autodesk.Revit.DB.Fabrication;
 
-public partial class FabricationPartPlacementUtils { }
+public partial class FabricationPartPlacementUtils
+{
+  public FabricationPartPlacementUtils() { }
+}

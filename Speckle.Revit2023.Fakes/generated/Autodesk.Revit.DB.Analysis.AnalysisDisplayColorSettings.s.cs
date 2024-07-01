@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB.Analysis;
 
 public partial class AnalysisDisplayColorSettings : System.IDisposable
 {
-  public AnalysisDisplayColorSettings() => throw new System.NotImplementedException();
+  public AnalysisDisplayColorSettings() { }
 
   public AnalysisDisplayColorSettings(Autodesk.Revit.DB.Analysis.AnalysisDisplayColorSettings other) =>
     throw new System.NotImplementedException();

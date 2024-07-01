@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class PrintManager : Autodesk.Revit.DB.APIObject
 {
+  public PrintManager() { }
+
   public virtual void SelectNewPrintDriver(System.String strPrinterName) => throw new System.NotImplementedException();
 
   public virtual System.Boolean SubmitPrint(Autodesk.Revit.DB.View view) => throw new System.NotImplementedException();

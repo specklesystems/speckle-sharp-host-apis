@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Electrical;
 
 public partial class WireMaterialType : Autodesk.Revit.DB.ElementType
 {
+  public WireMaterialType() { }
+
   public virtual Autodesk.Revit.DB.Electrical.TemperatureRatingType AddTemperatureRatingType(
     System.String name,
     Autodesk.Revit.DB.Electrical.TemperatureRatingType baseOn

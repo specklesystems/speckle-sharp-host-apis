@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class FamilySymbolProfile : Autodesk.Revit.DB.SweepProfile
 {
+  public FamilySymbolProfile() { }
+
   public virtual System.Boolean IsFlipped
   {
     get => throw new System.NotImplementedException();

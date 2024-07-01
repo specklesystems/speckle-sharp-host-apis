@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class FamilySizeTableErrorInfo : System.IDisposable
 {
-  public FamilySizeTableErrorInfo() => throw new System.NotImplementedException();
+  public FamilySizeTableErrorInfo() { }
 
   public virtual void Dispose() => throw new System.NotImplementedException();
 

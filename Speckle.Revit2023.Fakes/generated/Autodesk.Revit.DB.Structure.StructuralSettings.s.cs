@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB.Structure;
 
 public partial class StructuralSettings : Autodesk.Revit.DB.Element
 {
+  public StructuralSettings() { }
+
   public static Autodesk.Revit.DB.Structure.StructuralSettings GetStructuralSettings(Autodesk.Revit.DB.Document doc) =>
     throw new System.NotImplementedException();
 
