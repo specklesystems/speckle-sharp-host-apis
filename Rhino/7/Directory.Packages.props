@@ -1,7 +1,0 @@
-<Project>
-  <Import Project="$([MSBuild]::GetPathOfFileAbove(Directory.Packages.props, $(MSBuildThisFileDirectory)..))" />
-  <ItemGroup>
-    <PackageVersion Include="RhinoCommon" Version="7.13.21348.13001" IncludeAssets="compile;build" />
-    <PackageVersion Include="RhinoWindows" Version="7.13.21348.13001" IncludeAssets="compile;build" />
-  </ItemGroup>
-</Project>

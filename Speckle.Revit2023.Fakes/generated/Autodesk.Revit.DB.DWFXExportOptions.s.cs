@@ -1,0 +1,6 @@
+namespace Autodesk.Revit.DB;
+
+public partial class DWFXExportOptions : Autodesk.Revit.DB.DWFExportOptions
+{
+  public DWFXExportOptions() => throw new System.NotImplementedException();
+}

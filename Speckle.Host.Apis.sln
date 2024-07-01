@@ -1,40 +1,12 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Revit", "Revit", "{8F540B7F-7548-46E9-BDEC-4DAB99367908}"
-	ProjectSection(SolutionItems) = preProject
-		Revit\Directory.Build.props = Revit\Directory.Build.props
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{7A91F6BF-EA8A-428E-BB97-B6C448C247EF}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 		Directory.Build.props = Directory.Build.props
 		global.json = global.json
 		README.md = README.md
-		Directory.Packages.props = Directory.Packages.props
 	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Speckle.Revit2023.Api", "Revit\Revit2023\Speckle.Revit2023.Api\Speckle.Revit2023.Api.csproj", "{BE42055B-1D53-49AC-8B76-B55871E24E8B}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Speckle.Revit.Interfaces", "Revit\Speckle.Revit.Interfaces\Speckle.Revit.Interfaces.shproj", "{E1C43415-3102-45F4-8BF9-A4DD7D7F2ED6}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Speckle.Revit.Api", "Revit\Speckle.Revit.Api\Speckle.Revit.Api.shproj", "{E1C43415-3101-45F4-8BF9-A4DD7D7F2ED7}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Speckle.Revit2023.Interfaces", "Revit\Revit2023\Speckle.Revit2023.Interfaces\Speckle.Revit2023.Interfaces.csproj", "{F6943FEF-C6AD-4374-9729-CCB79F9BD6C6}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2023", "2023", "{CB5177F3-6FA5-4351-8BF1-3F6F2758096D}"
-	ProjectSection(SolutionItems) = preProject
-		Revit\Revit2023\Directory.Packages.props = Revit\Revit2023\Directory.Packages.props
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2024", "2024", "{8B47C7AE-9C8C-47D5-A3C5-ACEFCF54E3B9}"
-	ProjectSection(SolutionItems) = preProject
-		Revit\Revit2024\Directory.Packages.props = Revit\Revit2024\Directory.Packages.props
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Speckle.Revit2024.Interfaces", "Revit\Revit2024\Speckle.Revit2024.Interfaces\Speckle.Revit2024.Interfaces.csproj", "{E5BCFB04-C8E2-4F34-8E12-E4E6CB908153}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Speckle.Revit2024.Api", "Revit\Revit2024\Speckle.Revit2024.Api\Speckle.Revit2024.Api.csproj", "{917D7C89-FA2D-4A26-906B-E18317C49734}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Build", "Build\Build.csproj", "{00F3BEC6-614D-4AEE-923A-0E2DF40FDE6B}"
 EndProject
@@ -44,31 +16,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{42C36267
 		.github\workflows\main.yml = .github\workflows\main.yml
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Speckle.Tests", "Speckle.Tests\Speckle.Tests.csproj", "{D909A986-7D4F-45A6-B0A2-D69D4CEF86C5}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{1A746BD2-E68A-4877-9922-3549F6C00EDF}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Rhino", "Rhino", "{72DEFF6C-31DE-4050-8692-AEE8224E9925}"
-	ProjectSection(SolutionItems) = preProject
-		Revit\Directory.Build.props = Revit\Directory.Build.props
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "7", "7", "{BC12C4CA-7065-4B76-9787-E8DA4745AD4E}"
-	ProjectSection(SolutionItems) = preProject
-		Rhino\7\Directory.Packages.props = Rhino\7\Directory.Packages.props
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Speckle.Rhino7.Interfaces", "Rhino\7\Speckle.Rhino7.Interfaces\Speckle.Rhino7.Interfaces.csproj", "{EB2B9350-BE2B-4197-ACA8-3963EAE3B6C9}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Speckle.Rhino7.Api", "Rhino\7\Speckle.Rhino7.Api\Speckle.Rhino7.Api.csproj", "{5F678DE0-AAE7-4FA9-9A7F-C3C0B0E3E3D7}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Speckle.Rhino.Api", "Rhino\Speckle.Rhino.Api\Speckle.Rhino.Api.shproj", "{E1C43415-3201-45F4-8BF9-A4DD7D7F2ED6}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Speckle.Rhino.Interfaces", "Rhino\Speckle.Rhino.Interfaces\Speckle.Rhino.Interfaces.shproj", "{E1C43415-3202-45F4-8BF9-A4DD7D7F2ED6}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{3B0D8F6E-C701-446E-BAE3-B6FDF1812901}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Speckle.Shared", "Speckle.Shared\Speckle.Shared.shproj", "{E1C43415-3000-45F4-8BF9-B4DD7D7F2ED6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Speckle.Revit2023.Fakes.Generator", "Speckle.Revit2023.Fakes.Generator\Speckle.Revit2023.Fakes.Generator.csproj", "{D25C688F-1673-4AEB-8186-6105C8CB679A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Revit", "Revit", "{BD68BFA8-3EC7-4689-987E-6422A37CF3B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Speckle.Revit2023.Fakes", "Speckle.Revit2023.Fakes\Speckle.Revit2023.Fakes.csproj", "{4B16340A-C493-41AB-85E8-E32C92533118}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -76,55 +32,23 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BE42055B-1D53-49AC-8B76-B55871E24E8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BE42055B-1D53-49AC-8B76-B55871E24E8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BE42055B-1D53-49AC-8B76-B55871E24E8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BE42055B-1D53-49AC-8B76-B55871E24E8B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F6943FEF-C6AD-4374-9729-CCB79F9BD6C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F6943FEF-C6AD-4374-9729-CCB79F9BD6C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F6943FEF-C6AD-4374-9729-CCB79F9BD6C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F6943FEF-C6AD-4374-9729-CCB79F9BD6C6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E5BCFB04-C8E2-4F34-8E12-E4E6CB908153}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E5BCFB04-C8E2-4F34-8E12-E4E6CB908153}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E5BCFB04-C8E2-4F34-8E12-E4E6CB908153}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E5BCFB04-C8E2-4F34-8E12-E4E6CB908153}.Release|Any CPU.Build.0 = Release|Any CPU
-		{917D7C89-FA2D-4A26-906B-E18317C49734}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{917D7C89-FA2D-4A26-906B-E18317C49734}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{917D7C89-FA2D-4A26-906B-E18317C49734}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{917D7C89-FA2D-4A26-906B-E18317C49734}.Release|Any CPU.Build.0 = Release|Any CPU
 		{00F3BEC6-614D-4AEE-923A-0E2DF40FDE6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{00F3BEC6-614D-4AEE-923A-0E2DF40FDE6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00F3BEC6-614D-4AEE-923A-0E2DF40FDE6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00F3BEC6-614D-4AEE-923A-0E2DF40FDE6B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D909A986-7D4F-45A6-B0A2-D69D4CEF86C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D909A986-7D4F-45A6-B0A2-D69D4CEF86C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D909A986-7D4F-45A6-B0A2-D69D4CEF86C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D909A986-7D4F-45A6-B0A2-D69D4CEF86C5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EB2B9350-BE2B-4197-ACA8-3963EAE3B6C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EB2B9350-BE2B-4197-ACA8-3963EAE3B6C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EB2B9350-BE2B-4197-ACA8-3963EAE3B6C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EB2B9350-BE2B-4197-ACA8-3963EAE3B6C9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5F678DE0-AAE7-4FA9-9A7F-C3C0B0E3E3D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5F678DE0-AAE7-4FA9-9A7F-C3C0B0E3E3D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5F678DE0-AAE7-4FA9-9A7F-C3C0B0E3E3D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5F678DE0-AAE7-4FA9-9A7F-C3C0B0E3E3D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D25C688F-1673-4AEB-8186-6105C8CB679A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D25C688F-1673-4AEB-8186-6105C8CB679A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D25C688F-1673-4AEB-8186-6105C8CB679A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D25C688F-1673-4AEB-8186-6105C8CB679A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B16340A-C493-41AB-85E8-E32C92533118}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B16340A-C493-41AB-85E8-E32C92533118}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B16340A-C493-41AB-85E8-E32C92533118}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B16340A-C493-41AB-85E8-E32C92533118}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{CB5177F3-6FA5-4351-8BF1-3F6F2758096D} = {8F540B7F-7548-46E9-BDEC-4DAB99367908}
-		{8B47C7AE-9C8C-47D5-A3C5-ACEFCF54E3B9} = {8F540B7F-7548-46E9-BDEC-4DAB99367908}
-		{BC12C4CA-7065-4B76-9787-E8DA4745AD4E} = {72DEFF6C-31DE-4050-8692-AEE8224E9925}
-		{BE42055B-1D53-49AC-8B76-B55871E24E8B} = {CB5177F3-6FA5-4351-8BF1-3F6F2758096D}
-		{F6943FEF-C6AD-4374-9729-CCB79F9BD6C6} = {CB5177F3-6FA5-4351-8BF1-3F6F2758096D}
-		{917D7C89-FA2D-4A26-906B-E18317C49734} = {8B47C7AE-9C8C-47D5-A3C5-ACEFCF54E3B9}
-		{E5BCFB04-C8E2-4F34-8E12-E4E6CB908153} = {8B47C7AE-9C8C-47D5-A3C5-ACEFCF54E3B9}
-		{5F678DE0-AAE7-4FA9-9A7F-C3C0B0E3E3D7} = {BC12C4CA-7065-4B76-9787-E8DA4745AD4E}
-		{EB2B9350-BE2B-4197-ACA8-3963EAE3B6C9} = {BC12C4CA-7065-4B76-9787-E8DA4745AD4E}
-		{D909A986-7D4F-45A6-B0A2-D69D4CEF86C5} = {1A746BD2-E68A-4877-9922-3549F6C00EDF}
 		{00F3BEC6-614D-4AEE-923A-0E2DF40FDE6B} = {42C36267-88A8-4F94-9E62-5D43A02D033C}
-		{E1C43415-3101-45F4-8BF9-A4DD7D7F2ED7} = {8F540B7F-7548-46E9-BDEC-4DAB99367908}
-		{E1C43415-3102-45F4-8BF9-A4DD7D7F2ED6} = {8F540B7F-7548-46E9-BDEC-4DAB99367908}
-		{E1C43415-3201-45F4-8BF9-A4DD7D7F2ED6} = {72DEFF6C-31DE-4050-8692-AEE8224E9925}
-		{E1C43415-3202-45F4-8BF9-A4DD7D7F2ED6} = {72DEFF6C-31DE-4050-8692-AEE8224E9925}
 		{E1C43415-3000-45F4-8BF9-B4DD7D7F2ED6} = {3B0D8F6E-C701-446E-BAE3-B6FDF1812901}
+		{D25C688F-1673-4AEB-8186-6105C8CB679A} = {3B0D8F6E-C701-446E-BAE3-B6FDF1812901}
+		{4B16340A-C493-41AB-85E8-E32C92533118} = {BD68BFA8-3EC7-4689-987E-6422A37CF3B0}
 	EndGlobalSection
 EndGlobal
