@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ExportLinetypeKey : System.Object
 {
+	public ExportLinetypeKey(System.String originalLinetypeName) => throw new System.NotImplementedException();
+	public ExportLinetypeKey(Autodesk.Revit.DB.ExportLinetypeKey other) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject
 	{

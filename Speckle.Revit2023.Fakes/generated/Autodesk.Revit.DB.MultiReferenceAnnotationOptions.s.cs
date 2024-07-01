@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class MultiReferenceAnnotationOptions : System.Object
 {
+	public MultiReferenceAnnotationOptions(Autodesk.Revit.DB.MultiReferenceAnnotationType multiReferenceAnnotationType) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsAllowedDimensionStyleType(Autodesk.Revit.DB.DimensionStyleType dimensionStyleType) => throw new System.NotImplementedException();
 	public virtual IList<Autodesk.Revit.DB.Reference> GetAdditionalReferencesToDimension() => throw new System.NotImplementedException();
 	public virtual void SetAdditionalReferencesToDimension(IList<Autodesk.Revit.DB.Reference> referencesToDimension) => throw new System.NotImplementedException();

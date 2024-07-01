@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class ExportLinetypeTable : System.Object
 {
+	public ExportLinetypeTable() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ExportLinetypeTableIterator GetLinetypeTableIterator() => throw new System.NotImplementedException();
 	public virtual System.Boolean ContainsKey(Autodesk.Revit.DB.ExportLinetypeKey exportLinetypeKey) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ExportLinetypeInfo GetExportLinetypeInfo(Autodesk.Revit.DB.ExportLinetypeKey exportLinetypeKey) => throw new System.NotImplementedException();

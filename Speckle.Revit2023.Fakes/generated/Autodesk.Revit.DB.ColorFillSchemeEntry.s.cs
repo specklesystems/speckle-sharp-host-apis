@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class ColorFillSchemeEntry : System.Object
 {
+	public ColorFillSchemeEntry(Autodesk.Revit.DB.StorageType storageType) => throw new System.NotImplementedException();
 	public virtual System.String GetStringValue() => throw new System.NotImplementedException();
 	public virtual System.Int32 GetIntegerValue() => throw new System.NotImplementedException();
 	public virtual System.Double GetDoubleValue() => throw new System.NotImplementedException();

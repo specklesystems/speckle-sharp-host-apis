@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class DGNExportOptions : Autodesk.Revit.DB.BaseExportOptions
 {
+	public DGNExportOptions(Autodesk.Revit.DB.DGNExportOptions option) => throw new System.NotImplementedException();
 	public new static IList<System.String> GetPredefinedSetupNames(Autodesk.Revit.DB.Document document) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ExportLineweightTable GetExportLineweightTable() => throw new System.NotImplementedException();
 	public virtual void SetExportLineweightTable(Autodesk.Revit.DB.ExportLineweightTable lineweightTable) => throw new System.NotImplementedException();

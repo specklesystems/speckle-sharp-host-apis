@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class TransmissionData : System.Object
 {
+	public TransmissionData(Autodesk.Revit.DB.TransmissionData other) => throw new System.NotImplementedException();
 	public virtual ICollection<Autodesk.Revit.DB.ElementId> GetAllExternalFileReferenceIds() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ExternalFileReference GetLastSavedReferenceData(Autodesk.Revit.DB.ElementId elemId) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ExternalFileReference GetDesiredReferenceData(Autodesk.Revit.DB.ElementId elemId) => throw new System.NotImplementedException();

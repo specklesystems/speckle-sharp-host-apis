@@ -55,6 +55,7 @@ public partial class Document : System.Object
 	public virtual void PublishCoordinates(Autodesk.Revit.DB.LinkElementId locationId) => throw new System.NotImplementedException();
 	public virtual void ResetSharedCoordinates() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsBackgroundCalculationInProgress() => throw new System.NotImplementedException();
+	public virtual void EraseSchemaAndAllEntities(Autodesk.Revit.DB.ExtensibleStorage.Schema schema) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.StorageType GetTypeOfStorage(Autodesk.Revit.DB.ForgeTypeId parameterTypeId) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.Family LoadFamily(Autodesk.Revit.DB.Document targetDocument,Autodesk.Revit.DB.IFamilyLoadOptions familyLoadOptions) => throw new System.NotImplementedException();

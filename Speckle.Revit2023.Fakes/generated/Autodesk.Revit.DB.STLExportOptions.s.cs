@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class STLExportOptions : Autodesk.Revit.DB.ATFBaseExportOptions
 {
+	public STLExportOptions(Autodesk.Revit.DB.ExportResolution resolutionType) => throw new System.NotImplementedException();
+	public STLExportOptions(Autodesk.Revit.DB.STLExportResolution resolutionType) => throw new System.NotImplementedException();
 	public static System.Boolean IsValidForSurfaceTolerance(System.Double value) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsSurfaceToleranceSet() => throw new System.NotImplementedException();
 	public static System.Boolean IsValidForNormalTolerance(System.Double value) => throw new System.NotImplementedException();

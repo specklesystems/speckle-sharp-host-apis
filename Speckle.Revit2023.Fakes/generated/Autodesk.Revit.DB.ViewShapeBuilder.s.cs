@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class ViewShapeBuilder : Autodesk.Revit.DB.ShapeBuilder
 {
+	public ViewShapeBuilder(Autodesk.Revit.DB.DirectShapeTargetViewType targetViewType) => throw new System.NotImplementedException();
 	public virtual void Reset() => throw new System.NotImplementedException();
 	public virtual void AddCurve(Autodesk.Revit.DB.Curve GCurve) => throw new System.NotImplementedException();
 	public static System.Boolean ValidateCurve(Autodesk.Revit.DB.Curve GCurve,Autodesk.Revit.DB.DirectShapeTargetViewType targetViewType) => throw new System.NotImplementedException();

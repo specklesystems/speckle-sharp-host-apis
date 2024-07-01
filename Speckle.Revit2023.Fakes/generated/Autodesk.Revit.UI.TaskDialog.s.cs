@@ -2,6 +2,7 @@ namespace Autodesk.Revit.UI;
 
 public partial class TaskDialog : Autodesk.Revit.DB.APIObject
 {
+	public TaskDialog(System.String title) => throw new System.NotImplementedException();
 	public virtual void AddCommandLink(Autodesk.Revit.UI.TaskDialogCommandLinkId id,System.String mainContent) => throw new System.NotImplementedException();
 	public virtual void AddCommandLink(Autodesk.Revit.UI.TaskDialogCommandLinkId id,System.String mainContent,System.String supportingContent) => throw new System.NotImplementedException();
 	public static Autodesk.Revit.UI.TaskDialogResult Show(System.String title,System.String mainInstruction,Autodesk.Revit.UI.TaskDialogCommonButtons buttons,Autodesk.Revit.UI.TaskDialogResult defaultButton) => throw new System.NotImplementedException();

@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class ExternalResourceSubFolder : System.Object
 {
+	public ExternalResourceSubFolder(System.String folderName,System.String iconPath) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject
 	{

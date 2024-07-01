@@ -2,6 +2,7 @@ namespace Autodesk.Revit.UI;
 
 public partial class ColorSelectionDialog : System.Object
 {
+	public ColorSelectionDialog() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.UI.ItemSelectionDialogResult Show() => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject

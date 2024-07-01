@@ -2,6 +2,9 @@ namespace Autodesk.Revit.DB;
 
 public partial class Transform1D : System.Object
 {
+	public Transform1D(System.Double scale) => throw new System.NotImplementedException();
+	public Transform1D(System.Double scale,System.Double translation) => throw new System.NotImplementedException();
+	public Transform1D(Autodesk.Revit.DB.Transform1D other) => throw new System.NotImplementedException();
 	public virtual System.Boolean AlmostEqual(Autodesk.Revit.DB.Transform1D right) => throw new System.NotImplementedException();
 	public virtual void Assign(Autodesk.Revit.DB.Transform1D from) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.Transform1D SetToIdentity() => throw new System.NotImplementedException();

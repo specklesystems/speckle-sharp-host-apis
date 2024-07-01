@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class CurveLoop : System.Object
 {
+	public CurveLoop() => throw new System.NotImplementedException();
 	public static Autodesk.Revit.DB.CurveLoop Create(IList<Autodesk.Revit.DB.Curve> curves) => throw new System.NotImplementedException();
 	public virtual void Append(Autodesk.Revit.DB.Curve curve) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.Plane GetPlane() => throw new System.NotImplementedException();

@@ -2,6 +2,7 @@ namespace Autodesk.Revit.UI;
 
 public partial class PromptForFamilyInstancePlacementOptions : System.Object
 {
+	public PromptForFamilyInstancePlacementOptions(Autodesk.Revit.UI.PromptForFamilyInstancePlacementOptions other) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject
 	{

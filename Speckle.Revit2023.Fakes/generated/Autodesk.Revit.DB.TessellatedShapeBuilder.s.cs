@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class TessellatedShapeBuilder : Autodesk.Revit.DB.ShapeBuilder
 {
+	public TessellatedShapeBuilder() => throw new System.NotImplementedException();
 	public virtual void OpenConnectedFaceSet(System.Boolean isSolid) => throw new System.NotImplementedException();
 	public virtual void CloseConnectedFaceSet() => throw new System.NotImplementedException();
 	public virtual void CancelConnectedFaceSet() => throw new System.NotImplementedException();

@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class WorksharingDisplayGraphicSettings : System.Object
 {
+	public WorksharingDisplayGraphicSettings(System.Boolean shouldApply,Autodesk.Revit.DB.Color lineColor) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject
 	{

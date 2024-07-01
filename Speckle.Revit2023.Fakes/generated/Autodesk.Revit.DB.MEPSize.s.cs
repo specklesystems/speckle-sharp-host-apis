@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class MEPSize : System.Object
 {
+	public MEPSize(System.Double nominalDiameter,System.Double innerDiameter,System.Double outerDiameter,System.Boolean usedInSizeLists,System.Boolean usedInSizing) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject
 	{

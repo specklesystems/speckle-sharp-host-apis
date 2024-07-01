@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class WallSweepInfo : System.Object
 {
+	public WallSweepInfo(Autodesk.Revit.DB.WallSweepType type,System.Boolean vertical) => throw new System.NotImplementedException();
+	public WallSweepInfo(System.Boolean fixed,Autodesk.Revit.DB.WallSweepType type) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsEqual(Autodesk.Revit.DB.WallSweepInfo toCompare) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject

@@ -55,6 +55,9 @@ public partial class Element : System.Object
 	public virtual System.Boolean IsDemolishedPhaseOrderValid(Autodesk.Revit.DB.ElementId demolishedPhaseId) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsCreatedPhaseOrderValid(Autodesk.Revit.DB.ElementId createdPhaseId) => throw new System.NotImplementedException();
 	public virtual IList<System.Guid> GetEntitySchemaGuids() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.ExtensibleStorage.Entity GetEntity(Autodesk.Revit.DB.ExtensibleStorage.Schema schema) => throw new System.NotImplementedException();
+	public virtual void SetEntity(Autodesk.Revit.DB.ExtensibleStorage.Entity entity) => throw new System.NotImplementedException();
+	public virtual System.Boolean DeleteEntity(Autodesk.Revit.DB.ExtensibleStorage.Schema schema) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject
 	{

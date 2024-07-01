@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class Reference : Autodesk.Revit.DB.APIObject
 {
+	public Reference(Autodesk.Revit.DB.Element element) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.Reference CreateLinkReference(Autodesk.Revit.DB.RevitLinkInstance revitLinkInstance) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.Reference CreateReferenceInLink() => throw new System.NotImplementedException();
 	public virtual System.String ConvertToStableRepresentation(Autodesk.Revit.DB.Document document) => throw new System.NotImplementedException();

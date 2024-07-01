@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class FamilyThermalProperties : System.Object
 {
+	public FamilyThermalProperties() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValid() => throw new System.NotImplementedException();
 	public static Autodesk.Revit.DB.FamilyThermalProperties Find(Autodesk.Revit.DB.Document pADoc,System.String constructionId) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();

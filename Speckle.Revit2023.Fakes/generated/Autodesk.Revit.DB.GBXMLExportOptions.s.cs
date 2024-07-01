@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class GBXMLExportOptions : System.Object
 {
+	public GBXMLExportOptions() => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject
 	{

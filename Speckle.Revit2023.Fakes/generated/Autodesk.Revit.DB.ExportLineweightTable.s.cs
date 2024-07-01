@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class ExportLineweightTable : System.Object
 {
+	public ExportLineweightTable() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ExportLineweightTableIterator GetLineweightTableIterator() => throw new System.NotImplementedException();
 	public virtual System.Boolean ContainsKey(Autodesk.Revit.DB.ExportLineweightKey exportLineweightKey) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ExportLineweightInfo GetExportLineweightInfo(Autodesk.Revit.DB.ExportLineweightKey exportLineweightKey) => throw new System.NotImplementedException();

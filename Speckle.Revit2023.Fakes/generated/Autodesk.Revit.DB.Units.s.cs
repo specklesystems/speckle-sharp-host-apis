@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class Units : System.Object
 {
+	public Units(Autodesk.Revit.DB.UnitSystem unitSystem) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.FormatOptions GetFormatOptions(Autodesk.Revit.DB.ForgeTypeId specTypeId) => throw new System.NotImplementedException();
 	public virtual void SetFormatOptions(Autodesk.Revit.DB.ForgeTypeId specTypeId,Autodesk.Revit.DB.FormatOptions options) => throw new System.NotImplementedException();
 	public static System.Boolean IsModifiableSpec(Autodesk.Revit.DB.ForgeTypeId specTypeId) => throw new System.NotImplementedException();

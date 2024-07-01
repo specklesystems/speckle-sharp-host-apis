@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class FamilyElementVisibility : Autodesk.Revit.DB.APIObject
 {
+	public FamilyElementVisibility(Autodesk.Revit.DB.FamilyElementVisibilityType visibilityType) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsShownInFine
 	{
 		get => throw new System.NotImplementedException();

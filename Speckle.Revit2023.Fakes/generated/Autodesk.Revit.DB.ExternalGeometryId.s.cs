@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class ExternalGeometryId : System.Object
 {
+	public ExternalGeometryId(System.String externalGeometryId) => throw new System.NotImplementedException();
 	public static System.Boolean IsValidExternalGeometryId(System.String externalGeometryId) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject

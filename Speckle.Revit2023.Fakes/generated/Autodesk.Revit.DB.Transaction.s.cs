@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class Transaction : System.Object
 {
+	public Transaction(Autodesk.Revit.DB.Document document,System.String name) => throw new System.NotImplementedException();
+	public Transaction(Autodesk.Revit.DB.Document document) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.TransactionStatus Start(System.String name) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.TransactionStatus Start() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.TransactionStatus Commit(Autodesk.Revit.DB.FailureHandlingOptions options) => throw new System.NotImplementedException();

@@ -2,6 +2,9 @@ namespace Autodesk.Revit.DB;
 
 public partial class ElementId : System.Object
 {
+	public ElementId(Autodesk.Revit.DB.BuiltInParameter parameterId) => throw new System.NotImplementedException();
+	public ElementId(Autodesk.Revit.DB.BuiltInCategory categoryId) => throw new System.NotImplementedException();
+	public ElementId(System.Int32 id) => throw new System.NotImplementedException();
 	public virtual System.Int32 Compare(Autodesk.Revit.DB.ElementId id) => throw new System.NotImplementedException();
 	public static Autodesk.Revit.DB.ElementId Parse(System.String idStr) => throw new System.NotImplementedException();
 	public virtual System.Int32 IntegerValue

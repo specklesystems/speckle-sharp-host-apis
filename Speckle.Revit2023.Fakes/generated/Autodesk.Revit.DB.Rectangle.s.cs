@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class Rectangle : System.Object
 {
+	public Rectangle(System.Int32 left,System.Int32 top,System.Int32 right,System.Int32 bottom) => throw new System.NotImplementedException();
+	public Rectangle(Autodesk.Revit.DB.Rectangle other) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsNormalized() => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject

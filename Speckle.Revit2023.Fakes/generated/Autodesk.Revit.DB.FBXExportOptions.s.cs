@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class FBXExportOptions : System.Object
 {
+	public FBXExportOptions() => throw new System.NotImplementedException();
 	public virtual System.Boolean WithoutBoundaryEdges
 	{
 		get => throw new System.NotImplementedException();

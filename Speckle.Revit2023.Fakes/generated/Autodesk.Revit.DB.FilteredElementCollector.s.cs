@@ -2,6 +2,9 @@ namespace Autodesk.Revit.DB;
 
 public partial class FilteredElementCollector : System.Object
 {
+	public FilteredElementCollector(Autodesk.Revit.DB.Document document,Autodesk.Revit.DB.ElementId viewId) => throw new System.NotImplementedException();
+	public FilteredElementCollector(Autodesk.Revit.DB.Document document,ICollection<Autodesk.Revit.DB.ElementId> elementIds) => throw new System.NotImplementedException();
+	public FilteredElementCollector(Autodesk.Revit.DB.Document document) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.FilteredElementCollector OfCategory(Autodesk.Revit.DB.BuiltInCategory category) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.FilteredElementIdIterator GetElementIdIterator() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.FilteredElementIterator GetElementIterator() => throw new System.NotImplementedException();

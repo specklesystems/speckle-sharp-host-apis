@@ -2,6 +2,7 @@ namespace Autodesk.Revit.UI;
 
 public partial class EditorInteraction : System.Object
 {
+	public EditorInteraction(Autodesk.Revit.UI.EditorInteractionType interactionType) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.UI.EditorInteractionType InteractionType
 	{
 		get => throw new System.NotImplementedException();

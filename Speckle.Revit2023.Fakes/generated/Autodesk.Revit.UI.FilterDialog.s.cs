@@ -2,6 +2,8 @@ namespace Autodesk.Revit.UI;
 
 public partial class FilterDialog : System.Object
 {
+	public FilterDialog(Autodesk.Revit.DB.Document doc,System.String name) => throw new System.NotImplementedException();
+	public FilterDialog(Autodesk.Revit.DB.Document doc,Autodesk.Revit.DB.ElementId filterToSelect) => throw new System.NotImplementedException();
 	public virtual void Show() => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject

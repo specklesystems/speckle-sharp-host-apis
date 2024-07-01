@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ExternalResourceReference : System.Object
 {
+	public ExternalResourceReference(Autodesk.Revit.DB.ExternalResourceReference other) => throw new System.NotImplementedException();
+	public ExternalResourceReference(System.Guid serverId,IDictionary<System.String, System.String> referenceInformation,System.String version,System.String inSessionPath) => throw new System.NotImplementedException();
 	public static Autodesk.Revit.DB.ExternalResourceReference CreateLocalResource(Autodesk.Revit.DB.Document doc,Autodesk.Revit.DB.ExternalResourceType resourceType,Autodesk.Revit.DB.ModelPath path,Autodesk.Revit.DB.PathType pathType) => throw new System.NotImplementedException();
 	public virtual IDictionary<System.String, System.String> GetReferenceInformation() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidReference(Autodesk.Revit.DB.ExternalResourceType resourceType) => throw new System.NotImplementedException();

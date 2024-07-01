@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class ExportPatternTable : System.Object
 {
+	public ExportPatternTable() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ExportPatternTableIterator GetPatternTableIterator() => throw new System.NotImplementedException();
 	public virtual System.Boolean ContainsKey(Autodesk.Revit.DB.ExportPatternKey exportpatternKey) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ExportPatternInfo GetExportPatternInfo(Autodesk.Revit.DB.ExportPatternKey exportPatternKey) => throw new System.NotImplementedException();

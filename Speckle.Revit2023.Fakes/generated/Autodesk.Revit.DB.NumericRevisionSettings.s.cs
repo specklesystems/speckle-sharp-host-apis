@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class NumericRevisionSettings : System.Object
 {
+	public NumericRevisionSettings(System.Int32 startNumber,System.String prefix,System.String suffix) => throw new System.NotImplementedException();
+	public NumericRevisionSettings(Autodesk.Revit.DB.NumericRevisionSettings other) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsEqual(Autodesk.Revit.DB.NumericRevisionSettings other) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValid() => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();

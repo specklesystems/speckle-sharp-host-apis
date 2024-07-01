@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class ExportLayerKey : System.Object
 {
+	public ExportLayerKey(System.String categoryName,System.String subCategoryName,Autodesk.Revit.DB.SpecialType num) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject
 	{

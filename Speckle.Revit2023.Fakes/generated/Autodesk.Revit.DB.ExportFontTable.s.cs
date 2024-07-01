@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class ExportFontTable : System.Object
 {
+	public ExportFontTable() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ExportFontTableIterator GetFontTableIterator() => throw new System.NotImplementedException();
 	public virtual System.Boolean ContainsKey(Autodesk.Revit.DB.ExportFontKey exportfontKey) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ExportFontInfo GetExportFontInfo(Autodesk.Revit.DB.ExportFontKey exportFontKey) => throw new System.NotImplementedException();

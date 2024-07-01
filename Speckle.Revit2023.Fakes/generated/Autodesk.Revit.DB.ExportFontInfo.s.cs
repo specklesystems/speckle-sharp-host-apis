@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class ExportFontInfo : System.Object
 {
+	public ExportFontInfo(System.String destinationFontName) => throw new System.NotImplementedException();
+	public ExportFontInfo(Autodesk.Revit.DB.ExportFontInfo other) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject
 	{

@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class SchedulableField : System.Object
 {
+	public SchedulableField(Autodesk.Revit.DB.ScheduleFieldType fieldType,Autodesk.Revit.DB.ElementId parameterId) => throw new System.NotImplementedException();
+	public SchedulableField(Autodesk.Revit.DB.ScheduleFieldType fieldType) => throw new System.NotImplementedException();
 	public virtual System.String GetName(Autodesk.Revit.DB.Document document) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject

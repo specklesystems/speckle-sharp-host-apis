@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class ExternalResourceBrowserData : System.Object
 {
+	public ExternalResourceBrowserData(Autodesk.Revit.DB.Document document,System.Guid serverId,System.String folderPath,Autodesk.Revit.DB.ExternalResourceMatchOptions matchOptions) => throw new System.NotImplementedException();
 	public virtual void AddResource(System.String resourceName,System.String version,IDictionary<System.String, System.String> referenceInformation) => throw new System.NotImplementedException();
 	public virtual void AddResource(System.String resourceName,System.String version) => throw new System.NotImplementedException();
 	public virtual void AddResource(System.String resourceName,IDictionary<System.String, System.String> referenceInformation) => throw new System.NotImplementedException();

@@ -2,6 +2,7 @@ namespace Autodesk.Revit.UI;
 
 public partial class UIDocument : System.Object
 {
+	public UIDocument(Autodesk.Revit.DB.Document document) => throw new System.NotImplementedException();
 	public static Autodesk.Revit.DB.IFamilyLoadOptions GetRevitUIFamilyLoadOptions() => throw new System.NotImplementedException();
 	public virtual System.Boolean SaveAndClose() => throw new System.NotImplementedException();
 	public virtual void ShowElements(ICollection<Autodesk.Revit.DB.ElementId> elementIds) => throw new System.NotImplementedException();

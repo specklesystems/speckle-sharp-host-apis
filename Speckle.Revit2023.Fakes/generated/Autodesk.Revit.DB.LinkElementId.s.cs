@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class LinkElementId : System.Object
 {
+	public LinkElementId(Autodesk.Revit.DB.ElementId linkInstanceId,Autodesk.Revit.DB.ElementId elementId) => throw new System.NotImplementedException();
+	public LinkElementId(Autodesk.Revit.DB.ElementId elementId) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ElementId HostElementId
 	{
 		get => throw new System.NotImplementedException();

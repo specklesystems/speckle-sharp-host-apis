@@ -2,6 +2,10 @@ namespace Autodesk.Revit.DB;
 
 public partial class ReferenceIntersector : System.Object
 {
+	public ReferenceIntersector(Autodesk.Revit.DB.ElementFilter filter,Autodesk.Revit.DB.FindReferenceTarget targetType,Autodesk.Revit.DB.View3D view3d) => throw new System.NotImplementedException();
+	public ReferenceIntersector(ICollection<Autodesk.Revit.DB.ElementId> targetElementIds,Autodesk.Revit.DB.FindReferenceTarget targetType,Autodesk.Revit.DB.View3D view3d) => throw new System.NotImplementedException();
+	public ReferenceIntersector(Autodesk.Revit.DB.ElementId targetElementId,Autodesk.Revit.DB.FindReferenceTarget targetType,Autodesk.Revit.DB.View3D view3d) => throw new System.NotImplementedException();
+	public ReferenceIntersector(Autodesk.Revit.DB.View3D view3d) => throw new System.NotImplementedException();
 	public virtual IList<Autodesk.Revit.DB.ReferenceWithContext> Find(Autodesk.Revit.DB.XYZ origin,Autodesk.Revit.DB.XYZ direction) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ReferenceWithContext FindNearest(Autodesk.Revit.DB.XYZ origin,Autodesk.Revit.DB.XYZ direction) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ElementFilter GetFilter() => throw new System.NotImplementedException();

@@ -65,7 +65,7 @@ public class Generator
 
     definedTypes = definedTypes.Where(x => x.IsPublic)
       .Where(x => _namespaces.Any(y => x.FullName?.StartsWith(y) ?? false)).ToList();
-    foreach (var type in definedTypes)//.Where(x => x.FullName.EndsWith("ImageView")))
+    foreach (var type in definedTypes)//.Where(x => x.FullName.EndsWith("RoomFilter")))
     {
       try
       {
@@ -83,7 +83,7 @@ public class Generator
   {
     if (type.FullName is null)
     {
-      throw new NullReferenceException("Type has a null full name");
+      throw new ApplicationException("Type has a null full name");
     }
     if (type.FullName.StartsWith("System.Drawing."))
     {
@@ -103,7 +103,7 @@ public class Generator
     {
       return type;
     }
-    if (type.FullName is null || !_namespaces.Contains(type.Namespace))
+    if (!_namespaces.Contains(type.Namespace))
     {
       return type;
     }
@@ -222,6 +222,35 @@ public class Generator
     sb.AppendLine();
     sb.AppendLine("{");
     var members = new List<GeneratedMember>();
+    var constructors = clazz.GetConstructors().ToList();
+    var emptyConstructor = constructors.FirstOrDefault(x => !x.GetParameters().Any());
+    if (emptyConstructor is null)
+    {
+      //doens't have empty constructor so make one?
+    }
+    else if (constructors.Count > 1)
+    {
+      constructors.Remove(emptyConstructor);
+    }
+    foreach (var constructor in constructors)
+    {
+      try {
+        
+        var constructorSb = new StringBuilder();
+        constructorSb.Append($"\tpublic {clazz.Name}(");
+      WriteMethodBody(constructorSb, constructor.GetParameters());
+      sb.Append(constructorSb);
+      }
+      catch (FileLoadException)
+      {
+        Console.WriteLine($"Did not write a constructor on {clazz.FullName}");
+        
+      }
+      catch (ApplicationException)
+      {
+        Console.WriteLine($"Did not write constructor on {clazz.FullName}");
+      }
+    }
     foreach(var method in clazz.GetMethods(BindingFlags.Instance | BindingFlags.Static | BindingFlags.DeclaredOnly | BindingFlags.Public))
     {
       if (method.IsSpecialName //special is get/set for properties
@@ -348,8 +377,14 @@ public class Generator
 
 
     sb.Append($"public {extras} {ReturnType(methodInfo.ReturnType)} {methodInfo.Name}(");
+    WriteMethodBody(sb, methodInfo.GetParameters());
+  }
+
+  private void WriteMethodBody(StringBuilder sb, ParameterInfo[] parameterInfos)
+  {
+    
     bool isFirst = true;
-    foreach (var parameter in methodInfo.GetParameters())
+    foreach (var parameter in parameterInfos)
     {
       if (isFirst)
       {

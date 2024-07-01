@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class ThermalAsset : System.Object
 {
+	public ThermalAsset(System.String name,Autodesk.Revit.DB.ThermalMaterialType materialType) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ThermalAsset Copy() => throw new System.NotImplementedException();
 	public virtual System.Boolean Equals(Autodesk.Revit.DB.ThermalAsset other) => throw new System.NotImplementedException();
 	public virtual System.Boolean EqualsThermalOnly(Autodesk.Revit.DB.ThermalAsset other) => throw new System.NotImplementedException();

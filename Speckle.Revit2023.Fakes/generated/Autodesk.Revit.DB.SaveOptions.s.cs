@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class SaveOptions : System.Object
 {
+	public SaveOptions() => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject
 	{

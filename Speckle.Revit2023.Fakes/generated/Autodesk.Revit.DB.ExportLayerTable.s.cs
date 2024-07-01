@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class ExportLayerTable : System.Object
 {
+	public ExportLayerTable() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ExportLayerTableIterator GetLayerTableIterator() => throw new System.NotImplementedException();
 	public static IList<Autodesk.Revit.DB.ModifierType> GetAvaliableLayerModifierTypes(Autodesk.Revit.DB.Document document,Autodesk.Revit.DB.ExportLayerKey exportLayerKey) => throw new System.NotImplementedException();
 	public virtual System.Boolean ContainsKey(Autodesk.Revit.DB.ExportLayerKey exportlayerKey) => throw new System.NotImplementedException();

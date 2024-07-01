@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class KeyBasedTreeEntriesLoadResults : System.Object
 {
+	public KeyBasedTreeEntriesLoadResults() => throw new System.NotImplementedException();
 	public virtual IList<Autodesk.Revit.DB.FailureMessage> GetFailureMessages() => throw new System.NotImplementedException();
 	public virtual IList<System.String> GetFileSyntaxErrors() => throw new System.NotImplementedException();
 	public virtual IList<Autodesk.Revit.DB.KeyBasedTreeEntryError> GetKeyBasedTreeEntryErrors(Autodesk.Revit.DB.KeyBasedTreeEntryErrorType type) => throw new System.NotImplementedException();

@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class NavisworksExportOptions : System.Object
 {
+	public NavisworksExportOptions() => throw new System.NotImplementedException();
 	public virtual ICollection<Autodesk.Revit.DB.ElementId> GetSelectedElementIds() => throw new System.NotImplementedException();
 	public virtual void SetSelectedElementIds(ICollection<Autodesk.Revit.DB.ElementId> ids) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();

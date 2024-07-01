@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class LinkLoadResult : System.Object
 {
+	public LinkLoadResult(Autodesk.Revit.DB.LinkLoadResult other) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ModelPath GetModelName() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ModelPath GetParentModelName() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ModelPath GetCentralModelName() => throw new System.NotImplementedException();

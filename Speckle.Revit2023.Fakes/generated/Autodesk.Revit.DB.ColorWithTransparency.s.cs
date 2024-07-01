@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class ColorWithTransparency : System.Object
 {
+	public ColorWithTransparency(System.UInt32 red,System.UInt32 green,System.UInt32 blue,System.UInt32 transparency) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.Color GetColor() => throw new System.NotImplementedException();
 	public virtual void SetColor(Autodesk.Revit.DB.Color color) => throw new System.NotImplementedException();
 	public virtual System.UInt32 GetRed() => throw new System.NotImplementedException();

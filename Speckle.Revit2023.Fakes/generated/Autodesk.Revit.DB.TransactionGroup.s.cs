@@ -2,6 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class TransactionGroup : System.Object
 {
+	public TransactionGroup(Autodesk.Revit.DB.Document document,System.String transGroupName) => throw new System.NotImplementedException();
+	public TransactionGroup(Autodesk.Revit.DB.Document document) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.TransactionStatus Start(System.String transGroupName) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.TransactionStatus Start() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.TransactionStatus Commit() => throw new System.NotImplementedException();

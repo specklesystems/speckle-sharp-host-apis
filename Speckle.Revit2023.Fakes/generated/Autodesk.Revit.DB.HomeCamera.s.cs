@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class HomeCamera : System.Object
 {
+	public HomeCamera(Autodesk.Revit.DB.HomeCamera other) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject
 	{

@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class Definitions : System.Object
 {
+	public Definitions() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.Definition Create(Autodesk.Revit.DB.ExternalDefinitionCreationOptions option) => throw new System.NotImplementedException();
 	public virtual System.Boolean Contains(Autodesk.Revit.DB.Definition definition) => throw new System.NotImplementedException();
 	public virtual IEnumerator<Autodesk.Revit.DB.Definition> GetEnumerator() => throw new System.NotImplementedException();

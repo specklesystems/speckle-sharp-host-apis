@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class DimensionSegmentArray : Autodesk.Revit.DB.APIObject
 {
+	public DimensionSegmentArray() => throw new System.NotImplementedException();
 	public virtual void Clear() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.DimensionSegmentArrayIterator ForwardIterator() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.DimensionSegmentArrayIterator ReverseIterator() => throw new System.NotImplementedException();

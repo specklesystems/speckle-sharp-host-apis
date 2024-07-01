@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class MEPCalculationServerInfo : System.Object
 {
+	public MEPCalculationServerInfo(Autodesk.Revit.DB.MEPCalculationServerInfo other) => throw new System.NotImplementedException();
 	public static Autodesk.Revit.DB.MEPCalculationServerInfo GetMEPCalculationServerInfo(Autodesk.Revit.DB.FamilyInstance famInst) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject

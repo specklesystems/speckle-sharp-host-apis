@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class StructuralAsset : System.Object
 {
+	public StructuralAsset(System.String name,Autodesk.Revit.DB.StructuralAssetClass structuralAssetClass) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.StructuralAsset Copy() => throw new System.NotImplementedException();
 	public virtual System.Boolean Equals(Autodesk.Revit.DB.StructuralAsset other) => throw new System.NotImplementedException();
 	public virtual void SetYoungModulus(System.Double youngModulus) => throw new System.NotImplementedException();

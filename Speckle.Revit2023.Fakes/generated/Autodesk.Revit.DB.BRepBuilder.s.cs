@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class BRepBuilder : Autodesk.Revit.DB.ShapeBuilder
 {
+	public BRepBuilder(Autodesk.Revit.DB.BRepType geomType) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.BRepBuilderGeometryId AddFace(Autodesk.Revit.DB.BRepBuilderSurfaceGeometry surfaceGeom,System.Boolean bFaceIsReversed) => throw new System.NotImplementedException();
 	public virtual void FinishFace(Autodesk.Revit.DB.BRepBuilderGeometryId faceId) => throw new System.NotImplementedException();
 	public virtual void SetFaceMaterialId(Autodesk.Revit.DB.BRepBuilderGeometryId faceId,Autodesk.Revit.DB.ElementId materialId) => throw new System.NotImplementedException();
