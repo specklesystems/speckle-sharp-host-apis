@@ -11,7 +11,8 @@ Assembly GetAssembly(string name)
 Generator generator = new("Speckle.Revit2023.Fakes", [GetAssembly("RevitAPI.dll"), 
   GetAssembly("RevitAPIUI.dll")], 
   ["Autodesk.Revit.DB", "Autodesk.Revit.DB.Architecture", "Autodesk.Revit.UI", "Autodesk.Revit.DB.ExtensibleStorage",
-  "Autodesk.Revit.DB.ExternalService", "Autodesk.Revit.DB.Structure","Autodesk.Revit.DB.Electrical","Autodesk.Revit.DB.Plumbing", "Autodesk.Revit.DB.Fabrication", "Autodesk.Revit.DB.Mechanical", "Autodesk.Revit.DB.Analysis"],
+  "Autodesk.Revit.DB.ExternalService", "Autodesk.Revit.DB.Structure","Autodesk.Revit.DB.Electrical","Autodesk.Revit.DB.Plumbing", 
+  "Autodesk.Revit.DB.Fabrication", "Autodesk.Revit.DB.Mechanical", "Autodesk.Revit.DB.Analysis", "Autodesk.Revit.DB.PointClouds", "Autodesk.Revit.Exceptions"],
   [
     new ("WallSweepInfo", []),
     new ("ToggleButtonData", []),

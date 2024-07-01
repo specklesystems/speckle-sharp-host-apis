@@ -24,6 +24,7 @@ public partial class View : Autodesk.Revit.DB.Element
 	public virtual void SetDepthCueing(Autodesk.Revit.DB.ViewDisplayDepthCueing depthCueing) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ViewDisplayModel GetViewDisplayModel() => throw new System.NotImplementedException();
 	public virtual void SetViewDisplayModel(Autodesk.Revit.DB.ViewDisplayModel viewDisplayModel) => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.PointClouds.PointCloudOverrides GetPointCloudOverrides() => throw new System.NotImplementedException();
 	public virtual void SetColorFillSchemeId(Autodesk.Revit.DB.ElementId categoryId,Autodesk.Revit.DB.ElementId schemeId) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ElementId GetColorFillSchemeId(Autodesk.Revit.DB.ElementId categoryId) => throw new System.NotImplementedException();
 	public virtual System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> SupportedColorFillCategoryIds() => throw new System.NotImplementedException();

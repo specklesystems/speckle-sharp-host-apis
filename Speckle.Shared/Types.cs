@@ -137,10 +137,19 @@ public partial class Generator
     {
        constructors = WriteConstructors(sb, clazz);
     }
+    WriteFields(sb, clazz);
 
     var methods = WriteMethods(sb, clazz, generatedType);
     var properties = WriteProperties(sb, clazz, generatedType);
     sb.AppendLine("}");
     return (constructors, properties.Concat(methods).ToList());
+  }
+
+  private void WriteFields(StringBuilder sb, Type clazz)
+  {
+    foreach(var field in clazz.GetFields(BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly))
+    {
+      sb.AppendLine($"public {FormGenericType(field.FieldType)} {field.Name};");
+    }
   }
 }

@@ -74,3 +74,20 @@ namespace Autodesk.Revit.DB.Structure
     object IEnumerator.Current => throw new System.NotImplementedException();
   }
   }
+
+namespace Autodesk.Revit.DB.PointClouds
+{
+  public partial class PointCollection
+  {
+    IEnumerator IEnumerable.GetEnumerator() => throw new System.NotImplementedException();
+  }
+  public partial class PointIterator
+  {
+    object IEnumerator.Current => throw new System.NotImplementedException();
+  }
+  
+  public partial struct CloudPoint
+  {
+    public static implicit operator XYZ(CloudPoint cp) => new(cp.X, cp.Y, cp.Z);
+  }
+}

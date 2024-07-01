@@ -8,6 +8,10 @@ public partial class PointCloudType : Autodesk.Revit.DB.ElementType
 	{
 		get => throw new System.NotImplementedException();
 	}
+	public virtual Autodesk.Revit.DB.PointClouds.PointCloudColorEncoding ColorEncoding
+	{
+		get => throw new System.NotImplementedException();
+	}
 	public virtual Autodesk.Revit.DB.XYZ Offset
 	{
 		get => throw new System.NotImplementedException();
