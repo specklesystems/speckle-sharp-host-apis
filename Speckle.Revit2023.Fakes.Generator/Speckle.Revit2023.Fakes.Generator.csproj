@@ -4,14 +4,13 @@
       <OutputType>Exe</OutputType>
       <TargetFramework>net48</TargetFramework>
       <IsPackable>false</IsPackable>
-      <RootNamespace>Speckle.FakesGenerator</RootNamespace>
     </PropertyGroup>
   <Import Project="..\Speckle.Shared\Speckle.Shared.projitems" Label="Shared" />
-  <ItemGroup>
+  <ItemGroup>    
     <PackageReference Include="PolySharp" Version="1.14.1">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Speckle.Revit.API" Version="2023.0.0" />
+    <PackageReference Include="Speckle.Revit.API" VersionOverride="2023.0.0" />
   </ItemGroup>
 </Project>
