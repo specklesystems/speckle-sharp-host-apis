@@ -5,7 +5,7 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
     - name: Checkout
       uses: actions/checkout@v4
@@ -26,4 +26,4 @@ jobs:
           ${{ runner.os }}-nuget-
 
     - name: 🔫 Build All
-      run: ./build.ps1
+      run: ./build.sh
