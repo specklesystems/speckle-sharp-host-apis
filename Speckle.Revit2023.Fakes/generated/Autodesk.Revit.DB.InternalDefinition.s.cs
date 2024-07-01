@@ -5,7 +5,7 @@ public partial class InternalDefinition : Autodesk.Revit.DB.Definition,System.ID
 	public virtual void SetGroupTypeId(Autodesk.Revit.DB.ForgeTypeId groupTypeId) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ForgeTypeId GetParameterTypeId() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ForgeTypeId GetTypeId() => throw new System.NotImplementedException();
-	public virtual ICollection<Autodesk.Revit.DB.ElementId> SetAllowVaryBetweenGroups(Autodesk.Revit.DB.Document document,System.Boolean allowVaryBetweenGroups) => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> SetAllowVaryBetweenGroups(Autodesk.Revit.DB.Document document,System.Boolean allowVaryBetweenGroups) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject
 	{

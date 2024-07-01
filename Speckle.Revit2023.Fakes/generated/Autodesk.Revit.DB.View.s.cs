@@ -2,8 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class View : Autodesk.Revit.DB.Element
 {
-	public virtual ICollection<Autodesk.Revit.DB.ElementId> GetFilters() => throw new System.NotImplementedException();
-	public virtual IList<Autodesk.Revit.DB.ElementId> GetOrderedFilters() => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> GetFilters() => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.ElementId> GetOrderedFilters() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.OverrideGraphicSettings GetFilterOverrides(Autodesk.Revit.DB.ElementId filterElementId) => throw new System.NotImplementedException();
 	public virtual void SetFilterOverrides(Autodesk.Revit.DB.ElementId filterElementId,Autodesk.Revit.DB.OverrideGraphicSettings overrideGraphicSettings) => throw new System.NotImplementedException();
 	public virtual void AddFilter(Autodesk.Revit.DB.ElementId filterElementId) => throw new System.NotImplementedException();
@@ -26,11 +26,11 @@ public partial class View : Autodesk.Revit.DB.Element
 	public virtual void SetViewDisplayModel(Autodesk.Revit.DB.ViewDisplayModel viewDisplayModel) => throw new System.NotImplementedException();
 	public virtual void SetColorFillSchemeId(Autodesk.Revit.DB.ElementId categoryId,Autodesk.Revit.DB.ElementId schemeId) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ElementId GetColorFillSchemeId(Autodesk.Revit.DB.ElementId categoryId) => throw new System.NotImplementedException();
-	public virtual ICollection<Autodesk.Revit.DB.ElementId> SupportedColorFillCategoryIds() => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> SupportedColorFillCategoryIds() => throw new System.NotImplementedException();
 	public virtual System.Boolean CanApplyColorFillScheme(Autodesk.Revit.DB.ElementId categoryId,Autodesk.Revit.DB.ElementId schemeId) => throw new System.NotImplementedException();
-	public virtual IList<Autodesk.Revit.DB.ElementId> GetTemplateParameterIds() => throw new System.NotImplementedException();
-	public virtual ICollection<Autodesk.Revit.DB.ElementId> GetNonControlledTemplateParameterIds() => throw new System.NotImplementedException();
-	public virtual void SetNonControlledTemplateParameterIds(ICollection<Autodesk.Revit.DB.ElementId> newSet) => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.ElementId> GetTemplateParameterIds() => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> GetNonControlledTemplateParameterIds() => throw new System.NotImplementedException();
+	public virtual void SetNonControlledTemplateParameterIds(System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> newSet) => throw new System.NotImplementedException();
 	public virtual void ApplyViewTemplateParameters(Autodesk.Revit.DB.View otherView) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidViewTemplate(Autodesk.Revit.DB.ElementId templateId) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsViewValidForTemplateCreation() => throw new System.NotImplementedException();
@@ -39,17 +39,17 @@ public partial class View : Autodesk.Revit.DB.Element
 	public virtual void Print() => throw new System.NotImplementedException();
 	public virtual void Print(Autodesk.Revit.DB.View viewTemplate,System.Boolean useCurrentPrintSettings) => throw new System.NotImplementedException();
 	public virtual void Print(System.Boolean useCurrentPrintSettings) => throw new System.NotImplementedException();
-	public virtual void HideElements(ICollection<Autodesk.Revit.DB.ElementId> elementIdSet) => throw new System.NotImplementedException();
-	public virtual void UnhideElements(ICollection<Autodesk.Revit.DB.ElementId> elementIdSet) => throw new System.NotImplementedException();
+	public virtual void HideElements(System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> elementIdSet) => throw new System.NotImplementedException();
+	public virtual void UnhideElements(System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> elementIdSet) => throw new System.NotImplementedException();
 	public virtual void ShowActiveWorkPlane() => throw new System.NotImplementedException();
 	public virtual void HideActiveWorkPlane() => throw new System.NotImplementedException();
 	public virtual System.Boolean HasViewTransforms() => throw new System.NotImplementedException();
-	public virtual IList<Autodesk.Revit.DB.TransformWithBoundary> GetModelToProjectionTransforms() => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.TransformWithBoundary> GetModelToProjectionTransforms() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ViewCropRegionShapeManager GetCropRegionShapeManager() => throw new System.NotImplementedException();
 	public static Autodesk.Revit.DB.ViewCropRegionShapeManager GetCropRegionShapeManagerForReferenceCallout(Autodesk.Revit.DB.Document doc,Autodesk.Revit.DB.ElementId callout) => throw new System.NotImplementedException();
-	public virtual ICollection<Autodesk.Revit.DB.ElementId> GetReferenceCallouts() => throw new System.NotImplementedException();
-	public virtual ICollection<Autodesk.Revit.DB.ElementId> GetReferenceSections() => throw new System.NotImplementedException();
-	public virtual ICollection<Autodesk.Revit.DB.ElementId> GetReferenceElevations() => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> GetReferenceCallouts() => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> GetReferenceSections() => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> GetReferenceElevations() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ElementId GetCalloutParentId() => throw new System.NotImplementedException();
 	public virtual void RemoveCalloutParent() => throw new System.NotImplementedException();
 	public virtual void RestoreCalloutParent() => throw new System.NotImplementedException();
@@ -69,14 +69,14 @@ public partial class View : Autodesk.Revit.DB.Element
 	public virtual System.Boolean IsTemporaryViewPropertiesModeEnabled() => throw new System.NotImplementedException();
 	public virtual System.String GetTemporaryViewPropertiesName() => throw new System.NotImplementedException();
 	public virtual void HideElementTemporary(Autodesk.Revit.DB.ElementId elementId) => throw new System.NotImplementedException();
-	public virtual void HideElementsTemporary(ICollection<Autodesk.Revit.DB.ElementId> elementIdSet) => throw new System.NotImplementedException();
+	public virtual void HideElementsTemporary(System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> elementIdSet) => throw new System.NotImplementedException();
 	public virtual System.Boolean CanCategoryBeHiddenTemporary(Autodesk.Revit.DB.ElementId elementId) => throw new System.NotImplementedException();
 	public virtual void HideCategoryTemporary(Autodesk.Revit.DB.ElementId elementId) => throw new System.NotImplementedException();
-	public virtual void HideCategoriesTemporary(ICollection<Autodesk.Revit.DB.ElementId> elementIds) => throw new System.NotImplementedException();
-	public virtual void IsolateElementsTemporary(ICollection<Autodesk.Revit.DB.ElementId> elementIds) => throw new System.NotImplementedException();
+	public virtual void HideCategoriesTemporary(System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> elementIds) => throw new System.NotImplementedException();
+	public virtual void IsolateElementsTemporary(System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> elementIds) => throw new System.NotImplementedException();
 	public virtual void IsolateElementTemporary(Autodesk.Revit.DB.ElementId elementId) => throw new System.NotImplementedException();
 	public virtual void IsolateCategoryTemporary(Autodesk.Revit.DB.ElementId elementId) => throw new System.NotImplementedException();
-	public virtual void IsolateCategoriesTemporary(ICollection<Autodesk.Revit.DB.ElementId> elementIds) => throw new System.NotImplementedException();
+	public virtual void IsolateCategoriesTemporary(System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> elementIds) => throw new System.NotImplementedException();
 	public virtual System.Boolean CanCategoryBeHidden(Autodesk.Revit.DB.ElementId elementId) => throw new System.NotImplementedException();
 	public virtual void SetCategoryHidden(Autodesk.Revit.DB.ElementId categoryId,System.Boolean hide) => throw new System.NotImplementedException();
 	public virtual System.Boolean GetCategoryHidden(Autodesk.Revit.DB.ElementId categoryId) => throw new System.NotImplementedException();
@@ -98,7 +98,7 @@ public partial class View : Autodesk.Revit.DB.Element
 	public virtual System.Boolean HasViewDiscipline() => throw new System.NotImplementedException();
 	public virtual System.Boolean CanModifyViewDiscipline() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ElementId GetPrimaryViewId() => throw new System.NotImplementedException();
-	public virtual ICollection<Autodesk.Revit.DB.ElementId> GetDependentViewIds() => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> GetDependentViewIds() => throw new System.NotImplementedException();
 	public virtual void SetCategoryOverrides(Autodesk.Revit.DB.ElementId categoryId,Autodesk.Revit.DB.OverrideGraphicSettings overrideGraphicSettings) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.OverrideGraphicSettings GetCategoryOverrides(Autodesk.Revit.DB.ElementId categoryId) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsCategoryOverridable(Autodesk.Revit.DB.ElementId categoryId) => throw new System.NotImplementedException();

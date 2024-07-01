@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class CompoundStructure : System.IDisposable
 {
-	public virtual IList<Autodesk.Revit.DB.CompoundStructureLayer> GetLayers() => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.CompoundStructureLayer> GetLayers() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsEqual(Autodesk.Revit.DB.CompoundStructure otherStructure) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsVerticallyHomogeneous() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.CompoundStructure GetSimpleCompoundStructure(System.Double wallHeight,System.Double distAboveBase) => throw new System.NotImplementedException();
@@ -21,7 +21,7 @@ public partial class CompoundStructure : System.IDisposable
 	public virtual void SetDeckProfileId(System.Int32 layerIdx,Autodesk.Revit.DB.ElementId profileId) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.StructDeckEmbeddingType GetDeckEmbeddingType(System.Int32 layerIdx) => throw new System.NotImplementedException();
 	public virtual void SetDeckEmbeddingType(System.Int32 layerIdx,Autodesk.Revit.DB.StructDeckEmbeddingType embedType) => throw new System.NotImplementedException();
-	public virtual void SetLayers(IList<Autodesk.Revit.DB.CompoundStructureLayer> layers) => throw new System.NotImplementedException();
+	public virtual void SetLayers(System.Collections.Generic.IList<Autodesk.Revit.DB.CompoundStructureLayer> layers) => throw new System.NotImplementedException();
 	public virtual void SetLayer(System.Int32 layerIdx,Autodesk.Revit.DB.CompoundStructureLayer layer) => throw new System.NotImplementedException();
 	public virtual System.Boolean ParticipatesInWrapping(System.Int32 layerIdx) => throw new System.NotImplementedException();
 	public virtual void SetParticipatesInWrapping(System.Int32 layerIdx,System.Boolean participatesInWrapping) => throw new System.NotImplementedException();
@@ -31,24 +31,24 @@ public partial class CompoundStructure : System.IDisposable
 	public virtual System.Boolean IsLayerValid(System.Int32 layerIdx,Autodesk.Revit.DB.CompoundStructureLayer layer) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidSampleHeight(System.Double height) => throw new System.NotImplementedException();
 	public virtual System.Boolean CanSplitAndMergeRegionsBeUsed() => throw new System.NotImplementedException();
-	public virtual IList<System.Int32> GetRegionsAssociatedToLayer(System.Int32 layerIdx) => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.IList<System.Int32> GetRegionsAssociatedToLayer(System.Int32 layerIdx) => throw new System.NotImplementedException();
 	public virtual System.Int32 GetLayerAssociatedToRegion(System.Int32 regionId) => throw new System.NotImplementedException();
 	public virtual void AssociateRegionWithLayer(System.Int32 regionId,System.Int32 layerIdx) => throw new System.NotImplementedException();
-	public virtual IList<System.Int32> GetRegionIds() => throw new System.NotImplementedException();
-	public virtual IList<System.Int32> GetSegmentIds() => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.IList<System.Int32> GetRegionIds() => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.IList<System.Int32> GetSegmentIds() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidRegionId(System.Int32 regionId) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsSimpleRegion(System.Int32 regionId) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsRectangularRegion(System.Int32 regionId) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidSegmentId(System.Int32 segmentId) => throw new System.NotImplementedException();
-	public virtual IList<System.Int32> GetAdjacentRegions(System.Int32 segmentId) => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.IList<System.Int32> GetAdjacentRegions(System.Int32 segmentId) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.RectangularGridSegmentOrientation GetSegmentOrientation(System.Int32 segmentId) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.BoundingBoxUV GetRegionEnvelope(System.Int32 regionId) => throw new System.NotImplementedException();
 	public virtual System.Double GetSegmentCoordinate(System.Int32 segmentId) => throw new System.NotImplementedException();
 	public virtual System.Int32 MergeRegionsAdjacentToSegment(System.Int32 segmentId,System.Int32 layerIdxForMergedRegion) => throw new System.NotImplementedException();
 	public virtual System.Int32 SplitRegion(Autodesk.Revit.DB.UV gridUV,Autodesk.Revit.DB.RectangularGridSegmentOrientation splitDirection) => throw new System.NotImplementedException();
-	public virtual IList<System.Int32> GetExtendableRegionIds(System.Boolean top) => throw new System.NotImplementedException();
-	public virtual void SetExtendableRegionIds(System.Boolean top,IList<System.Int32> regionIds) => throw new System.NotImplementedException();
-	public virtual IList<System.Int32> GetRegionsAlongLevel(System.Double height) => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.IList<System.Int32> GetExtendableRegionIds(System.Boolean top) => throw new System.NotImplementedException();
+	public virtual void SetExtendableRegionIds(System.Boolean top,System.Collections.Generic.IList<System.Int32> regionIds) => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.IList<System.Int32> GetRegionsAlongLevel(System.Double height) => throw new System.NotImplementedException();
 	public virtual System.Boolean ChangeRegionWidth(System.Int32 regionId,System.Double newWidth) => throw new System.NotImplementedException();
 	public virtual void RemoveWallSweep(Autodesk.Revit.DB.WallSweepType wallSweepType,System.Int32 id) => throw new System.NotImplementedException();
 	public virtual void ClearWallSweeps(Autodesk.Revit.DB.WallSweepType wallSweepType) => throw new System.NotImplementedException();
@@ -57,7 +57,7 @@ public partial class CompoundStructure : System.IDisposable
 	public virtual System.Double GetOffsetForLocationLine(Autodesk.Revit.DB.WallLocationLine wallLocationLine) => throw new System.NotImplementedException();
 	public virtual System.Int32 GetFirstCoreLayerIndex() => throw new System.NotImplementedException();
 	public virtual System.Int32 GetLastCoreLayerIndex() => throw new System.NotImplementedException();
-	public static Autodesk.Revit.DB.CompoundStructure CreateSimpleCompoundStructure(IList<Autodesk.Revit.DB.CompoundStructureLayer> layers) => throw new System.NotImplementedException();
+	public static Autodesk.Revit.DB.CompoundStructure CreateSimpleCompoundStructure(System.Collections.Generic.IList<Autodesk.Revit.DB.CompoundStructureLayer> layers) => throw new System.NotImplementedException();
 	public static Autodesk.Revit.DB.CompoundStructure CreateSingleLayerCompoundStructure(System.Double sampleHeight,Autodesk.Revit.DB.MaterialFunctionAssignment layerFunction,System.Double width,Autodesk.Revit.DB.ElementId materialId) => throw new System.NotImplementedException();
 	public static Autodesk.Revit.DB.CompoundStructure CreateSingleLayerCompoundStructure(Autodesk.Revit.DB.MaterialFunctionAssignment layerFunction,System.Double width,Autodesk.Revit.DB.ElementId materialId) => throw new System.NotImplementedException();
 	public static System.Double GetMinimumLayerThickness() => throw new System.NotImplementedException();

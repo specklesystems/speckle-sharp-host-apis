@@ -3,8 +3,8 @@ namespace Autodesk.Revit.DB;
 public partial class Face : Autodesk.Revit.DB.GeometryObject
 {
 	public virtual Autodesk.Revit.DB.Surface GetSurface() => throw new System.NotImplementedException();
-	public virtual IList<Autodesk.Revit.DB.Face> GetRegions() => throw new System.NotImplementedException();
-	public virtual IList<Autodesk.Revit.DB.CurveLoop> GetEdgesAsCurveLoops() => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.Face> GetRegions() => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.CurveLoop> GetEdgesAsCurveLoops() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.Mesh Triangulate(System.Double levelOfDetail) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.Mesh Triangulate() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.XYZ Evaluate(Autodesk.Revit.DB.UV @params) => throw new System.NotImplementedException();

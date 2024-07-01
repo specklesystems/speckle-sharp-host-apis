@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class Curve : Autodesk.Revit.DB.GeometryObject
 {
-	public virtual IList<Autodesk.Revit.DB.XYZ> Tessellate() => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.XYZ> Tessellate() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.XYZ Evaluate(System.Double parameter,System.Boolean normalized) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.XYZ GetEndPoint(System.Int32 index) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.Reference GetEndPointReference(System.Int32 index) => throw new System.NotImplementedException();

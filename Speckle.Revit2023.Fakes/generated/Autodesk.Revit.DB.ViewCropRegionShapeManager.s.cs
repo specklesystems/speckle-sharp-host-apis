@@ -12,7 +12,7 @@ public partial class ViewCropRegionShapeManager : System.IDisposable
 	public virtual System.Double GetSplitRegionMinimum(System.Int32 regionIndex) => throw new System.NotImplementedException();
 	public virtual System.Double GetSplitRegionMaximum(System.Int32 regionIndex) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.XYZ GetSplitRegionOffset(System.Int32 regionIndex) => throw new System.NotImplementedException();
-	public virtual IList<Autodesk.Revit.DB.CurveLoop> GetCropShape() => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.CurveLoop> GetCropShape() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.CurveLoop GetAnnotationCropShape() => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject

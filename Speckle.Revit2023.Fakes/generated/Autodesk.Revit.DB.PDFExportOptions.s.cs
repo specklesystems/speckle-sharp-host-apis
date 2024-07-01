@@ -3,9 +3,9 @@ namespace Autodesk.Revit.DB;
 public partial class PDFExportOptions : System.IDisposable
 {
 	public PDFExportOptions() => throw new System.NotImplementedException();
-	public virtual IList<Autodesk.Revit.DB.TableCellCombinedParameterData> GetNamingRule() => throw new System.NotImplementedException();
-	public virtual void SetNamingRule(IList<Autodesk.Revit.DB.TableCellCombinedParameterData> namingRule) => throw new System.NotImplementedException();
-	public static System.Boolean IsValidNamingRule(IList<Autodesk.Revit.DB.TableCellCombinedParameterData> namingRule) => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.TableCellCombinedParameterData> GetNamingRule() => throw new System.NotImplementedException();
+	public virtual void SetNamingRule(System.Collections.Generic.IList<Autodesk.Revit.DB.TableCellCombinedParameterData> namingRule) => throw new System.NotImplementedException();
+	public static System.Boolean IsValidNamingRule(System.Collections.Generic.IList<Autodesk.Revit.DB.TableCellCombinedParameterData> namingRule) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject
 	{

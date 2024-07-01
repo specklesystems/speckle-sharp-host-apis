@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB;
 
-public partial class FilteredElementIterator : IEnumerator<Autodesk.Revit.DB.Element>
+public partial class FilteredElementIterator : System.Collections.Generic.IEnumerator<Autodesk.Revit.DB.Element>
 {
 	public virtual Autodesk.Revit.DB.Element GetCurrent() => throw new System.NotImplementedException();
 	public virtual System.Boolean MoveNext() => throw new System.NotImplementedException();

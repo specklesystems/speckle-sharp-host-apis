@@ -3,8 +3,8 @@ namespace Autodesk.Revit.DB;
 public partial class Edge : Autodesk.Revit.DB.GeometryObject
 {
 	public virtual Autodesk.Revit.DB.Face GetFace(System.Int32 index) => throw new System.NotImplementedException();
-	public virtual IList<Autodesk.Revit.DB.XYZ> Tessellate() => throw new System.NotImplementedException();
-	public virtual IList<Autodesk.Revit.DB.UV> TessellateOnFace(Autodesk.Revit.DB.Face face) => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.XYZ> Tessellate() => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.UV> TessellateOnFace(Autodesk.Revit.DB.Face face) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.XYZ Evaluate(System.Double param) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.UV EvaluateOnFace(System.Double param,Autodesk.Revit.DB.Face face) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.Curve AsCurve() => throw new System.NotImplementedException();

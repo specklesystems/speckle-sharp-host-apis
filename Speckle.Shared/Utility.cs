@@ -35,14 +35,14 @@ public partial class Generator
       return type.FullName.NotNull();
     }
 
-    var nonGenericName = type.Name.Split('`').First();
+    var nonGenericName = type.FullName.Split('`').First();
     return $"{nonGenericName}<{string.Join(", ", type.GetGenericArguments().Select(ta => FormGenericType(ta)))}>";
   }
 
   private string FixName(string name) =>
     name switch
     {
-      "lock" or "params" or "string" => "@" + name,
+      "lock" or "params" or "string" or "override" => "@" + name,
       _ => name
     };
 }

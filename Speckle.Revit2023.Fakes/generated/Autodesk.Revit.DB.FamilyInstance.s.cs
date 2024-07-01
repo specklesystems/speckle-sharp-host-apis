@@ -7,19 +7,19 @@ public partial class FamilyInstance : Autodesk.Revit.DB.Instance
 	public virtual System.Boolean rotate() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ElementId Split(System.Double param) => throw new System.NotImplementedException();
 	public virtual void FlipFromToRoom() => throw new System.NotImplementedException();
-	public virtual ICollection<Autodesk.Revit.DB.ElementId> GetSubComponentIds() => throw new System.NotImplementedException();
-	public virtual ICollection<Autodesk.Revit.DB.ElementId> GetCopingIds() => throw new System.NotImplementedException();
-	public virtual System.Boolean SetCopingIds(ICollection<Autodesk.Revit.DB.ElementId> cutters) => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> GetSubComponentIds() => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> GetCopingIds() => throw new System.NotImplementedException();
+	public virtual System.Boolean SetCopingIds(System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> cutters) => throw new System.NotImplementedException();
 	public virtual System.Boolean AddCoping(Autodesk.Revit.DB.FamilyInstance cutter) => throw new System.NotImplementedException();
 	public virtual System.Boolean RemoveCoping(Autodesk.Revit.DB.FamilyInstance cutter) => throw new System.NotImplementedException();
-	public virtual IList<Autodesk.Revit.DB.FamilyPointPlacementReference> GetFamilyPointPlacementReferences() => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.FamilyPointPlacementReference> GetFamilyPointPlacementReferences() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.GeometryElement GetOriginalGeometry(Autodesk.Revit.DB.Options options) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.XYZ GetSpatialElementCalculationPoint() => throw new System.NotImplementedException();
-	public virtual IList<Autodesk.Revit.DB.XYZ> GetSpatialElementFromToCalculationPoints() => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.XYZ> GetSpatialElementFromToCalculationPoints() => throw new System.NotImplementedException();
 	public virtual System.Boolean HasModifiedGeometry() => throw new System.NotImplementedException();
 	public virtual System.Boolean HasSweptProfile() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.SweptProfile GetSweptProfile() => throw new System.NotImplementedException();
-	public virtual IList<Autodesk.Revit.DB.Reference> GetReferences(Autodesk.Revit.DB.FamilyInstanceReferenceType referenceType) => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.Reference> GetReferences(Autodesk.Revit.DB.FamilyInstanceReferenceType referenceType) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.FamilyInstanceReferenceType GetReferenceType(Autodesk.Revit.DB.Reference reference) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.Reference GetReferenceByName(System.String name) => throw new System.NotImplementedException();
 	public virtual System.String GetReferenceName(Autodesk.Revit.DB.Reference reference) => throw new System.NotImplementedException();
@@ -116,14 +116,31 @@ public partial class FamilyInstance : Autodesk.Revit.DB.Instance
 	{
 		get => throw new System.NotImplementedException();
 	}
+	public virtual Autodesk.Revit.DB.Mechanical.Space Space
+	{
+		get => throw new System.NotImplementedException();
+	}
 	public virtual Autodesk.Revit.DB.Architecture.Room Room
 	{
 		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.Structure.StructuralType StructuralType
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.Structure.StructuralInstanceUsage StructuralUsage
+	{
+		get => throw new System.NotImplementedException();
+		set {}
 	}
 	public virtual Autodesk.Revit.DB.ElementId StructuralMaterialId
 	{
 		get => throw new System.NotImplementedException();
 		set {}
+	}
+	public virtual Autodesk.Revit.DB.Structure.StructuralMaterialType StructuralMaterialType
+	{
+		get => throw new System.NotImplementedException();
 	}
 	public virtual Autodesk.Revit.DB.MEPModel MEPModel
 	{

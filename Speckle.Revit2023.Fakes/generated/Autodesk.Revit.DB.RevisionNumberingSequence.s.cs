@@ -8,7 +8,7 @@ public partial class RevisionNumberingSequence : Autodesk.Revit.DB.Element
 	public virtual void SetNumericRevisionSettings(Autodesk.Revit.DB.NumericRevisionSettings settings) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.AlphanumericRevisionSettings GetAlphanumericRevisionSettings() => throw new System.NotImplementedException();
 	public virtual void SetAlphanumericRevisionSettings(Autodesk.Revit.DB.AlphanumericRevisionSettings settings) => throw new System.NotImplementedException();
-	public static ISet<Autodesk.Revit.DB.ElementId> GetAllRevisionNumberingSequences(Autodesk.Revit.DB.Document document) => throw new System.NotImplementedException();
+	public static System.Collections.Generic.ISet<Autodesk.Revit.DB.ElementId> GetAllRevisionNumberingSequences(Autodesk.Revit.DB.Document document) => throw new System.NotImplementedException();
 	public virtual System.Boolean HasValidRevisionSettingsForNumberType() => throw new System.NotImplementedException();
 	public virtual System.Boolean HasValidNumericRevisionSettings() => throw new System.NotImplementedException();
 	public virtual System.Boolean HasValidAlphanumericRevisionSettings() => throw new System.NotImplementedException();

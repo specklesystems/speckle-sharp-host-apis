@@ -3,7 +3,7 @@ namespace Autodesk.Revit.DB;
 public partial class MeshFromGeometryOperationResult : System.IDisposable
 {
 	public virtual Autodesk.Revit.DB.Mesh GetMesh() => throw new System.NotImplementedException();
-	public virtual IList<Autodesk.Revit.DB.MeshFromGeometryOperationIssue> GetIssues() => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.MeshFromGeometryOperationIssue> GetIssues() => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject
 	{

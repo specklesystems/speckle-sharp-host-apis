@@ -24,7 +24,7 @@ public partial class Opening : Autodesk.Revit.DB.Element
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public virtual IList<Autodesk.Revit.DB.XYZ> BoundaryRect
+	public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.XYZ> BoundaryRect
 	{
 		get => throw new System.NotImplementedException();
 	}

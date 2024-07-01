@@ -12,7 +12,7 @@ public partial class Transform1D : System.IDisposable
 	public virtual System.Double OfPoint(System.Double point) => throw new System.NotImplementedException();
 	public virtual System.Double OfVector(System.Double vector) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.Transform1D GetInverse() => throw new System.NotImplementedException();
-	public virtual IList<System.Double> TransformParameterDomain(System.Double domainStart,System.Double domainEnd) => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.IList<System.Double> TransformParameterDomain(System.Double domainStart,System.Double domainEnd) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject
 	{

@@ -8,7 +8,7 @@ public partial class UIView : System.IDisposable
 	public virtual void Zoom(System.Double zoomFactor) => throw new System.NotImplementedException();
 	public virtual void ZoomSheetSize() => throw new System.NotImplementedException();
 	public virtual void ZoomAndCenterRectangle(Autodesk.Revit.DB.XYZ viewCorner1,Autodesk.Revit.DB.XYZ viewCorner2) => throw new System.NotImplementedException();
-	public virtual IList<Autodesk.Revit.DB.XYZ> GetZoomCorners() => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.XYZ> GetZoomCorners() => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject
 	{

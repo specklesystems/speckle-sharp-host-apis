@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class FamilySizeTableManager : System.IDisposable
 {
-	public virtual IList<System.String> GetAllSizeTableNames() => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.IList<System.String> GetAllSizeTableNames() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.FamilySizeTable GetSizeTable(System.String tableName) => throw new System.NotImplementedException();
 	public virtual System.Boolean HasSizeTable(System.String tableName) => throw new System.NotImplementedException();
 	public virtual System.Boolean ImportSizeTable(Autodesk.Revit.DB.Document document,System.String filePath,Autodesk.Revit.DB.FamilySizeTableErrorInfo errorInfo) => throw new System.NotImplementedException();

@@ -1,9 +1,9 @@
 namespace Autodesk.Revit.DB;
 
-public partial class CurveLoop : IEnumerable<Autodesk.Revit.DB.Curve>,System.IDisposable
+public partial class CurveLoop : System.Collections.Generic.IEnumerable<Autodesk.Revit.DB.Curve>,System.IDisposable
 {
 	public CurveLoop() => throw new System.NotImplementedException();
-	public static Autodesk.Revit.DB.CurveLoop Create(IList<Autodesk.Revit.DB.Curve> curves) => throw new System.NotImplementedException();
+	public static Autodesk.Revit.DB.CurveLoop Create(System.Collections.Generic.IList<Autodesk.Revit.DB.Curve> curves) => throw new System.NotImplementedException();
 	public virtual void Append(Autodesk.Revit.DB.Curve curve) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.Plane GetPlane() => throw new System.NotImplementedException();
 	public virtual System.Boolean HasPlane() => throw new System.NotImplementedException();
@@ -19,11 +19,11 @@ public partial class CurveLoop : IEnumerable<Autodesk.Revit.DB.Curve>,System.IDi
 	public virtual System.Boolean IsCounterclockwise(Autodesk.Revit.DB.XYZ normal) => throw new System.NotImplementedException();
 	public virtual void Flip() => throw new System.NotImplementedException();
 	public static Autodesk.Revit.DB.CurveLoop CreateViaCopy(Autodesk.Revit.DB.CurveLoop original) => throw new System.NotImplementedException();
-	public static Autodesk.Revit.DB.CurveLoop CreateViaOffset(Autodesk.Revit.DB.CurveLoop original,IList<System.Double> offsetDists,Autodesk.Revit.DB.XYZ normal) => throw new System.NotImplementedException();
+	public static Autodesk.Revit.DB.CurveLoop CreateViaOffset(Autodesk.Revit.DB.CurveLoop original,System.Collections.Generic.IList<System.Double> offsetDists,Autodesk.Revit.DB.XYZ normal) => throw new System.NotImplementedException();
 	public static Autodesk.Revit.DB.CurveLoop CreateViaOffset(Autodesk.Revit.DB.CurveLoop original,System.Double offsetDist,Autodesk.Revit.DB.XYZ normal) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.CurveLoopIterator GetCurveLoopIterator() => throw new System.NotImplementedException();
 	public virtual System.Int32 NumberOfCurves() => throw new System.NotImplementedException();
-	public virtual IEnumerator<Autodesk.Revit.DB.Curve> GetEnumerator() => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.IEnumerator<Autodesk.Revit.DB.Curve> GetEnumerator() => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject
 	{

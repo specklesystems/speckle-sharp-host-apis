@@ -2,9 +2,9 @@ namespace Autodesk.Revit.DB;
 
 public partial class ScheduleField : System.IDisposable
 {
-	public virtual System.Boolean IsValidCombinedParameters(IList<Autodesk.Revit.DB.TableCellCombinedParameterData> data) => throw new System.NotImplementedException();
-	public virtual IList<Autodesk.Revit.DB.TableCellCombinedParameterData> GetCombinedParameters() => throw new System.NotImplementedException();
-	public virtual void SetCombinedParameters(IList<Autodesk.Revit.DB.TableCellCombinedParameterData> data) => throw new System.NotImplementedException();
+	public virtual System.Boolean IsValidCombinedParameters(System.Collections.Generic.IList<Autodesk.Revit.DB.TableCellCombinedParameterData> data) => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.TableCellCombinedParameterData> GetCombinedParameters() => throw new System.NotImplementedException();
+	public virtual void SetCombinedParameters(System.Collections.Generic.IList<Autodesk.Revit.DB.TableCellCombinedParameterData> data) => throw new System.NotImplementedException();
 	public virtual System.Boolean CreatesCircularReferences(Autodesk.Revit.DB.ScheduleFieldId fieldId) => throw new System.NotImplementedException();
 	public virtual System.Boolean CanTotal() => throw new System.NotImplementedException();
 	public virtual System.Boolean CanTotalByAssemblyType() => throw new System.NotImplementedException();

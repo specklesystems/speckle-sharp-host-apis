@@ -9,6 +9,11 @@ public partial class ModelCurve : Autodesk.Revit.DB.CurveElement
 	{
 		get => throw new System.NotImplementedException();
 	}
+	public virtual Autodesk.Revit.DB.Structure.TrussCurveType TrussCurveType
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 	public virtual Autodesk.Revit.DB.GraphicsStyle Subcategory
 	{
 		get => throw new System.NotImplementedException();

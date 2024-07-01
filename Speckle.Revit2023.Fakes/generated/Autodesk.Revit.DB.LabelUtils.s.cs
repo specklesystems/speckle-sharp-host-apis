@@ -3,6 +3,10 @@ namespace Autodesk.Revit.DB;
 public partial class LabelUtils : System.IDisposable
 {
 	public static System.String GetLabelForBuiltInParameter(Autodesk.Revit.DB.ForgeTypeId parameterTypeId) => throw new System.NotImplementedException();
+	public static System.String GetLabelFor(Autodesk.Revit.DB.Analysis.gbXMLBuildingType buildingType,Autodesk.Revit.DB.Document document) => throw new System.NotImplementedException();
+	public static System.String GetLabelFor(Autodesk.Revit.DB.Plumbing.PipeFlowState pipeFlowState,Autodesk.Revit.DB.Document doc) => throw new System.NotImplementedException();
+	public static System.String GetLabelFor(Autodesk.Revit.DB.Plumbing.PipeLossMethodType pipeLossMethodType,Autodesk.Revit.DB.Document doc) => throw new System.NotImplementedException();
+	public static System.String GetLabelFor(Autodesk.Revit.DB.Mechanical.DuctLossMethodType ductLossMethodType,Autodesk.Revit.DB.Document doc) => throw new System.NotImplementedException();
 	public static System.String GetLabelFor(Autodesk.Revit.DB.BuiltInCategory builtInCategory) => throw new System.NotImplementedException();
 	public static System.String GetLabelFor(Autodesk.Revit.DB.BuiltInParameterGroup builtInParamGroup) => throw new System.NotImplementedException();
 	public static System.String GetLabelFor(Autodesk.Revit.DB.BuiltInParameter builtInParam) => throw new System.NotImplementedException();

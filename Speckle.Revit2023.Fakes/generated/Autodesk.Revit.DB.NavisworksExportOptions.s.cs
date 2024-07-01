@@ -3,8 +3,8 @@ namespace Autodesk.Revit.DB;
 public partial class NavisworksExportOptions : System.IDisposable
 {
 	public NavisworksExportOptions() => throw new System.NotImplementedException();
-	public virtual ICollection<Autodesk.Revit.DB.ElementId> GetSelectedElementIds() => throw new System.NotImplementedException();
-	public virtual void SetSelectedElementIds(ICollection<Autodesk.Revit.DB.ElementId> ids) => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> GetSelectedElementIds() => throw new System.NotImplementedException();
+	public virtual void SetSelectedElementIds(System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> ids) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject
 	{

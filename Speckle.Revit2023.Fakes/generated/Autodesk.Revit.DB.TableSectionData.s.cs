@@ -60,10 +60,10 @@ public partial class TableSectionData : System.IDisposable
 	public virtual Autodesk.Revit.DB.TableCellCalculatedValueData GetCellCalculatedValue(System.Int32 nRow,System.Int32 nCol) => throw new System.NotImplementedException();
 	public virtual void SetCellCalculatedValue(System.Int32 nCol,Autodesk.Revit.DB.TableCellCalculatedValueData pCalcValue) => throw new System.NotImplementedException();
 	public virtual void SetCellCalculatedValue(System.Int32 nRow,System.Int32 nCol,Autodesk.Revit.DB.TableCellCalculatedValueData pCalcValue) => throw new System.NotImplementedException();
-	public virtual IList<Autodesk.Revit.DB.TableCellCombinedParameterData> GetCellCombinedParameters(System.Int32 nCol) => throw new System.NotImplementedException();
-	public virtual IList<Autodesk.Revit.DB.TableCellCombinedParameterData> GetCellCombinedParameters(System.Int32 nRow,System.Int32 nCol) => throw new System.NotImplementedException();
-	public virtual void SetCellCombinedParameters(System.Int32 nCol,IList<Autodesk.Revit.DB.TableCellCombinedParameterData> paramData) => throw new System.NotImplementedException();
-	public virtual void SetCellCombinedParameters(System.Int32 nRow,System.Int32 nCol,IList<Autodesk.Revit.DB.TableCellCombinedParameterData> paramData) => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.TableCellCombinedParameterData> GetCellCombinedParameters(System.Int32 nCol) => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.TableCellCombinedParameterData> GetCellCombinedParameters(System.Int32 nRow,System.Int32 nCol) => throw new System.NotImplementedException();
+	public virtual void SetCellCombinedParameters(System.Int32 nCol,System.Collections.Generic.IList<Autodesk.Revit.DB.TableCellCombinedParameterData> paramData) => throw new System.NotImplementedException();
+	public virtual void SetCellCombinedParameters(System.Int32 nRow,System.Int32 nCol,System.Collections.Generic.IList<Autodesk.Revit.DB.TableCellCombinedParameterData> paramData) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject
 	{

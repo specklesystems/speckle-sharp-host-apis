@@ -1,9 +1,9 @@
 namespace Autodesk.Revit.DB;
 
-public partial class FilteredElementCollector : IEnumerable<Autodesk.Revit.DB.Element>,System.IDisposable
+public partial class FilteredElementCollector : System.Collections.Generic.IEnumerable<Autodesk.Revit.DB.Element>,System.IDisposable
 {
 	public FilteredElementCollector(Autodesk.Revit.DB.Document document,Autodesk.Revit.DB.ElementId viewId) => throw new System.NotImplementedException();
-	public FilteredElementCollector(Autodesk.Revit.DB.Document document,ICollection<Autodesk.Revit.DB.ElementId> elementIds) => throw new System.NotImplementedException();
+	public FilteredElementCollector(Autodesk.Revit.DB.Document document,System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> elementIds) => throw new System.NotImplementedException();
 	public FilteredElementCollector(Autodesk.Revit.DB.Document document) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.FilteredElementCollector OfCategory(Autodesk.Revit.DB.BuiltInCategory category) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.FilteredElementIdIterator GetElementIdIterator() => throw new System.NotImplementedException();
@@ -19,14 +19,14 @@ public partial class FilteredElementCollector : IEnumerable<Autodesk.Revit.DB.El
 	public virtual Autodesk.Revit.DB.FilteredElementCollector WhereElementIsViewIndependent() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.FilteredElementCollector ContainedInDesignOption(Autodesk.Revit.DB.ElementId designOptionId) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.FilteredElementCollector WhereElementIsCurveDriven() => throw new System.NotImplementedException();
-	public virtual Autodesk.Revit.DB.FilteredElementCollector Excluding(ICollection<Autodesk.Revit.DB.ElementId> idsToExclude) => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.FilteredElementCollector Excluding(System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> idsToExclude) => throw new System.NotImplementedException();
 	public virtual System.Int32 GetElementCount() => throw new System.NotImplementedException();
-	public virtual ICollection<Autodesk.Revit.DB.ElementId> ToElementIds() => throw new System.NotImplementedException();
-	public virtual IList<Autodesk.Revit.DB.Element> ToElements() => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> ToElementIds() => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.Element> ToElements() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ElementId FirstElementId() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.Element FirstElement() => throw new System.NotImplementedException();
 	public static System.Boolean IsViewValidForElementIteration(Autodesk.Revit.DB.Document document,Autodesk.Revit.DB.ElementId viewId) => throw new System.NotImplementedException();
-	public virtual IEnumerator<Autodesk.Revit.DB.Element> GetEnumerator() => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.IEnumerator<Autodesk.Revit.DB.Element> GetEnumerator() => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject
 	{

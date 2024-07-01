@@ -17,7 +17,7 @@ public partial class ViewSheetSet : Autodesk.Revit.DB.Element,Autodesk.Revit.DB.
 		get => throw new System.NotImplementedException();
 		set {}
 	}
-	public virtual IReadOnlyList<Autodesk.Revit.DB.View> OrderedViewList
+	public virtual System.Collections.Generic.IReadOnlyList<Autodesk.Revit.DB.View> OrderedViewList
 	{
 		get => throw new System.NotImplementedException();
 		set {}

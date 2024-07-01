@@ -4,8 +4,8 @@ public partial class BaseImportOptions : System.IDisposable
 {
 	public virtual Autodesk.Revit.DB.ForgeTypeId GetDefaultLengthUnit() => throw new System.NotImplementedException();
 	public virtual void SetDefaultLengthUnit(Autodesk.Revit.DB.ForgeTypeId specTypeId) => throw new System.NotImplementedException();
-	public virtual void SetLayerSelection(ICollection<System.String> layerSelection) => throw new System.NotImplementedException();
-	public virtual ICollection<System.String> GetLayerSelection() => throw new System.NotImplementedException();
+	public virtual void SetLayerSelection(System.Collections.Generic.ICollection<System.String> layerSelection) => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.ICollection<System.String> GetLayerSelection() => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject
 	{

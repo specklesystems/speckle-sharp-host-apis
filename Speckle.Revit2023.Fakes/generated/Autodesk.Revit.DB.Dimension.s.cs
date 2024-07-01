@@ -66,7 +66,7 @@ public partial class Dimension : Autodesk.Revit.DB.Element
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public virtual Nullable<System.Double> Value
+	public virtual System.Nullable<System.Double> Value
 	{
 		get => throw new System.NotImplementedException();
 	}

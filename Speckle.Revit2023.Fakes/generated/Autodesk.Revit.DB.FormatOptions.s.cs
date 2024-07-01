@@ -14,8 +14,8 @@ public partial class FormatOptions : System.IDisposable
 	public static System.Boolean CanHaveSymbol(Autodesk.Revit.DB.ForgeTypeId unitTypeId) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidSymbol(Autodesk.Revit.DB.ForgeTypeId symbolTypeId) => throw new System.NotImplementedException();
 	public static System.Boolean IsValidSymbol(Autodesk.Revit.DB.ForgeTypeId unitTypeId,Autodesk.Revit.DB.ForgeTypeId symbolTypeId) => throw new System.NotImplementedException();
-	public virtual IList<Autodesk.Revit.DB.ForgeTypeId> GetValidSymbols() => throw new System.NotImplementedException();
-	public static IList<Autodesk.Revit.DB.ForgeTypeId> GetValidSymbols(Autodesk.Revit.DB.ForgeTypeId unitTypeId) => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.ForgeTypeId> GetValidSymbols() => throw new System.NotImplementedException();
+	public static System.Collections.Generic.IList<Autodesk.Revit.DB.ForgeTypeId> GetValidSymbols(Autodesk.Revit.DB.ForgeTypeId unitTypeId) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidAccuracy(System.Double accuracy) => throw new System.NotImplementedException();
 	public static System.Boolean IsValidAccuracy(Autodesk.Revit.DB.ForgeTypeId unitTypeId,System.Double accuracy) => throw new System.NotImplementedException();
 	public virtual System.Boolean CanSuppressTrailingZeros() => throw new System.NotImplementedException();

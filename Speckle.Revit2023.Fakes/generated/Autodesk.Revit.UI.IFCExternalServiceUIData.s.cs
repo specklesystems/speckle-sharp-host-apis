@@ -3,7 +3,7 @@ namespace Autodesk.Revit.UI;
 public partial class IFCExternalServiceUIData : System.IDisposable
 {
 	public virtual System.IntPtr GetParentHwnd() => throw new System.NotImplementedException();
-	public virtual IList<Autodesk.Revit.DB.ElementId> GetRevitElementIds() => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.ElementId> GetRevitElementIds() => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject
 	{

@@ -23,10 +23,10 @@ public partial class View3D : Autodesk.Revit.DB.View
 	public virtual System.Boolean CanToggleBetweenPerspectiveAndIsometric() => throw new System.NotImplementedException();
 	public virtual void ToggleToPerspective() => throw new System.NotImplementedException();
 	public virtual void ToggleToIsometric() => throw new System.NotImplementedException();
-	public virtual ISet<Autodesk.Revit.DB.ElementId> GetLevelsThatShowGrids() => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.ISet<Autodesk.Revit.DB.ElementId> GetLevelsThatShowGrids() => throw new System.NotImplementedException();
 	public virtual void ShowGridsOnLevel(Autodesk.Revit.DB.ElementId levelId) => throw new System.NotImplementedException();
 	public virtual void HideGridsOnLevel(Autodesk.Revit.DB.ElementId levelId) => throw new System.NotImplementedException();
-	public virtual void ShowGridsOnLevels(ISet<Autodesk.Revit.DB.ElementId> levelsIds) => throw new System.NotImplementedException();
+	public virtual void ShowGridsOnLevels(System.Collections.Generic.ISet<Autodesk.Revit.DB.ElementId> levelsIds) => throw new System.NotImplementedException();
 	public virtual System.Boolean ProjectGridsOnSectionBox
 	{
 		get => throw new System.NotImplementedException();

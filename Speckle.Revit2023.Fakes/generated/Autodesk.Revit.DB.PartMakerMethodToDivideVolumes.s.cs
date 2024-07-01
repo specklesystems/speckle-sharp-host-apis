@@ -3,11 +3,11 @@ namespace Autodesk.Revit.DB;
 public partial class PartMakerMethodToDivideVolumes : System.IDisposable
 {
 	public virtual Autodesk.Revit.DB.Plane GetPlaneOfSketch() => throw new System.NotImplementedException();
-	public virtual IDictionary<Autodesk.Revit.DB.ElementId, System.Double> GetSplitRefsOffsets() => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.IDictionary<Autodesk.Revit.DB.ElementId, System.Double> GetSplitRefsOffsets() => throw new System.NotImplementedException();
 	public static System.Boolean IsElementValidIntersectingReference(Autodesk.Revit.DB.Document document,Autodesk.Revit.DB.ElementId elementId) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsElementValidIntersectingReference(Autodesk.Revit.DB.ElementId elementId) => throw new System.NotImplementedException();
-	public static System.Boolean AreElementsValidIntersectingReferences(Autodesk.Revit.DB.Document document,ICollection<Autodesk.Revit.DB.ElementId> elementIds) => throw new System.NotImplementedException();
-	public virtual System.Boolean AreElementsValidIntersectingReferences(ICollection<Autodesk.Revit.DB.ElementId> elementIds) => throw new System.NotImplementedException();
+	public static System.Boolean AreElementsValidIntersectingReferences(Autodesk.Revit.DB.Document document,System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> elementIds) => throw new System.NotImplementedException();
+	public virtual System.Boolean AreElementsValidIntersectingReferences(System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> elementIds) => throw new System.NotImplementedException();
 	public static System.Boolean IsValidSketchPlane(Autodesk.Revit.DB.Document document,Autodesk.Revit.DB.ElementId sketchPlaneId) => throw new System.NotImplementedException();
 	public virtual System.Boolean UsesReference(Autodesk.Revit.DB.ElementId intersectingReference) => throw new System.NotImplementedException();
 	public virtual void SetOffsetForIntersectingReference(Autodesk.Revit.DB.ElementId intersectingReference,System.Double offset) => throw new System.NotImplementedException();

@@ -8,7 +8,7 @@ public partial class RoutingPreferenceManager : System.IDisposable
 	public virtual void AddRule(Autodesk.Revit.DB.RoutingPreferenceRuleGroupType groupType,Autodesk.Revit.DB.RoutingPreferenceRule rule) => throw new System.NotImplementedException();
 	public virtual void RemoveRule(Autodesk.Revit.DB.RoutingPreferenceRuleGroupType groupType,System.Int32 index) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ElementId GetMEPPartId(Autodesk.Revit.DB.RoutingPreferenceRuleGroupType groupType,Autodesk.Revit.DB.RoutingConditions conditions) => throw new System.NotImplementedException();
-	public virtual IList<Autodesk.Revit.DB.ElementId> GetSharedSizes(System.Double size,Autodesk.Revit.DB.ConnectorProfileType shape) => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.ElementId> GetSharedSizes(System.Double size,Autodesk.Revit.DB.ConnectorProfileType shape) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject
 	{

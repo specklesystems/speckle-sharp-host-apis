@@ -1,0 +1,33 @@
+namespace Autodesk.Revit.DB.Fabrication;
+
+public enum FabricationPartCompareType
+{
+	CutType,
+	Material,
+	Specification,
+	InsulationSpecification,
+	MaterialGauge,
+	DuctFacing,
+	Insulation,
+	Notes,
+	Filename,
+	Description,
+	CID,
+	SkinMaterial,
+	SkinGauge,
+	Section,
+	Status,
+	Service,
+	Pallet,
+	BoxNo,
+	OrderNo,
+	Drawing,
+	Zone,
+	ETag,
+	Alt,
+	Spool,
+	Alias,
+	PCFKey,
+	CustomData,
+	ButtonAlias,
+}

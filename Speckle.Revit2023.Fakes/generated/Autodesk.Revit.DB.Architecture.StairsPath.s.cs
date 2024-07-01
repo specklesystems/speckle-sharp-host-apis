@@ -3,7 +3,7 @@ namespace Autodesk.Revit.DB.Architecture;
 public partial class StairsPath : Autodesk.Revit.DB.Element
 {
 	public static Autodesk.Revit.DB.Architecture.StairsPath Create(Autodesk.Revit.DB.Document document,Autodesk.Revit.DB.LinkElementId stairsId,Autodesk.Revit.DB.ElementId typeId,Autodesk.Revit.DB.ElementId planViewId) => throw new System.NotImplementedException();
-	public static IList<Autodesk.Revit.DB.Architecture.StairsPath> CreateOnMultistoryStairs(Autodesk.Revit.DB.Document document,Autodesk.Revit.DB.LinkElementId multistoryStairsId,Autodesk.Revit.DB.ElementId typeId) => throw new System.NotImplementedException();
+	public static System.Collections.Generic.IList<Autodesk.Revit.DB.Architecture.StairsPath> CreateOnMultistoryStairs(Autodesk.Revit.DB.Document document,Autodesk.Revit.DB.LinkElementId multistoryStairsId,Autodesk.Revit.DB.ElementId typeId) => throw new System.NotImplementedException();
 	public static System.Boolean CanCreateOnMultistoryStairs(Autodesk.Revit.DB.Document document,Autodesk.Revit.DB.LinkElementId multistoryStairsId) => throw new System.NotImplementedException();
 	public virtual System.Boolean ShowDownText
 	{

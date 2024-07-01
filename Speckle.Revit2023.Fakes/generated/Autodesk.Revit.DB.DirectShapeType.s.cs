@@ -7,12 +7,12 @@ public partial class DirectShapeType : Autodesk.Revit.DB.ElementType
 	public virtual void SetFamilyName(System.String name) => throw new System.NotImplementedException();
 	public virtual System.Boolean CanChangeFamilyName() => throw new System.NotImplementedException();
 	public virtual void SetShape(Autodesk.Revit.DB.ShapeBuilder pBuilder) => throw new System.NotImplementedException();
-	public virtual void SetShape(IList<Autodesk.Revit.DB.GeometryObject> pGeomArr) => throw new System.NotImplementedException();
+	public virtual void SetShape(System.Collections.Generic.IList<Autodesk.Revit.DB.GeometryObject> pGeomArr) => throw new System.NotImplementedException();
 	public virtual void AppendShape(Autodesk.Revit.DB.ShapeBuilder ShapeBuilder) => throw new System.NotImplementedException();
-	public virtual void AppendShape(IList<Autodesk.Revit.DB.GeometryObject> pGeomArr,Autodesk.Revit.DB.DirectShapeTargetViewType viewType) => throw new System.NotImplementedException();
-	public virtual void AppendShape(IList<Autodesk.Revit.DB.GeometryObject> pGeomArr) => throw new System.NotImplementedException();
-	public virtual System.Boolean IsValidShape(IList<Autodesk.Revit.DB.GeometryObject> shape,Autodesk.Revit.DB.DirectShapeTargetViewType viewType) => throw new System.NotImplementedException();
-	public virtual System.Boolean IsValidShape(IList<Autodesk.Revit.DB.GeometryObject> shape) => throw new System.NotImplementedException();
+	public virtual void AppendShape(System.Collections.Generic.IList<Autodesk.Revit.DB.GeometryObject> pGeomArr,Autodesk.Revit.DB.DirectShapeTargetViewType viewType) => throw new System.NotImplementedException();
+	public virtual void AppendShape(System.Collections.Generic.IList<Autodesk.Revit.DB.GeometryObject> pGeomArr) => throw new System.NotImplementedException();
+	public virtual System.Boolean IsValidShape(System.Collections.Generic.IList<Autodesk.Revit.DB.GeometryObject> shape,Autodesk.Revit.DB.DirectShapeTargetViewType viewType) => throw new System.NotImplementedException();
+	public virtual System.Boolean IsValidShape(System.Collections.Generic.IList<Autodesk.Revit.DB.GeometryObject> shape) => throw new System.NotImplementedException();
 	public virtual System.Boolean CanCreateParts() => throw new System.NotImplementedException();
 	public virtual void AddReferenceCurve(Autodesk.Revit.DB.Curve refCurve,Autodesk.Revit.DB.DirectShapeReferenceOptions options) => throw new System.NotImplementedException();
 	public virtual void AddReferenceCurve(Autodesk.Revit.DB.Curve refCurve) => throw new System.NotImplementedException();

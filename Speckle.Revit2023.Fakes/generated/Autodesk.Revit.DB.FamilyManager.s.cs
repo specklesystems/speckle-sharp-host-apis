@@ -34,8 +34,8 @@ public partial class FamilyManager : Autodesk.Revit.DB.APIObject
 	public virtual System.Boolean IsParameterLockable(Autodesk.Revit.DB.FamilyParameter familyParameter) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsParameterLocked(Autodesk.Revit.DB.FamilyParameter familyParameter) => throw new System.NotImplementedException();
 	public virtual void SetParameterLocked(Autodesk.Revit.DB.FamilyParameter familyParameter,System.Boolean locked) => throw new System.NotImplementedException();
-	public virtual IList<Autodesk.Revit.DB.FamilyParameter> GetParameters() => throw new System.NotImplementedException();
-	public virtual void ReorderParameters(IList<Autodesk.Revit.DB.FamilyParameter> parameters) => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.FamilyParameter> GetParameters() => throw new System.NotImplementedException();
+	public virtual void ReorderParameters(System.Collections.Generic.IList<Autodesk.Revit.DB.FamilyParameter> parameters) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsUserAssignableParameterGroup(Autodesk.Revit.DB.BuiltInParameterGroup parameterGroup) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsUserAssignableParameterGroup(Autodesk.Revit.DB.ForgeTypeId groupTypeId) => throw new System.NotImplementedException();
 	public virtual void SortParameters(Autodesk.Revit.DB.ParametersOrder order) => throw new System.NotImplementedException();

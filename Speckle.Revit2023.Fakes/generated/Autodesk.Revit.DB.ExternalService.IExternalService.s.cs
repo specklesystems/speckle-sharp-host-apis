@@ -8,6 +8,6 @@ public partial interface IExternalService
 	public  System.String GetDescription();
 	public  System.Boolean IsValidServer(Autodesk.Revit.DB.ExternalService.IExternalServer server);
 	public  System.Boolean Execute(Autodesk.Revit.DB.ExternalService.IExternalServer server,Autodesk.Revit.DB.Document document,Autodesk.Revit.DB.ExternalService.IExternalData data);
-	public  Autodesk.Revit.DB.ExternalService.DisparityResponse OnServersDisparity(Autodesk.Revit.DB.Document document,IList<System.Guid> oldServers);
-	public  void OnServersChanged(Autodesk.Revit.DB.Document document,Autodesk.Revit.DB.ExternalService.ServerChangeCause cause,IList<System.Guid> oldServers);
+	public  Autodesk.Revit.DB.ExternalService.DisparityResponse OnServersDisparity(Autodesk.Revit.DB.Document document,System.Collections.Generic.IList<System.Guid> oldServers);
+	public  void OnServersChanged(Autodesk.Revit.DB.Document document,Autodesk.Revit.DB.ExternalService.ServerChangeCause cause,System.Collections.Generic.IList<System.Guid> oldServers);
 }

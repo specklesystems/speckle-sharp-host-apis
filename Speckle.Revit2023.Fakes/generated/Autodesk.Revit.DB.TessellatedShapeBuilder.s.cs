@@ -11,7 +11,7 @@ public partial class TessellatedShapeBuilder : Autodesk.Revit.DB.ShapeBuilder
 	public virtual void AddFace(Autodesk.Revit.DB.TessellatedFace face) => throw new System.NotImplementedException();
 	public virtual System.Boolean AreTargetAndFallbackCompatible(Autodesk.Revit.DB.TessellatedShapeBuilderTarget target,Autodesk.Revit.DB.TessellatedShapeBuilderFallback fallback) => throw new System.NotImplementedException();
 	public virtual void Build() => throw new System.NotImplementedException();
-	public static Autodesk.Revit.DB.MeshFromGeometryOperationResult CreateMeshByExtrusion(IList<Autodesk.Revit.DB.CurveLoop> profileLoops,Autodesk.Revit.DB.XYZ extrusionDirection,System.Double extrusionDistance,Autodesk.Revit.DB.ElementId materialId) => throw new System.NotImplementedException();
+	public static Autodesk.Revit.DB.MeshFromGeometryOperationResult CreateMeshByExtrusion(System.Collections.Generic.IList<Autodesk.Revit.DB.CurveLoop> profileLoops,Autodesk.Revit.DB.XYZ extrusionDirection,System.Double extrusionDistance,Autodesk.Revit.DB.ElementId materialId) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.TessellatedShapeBuilderResult GetBuildResult() => throw new System.NotImplementedException();
 	public virtual System.Int32 NumberOfCompletedFaceSets
 	{

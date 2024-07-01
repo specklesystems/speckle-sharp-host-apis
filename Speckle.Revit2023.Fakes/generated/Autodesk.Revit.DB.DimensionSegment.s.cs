@@ -48,7 +48,7 @@ public partial class DimensionSegment : Autodesk.Revit.DB.APIObject
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public virtual Nullable<System.Double> Value
+	public virtual System.Nullable<System.Double> Value
 	{
 		get => throw new System.NotImplementedException();
 	}

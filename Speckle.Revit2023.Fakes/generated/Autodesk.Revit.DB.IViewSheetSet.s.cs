@@ -17,7 +17,7 @@ public partial interface IViewSheetSet
 		get;
 		set;
 	}
-	public  IReadOnlyList<Autodesk.Revit.DB.View> OrderedViewList
+	public  System.Collections.Generic.IReadOnlyList<Autodesk.Revit.DB.View> OrderedViewList
 	{
 		get;
 		set;

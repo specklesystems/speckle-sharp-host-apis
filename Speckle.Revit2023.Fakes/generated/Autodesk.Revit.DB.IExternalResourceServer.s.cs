@@ -7,7 +7,7 @@ public partial interface IExternalResourceServer
 	public  System.Boolean IsResourceWellFormed(Autodesk.Revit.DB.ExternalResourceReference extRef);
 	public  System.String GetInSessionPath(Autodesk.Revit.DB.ExternalResourceReference reference,System.String originalDisplayPath);
 	public  Autodesk.Revit.DB.ResourceVersionStatus GetResourceVersionStatus(Autodesk.Revit.DB.ExternalResourceReference reference);
-	public  System.Boolean AreSameResources(IDictionary<System.String, System.String> reference1,IDictionary<System.String, System.String> reference2);
+	public  System.Boolean AreSameResources(System.Collections.Generic.IDictionary<System.String, System.String> reference1,System.Collections.Generic.IDictionary<System.String, System.String> reference2);
 	public  void SetupBrowserData(Autodesk.Revit.DB.ExternalResourceBrowserData browseData);
 	public  System.String GetIconPath();
 	public  System.String GetShortName();

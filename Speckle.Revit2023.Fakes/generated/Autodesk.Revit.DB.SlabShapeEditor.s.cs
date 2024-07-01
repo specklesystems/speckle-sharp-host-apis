@@ -9,7 +9,7 @@ public partial class SlabShapeEditor : System.IDisposable
 	public virtual Autodesk.Revit.DB.SlabShapeCreaseArray DrawSplitLine(Autodesk.Revit.DB.SlabShapeVertex startVertex,Autodesk.Revit.DB.SlabShapeVertex endVertex) => throw new System.NotImplementedException();
 	public virtual void ResetSlabShape() => throw new System.NotImplementedException();
 	public virtual void PickSupport(Autodesk.Revit.DB.Line gLine) => throw new System.NotImplementedException();
-	public virtual void CreateCreasesFromFoldingLines(Autodesk.Revit.DB.Element hostObj,IList<Autodesk.Revit.DB.Reference> references) => throw new System.NotImplementedException();
+	public virtual void CreateCreasesFromFoldingLines(Autodesk.Revit.DB.Element hostObj,System.Collections.Generic.IList<Autodesk.Revit.DB.Reference> references) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject
 	{

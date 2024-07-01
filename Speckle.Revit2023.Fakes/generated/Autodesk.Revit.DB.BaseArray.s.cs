@@ -2,8 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public partial class BaseArray : Autodesk.Revit.DB.Element
 {
-	public virtual ICollection<Autodesk.Revit.DB.ElementId> GetOriginalMemberIds() => throw new System.NotImplementedException();
-	public virtual ICollection<Autodesk.Revit.DB.ElementId> GetCopiedMemberIds() => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> GetOriginalMemberIds() => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> GetCopiedMemberIds() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.FamilyParameter Label
 	{
 		get => throw new System.NotImplementedException();

@@ -5,6 +5,7 @@ public partial class Connector : Autodesk.Revit.DB.IConnector,System.IDisposable
 	public virtual void ConnectTo(Autodesk.Revit.DB.Connector connector) => throw new System.NotImplementedException();
 	public virtual void DisconnectFrom(Autodesk.Revit.DB.Connector connector) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsConnectedTo(Autodesk.Revit.DB.Connector connector) => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.FabricationConnectorInfo GetFabricationConnectorInfo() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.MEPConnectorInfo GetMEPConnectorInfo() => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject
@@ -80,6 +81,22 @@ public partial class Connector : Autodesk.Revit.DB.IConnector,System.IDisposable
 		get => throw new System.NotImplementedException();
 		set {}
 	}
+	public virtual Autodesk.Revit.DB.Plumbing.PipeLossMethodType AssignedPipeLossMethod
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.Mechanical.DuctLossMethodType AssignedDuctLossMethod
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.Mechanical.DuctFlowConfigurationType AssignedDuctFlowConfiguration
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.Plumbing.PipeFlowConfigurationType AssignedPipeFlowConfiguration
+	{
+		get => throw new System.NotImplementedException();
+	}
 	public virtual System.Double AssignedLossCoefficient
 	{
 		get => throw new System.NotImplementedException();
@@ -103,6 +120,18 @@ public partial class Connector : Autodesk.Revit.DB.IConnector,System.IDisposable
 		get => throw new System.NotImplementedException();
 	}
 	public virtual System.Double Demand
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.Plumbing.PipeSystemType PipeSystemType
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.Electrical.ElectricalSystemType ElectricalSystemType
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Autodesk.Revit.DB.Mechanical.DuctSystemType DuctSystemType
 	{
 		get => throw new System.NotImplementedException();
 	}

@@ -93,12 +93,6 @@ public partial class Generator
     {
       throw new ApplicationException($"Not dealing with base WPF types: {type.FullName}");
     }
-    if (type.FullName.StartsWith("Autodesk.Revit.DB.Plumbing") 
-        || type.FullName.StartsWith("Autodesk.Revit.DB.Electrical")
-        || type.FullName.StartsWith("Autodesk.Revit.DB.Fabrication"))
-    {
-      throw new ApplicationException($"Not dealing with base WPF types: {type.FullName}");
-    }
     if (type.FullName.StartsWith("System."))
     {
       return type;

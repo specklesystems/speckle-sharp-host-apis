@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class WorksharingTooltipInfo : System.IDisposable
 {
-	public virtual IList<System.String> GetRequesters() => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.IList<System.String> GetRequesters() => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject
 	{

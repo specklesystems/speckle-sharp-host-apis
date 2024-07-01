@@ -4,7 +4,7 @@ public partial class Segment : Autodesk.Revit.DB.Element
 {
 	public virtual void AddSize(Autodesk.Revit.DB.MEPSize size) => throw new System.NotImplementedException();
 	public virtual void RemoveSize(System.Double nominalDiameter) => throw new System.NotImplementedException();
-	public virtual ICollection<Autodesk.Revit.DB.MEPSize> GetSizes() => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.ICollection<Autodesk.Revit.DB.MEPSize> GetSizes() => throw new System.NotImplementedException();
 	public virtual System.Int32 SizeCount
 	{
 		get => throw new System.NotImplementedException();

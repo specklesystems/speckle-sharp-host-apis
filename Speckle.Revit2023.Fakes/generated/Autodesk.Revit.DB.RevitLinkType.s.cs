@@ -18,7 +18,7 @@ public partial class RevitLinkType : Autodesk.Revit.DB.ElementType
 	public virtual void Unload(Autodesk.Revit.DB.ISaveSharedCoordinatesCallback callback) => throw new System.NotImplementedException();
 	public virtual System.Boolean SavePositions(Autodesk.Revit.DB.ISaveSharedCoordinatesCallback callback) => throw new System.NotImplementedException();
 	public virtual System.Boolean HasSaveablePositions() => throw new System.NotImplementedException();
-	public virtual IDictionary<Autodesk.Revit.DB.ElementId, Autodesk.Revit.DB.ElementId> GetPhaseMap() => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.IDictionary<Autodesk.Revit.DB.ElementId, Autodesk.Revit.DB.ElementId> GetPhaseMap() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.LinkConversionData GetConversionData() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsFromRevitServer() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsFromLocalPath() => throw new System.NotImplementedException();
@@ -27,7 +27,7 @@ public partial class RevitLinkType : Autodesk.Revit.DB.ElementType
 	public static Autodesk.Revit.DB.ElementId GetTopLevelLink(Autodesk.Revit.DB.Document document,Autodesk.Revit.DB.ModelPath path) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ElementId GetParentId() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ElementId GetRootId() => throw new System.NotImplementedException();
-	public virtual ICollection<Autodesk.Revit.DB.ElementId> GetChildIds() => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> GetChildIds() => throw new System.NotImplementedException();
 	public virtual System.Boolean UnloadLocally(Autodesk.Revit.DB.ISaveSharedCoordinatesCallbackForUnloadLocally callback) => throw new System.NotImplementedException();
 	public virtual System.Boolean LocallyUnloaded
 	{

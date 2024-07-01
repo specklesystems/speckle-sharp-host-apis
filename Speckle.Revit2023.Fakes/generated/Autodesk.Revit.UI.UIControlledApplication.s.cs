@@ -6,9 +6,9 @@ public partial class UIControlledApplication
 	public virtual Autodesk.Revit.UI.RibbonPanel CreateRibbonPanel(Autodesk.Revit.UI.Tab tab,System.String panelName) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.UI.RibbonPanel CreateRibbonPanel(System.String panelName) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.UI.RibbonPanel CreateRibbonPanel(System.String tabName,System.String panelName) => throw new System.NotImplementedException();
-	public virtual List<Autodesk.Revit.UI.RibbonPanel> GetRibbonPanels(System.String tabName) => throw new System.NotImplementedException();
-	public virtual List<Autodesk.Revit.UI.RibbonPanel> GetRibbonPanels(Autodesk.Revit.UI.Tab tab) => throw new System.NotImplementedException();
-	public virtual List<Autodesk.Revit.UI.RibbonPanel> GetRibbonPanels() => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.List<Autodesk.Revit.UI.RibbonPanel> GetRibbonPanels(System.String tabName) => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.List<Autodesk.Revit.UI.RibbonPanel> GetRibbonPanels(Autodesk.Revit.UI.Tab tab) => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.List<Autodesk.Revit.UI.RibbonPanel> GetRibbonPanels() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.UI.AddInCommandBinding CreateAddInCommandBinding(Autodesk.Revit.UI.RevitCommandId revitCommandId) => throw new System.NotImplementedException();
 	public virtual void RemoveAddInCommandBinding(Autodesk.Revit.UI.RevitCommandId revitCommandId) => throw new System.NotImplementedException();
 	public virtual void LoadAddIn(System.String fileName) => throw new System.NotImplementedException();

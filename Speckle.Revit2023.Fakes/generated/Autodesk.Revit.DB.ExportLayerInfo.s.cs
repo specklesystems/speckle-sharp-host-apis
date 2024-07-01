@@ -9,10 +9,10 @@ public partial class ExportLayerInfo : System.IDisposable
 	public virtual void RemoveCutLayerModifier(Autodesk.Revit.DB.LayerModifier layerModifier) => throw new System.NotImplementedException();
 	public virtual void ClearLayerModifiers() => throw new System.NotImplementedException();
 	public virtual void ClearCutLayerModifiers() => throw new System.NotImplementedException();
-	public virtual IList<Autodesk.Revit.DB.LayerModifier> GetLayerModifiers() => throw new System.NotImplementedException();
-	public virtual IList<Autodesk.Revit.DB.LayerModifier> GetCutLayerModifiers() => throw new System.NotImplementedException();
-	public virtual void SetLayerModifiers(IList<Autodesk.Revit.DB.LayerModifier> layermodifiers) => throw new System.NotImplementedException();
-	public virtual void SetCutLayerModifiers(IList<Autodesk.Revit.DB.LayerModifier> cutLayermodifiers) => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.LayerModifier> GetLayerModifiers() => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.LayerModifier> GetCutLayerModifiers() => throw new System.NotImplementedException();
+	public virtual void SetLayerModifiers(System.Collections.Generic.IList<Autodesk.Revit.DB.LayerModifier> layermodifiers) => throw new System.NotImplementedException();
+	public virtual void SetCutLayerModifiers(System.Collections.Generic.IList<Autodesk.Revit.DB.LayerModifier> cutLayermodifiers) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject
 	{

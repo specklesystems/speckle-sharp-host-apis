@@ -11,9 +11,9 @@ public partial class DividedSurface : Autodesk.Revit.DB.Element
 	public virtual Autodesk.Revit.DB.FamilyInstance GetTileFamilyInstance(Autodesk.Revit.DB.GridNode gridNode,System.Int32 tileIndex) => throw new System.NotImplementedException();
 	public static Autodesk.Revit.DB.DividedSurface Create(Autodesk.Revit.DB.Document document,Autodesk.Revit.DB.Reference faceReference) => throw new System.NotImplementedException();
 	public static System.Boolean CanBeDivided(Autodesk.Revit.DB.Document document,Autodesk.Revit.DB.Reference reference) => throw new System.NotImplementedException();
-	public static IList<Autodesk.Revit.DB.Reference> GetReferencesWithDividedSurfaces(Autodesk.Revit.DB.Element host) => throw new System.NotImplementedException();
+	public static System.Collections.Generic.IList<Autodesk.Revit.DB.Reference> GetReferencesWithDividedSurfaces(Autodesk.Revit.DB.Element host) => throw new System.NotImplementedException();
 	public static Autodesk.Revit.DB.DividedSurface GetDividedSurfaceForReference(Autodesk.Revit.DB.Document document,Autodesk.Revit.DB.Reference faceReference) => throw new System.NotImplementedException();
-	public virtual ICollection<Autodesk.Revit.DB.ElementId> GetAllIntersectionElements() => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> GetAllIntersectionElements() => throw new System.NotImplementedException();
 	public virtual void AddIntersectionElement(Autodesk.Revit.DB.ElementId newIntersectionElemId) => throw new System.NotImplementedException();
 	public virtual void RemoveIntersectionElement(Autodesk.Revit.DB.ElementId referenceElemIdToRemove) => throw new System.NotImplementedException();
 	public virtual void RemoveAllIntersectionElements() => throw new System.NotImplementedException();

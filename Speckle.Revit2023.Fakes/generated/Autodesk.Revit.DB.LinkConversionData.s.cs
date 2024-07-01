@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class LinkConversionData : System.IDisposable
 {
-	public virtual IDictionary<System.String, System.String> GetOptions() => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.IDictionary<System.String, System.String> GetOptions() => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject
 	{

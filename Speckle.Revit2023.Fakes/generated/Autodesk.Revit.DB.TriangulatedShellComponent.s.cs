@@ -5,7 +5,7 @@ public partial class TriangulatedShellComponent : System.IDisposable
 	public virtual Autodesk.Revit.DB.XYZ GetVertex(System.Int32 vertexIndex) => throw new System.NotImplementedException();
 	public virtual void Clear() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.TriangleInShellComponent GetTriangle(System.Int32 triangleIndex) => throw new System.NotImplementedException();
-	public virtual IList<Autodesk.Revit.DB.XYZ> GetVertices() => throw new System.NotImplementedException();
+	public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.XYZ> GetVertices() => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject
 	{
