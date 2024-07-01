@@ -3,6 +3,7 @@ namespace Autodesk.Revit.DB;
 public partial class OBJExportOptions : Autodesk.Revit.DB.ATFBaseExportOptions
 {
 	public OBJExportOptions(Autodesk.Revit.DB.ExportResolution resolutionType) => throw new System.NotImplementedException();
+	public OBJExportOptions() => throw new System.NotImplementedException();
 	public static System.Boolean IsValidForSurfaceTolerance(System.Double value) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsSurfaceToleranceSet() => throw new System.NotImplementedException();
 	public static System.Boolean IsValidForNormalTolerance(System.Double value) => throw new System.NotImplementedException();

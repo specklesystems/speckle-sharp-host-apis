@@ -3,6 +3,7 @@ namespace Autodesk.Revit.DB.PointClouds;
 public partial class PointCloudOverrideSettings : System.IDisposable
 {
 	public PointCloudOverrideSettings(Autodesk.Revit.DB.PointClouds.PointCloudOverrideSettings other) => throw new System.NotImplementedException();
+	public PointCloudOverrideSettings() => throw new System.NotImplementedException();
 	public virtual void Assign(Autodesk.Revit.DB.PointClouds.PointCloudOverrideSettings other) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsEqual(Autodesk.Revit.DB.PointClouds.PointCloudOverrideSettings other) => throw new System.NotImplementedException();
 	public virtual void SetModeOverride(Autodesk.Revit.DB.PointCloudColorMode mode,Autodesk.Revit.DB.PointClouds.PointCloudColorSettings colorSettings) => throw new System.NotImplementedException();

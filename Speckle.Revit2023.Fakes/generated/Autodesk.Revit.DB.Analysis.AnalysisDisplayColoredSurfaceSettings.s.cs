@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB.Analysis;
 
 public partial class AnalysisDisplayColoredSurfaceSettings : System.IDisposable
 {
+	public AnalysisDisplayColoredSurfaceSettings() => throw new System.NotImplementedException();
 	public AnalysisDisplayColoredSurfaceSettings(Autodesk.Revit.DB.Analysis.AnalysisDisplayColoredSurfaceSettings other) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsEqual(Autodesk.Revit.DB.Analysis.AnalysisDisplayColoredSurfaceSettings other) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();

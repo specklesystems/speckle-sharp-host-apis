@@ -3,6 +3,7 @@ namespace Autodesk.Revit.DB;
 public partial class TextNoteOptions : System.IDisposable
 {
 	public TextNoteOptions(Autodesk.Revit.DB.ElementId typeId) => throw new System.NotImplementedException();
+	public TextNoteOptions() => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject
 	{

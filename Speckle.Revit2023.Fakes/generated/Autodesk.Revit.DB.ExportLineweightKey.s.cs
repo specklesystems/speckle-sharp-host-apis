@@ -3,6 +3,7 @@ namespace Autodesk.Revit.DB;
 public partial class ExportLineweightKey : System.IDisposable
 {
 	public ExportLineweightKey(System.Int32 originalLineweight) => throw new System.NotImplementedException();
+	public ExportLineweightKey() => throw new System.NotImplementedException();
 	public ExportLineweightKey(Autodesk.Revit.DB.ExportLineweightKey other) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject

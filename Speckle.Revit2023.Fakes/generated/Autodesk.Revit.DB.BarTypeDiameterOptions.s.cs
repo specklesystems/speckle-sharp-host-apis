@@ -3,6 +3,7 @@ namespace Autodesk.Revit.DB;
 public partial class BarTypeDiameterOptions : System.IDisposable
 {
 	public BarTypeDiameterOptions(Autodesk.Revit.DB.Structure.RebarBarType barType) => throw new System.NotImplementedException();
+	public BarTypeDiameterOptions() => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject
 	{

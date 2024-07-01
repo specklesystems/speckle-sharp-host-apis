@@ -7,6 +7,7 @@ public partial class ScheduleFilter : System.IDisposable
 	public ScheduleFilter(Autodesk.Revit.DB.ScheduleFieldId fieldId,Autodesk.Revit.DB.ScheduleFilterType filterType,System.Double value) => throw new System.NotImplementedException();
 	public ScheduleFilter(Autodesk.Revit.DB.ScheduleFieldId fieldId,Autodesk.Revit.DB.ScheduleFilterType filterType,System.Int32 value) => throw new System.NotImplementedException();
 	public ScheduleFilter(Autodesk.Revit.DB.ScheduleFieldId fieldId,Autodesk.Revit.DB.ScheduleFilterType filterType) => throw new System.NotImplementedException();
+	public ScheduleFilter() => throw new System.NotImplementedException();
 	public virtual System.Int32 GetIntegerValue() => throw new System.NotImplementedException();
 	public virtual System.Double GetDoubleValue() => throw new System.NotImplementedException();
 	public virtual System.String GetStringValue() => throw new System.NotImplementedException();

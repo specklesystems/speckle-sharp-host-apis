@@ -3,6 +3,7 @@ namespace Autodesk.Revit.DB.Electrical;
 public partial class ElectricalDemandFactorValue : System.IDisposable
 {
 	public ElectricalDemandFactorValue(System.Double minRange,System.Double maxRange,System.Double factor) => throw new System.NotImplementedException();
+	public ElectricalDemandFactorValue() => throw new System.NotImplementedException();
 	public virtual void SetMaxRangeToUnlimited() => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject

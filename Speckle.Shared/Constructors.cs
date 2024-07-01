@@ -17,10 +17,6 @@ public partial class Generator
     {
       //doens't have empty constructor so make one?
     }
-    else if (constructors.Count > 1)
-    {
-      constructors.Remove(emptyConstructor);
-    }
     foreach (var constructor in constructors)
     {
       try {

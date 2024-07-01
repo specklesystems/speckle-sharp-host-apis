@@ -4,6 +4,7 @@ public partial class ScheduleSortGroupField : System.IDisposable
 {
 	public ScheduleSortGroupField(Autodesk.Revit.DB.ScheduleFieldId fieldId,Autodesk.Revit.DB.ScheduleSortOrder sortOrder) => throw new System.NotImplementedException();
 	public ScheduleSortGroupField(Autodesk.Revit.DB.ScheduleFieldId fieldId) => throw new System.NotImplementedException();
+	public ScheduleSortGroupField() => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject
 	{

@@ -3,6 +3,7 @@ namespace Autodesk.Revit.DB;
 public partial class TableMergedCell : System.IDisposable
 {
 	public TableMergedCell(System.Int32 top,System.Int32 left,System.Int32 bottom,System.Int32 right) => throw new System.NotImplementedException();
+	public TableMergedCell() => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidObject
 	{

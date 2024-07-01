@@ -5,6 +5,7 @@ public partial class FillPattern : System.IDisposable
 	public FillPattern(System.String name,Autodesk.Revit.DB.FillPatternTarget target,Autodesk.Revit.DB.FillPatternHostOrientation orientation,System.Double angle,System.Double spacing1,System.Double spacing2) => throw new System.NotImplementedException();
 	public FillPattern(System.String name,Autodesk.Revit.DB.FillPatternTarget target,Autodesk.Revit.DB.FillPatternHostOrientation orientation,System.Double angle,System.Double spacing1) => throw new System.NotImplementedException();
 	public FillPattern(System.String name,Autodesk.Revit.DB.FillPatternTarget target,Autodesk.Revit.DB.FillPatternHostOrientation orientation) => throw new System.NotImplementedException();
+	public FillPattern() => throw new System.NotImplementedException();
 	public FillPattern(Autodesk.Revit.DB.FillPattern other) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.FillGrid GetFillGrid(System.Int32 gridIdx) => throw new System.NotImplementedException();
 	public virtual void SetFillGrid(System.Int32 gridIdx,Autodesk.Revit.DB.FillGrid fillGrid) => throw new System.NotImplementedException();

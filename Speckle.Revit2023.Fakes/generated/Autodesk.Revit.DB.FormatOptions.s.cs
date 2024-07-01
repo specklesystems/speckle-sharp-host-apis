@@ -5,6 +5,7 @@ public partial class FormatOptions : System.IDisposable
 	public FormatOptions(Autodesk.Revit.DB.FormatOptions other) => throw new System.NotImplementedException();
 	public FormatOptions(Autodesk.Revit.DB.ForgeTypeId unitTypeId,Autodesk.Revit.DB.ForgeTypeId symbolTypeId) => throw new System.NotImplementedException();
 	public FormatOptions(Autodesk.Revit.DB.ForgeTypeId unitTypeId) => throw new System.NotImplementedException();
+	public FormatOptions() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ForgeTypeId GetUnitTypeId() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.FormatOptions SetUnitTypeId(Autodesk.Revit.DB.ForgeTypeId unitTypeId) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValidForSpec(Autodesk.Revit.DB.ForgeTypeId specTypeId) => throw new System.NotImplementedException();

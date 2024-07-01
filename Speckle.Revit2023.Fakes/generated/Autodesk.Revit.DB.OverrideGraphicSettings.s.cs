@@ -3,6 +3,7 @@ namespace Autodesk.Revit.DB;
 public partial class OverrideGraphicSettings : System.IDisposable
 {
 	public OverrideGraphicSettings(Autodesk.Revit.DB.OverrideGraphicSettings overrideGraphicSettings) => throw new System.NotImplementedException();
+	public OverrideGraphicSettings() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.OverrideGraphicSettings SetHalftone(System.Boolean halftone) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.OverrideGraphicSettings SetDetailLevel(Autodesk.Revit.DB.ViewDetailLevel detailLevel) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.OverrideGraphicSettings SetProjectionLineWeight(System.Int32 lineWeight) => throw new System.NotImplementedException();

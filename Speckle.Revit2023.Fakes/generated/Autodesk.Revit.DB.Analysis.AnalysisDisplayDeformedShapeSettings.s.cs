@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB.Analysis;
 
 public partial class AnalysisDisplayDeformedShapeSettings : System.IDisposable
 {
+	public AnalysisDisplayDeformedShapeSettings() => throw new System.NotImplementedException();
 	public AnalysisDisplayDeformedShapeSettings(Autodesk.Revit.DB.Analysis.AnalysisDisplayDeformedShapeSettings other) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsEqual(Autodesk.Revit.DB.Analysis.AnalysisDisplayDeformedShapeSettings other) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();

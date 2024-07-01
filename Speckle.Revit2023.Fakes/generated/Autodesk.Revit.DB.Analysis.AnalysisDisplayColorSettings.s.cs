@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB.Analysis;
 
 public partial class AnalysisDisplayColorSettings : System.IDisposable
 {
+	public AnalysisDisplayColorSettings() => throw new System.NotImplementedException();
 	public AnalysisDisplayColorSettings(Autodesk.Revit.DB.Analysis.AnalysisDisplayColorSettings other) => throw new System.NotImplementedException();
 	public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.Analysis.AnalysisDisplayColorEntry> GetIntermediateColors() => throw new System.NotImplementedException();
 	public virtual System.Boolean AreIntermediateColorsValid(System.Collections.Generic.IList<Autodesk.Revit.DB.Analysis.AnalysisDisplayColorEntry> map) => throw new System.NotImplementedException();

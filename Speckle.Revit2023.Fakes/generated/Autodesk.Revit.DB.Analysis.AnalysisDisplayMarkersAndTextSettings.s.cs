@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB.Analysis;
 
 public partial class AnalysisDisplayMarkersAndTextSettings : System.IDisposable
 {
+	public AnalysisDisplayMarkersAndTextSettings() => throw new System.NotImplementedException();
 	public AnalysisDisplayMarkersAndTextSettings(Autodesk.Revit.DB.Analysis.AnalysisDisplayMarkersAndTextSettings other) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsEqual(Autodesk.Revit.DB.Analysis.AnalysisDisplayMarkersAndTextSettings other) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();

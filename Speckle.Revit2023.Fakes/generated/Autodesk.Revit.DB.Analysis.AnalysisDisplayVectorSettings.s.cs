@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB.Analysis;
 
 public partial class AnalysisDisplayVectorSettings : System.IDisposable
 {
+	public AnalysisDisplayVectorSettings() => throw new System.NotImplementedException();
 	public AnalysisDisplayVectorSettings(Autodesk.Revit.DB.Analysis.AnalysisDisplayVectorSettings other) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsEqual(Autodesk.Revit.DB.Analysis.AnalysisDisplayVectorSettings other) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
