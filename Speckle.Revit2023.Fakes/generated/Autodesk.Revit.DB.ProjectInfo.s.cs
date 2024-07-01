@@ -27,11 +27,6 @@ public partial class ProjectInfo : Autodesk.Revit.DB.Element
 		get => throw new System.NotImplementedException();
 		set {}
 	}
-	public virtual System.String Name
-	{
-		get => throw new System.NotImplementedException();
-		set {}
-	}
 	public virtual System.String Address
 	{
 		get => throw new System.NotImplementedException();

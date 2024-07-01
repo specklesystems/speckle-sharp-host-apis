@@ -8,5 +8,9 @@ Assembly GetAssembly(string name)
   return Assembly.ReflectionOnlyLoadFrom(path);
 }
 
-Generator generator = new("Speckle.Revit2023.Fakes", [GetAssembly("RevitAPI.dll"), GetAssembly("RevitAPIUI.dll")], ["Autodesk.Revit.DB", "Autodesk.Revit.DB.Architecture", "Autodesk.Revit.UI"]);
+Generator generator = new("Speckle.Revit2023.Fakes", [GetAssembly("RevitAPI.dll"), 
+  GetAssembly("RevitAPIUI.dll")], 
+  ["Autodesk.Revit.DB", "Autodesk.Revit.DB.Architecture", "Autodesk.Revit.UI"],
+  [new ("ProjectInfo", [new ("Name")]), 
+    new ("ImageView", [new ("Create")])]);
 generator.Generate();

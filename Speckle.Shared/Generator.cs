@@ -3,6 +3,8 @@ using System.Text;
 
 namespace Speckle.Shared;
 
+public record ExcludedType(string Name, ExcludedMember[] ExcludedMembers);
+public record ExcludedMember(string Name);
 public record GeneratedMember(string Name);
 public record GeneratedTypeInfo(string Name, string? Base, List<GeneratedMember> Members);
 public class Generator
@@ -12,12 +14,14 @@ public class Generator
   private readonly string _path;
   private readonly Assembly[] _assemblies;
   private readonly string[] _namespaces;
+  private readonly ExcludedType[] _excludedTypes;
 
-  public Generator(string path, Assembly[] assemblies, string[] namespaces)
+  public Generator(string path, Assembly[] assemblies, string[] namespaces, ExcludedType[] excludedTypes)
   {
     _path = Path.Combine(Environment.CurrentDirectory,  "..", "..", "..", "..", path, "generated");
     _assemblies = assemblies;
     _namespaces = namespaces;
+    _excludedTypes = excludedTypes;
     AppDomain.CurrentDomain.ReflectionOnlyAssemblyResolve += CurrentDomainOnReflectionOnlyAssemblyResolve;
   }
 
@@ -77,6 +81,10 @@ public class Generator
 
   private Type RenderType(Type type)
   {
+    if (type.FullName is null)
+    {
+      throw new NullReferenceException("Type has a null full name");
+    }
     if (type.FullName.StartsWith("System.Drawing."))
     {
       throw new ApplicationException($"Not dealing with base types: {type.FullName}");
@@ -197,6 +205,18 @@ public class Generator
     return (sb.ToString(), new(clazz.FullName, null, members));
   }
 
+  private bool IsExcluded(string type, string member)
+  {
+    var excludedType =
+      _excludedTypes.FirstOrDefault(x => x.Name.Equals(type, StringComparison.InvariantCultureIgnoreCase));
+    if (excludedType is null)
+    {
+      return false;
+    }
+
+    return excludedType.ExcludedMembers.Any(x => x.Name.Equals(member, StringComparison.CurrentCultureIgnoreCase));
+  }
+
   private  List<GeneratedMember>  WriteTypeBody( StringBuilder sb, Type clazz, bool isStruct)
   {
     sb.AppendLine();
@@ -204,7 +224,8 @@ public class Generator
     var members = new List<GeneratedMember>();
     foreach(var method in clazz.GetMethods(BindingFlags.Instance | BindingFlags.Static | BindingFlags.DeclaredOnly | BindingFlags.Public))
     {
-      if (method.IsSpecialName)
+      if (method.IsSpecialName //special is get/set for properties
+                               || IsExcluded(clazz.Name, method.Name))
       {
         continue;
       }
@@ -228,6 +249,10 @@ public class Generator
     }
     foreach(var propertyInfo in clazz.GetProperties(BindingFlags.Instance | BindingFlags.DeclaredOnly | BindingFlags.Public))
     {
+      if (IsExcluded(clazz.Name, propertyInfo.Name))
+      {
+        continue;
+      }
       try
       {
         var methodSb = new StringBuilder();
