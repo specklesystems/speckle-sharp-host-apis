@@ -1,5 +1,3 @@
 namespace Autodesk.Revit.DB;
 
-public partial class PanelType : Autodesk.Revit.DB.FamilySymbol
-{
-}
+public partial class PanelType : Autodesk.Revit.DB.FamilySymbol { }

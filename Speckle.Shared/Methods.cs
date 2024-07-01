@@ -9,7 +9,11 @@ public partial class Generator
   {
     var members = new List<GeneratedMember>();
 
-    foreach(var method in clazz.GetMethods(BindingFlags.Instance | BindingFlags.Static | BindingFlags.DeclaredOnly | BindingFlags.Public))
+    foreach (
+      var method in clazz.GetMethods(
+        BindingFlags.Instance | BindingFlags.Static | BindingFlags.DeclaredOnly | BindingFlags.Public
+      )
+    )
     {
       if (IsExcluded(clazz.Name, method.Name))
       {
@@ -17,31 +21,32 @@ public partial class Generator
       }
       try
       {
-      var parameters = method.GetParameters();
+        var parameters = method.GetParameters();
 
-      if (method.IsSpecialName)
-      {
-        if ((method.Name.StartsWith("get_") && parameters.Any())
-             || (method.Name.StartsWith("set_") && parameters.Length != 1))
+        if (method.IsSpecialName)
         {
-          //valid
+          if (
+            (method.Name.StartsWith("get_") && parameters.Any())
+            || (method.Name.StartsWith("set_") && parameters.Length != 1)
+          )
+          {
+            //valid
+          }
+          else
+          {
+            continue;
+          }
         }
-        else
-        {
-          continue;
-        }
-      }
 
         var methodSb = new StringBuilder();
         methodSb.Append("\t");
         WriteMethod(methodSb, method, generatedType);
         sb.Append(methodSb);
-        members.Add(new (method.Name));
+        members.Add(new(method.Name));
       }
       catch (FileLoadException)
       {
         Console.WriteLine($"Did not write {method.Name} on {clazz.FullName}");
-        
       }
       catch (ApplicationException)
       {
@@ -51,6 +56,7 @@ public partial class Generator
 
     return members;
   }
+
   private void WriteMethod(StringBuilder sb, MethodInfo methodInfo, GeneratedType generatedType)
   {
     if (methodInfo.GetBaseDefinition().DeclaringType != methodInfo.DeclaringType)
@@ -73,14 +79,17 @@ public partial class Generator
       }
     }
 
-
     sb.Append($"public {extras} {ReturnType(methodInfo.ReturnType)} {methodInfo.Name}(");
     WriteMethodBody(sb, methodInfo.GetParameters(), null, generatedType);
   }
 
-  private void WriteMethodBody(StringBuilder sb, ParameterInfo[] parameterInfos, Type? baseType, GeneratedType generatedType)
+  private void WriteMethodBody(
+    StringBuilder sb,
+    ParameterInfo[] parameterInfos,
+    Type? baseType,
+    GeneratedType generatedType
+  )
   {
-    
     bool isFirst = true;
     foreach (var parameter in parameterInfos)
     {

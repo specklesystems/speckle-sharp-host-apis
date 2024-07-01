@@ -1,5 +1,3 @@
 namespace Autodesk.Revit.Exceptions;
 
-public partial class CentralModelAccessDeniedException : Autodesk.Revit.Exceptions.CentralModelException
-{
-}
+public partial class CentralModelAccessDeniedException : Autodesk.Revit.Exceptions.CentralModelException { }

@@ -2,7 +2,6 @@
 
 public partial class Generator
 {
-  
   private string ParameterType(Type type)
   {
     if (type.IsByRef)
@@ -10,8 +9,11 @@ public partial class Generator
       throw new ApplicationException("Not Handling References");
     }
 
-    if (!_namespaces.Contains(type.Namespace) && !type.Namespace.StartsWith("System")
-                                              && !type.Namespace.StartsWith("System.Drawing"))
+    if (
+      !_namespaces.Contains(type.Namespace)
+      && !type.Namespace.StartsWith("System")
+      && !type.Namespace.StartsWith("System.Drawing")
+    )
     {
       throw new ApplicationException($"Not Handling: {type.FullName}");
     }

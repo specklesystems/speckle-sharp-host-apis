@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public enum BorderTile
 {
-	Empty,
-	Partial,
-	Overhanging,
+  Empty,
+  Partial,
+  Overhanging,
 }

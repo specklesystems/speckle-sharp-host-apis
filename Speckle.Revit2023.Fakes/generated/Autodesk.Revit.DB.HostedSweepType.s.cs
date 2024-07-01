@@ -1,5 +1,3 @@
 namespace Autodesk.Revit.DB;
 
-public partial class HostedSweepType : Autodesk.Revit.DB.HostObjAttributes
-{
-}
+public partial class HostedSweepType : Autodesk.Revit.DB.HostObjAttributes { }

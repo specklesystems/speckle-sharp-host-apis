@@ -5,29 +5,28 @@ namespace Speckle.Shared;
 
 public partial class Generator
 {
-  
-
   private bool IsMemberOnBaseClass(string? baseClazz, GeneratedMember member)
   {
     if (baseClazz is null)
     {
       return false;
     }
-      if (!_info.TryGetValue(baseClazz, out var info))
-      {
-        return false;
-      }
-      if (info.Members.Contains(member))
-      {
-        return true;
-      }
+    if (!_info.TryGetValue(baseClazz, out var info))
+    {
+      return false;
+    }
+    if (info.Members.Contains(member))
+    {
+      return true;
+    }
 
-      if (info.Base is null)
-      {
-        return false;
-      }
-      return IsMemberOnBaseClass(info.Base, member);
+    if (info.Base is null)
+    {
+      return false;
+    }
+    return IsMemberOnBaseClass(info.Base, member);
   }
+
   private GeneratedTypeInfo WriteType(Type type)
   {
     string typeString;
@@ -38,15 +37,15 @@ public partial class Generator
     }
     else if (type.IsValueType || type.BaseType == typeof(ValueType))
     {
-      (typeString, typeInfo)  = WriteStruct(type);
+      (typeString, typeInfo) = WriteStruct(type);
     }
     else if (type.IsInterface)
     {
-      (typeString, typeInfo)  = WriteInterface(type);
+      (typeString, typeInfo) = WriteInterface(type);
     }
     else
     {
-      (typeString, typeInfo)  = WriteClass(type);
+      (typeString, typeInfo) = WriteClass(type);
     }
     File.WriteAllText(Path.Combine(_path, $"{type.FullName}.s.cs"), typeString);
     return typeInfo;
@@ -64,11 +63,10 @@ public partial class Generator
       sb.AppendLine($"\t{field.Name},");
     }
     sb.AppendLine("}");
-    return (sb.ToString(), new (clazz.FullName, null, [],  []));
+    return (sb.ToString(), new(clazz.FullName, null, [], []));
   }
-  
-  
-  private (string, GeneratedTypeInfo)  WriteClass(Type clazz)
+
+  private (string, GeneratedTypeInfo) WriteClass(Type clazz)
   {
     StringBuilder sb = new();
     sb.AppendLine($"namespace {clazz.Namespace};").AppendLine();
@@ -99,18 +97,19 @@ public partial class Generator
           sb.Append(",");
         }
         else
-        {;
+        {
+          ;
           isFirst = false;
         }
         sb.Append(FormGenericType(i));
       }
     }
-   
+
     var (constructors, members) = WriteTypeBody(sb, clazz, GeneratedType.Class);
     return (sb.ToString(), new(clazz.FullName, baseClazz, constructors, members));
   }
 
-  private (string, GeneratedTypeInfo)  WriteStruct(Type clazz)
+  private (string, GeneratedTypeInfo) WriteStruct(Type clazz)
   {
     StringBuilder sb = new();
     sb.AppendLine($"namespace {clazz.Namespace};").AppendLine();
@@ -118,8 +117,8 @@ public partial class Generator
     var (constructors, members) = WriteTypeBody(sb, clazz, GeneratedType.Struct);
     return (sb.ToString(), new(clazz.FullName, null, constructors, members));
   }
-  
-  private (string, GeneratedTypeInfo)  WriteInterface(Type clazz)
+
+  private (string, GeneratedTypeInfo) WriteInterface(Type clazz)
   {
     StringBuilder sb = new();
     sb.AppendLine($"namespace {clazz.Namespace};").AppendLine();
@@ -128,14 +127,18 @@ public partial class Generator
     return (sb.ToString(), new(clazz.FullName, null, constructors, members));
   }
 
-  private (List<GeneratedConstructor>, List<GeneratedMember>)  WriteTypeBody( StringBuilder sb, Type clazz, GeneratedType generatedType)
+  private (List<GeneratedConstructor>, List<GeneratedMember>) WriteTypeBody(
+    StringBuilder sb,
+    Type clazz,
+    GeneratedType generatedType
+  )
   {
     sb.AppendLine();
     sb.AppendLine("{");
     List<GeneratedConstructor> constructors = new();
     if (generatedType != GeneratedType.Interface)
     {
-       constructors = WriteConstructors(sb, clazz);
+      constructors = WriteConstructors(sb, clazz);
     }
     WriteFields(sb, clazz);
 
@@ -147,7 +150,7 @@ public partial class Generator
 
   private void WriteFields(StringBuilder sb, Type clazz)
   {
-    foreach(var field in clazz.GetFields(BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly))
+    foreach (var field in clazz.GetFields(BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly))
     {
       sb.AppendLine($"public {FormGenericType(field.FieldType)} {field.Name};");
     }

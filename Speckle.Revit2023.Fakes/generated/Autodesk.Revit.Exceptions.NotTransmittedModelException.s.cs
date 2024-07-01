@@ -1,5 +1,3 @@
 namespace Autodesk.Revit.Exceptions;
 
-public partial class NotTransmittedModelException : Autodesk.Revit.Exceptions.InvalidOperationException
-{
-}
+public partial class NotTransmittedModelException : Autodesk.Revit.Exceptions.InvalidOperationException { }

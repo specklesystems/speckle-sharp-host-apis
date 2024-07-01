@@ -8,7 +8,11 @@ public partial class Generator
   private List<GeneratedMember> WriteProperties(StringBuilder sb, Type clazz, GeneratedType generatedType)
   {
     var properities = new List<GeneratedMember>();
-    foreach(var propertyInfo in clazz.GetProperties(BindingFlags.Instance | BindingFlags.Static | BindingFlags.DeclaredOnly | BindingFlags.Public))
+    foreach (
+      var propertyInfo in clazz.GetProperties(
+        BindingFlags.Instance | BindingFlags.Static | BindingFlags.DeclaredOnly | BindingFlags.Public
+      )
+    )
     {
       if (IsExcluded(clazz.Name, propertyInfo.Name))
       {
@@ -20,12 +24,11 @@ public partial class Generator
         methodSb.Append("\t");
         WriteProperty(methodSb, propertyInfo, generatedType);
         sb.Append(methodSb);
-        properities.Add(new (propertyInfo.Name));
+        properities.Add(new(propertyInfo.Name));
       }
       catch (FileLoadException)
       {
         Console.WriteLine($"Did not write {propertyInfo.Name} on {clazz.FullName}");
-        
       }
       catch (ApplicationException)
       {
@@ -34,7 +37,7 @@ public partial class Generator
     }
     return properities;
   }
-   
+
   private void WriteProperty(StringBuilder sb, PropertyInfo propertyInfo, GeneratedType generatedType)
   {
     var wrotePropHeader = false;
@@ -49,8 +52,8 @@ public partial class Generator
       if (wrotePropHeader is false)
       {
         wrotePropHeader = true;
-        WritePropertyHeader(sb, propertyInfo,getMethod.IsStatic, generatedType, isOverriden, getMethod.ReturnType);
-      }   
+        WritePropertyHeader(sb, propertyInfo, getMethod.IsStatic, generatedType, isOverriden, getMethod.ReturnType);
+      }
       if (generatedType == GeneratedType.Interface)
       {
         sb.AppendLine("\t\tget;");
@@ -61,7 +64,7 @@ public partial class Generator
       }
     }
     var setMethod = propertyInfo.GetSetMethod(false);
-    if (setMethod is not null) 
+    if (setMethod is not null)
     {
       var parameters = setMethod.GetParameters();
       if (parameters.Length > 1)
@@ -71,7 +74,14 @@ public partial class Generator
       bool isOverriden = setMethod.GetBaseDefinition().DeclaringType != propertyInfo.DeclaringType;
       if (wrotePropHeader is false)
       {
-        WritePropertyHeader(sb, propertyInfo, setMethod.IsStatic, generatedType, isOverriden, parameters[0].ParameterType);
+        WritePropertyHeader(
+          sb,
+          propertyInfo,
+          setMethod.IsStatic,
+          generatedType,
+          isOverriden,
+          parameters[0].ParameterType
+        );
       }
 
       if (generatedType == GeneratedType.Interface)
@@ -86,7 +96,14 @@ public partial class Generator
     sb.AppendLine("\t}");
   }
 
-  private void WritePropertyHeader(StringBuilder sb, PropertyInfo property, bool isStatic, GeneratedType generatedType, bool isOverriden, Type returnType)
+  private void WritePropertyHeader(
+    StringBuilder sb,
+    PropertyInfo property,
+    bool isStatic,
+    GeneratedType generatedType,
+    bool isOverriden,
+    Type returnType
+  )
   {
     var extra = string.Empty;
     if (generatedType == GeneratedType.Class)
@@ -108,5 +125,4 @@ public partial class Generator
     sb.AppendLine($"public {extra} {ReturnType(returnType)} {property.Name}");
     sb.AppendLine("\t{");
   }
-
 }

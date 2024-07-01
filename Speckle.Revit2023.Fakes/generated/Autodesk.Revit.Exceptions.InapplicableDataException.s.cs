@@ -1,5 +1,3 @@
 namespace Autodesk.Revit.Exceptions;
 
-public partial class InapplicableDataException : Autodesk.Revit.Exceptions.InvalidOperationException
-{
-}
+public partial class InapplicableDataException : Autodesk.Revit.Exceptions.InvalidOperationException { }

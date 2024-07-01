@@ -14,7 +14,7 @@ public partial class Generator
 
   public Generator(string path, Assembly[] assemblies, string[] namespaces, ExcludedType[] excludedTypes)
   {
-    _path = Path.Combine(Environment.CurrentDirectory,  "..", "..", "..", "..", path, "generated");
+    _path = Path.Combine(Environment.CurrentDirectory, "..", "..", "..", "..", path, "generated");
     _assemblies = assemblies;
     _namespaces = namespaces;
     _excludedTypes = excludedTypes;
@@ -25,11 +25,14 @@ public partial class Generator
   {
     string name = args.Name.Split(',')[0];
 
-    if (!name.StartsWith("System") && !name.StartsWith("Presentation")&& !name.StartsWith("Windows"))
+    if (!name.StartsWith("System") && !name.StartsWith("Presentation") && !name.StartsWith("Windows"))
     {
       return null;
     }
-    string assemblyFile = Path.Combine("C:\\Program Files (x86)\\Reference Assemblies\\Microsoft\\Framework\\.NETFramework\\v4.8", name + ".dll");
+    string assemblyFile = Path.Combine(
+      "C:\\Program Files (x86)\\Reference Assemblies\\Microsoft\\Framework\\.NETFramework\\v4.8",
+      name + ".dll"
+    );
 
     if (File.Exists(assemblyFile))
     {
@@ -54,14 +57,17 @@ public partial class Generator
     try
     {
       definedTypes = _assemblies.SelectMany(x => x.GetExportedTypes()).ToList();
-    }catch (ReflectionTypeLoadException e)
+    }
+    catch (ReflectionTypeLoadException e)
     {
       definedTypes = e.Types.ToList();
     }
 
-    definedTypes = definedTypes.Where(x => x.IsPublic)
-      .Where(x => _namespaces.Any(y => x.FullName?.StartsWith(y) ?? false)).ToList();
-    foreach (var type in definedTypes)//.Where(x => x.FullName.EndsWith("DockablePaneId")))
+    definedTypes = definedTypes
+      .Where(x => x.IsPublic)
+      .Where(x => _namespaces.Any(y => x.FullName?.StartsWith(y) ?? false))
+      .ToList();
+    foreach (var type in definedTypes) //.Where(x => x.FullName.EndsWith("DockablePaneId")))
     {
       try
       {
@@ -118,8 +124,9 @@ public partial class Generator
 
   private bool IsExcluded(string type, string member)
   {
-    var excludedType =
-      _excludedTypes.FirstOrDefault(x => x.Name.Equals(type, StringComparison.InvariantCultureIgnoreCase));
+    var excludedType = _excludedTypes.FirstOrDefault(x =>
+      x.Name.Equals(type, StringComparison.InvariantCultureIgnoreCase)
+    );
     if (excludedType is null)
     {
       return false;
@@ -133,7 +140,4 @@ public partial class Generator
 
     return excludedType.ExcludedMembers.Any(x => x.Name.Equals(member, StringComparison.CurrentCultureIgnoreCase));
   }
-
- 
-  
 }

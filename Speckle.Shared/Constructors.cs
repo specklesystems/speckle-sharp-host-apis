@@ -19,19 +19,20 @@ public partial class Generator
     }
     foreach (var constructor in constructors)
     {
-      try {
-        
+      try
+      {
         var constructorSb = new StringBuilder();
         constructorSb.Append($"\tpublic {clazz.Name}(");
         var parameters = constructor.GetParameters();
         WriteMethodBody(constructorSb, parameters, clazz.BaseType, GeneratedType.Class);
         sb.Append(constructorSb);
-        generatedConstructor.Add(new GeneratedConstructor(parameters.Select(x => new GeneratedParameter(x.ParameterType, x.Name)).ToList()));
+        generatedConstructor.Add(
+          new GeneratedConstructor(parameters.Select(x => new GeneratedParameter(x.ParameterType, x.Name)).ToList())
+        );
       }
       catch (FileLoadException)
       {
         Console.WriteLine($"Did not write a constructor on {clazz.FullName}");
-        
       }
       catch (ApplicationException)
       {
