@@ -7,6 +7,8 @@ public partial class VertexIndexPairArray : Autodesk.Revit.DB.APIObject,System.C
 	public virtual Autodesk.Revit.DB.VertexIndexPairArrayIterator ForwardIterator() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.VertexIndexPairArrayIterator ReverseIterator() => throw new System.NotImplementedException();
 	public virtual System.Collections.IEnumerator GetEnumerator() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.VertexIndexPair get_Item(System.Int32 index) => throw new System.NotImplementedException();
+	public virtual void set_Item(System.Int32 index,Autodesk.Revit.DB.VertexIndexPair item) => throw new System.NotImplementedException();
 	public virtual void Append(Autodesk.Revit.DB.VertexIndexPair item) => throw new System.NotImplementedException();
 	public virtual void Insert(Autodesk.Revit.DB.VertexIndexPair item,System.Int32 index) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsEmpty

@@ -11,13 +11,27 @@ public partial class Generator
 
     foreach(var method in clazz.GetMethods(BindingFlags.Instance | BindingFlags.Static | BindingFlags.DeclaredOnly | BindingFlags.Public))
     {
-      if (method.IsSpecialName //special is get/set for properties
-          || IsExcluded(clazz.Name, method.Name))
+      if (IsExcluded(clazz.Name, method.Name))
       {
         continue;
       }
       try
       {
+      var parameters = method.GetParameters();
+
+      if (method.IsSpecialName)
+      {
+        if ((method.Name.StartsWith("get_") && parameters.Any())
+             || (method.Name.StartsWith("set_") && parameters.Length != 1))
+        {
+          //valid
+        }
+        else
+        {
+          continue;
+        }
+      }
+
         var methodSb = new StringBuilder();
         methodSb.Append("\t");
         WriteMethod(methodSb, method, generatedType);

@@ -2,7 +2,12 @@ namespace Autodesk.Revit.DB;
 
 public partial class Element : System.IDisposable
 {
+	public virtual Autodesk.Revit.DB.Parameter get_Parameter(Autodesk.Revit.DB.BuiltInParameter parameterId) => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.Parameter get_Parameter(Autodesk.Revit.DB.Definition definition) => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.Parameter get_Parameter(System.Guid guid) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.Parameter GetParameter(Autodesk.Revit.DB.ForgeTypeId parameterTypeId) => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.GeometryElement get_Geometry(Autodesk.Revit.DB.Options options) => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.BoundingBoxXYZ get_BoundingBox(Autodesk.Revit.DB.View A_0) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsHidden(Autodesk.Revit.DB.View pView) => throw new System.NotImplementedException();
 	public virtual System.Boolean CanBeHidden(Autodesk.Revit.DB.View pView) => throw new System.NotImplementedException();
 	public static Autodesk.Revit.DB.ChangeType GetChangeTypeParameter(Autodesk.Revit.DB.ElementId parameterId) => throw new System.NotImplementedException();

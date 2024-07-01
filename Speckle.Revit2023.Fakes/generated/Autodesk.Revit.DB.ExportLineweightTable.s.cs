@@ -4,6 +4,8 @@ public partial class ExportLineweightTable : System.Collections.Generic.IEnumera
 {
 	public ExportLineweightTable() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ExportLineweightTableIterator GetLineweightTableIterator() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.ExportLineweightInfo get_Item(Autodesk.Revit.DB.ExportLineweightKey lineweightKey) => throw new System.NotImplementedException();
+	public virtual void set_Item(Autodesk.Revit.DB.ExportLineweightKey LineweightKey,Autodesk.Revit.DB.ExportLineweightInfo LineweightInfo) => throw new System.NotImplementedException();
 	public virtual System.Boolean ContainsKey(Autodesk.Revit.DB.ExportLineweightKey exportLineweightKey) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ExportLineweightInfo GetExportLineweightInfo(Autodesk.Revit.DB.ExportLineweightKey exportLineweightKey) => throw new System.NotImplementedException();
 	public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.ExportLineweightKey> GetKeys() => throw new System.NotImplementedException();

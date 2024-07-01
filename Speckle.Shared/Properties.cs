@@ -5,6 +5,35 @@ namespace Speckle.Shared;
 
 public partial class Generator
 {
+  private List<GeneratedMember> WriteProperties(StringBuilder sb, Type clazz, GeneratedType generatedType)
+  {
+    var properities = new List<GeneratedMember>();
+    foreach(var propertyInfo in clazz.GetProperties(BindingFlags.Instance | BindingFlags.Static | BindingFlags.DeclaredOnly | BindingFlags.Public))
+    {
+      if (IsExcluded(clazz.Name, propertyInfo.Name))
+      {
+        continue;
+      }
+      try
+      {
+        var methodSb = new StringBuilder();
+        methodSb.Append("\t");
+        WriteProperty(methodSb, propertyInfo, generatedType);
+        sb.Append(methodSb);
+        properities.Add(new (propertyInfo.Name));
+      }
+      catch (FileLoadException)
+      {
+        Console.WriteLine($"Did not write {propertyInfo.Name} on {clazz.FullName}");
+        
+      }
+      catch (ApplicationException)
+      {
+        Console.WriteLine($"Did not write {propertyInfo.Name} on {clazz.FullName}");
+      }
+    }
+    return properities;
+  }
    
   private void WriteProperty(StringBuilder sb, PropertyInfo propertyInfo, GeneratedType generatedType)
   {

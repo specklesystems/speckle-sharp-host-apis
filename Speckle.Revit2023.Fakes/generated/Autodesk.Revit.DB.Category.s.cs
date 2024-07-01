@@ -13,6 +13,9 @@ public partial class Category : Autodesk.Revit.DB.APIObject
 	public static Autodesk.Revit.DB.ForgeTypeId GetBuiltInCategoryTypeId(Autodesk.Revit.DB.BuiltInCategory categoryId) => throw new System.NotImplementedException();
 	public static Autodesk.Revit.DB.BuiltInCategory GetBuiltInCategory(Autodesk.Revit.DB.ForgeTypeId categoryTypeId) => throw new System.NotImplementedException();
 	public static System.Boolean IsBuiltInCategory(Autodesk.Revit.DB.ForgeTypeId categoryTypeId) => throw new System.NotImplementedException();
+	public virtual System.Boolean get_Visible(Autodesk.Revit.DB.View view) => throw new System.NotImplementedException();
+	public virtual void set_Visible(Autodesk.Revit.DB.View view,System.Boolean visible) => throw new System.NotImplementedException();
+	public virtual System.Boolean get_AllowsVisibilityControl(Autodesk.Revit.DB.View view) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsVisibleInUI
 	{
 		get => throw new System.NotImplementedException();

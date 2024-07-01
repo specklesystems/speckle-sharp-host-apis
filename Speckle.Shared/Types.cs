@@ -137,32 +137,10 @@ public partial class Generator
     {
        constructors = WriteConstructors(sb, clazz);
     }
-   var members = WriteMethods(sb, clazz, generatedType);
-    foreach(var propertyInfo in clazz.GetProperties(BindingFlags.Instance | BindingFlags.Static | BindingFlags.DeclaredOnly | BindingFlags.Public))
-    {
-      if (IsExcluded(clazz.Name, propertyInfo.Name))
-      {
-        continue;
-      }
-      try
-      {
-        var methodSb = new StringBuilder();
-        methodSb.Append("\t");
-        WriteProperty(methodSb, propertyInfo, generatedType);
-        sb.Append(methodSb);
-        members.Add(new (propertyInfo.Name));
-      }
-      catch (FileLoadException)
-      {
-        Console.WriteLine($"Did not write {propertyInfo.Name} on {clazz.FullName}");
-        
-      }
-      catch (ApplicationException)
-      {
-        Console.WriteLine($"Did not write {propertyInfo.Name} on {clazz.FullName}");
-      }
-    }
+
+    var methods = WriteMethods(sb, clazz, generatedType);
+    var properties = WriteProperties(sb, clazz, generatedType);
     sb.AppendLine("}");
-    return (constructors, members);
+    return (constructors, properties.Concat(methods).ToList());
   }
 }

@@ -4,6 +4,8 @@ public partial class ExportPatternTable : System.Collections.Generic.IEnumerable
 {
 	public ExportPatternTable() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ExportPatternTableIterator GetPatternTableIterator() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.ExportPatternInfo get_Item(Autodesk.Revit.DB.ExportPatternKey patternKey) => throw new System.NotImplementedException();
+	public virtual void set_Item(Autodesk.Revit.DB.ExportPatternKey PatternKey,Autodesk.Revit.DB.ExportPatternInfo PatternInfo) => throw new System.NotImplementedException();
 	public virtual System.Boolean ContainsKey(Autodesk.Revit.DB.ExportPatternKey exportpatternKey) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ExportPatternInfo GetExportPatternInfo(Autodesk.Revit.DB.ExportPatternKey exportPatternKey) => throw new System.NotImplementedException();
 	public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.ExportPatternKey> GetKeys() => throw new System.NotImplementedException();

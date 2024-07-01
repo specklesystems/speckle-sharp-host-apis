@@ -7,6 +7,8 @@ public partial class DetailCurveArray : Autodesk.Revit.DB.APIObject,System.Colle
 	public virtual Autodesk.Revit.DB.DetailCurveArrayIterator ForwardIterator() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.DetailCurveArrayIterator ReverseIterator() => throw new System.NotImplementedException();
 	public virtual System.Collections.IEnumerator GetEnumerator() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.DetailCurve get_Item(System.Int32 index) => throw new System.NotImplementedException();
+	public virtual void set_Item(System.Int32 index,Autodesk.Revit.DB.DetailCurve item) => throw new System.NotImplementedException();
 	public virtual void Append(Autodesk.Revit.DB.DetailCurve item) => throw new System.NotImplementedException();
 	public virtual void Insert(Autodesk.Revit.DB.DetailCurve item,System.Int32 index) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsEmpty

@@ -5,6 +5,10 @@ public partial class FamilyManager : Autodesk.Revit.DB.APIObject
 	public virtual Autodesk.Revit.DB.FamilyType NewType(System.String typeName) => throw new System.NotImplementedException();
 	public virtual void DeleteCurrentType() => throw new System.NotImplementedException();
 	public virtual void RenameCurrentType(System.String typeName) => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.FamilyParameter get_Parameter(System.Guid guid) => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.FamilyParameter get_Parameter(Autodesk.Revit.DB.Definition definition) => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.FamilyParameter get_Parameter(Autodesk.Revit.DB.BuiltInParameter parameterId) => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.FamilyParameter get_Parameter(System.String parameterName) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.FamilyParameter GetParameter(Autodesk.Revit.DB.ForgeTypeId parameterTypeId) => throw new System.NotImplementedException();
 	public virtual void Set(Autodesk.Revit.DB.FamilyParameter familyParameter,Autodesk.Revit.DB.ElementId value) => throw new System.NotImplementedException();
 	public virtual void Set(Autodesk.Revit.DB.FamilyParameter familyParameter,System.Double value) => throw new System.NotImplementedException();

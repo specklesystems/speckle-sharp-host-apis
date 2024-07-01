@@ -2,6 +2,9 @@ namespace Autodesk.Revit.DB;
 
 public partial class Form : Autodesk.Revit.DB.GenericForm
 {
+	public virtual System.Int32 get_ProfileCurveLoopCount(System.Int32 index) => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.ReferenceArray get_CurveLoopReferencesOnProfile(System.Int32 profileIndex,System.Int32 curveLoopIndex) => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.Reference get_PathCurveReference(System.Int32 curveIndex) => throw new System.NotImplementedException();
 	public virtual System.Int32 GetPathCurveIndexByCurveReference(Autodesk.Revit.DB.Reference curveReference) => throw new System.NotImplementedException();
 	public virtual void ConstrainProfiles(System.Int32 primaryProfileIndex) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsVertexReference(Autodesk.Revit.DB.Reference vertexReference) => throw new System.NotImplementedException();

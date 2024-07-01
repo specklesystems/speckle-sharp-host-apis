@@ -58,6 +58,7 @@ public partial class Document : System.IDisposable
 	public virtual void EraseSchemaAndAllEntities(Autodesk.Revit.DB.ExtensibleStorage.Schema schema) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.StorageType GetTypeOfStorage(Autodesk.Revit.DB.ForgeTypeId parameterTypeId) => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.StorageType get_TypeOfStorage(Autodesk.Revit.DB.BuiltInParameter A_0) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.Family LoadFamily(Autodesk.Revit.DB.Document targetDocument,Autodesk.Revit.DB.IFamilyLoadOptions familyLoadOptions) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.Family LoadFamily(Autodesk.Revit.DB.Document targetDocument) => throw new System.NotImplementedException();
 	public virtual System.Boolean LoadFamily(System.String filename) => throw new System.NotImplementedException();
@@ -67,6 +68,9 @@ public partial class Document : System.IDisposable
 	public virtual void Print(Autodesk.Revit.DB.ViewSet views,Autodesk.Revit.DB.View viewTemplate) => throw new System.NotImplementedException();
 	public virtual void Print(Autodesk.Revit.DB.ViewSet views,System.Boolean useCurrentPrintSettings) => throw new System.NotImplementedException();
 	public virtual void Print(Autodesk.Revit.DB.ViewSet views) => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.PlanTopology get_PlanTopology(Autodesk.Revit.DB.Level level,Autodesk.Revit.DB.Phase phase) => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.PlanTopology get_PlanTopology(Autodesk.Revit.DB.Level level) => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.PlanTopologySet get_PlanTopologies(Autodesk.Revit.DB.Phase phase) => throw new System.NotImplementedException();
 	public virtual System.Boolean Close() => throw new System.NotImplementedException();
 	public virtual System.Boolean Close(System.Boolean saveModified) => throw new System.NotImplementedException();
 	public virtual System.Boolean Export(System.String folder,System.String name,Autodesk.Revit.DB.GBXMLExportOptions options) => throw new System.NotImplementedException();

@@ -9,6 +9,8 @@ public partial class Face : Autodesk.Revit.DB.GeometryObject
 	public virtual Autodesk.Revit.DB.Mesh Triangulate() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.XYZ Evaluate(Autodesk.Revit.DB.UV @params) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.BoundingBoxUV GetBoundingBox() => throw new System.NotImplementedException();
+	public virtual System.Boolean get_IsCyclic(System.Int32 paramIdx) => throw new System.NotImplementedException();
+	public virtual System.Double get_Period(System.Int32 paramIdx) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.Transform ComputeDerivatives(Autodesk.Revit.DB.UV point) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.FaceSecondDerivatives ComputeSecondDerivatives(Autodesk.Revit.DB.UV point) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.XYZ ComputeNormal(Autodesk.Revit.DB.UV point) => throw new System.NotImplementedException();

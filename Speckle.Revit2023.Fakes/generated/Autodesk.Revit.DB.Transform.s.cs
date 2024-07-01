@@ -3,6 +3,8 @@ namespace Autodesk.Revit.DB;
 public partial class Transform : Autodesk.Revit.DB.APIObject
 {
 	public Transform(Autodesk.Revit.DB.Transform source) => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.XYZ get_Basis(System.Int32 idx) => throw new System.NotImplementedException();
+	public virtual void set_Basis(System.Int32 idx,Autodesk.Revit.DB.XYZ __unnamed001) => throw new System.NotImplementedException();
 	public static Autodesk.Revit.DB.Transform CreateTranslation(Autodesk.Revit.DB.XYZ vector) => throw new System.NotImplementedException();
 	public static Autodesk.Revit.DB.Transform CreateRotation(Autodesk.Revit.DB.XYZ axis,System.Double angle) => throw new System.NotImplementedException();
 	public static Autodesk.Revit.DB.Transform CreateRotationAtPoint(Autodesk.Revit.DB.XYZ axis,System.Double angle,Autodesk.Revit.DB.XYZ origin) => throw new System.NotImplementedException();

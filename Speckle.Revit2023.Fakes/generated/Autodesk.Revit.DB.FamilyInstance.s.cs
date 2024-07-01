@@ -2,10 +2,14 @@ namespace Autodesk.Revit.DB;
 
 public partial class FamilyInstance : Autodesk.Revit.DB.Instance
 {
+	public virtual Autodesk.Revit.DB.Architecture.Room get_Room(Autodesk.Revit.DB.Phase phase) => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.Mechanical.Space get_Space(Autodesk.Revit.DB.Phase phase) => throw new System.NotImplementedException();
 	public virtual System.Boolean flipHand() => throw new System.NotImplementedException();
 	public virtual System.Boolean flipFacing() => throw new System.NotImplementedException();
 	public virtual System.Boolean rotate() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ElementId Split(System.Double param) => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.Architecture.Room get_FromRoom(Autodesk.Revit.DB.Phase phase) => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.Architecture.Room get_ToRoom(Autodesk.Revit.DB.Phase phase) => throw new System.NotImplementedException();
 	public virtual void FlipFromToRoom() => throw new System.NotImplementedException();
 	public virtual System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> GetSubComponentIds() => throw new System.NotImplementedException();
 	public virtual System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> GetCopingIds() => throw new System.NotImplementedException();

@@ -4,6 +4,8 @@ public partial class ExportLinetypeTable : System.Collections.Generic.IEnumerabl
 {
 	public ExportLinetypeTable() => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ExportLinetypeTableIterator GetLinetypeTableIterator() => throw new System.NotImplementedException();
+	public virtual Autodesk.Revit.DB.ExportLinetypeInfo get_Item(Autodesk.Revit.DB.ExportLinetypeKey linetypeKey) => throw new System.NotImplementedException();
+	public virtual void set_Item(Autodesk.Revit.DB.ExportLinetypeKey LinetypeKey,Autodesk.Revit.DB.ExportLinetypeInfo LinetypeInfo) => throw new System.NotImplementedException();
 	public virtual System.Boolean ContainsKey(Autodesk.Revit.DB.ExportLinetypeKey exportLinetypeKey) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.ExportLinetypeInfo GetExportLinetypeInfo(Autodesk.Revit.DB.ExportLinetypeKey exportLinetypeKey) => throw new System.NotImplementedException();
 	public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.ExportLinetypeKey> GetKeys() => throw new System.NotImplementedException();

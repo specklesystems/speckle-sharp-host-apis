@@ -3,6 +3,7 @@ namespace Autodesk.Revit.DB;
 public partial class UV
 {
 	public UV(System.Double u,System.Double v) => throw new System.NotImplementedException();
+	public virtual System.Double get_Item(System.Int32 idx) => throw new System.NotImplementedException();
 	public virtual Autodesk.Revit.DB.UV Normalize() => throw new System.NotImplementedException();
 	public virtual System.Double GetLength() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsZeroLength() => throw new System.NotImplementedException();
