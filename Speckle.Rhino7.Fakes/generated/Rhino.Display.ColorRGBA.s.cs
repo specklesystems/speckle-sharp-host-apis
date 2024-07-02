@@ -41,23 +41,23 @@ public partial struct ColorRGBA : System.Runtime.Serialization.ISerializable,Sys
 		get => throw new System.NotImplementedException();
 		set {}
 	}
-	public  Rhino.Display.ColorRGBA Black
+	public static Rhino.Display.ColorRGBA Black
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public  Rhino.Display.ColorRGBA White
+	public static Rhino.Display.ColorRGBA White
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public  Rhino.Display.ColorRGBA Red
+	public static Rhino.Display.ColorRGBA Red
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public  Rhino.Display.ColorRGBA Green
+	public static Rhino.Display.ColorRGBA Green
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public  Rhino.Display.ColorRGBA Blue
+	public static Rhino.Display.ColorRGBA Blue
 	{
 		get => throw new System.NotImplementedException();
 	}

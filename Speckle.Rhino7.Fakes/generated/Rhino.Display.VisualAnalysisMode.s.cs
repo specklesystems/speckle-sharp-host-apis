@@ -9,35 +9,35 @@ public partial class VisualAnalysisMode
 	public static Rhino.Display.VisualAnalysisMode Find(System.Type t) => throw new System.NotImplementedException();
 	public virtual void EnableUserInterface(System.Boolean on) => throw new System.NotImplementedException();
 	public virtual System.Boolean ObjectSupportsAnalysisMode(Rhino.DocObjects.RhinoObject obj) => throw new System.NotImplementedException();
-	public static  System.Guid RhinoEdgeAnalysisModeId
+	public static System.Guid RhinoEdgeAnalysisModeId
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Guid RhinoCurvatureGraphAnalysisModeId
+	public static System.Guid RhinoCurvatureGraphAnalysisModeId
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Guid RhinoZebraStripeAnalysisModeId
+	public static System.Guid RhinoZebraStripeAnalysisModeId
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Guid RhinoEmapAnalysisModeId
+	public static System.Guid RhinoEmapAnalysisModeId
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Guid RhinoCurvatureColorAnalyisModeId
+	public static System.Guid RhinoCurvatureColorAnalyisModeId
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Guid RhinoDraftAngleAnalysisModeId
+	public static System.Guid RhinoDraftAngleAnalysisModeId
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Guid RhinoThicknessAnalysisModeId
+	public static System.Guid RhinoThicknessAnalysisModeId
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Guid RhinoEdgeContinuityAlalysisModeId
+	public static System.Guid RhinoEdgeContinuityAlalysisModeId
 	{
 		get => throw new System.NotImplementedException();
 	}

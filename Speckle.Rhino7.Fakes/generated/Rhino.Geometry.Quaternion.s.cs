@@ -19,23 +19,23 @@ public partial struct Quaternion : System.IEquatable<Rhino.Geometry.Quaternion>,
 	public  Rhino.Geometry.Vector3d Rotate(Rhino.Geometry.Vector3d v) => throw new System.NotImplementedException();
 	public  Rhino.Geometry.Quaternion Product(Rhino.Geometry.Quaternion p,Rhino.Geometry.Quaternion q) => throw new System.NotImplementedException();
 	public  Rhino.Geometry.Quaternion CrossProduct(Rhino.Geometry.Quaternion p,Rhino.Geometry.Quaternion q) => throw new System.NotImplementedException();
-	public  Rhino.Geometry.Quaternion Zero
+	public static Rhino.Geometry.Quaternion Zero
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public  Rhino.Geometry.Quaternion Identity
+	public static Rhino.Geometry.Quaternion Identity
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public  Rhino.Geometry.Quaternion I
+	public static Rhino.Geometry.Quaternion I
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public  Rhino.Geometry.Quaternion J
+	public static Rhino.Geometry.Quaternion J
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public  Rhino.Geometry.Quaternion K
+	public static Rhino.Geometry.Quaternion K
 	{
 		get => throw new System.NotImplementedException();
 	}

@@ -39,23 +39,23 @@ public partial struct Vector3d : System.Runtime.Serialization.ISerializable,Syst
 	void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info,System.Runtime.Serialization.StreamingContext context) => throw new System.NotImplementedException();
 	System.Int32 System.IComparable.CompareTo(System.Object obj) => throw new System.NotImplementedException();
 	System.Object System.ICloneable.Clone() => throw new System.NotImplementedException();
-	public  Rhino.Geometry.Vector3d Zero
+	public static Rhino.Geometry.Vector3d Zero
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public  Rhino.Geometry.Vector3d XAxis
+	public static Rhino.Geometry.Vector3d XAxis
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public  Rhino.Geometry.Vector3d YAxis
+	public static Rhino.Geometry.Vector3d YAxis
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public  Rhino.Geometry.Vector3d ZAxis
+	public static Rhino.Geometry.Vector3d ZAxis
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public  Rhino.Geometry.Vector3d Unset
+	public static Rhino.Geometry.Vector3d Unset
 	{
 		get => throw new System.NotImplementedException();
 	}

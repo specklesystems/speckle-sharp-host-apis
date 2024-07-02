@@ -42,15 +42,15 @@ public partial struct Transform : System.IComparable<Rhino.Geometry.Transform>,S
 	public  Rhino.Geometry.Transform Clone() => throw new System.NotImplementedException();
 	public  System.Int32 CompareTo(Rhino.Geometry.Transform other) => throw new System.NotImplementedException();
 	System.Object System.ICloneable.Clone() => throw new System.NotImplementedException();
-	public  Rhino.Geometry.Transform Identity
+	public static Rhino.Geometry.Transform Identity
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public  Rhino.Geometry.Transform ZeroTransformation
+	public static Rhino.Geometry.Transform ZeroTransformation
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public  Rhino.Geometry.Transform Unset
+	public static Rhino.Geometry.Transform Unset
 	{
 		get => throw new System.NotImplementedException();
 	}

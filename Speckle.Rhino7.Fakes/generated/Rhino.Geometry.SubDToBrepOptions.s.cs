@@ -5,15 +5,15 @@ public partial class SubDToBrepOptions : System.IDisposable
 	public SubDToBrepOptions() {}
 	public SubDToBrepOptions(System.Boolean packFaces,Rhino.Geometry.SubDToBrepOptions.ExtraordinaryVertexProcessOption vertexProcess) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
-	public static  Rhino.Geometry.SubDToBrepOptions Default
+	public static Rhino.Geometry.SubDToBrepOptions Default
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  Rhino.Geometry.SubDToBrepOptions DefaultPacked
+	public static Rhino.Geometry.SubDToBrepOptions DefaultPacked
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  Rhino.Geometry.SubDToBrepOptions DefaultUnpacked
+	public static Rhino.Geometry.SubDToBrepOptions DefaultUnpacked
 	{
 		get => throw new System.NotImplementedException();
 	}

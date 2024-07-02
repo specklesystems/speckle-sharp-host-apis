@@ -32,11 +32,11 @@ public partial struct Point3d : System.Runtime.Serialization.ISerializable,Syste
 	void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info,System.Runtime.Serialization.StreamingContext context) => throw new System.NotImplementedException();
 	System.Int32 System.IComparable.CompareTo(System.Object obj) => throw new System.NotImplementedException();
 	System.Object System.ICloneable.Clone() => throw new System.NotImplementedException();
-	public  Rhino.Geometry.Point3d Origin
+	public static Rhino.Geometry.Point3d Origin
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public  Rhino.Geometry.Point3d Unset
+	public static Rhino.Geometry.Point3d Unset
 	{
 		get => throw new System.NotImplementedException();
 	}

@@ -68,7 +68,7 @@ public partial class RhinoObject : Rhino.DocObjects.ModelComponent
 	public virtual void SetCustomRenderMeshParameter(System.Guid providerId,System.String parameterName,System.Object value) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsActiveInViewport(Rhino.Display.RhinoViewport viewport) => throw new System.NotImplementedException();
 	public virtual void SetCopyHistoryOnReplace(System.Boolean bCopy) => throw new System.NotImplementedException();
-	public static  System.UInt32 NextRuntimeSerialNumber
+	public static System.UInt32 NextRuntimeSerialNumber
 	{
 		get => throw new System.NotImplementedException();
 	}

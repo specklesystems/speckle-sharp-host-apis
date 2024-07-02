@@ -7,7 +7,7 @@ public partial struct Torus : Rhino.IEpsilonComparable<Rhino.Geometry.Torus>
 	public  Rhino.Geometry.NurbsSurface ToNurbsSurface() => throw new System.NotImplementedException();
 	public  Rhino.Geometry.RevSurface ToRevSurface() => throw new System.NotImplementedException();
 	public  System.Boolean EpsilonEquals(Rhino.Geometry.Torus other,System.Double epsilon) => throw new System.NotImplementedException();
-	public  Rhino.Geometry.Torus Unset
+	public static Rhino.Geometry.Torus Unset
 	{
 		get => throw new System.NotImplementedException();
 	}

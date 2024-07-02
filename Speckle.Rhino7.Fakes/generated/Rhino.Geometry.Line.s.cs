@@ -68,7 +68,7 @@ public partial struct Line : System.IEquatable<Rhino.Geometry.Line>,Rhino.IEpsil
 		get => throw new System.NotImplementedException();
 		set {}
 	}
-	public  Rhino.Geometry.Line Unset
+	public static Rhino.Geometry.Line Unset
 	{
 		get => throw new System.NotImplementedException();
 	}

@@ -24,7 +24,7 @@ public partial struct Interval : System.Runtime.Serialization.ISerializable,Syst
 	public  System.Boolean EpsilonEquals(Rhino.Geometry.Interval other,System.Double epsilon) => throw new System.NotImplementedException();
 	void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info,System.Runtime.Serialization.StreamingContext context) => throw new System.NotImplementedException();
 	System.Int32 System.IComparable.CompareTo(System.Object obj) => throw new System.NotImplementedException();
-	public  Rhino.Geometry.Interval Unset
+	public static Rhino.Geometry.Interval Unset
 	{
 		get => throw new System.NotImplementedException();
 	}

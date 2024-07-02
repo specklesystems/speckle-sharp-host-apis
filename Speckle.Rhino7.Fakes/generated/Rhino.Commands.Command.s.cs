@@ -13,11 +13,11 @@ public partial class Command
 	public static System.String LookupCommandName(System.Guid commandId,System.Boolean englishName) => throw new System.NotImplementedException();
 	public static System.String[] GetCommandNames(System.Boolean english,System.Boolean loaded) => throw new System.NotImplementedException();
 	public static void DisplayHelp(System.Guid commandId) => throw new System.NotImplementedException();
-	public static  System.Guid LastCommandId
+	public static System.Guid LastCommandId
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  Rhino.Commands.Result LastCommandResult
+	public static Rhino.Commands.Result LastCommandResult
 	{
 		get => throw new System.NotImplementedException();
 	}

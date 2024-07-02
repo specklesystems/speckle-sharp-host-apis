@@ -23,7 +23,7 @@ public partial struct Arc : System.IEquatable<Rhino.Geometry.Arc>,Rhino.IEpsilon
 	public  System.Boolean EpsilonEquals(Rhino.Geometry.Arc other,System.Double epsilon) => throw new System.NotImplementedException();
 	public  Rhino.Geometry.NurbsCurve ToNurbsCurve(System.Int32 degree,System.Int32 cvCount) => throw new System.NotImplementedException();
 	System.Object System.ICloneable.Clone() => throw new System.NotImplementedException();
-	public  Rhino.Geometry.Arc Unset
+	public static Rhino.Geometry.Arc Unset
 	{
 		get => throw new System.NotImplementedException();
 	}

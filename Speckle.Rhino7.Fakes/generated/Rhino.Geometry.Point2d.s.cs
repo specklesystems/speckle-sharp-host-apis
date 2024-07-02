@@ -50,11 +50,11 @@ public partial struct Point2d : System.Runtime.Serialization.ISerializable,Syste
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public  Rhino.Geometry.Point2d Origin
+	public static Rhino.Geometry.Point2d Origin
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public  Rhino.Geometry.Point2d Unset
+	public static Rhino.Geometry.Point2d Unset
 	{
 		get => throw new System.NotImplementedException();
 	}

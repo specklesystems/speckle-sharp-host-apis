@@ -24,23 +24,23 @@ public partial struct Vector3f : System.IEquatable<Rhino.Geometry.Vector3f>,Syst
 	public  Rhino.Geometry.Vector3f Divide(Rhino.Geometry.Vector3f vector,System.Single t) => throw new System.NotImplementedException();
 	public  Rhino.Geometry.Vector3f CrossProduct(Rhino.Geometry.Vector3f a,Rhino.Geometry.Vector3f b) => throw new System.NotImplementedException();
 	System.Int32 System.IComparable.CompareTo(System.Object obj) => throw new System.NotImplementedException();
-	public  Rhino.Geometry.Vector3f Zero
+	public static Rhino.Geometry.Vector3f Zero
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public  Rhino.Geometry.Vector3f XAxis
+	public static Rhino.Geometry.Vector3f XAxis
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public  Rhino.Geometry.Vector3f YAxis
+	public static Rhino.Geometry.Vector3f YAxis
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public  Rhino.Geometry.Vector3f ZAxis
+	public static Rhino.Geometry.Vector3f ZAxis
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public  Rhino.Geometry.Vector3f Unset
+	public static Rhino.Geometry.Vector3f Unset
 	{
 		get => throw new System.NotImplementedException();
 	}

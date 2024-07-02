@@ -11,7 +11,7 @@ public partial struct Cylinder : Rhino.IEpsilonComparable<Rhino.Geometry.Cylinde
 	public  Rhino.Geometry.NurbsSurface ToNurbsSurface() => throw new System.NotImplementedException();
 	public  Rhino.Geometry.RevSurface ToRevSurface() => throw new System.NotImplementedException();
 	public  System.Boolean EpsilonEquals(Rhino.Geometry.Cylinder other,System.Double epsilon) => throw new System.NotImplementedException();
-	public  Rhino.Geometry.Cylinder Unset
+	public static Rhino.Geometry.Cylinder Unset
 	{
 		get => throw new System.NotImplementedException();
 	}

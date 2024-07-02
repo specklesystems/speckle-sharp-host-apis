@@ -10,7 +10,7 @@ public partial class MeshNgon : System.IEquatable<Rhino.Geometry.MeshNgon>,Syste
 	public virtual System.Boolean Equals(Rhino.Geometry.MeshNgon otherNgon) => throw new System.NotImplementedException();
 	public virtual System.Int32 CompareTo(Rhino.Geometry.MeshNgon otherNgon) => throw new System.NotImplementedException();
 	System.Int32 System.IComparable.CompareTo(System.Object obj) => throw new System.NotImplementedException();
-	public static  Rhino.Geometry.MeshNgon Empty
+	public static Rhino.Geometry.MeshNgon Empty
 	{
 		get => throw new System.NotImplementedException();
 	}

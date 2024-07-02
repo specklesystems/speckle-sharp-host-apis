@@ -12,23 +12,23 @@ public partial class CustomRenderMeshProvider
 	public static void DocumentBasedMeshesChanged(Rhino.RhinoDoc doc) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.BoundingBox BoundingBox(Rhino.DocObjects.ViewportInfo vp,Rhino.DocObjects.RhinoObject obj,System.Guid requestingPlugIn,System.Boolean preview) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.BoundingBox BoundingBox(Rhino.DocObjects.ViewportInfo vp,Rhino.DocObjects.RhinoObject obj,Rhino.RhinoDoc doc,System.Guid requestingPlugIn,Rhino.Display.DisplayPipelineAttributes attrs) => throw new System.NotImplementedException();
-	public static  System.Guid EdgeSofteningId
+	public static System.Guid EdgeSofteningId
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Guid DisplacementId
+	public static System.Guid DisplacementId
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Guid CurvePipingId
+	public static System.Guid CurvePipingId
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Guid ShutLiningId
+	public static System.Guid ShutLiningId
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Guid ThickeningId
+	public static System.Guid ThickeningId
 	{
 		get => throw new System.NotImplementedException();
 	}

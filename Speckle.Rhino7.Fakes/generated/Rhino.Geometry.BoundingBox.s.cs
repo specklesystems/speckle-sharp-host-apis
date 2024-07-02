@@ -30,11 +30,11 @@ public partial struct BoundingBox : System.ICloneable
 	public  Rhino.Geometry.BoundingBox Intersection(Rhino.Geometry.BoundingBox a,Rhino.Geometry.BoundingBox b) => throw new System.NotImplementedException();
 	public  Rhino.Geometry.BoundingBox Union(Rhino.Geometry.BoundingBox box,Rhino.Geometry.Point3d point) => throw new System.NotImplementedException();
 	System.Object System.ICloneable.Clone() => throw new System.NotImplementedException();
-	public  Rhino.Geometry.BoundingBox Empty
+	public static Rhino.Geometry.BoundingBox Empty
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public  Rhino.Geometry.BoundingBox Unset
+	public static Rhino.Geometry.BoundingBox Unset
 	{
 		get => throw new System.NotImplementedException();
 	}

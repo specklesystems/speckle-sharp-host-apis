@@ -16,31 +16,31 @@ public partial class RenderMaterial : Rhino.Render.RenderContent
 	public virtual Rhino.DocObjects.Material SimulateMaterial(System.Boolean isForDataOnly) => throw new System.NotImplementedException();
 	public virtual Rhino.DocObjects.Material SimulatedMaterial(Rhino.Render.RenderTexture.TextureGeneration tg) => throw new System.NotImplementedException();
 	public virtual Rhino.DocObjects.PhysicallyBasedMaterial ConvertToPhysicallyBased(Rhino.Render.RenderTexture.TextureGeneration tg) => throw new System.NotImplementedException();
-	public static  System.Guid PlasterMaterialGuid
+	public static System.Guid PlasterMaterialGuid
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Guid PlasticMaterialGuid
+	public static System.Guid PlasticMaterialGuid
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Guid PaintMaterialGuid
+	public static System.Guid PaintMaterialGuid
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Guid GlassMaterialGuid
+	public static System.Guid GlassMaterialGuid
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Guid GemMaterialGuid
+	public static System.Guid GemMaterialGuid
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Guid MetalMaterialGuid
+	public static System.Guid MetalMaterialGuid
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Guid PictureMaterialGuid
+	public static System.Guid PictureMaterialGuid
 	{
 		get => throw new System.NotImplementedException();
 	}

@@ -127,7 +127,7 @@ public partial class Layer : Rhino.DocObjects.ModelComponent,System.IEquatable<R
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.String PathSeparator
+	public static System.String PathSeparator
 	{
 		get => throw new System.NotImplementedException();
 	}

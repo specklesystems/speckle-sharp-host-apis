@@ -68,47 +68,47 @@ public partial class DisplayModeDescription : System.IDisposable,System.Runtime.
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Guid ArtisticId
+	public static System.Guid ArtisticId
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Guid GhostedId
+	public static System.Guid GhostedId
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Guid PenId
+	public static System.Guid PenId
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Guid RenderedId
+	public static System.Guid RenderedId
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Guid RenderedShadowsId
+	public static System.Guid RenderedShadowsId
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Guid ShadedId
+	public static System.Guid ShadedId
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Guid TechId
+	public static System.Guid TechId
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Guid WireframeId
+	public static System.Guid WireframeId
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Guid XRayId
+	public static System.Guid XRayId
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Guid AmbientOcclusionId
+	public static System.Guid AmbientOcclusionId
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Guid RaytracedId
+	public static System.Guid RaytracedId
 	{
 		get => throw new System.NotImplementedException();
 	}

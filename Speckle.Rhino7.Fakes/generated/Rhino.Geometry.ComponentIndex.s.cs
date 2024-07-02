@@ -13,7 +13,7 @@ public partial struct ComponentIndex
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public  Rhino.Geometry.ComponentIndex Unset
+	public static Rhino.Geometry.ComponentIndex Unset
 	{
 		get => throw new System.NotImplementedException();
 	}

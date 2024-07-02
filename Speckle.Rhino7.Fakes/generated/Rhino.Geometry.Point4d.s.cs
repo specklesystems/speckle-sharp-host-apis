@@ -34,7 +34,7 @@ public partial struct Point4d : System.Runtime.Serialization.ISerializable,Syste
 		get => throw new System.NotImplementedException();
 		set {}
 	}
-	public  Rhino.Geometry.Point4d Unset
+	public static Rhino.Geometry.Point4d Unset
 	{
 		get => throw new System.NotImplementedException();
 	}

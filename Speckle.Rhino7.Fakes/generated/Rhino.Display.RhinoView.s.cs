@@ -26,7 +26,7 @@ public partial class RhinoView
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Boolean EnableDrawing
+	public static System.Boolean EnableDrawing
 	{
 		get => throw new System.NotImplementedException();
 		set {}

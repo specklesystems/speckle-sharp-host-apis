@@ -51,7 +51,7 @@ public partial class RhinoDoc : System.IDisposable
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  Rhino.RhinoDoc ActiveDoc
+	public static Rhino.RhinoDoc ActiveDoc
 	{
 		get => throw new System.NotImplementedException();
 		set {}

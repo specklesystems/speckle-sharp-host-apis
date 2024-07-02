@@ -15,7 +15,7 @@ public partial struct MeshFace : System.IEquatable<Rhino.Geometry.MeshFace>,Syst
 	public  System.Boolean Equals(Rhino.Geometry.MeshFace other) => throw new System.NotImplementedException();
 	public  System.Int32 CompareTo(Rhino.Geometry.MeshFace other) => throw new System.NotImplementedException();
 	System.Int32 System.IComparable.CompareTo(System.Object obj) => throw new System.NotImplementedException();
-	public  Rhino.Geometry.MeshFace Unset
+	public static Rhino.Geometry.MeshFace Unset
 	{
 		get => throw new System.NotImplementedException();
 	}

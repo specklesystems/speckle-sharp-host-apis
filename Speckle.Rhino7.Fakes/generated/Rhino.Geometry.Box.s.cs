@@ -29,11 +29,11 @@ public partial struct Box : Rhino.IEpsilonComparable<Rhino.Geometry.Box>,System.
 	public  Rhino.Geometry.Extrusion ToExtrusion() => throw new System.NotImplementedException();
 	public  System.Boolean EpsilonEquals(Rhino.Geometry.Box other,System.Double epsilon) => throw new System.NotImplementedException();
 	System.Object System.ICloneable.Clone() => throw new System.NotImplementedException();
-	public  Rhino.Geometry.Box Empty
+	public static Rhino.Geometry.Box Empty
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public  Rhino.Geometry.Box Unset
+	public static Rhino.Geometry.Box Unset
 	{
 		get => throw new System.NotImplementedException();
 	}

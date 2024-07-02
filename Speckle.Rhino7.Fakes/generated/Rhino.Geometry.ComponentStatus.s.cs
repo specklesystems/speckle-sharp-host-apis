@@ -8,35 +8,35 @@ public partial struct ComponentStatus : System.IEquatable<Rhino.Geometry.Compone
 	public  System.Boolean HasAllEqualStates(Rhino.Geometry.ComponentStatus statesFilter,Rhino.Geometry.ComponentStatus comparand) => throw new System.NotImplementedException();
 	public  System.Boolean HasNoEqualStates(Rhino.Geometry.ComponentStatus statesFilter,Rhino.Geometry.ComponentStatus comparand) => throw new System.NotImplementedException();
 	public  System.Boolean Equals(Rhino.Geometry.ComponentStatus other) => throw new System.NotImplementedException();
-	public  Rhino.Geometry.ComponentStatus Clear
+	public static Rhino.Geometry.ComponentStatus Clear
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public  Rhino.Geometry.ComponentStatus Selected
+	public static Rhino.Geometry.ComponentStatus Selected
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public  Rhino.Geometry.ComponentStatus SelectedPersistent
+	public static Rhino.Geometry.ComponentStatus SelectedPersistent
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public  Rhino.Geometry.ComponentStatus Highlighted
+	public static Rhino.Geometry.ComponentStatus Highlighted
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public  Rhino.Geometry.ComponentStatus Hidden
+	public static Rhino.Geometry.ComponentStatus Hidden
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public  Rhino.Geometry.ComponentStatus Locked
+	public static Rhino.Geometry.ComponentStatus Locked
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public  Rhino.Geometry.ComponentStatus Damaged
+	public static Rhino.Geometry.ComponentStatus Damaged
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public  Rhino.Geometry.ComponentStatus AllSet
+	public static Rhino.Geometry.ComponentStatus AllSet
 	{
 		get => throw new System.NotImplementedException();
 	}

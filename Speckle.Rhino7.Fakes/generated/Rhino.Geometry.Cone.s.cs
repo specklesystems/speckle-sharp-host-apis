@@ -10,7 +10,7 @@ public partial struct Cone : Rhino.IEpsilonComparable<Rhino.Geometry.Cone>
 	public  Rhino.Geometry.RevSurface ToRevSurface() => throw new System.NotImplementedException();
 	public  Rhino.Geometry.Brep ToBrep(System.Boolean capBottom) => throw new System.NotImplementedException();
 	public  System.Boolean EpsilonEquals(Rhino.Geometry.Cone other,System.Double epsilon) => throw new System.NotImplementedException();
-	public  Rhino.Geometry.Cone Unset
+	public static Rhino.Geometry.Cone Unset
 	{
 		get => throw new System.NotImplementedException();
 	}

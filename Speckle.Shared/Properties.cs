@@ -112,13 +112,13 @@ public partial class Generator
   {
     var isIndexer = (property.Name.Length == 4 && property.Name.Equals("Item")) || property.Name.EndsWith(".Item") ;
     var extra = string.Empty;
+    if (isStatic)
+    {
+      extra += "static";
+    }
     if (generatedType == GeneratedType.Class)
     {
-      if (isStatic)
-      {
-        extra += "static ";
-      }
-      else
+      if (!isStatic)
       {
         extra = isOverriden ? "override" : "virtual";
         if (IsMemberOnBaseClass(property.DeclaringType?.BaseType?.FullName, new(property.Name)))

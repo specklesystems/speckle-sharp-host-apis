@@ -35,11 +35,11 @@ public partial struct Vector2d : System.Runtime.Serialization.ISerializable,Syst
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public  Rhino.Geometry.Vector2d Zero
+	public static Rhino.Geometry.Vector2d Zero
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public  Rhino.Geometry.Vector2d Unset
+	public static Rhino.Geometry.Vector2d Unset
 	{
 		get => throw new System.NotImplementedException();
 	}

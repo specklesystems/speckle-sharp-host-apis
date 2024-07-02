@@ -4,15 +4,15 @@ public partial class SubDCreationOptions : System.IDisposable
 {
 	public SubDCreationOptions() {}
 	public virtual void Dispose() => throw new System.NotImplementedException();
-	public static  Rhino.Geometry.SubDCreationOptions Smooth
+	public static Rhino.Geometry.SubDCreationOptions Smooth
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  Rhino.Geometry.SubDCreationOptions InteriorCreases
+	public static Rhino.Geometry.SubDCreationOptions InteriorCreases
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  Rhino.Geometry.SubDCreationOptions ConvexCornersAndInteriorCreases
+	public static Rhino.Geometry.SubDCreationOptions ConvexCornersAndInteriorCreases
 	{
 		get => throw new System.NotImplementedException();
 	}

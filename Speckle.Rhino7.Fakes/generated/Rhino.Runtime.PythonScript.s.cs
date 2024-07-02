@@ -20,7 +20,7 @@ public partial class PythonScript
 	public virtual System.String GetStackTraceFromException(System.Exception ex) => throw new System.NotImplementedException();
 	public virtual System.Object CreateTextEditorControl(System.String script,System.Action<System.String> helpcallback) => throw new System.NotImplementedException();
 	public virtual void SetupScriptContext(System.Object doc) => throw new System.NotImplementedException();
-	public static  System.String[] SearchPaths
+	public static System.String[] SearchPaths
 	{
 		get => throw new System.NotImplementedException();
 		set {}

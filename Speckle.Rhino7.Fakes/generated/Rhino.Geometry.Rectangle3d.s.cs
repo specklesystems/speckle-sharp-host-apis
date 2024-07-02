@@ -22,7 +22,7 @@ public partial struct Rectangle3d : Rhino.IEpsilonComparable<Rhino.Geometry.Rect
 	public  Rhino.Geometry.NurbsCurve ToNurbsCurve() => throw new System.NotImplementedException();
 	public  System.Boolean EpsilonEquals(Rhino.Geometry.Rectangle3d other,System.Double epsilon) => throw new System.NotImplementedException();
 	System.Object System.ICloneable.Clone() => throw new System.NotImplementedException();
-	public  Rhino.Geometry.Rectangle3d Unset
+	public static Rhino.Geometry.Rectangle3d Unset
 	{
 		get => throw new System.NotImplementedException();
 	}

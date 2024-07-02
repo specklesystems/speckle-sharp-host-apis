@@ -11,15 +11,15 @@ public partial struct Color4f : System.Runtime.Serialization.ISerializable
 	public  Rhino.Display.Color4f BlendTo(System.Single t,Rhino.Display.Color4f col) => throw new System.NotImplementedException();
 	public  Rhino.Display.Color4f ApplyGamma(Rhino.Display.Color4f col,System.Single gamma) => throw new System.NotImplementedException();
 	void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info,System.Runtime.Serialization.StreamingContext context) => throw new System.NotImplementedException();
-	public  Rhino.Display.Color4f Empty
+	public static Rhino.Display.Color4f Empty
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public  Rhino.Display.Color4f Black
+	public static Rhino.Display.Color4f Black
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public  Rhino.Display.Color4f White
+	public static Rhino.Display.Color4f White
 	{
 		get => throw new System.NotImplementedException();
 	}

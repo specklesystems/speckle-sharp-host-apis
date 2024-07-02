@@ -83,11 +83,11 @@ public partial class PersistentSettings : System.Runtime.Serialization.ISerializ
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  Rhino.PersistentSettings RhinoAppSettings
+	public static Rhino.PersistentSettings RhinoAppSettings
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.String StringListRootKey
+	public static System.String StringListRootKey
 	{
 		get => throw new System.NotImplementedException();
 	}

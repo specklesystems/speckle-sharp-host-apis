@@ -10,7 +10,7 @@ public partial struct ControlPoint : Rhino.IEpsilonComparable<Rhino.Geometry.Con
 	public ControlPoint(Rhino.Geometry.Point4d pt) => throw new System.NotImplementedException();
 	public  System.Boolean EpsilonEquals(Rhino.Geometry.ControlPoint other,System.Double epsilon) => throw new System.NotImplementedException();
 	public  System.Boolean Equals(Rhino.Geometry.ControlPoint other) => throw new System.NotImplementedException();
-	public  Rhino.Geometry.ControlPoint Unset
+	public static Rhino.Geometry.ControlPoint Unset
 	{
 		get => throw new System.NotImplementedException();
 	}

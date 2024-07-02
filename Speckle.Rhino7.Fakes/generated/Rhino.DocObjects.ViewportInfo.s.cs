@@ -110,7 +110,7 @@ public partial class ViewportInfo : Rhino.Runtime.CommonObject
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  Rhino.Geometry.Vector3d DefaultCameraDirection
+	public static Rhino.Geometry.Vector3d DefaultCameraDirection
 	{
 		get => throw new System.NotImplementedException();
 	}

@@ -14,7 +14,7 @@ public partial class SimulatedTexture : System.IDisposable
 	public virtual Rhino.DocObjects.Texture Texture() => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.IntPtr ConstPointer() => throw new System.NotImplementedException();
-	public static  System.Int32 BitmapSize
+	public static System.Int32 BitmapSize
 	{
 		get => throw new System.NotImplementedException();
 		set {}

@@ -7,31 +7,31 @@ public partial class MeshingParameters : System.IDisposable
 	public MeshingParameters(System.Double density,System.Double minimumEdgeLength) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public static Rhino.Geometry.MeshingParameters DocumentCurrentSetting(Rhino.RhinoDoc doc) => throw new System.NotImplementedException();
-	public static  Rhino.Geometry.MeshingParameters Minimal
+	public static Rhino.Geometry.MeshingParameters Minimal
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  Rhino.Geometry.MeshingParameters Default
+	public static Rhino.Geometry.MeshingParameters Default
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  Rhino.Geometry.MeshingParameters Coarse
+	public static Rhino.Geometry.MeshingParameters Coarse
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  Rhino.Geometry.MeshingParameters FastRenderMesh
+	public static Rhino.Geometry.MeshingParameters FastRenderMesh
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  Rhino.Geometry.MeshingParameters Smooth
+	public static Rhino.Geometry.MeshingParameters Smooth
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  Rhino.Geometry.MeshingParameters QualityRenderMesh
+	public static Rhino.Geometry.MeshingParameters QualityRenderMesh
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  Rhino.Geometry.MeshingParameters DefaultAnalysisMesh
+	public static Rhino.Geometry.MeshingParameters DefaultAnalysisMesh
 	{
 		get => throw new System.NotImplementedException();
 	}

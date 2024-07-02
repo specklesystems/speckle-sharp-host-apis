@@ -35,11 +35,11 @@ public partial class Analytics
 		get => throw new System.NotImplementedException();
 		set {}
 	}
-	public static  System.Boolean UsageStatisticsEnabled
+	public static System.Boolean UsageStatisticsEnabled
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Guid UserId
+	public static System.Guid UserId
 	{
 		get => throw new System.NotImplementedException();
 	}

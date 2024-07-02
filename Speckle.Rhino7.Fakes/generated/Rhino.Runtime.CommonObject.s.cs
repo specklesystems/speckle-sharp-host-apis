@@ -9,7 +9,7 @@ public partial class CommonObject : System.IDisposable,System.Runtime.Serializat
 	public static Rhino.Runtime.CommonObject FromBase64String(System.Int32 archive3dm,System.Int32 opennurbs,System.String base64Data) => throw new System.NotImplementedException();
 	public static Rhino.Runtime.CommonObject FromJSON(System.String json) => throw new System.NotImplementedException();
 	public static Rhino.Runtime.CommonObject FromJSON(System.Collections.Generic.Dictionary<System.String, System.String> jsonDictionary) => throw new System.NotImplementedException();
-	public static  System.Boolean PerformCorruptionTesting
+	public static System.Boolean PerformCorruptionTesting
 	{
 		get => throw new System.NotImplementedException();
 		set {}

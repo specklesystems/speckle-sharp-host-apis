@@ -29,7 +29,7 @@ public partial class Material : Rhino.DocObjects.ModelComponent
 	public virtual System.Boolean SetUserString(System.String key,System.String value) => throw new System.NotImplementedException();
 	public virtual System.String GetUserString(System.String key) => throw new System.NotImplementedException();
 	public virtual System.Collections.Specialized.NameValueCollection GetUserStrings() => throw new System.NotImplementedException();
-	public static  Rhino.DocObjects.Material DefaultMaterial
+	public static Rhino.DocObjects.Material DefaultMaterial
 	{
 		get => throw new System.NotImplementedException();
 	}
@@ -80,7 +80,7 @@ public partial class Material : Rhino.DocObjects.ModelComponent
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Double MaxShine
+	public static System.Double MaxShine
 	{
 		get => throw new System.NotImplementedException();
 	}

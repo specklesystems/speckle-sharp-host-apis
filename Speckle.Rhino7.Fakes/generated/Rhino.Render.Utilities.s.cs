@@ -10,21 +10,21 @@ public partial class Utilities
 	public static System.String FindFile(Rhino.RhinoDoc doc,System.String fullPathToFile) => throw new System.NotImplementedException();
 	public static System.String FindFile(Rhino.RhinoDoc doc,System.String fullPathToFile,System.Boolean unpackFromBitmapTableIfNecessary) => throw new System.NotImplementedException();
 	public static System.Boolean IsCachedTextureFileInUse(System.String textureFileName) => throw new System.NotImplementedException();
-	public static  System.Guid DefaultRenderPlugInId
+	public static System.Guid DefaultRenderPlugInId
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Boolean ShowIncompatibleMaterials
-	{
-		get => throw new System.NotImplementedException();
-		set {}
-	}
-	public static  System.Boolean ShowIncompatibleEnvironments
+	public static System.Boolean ShowIncompatibleMaterials
 	{
 		get => throw new System.NotImplementedException();
 		set {}
 	}
-	public static  System.Boolean ShowIncompatibleTextures
+	public static System.Boolean ShowIncompatibleEnvironments
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public static System.Boolean ShowIncompatibleTextures
 	{
 		get => throw new System.NotImplementedException();
 		set {}

@@ -23,7 +23,7 @@ public partial struct Sphere : Rhino.IEpsilonComparable<Rhino.Geometry.Sphere>
 	public  Rhino.Geometry.NurbsSurface ToNurbsSurface() => throw new System.NotImplementedException();
 	public  Rhino.Geometry.RevSurface ToRevSurface() => throw new System.NotImplementedException();
 	public  System.Boolean EpsilonEquals(Rhino.Geometry.Sphere other,System.Double epsilon) => throw new System.NotImplementedException();
-	public  Rhino.Geometry.Sphere Unset
+	public static Rhino.Geometry.Sphere Unset
 	{
 		get => throw new System.NotImplementedException();
 	}

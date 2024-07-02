@@ -38,75 +38,75 @@ public partial class HostUtils
 	public static System.Int32 GetSystemProcessorCount() => throw new System.NotImplementedException();
 	public static System.Reflection.Assembly GetRhinoDotNetAssembly() => throw new System.NotImplementedException();
 	public static void SetInShutDown() => throw new System.NotImplementedException();
-	public static  System.Boolean RunningAsRhinoInside
+	public static System.Boolean RunningAsRhinoInside
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.String OperatingSystemEdition
+	public static System.String OperatingSystemEdition
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.String OperatingSystemInstallationType
+	public static System.String OperatingSystemInstallationType
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.String OperatingSystemProductName
+	public static System.String OperatingSystemProductName
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.String OperatingSystemVersion
+	public static System.String OperatingSystemVersion
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.String OperatingSystemBuildNumber
+	public static System.String OperatingSystemBuildNumber
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Boolean RunningOnWindows
+	public static System.Boolean RunningOnWindows
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Boolean RunningOnOSX
+	public static System.Boolean RunningOnOSX
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Boolean RunningOnServer
+	public static System.Boolean RunningOnServer
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Boolean RunningInWindowsContainer
+	public static System.Boolean RunningInWindowsContainer
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Boolean RunningInDarkMode
+	public static System.Boolean RunningInDarkMode
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.String DeviceName
+	public static System.String DeviceName
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.String ComputerSerialNumber
+	public static System.String ComputerSerialNumber
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.UInt32 CurrentOSLanguage
+	public static System.UInt32 CurrentOSLanguage
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Guid DeviceId
+	public static System.Guid DeviceId
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Boolean RunningInMono
+	public static System.Boolean RunningInMono
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Boolean RunningInRhino
+	public static System.Boolean RunningInRhino
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Boolean SendDebugToCommandLine
+	public static System.Boolean SendDebugToCommandLine
 	{
 		get => throw new System.NotImplementedException();
 		set {}

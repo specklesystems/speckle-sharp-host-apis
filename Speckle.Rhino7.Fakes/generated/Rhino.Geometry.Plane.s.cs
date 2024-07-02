@@ -62,19 +62,19 @@ public partial struct Plane : System.IEquatable<Rhino.Geometry.Plane>,Rhino.IEps
 		get => throw new System.NotImplementedException();
 		set {}
 	}
-	public  Rhino.Geometry.Plane WorldXY
+	public static Rhino.Geometry.Plane WorldXY
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public  Rhino.Geometry.Plane WorldYZ
+	public static Rhino.Geometry.Plane WorldYZ
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public  Rhino.Geometry.Plane WorldZX
+	public static Rhino.Geometry.Plane WorldZX
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public  Rhino.Geometry.Plane Unset
+	public static Rhino.Geometry.Plane Unset
 	{
 		get => throw new System.NotImplementedException();
 	}

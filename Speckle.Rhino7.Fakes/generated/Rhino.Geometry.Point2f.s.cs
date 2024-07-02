@@ -10,7 +10,7 @@ public partial struct Point2f : System.IEquatable<Rhino.Geometry.Point2f>,System
 	public  System.Int32 CompareTo(Rhino.Geometry.Point2f other) => throw new System.NotImplementedException();
 	public  System.String ToString(System.String format,System.IFormatProvider formatProvider) => throw new System.NotImplementedException();
 	System.Int32 System.IComparable.CompareTo(System.Object obj) => throw new System.NotImplementedException();
-	public  Rhino.Geometry.Point2f Unset
+	public static Rhino.Geometry.Point2f Unset
 	{
 		get => throw new System.NotImplementedException();
 	}

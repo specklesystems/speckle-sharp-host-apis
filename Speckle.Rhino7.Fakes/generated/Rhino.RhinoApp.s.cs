@@ -47,182 +47,182 @@ public partial class RhinoApp
 	public static System.Boolean ChangeLicenseKey(System.Guid pluginId) => throw new System.NotImplementedException();
 	public static System.Boolean RefreshRhinoLicense() => throw new System.NotImplementedException();
 	public static System.Boolean LoginToCloudZoo() => throw new System.NotImplementedException();
-	public static  System.Int32 SdkVersion
+	public static System.Int32 SdkVersion
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Int32 SdkServiceRelease
+	public static System.Int32 SdkServiceRelease
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Int32 ExeVersion
+	public static System.Int32 ExeVersion
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Int32 ExeServiceRelease
+	public static System.Int32 ExeServiceRelease
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.DateTime BuildDate
+	public static System.DateTime BuildDate
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.String VersionControlRevision
+	public static System.String VersionControlRevision
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Version Version
+	public static System.Version Version
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.String SerialNumber
+	public static System.String SerialNumber
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.String LicenseUserName
+	public static System.String LicenseUserName
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.String LicenseUserOrganization
+	public static System.String LicenseUserOrganization
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.String InstallationTypeString
+	public static System.String InstallationTypeString
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.String Name
+	public static System.String Name
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.String SchemeName
+	public static System.String SchemeName
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Guid Rhino2Id
+	public static System.Guid Rhino2Id
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Guid Rhino3Id
+	public static System.Guid Rhino3Id
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Guid Rhino4Id
+	public static System.Guid Rhino4Id
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Guid Rhino5Id
+	public static System.Guid Rhino5Id
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Guid Rhino6Id
+	public static System.Guid Rhino6Id
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Guid Rhino7Id
+	public static System.Guid Rhino7Id
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Guid CurrentRhinoId
+	public static System.Guid CurrentRhinoId
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Boolean IsRunningAutomated
+	public static System.Boolean IsRunningAutomated
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Boolean IsRunningHeadless
+	public static System.Boolean IsRunningHeadless
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Boolean IsSafeModeEnabled
+	public static System.Boolean IsSafeModeEnabled
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Boolean IsSkinned
+	public static System.Boolean IsSkinned
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  Rhino.RhinoApp.CommandLineTextWriter CommandLineOut
+	public static Rhino.RhinoApp.CommandLineTextWriter CommandLineOut
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Boolean CommandWindowCaptureEnabled
-	{
-		get => throw new System.NotImplementedException();
-		set {}
-	}
-	public static  System.Boolean SendWriteToConsole
+	public static System.Boolean CommandWindowCaptureEnabled
 	{
 		get => throw new System.NotImplementedException();
 		set {}
 	}
-	public static  System.String CommandPrompt
+	public static System.Boolean SendWriteToConsole
 	{
 		get => throw new System.NotImplementedException();
 		set {}
 	}
-	public static  System.String CommandHistoryWindowText
+	public static System.String CommandPrompt
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public static System.String CommandHistoryWindowText
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Boolean InvokeRequired
+	public static System.Boolean InvokeRequired
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Boolean LicenseExpires
+	public static System.Boolean LicenseExpires
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Boolean IsPreRelease
+	public static System.Boolean IsPreRelease
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Boolean IsLicenseValidated
+	public static System.Boolean IsLicenseValidated
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Boolean IsCloudZooNode
+	public static System.Boolean IsCloudZooNode
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Boolean IsInternetAccessAllowed
+	public static System.Boolean IsInternetAccessAllowed
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Boolean CanSave
+	public static System.Boolean CanSave
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Int32 UpdatesAndStatisticsStatus
+	public static System.Int32 UpdatesAndStatisticsStatus
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Int32 ValidationGracePeriodDaysLeft
+	public static System.Int32 ValidationGracePeriodDaysLeft
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Int32 DaysUntilExpiration
+	public static System.Int32 DaysUntilExpiration
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.String LoggedInUserName
+	public static System.String LoggedInUserName
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Boolean UserIsLoggedIn
+	public static System.Boolean UserIsLoggedIn
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Boolean IsClosing
+	public static System.Boolean IsClosing
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  System.Boolean IsExiting
+	public static System.Boolean IsExiting
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public static  Rhino.DocObjects.Font DefaultUiFont
+	public static Rhino.DocObjects.Font DefaultUiFont
 	{
 		get => throw new System.NotImplementedException();
 	}
