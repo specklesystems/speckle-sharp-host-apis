@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public enum ScheduleFieldMultipleValuesDisplayType
 {
-  Project,
-  Varies,
-  Custom,
+	Project,
+	Varies,
+	Custom,
 }

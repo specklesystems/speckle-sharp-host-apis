@@ -2,11 +2,11 @@ namespace Autodesk.Revit.DB;
 
 public enum FamilySizeTableErrorType
 {
-  Undefined,
-  FileNotFound,
-  CannotOpenFile,
-  CannotReadFile,
-  InvalidHeaderSeparator,
-  CannotParseColumnHeader,
-  IncorrectNumberOfColumns,
+	Undefined,
+	FileNotFound,
+	CannotOpenFile,
+	CannotReadFile,
+	InvalidHeaderSeparator,
+	CannotParseColumnHeader,
+	IncorrectNumberOfColumns,
 }

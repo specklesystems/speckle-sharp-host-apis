@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public enum ExportEnergyModelType
 {
-  SpatialElement,
-  BuildingElement,
-  AnalysisMode,
+	SpatialElement,
+	BuildingElement,
+	AnalysisMode,
 }

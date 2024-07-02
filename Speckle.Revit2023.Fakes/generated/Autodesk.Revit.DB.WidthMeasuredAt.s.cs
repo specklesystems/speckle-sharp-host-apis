@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public enum WidthMeasuredAt
 {
-  Top,
-  Base,
-  Bottom,
+	Top,
+	Base,
+	Bottom,
 }

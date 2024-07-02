@@ -2,8 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public enum ViewDisplayBackgroundType
 {
-  None,
-  Gradient,
-  Image,
-  SunAndClouds,
+	None,
+	Gradient,
+	Image,
+	SunAndClouds,
 }

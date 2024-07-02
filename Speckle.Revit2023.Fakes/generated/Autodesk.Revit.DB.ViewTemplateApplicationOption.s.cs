@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public enum ViewTemplateApplicationOption
 {
-  AllParameters,
-  UncontrolledParameters,
-  AllParametersAndStickIfNone,
+	AllParameters,
+	UncontrolledParameters,
+	AllParametersAndStickIfNone,
 }

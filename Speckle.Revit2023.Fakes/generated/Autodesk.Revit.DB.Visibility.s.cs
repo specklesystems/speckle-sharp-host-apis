@@ -2,8 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public enum Visibility
 {
-  Visible,
-  Highlight,
-  Contextual,
-  Invisible,
+	Visible,
+	Highlight,
+	Contextual,
+	Invisible,
 }

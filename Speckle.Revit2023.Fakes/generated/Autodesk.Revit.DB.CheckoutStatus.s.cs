@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public enum CheckoutStatus
 {
-  OwnedByCurrentUser,
-  OwnedByOtherUser,
-  NotOwned,
+	OwnedByCurrentUser,
+	OwnedByOtherUser,
+	NotOwned,
 }

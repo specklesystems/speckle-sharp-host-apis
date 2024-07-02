@@ -2,7 +2,7 @@ namespace Autodesk.Revit.UI;
 
 public enum Result
 {
-  Failed,
-  Succeeded,
-  Cancelled,
+	Failed,
+	Succeeded,
+	Cancelled,
 }

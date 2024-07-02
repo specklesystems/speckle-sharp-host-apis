@@ -1,15 +1,12 @@
 namespace Autodesk.Revit.DB.Electrical;
 
-public partial class WireConduitTypeSetIterator : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerator
+public partial class WireConduitTypeSetIterator : Autodesk.Revit.DB.APIObject,System.Collections.IEnumerator
 {
-  public WireConduitTypeSetIterator() { }
-
-  public virtual System.Boolean MoveNext() => throw new System.NotImplementedException();
-
-  public virtual void Reset() => throw new System.NotImplementedException();
-
-  public virtual System.Object Current
-  {
-    get => throw new System.NotImplementedException();
-  }
+	public WireConduitTypeSetIterator() {}
+	public virtual System.Boolean MoveNext() => throw new System.NotImplementedException();
+	public virtual void Reset() => throw new System.NotImplementedException();
+	public virtual System.Object Current
+	{
+		get => throw new System.NotImplementedException();
+	}
 }

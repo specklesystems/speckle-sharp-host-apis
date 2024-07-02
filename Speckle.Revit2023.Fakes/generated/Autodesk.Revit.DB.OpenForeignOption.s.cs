@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public enum OpenForeignOption
 {
-  Open,
-  DoNotOpen,
-  Prompt,
+	Open,
+	DoNotOpen,
+	Prompt,
 }

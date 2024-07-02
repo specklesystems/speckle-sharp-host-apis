@@ -2,8 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public enum LinePatternSegmentType
 {
-  Dash,
-  Space,
-  Dot,
-  Invalid,
+	Dash,
+	Space,
+	Dot,
+	Invalid,
 }

@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB.Architecture;
 
 public enum RailJoinOption
 {
-  ByType,
-  Miter,
-  Fillet,
+	ByType,
+	Miter,
+	Fillet,
 }

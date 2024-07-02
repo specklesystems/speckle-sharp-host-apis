@@ -2,8 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public enum VirtualPrinterType
 {
-  None,
-  AdobePDF,
-  DWFWriter,
-  XPSWriter,
+	None,
+	AdobePDF,
+	DWFWriter,
+	XPSWriter,
 }

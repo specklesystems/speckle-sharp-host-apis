@@ -2,8 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public enum NumberSystemDisplayRule
 {
-  All,
-  Odd,
-  Even,
-  StartAndEnd,
+	All,
+	Odd,
+	Even,
+	StartAndEnd,
 }

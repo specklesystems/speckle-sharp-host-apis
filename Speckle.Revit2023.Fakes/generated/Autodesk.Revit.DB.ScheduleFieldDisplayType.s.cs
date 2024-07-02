@@ -2,9 +2,9 @@ namespace Autodesk.Revit.DB;
 
 public enum ScheduleFieldDisplayType
 {
-  Standard,
-  Totals,
-  MinMax,
-  Max,
-  Min,
+	Standard,
+	Totals,
+	MinMax,
+	Max,
+	Min,
 }

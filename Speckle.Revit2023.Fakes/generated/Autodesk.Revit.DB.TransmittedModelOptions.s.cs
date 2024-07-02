@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public enum TransmittedModelOptions
 {
-  SaveAsNewCentral,
-  KeepAsTransmitted,
-  CancelOperation,
+	SaveAsNewCentral,
+	KeepAsTransmitted,
+	CancelOperation,
 }

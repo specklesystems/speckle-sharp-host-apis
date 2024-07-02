@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public enum EaveCutterType
 {
-  PlumbCut,
-  TwoCutPlumb,
-  TwoCutSquare,
+	PlumbCut,
+	TwoCutPlumb,
+	TwoCutSquare,
 }

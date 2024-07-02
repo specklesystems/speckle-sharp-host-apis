@@ -1,19 +1,16 @@
 namespace Autodesk.Revit.DB;
 
-public partial class ParameterMapIterator : Autodesk.Revit.DB.APIObject, System.Collections.IEnumerator
+public partial class ParameterMapIterator : Autodesk.Revit.DB.APIObject,System.Collections.IEnumerator
 {
-  public ParameterMapIterator() { }
-
-  public virtual System.Boolean MoveNext() => throw new System.NotImplementedException();
-
-  public virtual void Reset() => throw new System.NotImplementedException();
-
-  public virtual System.String Key
-  {
-    get => throw new System.NotImplementedException();
-  }
-  public virtual System.Object Current
-  {
-    get => throw new System.NotImplementedException();
-  }
+	public ParameterMapIterator() {}
+	public virtual System.Boolean MoveNext() => throw new System.NotImplementedException();
+	public virtual void Reset() => throw new System.NotImplementedException();
+	public virtual System.String Key
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual System.Object Current
+	{
+		get => throw new System.NotImplementedException();
+	}
 }

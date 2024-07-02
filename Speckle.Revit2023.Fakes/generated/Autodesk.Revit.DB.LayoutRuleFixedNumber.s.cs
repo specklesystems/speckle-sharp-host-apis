@@ -2,13 +2,11 @@ namespace Autodesk.Revit.DB;
 
 public partial class LayoutRuleFixedNumber : Autodesk.Revit.DB.LayoutRule
 {
-  public LayoutRuleFixedNumber() { }
-
-  public LayoutRuleFixedNumber(System.Int32 numberOfLines) => throw new System.NotImplementedException();
-
-  public virtual System.Int32 NumberOfLines
-  {
-    get => throw new System.NotImplementedException();
-    set { }
-  }
+	public LayoutRuleFixedNumber() {}
+	public LayoutRuleFixedNumber(System.Int32 numberOfLines) => throw new System.NotImplementedException();
+	public virtual System.Int32 NumberOfLines
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 }

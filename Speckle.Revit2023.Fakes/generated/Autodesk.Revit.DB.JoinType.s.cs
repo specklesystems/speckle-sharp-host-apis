@@ -2,9 +2,9 @@ namespace Autodesk.Revit.DB;
 
 public enum JoinType
 {
-  None,
-  Abut,
-  Miter,
-  SquareOff,
-  Extension,
+	None,
+	Abut,
+	Miter,
+	SquareOff,
+	Extension,
 }

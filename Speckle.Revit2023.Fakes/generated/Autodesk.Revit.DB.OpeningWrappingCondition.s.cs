@@ -2,8 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public enum OpeningWrappingCondition
 {
-  None,
-  Exterior,
-  Interior,
-  ExteriorAndInterior,
+	None,
+	Exterior,
+	Interior,
+	ExteriorAndInterior,
 }

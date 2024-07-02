@@ -2,8 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public enum ControlShape
 {
-  VerticalArrow,
-  HorizontalArrow,
-  DoubleVerticalArrow,
-  DoubleHorizontalArrow,
+	VerticalArrow,
+	HorizontalArrow,
+	DoubleVerticalArrow,
+	DoubleHorizontalArrow,
 }

@@ -1,3 +1,5 @@
 namespace Autodesk.Revit.UI;
 
-public partial interface IFrameworkElementCreator { }
+public partial interface IFrameworkElementCreator
+{
+}

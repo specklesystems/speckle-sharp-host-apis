@@ -2,10 +2,10 @@ namespace Autodesk.Revit.DB;
 
 public enum WallFunction
 {
-  Interior,
-  Exterior,
-  Foundation,
-  Retaining,
-  Soffit,
-  Coreshaft,
+	Interior,
+	Exterior,
+	Foundation,
+	Retaining,
+	Soffit,
+	Coreshaft,
 }

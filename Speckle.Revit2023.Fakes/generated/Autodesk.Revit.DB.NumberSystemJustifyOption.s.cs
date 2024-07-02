@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public enum NumberSystemJustifyOption
 {
-  Front,
-  Center,
-  Back,
+	Front,
+	Center,
+	Back,
 }

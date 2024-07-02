@@ -2,8 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public enum FailureProcessingResult
 {
-  Continue,
-  ProceedWithCommit,
-  ProceedWithRollBack,
-  WaitForUserInput,
+	Continue,
+	ProceedWithCommit,
+	ProceedWithRollBack,
+	WaitForUserInput,
 }
