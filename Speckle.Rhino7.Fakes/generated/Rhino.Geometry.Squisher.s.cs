@@ -13,7 +13,7 @@ public partial class Squisher : System.IDisposable
 	public virtual Rhino.Geometry.TextDot SquishTextDot(Rhino.Geometry.TextDot textDot) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Mesh Get2dMesh() => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Mesh Get3dMesh() => throw new System.NotImplementedException();
-	public virtual Rhino.Geometry.Line GetMesh2dEdges() => throw new System.NotImplementedException();
-	public virtual Rhino.Geometry.Line GetMesh3dEdges() => throw new System.NotImplementedException();
+	public virtual Rhino.Geometry.Line[] GetMesh2dEdges() => throw new System.NotImplementedException();
+	public virtual Rhino.Geometry.Line[] GetMesh3dEdges() => throw new System.NotImplementedException();
 	public static System.Collections.Generic.IEnumerable<Rhino.Geometry.GeometryBase> SquishBack2dMarks(Rhino.Geometry.GeometryBase squishedGeometry,System.Collections.Generic.IEnumerable<Rhino.Geometry.GeometryBase> marks) => throw new System.NotImplementedException();
 }

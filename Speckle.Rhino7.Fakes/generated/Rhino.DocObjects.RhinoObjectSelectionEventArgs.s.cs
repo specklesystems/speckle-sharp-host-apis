@@ -11,7 +11,7 @@ public partial class RhinoObjectSelectionEventArgs : System.EventArgs
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public virtual Rhino.DocObjects.RhinoObject RhinoObjects
+	public virtual Rhino.DocObjects.RhinoObject[] RhinoObjects
 	{
 		get => throw new System.NotImplementedException();
 	}

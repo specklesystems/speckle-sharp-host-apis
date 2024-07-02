@@ -30,8 +30,4 @@ public partial class CommonObject : System.IDisposable,System.Runtime.Serializat
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public virtual Rhino.Collections.ArchivableDictionary UserDictionary
-	{
-		get => throw new System.NotImplementedException();
-	}
 }

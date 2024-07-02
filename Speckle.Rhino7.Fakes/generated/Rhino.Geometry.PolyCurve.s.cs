@@ -6,7 +6,7 @@ public partial class PolyCurve : Rhino.Geometry.Curve
 	public virtual Rhino.Geometry.PolyCurve DuplicatePolyCurve() => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Curve SegmentCurve(System.Int32 index) => throw new System.NotImplementedException();
 	public virtual System.Boolean RemoveNesting() => throw new System.NotImplementedException();
-	public virtual Rhino.Geometry.Curve Explode() => throw new System.NotImplementedException();
+	public virtual Rhino.Geometry.Curve[] Explode() => throw new System.NotImplementedException();
 	public virtual System.Boolean Append(Rhino.Geometry.Line line) => throw new System.NotImplementedException();
 	public virtual System.Boolean Append(Rhino.Geometry.Arc arc) => throw new System.NotImplementedException();
 	public virtual System.Boolean Append(Rhino.Geometry.Curve curve) => throw new System.NotImplementedException();

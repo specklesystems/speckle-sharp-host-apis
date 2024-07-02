@@ -22,8 +22,8 @@ public partial class BezierCurve : System.IDisposable,System.Runtime.Serializati
 	public virtual System.Boolean MakeNonRational() => throw new System.NotImplementedException();
 	public virtual System.Boolean IncreaseDegree(System.Int32 desiredDegree) => throw new System.NotImplementedException();
 	public virtual System.Boolean ChangeDimension(System.Int32 desiredDimension) => throw new System.NotImplementedException();
-	public static Rhino.Geometry.BezierCurve CreateCubicBeziers(Rhino.Geometry.Curve sourceCurve,System.Double distanceTolerance,System.Double kinkTolerance) => throw new System.NotImplementedException();
-	public static Rhino.Geometry.BezierCurve CreateBeziers(Rhino.Geometry.Curve sourceCurve) => throw new System.NotImplementedException();
+	public static Rhino.Geometry.BezierCurve[] CreateCubicBeziers(Rhino.Geometry.Curve sourceCurve,System.Double distanceTolerance,System.Double kinkTolerance) => throw new System.NotImplementedException();
+	public static Rhino.Geometry.BezierCurve[] CreateBeziers(Rhino.Geometry.Curve sourceCurve) => throw new System.NotImplementedException();
 	public virtual System.Int32 Dimension
 	{
 		get => throw new System.NotImplementedException();

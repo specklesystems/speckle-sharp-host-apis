@@ -9,7 +9,7 @@ public partial class Material : Rhino.DocObjects.ModelComponent
 	public virtual void Default() => throw new System.NotImplementedException();
 	public virtual System.Boolean SetTexture(Rhino.DocObjects.Texture texture,Rhino.DocObjects.TextureType which) => throw new System.NotImplementedException();
 	public virtual Rhino.DocObjects.Texture GetTexture(Rhino.DocObjects.TextureType which) => throw new System.NotImplementedException();
-	public virtual Rhino.DocObjects.Texture GetTextures() => throw new System.NotImplementedException();
+	public virtual Rhino.DocObjects.Texture[] GetTextures() => throw new System.NotImplementedException();
 	public virtual Rhino.DocObjects.Texture GetBitmapTexture() => throw new System.NotImplementedException();
 	public virtual System.Boolean SetBitmapTexture(System.String filename) => throw new System.NotImplementedException();
 	public virtual System.Boolean SetBitmapTexture(Rhino.DocObjects.Texture texture) => throw new System.NotImplementedException();
@@ -67,16 +67,16 @@ public partial class Material : Rhino.DocObjects.ModelComponent
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public override System.Boolean IsDocumentControlled
+	public new System.Boolean IsDocumentControlled
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public override System.String Name
+	public new System.String Name
 	{
 		get => throw new System.NotImplementedException();
 		set {}
 	}
-	public override Rhino.DocObjects.ModelComponentType ComponentType
+	public new Rhino.DocObjects.ModelComponentType ComponentType
 	{
 		get => throw new System.NotImplementedException();
 	}

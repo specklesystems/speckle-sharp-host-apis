@@ -24,7 +24,7 @@ public partial class ObjectAttributes : Rhino.Runtime.CommonObject
 	public virtual System.Collections.Specialized.NameValueCollection GetUserStrings() => throw new System.NotImplementedException();
 	public virtual System.Boolean DeleteUserString(System.String key) => throw new System.NotImplementedException();
 	public virtual void DeleteAllUserStrings() => throw new System.NotImplementedException();
-	public override System.Boolean IsDocumentControlled
+	public new System.Boolean IsDocumentControlled
 	{
 		get => throw new System.NotImplementedException();
 	}

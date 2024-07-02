@@ -37,7 +37,7 @@ public partial struct Transform
 	public  void Linearize() => throw new System.NotImplementedException();
 	public  System.Boolean Orthogonalize(System.Double tolerance) => throw new System.NotImplementedException();
 	public  Rhino.Geometry.BoundingBox TransformBoundingBox(Rhino.Geometry.BoundingBox bbox) => throw new System.NotImplementedException();
-	public  Rhino.Geometry.Point3d TransformList(System.Collections.Generic.IEnumerable<Rhino.Geometry.Point3d> points) => throw new System.NotImplementedException();
+	public  Rhino.Geometry.Point3d[] TransformList(System.Collections.Generic.IEnumerable<Rhino.Geometry.Point3d> points) => throw new System.NotImplementedException();
 	public  System.Boolean Equals(Rhino.Geometry.Transform other) => throw new System.NotImplementedException();
 	public  Rhino.Geometry.Transform Transpose() => throw new System.NotImplementedException();
 	public  System.Single[] ToFloatArray(System.Boolean rowDominant) => throw new System.NotImplementedException();

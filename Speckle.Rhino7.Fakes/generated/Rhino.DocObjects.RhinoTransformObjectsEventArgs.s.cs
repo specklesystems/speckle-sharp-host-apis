@@ -23,15 +23,15 @@ public partial class RhinoTransformObjectsEventArgs : System.EventArgs
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public virtual Rhino.DocObjects.RhinoObject Objects
+	public virtual Rhino.DocObjects.RhinoObject[] Objects
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public virtual Rhino.DocObjects.GripObject Grips
+	public virtual Rhino.DocObjects.GripObject[] Grips
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public virtual Rhino.DocObjects.RhinoObject GripOwners
+	public virtual Rhino.DocObjects.RhinoObject[] GripOwners
 	{
 		get => throw new System.NotImplementedException();
 	}

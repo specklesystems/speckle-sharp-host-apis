@@ -14,7 +14,7 @@ public partial class TextureMapping : Rhino.DocObjects.ModelComponent
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public override System.Guid Id
+	public new System.Guid Id
 	{
 		get => throw new System.NotImplementedException();
 	}
@@ -38,7 +38,7 @@ public partial class TextureMapping : Rhino.DocObjects.ModelComponent
 		get => throw new System.NotImplementedException();
 		set {}
 	}
-	public override Rhino.DocObjects.ModelComponentType ComponentType
+	public new Rhino.DocObjects.ModelComponentType ComponentType
 	{
 		get => throw new System.NotImplementedException();
 	}

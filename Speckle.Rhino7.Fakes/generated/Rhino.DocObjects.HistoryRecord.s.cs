@@ -24,7 +24,6 @@ public partial class HistoryRecord : System.IDisposable
 	public virtual System.Boolean SetDoubles(System.Int32 id,System.Collections.Generic.IEnumerable<System.Double> values) => throw new System.NotImplementedException();
 	public virtual System.Boolean SetPoint3ds(System.Int32 id,System.Collections.Generic.IEnumerable<Rhino.Geometry.Point3d> values) => throw new System.NotImplementedException();
 	public virtual System.Boolean SetVector3ds(System.Int32 id,System.Collections.Generic.IEnumerable<Rhino.Geometry.Vector3d> values) => throw new System.NotImplementedException();
-	public virtual System.Boolean SetColors(System.Int32 id,System.Collections.Generic.IEnumerable<System.Drawing.Color> values) => throw new System.NotImplementedException();
 	public virtual System.Boolean SetGuids(System.Int32 id,System.Collections.Generic.IEnumerable<System.Guid> values) => throw new System.NotImplementedException();
 	public virtual System.Boolean SetStrings(System.Int32 id,System.Collections.Generic.IEnumerable<System.String> values) => throw new System.NotImplementedException();
 	public virtual System.Boolean SetHistoryVersion(System.Int32 historyVersion) => throw new System.NotImplementedException();

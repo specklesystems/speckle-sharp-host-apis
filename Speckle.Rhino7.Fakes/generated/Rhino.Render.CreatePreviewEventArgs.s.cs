@@ -36,10 +36,6 @@ public partial class CreatePreviewEventArgs : System.EventArgs
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public virtual System.Collections.Generic.List<Rhino.Render.CreatePreviewEventArgs+SceneObject> Objects
-	{
-		get => throw new System.NotImplementedException();
-	}
 	public virtual System.Collections.Generic.List<Rhino.Geometry.Light> Lights
 	{
 		get => throw new System.NotImplementedException();

@@ -10,7 +10,7 @@ public partial class RenderWindow : System.IDisposable
 	public virtual void SetProgress(System.String text,System.Single progress) => throw new System.NotImplementedException();
 	public virtual void EndAsyncRender(Rhino.Render.RenderWindow.RenderSuccessCode successCode) => throw new System.NotImplementedException();
 	public virtual Rhino.Render.RenderWindow.Channel OpenChannel(Rhino.Render.RenderWindow.StandardChannels id) => throw new System.NotImplementedException();
-	public virtual Rhino.Render.RenderWindow.StandardChannels GetRequestedRenderChannelsAsStandardChannels() => throw new System.NotImplementedException();
+	public virtual Rhino.Render.RenderWindow.StandardChannels[] GetRequestedRenderChannelsAsStandardChannels() => throw new System.NotImplementedException();
 	public virtual System.Guid[] GetRequestedRenderChannels() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsChannelAvailable(System.Guid id) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsChannelShown(System.Guid id) => throw new System.NotImplementedException();

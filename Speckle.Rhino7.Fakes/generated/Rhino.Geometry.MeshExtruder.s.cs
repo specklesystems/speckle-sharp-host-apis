@@ -6,7 +6,7 @@ public partial class MeshExtruder : System.IDisposable
 	public MeshExtruder(Rhino.Geometry.Mesh inputMesh,System.Collections.Generic.IEnumerable<Rhino.Geometry.ComponentIndex> componentIndices) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.Collections.Generic.List<System.Int32> GetWallFaces() => throw new System.NotImplementedException();
-	public virtual Rhino.Geometry.Line PreviewLines
+	public virtual Rhino.Geometry.Line[] PreviewLines
 	{
 		get => throw new System.NotImplementedException();
 	}

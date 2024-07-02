@@ -26,7 +26,7 @@ public partial class Surface : Rhino.Geometry.GeometryBase
 	public virtual System.Boolean IsContinuous(Rhino.Geometry.Continuity continuityType,System.Double u,System.Double v) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Surface Trim(Rhino.Geometry.Interval u,Rhino.Geometry.Interval v) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Curve IsoCurve(System.Int32 direction,System.Double constantParameter) => throw new System.NotImplementedException();
-	public virtual Rhino.Geometry.Surface Split(System.Int32 direction,System.Double parameter) => throw new System.NotImplementedException();
+	public virtual Rhino.Geometry.Surface[] Split(System.Int32 direction,System.Double parameter) => throw new System.NotImplementedException();
 	public virtual System.Boolean Extend(System.Int32 direction,Rhino.Geometry.Interval interval) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Brep ToBrep() => throw new System.NotImplementedException();
 	public virtual System.Int32 HasNurbsForm() => throw new System.NotImplementedException();
@@ -41,9 +41,9 @@ public partial class Surface : Rhino.Geometry.GeometryBase
 	public virtual System.Boolean IsCone(System.Double tolerance) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsTorus() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsTorus(System.Double tolerance) => throw new System.NotImplementedException();
-	public static Rhino.Geometry.Surface CreateRollingBallFillet(Rhino.Geometry.Surface surfaceA,Rhino.Geometry.Surface surfaceB,System.Double radius,System.Double tolerance) => throw new System.NotImplementedException();
-	public static Rhino.Geometry.Surface CreateRollingBallFillet(Rhino.Geometry.Surface surfaceA,System.Boolean flipA,Rhino.Geometry.Surface surfaceB,System.Boolean flipB,System.Double radius,System.Double tolerance) => throw new System.NotImplementedException();
-	public static Rhino.Geometry.Surface CreateRollingBallFillet(Rhino.Geometry.Surface surfaceA,Rhino.Geometry.Point2d uvA,Rhino.Geometry.Surface surfaceB,Rhino.Geometry.Point2d uvB,System.Double radius,System.Double tolerance) => throw new System.NotImplementedException();
+	public static Rhino.Geometry.Surface[] CreateRollingBallFillet(Rhino.Geometry.Surface surfaceA,Rhino.Geometry.Surface surfaceB,System.Double radius,System.Double tolerance) => throw new System.NotImplementedException();
+	public static Rhino.Geometry.Surface[] CreateRollingBallFillet(Rhino.Geometry.Surface surfaceA,System.Boolean flipA,Rhino.Geometry.Surface surfaceB,System.Boolean flipB,System.Double radius,System.Double tolerance) => throw new System.NotImplementedException();
+	public static Rhino.Geometry.Surface[] CreateRollingBallFillet(Rhino.Geometry.Surface surfaceA,Rhino.Geometry.Point2d uvA,Rhino.Geometry.Surface surfaceB,Rhino.Geometry.Point2d uvB,System.Double radius,System.Double tolerance) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.Surface CreateExtrusion(Rhino.Geometry.Curve profile,Rhino.Geometry.Vector3d direction) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.Surface CreateExtrusionToPoint(Rhino.Geometry.Curve profile,Rhino.Geometry.Point3d apexPoint) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.Surface CreatePeriodicSurface(Rhino.Geometry.Surface surface,System.Int32 direction) => throw new System.NotImplementedException();

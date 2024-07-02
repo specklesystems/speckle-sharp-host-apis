@@ -35,12 +35,12 @@ public partial class AnimationProperties : System.IDisposable
 		get => throw new System.NotImplementedException();
 		set {}
 	}
-	public virtual Rhino.Geometry.Point3d CameraPoints
+	public virtual Rhino.Geometry.Point3d[] CameraPoints
 	{
 		get => throw new System.NotImplementedException();
 		set {}
 	}
-	public virtual Rhino.Geometry.Point3d TargetPoints
+	public virtual Rhino.Geometry.Point3d[] TargetPoints
 	{
 		get => throw new System.NotImplementedException();
 		set {}

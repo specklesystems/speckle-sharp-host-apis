@@ -1,6 +1,6 @@
 namespace Rhino.Geometry;
 
-public partial class NurbsCurve : Rhino.Geometry.Curve,Rhino.IEpsilonComparable<T>
+public partial class NurbsCurve : Rhino.Geometry.Curve,Rhino.IEpsilonComparable<Rhino.Geometry.NurbsCurve>
 {
 	public NurbsCurve() {}
 	public NurbsCurve(Rhino.Geometry.NurbsCurve other) => throw new System.NotImplementedException();
@@ -8,7 +8,7 @@ public partial class NurbsCurve : Rhino.Geometry.Curve,Rhino.IEpsilonComparable<
 	public NurbsCurve(System.Int32 dimension,System.Boolean rational,System.Int32 order,System.Int32 pointCount) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.NurbsCurve CreateFromLine(Rhino.Geometry.Line line) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.NurbsCurve CreateFromArc(Rhino.Geometry.Arc arc) => throw new System.NotImplementedException();
-	public static Rhino.Geometry.NurbsCurve MakeCompatible(System.Collections.Generic.IEnumerable<Rhino.Geometry.Curve> curves,Rhino.Geometry.Point3d startPt,Rhino.Geometry.Point3d endPt,System.Int32 simplifyMethod,System.Int32 numPoints,System.Double refitTolerance,System.Double angleTolerance) => throw new System.NotImplementedException();
+	public static Rhino.Geometry.NurbsCurve[] MakeCompatible(System.Collections.Generic.IEnumerable<Rhino.Geometry.Curve> curves,Rhino.Geometry.Point3d startPt,Rhino.Geometry.Point3d endPt,System.Int32 simplifyMethod,System.Int32 numPoints,System.Double refitTolerance,System.Double angleTolerance) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.NurbsCurve CreateParabolaFromVertex(Rhino.Geometry.Point3d vertex,Rhino.Geometry.Point3d startPoint,Rhino.Geometry.Point3d endPoint) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.NurbsCurve CreateParabolaFromFocus(Rhino.Geometry.Point3d focus,Rhino.Geometry.Point3d startPoint,Rhino.Geometry.Point3d endPoint) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.NurbsCurve CreateFromArc(Rhino.Geometry.Arc arc,System.Int32 degree,System.Int32 cvCount) => throw new System.NotImplementedException();
@@ -17,8 +17,8 @@ public partial class NurbsCurve : Rhino.Geometry.Curve,Rhino.IEpsilonComparable<
 	public static Rhino.Geometry.NurbsCurve CreateSubDFriendly(System.Collections.Generic.IEnumerable<Rhino.Geometry.Point3d> points,System.Boolean interpolatePoints,System.Boolean periodicClosedCurve) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.NurbsCurve CreateSubDFriendly(Rhino.Geometry.Curve curve) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.NurbsCurve CreateSubDFriendly(Rhino.Geometry.Curve curve,System.Int32 pointCount,System.Boolean periodicClosedCurve) => throw new System.NotImplementedException();
-	public virtual Rhino.Geometry.Plane CreatePlanarRailFrames(System.Collections.Generic.IEnumerable<System.Double> parameters,Rhino.Geometry.Vector3d normal) => throw new System.NotImplementedException();
-	public virtual Rhino.Geometry.Plane CreateRailFrames(System.Collections.Generic.IEnumerable<System.Double> parameters) => throw new System.NotImplementedException();
+	public virtual Rhino.Geometry.Plane[] CreatePlanarRailFrames(System.Collections.Generic.IEnumerable<System.Double> parameters,Rhino.Geometry.Vector3d normal) => throw new System.NotImplementedException();
+	public virtual Rhino.Geometry.Plane[] CreateRailFrames(System.Collections.Generic.IEnumerable<System.Double> parameters) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.NurbsCurve CreateFromCircle(Rhino.Geometry.Circle circle) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.NurbsCurve CreateFromCircle(Rhino.Geometry.Circle circle,System.Int32 degree,System.Int32 cvCount) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.NurbsCurve CreateFromEllipse(Rhino.Geometry.Ellipse ellipse) => throw new System.NotImplementedException();

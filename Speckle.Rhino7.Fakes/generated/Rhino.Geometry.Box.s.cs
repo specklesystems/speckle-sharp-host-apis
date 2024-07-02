@@ -22,7 +22,7 @@ public partial struct Box
 	public  System.Boolean Contains(Rhino.Geometry.Box box,System.Boolean strict) => throw new System.NotImplementedException();
 	public  void Union(Rhino.Geometry.Point3d point) => throw new System.NotImplementedException();
 	public  System.Boolean MakeValid() => throw new System.NotImplementedException();
-	public  Rhino.Geometry.Point3d GetCorners() => throw new System.NotImplementedException();
+	public  Rhino.Geometry.Point3d[] GetCorners() => throw new System.NotImplementedException();
 	public  System.Boolean Transform(Rhino.Geometry.Transform xform) => throw new System.NotImplementedException();
 	public  void RepositionBasePlane(Rhino.Geometry.Point3d origin) => throw new System.NotImplementedException();
 	public  Rhino.Geometry.Brep ToBrep() => throw new System.NotImplementedException();

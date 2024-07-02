@@ -20,8 +20,8 @@ public partial class ViewportInfo : Rhino.Runtime.CommonObject
 	public virtual System.Boolean SetFrustumNearFar(System.Double nearDistance,System.Double farDistance) => throw new System.NotImplementedException();
 	public virtual System.Boolean ChangeToSymmetricFrustum(System.Boolean isLeftRightSymmetric,System.Boolean isTopBottomSymmetric,System.Double targetDistance) => throw new System.NotImplementedException();
 	public virtual System.Boolean SetFrustumNearFar(System.Double nearDistance,System.Double farDistance,System.Double minNearDistance,System.Double minNearOverFar,System.Double targetDistance) => throw new System.NotImplementedException();
-	public virtual Rhino.Geometry.Point3d GetNearPlaneCorners() => throw new System.NotImplementedException();
-	public virtual Rhino.Geometry.Point3d GetFarPlaneCorners() => throw new System.NotImplementedException();
+	public virtual Rhino.Geometry.Point3d[] GetNearPlaneCorners() => throw new System.NotImplementedException();
+	public virtual Rhino.Geometry.Point3d[] GetFarPlaneCorners() => throw new System.NotImplementedException();
 	public virtual System.Boolean SetScreenPort(System.Int32 left,System.Int32 right,System.Int32 bottom,System.Int32 top,System.Int32 near,System.Int32 far) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Transform GetXform(Rhino.DocObjects.CoordinateSystem sourceSystem,Rhino.DocObjects.CoordinateSystem destinationSystem) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Line GetFrustumLine(System.Double screenX,System.Double screenY) => throw new System.NotImplementedException();

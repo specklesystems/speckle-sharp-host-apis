@@ -54,17 +54,17 @@ public partial class RadialDimension : Rhino.Geometry.Dimension
 		get => throw new System.NotImplementedException();
 		set {}
 	}
-	public override Rhino.DocObjects.TextOrientation TextOrientation
+	public new Rhino.DocObjects.TextOrientation TextOrientation
 	{
 		get => throw new System.NotImplementedException();
 		set {}
 	}
-	public override Rhino.DocObjects.DimensionStyle.TextLocation TextLocation
+	public new Rhino.DocObjects.DimensionStyle.TextLocation TextLocation
 	{
 		get => throw new System.NotImplementedException();
 		set {}
 	}
-	public override Rhino.DocObjects.DimensionStyle.LeaderContentAngleStyle TextAngleType
+	public new Rhino.DocObjects.DimensionStyle.LeaderContentAngleStyle TextAngleType
 	{
 		get => throw new System.NotImplementedException();
 		set {}

@@ -1,6 +1,6 @@
 namespace Rhino.Geometry;
 
-public partial class NurbsSurface : Rhino.Geometry.Surface,Rhino.IEpsilonComparable<T>
+public partial class NurbsSurface : Rhino.Geometry.Surface,Rhino.IEpsilonComparable<Rhino.Geometry.NurbsSurface>
 {
 	public NurbsSurface() {}
 	public NurbsSurface(Rhino.Geometry.NurbsSurface other) => throw new System.NotImplementedException();
@@ -12,7 +12,7 @@ public partial class NurbsSurface : Rhino.Geometry.Surface,Rhino.IEpsilonCompara
 	public static Rhino.Geometry.NurbsSurface CreateRuledSurface(Rhino.Geometry.Curve curveA,Rhino.Geometry.Curve curveB) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.NurbsSurface CreateSubDFriendly(Rhino.Geometry.Surface surface) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.NurbsSurface CreateFromPlane(Rhino.Geometry.Plane plane,Rhino.Geometry.Interval uInterval,Rhino.Geometry.Interval vInterval,System.Int32 uDegree,System.Int32 vDegree,System.Int32 uPointCount,System.Int32 vPointCount) => throw new System.NotImplementedException();
-	public static Rhino.Geometry.Point2d CreateCurveOnSurfacePoints(Rhino.Geometry.Surface surface,System.Collections.Generic.IEnumerable<Rhino.Geometry.Point2d> fixedPoints,System.Double tolerance,System.Boolean periodic,System.Int32 initCount,System.Int32 levels) => throw new System.NotImplementedException();
+	public static Rhino.Geometry.Point2d[] CreateCurveOnSurfacePoints(Rhino.Geometry.Surface surface,System.Collections.Generic.IEnumerable<Rhino.Geometry.Point2d> fixedPoints,System.Double tolerance,System.Boolean periodic,System.Int32 initCount,System.Int32 levels) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.NurbsCurve CreateCurveOnSurface(Rhino.Geometry.Surface surface,System.Collections.Generic.IEnumerable<Rhino.Geometry.Point2d> points,System.Double tolerance,System.Boolean periodic) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.NurbsSurface CreateFromPoints(System.Collections.Generic.IEnumerable<Rhino.Geometry.Point3d> points,System.Int32 uCount,System.Int32 vCount,System.Int32 uDegree,System.Int32 vDegree) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.NurbsSurface CreateThroughPoints(System.Collections.Generic.IEnumerable<Rhino.Geometry.Point3d> points,System.Int32 uCount,System.Int32 vCount,System.Int32 uDegree,System.Int32 vDegree,System.Boolean uClosed,System.Boolean vClosed) => throw new System.NotImplementedException();

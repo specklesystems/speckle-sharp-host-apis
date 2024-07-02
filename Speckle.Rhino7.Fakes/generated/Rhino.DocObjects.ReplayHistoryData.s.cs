@@ -17,7 +17,7 @@ public partial class ReplayHistoryData : System.IDisposable
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public virtual Rhino.DocObjects.ReplayHistoryResult Results
+	public virtual Rhino.DocObjects.ReplayHistoryResult[] Results
 	{
 		get => throw new System.NotImplementedException();
 	}

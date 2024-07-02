@@ -21,7 +21,7 @@ public partial class GeometryBase : Rhino.Runtime.CommonObject
 	public virtual System.Collections.Specialized.NameValueCollection GetUserStrings() => throw new System.NotImplementedException();
 	public static System.Boolean GeometryEquals(Rhino.Geometry.GeometryBase first,Rhino.Geometry.GeometryBase second) => throw new System.NotImplementedException();
 	public static System.Boolean GeometryReferenceEquals(Rhino.Geometry.GeometryBase one,Rhino.Geometry.GeometryBase other) => throw new System.NotImplementedException();
-	public override System.Boolean IsDocumentControlled
+	public new System.Boolean IsDocumentControlled
 	{
 		get => throw new System.NotImplementedException();
 	}

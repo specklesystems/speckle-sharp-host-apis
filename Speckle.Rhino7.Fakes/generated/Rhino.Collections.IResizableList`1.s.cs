@@ -1,6 +1,6 @@
 namespace Rhino.Collections;
 
-public partial interface IResizableList<T0>
+public partial interface IResizableList<T>
 {
 	public  System.Int32 Count
 	{

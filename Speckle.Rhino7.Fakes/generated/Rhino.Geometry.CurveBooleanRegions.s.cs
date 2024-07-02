@@ -3,7 +3,7 @@ namespace Rhino.Geometry;
 public partial class CurveBooleanRegions : System.IDisposable
 {
 	public CurveBooleanRegions() {}
-	public virtual Rhino.Geometry.Curve RegionCurves(System.Int32 regionIndex) => throw new System.NotImplementedException();
+	public virtual Rhino.Geometry.Curve[] RegionCurves(System.Int32 regionIndex) => throw new System.NotImplementedException();
 	public virtual System.Int32 RegionPointIndex(System.Int32 pointIndex) => throw new System.NotImplementedException();
 	public virtual System.Int32 BoundaryCount(System.Int32 regionIndex) => throw new System.NotImplementedException();
 	public virtual System.Int32 SegmentCount(System.Int32 regionIndex,System.Int32 boundaryIndex) => throw new System.NotImplementedException();

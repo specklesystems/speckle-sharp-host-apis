@@ -4,7 +4,7 @@ public partial class CachedTextureCoordinates : Rhino.Runtime.CommonObject,Syste
 {
 	public CachedTextureCoordinates() {}
 	public virtual System.Boolean Contains(Rhino.Geometry.Point3d item) => throw new System.NotImplementedException();
-	public virtual void CopyTo(Rhino.Geometry.Point3d array,System.Int32 arrayIndex) => throw new System.NotImplementedException();
+	public virtual void CopyTo(Rhino.Geometry.Point3d[] array,System.Int32 arrayIndex) => throw new System.NotImplementedException();
 	public virtual System.Collections.Generic.IEnumerator<Rhino.Geometry.Point3d> GetEnumerator() => throw new System.NotImplementedException();
 	public virtual System.Int32 IndexOf(Rhino.Geometry.Point3d item) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Point3d get_Item(System.Int32 index) => throw new System.NotImplementedException();

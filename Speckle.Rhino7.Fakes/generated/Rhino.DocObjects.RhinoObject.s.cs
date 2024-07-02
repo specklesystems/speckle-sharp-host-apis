@@ -6,18 +6,18 @@ public partial class RhinoObject : Rhino.DocObjects.ModelComponent
 	public virtual System.Boolean CopyHistoryOnReplace() => throw new System.NotImplementedException();
 	public virtual System.Boolean HasHistoryRecord() => throw new System.NotImplementedException();
 	public static Rhino.DocObjects.RhinoObject FromRuntimeSerialNumber(System.UInt32 serialNumber) => throw new System.NotImplementedException();
-	public static Rhino.DocObjects.ObjRef GetRenderMeshes(System.Collections.Generic.IEnumerable<Rhino.DocObjects.RhinoObject> rhinoObjects,System.Boolean okToCreate,System.Boolean returnAllObjects) => throw new System.NotImplementedException();
-	public static Rhino.DocObjects.ObjRef GetRenderMeshesWithUpdatedTCs(System.Collections.Generic.IEnumerable<Rhino.DocObjects.RhinoObject> rhinoObjects,System.Boolean okToCreate,System.Boolean returnAllObjects,System.Boolean skipHiddenObjects,System.Boolean updateMeshTCs) => throw new System.NotImplementedException();
-	public static Rhino.Geometry.Brep GetFillSurfaces(Rhino.DocObjects.RhinoObject rhinoObject,Rhino.DocObjects.ClippingPlaneObject clippingPlaneObject) => throw new System.NotImplementedException();
-	public static Rhino.Geometry.Brep GetFillSurfaces(Rhino.DocObjects.RhinoObject rhinoObject,System.Collections.Generic.IEnumerable<Rhino.DocObjects.ClippingPlaneObject> clippingPlaneObjects) => throw new System.NotImplementedException();
-	public static Rhino.Geometry.Brep GetFillSurfaces(Rhino.DocObjects.RhinoObject rhinoObject,System.Collections.Generic.IEnumerable<Rhino.DocObjects.ClippingPlaneObject> clippingPlaneObjects,System.Boolean unclippedFills) => throw new System.NotImplementedException();
+	public static Rhino.DocObjects.ObjRef[] GetRenderMeshes(System.Collections.Generic.IEnumerable<Rhino.DocObjects.RhinoObject> rhinoObjects,System.Boolean okToCreate,System.Boolean returnAllObjects) => throw new System.NotImplementedException();
+	public static Rhino.DocObjects.ObjRef[] GetRenderMeshesWithUpdatedTCs(System.Collections.Generic.IEnumerable<Rhino.DocObjects.RhinoObject> rhinoObjects,System.Boolean okToCreate,System.Boolean returnAllObjects,System.Boolean skipHiddenObjects,System.Boolean updateMeshTCs) => throw new System.NotImplementedException();
+	public static Rhino.Geometry.Brep[] GetFillSurfaces(Rhino.DocObjects.RhinoObject rhinoObject,Rhino.DocObjects.ClippingPlaneObject clippingPlaneObject) => throw new System.NotImplementedException();
+	public static Rhino.Geometry.Brep[] GetFillSurfaces(Rhino.DocObjects.RhinoObject rhinoObject,System.Collections.Generic.IEnumerable<Rhino.DocObjects.ClippingPlaneObject> clippingPlaneObjects) => throw new System.NotImplementedException();
+	public static Rhino.Geometry.Brep[] GetFillSurfaces(Rhino.DocObjects.RhinoObject rhinoObject,System.Collections.Generic.IEnumerable<Rhino.DocObjects.ClippingPlaneObject> clippingPlaneObjects,System.Boolean unclippedFills) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.GeometryBase DuplicateGeometry() => throw new System.NotImplementedException();
 	public virtual System.Boolean CommitChanges() => throw new System.NotImplementedException();
 	public virtual System.UInt32 MemoryEstimate() => throw new System.NotImplementedException();
 	public virtual System.Int32[] GetGroupList() => throw new System.NotImplementedException();
 	public virtual System.Int32 IsSelected(System.Boolean checkSubObjects) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsSubObjectSelected(Rhino.Geometry.ComponentIndex componentIndex) => throw new System.NotImplementedException();
-	public virtual Rhino.Geometry.ComponentIndex GetSelectedSubObjects() => throw new System.NotImplementedException();
+	public virtual Rhino.Geometry.ComponentIndex[] GetSelectedSubObjects() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsSelectable(System.Boolean ignoreSelectionState,System.Boolean ignoreGripsState,System.Boolean ignoreLayerLocking,System.Boolean ignoreLayerVisibility) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsSelectable() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsSubObjectSelectable(Rhino.Geometry.ComponentIndex componentIndex,System.Boolean ignoreSelectionState) => throw new System.NotImplementedException();
@@ -30,10 +30,10 @@ public partial class RhinoObject : Rhino.DocObjects.ModelComponent
 	public virtual System.Int32 IsHighlighted(System.Boolean checkSubObjects) => throw new System.NotImplementedException();
 	public virtual System.Boolean Highlight(System.Boolean enable) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsSubObjectHighlighted(Rhino.Geometry.ComponentIndex componentIndex) => throw new System.NotImplementedException();
-	public virtual Rhino.Geometry.ComponentIndex GetHighlightedSubObjects() => throw new System.NotImplementedException();
+	public virtual Rhino.Geometry.ComponentIndex[] GetHighlightedSubObjects() => throw new System.NotImplementedException();
 	public virtual System.Boolean HighlightSubObject(Rhino.Geometry.ComponentIndex componentIndex,System.Boolean highlight) => throw new System.NotImplementedException();
 	public virtual System.Int32 UnhighlightAllSubObjects() => throw new System.NotImplementedException();
-	public virtual Rhino.DocObjects.GripObject GetGrips() => throw new System.NotImplementedException();
+	public virtual Rhino.DocObjects.GripObject[] GetGrips() => throw new System.NotImplementedException();
 	public virtual System.Boolean InVisualAnalysisMode() => throw new System.NotImplementedException();
 	public virtual System.String ShortDescription(System.Boolean plural) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsMeshable(Rhino.Geometry.MeshType meshType) => throw new System.NotImplementedException();
@@ -42,10 +42,10 @@ public partial class RhinoObject : Rhino.DocObjects.ModelComponent
 	public virtual Rhino.Geometry.MeshingParameters GetRenderMeshParameters(System.Boolean returnDocumentParametersIfUnset) => throw new System.NotImplementedException();
 	public virtual System.Int32 MeshCount(Rhino.Geometry.MeshType meshType,Rhino.Geometry.MeshingParameters parameters) => throw new System.NotImplementedException();
 	public virtual System.Int32 CreateMeshes(Rhino.Geometry.MeshType meshType,Rhino.Geometry.MeshingParameters parameters,System.Boolean ignoreCustomParameters) => throw new System.NotImplementedException();
-	public virtual Rhino.Geometry.Mesh GetMeshes(Rhino.Geometry.MeshType meshType) => throw new System.NotImplementedException();
+	public virtual Rhino.Geometry.Mesh[] GetMeshes(Rhino.Geometry.MeshType meshType) => throw new System.NotImplementedException();
 	public virtual System.Boolean SupportsRenderPrimitiveList(Rhino.DocObjects.ViewportInfo viewport,System.Boolean preview) => throw new System.NotImplementedException();
 	public virtual Rhino.Render.RenderPrimitiveList GetRenderPrimitiveList(Rhino.DocObjects.ViewportInfo viewport,System.Boolean preview) => throw new System.NotImplementedException();
-	public virtual Rhino.DocObjects.RhinoObject GetSubObjects() => throw new System.NotImplementedException();
+	public virtual Rhino.DocObjects.RhinoObject[] GetSubObjects() => throw new System.NotImplementedException();
 	public virtual Rhino.Render.TextureMapping GetTextureMapping(System.Int32 channel) => throw new System.NotImplementedException();
 	public virtual System.Int32 SetTextureMapping(System.Int32 channel,Rhino.Render.TextureMapping tm) => throw new System.NotImplementedException();
 	public virtual System.Int32 SetTextureMapping(System.Int32 channel,Rhino.Render.TextureMapping tm,Rhino.Geometry.Transform objectTransform) => throw new System.NotImplementedException();
@@ -123,11 +123,11 @@ public partial class RhinoObject : Rhino.DocObjects.ModelComponent
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public override System.UInt32 ReferenceModelSerialNumber
+	public new System.UInt32 ReferenceModelSerialNumber
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public override System.UInt32 InstanceDefinitionModelSerialNumber
+	public new System.UInt32 InstanceDefinitionModelSerialNumber
 	{
 		get => throw new System.NotImplementedException();
 	}
@@ -135,12 +135,12 @@ public partial class RhinoObject : Rhino.DocObjects.ModelComponent
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public override System.Guid Id
+	public new System.Guid Id
 	{
 		get => throw new System.NotImplementedException();
 		set {}
 	}
-	public override System.String Name
+	public new System.String Name
 	{
 		get => throw new System.NotImplementedException();
 		set {}
@@ -175,11 +175,11 @@ public partial class RhinoObject : Rhino.DocObjects.ModelComponent
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public virtual Rhino.Geometry.ComponentIndex SubobjectMaterialComponents
+	public virtual Rhino.Geometry.ComponentIndex[] SubobjectMaterialComponents
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public override Rhino.DocObjects.ModelComponentType ComponentType
+	public new Rhino.DocObjects.ModelComponentType ComponentType
 	{
 		get => throw new System.NotImplementedException();
 	}

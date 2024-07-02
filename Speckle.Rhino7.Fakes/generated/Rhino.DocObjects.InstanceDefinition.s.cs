@@ -4,10 +4,10 @@ public partial class InstanceDefinition : Rhino.Geometry.InstanceDefinitionGeome
 {
 	public InstanceDefinition() {}
 	public virtual Rhino.DocObjects.RhinoObject Object(System.Int32 index) => throw new System.NotImplementedException();
-	public virtual Rhino.DocObjects.RhinoObject GetObjects() => throw new System.NotImplementedException();
-	public virtual Rhino.DocObjects.InstanceObject GetReferences(System.Int32 wheretoLook) => throw new System.NotImplementedException();
+	public virtual Rhino.DocObjects.RhinoObject[] GetObjects() => throw new System.NotImplementedException();
+	public virtual Rhino.DocObjects.InstanceObject[] GetReferences(System.Int32 wheretoLook) => throw new System.NotImplementedException();
 	public virtual System.Int32 UseCount() => throw new System.NotImplementedException();
-	public virtual Rhino.DocObjects.InstanceDefinition GetContainers() => throw new System.NotImplementedException();
+	public virtual Rhino.DocObjects.InstanceDefinition[] GetContainers() => throw new System.NotImplementedException();
 	public virtual System.Int32 UsesDefinition(System.Int32 otherIdefIndex) => throw new System.NotImplementedException();
 	public virtual System.Boolean InUse(System.Int32 wheretoLook) => throw new System.NotImplementedException();
 	public virtual System.Int32 ObjectCount
@@ -18,7 +18,7 @@ public partial class InstanceDefinition : Rhino.Geometry.InstanceDefinitionGeome
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public override System.Int32 Index
+	public new System.Int32 Index
 	{
 		get => throw new System.NotImplementedException();
 	}

@@ -28,9 +28,9 @@ public partial struct Point3d
 	public  System.Double DistanceTo(Rhino.Geometry.Point3d other) => throw new System.NotImplementedException();
 	public  System.Double DistanceToSquared(Rhino.Geometry.Point3d other) => throw new System.NotImplementedException();
 	public  void Transform(Rhino.Geometry.Transform xform) => throw new System.NotImplementedException();
-	public  Rhino.Geometry.Point3d CullDuplicates(System.Collections.Generic.IEnumerable<Rhino.Geometry.Point3d> points,System.Double tolerance) => throw new System.NotImplementedException();
+	public  Rhino.Geometry.Point3d[] CullDuplicates(System.Collections.Generic.IEnumerable<Rhino.Geometry.Point3d> points,System.Double tolerance) => throw new System.NotImplementedException();
 	public  System.Boolean ArePointsCoplanar(System.Collections.Generic.IEnumerable<Rhino.Geometry.Point3d> points,System.Double tolerance) => throw new System.NotImplementedException();
-	public  Rhino.Geometry.Point3d SortAndCullPointList(System.Collections.Generic.IEnumerable<Rhino.Geometry.Point3d> points,System.Double minimumDistance) => throw new System.NotImplementedException();
+	public  Rhino.Geometry.Point3d[] SortAndCullPointList(System.Collections.Generic.IEnumerable<Rhino.Geometry.Point3d> points,System.Double minimumDistance) => throw new System.NotImplementedException();
 	public  Rhino.Geometry.Point3d Origin
 	{
 		get => throw new System.NotImplementedException();

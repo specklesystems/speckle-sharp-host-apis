@@ -20,8 +20,8 @@ public partial struct BoundingBox
 	public  System.Boolean MakeValid() => throw new System.NotImplementedException();
 	public  Rhino.Geometry.Point3d Corner(System.Boolean minX,System.Boolean minY,System.Boolean minZ) => throw new System.NotImplementedException();
 	public  System.Int32 IsDegenerate(System.Double tolerance) => throw new System.NotImplementedException();
-	public  Rhino.Geometry.Point3d GetCorners() => throw new System.NotImplementedException();
-	public  Rhino.Geometry.Line GetEdges() => throw new System.NotImplementedException();
+	public  Rhino.Geometry.Point3d[] GetCorners() => throw new System.NotImplementedException();
+	public  Rhino.Geometry.Line[] GetEdges() => throw new System.NotImplementedException();
 	public  System.Boolean Transform(Rhino.Geometry.Transform xform) => throw new System.NotImplementedException();
 	public  Rhino.Geometry.Brep ToBrep() => throw new System.NotImplementedException();
 	public  void Union(Rhino.Geometry.BoundingBox other) => throw new System.NotImplementedException();

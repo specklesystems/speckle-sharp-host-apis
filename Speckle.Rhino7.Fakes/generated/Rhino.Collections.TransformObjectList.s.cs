@@ -9,9 +9,9 @@ public partial class TransformObjectList : System.IDisposable
 	public virtual void Clear() => throw new System.NotImplementedException();
 	public virtual void Add(Rhino.DocObjects.RhinoObject rhinoObject) => throw new System.NotImplementedException();
 	public virtual void Add(Rhino.DocObjects.ObjRef objref) => throw new System.NotImplementedException();
-	public virtual Rhino.DocObjects.RhinoObject ObjectArray() => throw new System.NotImplementedException();
-	public virtual Rhino.DocObjects.GripObject GripArray() => throw new System.NotImplementedException();
-	public virtual Rhino.DocObjects.RhinoObject GripOwnerArray() => throw new System.NotImplementedException();
+	public virtual Rhino.DocObjects.RhinoObject[] ObjectArray() => throw new System.NotImplementedException();
+	public virtual Rhino.DocObjects.GripObject[] GripArray() => throw new System.NotImplementedException();
+	public virtual Rhino.DocObjects.RhinoObject[] GripOwnerArray() => throw new System.NotImplementedException();
 	public virtual System.Boolean DisplayFeedbackEnabled
 	{
 		get => throw new System.NotImplementedException();

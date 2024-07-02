@@ -3,8 +3,8 @@ namespace Rhino.DocObjects;
 public partial class HatchPattern : Rhino.DocObjects.ModelComponent
 {
 	public HatchPattern() {}
-	public static Rhino.DocObjects.HatchPattern ReadFromFile(System.String filename,System.Boolean quiet) => throw new System.NotImplementedException();
-	public virtual Rhino.Geometry.Line CreatePreviewGeometry(System.Int32 width,System.Int32 height,System.Double angle) => throw new System.NotImplementedException();
+	public static Rhino.DocObjects.HatchPattern[] ReadFromFile(System.String filename,System.Boolean quiet) => throw new System.NotImplementedException();
+	public virtual Rhino.Geometry.Line[] CreatePreviewGeometry(System.Int32 width,System.Int32 height,System.Double angle) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsDeleted
 	{
 		get => throw new System.NotImplementedException();
@@ -13,11 +13,11 @@ public partial class HatchPattern : Rhino.DocObjects.ModelComponent
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public override Rhino.DocObjects.ModelComponentType ComponentType
+	public new Rhino.DocObjects.ModelComponentType ComponentType
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public override System.Int32 Index
+	public new System.Int32 Index
 	{
 		get => throw new System.NotImplementedException();
 		set {}

@@ -7,9 +7,9 @@ public partial class Font
 	public Font(System.String familyName,Rhino.DocObjects.Font.FontWeight weight,Rhino.DocObjects.Font.FontStyle style,System.Boolean underlined,System.Boolean strikethrough) => throw new System.NotImplementedException();
 	public static Rhino.DocObjects.Font FromQuartetProperties(System.String quartetName,System.Boolean bold,System.Boolean italic) => throw new System.NotImplementedException();
 	public static System.String[] AvailableFontFaceNames() => throw new System.NotImplementedException();
-	public static Rhino.DocObjects.Font InstalledFonts() => throw new System.NotImplementedException();
-	public static Rhino.DocObjects.Font InstalledFonts(System.String familyName) => throw new System.NotImplementedException();
-	public static Rhino.DocObjects.FontQuartet InstalledFontsAsQuartets() => throw new System.NotImplementedException();
+	public static Rhino.DocObjects.Font[] InstalledFonts() => throw new System.NotImplementedException();
+	public static Rhino.DocObjects.Font[] InstalledFonts(System.String familyName) => throw new System.NotImplementedException();
+	public static Rhino.DocObjects.FontQuartet[] InstalledFontsAsQuartets() => throw new System.NotImplementedException();
 	public virtual System.String QuartetName
 	{
 		get => throw new System.NotImplementedException();

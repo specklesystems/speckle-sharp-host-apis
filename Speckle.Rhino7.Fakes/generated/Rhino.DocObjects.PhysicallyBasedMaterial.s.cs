@@ -5,7 +5,7 @@ public partial class PhysicallyBasedMaterial
 	public PhysicallyBasedMaterial() {}
 	public virtual System.Boolean SetTexture(Rhino.DocObjects.Texture texture,Rhino.DocObjects.TextureType which) => throw new System.NotImplementedException();
 	public virtual Rhino.DocObjects.Texture GetTexture(Rhino.DocObjects.TextureType which) => throw new System.NotImplementedException();
-	public virtual Rhino.DocObjects.Texture GetTextures() => throw new System.NotImplementedException();
+	public virtual Rhino.DocObjects.Texture[] GetTextures() => throw new System.NotImplementedException();
 	public virtual void SynchronizeLegacyMaterial() => throw new System.NotImplementedException();
 	public virtual Rhino.DocObjects.Material Material
 	{

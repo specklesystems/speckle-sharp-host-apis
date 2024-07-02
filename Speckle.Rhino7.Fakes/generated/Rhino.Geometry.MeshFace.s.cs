@@ -9,8 +9,8 @@ public partial struct MeshFace
 	public  void set_Item(System.Int32 index,System.Int32 value) => throw new System.NotImplementedException();
 	public  System.Boolean IsValid() => throw new System.NotImplementedException();
 	public  System.Boolean IsValid(System.Int32 vertexCount) => throw new System.NotImplementedException();
-	public  System.Boolean IsValid(Rhino.Geometry.Point3d points) => throw new System.NotImplementedException();
-	public  System.Boolean Repair(Rhino.Geometry.Point3d points) => throw new System.NotImplementedException();
+	public  System.Boolean IsValid(Rhino.Geometry.Point3d[] points) => throw new System.NotImplementedException();
+	public  System.Boolean Repair(Rhino.Geometry.Point3d[] points) => throw new System.NotImplementedException();
 	public  void Set(System.Int32 a,System.Int32 b,System.Int32 c) => throw new System.NotImplementedException();
 	public  void Set(System.Int32 a,System.Int32 b,System.Int32 c,System.Int32 d) => throw new System.NotImplementedException();
 	public  Rhino.Geometry.MeshFace Flip() => throw new System.NotImplementedException();

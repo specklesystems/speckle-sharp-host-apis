@@ -4,7 +4,7 @@ public partial class Command
 {
 	public Command() {}
 	public static System.Boolean IsValidCommandName(System.String name) => throw new System.NotImplementedException();
-	public static Rhino.Commands.MostRecentCommandDescription GetMostRecentCommands() => throw new System.NotImplementedException();
+	public static Rhino.Commands.MostRecentCommandDescription[] GetMostRecentCommands() => throw new System.NotImplementedException();
 	public static System.Guid[] GetCommandStack() => throw new System.NotImplementedException();
 	public static System.Boolean InCommand() => throw new System.NotImplementedException();
 	public static System.Boolean InScriptRunnerCommand() => throw new System.NotImplementedException();

@@ -1,6 +1,6 @@
 namespace Rhino.Render;
 
-public partial class RenderEnvironmentTable : Rhino.Render.IRenderContentTable<TContentType>,System.Collections.Generic.IEnumerable<Rhino.Render.RenderEnvironment>,Rhino.Collections.IRhinoTable<T>
+public partial class RenderEnvironmentTable : Rhino.Render.IRenderContentTable<Rhino.Render.RenderEnvironment>,System.Collections.Generic.IEnumerable<Rhino.Render.RenderEnvironment>,Rhino.Collections.IRhinoTable<Rhino.Render.RenderEnvironment>
 {
 	public RenderEnvironmentTable() {}
 	public virtual System.Boolean Add(Rhino.Render.RenderEnvironment c) => throw new System.NotImplementedException();

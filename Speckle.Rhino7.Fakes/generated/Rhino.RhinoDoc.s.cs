@@ -31,8 +31,8 @@ public partial class RhinoDoc : System.IDisposable
 	public virtual System.Boolean ExportSelected(System.String filePath) => throw new System.NotImplementedException();
 	public virtual System.String FindFile(System.String filename) => throw new System.NotImplementedException();
 	public static Rhino.RhinoDoc Create(System.String modelTemplateFileName) => throw new System.NotImplementedException();
-	public static Rhino.RhinoDoc OpenDocuments() => throw new System.NotImplementedException();
-	public static Rhino.RhinoDoc OpenDocuments(System.Boolean includeHeadless) => throw new System.NotImplementedException();
+	public static Rhino.RhinoDoc[] OpenDocuments() => throw new System.NotImplementedException();
+	public static Rhino.RhinoDoc[] OpenDocuments(System.Boolean includeHeadless) => throw new System.NotImplementedException();
 	public static Rhino.RhinoDoc FromId(System.Int32 docId) => throw new System.NotImplementedException();
 	public static Rhino.RhinoDoc FromRuntimeSerialNumber(System.UInt32 serialNumber) => throw new System.NotImplementedException();
 	public virtual System.Int32 ReadFileVersion() => throw new System.NotImplementedException();
@@ -204,10 +204,6 @@ public partial class RhinoDoc : System.IDisposable
 	{
 		get => throw new System.NotImplementedException();
 		set {}
-	}
-	public virtual System.Collections.Generic.List<System.Drawing.Size> CustomRenderSizes
-	{
-		get => throw new System.NotImplementedException();
 	}
 	public virtual Rhino.Geometry.MeshingParameterStyle MeshingParameterStyle
 	{

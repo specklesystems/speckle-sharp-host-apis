@@ -457,7 +457,7 @@ public partial class DimensionStyle : Rhino.DocObjects.ModelComponent
 		get => throw new System.NotImplementedException();
 		set {}
 	}
-	public override Rhino.DocObjects.ModelComponentType ComponentType
+	public new Rhino.DocObjects.ModelComponentType ComponentType
 	{
 		get => throw new System.NotImplementedException();
 	}

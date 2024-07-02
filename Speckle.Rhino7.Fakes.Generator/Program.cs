@@ -24,8 +24,10 @@ Generator generator =
       new ("MaterialRefs", [new ("CopyTo")]),
       new ("PersistentSettingsConverter", [new ("ToString")]),
       new ("PersistentSettings", [new ("GetStringDictionary"), new ("SetStringDictionary"), new ("SetDefault")]),
-      new ("Dimension", [new ("TextFormula")]),
-      new ("RunCommandDelegate", [])
+      new ("Dimension", [new ("TextFormula")]), new ("CreatePreviewEventArgs", [new ("Objects")]),
+      new ("RunCommandDelegate", []),
+      new ("ArchivableDictionary", []),
+      new ("RenderMaterial", [new ("HandleTexturedValue")]),
     ]
   );
 generator.Generate();

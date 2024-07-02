@@ -37,7 +37,7 @@ public partial class HiddenLineDrawingObjectCurve
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public virtual Rhino.Geometry.HiddenLineDrawingSegment Segments
+	public virtual Rhino.Geometry.HiddenLineDrawingSegment[] Segments
 	{
 		get => throw new System.NotImplementedException();
 	}

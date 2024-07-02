@@ -23,7 +23,7 @@ public partial class HiddenLineDrawingSegment
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public virtual Rhino.Geometry.HiddenLineDrawingSegment.SideFill CurveSideFills
+	public virtual Rhino.Geometry.HiddenLineDrawingSegment.SideFill[] CurveSideFills
 	{
 		get => throw new System.NotImplementedException();
 	}

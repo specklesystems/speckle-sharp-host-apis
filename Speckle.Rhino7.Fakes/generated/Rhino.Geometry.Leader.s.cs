@@ -3,18 +3,18 @@ namespace Rhino.Geometry;
 public partial class Leader : Rhino.Geometry.AnnotationBase
 {
 	public Leader() {}
-	public static Rhino.Geometry.Leader Create(System.String text,Rhino.Geometry.Plane plane,Rhino.DocObjects.DimensionStyle dimstyle,Rhino.Geometry.Point3d points) => throw new System.NotImplementedException();
-	public static Rhino.Geometry.Leader CreateWithRichText(System.String richText,Rhino.Geometry.Plane plane,Rhino.DocObjects.DimensionStyle dimstyle,Rhino.Geometry.Point3d points) => throw new System.NotImplementedException();
+	public static Rhino.Geometry.Leader Create(System.String text,Rhino.Geometry.Plane plane,Rhino.DocObjects.DimensionStyle dimstyle,Rhino.Geometry.Point3d[] points) => throw new System.NotImplementedException();
+	public static Rhino.Geometry.Leader CreateWithRichText(System.String richText,Rhino.Geometry.Plane plane,Rhino.DocObjects.DimensionStyle dimstyle,Rhino.Geometry.Point3d[] points) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.NurbsCurve Curve
 	{
 		get => throw new System.NotImplementedException();
 	}
-	public virtual Rhino.Geometry.Point2d Points2D
+	public virtual Rhino.Geometry.Point2d[] Points2D
 	{
 		get => throw new System.NotImplementedException();
 		set {}
 	}
-	public virtual Rhino.Geometry.Point3d Points3D
+	public virtual Rhino.Geometry.Point3d[] Points3D
 	{
 		get => throw new System.NotImplementedException();
 		set {}

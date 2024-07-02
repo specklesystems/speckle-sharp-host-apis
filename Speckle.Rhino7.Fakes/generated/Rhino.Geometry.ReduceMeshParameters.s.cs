@@ -32,7 +32,7 @@ public partial class ReduceMeshParameters
 		get => throw new System.NotImplementedException();
 		set {}
 	}
-	public virtual Rhino.Geometry.ComponentIndex LockedComponents
+	public virtual Rhino.Geometry.ComponentIndex[] LockedComponents
 	{
 		get => throw new System.NotImplementedException();
 		set {}

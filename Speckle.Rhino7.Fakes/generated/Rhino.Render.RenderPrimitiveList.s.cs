@@ -3,8 +3,8 @@ namespace Rhino.Render;
 public partial class RenderPrimitiveList : System.IDisposable
 {
 	public RenderPrimitiveList() {}
-	public virtual Rhino.Geometry.Mesh ToMeshArray() => throw new System.NotImplementedException();
-	public virtual Rhino.Render.RenderMaterial ToMaterialArray() => throw new System.NotImplementedException();
+	public virtual Rhino.Geometry.Mesh[] ToMeshArray() => throw new System.NotImplementedException();
+	public virtual Rhino.Render.RenderMaterial[] ToMaterialArray() => throw new System.NotImplementedException();
 	public virtual void Add(Rhino.Geometry.Mesh mesh,Rhino.Render.RenderMaterial material) => throw new System.NotImplementedException();
 	public virtual void Add(System.Collections.Generic.IEnumerable<Rhino.Geometry.Mesh> meshes,Rhino.Render.RenderMaterial material) => throw new System.NotImplementedException();
 	public virtual void Add(Rhino.Geometry.Mesh mesh,Rhino.Render.RenderMaterial material,Rhino.Geometry.Transform t) => throw new System.NotImplementedException();

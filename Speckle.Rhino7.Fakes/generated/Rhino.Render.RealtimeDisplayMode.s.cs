@@ -3,7 +3,7 @@ namespace Rhino.Render;
 public partial class RealtimeDisplayMode
 {
 	public RealtimeDisplayMode() {}
-	public static Rhino.Render.RealtimeDisplayModeClassInfo RegisterDisplayModes(System.Reflection.Assembly assembly,System.Guid pluginId) => throw new System.NotImplementedException();
+	public static Rhino.Render.RealtimeDisplayModeClassInfo[] RegisterDisplayModes(System.Reflection.Assembly assembly,System.Guid pluginId) => throw new System.NotImplementedException();
 	public static void UnregisterDisplayModes(System.Reflection.Assembly assembly,System.Guid pluginId) => throw new System.NotImplementedException();
 	public virtual void PostConstruct() => throw new System.NotImplementedException();
 	public virtual void SignalRedraw() => throw new System.NotImplementedException();

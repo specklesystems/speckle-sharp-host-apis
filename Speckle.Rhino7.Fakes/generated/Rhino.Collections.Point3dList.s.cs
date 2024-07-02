@@ -5,7 +5,7 @@ public partial class Point3dList : Rhino.Collections.RhinoList<Rhino.Geometry.Po
 	public Point3dList() {}
 	public Point3dList(System.Int32 initialCapacity) => throw new System.NotImplementedException();
 	public Point3dList(System.Collections.Generic.IEnumerable<Rhino.Geometry.Point3d> collection) => throw new System.NotImplementedException();
-	public Point3dList(Rhino.Geometry.Point3d initialPoints) => throw new System.NotImplementedException();
+	public Point3dList(Rhino.Geometry.Point3d[] initialPoints) => throw new System.NotImplementedException();
 	public virtual System.Int32 ClosestIndex(Rhino.Geometry.Point3d testPoint) => throw new System.NotImplementedException();
 	public virtual void Add(System.Double x,System.Double y,System.Double z) => throw new System.NotImplementedException();
 	public virtual void Transform(Rhino.Geometry.Transform xform) => throw new System.NotImplementedException();

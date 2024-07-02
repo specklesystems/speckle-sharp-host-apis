@@ -21,7 +21,7 @@ public partial class Extrusion : Rhino.Geometry.Surface
 	public virtual Rhino.Geometry.LineCurve PathLineCurve() => throw new System.NotImplementedException();
 	public virtual System.Int32 ProfileIndex(System.Double profileParameter) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Mesh GetMesh(Rhino.Geometry.MeshType meshType) => throw new System.NotImplementedException();
-	public virtual Rhino.Geometry.Curve GetWireframe() => throw new System.NotImplementedException();
+	public virtual Rhino.Geometry.Curve[] GetWireframe() => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Point3d PathStart
 	{
 		get => throw new System.NotImplementedException();

@@ -5,6 +5,9 @@ public partial class PersistentSettings : System.Runtime.Serialization.ISerializ
 	public PersistentSettings() {}
 	public virtual Rhino.Geometry.Point3d GetPoint3d(System.String key,Rhino.Geometry.Point3d defaultValue) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Point3d GetPoint3d(System.String key,Rhino.Geometry.Point3d defaultValue,System.Collections.Generic.IEnumerable<System.String> legacyKeyList) => throw new System.NotImplementedException();
+	public virtual T GetEnumValue(T defaultValue) => throw new System.NotImplementedException();
+	public virtual T GetEnumValue(System.String key,T defaultValue) => throw new System.NotImplementedException();
+	public virtual T GetEnumValue(System.String key) => throw new System.NotImplementedException();
 	public virtual void SetGuid(System.String key,System.Guid value) => throw new System.NotImplementedException();
 	public virtual void SetBool(System.String key,System.Boolean value) => throw new System.NotImplementedException();
 	public virtual void SetByte(System.String key,System.Byte value) => throw new System.NotImplementedException();
@@ -17,6 +20,8 @@ public partial class PersistentSettings : System.Runtime.Serialization.ISerializ
 	public virtual void DeleteItem(System.String key) => throw new System.NotImplementedException();
 	public virtual void SetDate(System.String key,System.DateTime value) => throw new System.NotImplementedException();
 	public virtual void SetPoint3d(System.String key,Rhino.Geometry.Point3d value) => throw new System.NotImplementedException();
+	public virtual void SetEnumValue(T enumValue) => throw new System.NotImplementedException();
+	public virtual void SetEnumValue(System.String key,T value) => throw new System.NotImplementedException();
 	public virtual Rhino.PersistentSettings GetChild(System.String key) => throw new System.NotImplementedException();
 	public virtual System.Type GetSettingType(System.String key) => throw new System.NotImplementedException();
 	public virtual System.Boolean GetSettingIsReadOnly(System.String key) => throw new System.NotImplementedException();
@@ -26,6 +31,8 @@ public partial class PersistentSettings : System.Runtime.Serialization.ISerializ
 	public virtual Rhino.PersistentSettings AddChild(System.String key) => throw new System.NotImplementedException();
 	public virtual void DeleteChild(System.String key) => throw new System.NotImplementedException();
 	public static Rhino.PersistentSettings FromPlugInId(System.Guid pluginId) => throw new System.NotImplementedException();
+	public virtual void RegisterSettingsValidator(System.String key,EventHandler<PersistentSettingsEventArgs<T>> validator) => throw new System.NotImplementedException();
+	public virtual EventHandler<PersistentSettingsEventArgs<T>> GetValidator(System.String key) => throw new System.NotImplementedException();
 	public virtual System.Boolean ContainsChangedValues() => throw new System.NotImplementedException();
 	public virtual void ClearChangedFlag() => throw new System.NotImplementedException();
 	public virtual System.Boolean ContainsModifiedValues(Rhino.PersistentSettings allUserSettings) => throw new System.NotImplementedException();

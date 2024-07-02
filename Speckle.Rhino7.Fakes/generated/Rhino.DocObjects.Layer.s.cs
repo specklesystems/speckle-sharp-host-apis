@@ -37,7 +37,7 @@ public partial class Layer : Rhino.DocObjects.ModelComponent,System.IEquatable<R
 	public virtual System.Boolean IsParentOf(System.Int32 layerIndex) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsParentOf(Rhino.DocObjects.Layer otherLayer) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsParentOf(System.Guid otherLayer) => throw new System.NotImplementedException();
-	public virtual Rhino.DocObjects.Layer GetChildren() => throw new System.NotImplementedException();
+	public virtual Rhino.DocObjects.Layer[] GetChildren() => throw new System.NotImplementedException();
 	public virtual System.Boolean SetUserString(System.String key,System.String value) => throw new System.NotImplementedException();
 	public virtual System.String GetUserString(System.String key) => throw new System.NotImplementedException();
 	public virtual System.Collections.Specialized.NameValueCollection GetUserStrings() => throw new System.NotImplementedException();

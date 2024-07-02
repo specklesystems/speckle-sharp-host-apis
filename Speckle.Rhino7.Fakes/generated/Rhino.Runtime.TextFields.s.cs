@@ -42,7 +42,7 @@ public partial class TextFields
 	public static System.String LayoutUserText(System.String layoutId,System.String key) => throw new System.NotImplementedException();
 	public static System.String BlockInstanceName(System.String blockId) => throw new System.NotImplementedException();
 	public static System.Int32 BlockInstanceCount(System.String instanceDefinitionNameOrId) => throw new System.NotImplementedException();
-	public static Rhino.Runtime.TextFields.InstanceAttributeField GetInstanceAttributeFields(System.String str) => throw new System.NotImplementedException();
-	public static Rhino.Runtime.TextFields.InstanceAttributeField GetInstanceAttributeFields(Rhino.DocObjects.TextObject text) => throw new System.NotImplementedException();
-	public static Rhino.Runtime.TextFields.InstanceAttributeField GetInstanceAttributeFields(Rhino.DocObjects.InstanceDefinition idef) => throw new System.NotImplementedException();
+	public static Rhino.Runtime.TextFields.InstanceAttributeField[] GetInstanceAttributeFields(System.String str) => throw new System.NotImplementedException();
+	public static Rhino.Runtime.TextFields.InstanceAttributeField[] GetInstanceAttributeFields(Rhino.DocObjects.TextObject text) => throw new System.NotImplementedException();
+	public static Rhino.Runtime.TextFields.InstanceAttributeField[] GetInstanceAttributeFields(Rhino.DocObjects.InstanceDefinition idef) => throw new System.NotImplementedException();
 }
