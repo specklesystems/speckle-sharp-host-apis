@@ -40,7 +40,7 @@ public partial class Generator
 
         var methodSb = new StringBuilder();
         methodSb.Append("\t");
-        WriteMethod(methodSb, method, generatedType);
+        WriteMethod(methodSb, method, generatedType, false);
         sb.Append(methodSb);
         members.Add(new(method.Name));
       }
@@ -57,7 +57,7 @@ public partial class Generator
     return members;
   }
 
-  private void WriteMethod(StringBuilder sb, MethodInfo methodInfo, GeneratedType generatedType)
+  private void WriteMethod(StringBuilder sb, MethodInfo methodInfo, GeneratedType generatedType, bool nullable)
   {
     if (methodInfo.GetBaseDefinition().DeclaringType != methodInfo.DeclaringType)
     {
@@ -79,15 +79,24 @@ public partial class Generator
       }
     }
 
-    sb.Append($"public {extras} {ReturnType(methodInfo.ReturnType)} {methodInfo.Name}(");
-    WriteMethodBody(sb, methodInfo.GetParameters(), null, generatedType);
+    var genericArguments = methodInfo.GetGenericArguments();
+    var genericString = string.Empty;
+    if (genericArguments.Any())
+    {
+      genericString = $"<{string.Join(", ", genericArguments.Select((ta, i) => ta.Name))}>";
+      
+    }
+
+    sb.Append($"public {extras} {ReturnType(methodInfo.ReturnType, nullable)} {methodInfo.Name}{genericString}(");
+    WriteMethodBody(sb, methodInfo.GetParameters(), null, generatedType, nullable);
   }
 
   private void WriteMethodBody(
     StringBuilder sb,
     ParameterInfo[] parameterInfos,
     Type? baseType,
-    GeneratedType generatedType
+    GeneratedType generatedType,
+    bool nullable
   )
   {
     bool isFirst = true;
@@ -101,7 +110,7 @@ public partial class Generator
       {
         sb.Append(",");
       }
-      sb.Append(ParameterType(parameter.ParameterType)).Append(" ").Append(FixName(parameter.Name));
+      sb.Append(ParameterType(parameter.ParameterType, nullable)).Append(" ").Append(FixName(parameter.Name));
     }
 
     if (baseType is not null)

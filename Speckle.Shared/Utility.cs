@@ -1,8 +1,9 @@
-﻿namespace Speckle.Shared;
+namespace Speckle.Shared;
 
 public partial class Generator
 {
-  private string ParameterType(Type type)
+  private string ParameterType(Type type,
+    bool nullable)
   {
     if (type.IsByRef || type.IsPointer)
     {
@@ -17,16 +18,22 @@ public partial class Generator
     {
       throw new ApplicationException($"Not Handling: {type.FullName}");
     }
-    return FormGenericType(type, false);
+    var name = FormGenericType(type, false);
+    if (nullable && !name.EndsWith("?", StringComparison.Ordinal))
+    {
+      return $"{type}?";
+    }
+    return name;
   }
 
-  private string ReturnType(Type type)
+  private string ReturnType(Type type,
+    bool nullable)
   {
     if (type == typeof(void))
     {
       return "void";
     }
-    return ParameterType(type);
+    return ParameterType(type, nullable);
   }
 
   private string FormGenericType(Type type, bool isOpenGeneric)
@@ -111,5 +118,17 @@ public partial class Generator
       _ => name
     };
 
-  private string GetName(Type type) => type.FullName ?? type.Name;
+  private string GetName(Type type)
+  {
+    if (type.IsGenericParameter || type.ContainsGenericParameters)
+    {
+      var isCollection =  type.IsGenericType && (type.GetGenericTypeDefinition() != null);
+      if (!isCollection)
+      {
+        return type.Name;
+      }
+    }
+
+    return type.FullName ?? $"{type.Namespace}.{type.Name}";
+  }
 }

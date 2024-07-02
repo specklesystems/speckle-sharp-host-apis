@@ -122,7 +122,7 @@ public partial class Generator
       }
     }
 
-    sb.AppendLine($"public {extra} {ReturnType(returnType)} {property.Name}");
+    sb.AppendLine($"public {extra} {ReturnType(returnType, false)} {property.Name}");
     sb.AppendLine("\t{");
   }
 }
