@@ -3,6 +3,7 @@ namespace Rhino.Render;
 public partial class CachedTextureCoordinates : Rhino.Runtime.CommonObject,System.Collections.Generic.IList<Rhino.Geometry.Point3d>
 {
 	public CachedTextureCoordinates() {}
+	public virtual System.Boolean TryGetAt(System.Int32 index,out System.Double u,out System.Double v,out System.Double w) => throw new System.NotImplementedException();
 	public virtual System.Boolean Contains(Rhino.Geometry.Point3d item) => throw new System.NotImplementedException();
 	public virtual void CopyTo(Rhino.Geometry.Point3d[] array,System.Int32 arrayIndex) => throw new System.NotImplementedException();
 	public virtual System.Collections.Generic.IEnumerator<Rhino.Geometry.Point3d> GetEnumerator() => throw new System.NotImplementedException();

@@ -6,6 +6,7 @@ public partial struct ColorRGBA : System.Runtime.Serialization.ISerializable,Sys
 	public ColorRGBA(Rhino.Display.ColorRGBA color) => throw new System.NotImplementedException();
 	public ColorRGBA(System.Double red,System.Double green,System.Double blue) => throw new System.NotImplementedException();
 	public ColorRGBA(System.Double red,System.Double green,System.Double blue,System.Double alpha) => throw new System.NotImplementedException();
+	public ColorRGBA(System.Drawing.Color color) => throw new System.NotImplementedException();
 	public ColorRGBA(System.Int32 argb) => throw new System.NotImplementedException();
 	public static Rhino.Display.ColorRGBA CreateFromHSV(Rhino.Display.ColorHSV hsv) => throw new System.NotImplementedException();
 	public static Rhino.Display.ColorRGBA CreateFromHSL(Rhino.Display.ColorHSL hsl) => throw new System.NotImplementedException();

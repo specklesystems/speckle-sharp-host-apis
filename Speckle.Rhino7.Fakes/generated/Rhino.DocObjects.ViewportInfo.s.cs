@@ -15,23 +15,38 @@ public partial class ViewportInfo : Rhino.Runtime.CommonObject
 	public virtual System.Boolean SetCameraUp(Rhino.Geometry.Vector3d up) => throw new System.NotImplementedException();
 	public virtual void UnlockCamera() => throw new System.NotImplementedException();
 	public virtual void UnlockFrustumSymmetry() => throw new System.NotImplementedException();
+	public virtual System.Boolean GetCameraFrame(out Rhino.Geometry.Point3d location,out Rhino.Geometry.Vector3d cameraX,out Rhino.Geometry.Vector3d cameraY,out Rhino.Geometry.Vector3d cameraZ) => throw new System.NotImplementedException();
 	public virtual System.Boolean SetFrustum(System.Double left,System.Double right,System.Double bottom,System.Double top,System.Double nearDistance,System.Double farDistance) => throw new System.NotImplementedException();
+	public virtual System.Boolean GetFrustum(out System.Double left,out System.Double right,out System.Double bottom,out System.Double top,out System.Double nearDistance,out System.Double farDistance) => throw new System.NotImplementedException();
 	public virtual System.Boolean SetFrustumNearFar(Rhino.Geometry.BoundingBox boundingBox) => throw new System.NotImplementedException();
 	public virtual System.Boolean SetFrustumNearFar(Rhino.Geometry.Point3d center,System.Double radius) => throw new System.NotImplementedException();
 	public virtual System.Boolean SetFrustumNearFar(System.Double nearDistance,System.Double farDistance) => throw new System.NotImplementedException();
 	public virtual System.Boolean ChangeToSymmetricFrustum(System.Boolean isLeftRightSymmetric,System.Boolean isTopBottomSymmetric,System.Double targetDistance) => throw new System.NotImplementedException();
+	public virtual System.Boolean GetPointDepth(Rhino.Geometry.Point3d point,out System.Double distance) => throw new System.NotImplementedException();
+	public virtual System.Boolean GetBoundingBoxDepth(Rhino.Geometry.BoundingBox bbox,out System.Double nearDistance,out System.Double farDistance) => throw new System.NotImplementedException();
+	public virtual System.Boolean GetSphereDepth(Rhino.Geometry.Sphere sphere,out System.Double nearDistance,out System.Double farDistance) => throw new System.NotImplementedException();
 	public virtual System.Boolean SetFrustumNearFar(System.Double nearDistance,System.Double farDistance,System.Double minNearDistance,System.Double minNearOverFar,System.Double targetDistance) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Point3d[] GetNearPlaneCorners() => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Point3d[] GetFarPlaneCorners() => throw new System.NotImplementedException();
 	public virtual System.Boolean SetScreenPort(System.Int32 left,System.Int32 right,System.Int32 bottom,System.Int32 top,System.Int32 near,System.Int32 far) => throw new System.NotImplementedException();
+	public virtual System.Boolean SetScreenPort(System.Drawing.Rectangle windowRectangle,System.Int32 near,System.Int32 far) => throw new System.NotImplementedException();
+	public virtual System.Boolean SetScreenPort(System.Drawing.Rectangle windowRectangle) => throw new System.NotImplementedException();
+	public virtual void GetScreenPortLocation(out System.Int32 left,out System.Int32 top,out System.Int32 right,out System.Int32 bottom) => throw new System.NotImplementedException();
+	public virtual System.Drawing.Rectangle GetScreenPort(out System.Int32 near,out System.Int32 far) => throw new System.NotImplementedException();
+	public virtual System.Drawing.Rectangle GetScreenPort() => throw new System.NotImplementedException();
+	public virtual System.Boolean GetCameraAngles(out System.Double halfDiagonalAngleRadians,out System.Double halfVerticalAngleRadians,out System.Double halfHorizontalAngleRadians) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Transform GetXform(Rhino.DocObjects.CoordinateSystem sourceSystem,Rhino.DocObjects.CoordinateSystem destinationSystem) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Line GetFrustumLine(System.Double screenX,System.Double screenY) => throw new System.NotImplementedException();
+	public virtual Rhino.Geometry.Line GetFrustumLine(System.Drawing.Point screenPoint) => throw new System.NotImplementedException();
+	public virtual Rhino.Geometry.Line GetFrustumLine(System.Drawing.PointF screenPoint) => throw new System.NotImplementedException();
 	public virtual System.Double GetWorldToScreenScale(Rhino.Geometry.Point3d pointInFrustum) => throw new System.NotImplementedException();
 	public virtual System.Boolean Extents(System.Double halfViewAngleRadians,Rhino.Geometry.BoundingBox bbox) => throw new System.NotImplementedException();
 	public virtual System.Boolean Extents(System.Double halfViewAngleRadians,Rhino.Geometry.Sphere sphere) => throw new System.NotImplementedException();
 	public virtual System.Boolean ZoomToScreenRect(System.Int32 left,System.Int32 top,System.Int32 right,System.Int32 bottom) => throw new System.NotImplementedException();
+	public virtual System.Boolean ZoomToScreenRect(System.Drawing.Rectangle windowRectangle) => throw new System.NotImplementedException();
 	public virtual System.Boolean DollyCamera(Rhino.Geometry.Vector3d dollyVector) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Vector3d GetDollyCameraVector(System.Int32 screenX0,System.Int32 screenY0,System.Int32 screenX1,System.Int32 screenY1,System.Double projectionPlaneDistance) => throw new System.NotImplementedException();
+	public virtual Rhino.Geometry.Vector3d GetDollyCameraVector(System.Drawing.Point screen0,System.Drawing.Point screen1,System.Double projectionPlaneDistance) => throw new System.NotImplementedException();
 	public virtual System.Boolean DollyFrustum(System.Double dollyDistance) => throw new System.NotImplementedException();
 	public virtual System.Boolean DollyExtents(System.Collections.Generic.IEnumerable<Rhino.Geometry.GeometryBase> geometry,System.Double border) => throw new System.NotImplementedException();
 	public virtual System.Boolean DollyExtents(Rhino.Geometry.BoundingBox cameraCoordinateBoundingBox,System.Double border) => throw new System.NotImplementedException();
@@ -187,6 +202,11 @@ public partial class ViewportInfo : Rhino.Runtime.CommonObject
 	{
 		get => throw new System.NotImplementedException();
 	}
+	public virtual System.Drawing.Rectangle ScreenPort
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 	public virtual System.Double ScreenPortAspect
 	{
 		get => throw new System.NotImplementedException();
@@ -197,6 +217,11 @@ public partial class ViewportInfo : Rhino.Runtime.CommonObject
 		set {}
 	}
 	public virtual System.Double Camera35mmLensLength
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Drawing.SizeF ViewScale
 	{
 		get => throw new System.NotImplementedException();
 		set {}

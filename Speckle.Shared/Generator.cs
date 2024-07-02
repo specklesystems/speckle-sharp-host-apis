@@ -97,7 +97,7 @@ public partial class Generator
     }
     if (type.FullName.StartsWith("System.Drawing."))
     {
-      throw new ApplicationException($"Not dealing with base types: {type.FullName}");
+      return type;
     }
     if (type.FullName.StartsWith("System.Windows") || type.FullName.StartsWith("System.MulticastDelegate"))
     {

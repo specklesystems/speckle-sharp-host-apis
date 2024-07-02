@@ -142,6 +142,40 @@ public partial class Material : Rhino.DocObjects.ModelComponent
 		get => throw new System.NotImplementedException();
 		set {}
 	}
+	public virtual System.Drawing.Color PreviewColor
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual System.Drawing.Color DiffuseColor
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Drawing.Color AmbientColor
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Drawing.Color EmissionColor
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Drawing.Color SpecularColor
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Drawing.Color ReflectionColor
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Drawing.Color TransparentColor
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 	public virtual System.Int32 UserStringCount
 	{
 		get => throw new System.NotImplementedException();

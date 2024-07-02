@@ -15,6 +15,7 @@ public partial class PolyCurve : Rhino.Geometry.Curve
 	public virtual System.Double PolyCurveParameter(System.Int32 segmentIndex,System.Double segmentCurveParameter) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Interval SegmentDomain(System.Int32 segmentIndex) => throw new System.NotImplementedException();
 	public virtual System.Int32 SegmentIndex(System.Double polycurveParameter) => throw new System.NotImplementedException();
+	public virtual System.Int32 SegmentIndexes(Rhino.Geometry.Interval subdomain,out System.Int32 segmentIndex0,out System.Int32 segmentIndex1) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Curve CleanUp() => throw new System.NotImplementedException();
 	public virtual System.Int32 SegmentCount
 	{

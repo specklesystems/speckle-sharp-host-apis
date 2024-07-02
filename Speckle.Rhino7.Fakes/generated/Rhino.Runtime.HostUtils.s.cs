@@ -3,6 +3,7 @@ namespace Rhino.Runtime;
 public partial class HostUtils
 {
 	public HostUtils() {}
+	public static void GetCurrentProcessInfo(out System.String processName,out System.Version processVersion) => throw new System.NotImplementedException();
 	public static T GetPlatformService<T>(System.String assemblyPath,System.String typeFullName) => throw new System.NotImplementedException();
 	public static System.Boolean IsManagedDll(System.String path) => throw new System.NotImplementedException();
 	public static void ClearFpuExceptionStatus() => throw new System.NotImplementedException();
@@ -12,6 +13,7 @@ public partial class HostUtils
 	public static System.String[] GetAssemblySearchPaths() => throw new System.NotImplementedException();
 	public static void InPlaceConstCast(Rhino.Geometry.GeometryBase geometry,System.Boolean makeNonConst) => throw new System.NotImplementedException();
 	public static System.Boolean CheckForRdk(System.Boolean throwOnFalse,System.Boolean usePreviousResult) => throw new System.NotImplementedException();
+	public static System.Boolean GetAbsolutePath(System.String relativePath,System.Boolean bRelativePathisFileName,System.String relativeTo,System.Boolean bRelativeToIsFileName,out System.String pathOut) => throw new System.NotImplementedException();
 	public static System.Boolean IsRhinoFileExtension(System.String fileExtension) => throw new System.NotImplementedException();
 	public static System.Boolean FileNameEndsWithRhinoExtension(System.String fileName) => throw new System.NotImplementedException();
 	public static System.Boolean IsRhinoBackupFileExtension(System.String fileExtension) => throw new System.NotImplementedException();

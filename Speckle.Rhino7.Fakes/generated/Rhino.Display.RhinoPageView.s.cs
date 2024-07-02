@@ -9,6 +9,7 @@ public partial class RhinoPageView : Rhino.Display.RhinoView
 	public virtual System.Boolean SetActiveDetail(System.String detailName,System.Boolean compareCase) => throw new System.NotImplementedException();
 	public virtual Rhino.DocObjects.DetailViewObject AddDetailView(System.String title,Rhino.Geometry.Point2d corner0,Rhino.Geometry.Point2d corner1,Rhino.Display.DefinedViewportProjection initialProjection) => throw new System.NotImplementedException();
 	public virtual Rhino.DocObjects.DetailViewObject[] GetDetailViews() => throw new System.NotImplementedException();
+	public virtual System.Drawing.Bitmap GetPreviewImage(System.Drawing.Size size,System.Boolean grayScale) => throw new System.NotImplementedException();
 	public new Rhino.Display.RhinoViewport ActiveViewport
 	{
 		get => throw new System.NotImplementedException();

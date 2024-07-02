@@ -8,6 +8,7 @@ public partial class Light : Rhino.Geometry.GeometryBase
 	public static Rhino.Geometry.Light CreateSunLight(Rhino.Render.Sun sun) => throw new System.NotImplementedException();
 	public virtual void SetAttenuation(System.Double a0,System.Double a1,System.Double a2) => throw new System.NotImplementedException();
 	public virtual System.Double GetAttenuation(System.Double d) => throw new System.NotImplementedException();
+	public virtual System.Boolean GetSpotLightRadii(out System.Double innerRadius,out System.Double outerRadius) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsEnabled
 	{
 		get => throw new System.NotImplementedException();
@@ -76,6 +77,21 @@ public partial class Light : Rhino.Geometry.GeometryBase
 		set {}
 	}
 	public virtual System.Double PowerCandela
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Drawing.Color Ambient
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Drawing.Color Diffuse
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Drawing.Color Specular
 	{
 		get => throw new System.NotImplementedException();
 		set {}

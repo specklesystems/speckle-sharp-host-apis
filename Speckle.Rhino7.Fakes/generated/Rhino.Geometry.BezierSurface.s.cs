@@ -18,6 +18,7 @@ public partial class BezierSurface : System.IDisposable
 	public virtual Rhino.Geometry.Point4d GetControlVertex4d(System.Int32 i,System.Int32 j) => throw new System.NotImplementedException();
 	public virtual System.Boolean MakeRational() => throw new System.NotImplementedException();
 	public virtual System.Boolean MakeNonRational() => throw new System.NotImplementedException();
+	public virtual System.Boolean Split(System.Int32 direction,System.Double t,out Rhino.Geometry.BezierSurface left,out Rhino.Geometry.BezierSurface right) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValid
 	{
 		get => throw new System.NotImplementedException();

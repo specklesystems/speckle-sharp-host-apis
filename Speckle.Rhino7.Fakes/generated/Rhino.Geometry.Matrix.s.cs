@@ -14,6 +14,9 @@ public partial class Matrix : System.IDisposable
 	public virtual System.Boolean SwapColumns(System.Int32 columnA,System.Int32 columnB) => throw new System.NotImplementedException();
 	public virtual System.Boolean Invert(System.Double zeroTolerance) => throw new System.NotImplementedException();
 	public virtual void Scale(System.Double s) => throw new System.NotImplementedException();
+	public virtual System.Int32 RowReduce(System.Double zeroTolerance,out System.Double determinant,out System.Double pivot) => throw new System.NotImplementedException();
+	public virtual System.Int32 RowReduce(System.Double zeroTolerance,System.Double[] b,out System.Double pivot) => throw new System.NotImplementedException();
+	public virtual System.Int32 RowReduce(System.Double zeroTolerance,Rhino.Geometry.Point3d[] b,out System.Double pivot) => throw new System.NotImplementedException();
 	public virtual System.Double[] BackSolve(System.Double zeroTolerance,System.Double[] b) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Point3d[] BackSolvePoints(System.Double zeroTolerance,Rhino.Geometry.Point3d[] b) => throw new System.NotImplementedException();
 	public virtual System.Double this[System.Int32 row]

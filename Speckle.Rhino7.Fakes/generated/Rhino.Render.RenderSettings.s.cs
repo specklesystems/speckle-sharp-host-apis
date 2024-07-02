@@ -4,6 +4,21 @@ public partial class RenderSettings : Rhino.Runtime.CommonObject
 {
 	public RenderSettings() {}
 	public RenderSettings(Rhino.Render.RenderSettings source) => throw new System.NotImplementedException();
+	public virtual System.Drawing.Color AmbientLight
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Drawing.Color BackgroundColorTop
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Drawing.Color BackgroundColorBottom
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 	public virtual System.Boolean UseHiddenLights
 	{
 		get => throw new System.NotImplementedException();
@@ -75,6 +90,11 @@ public partial class RenderSettings : Rhino.Runtime.CommonObject
 		set {}
 	}
 	public virtual System.Double ImageDpi
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Drawing.Size ImageSize
 	{
 		get => throw new System.NotImplementedException();
 		set {}

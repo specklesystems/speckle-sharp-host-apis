@@ -4,12 +4,14 @@ public partial class Brep : Rhino.Geometry.GeometryBase
 {
 	public Brep() {}
 	public virtual System.Boolean IsPointInside(Rhino.Geometry.Point3d point,System.Double tolerance,System.Boolean strictlyIn) => throw new System.NotImplementedException();
+	public virtual System.Boolean GetPointInside(System.Double tolerance,out Rhino.Geometry.Point3d point) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Brep CapPlanarHoles(System.Double tolerance) => throw new System.NotImplementedException();
 	public virtual System.Boolean Join(Rhino.Geometry.Brep otherBrep,System.Double tolerance,System.Boolean compact) => throw new System.NotImplementedException();
 	public virtual System.Int32 JoinNakedEdges(System.Double tolerance) => throw new System.NotImplementedException();
 	public virtual System.Boolean MergeCoplanarFaces(System.Double tolerance) => throw new System.NotImplementedException();
 	public virtual System.Boolean MergeCoplanarFaces(System.Double tolerance,System.Double angleTolerance) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Brep[] Split(Rhino.Geometry.Brep cutter,System.Double intersectionTolerance) => throw new System.NotImplementedException();
+	public virtual Rhino.Geometry.Brep[] Split(Rhino.Geometry.Brep cutter,System.Double intersectionTolerance,out System.Boolean toleranceWasRaised) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Brep[] Split(System.Collections.Generic.IEnumerable<Rhino.Geometry.Brep> cutters,System.Double intersectionTolerance) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Brep[] Split(System.Collections.Generic.IEnumerable<Rhino.Geometry.Curve> cutters,System.Double intersectionTolerance) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Brep[] Split(System.Collections.Generic.IEnumerable<Rhino.Geometry.GeometryBase> cutters,Rhino.Geometry.Vector3d normal,System.Boolean planView,System.Double intersectionTolerance) => throw new System.NotImplementedException();
@@ -104,8 +106,12 @@ public partial class Brep : Rhino.Geometry.GeometryBase
 	public static Rhino.Geometry.Brep[] CreateBlendSurface(Rhino.Geometry.BrepFace face0,Rhino.Geometry.BrepEdge edge0,Rhino.Geometry.Interval domain0,System.Boolean rev0,Rhino.Geometry.BlendContinuity continuity0,Rhino.Geometry.BrepFace face1,Rhino.Geometry.BrepEdge edge1,Rhino.Geometry.Interval domain1,System.Boolean rev1,Rhino.Geometry.BlendContinuity continuity1) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.Curve CreateBlendShape(Rhino.Geometry.BrepFace face0,Rhino.Geometry.BrepEdge edge0,System.Double t0,System.Boolean rev0,Rhino.Geometry.BlendContinuity continuity0,Rhino.Geometry.BrepFace face1,Rhino.Geometry.BrepEdge edge1,System.Double t1,System.Boolean rev1,Rhino.Geometry.BlendContinuity continuity1) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.Brep[] CreateFilletSurface(Rhino.Geometry.BrepFace face0,Rhino.Geometry.Point2d uv0,Rhino.Geometry.BrepFace face1,Rhino.Geometry.Point2d uv1,System.Double radius,System.Boolean extend,System.Double tolerance) => throw new System.NotImplementedException();
+	public static Rhino.Geometry.Brep[] CreateFilletSurface(Rhino.Geometry.BrepFace face0,Rhino.Geometry.Point2d uv0,Rhino.Geometry.BrepFace face1,Rhino.Geometry.Point2d uv1,System.Double radius,System.Boolean trim,System.Boolean extend,System.Double tolerance,out Rhino.Geometry.Brep[] outBreps0,out Rhino.Geometry.Brep[] outBreps1) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.Brep[] CreateChamferSurface(Rhino.Geometry.BrepFace face0,Rhino.Geometry.Point2d uv0,System.Double radius0,Rhino.Geometry.BrepFace face1,Rhino.Geometry.Point2d uv1,System.Double radius1,System.Boolean extend,System.Double tolerance) => throw new System.NotImplementedException();
+	public static Rhino.Geometry.Brep[] CreateChamferSurface(Rhino.Geometry.BrepFace face0,Rhino.Geometry.Point2d uv0,System.Double radius0,Rhino.Geometry.BrepFace face1,Rhino.Geometry.Point2d uv1,System.Double radius1,System.Boolean trim,System.Boolean extend,System.Double tolerance,out Rhino.Geometry.Brep[] outBreps0,out Rhino.Geometry.Brep[] outBreps1) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.Brep[] CreateFilletEdges(Rhino.Geometry.Brep brep,System.Collections.Generic.IEnumerable<System.Int32> edgeIndices,System.Collections.Generic.IEnumerable<System.Double> startRadii,System.Collections.Generic.IEnumerable<System.Double> endRadii,Rhino.Geometry.BlendType blendType,Rhino.Geometry.RailType railType,System.Double tolerance) => throw new System.NotImplementedException();
+	public static Rhino.Geometry.Brep[] CreateOffsetBrep(Rhino.Geometry.Brep brep,System.Double distance,System.Boolean solid,System.Boolean extend,System.Double tolerance,out Rhino.Geometry.Brep[] outBlends,out Rhino.Geometry.Brep[] outWalls) => throw new System.NotImplementedException();
+	public static Rhino.Geometry.Brep[] CreateOffsetBrep(Rhino.Geometry.Brep brep,System.Double distance,System.Boolean solid,System.Boolean extend,System.Boolean shrink,System.Double tolerance,out Rhino.Geometry.Brep[] outBlends,out Rhino.Geometry.Brep[] outWalls) => throw new System.NotImplementedException();
 	public virtual System.Boolean RemoveFins() => throw new System.NotImplementedException();
 	public static Rhino.Geometry.Brep CreateFromJoinedEdges(Rhino.Geometry.Brep brep0,System.Int32 edgeIndex0,Rhino.Geometry.Brep brep1,System.Int32 edgeIndex1,System.Double joinTolerance) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.Brep[] CreateFromLoft(System.Collections.Generic.IEnumerable<Rhino.Geometry.Curve> curves,Rhino.Geometry.Point3d start,Rhino.Geometry.Point3d end,Rhino.Geometry.LoftType loftType,System.Boolean closed) => throw new System.NotImplementedException();
@@ -144,7 +150,12 @@ public partial class Brep : Rhino.Geometry.GeometryBase
 	public virtual Rhino.Geometry.Point3d[] DuplicateVertices() => throw new System.NotImplementedException();
 	public virtual void Flip() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsDuplicate(Rhino.Geometry.Brep other,System.Double tolerance) => throw new System.NotImplementedException();
+	public virtual System.Boolean IsValidTopology(out System.String log) => throw new System.NotImplementedException();
+	public virtual System.Boolean IsValidGeometry(out System.String log) => throw new System.NotImplementedException();
+	public virtual System.Boolean IsValidTolerancesAndFlags(out System.String log) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Point3d ClosestPoint(Rhino.Geometry.Point3d testPoint) => throw new System.NotImplementedException();
+	public virtual System.Boolean ClosestPoint(Rhino.Geometry.Point3d testPoint,out Rhino.Geometry.Point3d closestPoint,out Rhino.Geometry.ComponentIndex ci,out System.Double s,out System.Double t,System.Double maximumDistance,out Rhino.Geometry.Vector3d normal) => throw new System.NotImplementedException();
+	public virtual void FindCoincidentBrepComponents(Rhino.Geometry.Point3d point,System.Double tolerance,out System.Int32[] faces,out System.Int32[] edges,out System.Int32[] vertices) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Collections.BrepVertexList Vertices
 	{
 		get => throw new System.NotImplementedException();

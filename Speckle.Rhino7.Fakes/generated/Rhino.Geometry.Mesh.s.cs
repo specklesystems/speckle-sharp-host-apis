@@ -3,6 +3,7 @@ namespace Rhino.Geometry;
 public partial class Mesh : Rhino.Geometry.GeometryBase
 {
 	public Mesh() {}
+	public virtual Rhino.Geometry.Mesh Offset(System.Double distance,System.Boolean solidify,Rhino.Geometry.Vector3d direction,out System.Collections.Generic.List<System.Int32> wallFacesOut) => throw new System.NotImplementedException();
 	public virtual System.Int32 CollapseFacesByEdgeLength(System.Boolean bGreaterThan,System.Double edgeLength) => throw new System.NotImplementedException();
 	public virtual System.Int32 CollapseFacesByArea(System.Double lessThanArea,System.Double greaterThanArea) => throw new System.NotImplementedException();
 	public virtual System.Int32 CollapseFacesByByAspectRatio(System.Double aspectRatio) => throw new System.NotImplementedException();
@@ -16,6 +17,7 @@ public partial class Mesh : Rhino.Geometry.GeometryBase
 	public virtual Rhino.Geometry.MeshPart GetPartition(System.Int32 which) => throw new System.NotImplementedException();
 	public virtual System.Collections.Generic.IEnumerable<Rhino.Geometry.MeshNgon> GetNgonAndFacesEnumerable() => throw new System.NotImplementedException();
 	public virtual System.Int32 GetNgonAndFacesCount() => throw new System.NotImplementedException();
+	public virtual System.Boolean CreateVertexColorsFromBitmap(Rhino.RhinoDoc doc,Rhino.Render.TextureMapping mapping,Rhino.Geometry.Transform xform,System.Drawing.Bitmap bitmap) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.Mesh QuadRemeshBrep(Rhino.Geometry.Brep brep,Rhino.Geometry.QuadRemeshParameters parameters) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.Mesh QuadRemeshBrep(Rhino.Geometry.Brep brep,Rhino.Geometry.QuadRemeshParameters parameters,System.Collections.Generic.IEnumerable<Rhino.Geometry.Curve> guideCurves) => throw new System.NotImplementedException();
 	public static System.Threading.Tasks.Task<Rhino.Geometry.Mesh> QuadRemeshBrepAsync(Rhino.Geometry.Brep brep,Rhino.Geometry.QuadRemeshParameters parameters,System.IProgress<System.Int32> progress,System.Threading.CancellationToken cancelToken) => throw new System.NotImplementedException();
@@ -27,6 +29,8 @@ public partial class Mesh : Rhino.Geometry.GeometryBase
 	public virtual System.Threading.Tasks.Task<Rhino.Geometry.Mesh> QuadRemeshAsync(System.Collections.Generic.IEnumerable<System.Int32> faceBlocks,Rhino.Geometry.QuadRemeshParameters parameters,System.Collections.Generic.IEnumerable<Rhino.Geometry.Curve> guideCurves,System.IProgress<System.Int32> progress,System.Threading.CancellationToken cancelToken) => throw new System.NotImplementedException();
 	public virtual System.Boolean Reduce(System.Int32 desiredPolygonCount,System.Boolean allowDistortion,System.Int32 accuracy,System.Boolean normalizeSize) => throw new System.NotImplementedException();
 	public virtual System.Boolean Reduce(System.Int32 desiredPolygonCount,System.Boolean allowDistortion,System.Int32 accuracy,System.Boolean normalizeSize,System.Boolean threaded) => throw new System.NotImplementedException();
+	public virtual System.Boolean Reduce(System.Int32 desiredPolygonCount,System.Boolean allowDistortion,System.Int32 accuracy,System.Boolean normalizeSize,System.Threading.CancellationToken cancelToken,System.IProgress<System.Double> progress,out System.String problemDescription) => throw new System.NotImplementedException();
+	public virtual System.Boolean Reduce(System.Int32 desiredPolygonCount,System.Boolean allowDistortion,System.Int32 accuracy,System.Boolean normalizeSize,System.Threading.CancellationToken cancelToken,System.IProgress<System.Double> progress,out System.String problemDescription,System.Boolean threaded) => throw new System.NotImplementedException();
 	public virtual System.Boolean Reduce(Rhino.Geometry.ReduceMeshParameters parameters) => throw new System.NotImplementedException();
 	public virtual System.Boolean Reduce(Rhino.Geometry.ReduceMeshParameters parameters,System.Boolean threaded) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.MeshThicknessMeasurement[] ComputeThickness(System.Collections.Generic.IEnumerable<Rhino.Geometry.Mesh> meshes,System.Double maximumThickness) => throw new System.NotImplementedException();
@@ -78,6 +82,7 @@ public partial class Mesh : Rhino.Geometry.GeometryBase
 	public virtual void CopyFrom(Rhino.Geometry.Mesh other) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Mesh DuplicateMesh() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsManifold() => throw new System.NotImplementedException();
+	public virtual System.Boolean IsManifold(System.Boolean topologicalTest,out System.Boolean isOriented,out System.Boolean hasBoundary) => throw new System.NotImplementedException();
 	public virtual void ClearTextureData() => throw new System.NotImplementedException();
 	public virtual void ClearSurfaceData() => throw new System.NotImplementedException();
 	public virtual void DestroyTopology() => throw new System.NotImplementedException();
@@ -123,10 +128,14 @@ public partial class Mesh : Rhino.Geometry.GeometryBase
 	public virtual void Append(System.Collections.Generic.IEnumerable<Rhino.Geometry.Mesh> meshes) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Point3d ClosestPoint(Rhino.Geometry.Point3d testPoint) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.MeshPoint ClosestMeshPoint(Rhino.Geometry.Point3d testPoint,System.Double maximumDistance) => throw new System.NotImplementedException();
+	public virtual System.Int32 ClosestPoint(Rhino.Geometry.Point3d testPoint,out Rhino.Geometry.Point3d pointOnMesh,System.Double maximumDistance) => throw new System.NotImplementedException();
+	public virtual System.Int32 ClosestPoint(Rhino.Geometry.Point3d testPoint,out Rhino.Geometry.Point3d pointOnMesh,out Rhino.Geometry.Vector3d normalAtPoint,System.Double maximumDistance) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Point3d PointAt(Rhino.Geometry.MeshPoint meshPoint) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Point3d PointAt(System.Int32 faceIndex,System.Double t0,System.Double t1,System.Double t2,System.Double t3) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Vector3d NormalAt(Rhino.Geometry.MeshPoint meshPoint) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Vector3d NormalAt(System.Int32 faceIndex,System.Double t0,System.Double t1,System.Double t2,System.Double t3) => throw new System.NotImplementedException();
+	public virtual System.Drawing.Color ColorAt(Rhino.Geometry.MeshPoint meshPoint) => throw new System.NotImplementedException();
+	public virtual System.Drawing.Color ColorAt(System.Int32 faceIndex,System.Double t0,System.Double t1,System.Double t2,System.Double t3) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Point3d[] PullPointsToMesh(System.Collections.Generic.IEnumerable<Rhino.Geometry.Point3d> points) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.PolylineCurve PullCurve(Rhino.Geometry.Curve curve,System.Double tolerance) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Mesh[] SplitWithProjectedPolylines(System.Collections.Generic.IEnumerable<Rhino.Geometry.PolylineCurve> curves,System.Double tolerance) => throw new System.NotImplementedException();
@@ -182,6 +191,10 @@ public partial class Mesh : Rhino.Geometry.GeometryBase
 		get => throw new System.NotImplementedException();
 	}
 	public virtual Rhino.Geometry.Collections.MeshFaceNormalList FaceNormals
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Rhino.Geometry.Collections.MeshVertexColorList VertexColors
 	{
 		get => throw new System.NotImplementedException();
 	}

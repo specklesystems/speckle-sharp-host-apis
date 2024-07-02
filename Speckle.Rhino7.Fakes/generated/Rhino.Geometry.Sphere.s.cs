@@ -13,6 +13,7 @@ public partial struct Sphere : Rhino.IEpsilonComparable<Rhino.Geometry.Sphere>
 	public  Rhino.Geometry.Point3d PointAt(System.Double longitudeRadians,System.Double latitudeRadians) => throw new System.NotImplementedException();
 	public  Rhino.Geometry.Vector3d NormalAt(System.Double longitudeRadians,System.Double latitudeRadians) => throw new System.NotImplementedException();
 	public  Rhino.Geometry.Point3d ClosestPoint(Rhino.Geometry.Point3d testPoint) => throw new System.NotImplementedException();
+	public  System.Boolean ClosestParameter(Rhino.Geometry.Point3d testPoint,out System.Double longitudeRadians,out System.Double latitudeRadians) => throw new System.NotImplementedException();
 	public  System.Boolean Rotate(System.Double sinAngle,System.Double cosAngle,Rhino.Geometry.Vector3d axisOfRotation) => throw new System.NotImplementedException();
 	public  System.Boolean Rotate(System.Double angleRadians,Rhino.Geometry.Vector3d axisOfRotation) => throw new System.NotImplementedException();
 	public  System.Boolean Rotate(System.Double sinAngle,System.Double cosAngle,Rhino.Geometry.Vector3d axisOfRotation,Rhino.Geometry.Point3d centerOfRotation) => throw new System.NotImplementedException();

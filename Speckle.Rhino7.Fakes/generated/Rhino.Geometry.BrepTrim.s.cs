@@ -4,6 +4,8 @@ public partial class BrepTrim : Rhino.Geometry.CurveProxy
 {
 	public BrepTrim() {}
 	public virtual System.Boolean IsReversed() => throw new System.NotImplementedException();
+	public virtual System.Boolean GetTrimParameter(System.Double edgeParameter,out System.Double trimParameter) => throw new System.NotImplementedException();
+	public virtual void GetTolerances(out System.Double toleranceU,out System.Double toleranceV) => throw new System.NotImplementedException();
 	public virtual void SetTolerances(System.Double toleranceU,System.Double toleranceV) => throw new System.NotImplementedException();
 	public virtual System.Boolean SetTrimCurve(System.Int32 curve2dIndex) => throw new System.NotImplementedException();
 	public virtual System.Boolean SetTrimCurve(System.Int32 curve2dIndex,Rhino.Geometry.Interval subDomain) => throw new System.NotImplementedException();

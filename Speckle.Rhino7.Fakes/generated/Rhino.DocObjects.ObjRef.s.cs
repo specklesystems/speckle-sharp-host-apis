@@ -33,6 +33,8 @@ public partial class ObjRef : System.IDisposable
 	public virtual Rhino.Geometry.Point3d SelectionPoint() => throw new System.NotImplementedException();
 	public virtual System.UInt32 SelectionViewDetailSerialNumber() => throw new System.NotImplementedException();
 	public virtual Rhino.Display.RhinoView SelectionView() => throw new System.NotImplementedException();
+	public virtual Rhino.Geometry.Curve CurveParameter(out System.Double parameter) => throw new System.NotImplementedException();
+	public virtual Rhino.Geometry.Surface SurfaceParameter(out System.Double u,out System.Double v) => throw new System.NotImplementedException();
 	public virtual void SetSelectionComponent(Rhino.Geometry.ComponentIndex componentIndex) => throw new System.NotImplementedException();
 	public virtual System.Guid ObjectId
 	{

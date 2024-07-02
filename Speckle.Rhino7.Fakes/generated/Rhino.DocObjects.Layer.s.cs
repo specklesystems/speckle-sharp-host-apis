@@ -7,7 +7,11 @@ public partial class Layer : Rhino.DocObjects.ModelComponent,System.IEquatable<R
 	public virtual System.Boolean CommitChanges() => throw new System.NotImplementedException();
 	public virtual System.Boolean HasPerViewportSettings(System.Guid viewportId) => throw new System.NotImplementedException();
 	public virtual void DeletePerViewportSettings(System.Guid viewportId) => throw new System.NotImplementedException();
+	public virtual System.Drawing.Color PerViewportColor(System.Guid viewportId) => throw new System.NotImplementedException();
+	public virtual void SetPerViewportColor(System.Guid viewportId,System.Drawing.Color color) => throw new System.NotImplementedException();
 	public virtual void DeletePerViewportColor(System.Guid viewportId) => throw new System.NotImplementedException();
+	public virtual System.Drawing.Color PerViewportPlotColor(System.Guid viewportId) => throw new System.NotImplementedException();
+	public virtual void SetPerViewportPlotColor(System.Guid viewportId,System.Drawing.Color color) => throw new System.NotImplementedException();
 	public virtual void DeletePerViewportPlotColor(System.Guid viewportId) => throw new System.NotImplementedException();
 	public virtual System.Double PerViewportPlotWeight(System.Guid viewportId) => throw new System.NotImplementedException();
 	public virtual void SetPerViewportPlotWeight(System.Guid viewportId,System.Double plotWeight) => throw new System.NotImplementedException();
@@ -67,6 +71,16 @@ public partial class Layer : Rhino.DocObjects.ModelComponent,System.IEquatable<R
 		set {}
 	}
 	public virtual System.Int32 IgesLevel
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Drawing.Color Color
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Drawing.Color PlotColor
 	{
 		get => throw new System.NotImplementedException();
 		set {}

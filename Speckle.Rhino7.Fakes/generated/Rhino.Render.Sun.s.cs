@@ -10,9 +10,11 @@ public partial class Sun : Rhino.Render.DocumentOrFreeFloatingBase,System.IDispo
 	public virtual System.DateTime GetDateTime(System.DateTimeKind kind) => throw new System.NotImplementedException();
 	public virtual void SetDateTime(System.DateTime time,System.DateTimeKind kind) => throw new System.NotImplementedException();
 	public virtual void ShowDialog() => throw new System.NotImplementedException();
+	public static System.Drawing.Color ColorFromAltitude(System.Double altitudeDegrees) => throw new System.NotImplementedException();
 	public static System.Double AltitudeFromValues(System.Double latitude,System.Double longitude,System.Double timezoneHours,System.Int32 daylightMinutes,System.DateTime when,System.Double hours,System.Boolean fast) => throw new System.NotImplementedException();
 	public static System.Double JulianDay(System.Double timezoneHours,System.Int32 daylightMinutes,System.DateTime when,System.Double hours) => throw new System.NotImplementedException();
 	public static System.Double TwilightZone() => throw new System.NotImplementedException();
+	public static System.Boolean Here(out System.Double latitude,out System.Double longitude) => throw new System.NotImplementedException();
 	public virtual System.Boolean Enabled
 	{
 		get => throw new System.NotImplementedException();

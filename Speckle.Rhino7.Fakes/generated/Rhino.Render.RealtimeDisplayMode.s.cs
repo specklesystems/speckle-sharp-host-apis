@@ -14,6 +14,7 @@ public partial class RealtimeDisplayMode
 	public static Rhino.Render.RealtimeDisplayMode GetRealtimeViewport(System.IntPtr realtimeViewport) => throw new System.NotImplementedException();
 	public static Rhino.Render.RealtimeDisplayMode GetRealtimeViewport(System.IntPtr realtimeViewport,System.Boolean create) => throw new System.NotImplementedException();
 	public virtual void CreateWorld(Rhino.RhinoDoc doc,Rhino.DocObjects.ViewInfo viewInfo,Rhino.Display.DisplayPipelineAttributes displayPipelineAttributes) => throw new System.NotImplementedException();
+	public virtual void GetRenderSize(out System.Int32 width,out System.Int32 height) => throw new System.NotImplementedException();
 	public virtual System.Boolean StartRenderer(System.Int32 w,System.Int32 h,Rhino.RhinoDoc doc,Rhino.DocObjects.ViewInfo view,Rhino.DocObjects.ViewportInfo viewportInfo,System.Boolean forCapture,Rhino.Render.RenderWindow renderWindow) => throw new System.NotImplementedException();
 	public virtual void ShutdownRenderer() => throw new System.NotImplementedException();
 	public virtual System.Int32 LastRenderedPass() => throw new System.NotImplementedException();

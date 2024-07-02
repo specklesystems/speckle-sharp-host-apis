@@ -15,6 +15,10 @@ public partial class ObjectAttributes : Rhino.Runtime.CommonObject
 	public virtual System.Boolean RemoveHideInDetailOverride(System.Guid detailId) => throw new System.NotImplementedException();
 	public virtual System.Boolean HasHideInDetailOverrideSet(System.Guid detailId) => throw new System.NotImplementedException();
 	public virtual System.Guid[] GetHideInDetailOverrides() => throw new System.NotImplementedException();
+	public virtual System.Drawing.Color DrawColor(Rhino.RhinoDoc document) => throw new System.NotImplementedException();
+	public virtual System.Drawing.Color DrawColor(Rhino.RhinoDoc document,System.Guid viewportId) => throw new System.NotImplementedException();
+	public virtual System.Drawing.Color ComputedPlotColor(Rhino.RhinoDoc document) => throw new System.NotImplementedException();
+	public virtual System.Drawing.Color ComputedPlotColor(Rhino.RhinoDoc document,System.Guid viewportId) => throw new System.NotImplementedException();
 	public virtual System.Double ComputedPlotWeight(Rhino.RhinoDoc document) => throw new System.NotImplementedException();
 	public virtual System.Double ComputedPlotWeight(Rhino.RhinoDoc document,System.Guid viewportId) => throw new System.NotImplementedException();
 	public virtual System.Int32[] GetGroupList() => throw new System.NotImplementedException();
@@ -125,6 +129,16 @@ public partial class ObjectAttributes : Rhino.Runtime.CommonObject
 	public virtual Rhino.DocObjects.MaterialRefs MaterialRefs
 	{
 		get => throw new System.NotImplementedException();
+	}
+	public virtual System.Drawing.Color ObjectColor
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Drawing.Color PlotColor
+	{
+		get => throw new System.NotImplementedException();
+		set {}
 	}
 	public virtual System.Boolean HasMapping
 	{

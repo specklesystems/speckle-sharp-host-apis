@@ -7,6 +7,7 @@ public partial class EarthAnchorPoint : System.IDisposable
 	public virtual System.Boolean EarthLocationIsSet() => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Plane GetModelCompass() => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Transform GetModelToEarthTransform(Rhino.UnitSystem modelUnitSystem) => throw new System.NotImplementedException();
+	public virtual Rhino.Geometry.Plane GetEarthAnchorPlane(out Rhino.Geometry.Vector3d anchorNorth) => throw new System.NotImplementedException();
 	public virtual System.Double EarthBasepointLatitude
 	{
 		get => throw new System.NotImplementedException();

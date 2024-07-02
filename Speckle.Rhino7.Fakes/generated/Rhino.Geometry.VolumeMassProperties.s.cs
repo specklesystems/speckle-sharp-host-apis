@@ -13,6 +13,10 @@ public partial class VolumeMassProperties : System.IDisposable
 	public static Rhino.Geometry.VolumeMassProperties Compute(Rhino.Geometry.Surface surface,System.Boolean volume,System.Boolean firstMoments,System.Boolean secondMoments,System.Boolean productMoments) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.VolumeMassProperties Compute(System.Collections.Generic.IEnumerable<Rhino.Geometry.GeometryBase> geometry) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.VolumeMassProperties Compute(System.Collections.Generic.IEnumerable<Rhino.Geometry.GeometryBase> geometry,System.Boolean volume,System.Boolean firstMoments,System.Boolean secondMoments,System.Boolean productMoments) => throw new System.NotImplementedException();
+	public virtual System.Boolean WorldCoordinatesPrincipalMoments(out System.Double x,out Rhino.Geometry.Vector3d xaxis,out System.Double y,out Rhino.Geometry.Vector3d yaxis,out System.Double z,out Rhino.Geometry.Vector3d zaxis) => throw new System.NotImplementedException();
+	public virtual System.Boolean WorldCoordinatesPrincipalMomentsOfInertia(out System.Double x,out Rhino.Geometry.Vector3d xaxis,out System.Double y,out Rhino.Geometry.Vector3d yaxis,out System.Double z,out Rhino.Geometry.Vector3d zaxis) => throw new System.NotImplementedException();
+	public virtual System.Boolean CentroidCoordinatesPrincipalMoments(out System.Double x,out Rhino.Geometry.Vector3d xaxis,out System.Double y,out Rhino.Geometry.Vector3d yaxis,out System.Double z,out Rhino.Geometry.Vector3d zaxis) => throw new System.NotImplementedException();
+	public virtual System.Boolean CentroidCoordinatesPrincipalMomentsOfInertia(out System.Double x,out Rhino.Geometry.Vector3d xaxis,out System.Double y,out Rhino.Geometry.Vector3d yaxis,out System.Double z,out Rhino.Geometry.Vector3d zaxis) => throw new System.NotImplementedException();
 	public virtual System.Boolean Sum(Rhino.Geometry.VolumeMassProperties summand) => throw new System.NotImplementedException();
 	public virtual System.Double Volume
 	{

@@ -136,12 +136,12 @@ public partial class Generator
 
     if (IsExplicit(property.Name))
     {
-      var name = isIndexer ? $"{property.Name.Substring(0, property.Name.Length-4)}this[{ParameterType(p[0].ParameterType, false)} {FixName(p[0].Name)}]" : property.Name;
+      var name = isIndexer ? $"{property.Name.Substring(0, property.Name.Length-4)}this[{ParameterType(p[0].ParameterType,false, false)} {FixName(p[0].Name)}]" : property.Name;
       sb.AppendLine($"{ReturnType(returnType, false)} {name}");
     }
     else
     {
-      var name = isIndexer ? $"this[{ParameterType(p[0].ParameterType, false)} {FixName(p[0].Name)}]" : property.Name;
+      var name = isIndexer ? $"this[{ParameterType(p[0].ParameterType, false, false)} {FixName(p[0].Name)}]" : property.Name;
       sb.AppendLine($"public {extra} {ReturnType(returnType, false)} {name}");
     }
 

@@ -6,11 +6,14 @@ public partial class RhinoObject : Rhino.DocObjects.ModelComponent
 	public virtual System.Boolean CopyHistoryOnReplace() => throw new System.NotImplementedException();
 	public virtual System.Boolean HasHistoryRecord() => throw new System.NotImplementedException();
 	public static Rhino.DocObjects.RhinoObject FromRuntimeSerialNumber(System.UInt32 serialNumber) => throw new System.NotImplementedException();
+	public static Rhino.Commands.Result MeshObjects(System.Collections.Generic.IEnumerable<Rhino.DocObjects.RhinoObject> rhinoObjects,Rhino.Geometry.MeshingParameters parameters,out Rhino.Geometry.Mesh[] meshes,out Rhino.DocObjects.ObjectAttributes[] attributes) => throw new System.NotImplementedException();
 	public static Rhino.DocObjects.ObjRef[] GetRenderMeshes(System.Collections.Generic.IEnumerable<Rhino.DocObjects.RhinoObject> rhinoObjects,System.Boolean okToCreate,System.Boolean returnAllObjects) => throw new System.NotImplementedException();
 	public static Rhino.DocObjects.ObjRef[] GetRenderMeshesWithUpdatedTCs(System.Collections.Generic.IEnumerable<Rhino.DocObjects.RhinoObject> rhinoObjects,System.Boolean okToCreate,System.Boolean returnAllObjects,System.Boolean skipHiddenObjects,System.Boolean updateMeshTCs) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.Brep[] GetFillSurfaces(Rhino.DocObjects.RhinoObject rhinoObject,Rhino.DocObjects.ClippingPlaneObject clippingPlaneObject) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.Brep[] GetFillSurfaces(Rhino.DocObjects.RhinoObject rhinoObject,System.Collections.Generic.IEnumerable<Rhino.DocObjects.ClippingPlaneObject> clippingPlaneObjects) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.Brep[] GetFillSurfaces(Rhino.DocObjects.RhinoObject rhinoObject,System.Collections.Generic.IEnumerable<Rhino.DocObjects.ClippingPlaneObject> clippingPlaneObjects,System.Boolean unclippedFills) => throw new System.NotImplementedException();
+	public static System.Boolean GetTightBoundingBox(System.Collections.Generic.IEnumerable<Rhino.DocObjects.RhinoObject> rhinoObjects,out Rhino.Geometry.BoundingBox boundingBox) => throw new System.NotImplementedException();
+	public static System.Boolean GetTightBoundingBox(System.Collections.Generic.IEnumerable<Rhino.DocObjects.RhinoObject> rhinoObjects,Rhino.Geometry.Plane plane,out Rhino.Geometry.BoundingBox boundingBox) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.GeometryBase DuplicateGeometry() => throw new System.NotImplementedException();
 	public virtual System.Boolean CommitChanges() => throw new System.NotImplementedException();
 	public virtual System.UInt32 MemoryEstimate() => throw new System.NotImplementedException();
@@ -50,8 +53,12 @@ public partial class RhinoObject : Rhino.DocObjects.ModelComponent
 	public virtual System.Boolean SupportsRenderPrimitiveList(Rhino.DocObjects.ViewportInfo viewport,Rhino.Display.DisplayPipelineAttributes attrs) => throw new System.NotImplementedException();
 	public virtual Rhino.Render.RenderPrimitiveList GetRenderPrimitiveList(Rhino.DocObjects.ViewportInfo viewport,System.Boolean preview) => throw new System.NotImplementedException();
 	public virtual Rhino.Render.RenderPrimitiveList GetRenderPrimitiveList(Rhino.DocObjects.ViewportInfo viewport,Rhino.Display.DisplayPipelineAttributes attrs) => throw new System.NotImplementedException();
+	public virtual System.Boolean TryGetRenderPrimitiveBoundingBox(Rhino.DocObjects.ViewportInfo viewport,System.Boolean preview,out Rhino.Geometry.BoundingBox boundingBox) => throw new System.NotImplementedException();
+	public virtual System.Boolean TryGetRenderPrimitiveBoundingBox(Rhino.DocObjects.ViewportInfo viewport,Rhino.Display.DisplayPipelineAttributes attrs,out Rhino.Geometry.BoundingBox boundingBox) => throw new System.NotImplementedException();
 	public virtual Rhino.DocObjects.RhinoObject[] GetSubObjects() => throw new System.NotImplementedException();
+	public virtual System.Boolean GetDynamicTransform(out Rhino.Geometry.Transform transform) => throw new System.NotImplementedException();
 	public virtual Rhino.Render.TextureMapping GetTextureMapping(System.Int32 channel) => throw new System.NotImplementedException();
+	public virtual Rhino.Render.TextureMapping GetTextureMapping(System.Int32 channel,out Rhino.Geometry.Transform objectTransform) => throw new System.NotImplementedException();
 	public virtual System.Int32 SetTextureMapping(System.Int32 channel,Rhino.Render.TextureMapping tm) => throw new System.NotImplementedException();
 	public virtual System.Int32 SetTextureMapping(System.Int32 channel,Rhino.Render.TextureMapping tm,Rhino.Geometry.Transform objectTransform) => throw new System.NotImplementedException();
 	public virtual System.Boolean HasTextureMapping() => throw new System.NotImplementedException();

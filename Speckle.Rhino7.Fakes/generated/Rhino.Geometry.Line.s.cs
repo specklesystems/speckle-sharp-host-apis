@@ -7,6 +7,7 @@ public partial struct Line : System.IEquatable<Rhino.Geometry.Line>,Rhino.IEpsil
 	public Line(Rhino.Geometry.Point3d start,Rhino.Geometry.Vector3d span) => throw new System.NotImplementedException();
 	public Line(Rhino.Geometry.Point3d start,Rhino.Geometry.Vector3d direction,System.Double length) => throw new System.NotImplementedException();
 	public Line(System.Double x0,System.Double y0,System.Double z0,System.Double x1,System.Double y1,System.Double z1) => throw new System.NotImplementedException();
+	public static System.Boolean TryFitLineToPoints(System.Collections.Generic.IEnumerable<Rhino.Geometry.Point3d> points,out Rhino.Geometry.Line fitLine) => throw new System.NotImplementedException();
 	public  System.Boolean Equals(Rhino.Geometry.Line other) => throw new System.NotImplementedException();
 	public  System.Boolean EpsilonEquals(Rhino.Geometry.Line other,System.Double epsilon) => throw new System.NotImplementedException();
 	public  System.String ToString(System.String format,System.IFormatProvider formatProvider) => throw new System.NotImplementedException();
@@ -27,6 +28,7 @@ public partial struct Line : System.IEquatable<Rhino.Geometry.Line>,Rhino.IEpsil
 	public  System.Boolean ExtendThroughBox(Rhino.Geometry.BoundingBox box,System.Double additionalLength) => throw new System.NotImplementedException();
 	public  System.Boolean ExtendThroughBox(Rhino.Geometry.Box box) => throw new System.NotImplementedException();
 	public  System.Boolean ExtendThroughBox(Rhino.Geometry.Box box,System.Double additionalLength) => throw new System.NotImplementedException();
+	public  System.Boolean TryGetPlane(out Rhino.Geometry.Plane plane) => throw new System.NotImplementedException();
 	System.Object System.ICloneable.Clone() => throw new System.NotImplementedException();
 	public  Rhino.Geometry.Point3d From
 	{

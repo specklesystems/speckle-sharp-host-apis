@@ -3,6 +3,7 @@ namespace Rhino.Display;
 public partial struct ColorHSV
 {
 	public ColorHSV() {}
+	public ColorHSV(System.Drawing.Color rgb) => throw new System.NotImplementedException();
 	public ColorHSV(System.Double hue,System.Double saturation,System.Double value) => throw new System.NotImplementedException();
 	public ColorHSV(System.Double alpha,System.Double hue,System.Double saturation,System.Double value) => throw new System.NotImplementedException();
 	public static Rhino.Display.ColorHSV CreateFromRGBA(Rhino.Display.ColorRGBA rgba) => throw new System.NotImplementedException();
@@ -11,6 +12,7 @@ public partial struct ColorHSV
 	public static Rhino.Display.ColorHSV CreateFromXYZ(Rhino.Display.ColorXYZ xyz) => throw new System.NotImplementedException();
 	public static Rhino.Display.ColorHSV CreateFromLAB(Rhino.Display.ColorLAB lab) => throw new System.NotImplementedException();
 	public static Rhino.Display.ColorHSV CreateFromLCH(Rhino.Display.ColorLCH lch) => throw new System.NotImplementedException();
+	public  System.Drawing.Color ToArgbColor() => throw new System.NotImplementedException();
 	public  System.Double H
 	{
 		get => throw new System.NotImplementedException();

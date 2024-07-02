@@ -5,6 +5,10 @@ public partial class DisplayPipelineAttributes : System.IDisposable,System.Runti
 	public DisplayPipelineAttributes() {}
 	public virtual void GetObjectData(System.Runtime.Serialization.SerializationInfo info,System.Runtime.Serialization.StreamingContext context) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
+	public virtual void SetFill(System.Drawing.Color singleColor) => throw new System.NotImplementedException();
+	public virtual void SetFill(System.Drawing.Color gradientTop,System.Drawing.Color gradientBottom) => throw new System.NotImplementedException();
+	public virtual void SetFill(System.Drawing.Color gradientTopLeft,System.Drawing.Color gradientBottomLeft,System.Drawing.Color gradientTopRight,System.Drawing.Color gradientBottomRight) => throw new System.NotImplementedException();
+	public virtual void GetFill(out System.Drawing.Color topLeft,out System.Drawing.Color bottomLeft,out System.Drawing.Color topRight,out System.Drawing.Color bottomRight) => throw new System.NotImplementedException();
 	public virtual System.Boolean XrayAllObjects
 	{
 		get => throw new System.NotImplementedException();
@@ -21,6 +25,11 @@ public partial class DisplayPipelineAttributes : System.IDisposable,System.Runti
 		set {}
 	}
 	public virtual System.Boolean DisableTransparency
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Drawing.Color ObjectColor
 	{
 		get => throw new System.NotImplementedException();
 		set {}
@@ -89,6 +98,11 @@ public partial class DisplayPipelineAttributes : System.IDisposable,System.Runti
 		get => throw new System.NotImplementedException();
 		set {}
 	}
+	public virtual System.Drawing.Color CurveColor
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 	public virtual System.Boolean ShadingEnabled
 	{
 		get => throw new System.NotImplementedException();
@@ -144,6 +158,16 @@ public partial class DisplayPipelineAttributes : System.IDisposable,System.Runti
 		set {}
 	}
 	public virtual System.Boolean ShowLights
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Drawing.Color AmbientLightingColor
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Drawing.Color ShadowColor
 	{
 		get => throw new System.NotImplementedException();
 		set {}

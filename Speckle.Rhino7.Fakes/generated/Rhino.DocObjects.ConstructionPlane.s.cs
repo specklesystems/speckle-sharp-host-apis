@@ -53,4 +53,29 @@ public partial class ConstructionPlane
 		get => throw new System.NotImplementedException();
 		set {}
 	}
+	public virtual System.Drawing.Color ThinLineColor
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Drawing.Color ThickLineColor
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Drawing.Color GridXColor
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Drawing.Color GridYColor
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Drawing.Color GridZColor
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 }

@@ -16,6 +16,7 @@ public partial class MeshFaceList : Rhino.Collections.IResizableList<Rhino.Geome
 	public virtual Rhino.Geometry.MeshFace GetFace(System.Int32 index) => throw new System.NotImplementedException();
 	public virtual System.Boolean MergeAdjacentFaces(System.Int32 edgeIndex) => throw new System.NotImplementedException();
 	public virtual System.Double GetFaceAspectRatio(System.Int32 index) => throw new System.NotImplementedException();
+	public virtual System.Boolean GetFaceVertices(System.Int32 faceIndex,out Rhino.Geometry.Point3f a,out Rhino.Geometry.Point3f b,out Rhino.Geometry.Point3f c,out Rhino.Geometry.Point3f d) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.BoundingBox GetFaceBoundingBox(System.Int32 faceIndex) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Point3d GetFaceCenter(System.Int32 faceIndex) => throw new System.NotImplementedException();
 	public virtual System.Int32[] AdjacentFaces(System.Int32 faceIndex) => throw new System.NotImplementedException();
@@ -35,6 +36,7 @@ public partial class MeshFaceList : Rhino.Collections.IResizableList<Rhino.Geome
 	public virtual System.Int32[] GetConnectedFaces(System.Int32 faceIndex,System.Double angleRadians,System.Boolean greaterThanAngle) => throw new System.NotImplementedException();
 	public virtual System.Int32[] GetConnectedFaces(System.Int32 faceIndex) => throw new System.NotImplementedException();
 	public virtual System.Int32[] GetConnectedFacesToEdges(System.Int32 startFaceIndex,System.Boolean treatNonmanifoldLikeUnwelded) => throw new System.NotImplementedException();
+	public virtual System.Boolean GetZeroAreaFaces(out System.Int32[] whollyDegenerateFaces,out System.Int32[] partiallyDegenerateFaces) => throw new System.NotImplementedException();
 	public virtual System.Int32[] GetDuplicateFaces() => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Mesh ExtractDuplicateFaces() => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Mesh ExtractFaces(System.Collections.Generic.IEnumerable<System.Int32> faceIndices) => throw new System.NotImplementedException();

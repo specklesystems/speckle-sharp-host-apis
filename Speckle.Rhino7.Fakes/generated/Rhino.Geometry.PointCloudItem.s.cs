@@ -28,6 +28,11 @@ public partial class PointCloudItem
 		get => throw new System.NotImplementedException();
 		set {}
 	}
+	public virtual System.Drawing.Color Color
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 	public virtual System.Boolean Hidden
 	{
 		get => throw new System.NotImplementedException();

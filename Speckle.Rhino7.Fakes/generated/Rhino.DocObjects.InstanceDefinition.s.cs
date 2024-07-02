@@ -7,9 +7,15 @@ public partial class InstanceDefinition : Rhino.Geometry.InstanceDefinitionGeome
 	public virtual Rhino.DocObjects.RhinoObject[] GetObjects() => throw new System.NotImplementedException();
 	public virtual Rhino.DocObjects.InstanceObject[] GetReferences(System.Int32 wheretoLook) => throw new System.NotImplementedException();
 	public virtual System.Int32 UseCount() => throw new System.NotImplementedException();
+	public virtual System.Int32 UseCount(out System.Int32 topLevelReferenceCount,out System.Int32 nestedReferenceCount) => throw new System.NotImplementedException();
 	public virtual Rhino.DocObjects.InstanceDefinition[] GetContainers() => throw new System.NotImplementedException();
 	public virtual System.Int32 UsesDefinition(System.Int32 otherIdefIndex) => throw new System.NotImplementedException();
 	public virtual System.Boolean InUse(System.Int32 wheretoLook) => throw new System.NotImplementedException();
+	public virtual System.Drawing.Bitmap CreatePreviewBitmap(Rhino.Display.DefinedViewportProjection definedViewportProjection,Rhino.DocObjects.DisplayMode displayMode,System.Drawing.Size bitmapSize) => throw new System.NotImplementedException();
+	public virtual System.Drawing.Bitmap CreatePreviewBitmap(Rhino.Display.DefinedViewportProjection definedViewportProjection,Rhino.DocObjects.DisplayMode displayMode,System.Drawing.Size bitmapSize,System.Boolean applyDpiScaling) => throw new System.NotImplementedException();
+	public virtual System.Drawing.Bitmap CreatePreviewBitmap(Rhino.Display.DefinedViewportProjection definedViewportProjection,System.Drawing.Size bitmapSize) => throw new System.NotImplementedException();
+	public virtual System.Drawing.Bitmap CreatePreviewBitmap(Rhino.Display.DefinedViewportProjection definedViewportProjection,System.Drawing.Size bitmapSize,System.Boolean applyDpiScaling) => throw new System.NotImplementedException();
+	public virtual System.Drawing.Bitmap CreatePreviewBitmap(System.Guid definitionObjectId,Rhino.Display.DefinedViewportProjection definedViewportProjection,Rhino.DocObjects.DisplayMode displayMode,System.Drawing.Size bitmapSize,System.Boolean applyDpiScaling) => throw new System.NotImplementedException();
 	public virtual System.Int32 ObjectCount
 	{
 		get => throw new System.NotImplementedException();

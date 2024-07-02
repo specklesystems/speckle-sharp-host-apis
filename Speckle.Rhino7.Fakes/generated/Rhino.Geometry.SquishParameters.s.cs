@@ -5,6 +5,7 @@ public partial class SquishParameters : System.IDisposable
 	public SquishParameters() {}
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual void SetSpringConstants(System.Double boundaryBias,System.Double deformationBias) => throw new System.NotImplementedException();
+	public virtual System.Boolean GetSpringConstants(out System.Double boundaryBias,out System.Double deformationBias) => throw new System.NotImplementedException();
 	public virtual void SetDeformation(Rhino.Geometry.SquishDeformation deformation,System.Boolean bPreserveBoundary,System.Double boundaryStretchConstant,System.Double boundaryCompressConstant,System.Double interiorStretchConstant,System.Double interiorCompressConstant) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.SquishParameters Default
 	{

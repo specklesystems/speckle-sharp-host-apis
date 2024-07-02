@@ -16,8 +16,11 @@ public partial class RhinoDoc : System.IDisposable
 	public virtual System.Boolean AddCustomUndoEvent(System.String description,System.EventHandler<Rhino.Commands.CustomUndoEventArgs> handler) => throw new System.NotImplementedException();
 	public virtual System.Boolean AddCustomUndoEvent(System.String description,System.EventHandler<Rhino.Commands.CustomUndoEventArgs> handler,System.Object tag) => throw new System.NotImplementedException();
 	public virtual System.Boolean EndUndoRecord(System.UInt32 undoRecordSerialNumber) => throw new System.NotImplementedException();
+	public static System.Drawing.Bitmap ExtractPreviewImage(System.String path) => throw new System.NotImplementedException();
 	public virtual System.Boolean SupportsRenderPrimitiveList(Rhino.DocObjects.ViewportInfo viewport,Rhino.Display.DisplayPipelineAttributes attrs) => throw new System.NotImplementedException();
 	public virtual Rhino.Render.RenderPrimitiveList GetRenderPrimitiveList(Rhino.DocObjects.ViewportInfo viewport,Rhino.Display.DisplayPipelineAttributes attrs) => throw new System.NotImplementedException();
+	public virtual System.Boolean TryGetRenderPrimitiveBoundingBox(Rhino.DocObjects.ViewportInfo viewport,Rhino.Display.DisplayPipelineAttributes attrs,out Rhino.Geometry.BoundingBox boundingBox) => throw new System.NotImplementedException();
+	public static Rhino.RhinoDoc Open(System.String filePath,out System.Boolean wasAlreadyOpen) => throw new System.NotImplementedException();
 	public static Rhino.RhinoDoc FromFilePath(System.String filePath) => throw new System.NotImplementedException();
 	public static System.Boolean OpenFile(System.String path) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
@@ -37,10 +40,12 @@ public partial class RhinoDoc : System.IDisposable
 	public static Rhino.RhinoDoc[] OpenDocuments(System.Boolean includeHeadless) => throw new System.NotImplementedException();
 	public static Rhino.RhinoDoc FromId(System.Int32 docId) => throw new System.NotImplementedException();
 	public static Rhino.RhinoDoc FromRuntimeSerialNumber(System.UInt32 serialNumber) => throw new System.NotImplementedException();
+	public virtual System.Boolean GetGumballPlane(out Rhino.Geometry.Plane plane) => throw new System.NotImplementedException();
 	public virtual System.Int32 ReadFileVersion() => throw new System.NotImplementedException();
 	public virtual System.String GetUnitSystemName(System.Boolean modelUnits,System.Boolean capitalize,System.Boolean singular,System.Boolean abbreviate) => throw new System.NotImplementedException();
 	public virtual void AdjustModelUnitSystem(Rhino.UnitSystem newUnitSystem,System.Boolean scale) => throw new System.NotImplementedException();
 	public virtual void AdjustPageUnitSystem(Rhino.UnitSystem newUnitSystem,System.Boolean scale) => throw new System.NotImplementedException();
+	public virtual System.Boolean GetCustomUnitSystem(System.Boolean modelUnits,out System.String customUnitName,out System.Double metersPerCustomUnit) => throw new System.NotImplementedException();
 	public virtual System.Boolean SetCustomUnitSystem(System.Boolean modelUnits,System.String customUnitName,System.Double metersPerCustomUnit,System.Boolean scale) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.MeshingParameters GetMeshingParameters(Rhino.Geometry.MeshingParameterStyle style) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.MeshingParameters GetAnalysisMeshingParameters() => throw new System.NotImplementedException();
@@ -207,6 +212,10 @@ public partial class RhinoDoc : System.IDisposable
 	{
 		get => throw new System.NotImplementedException();
 		set {}
+	}
+	public virtual System.Collections.Generic.List<System.Drawing.Size> CustomRenderSizes
+	{
+		get => throw new System.NotImplementedException();
 	}
 	public virtual Rhino.Geometry.MeshingParameterStyle MeshingParameterStyle
 	{

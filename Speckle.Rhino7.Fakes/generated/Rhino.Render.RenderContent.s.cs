@@ -6,6 +6,9 @@ public partial class RenderContent : System.IDisposable
 	public virtual void Uninitialize() => throw new System.NotImplementedException();
 	public virtual System.Boolean Replace(Rhino.Render.RenderContent newcontent) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsFactoryProductAcceptableAsChild(System.Guid kindId,System.String factoryKind,System.String childSlotName) => throw new System.NotImplementedException();
+	public virtual System.Boolean VirtualIcon(System.Drawing.Size size,out System.Drawing.Bitmap bitmap) => throw new System.NotImplementedException();
+	public virtual System.Boolean Icon(System.Drawing.Size size,out System.Drawing.Bitmap bitmap) => throw new System.NotImplementedException();
+	public virtual System.Boolean DynamicIcon(System.Drawing.Size size,out System.Drawing.Bitmap bitmap,Rhino.Render.DynamicIconUsage usage) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public static Rhino.Render.RenderContent Create(System.Guid type,Rhino.Render.RenderContent.ShowContentChooserFlags flags,Rhino.RhinoDoc doc) => throw new System.NotImplementedException();
 	public static Rhino.Render.RenderContent Create(System.Type type,Rhino.Render.RenderContent.ShowContentChooserFlags flags,Rhino.RhinoDoc doc) => throw new System.NotImplementedException();

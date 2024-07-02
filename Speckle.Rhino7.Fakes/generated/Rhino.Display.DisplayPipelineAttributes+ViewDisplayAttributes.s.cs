@@ -45,6 +45,21 @@ namespace Rhino.Display;
 		get => throw new System.NotImplementedException();
 		set {}
 	}
+	public virtual System.Drawing.Color WorldAxisColorX
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Drawing.Color WorldAxisColorY
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Drawing.Color WorldAxisColorZ
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 	public virtual System.Double HorizontalViewportScale
 	{
 		get => throw new System.NotImplementedException();

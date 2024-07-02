@@ -20,6 +20,10 @@ public partial interface IZooClientUtilities
 	public  System.Boolean LoginToCloudZoo();
 	public  System.Boolean LogoutOfCloudZoo();
 	public  System.DateTime GetCurrentTime();
+	public  System.Drawing.Image LoggedInUserAvatar
+	{
+		get;
+	}
 	public  System.String LoggedInUserName
 	{
 		get;

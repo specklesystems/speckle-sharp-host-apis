@@ -11,6 +11,7 @@ public partial class DimensionStyle : Rhino.DocObjects.ModelComponent
 	public virtual Rhino.DocObjects.DimensionStyle Duplicate() => throw new System.NotImplementedException();
 	public virtual Rhino.DocObjects.DimensionStyle Duplicate(System.String newName,System.Guid newId,System.Guid newParentId) => throw new System.NotImplementedException();
 	public virtual void CopyFrom(Rhino.DocObjects.DimensionStyle source) => throw new System.NotImplementedException();
+	public virtual System.Drawing.Bitmap CreatePreviewBitmap(System.Int32 width,System.Int32 height) => throw new System.NotImplementedException();
 	public virtual void ScaleLengthValues(System.Double scale) => throw new System.NotImplementedException();
 	public virtual Rhino.UnitSystem DimensionLengthDisplayUnit(System.UInt32 model_serial_number) => throw new System.NotImplementedException();
 	public virtual Rhino.UnitSystem AlternateDimensionLengthDisplayUnit(System.UInt32 model_serial_number) => throw new System.NotImplementedException();
@@ -428,6 +429,11 @@ public partial class DimensionStyle : Rhino.DocObjects.ModelComponent
 		set {}
 	}
 	public virtual System.Int32 AlternateToleranceResolution
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Drawing.Color MaskColor
 	{
 		get => throw new System.NotImplementedException();
 		set {}

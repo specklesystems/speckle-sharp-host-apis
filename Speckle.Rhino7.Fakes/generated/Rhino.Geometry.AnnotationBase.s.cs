@@ -72,6 +72,11 @@ public partial class AnnotationBase : Rhino.Geometry.GeometryBase
 		get => throw new System.NotImplementedException();
 		set {}
 	}
+	public virtual System.Drawing.Color MaskColor
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 	public virtual System.Double MaskOffset
 	{
 		get => throw new System.NotImplementedException();

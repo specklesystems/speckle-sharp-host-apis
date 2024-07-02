@@ -14,6 +14,11 @@ public partial class RenderPrimitiveList : System.IDisposable
 	public virtual void Add(Rhino.Geometry.Box box,Rhino.Render.RenderMaterial material) => throw new System.NotImplementedException();
 	public virtual Rhino.Render.RenderPrimitiveType PrimitiveType(System.Int32 index) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Mesh Mesh(System.Int32 index) => throw new System.NotImplementedException();
+	public virtual Rhino.Geometry.Mesh MeshInstance(System.Int32 index,out Rhino.Geometry.Transform instance_transform) => throw new System.NotImplementedException();
+	public virtual System.Boolean TryGetSphere(System.Int32 index,out Rhino.Geometry.Sphere sphere) => throw new System.NotImplementedException();
+	public virtual System.Boolean TryGetBox(System.Int32 index,out Rhino.Geometry.Box box) => throw new System.NotImplementedException();
+	public virtual System.Boolean TryGetPlane(System.Int32 index,out Rhino.Geometry.PlaneSurface plane) => throw new System.NotImplementedException();
+	public virtual System.Boolean TryGetCone(System.Int32 index,out Rhino.Geometry.Cone cone,out Rhino.Geometry.Plane truncation) => throw new System.NotImplementedException();
 	public virtual Rhino.Render.RenderMaterial Material(System.Int32 index) => throw new System.NotImplementedException();
 	public virtual void ConvertMeshesToTriangles() => throw new System.NotImplementedException();
 	public virtual void Clear() => throw new System.NotImplementedException();

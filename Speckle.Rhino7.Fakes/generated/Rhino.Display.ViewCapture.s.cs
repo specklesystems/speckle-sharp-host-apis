@@ -3,6 +3,8 @@ namespace Rhino.Display;
 public partial class ViewCapture
 {
 	public ViewCapture() {}
+	public virtual System.Drawing.Bitmap CaptureToBitmap(Rhino.Display.RhinoView sourceView) => throw new System.NotImplementedException();
+	public static System.Drawing.Bitmap CaptureToBitmap(Rhino.Display.ViewCaptureSettings settings) => throw new System.NotImplementedException();
 	public static System.Xml.XmlDocument CaptureToSvg(Rhino.Display.ViewCaptureSettings settings) => throw new System.NotImplementedException();
 	public virtual System.Int32 Width
 	{

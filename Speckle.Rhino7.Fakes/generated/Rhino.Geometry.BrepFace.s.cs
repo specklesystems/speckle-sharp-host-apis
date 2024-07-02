@@ -4,6 +4,7 @@ public partial class BrepFace : Rhino.Geometry.SurfaceProxy
 {
 	public BrepFace() {}
 	public virtual Rhino.Geometry.Point3d[] PullPointsToFace(System.Collections.Generic.IEnumerable<Rhino.Geometry.Point3d> points,System.Double tolerance) => throw new System.NotImplementedException();
+	public virtual System.Boolean DraftAnglePoint(Rhino.Geometry.Point2d testPoint,System.Double testAngle,Rhino.Geometry.Vector3d pullDirection,System.Boolean edge,out Rhino.Geometry.Point3d draftPoint,out System.Double draftAngle) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Brep RemoveHoles(System.Double tolerance) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Brep CreateExtrusion(Rhino.Geometry.Curve pathCurve,System.Boolean cap) => throw new System.NotImplementedException();
 	public virtual System.Boolean ShrinkFace(Rhino.Geometry.BrepFace.ShrinkDisableSide disableSide) => throw new System.NotImplementedException();
@@ -58,6 +59,11 @@ public partial class BrepFace : Rhino.Geometry.SurfaceProxy
 		set {}
 	}
 	public virtual System.Guid Id
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual System.Drawing.Color PerFaceColor
 	{
 		get => throw new System.NotImplementedException();
 		set {}

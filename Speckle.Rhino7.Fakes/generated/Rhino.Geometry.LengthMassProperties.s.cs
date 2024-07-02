@@ -8,6 +8,10 @@ public partial class LengthMassProperties : System.IDisposable
 	public static Rhino.Geometry.LengthMassProperties Compute(Rhino.Geometry.Curve curve,System.Boolean length,System.Boolean firstMoments,System.Boolean secondMoments,System.Boolean productMoments) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.LengthMassProperties Compute(System.Collections.Generic.IEnumerable<Rhino.Geometry.Curve> curves) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.LengthMassProperties Compute(System.Collections.Generic.IEnumerable<Rhino.Geometry.Curve> curves,System.Boolean length,System.Boolean firstMoments,System.Boolean secondMoments,System.Boolean productMoments) => throw new System.NotImplementedException();
+	public virtual System.Boolean WorldCoordinatesPrincipalMoments(out System.Double x,out Rhino.Geometry.Vector3d xaxis,out System.Double y,out Rhino.Geometry.Vector3d yaxis,out System.Double z,out Rhino.Geometry.Vector3d zaxis) => throw new System.NotImplementedException();
+	public virtual System.Boolean WorldCoordinatesPrincipalMomentsOfInertia(out System.Double x,out Rhino.Geometry.Vector3d xaxis,out System.Double y,out Rhino.Geometry.Vector3d yaxis,out System.Double z,out Rhino.Geometry.Vector3d zaxis) => throw new System.NotImplementedException();
+	public virtual System.Boolean CentroidCoordinatesPrincipalMoments(out System.Double x,out Rhino.Geometry.Vector3d xaxis,out System.Double y,out Rhino.Geometry.Vector3d yaxis,out System.Double z,out Rhino.Geometry.Vector3d zaxis) => throw new System.NotImplementedException();
+	public virtual System.Boolean CentroidCoordinatesPrincipalMomentsOfInertia(out System.Double x,out Rhino.Geometry.Vector3d xaxis,out System.Double y,out Rhino.Geometry.Vector3d yaxis,out System.Double z,out Rhino.Geometry.Vector3d zaxis) => throw new System.NotImplementedException();
 	public virtual System.Double Length
 	{
 		get => throw new System.NotImplementedException();

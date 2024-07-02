@@ -3,6 +3,7 @@ namespace Rhino.Display;
 public partial struct ColorCMYK
 {
 	public ColorCMYK() {}
+	public ColorCMYK(System.Drawing.Color rgb) => throw new System.NotImplementedException();
 	public ColorCMYK(System.Double cyan,System.Double magenta,System.Double yellow) => throw new System.NotImplementedException();
 	public ColorCMYK(System.Double cyan,System.Double magenta,System.Double yellow,System.Double key) => throw new System.NotImplementedException();
 	public ColorCMYK(System.Double alpha,System.Double cyan,System.Double magenta,System.Double yellow,System.Double key) => throw new System.NotImplementedException();

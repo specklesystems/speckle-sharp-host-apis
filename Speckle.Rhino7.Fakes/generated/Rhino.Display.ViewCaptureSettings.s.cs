@@ -3,12 +3,17 @@ namespace Rhino.Display;
 public partial class ViewCaptureSettings : System.IDisposable
 {
 	public ViewCaptureSettings() {}
+	public ViewCaptureSettings(Rhino.Display.RhinoView sourceView,System.Drawing.Size mediaSize,System.Double dpi) => throw new System.NotImplementedException();
 	public ViewCaptureSettings(Rhino.Display.RhinoPageView sourcePageView,System.Double dpi) => throw new System.NotImplementedException();
+	public virtual Rhino.Display.ViewCaptureSettings CreatePreviewSettings(System.Drawing.Size size) => throw new System.NotImplementedException();
 	public virtual void SetViewport(Rhino.Display.RhinoViewport viewport) => throw new System.NotImplementedException();
+	public virtual void SetLayout(System.Drawing.Size mediaSize,System.Drawing.Rectangle cropRectangle) => throw new System.NotImplementedException();
 	public virtual void MaximizePrintableArea() => throw new System.NotImplementedException();
 	public virtual System.Boolean MatchViewportAspectRatio() => throw new System.NotImplementedException();
+	public virtual System.Boolean GetMargins(Rhino.UnitSystem lengthUnits,out System.Double left,out System.Double top,out System.Double right,out System.Double bottom) => throw new System.NotImplementedException();
 	public virtual System.Boolean SetMargins(Rhino.UnitSystem lengthUnits,System.Double left,System.Double top,System.Double right,System.Double bottom) => throw new System.NotImplementedException();
 	public virtual void SetOffset(Rhino.UnitSystem lengthUnits,System.Boolean fromMargin,System.Double x,System.Double y) => throw new System.NotImplementedException();
+	public virtual void GetOffset(Rhino.UnitSystem lengthUnits,out System.Boolean fromMargin,out System.Double x,out System.Double y) => throw new System.NotImplementedException();
 	public virtual System.Double GetModelScale(Rhino.UnitSystem pageUnits,Rhino.UnitSystem modelUnits) => throw new System.NotImplementedException();
 	public virtual void SetModelScaleToValue(System.Double scale) => throw new System.NotImplementedException();
 	public virtual void SetModelScaleToFit(System.Boolean promptOnChange) => throw new System.NotImplementedException();
@@ -35,10 +40,18 @@ public partial class ViewCaptureSettings : System.IDisposable
 		get => throw new System.NotImplementedException();
 		set {}
 	}
+	public virtual System.Drawing.Size MediaSize
+	{
+		get => throw new System.NotImplementedException();
+	}
 	public virtual System.Double Resolution
 	{
 		get => throw new System.NotImplementedException();
 		set {}
+	}
+	public virtual System.Drawing.Rectangle CropRectangle
+	{
+		get => throw new System.NotImplementedException();
 	}
 	public virtual Rhino.Display.ViewCaptureSettings.AnchorLocation OffsetAnchor
 	{

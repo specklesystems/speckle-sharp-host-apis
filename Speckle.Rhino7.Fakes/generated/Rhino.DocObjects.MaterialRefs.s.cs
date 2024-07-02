@@ -12,6 +12,7 @@ public partial class MaterialRefs : System.Collections.Generic.IDictionary<Syste
 	public virtual System.Boolean Remove(System.Collections.Generic.KeyValuePair<System.Guid, Rhino.DocObjects.MaterialRef> item) => throw new System.NotImplementedException();
 	public virtual System.Boolean ContainsKey(System.Guid key) => throw new System.NotImplementedException();
 	public virtual System.Boolean Remove(System.Guid key) => throw new System.NotImplementedException();
+	public virtual System.Boolean TryGetValue(System.Guid key,out Rhino.DocObjects.MaterialRef value) => throw new System.NotImplementedException();
 	System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() => throw new System.NotImplementedException();
 	public virtual System.Int32 Count
 	{

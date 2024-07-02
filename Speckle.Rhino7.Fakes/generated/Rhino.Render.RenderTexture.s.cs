@@ -6,6 +6,8 @@ public partial class RenderTexture : Rhino.Render.RenderContent
 	public static Rhino.Render.RenderTexture NewBitmapTexture(Rhino.Render.SimulatedTexture texture) => throw new System.NotImplementedException();
 	public static Rhino.Render.RenderTexture NewBitmapTexture(Rhino.Render.SimulatedTexture texture,Rhino.RhinoDoc doc) => throw new System.NotImplementedException();
 	public virtual System.Boolean SaveAsImage(System.String FullPath,System.Int32 width,System.Int32 height,System.Int32 depth) => throw new System.NotImplementedException();
+	public static Rhino.Render.RenderTexture NewBitmapTexture(System.Drawing.Bitmap bitmap,Rhino.RhinoDoc doc) => throw new System.NotImplementedException();
+	public virtual void PixelSize(out System.Int32 u,out System.Int32 v,out System.Int32 w) => throw new System.NotImplementedException();
 	public virtual Rhino.Render.TextureEvaluator CreateEvaluator(Rhino.Render.RenderTexture.TextureEvaluatorFlags evaluatorFlags) => throw new System.NotImplementedException();
 	public virtual Rhino.Render.TextureEvaluator CreateEvaluator() => throw new System.NotImplementedException();
 	public virtual Rhino.Render.SimulatedTexture SimulatedTexture(Rhino.Render.RenderTexture.TextureGeneration tg,System.Int32 size,Rhino.DocObjects.RhinoObject obj) => throw new System.NotImplementedException();
@@ -43,6 +45,7 @@ public partial class RenderTexture : Rhino.Render.RenderContent
 	public virtual System.Boolean IsNormalMap() => throw new System.NotImplementedException();
 	public virtual void SetGraphInfo(Rhino.Render.TextureGraphInfo tgi) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsImageBased() => throw new System.NotImplementedException();
+	public static System.Boolean GetEnvironmentMappingProjection(Rhino.Render.TextureEnvironmentMappingMode mode,Rhino.Geometry.Vector3d reflectionVector,out System.Single u,out System.Single v) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.Point3d GetWcsBoxMapping(Rhino.Geometry.Point3d worldXyz,Rhino.Geometry.Vector3d normal) => throw new System.NotImplementedException();
 	public virtual System.UInt32 RenderHashWithoutLocalMapping
 	{

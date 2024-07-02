@@ -14,6 +14,7 @@ public partial class Unroller
 	public virtual void AddFollowingGeometry(Rhino.Geometry.TextDot dot) => throw new System.NotImplementedException();
 	public virtual void AddFollowingGeometry(System.Collections.Generic.IEnumerable<Rhino.Geometry.Point3d> dotLocations,System.Collections.Generic.IEnumerable<System.String> dotText) => throw new System.NotImplementedException();
 	public virtual void AddFollowingGeometry(Rhino.Geometry.Point3d dotLocation,System.String dotText) => throw new System.NotImplementedException();
+	public virtual Rhino.Geometry.Brep[] PerformUnroll(out Rhino.Geometry.Curve[] unrolledCurves,out Rhino.Geometry.Point3d[] unrolledPoints,out Rhino.Geometry.TextDot[] unrolledDots) => throw new System.NotImplementedException();
 	public virtual System.Int32 PerformUnroll(System.Collections.Generic.List<Rhino.Geometry.Brep> flatbreps) => throw new System.NotImplementedException();
 	public virtual System.Int32 FollowingGeometryIndex(Rhino.Geometry.TextDot dot) => throw new System.NotImplementedException();
 	public virtual System.Int32 FollowingGeometryIndex(Rhino.Geometry.Curve curve) => throw new System.NotImplementedException();

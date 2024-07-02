@@ -210,6 +210,10 @@ public partial class RhinoApp
 	{
 		get => throw new System.NotImplementedException();
 	}
+	public static System.Drawing.Image LoggedInUserAvatar
+	{
+		get => throw new System.NotImplementedException();
+	}
 	public static System.Boolean UserIsLoggedIn
 	{
 		get => throw new System.NotImplementedException();

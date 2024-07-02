@@ -8,6 +8,10 @@ public partial class RenderPipeline : System.IDisposable
 	public static System.String LocalizeRenderReturnCode(Rhino.Render.RenderPipeline.RenderReturnCode rc) => throw new System.NotImplementedException();
 	public virtual Rhino.Commands.Result CommandResult() => throw new System.NotImplementedException();
 	public virtual Rhino.Render.RenderPipeline.RenderReturnCode Render() => throw new System.NotImplementedException();
+	public virtual Rhino.Render.RenderPipeline.RenderReturnCode RenderWindow(Rhino.Display.RhinoView view,System.Drawing.Rectangle rect,System.Boolean inWindow) => throw new System.NotImplementedException();
+	public static System.Drawing.Size RenderSize() => throw new System.NotImplementedException();
+	public static System.Drawing.Size RenderSize(Rhino.RhinoDoc doc) => throw new System.NotImplementedException();
+	public static System.Drawing.Size RenderSize(Rhino.RhinoDoc doc,System.Boolean fromRenderSources) => throw new System.NotImplementedException();
 	public virtual Rhino.Render.RenderWindow GetRenderWindow(System.Boolean withWireframeChannel) => throw new System.NotImplementedException();
 	public virtual Rhino.Render.RenderWindow GetRenderWindow(System.Boolean withWireframeChannel,System.Boolean fromRenderViewSource) => throw new System.NotImplementedException();
 	public virtual Rhino.Render.RenderWindow GetRenderWindow(Rhino.DocObjects.ViewportInfo viewportInfo,System.Boolean fromRenderViewSource) => throw new System.NotImplementedException();

@@ -3,6 +3,7 @@ namespace Rhino.Display;
 public partial struct ColorLAB
 {
 	public ColorLAB() {}
+	public ColorLAB(System.Drawing.Color rgb) => throw new System.NotImplementedException();
 	public ColorLAB(System.Double lightness,System.Double a,System.Double b) => throw new System.NotImplementedException();
 	public ColorLAB(System.Double alpha,System.Double lightness,System.Double a,System.Double b) => throw new System.NotImplementedException();
 	public static Rhino.Display.ColorLAB CreateFromRGBA(Rhino.Display.ColorRGBA rgb) => throw new System.NotImplementedException();

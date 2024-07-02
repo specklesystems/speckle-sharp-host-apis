@@ -14,6 +14,7 @@ public partial class GeometryBase : Rhino.Runtime.CommonObject
 	public virtual Rhino.Geometry.BoundingBox GetBoundingBox(System.Boolean accurate) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.BoundingBox GetBoundingBox(Rhino.Geometry.Transform xform) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.BoundingBox GetBoundingBox(Rhino.Geometry.Plane plane) => throw new System.NotImplementedException();
+	public virtual Rhino.Geometry.BoundingBox GetBoundingBox(Rhino.Geometry.Plane plane,out Rhino.Geometry.Box worldBox) => throw new System.NotImplementedException();
 	public virtual System.Boolean MakeDeformable() => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.ComponentIndex ComponentIndex() => throw new System.NotImplementedException();
 	public virtual System.Boolean SetUserString(System.String key,System.String value) => throw new System.NotImplementedException();

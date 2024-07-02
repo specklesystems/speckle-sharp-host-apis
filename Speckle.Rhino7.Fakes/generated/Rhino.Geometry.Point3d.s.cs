@@ -28,6 +28,7 @@ public partial struct Point3d : System.Runtime.Serialization.ISerializable,Syste
 	public  void Transform(Rhino.Geometry.Transform xform) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.Point3d[] CullDuplicates(System.Collections.Generic.IEnumerable<Rhino.Geometry.Point3d> points,System.Double tolerance) => throw new System.NotImplementedException();
 	public static System.Boolean ArePointsCoplanar(System.Collections.Generic.IEnumerable<Rhino.Geometry.Point3d> points,System.Double tolerance) => throw new System.NotImplementedException();
+	public static System.Boolean TryParse(System.String input,out Rhino.Geometry.Point3d result) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.Point3d[] SortAndCullPointList(System.Collections.Generic.IEnumerable<Rhino.Geometry.Point3d> points,System.Double minimumDistance) => throw new System.NotImplementedException();
 	void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info,System.Runtime.Serialization.StreamingContext context) => throw new System.NotImplementedException();
 	System.Int32 System.IComparable.CompareTo(System.Object obj) => throw new System.NotImplementedException();

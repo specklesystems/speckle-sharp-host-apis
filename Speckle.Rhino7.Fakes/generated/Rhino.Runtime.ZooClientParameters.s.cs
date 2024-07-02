@@ -3,6 +3,7 @@ namespace Rhino.Runtime;
 public partial class ZooClientParameters
 {
 	public ZooClientParameters() {}
+	public virtual System.Boolean VerifyPreviousVersionLicense(System.String license,System.String previousVersionLicense,out System.String errorMessage) => throw new System.NotImplementedException();
 	public virtual System.Guid ProductGuid
 	{
 		get => throw new System.NotImplementedException();

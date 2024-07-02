@@ -36,11 +36,22 @@ public partial class RhinoViewport : System.IDisposable
 	public virtual System.Boolean ZoomExtents() => throw new System.NotImplementedException();
 	public virtual System.Boolean ZoomExtentsSelected() => throw new System.NotImplementedException();
 	public virtual System.Boolean ZoomBoundingBox(Rhino.Geometry.BoundingBox box) => throw new System.NotImplementedException();
+	public virtual System.Boolean MouseRotateAroundTarget(System.Drawing.Point mousePreviousPoint,System.Drawing.Point mouseCurrentPoint) => throw new System.NotImplementedException();
+	public virtual System.Boolean MouseRotateCamera(System.Drawing.Point mousePreviousPoint,System.Drawing.Point mouseCurrentPoint) => throw new System.NotImplementedException();
+	public virtual System.Boolean MouseInOutDolly(System.Drawing.Point mousePreviousPoint,System.Drawing.Point mouseCurrentPoint) => throw new System.NotImplementedException();
+	public virtual System.Boolean MouseMagnify(System.Drawing.Point mousePreviousPoint,System.Drawing.Point mouseCurrentPoint) => throw new System.NotImplementedException();
+	public virtual System.Boolean MouseTilt(System.Drawing.Point mousePreviousPoint,System.Drawing.Point mouseCurrentPoint) => throw new System.NotImplementedException();
+	public virtual System.Boolean MouseAdjustLensLength(System.Drawing.Point mousePreviousPoint,System.Drawing.Point mouseCurrentPoint,System.Boolean moveTarget) => throw new System.NotImplementedException();
+	public virtual System.Boolean MouseDollyZoom(System.Drawing.Point mousePreviousPoint,System.Drawing.Point mouseCurrentPoint) => throw new System.NotImplementedException();
+	public virtual System.Boolean MouseLateralDolly(System.Drawing.Point mousePreviousPoint,System.Drawing.Point mouseCurrentPoint) => throw new System.NotImplementedException();
 	public virtual System.Boolean KeyboardRotate(System.Boolean leftRight,System.Double angleRadians) => throw new System.NotImplementedException();
 	public virtual System.Boolean KeyboardDolly(System.Boolean leftRight,System.Double amount) => throw new System.NotImplementedException();
 	public virtual System.Boolean KeyboardDollyInOut(System.Double amount) => throw new System.NotImplementedException();
 	public virtual System.Boolean Magnify(System.Double magnificationFactor,System.Boolean mode) => throw new System.NotImplementedException();
+	public virtual System.Boolean Magnify(System.Double magnificationFactor,System.Boolean mode,System.Drawing.Point fixedScreenPoint) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Transform GetPickTransform(System.Int32 clientX,System.Int32 clientY) => throw new System.NotImplementedException();
+	public virtual Rhino.Geometry.Transform GetPickTransform(System.Drawing.Point clientPoint) => throw new System.NotImplementedException();
+	public virtual Rhino.Geometry.Transform GetPickTransform(System.Drawing.Rectangle clientRectangle) => throw new System.NotImplementedException();
 	public virtual System.Boolean SetUserString(System.String key,System.String value) => throw new System.NotImplementedException();
 	public virtual System.String GetUserString(System.String key) => throw new System.NotImplementedException();
 	public virtual System.Collections.Specialized.NameValueCollection GetUserStrings() => throw new System.NotImplementedException();
@@ -53,10 +64,30 @@ public partial class RhinoViewport : System.IDisposable
 	public virtual System.Boolean ChangeToPerspectiveProjection(System.Double targetDistance,System.Boolean symmetricFrustum,System.Double lensLength) => throw new System.NotImplementedException();
 	public virtual System.Boolean ChangeToTwoPointPerspectiveProjection(System.Double lensLength) => throw new System.NotImplementedException();
 	public virtual System.Boolean ChangeToTwoPointPerspectiveProjection(System.Double targetDistance,Rhino.Geometry.Vector3d up,System.Double lensLength) => throw new System.NotImplementedException();
+	public virtual System.Boolean GetCameraFrame(out Rhino.Geometry.Plane frame) => throw new System.NotImplementedException();
+	public virtual System.Boolean GetFrustum(out System.Double left,out System.Double right,out System.Double bottom,out System.Double top,out System.Double nearDistance,out System.Double farDistance) => throw new System.NotImplementedException();
+	public virtual System.Boolean GetFrustumCenter(out Rhino.Geometry.Point3d center) => throw new System.NotImplementedException();
+	public virtual System.Boolean GetDepth(Rhino.Geometry.Point3d point,out System.Double distance) => throw new System.NotImplementedException();
+	public virtual System.Boolean GetDepth(Rhino.Geometry.BoundingBox bbox,out System.Double nearDistance,out System.Double farDistance) => throw new System.NotImplementedException();
+	public virtual System.Boolean GetDepth(Rhino.Geometry.Sphere sphere,out System.Double nearDistance,out System.Double farDistance) => throw new System.NotImplementedException();
+	public virtual System.Boolean GetFrustumNearPlane(out Rhino.Geometry.Plane plane) => throw new System.NotImplementedException();
+	public virtual System.Boolean GetFrustumFarPlane(out Rhino.Geometry.Plane plane) => throw new System.NotImplementedException();
+	public virtual System.Boolean GetFrustumLeftPlane(out Rhino.Geometry.Plane plane) => throw new System.NotImplementedException();
+	public virtual System.Boolean GetFrustumRightPlane(out Rhino.Geometry.Plane plane) => throw new System.NotImplementedException();
+	public virtual System.Boolean GetFrustumBottomPlane(out Rhino.Geometry.Plane plane) => throw new System.NotImplementedException();
+	public virtual System.Boolean GetFrustumTopPlane(out Rhino.Geometry.Plane plane) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Point3d[] GetNearRect() => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Point3d[] GetFarRect() => throw new System.NotImplementedException();
+	public virtual System.Boolean GetScreenPort(out System.Int32 portLeft,out System.Int32 portRight,out System.Int32 portBottom,out System.Int32 portTop,out System.Int32 portNear,out System.Int32 portFar) => throw new System.NotImplementedException();
+	public virtual System.Boolean GetCameraAngle(out System.Double halfDiagonalAngle,out System.Double halfVerticalAngle,out System.Double halfHorizontalAngle) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Transform GetTransform(Rhino.DocObjects.CoordinateSystem sourceSystem,Rhino.DocObjects.CoordinateSystem destinationSystem) => throw new System.NotImplementedException();
+	public virtual System.Boolean GetFrustumLine(System.Double screenX,System.Double screenY,out Rhino.Geometry.Line worldLine) => throw new System.NotImplementedException();
+	public virtual System.Boolean GetWorldToScreenScale(Rhino.Geometry.Point3d pointInFrustum,out System.Double pixelsPerUnit) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Point2d WorldToClient(Rhino.Geometry.Point3d worldPoint) => throw new System.NotImplementedException();
+	public virtual System.Drawing.Point ClientToScreen(Rhino.Geometry.Point2d clientPoint) => throw new System.NotImplementedException();
+	public virtual System.Drawing.Point ClientToScreen(System.Drawing.Point clientPoint) => throw new System.NotImplementedException();
+	public virtual System.Drawing.Point ScreenToClient(System.Drawing.Point screenPoint) => throw new System.NotImplementedException();
+	public virtual Rhino.Geometry.Line ClientToWorld(System.Drawing.Point clientPoint) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Line ClientToWorld(Rhino.Geometry.Point2d clientPoint) => throw new System.NotImplementedException();
 	public virtual System.Boolean SetWallpaper(System.String imageFilename,System.Boolean grayscale) => throw new System.NotImplementedException();
 	public virtual Rhino.Display.RhinoView ParentView
@@ -70,6 +101,11 @@ public partial class RhinoViewport : System.IDisposable
 	public virtual System.UInt32 ChangeCounter
 	{
 		get => throw new System.NotImplementedException();
+	}
+	public virtual System.Drawing.Size Size
+	{
+		get => throw new System.NotImplementedException();
+		set {}
 	}
 	public virtual System.String Name
 	{
@@ -149,6 +185,10 @@ public partial class RhinoViewport : System.IDisposable
 		get => throw new System.NotImplementedException();
 	}
 	public virtual System.Double FrustumAspect
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual System.Drawing.Rectangle Bounds
 	{
 		get => throw new System.NotImplementedException();
 	}

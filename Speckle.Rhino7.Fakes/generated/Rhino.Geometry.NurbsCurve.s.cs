@@ -8,6 +8,7 @@ public partial class NurbsCurve : Rhino.Geometry.Curve,Rhino.IEpsilonComparable<
 	public NurbsCurve(System.Int32 dimension,System.Boolean rational,System.Int32 order,System.Int32 pointCount) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.NurbsCurve CreateFromLine(Rhino.Geometry.Line line) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.NurbsCurve CreateFromArc(Rhino.Geometry.Arc arc) => throw new System.NotImplementedException();
+	public virtual System.Boolean UVNDirectionsAt(System.Double t,out Rhino.Geometry.Vector3d uDir,out Rhino.Geometry.Vector3d vDir,out Rhino.Geometry.Vector3d nDir) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.NurbsCurve[] MakeCompatible(System.Collections.Generic.IEnumerable<Rhino.Geometry.Curve> curves,Rhino.Geometry.Point3d startPt,Rhino.Geometry.Point3d endPt,System.Int32 simplifyMethod,System.Int32 numPoints,System.Double refitTolerance,System.Double angleTolerance) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.NurbsCurve CreateParabolaFromVertex(Rhino.Geometry.Point3d vertex,Rhino.Geometry.Point3d startPoint,Rhino.Geometry.Point3d endPoint) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.NurbsCurve CreateParabolaFromFocus(Rhino.Geometry.Point3d focus,Rhino.Geometry.Point3d startPoint,Rhino.Geometry.Point3d endPoint) => throw new System.NotImplementedException();

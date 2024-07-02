@@ -15,6 +15,11 @@ public partial class SubDFace : Rhino.Geometry.SubDComponent
 	{
 		get => throw new System.NotImplementedException();
 	}
+	public virtual System.Drawing.Color PerFaceColor
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 	public virtual Rhino.Geometry.Point3d LimitSurfaceCenterPoint
 	{
 		get => throw new System.NotImplementedException();

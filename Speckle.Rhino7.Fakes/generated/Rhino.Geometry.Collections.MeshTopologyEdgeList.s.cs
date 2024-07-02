@@ -5,7 +5,9 @@ public partial class MeshTopologyEdgeList
 	public MeshTopologyEdgeList() {}
 	public virtual Rhino.IndexPair GetTopologyVertices(System.Int32 topologyEdgeIndex) => throw new System.NotImplementedException();
 	public virtual System.Int32[] GetConnectedFaces(System.Int32 topologyEdgeIndex) => throw new System.NotImplementedException();
+	public virtual System.Int32[] GetConnectedFaces(System.Int32 topologyEdgeIndex,out System.Boolean[] faceOrientationMatchesEdgeDirection) => throw new System.NotImplementedException();
 	public virtual System.Int32[] GetEdgesForFace(System.Int32 faceIndex) => throw new System.NotImplementedException();
+	public virtual System.Int32[] GetEdgesForFace(System.Int32 faceIndex,out System.Boolean[] sameOrientation) => throw new System.NotImplementedException();
 	public virtual System.Int32 GetEdgeIndex(System.Int32 topologyVertex1,System.Int32 topologyVertex2) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Line EdgeLine(System.Int32 topologyEdgeIndex) => throw new System.NotImplementedException();
 	public virtual System.Boolean CollapseEdge(System.Int32 topologyEdgeIndex) => throw new System.NotImplementedException();

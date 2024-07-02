@@ -24,6 +24,11 @@ public partial class Particle
 		get => throw new System.NotImplementedException();
 		set {}
 	}
+	public virtual System.Drawing.Color Color
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 	public virtual System.Int32 DisplayBitmapIndex
 	{
 		get => throw new System.NotImplementedException();

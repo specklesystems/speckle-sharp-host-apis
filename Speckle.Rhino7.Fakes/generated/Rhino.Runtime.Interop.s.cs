@@ -17,6 +17,7 @@ public partial class Interop
 	public static System.IntPtr RhinoObjectConstPointer(Rhino.DocObjects.RhinoObject rhinoObject) => throw new System.NotImplementedException();
 	public static Rhino.DocObjects.RhinoObject RhinoObjectFromPointer(System.IntPtr pRhinoObject) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.GeometryBase CreateFromNativePointer(System.IntPtr pGeometry) => throw new System.NotImplementedException();
+	public static System.Boolean TryCopyFromOnArc(System.Object source,out Rhino.Geometry.Arc destination) => throw new System.NotImplementedException();
 	public static System.Boolean TryCopyToOnArc(Rhino.Geometry.Arc source,System.Object destination) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.Brep FromOnBrep(System.Object source) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.Surface FromOnSurface(System.Object source) => throw new System.NotImplementedException();

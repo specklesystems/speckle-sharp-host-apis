@@ -1,11 +1,13 @@
+using System.Reflection;
+
 namespace Speckle.Shared;
 
 public partial class Generator
 {
-  private string ParameterType(Type type,
+  private string ParameterType(Type type, bool isOut,
     bool nullable)
   {
-    if (type.IsByRef || type.IsPointer)
+    if (!isOut && (type.IsByRef || type.IsPointer))
     {
       throw new ApplicationException("Not Handling References");
     }
@@ -18,7 +20,17 @@ public partial class Generator
     {
       throw new ApplicationException($"Not Handling: {type.FullName}");
     }
-    var name = FormGenericType(type, false);
+
+    string name;
+    if (isOut)
+    {
+      name = "out " + FormGenericType(type.GetElementType(), false);
+    }
+    else
+    {
+      name = FormGenericType(type, false);
+    }
+
     if (nullable && !name.EndsWith("?", StringComparison.Ordinal))
     {
       return $"{type}?";
@@ -33,7 +45,7 @@ public partial class Generator
     {
       return "void";
     }
-    return ParameterType(type, nullable);
+    return ParameterType(type, false, nullable);
   }
 
   private string FormGenericType(Type type, bool isOpenGeneric)

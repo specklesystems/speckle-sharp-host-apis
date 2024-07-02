@@ -16,6 +16,7 @@ public partial struct Circle : Rhino.IEpsilonComparable<Rhino.Geometry.Circle>,S
 	public  Rhino.Geometry.Point3d PointAt(System.Double t) => throw new System.NotImplementedException();
 	public  Rhino.Geometry.Vector3d TangentAt(System.Double t) => throw new System.NotImplementedException();
 	public  Rhino.Geometry.Vector3d DerivativeAt(System.Int32 derivative,System.Double t) => throw new System.NotImplementedException();
+	public  System.Boolean ClosestParameter(Rhino.Geometry.Point3d testPoint,out System.Double t) => throw new System.NotImplementedException();
 	public  Rhino.Geometry.Point3d ClosestPoint(Rhino.Geometry.Point3d testPoint) => throw new System.NotImplementedException();
 	public  System.Boolean Transform(Rhino.Geometry.Transform xform) => throw new System.NotImplementedException();
 	public  System.Boolean Rotate(System.Double sinAngle,System.Double cosAngle,Rhino.Geometry.Vector3d axis) => throw new System.NotImplementedException();
@@ -26,6 +27,7 @@ public partial struct Circle : Rhino.IEpsilonComparable<Rhino.Geometry.Circle>,S
 	public  void Reverse() => throw new System.NotImplementedException();
 	public  Rhino.Geometry.NurbsCurve ToNurbsCurve() => throw new System.NotImplementedException();
 	public  Rhino.Geometry.NurbsCurve ToNurbsCurve(System.Int32 degree,System.Int32 cvCount) => throw new System.NotImplementedException();
+	public static System.Boolean TryFitCircleToPoints(System.Collections.Generic.IEnumerable<Rhino.Geometry.Point3d> points,out Rhino.Geometry.Circle circle) => throw new System.NotImplementedException();
 	public  System.Boolean EpsilonEquals(Rhino.Geometry.Circle other,System.Double epsilon) => throw new System.NotImplementedException();
 	System.Object System.ICloneable.Clone() => throw new System.NotImplementedException();
 	public static Rhino.Geometry.Circle Unset

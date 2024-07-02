@@ -10,6 +10,11 @@ namespace Rhino.Display;
 		get => throw new System.NotImplementedException();
 		set {}
 	}
+	public virtual System.Drawing.Color AllMeshWiresColor
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 	public virtual System.Int32 MeshWireThickness
 	{
 		get => throw new System.NotImplementedException();

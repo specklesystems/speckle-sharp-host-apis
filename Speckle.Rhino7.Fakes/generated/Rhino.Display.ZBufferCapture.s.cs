@@ -18,4 +18,5 @@ public partial class ZBufferCapture : System.IDisposable
 	public virtual System.Single MinZ() => throw new System.NotImplementedException();
 	public virtual System.Single ZValueAt(System.Int32 x,System.Int32 y) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Point3d WorldPointAt(System.Int32 x,System.Int32 y) => throw new System.NotImplementedException();
+	public virtual System.Drawing.Bitmap GrayscaleDib() => throw new System.NotImplementedException();
 }

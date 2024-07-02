@@ -11,6 +11,7 @@ public partial struct Triangle3d
 	public  Rhino.Geometry.Triangle3d WithB(Rhino.Geometry.Point3d b) => throw new System.NotImplementedException();
 	public  Rhino.Geometry.Triangle3d WithC(Rhino.Geometry.Point3d c) => throw new System.NotImplementedException();
 	public  Rhino.Geometry.Point3d PointAtBarycentricCoords(Rhino.Geometry.Point2d coords) => throw new System.NotImplementedException();
+	public  Rhino.Geometry.Point2d BarycentricCoordsAt(Rhino.Geometry.Point3d point,out System.Double signedHeight) => throw new System.NotImplementedException();
 	public  Rhino.Geometry.Point3d PointAlongBoundary(System.Double t) => throw new System.NotImplementedException();
 	public  System.Double ClosestParameterOnBoundary(Rhino.Geometry.Point3d point) => throw new System.NotImplementedException();
 	public  Rhino.Geometry.Point3d ClosestPointOnBoundary(Rhino.Geometry.Point3d point) => throw new System.NotImplementedException();

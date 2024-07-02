@@ -112,7 +112,7 @@ public partial class Generator
       {
         sb.Append(",");
       }
-      sb.Append(ParameterType(parameter.ParameterType, nullable)).Append(" ").Append(FixName(parameter.Name));
+      sb.Append(ParameterType(parameter.ParameterType, parameter.IsOut, nullable)).Append(" ").Append(FixName(parameter.Name));
     }
 
     if (baseType is not null)

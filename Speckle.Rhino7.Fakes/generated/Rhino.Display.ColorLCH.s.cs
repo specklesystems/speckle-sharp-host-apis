@@ -3,6 +3,7 @@ namespace Rhino.Display;
 public partial struct ColorLCH
 {
 	public ColorLCH() {}
+	public ColorLCH(System.Drawing.Color rgb) => throw new System.NotImplementedException();
 	public ColorLCH(System.Double lightness,System.Double chroma,System.Double hue) => throw new System.NotImplementedException();
 	public ColorLCH(System.Double alpha,System.Double lightness,System.Double chroma,System.Double hue) => throw new System.NotImplementedException();
 	public static Rhino.Display.ColorLCH CreateFromRGBA(Rhino.Display.ColorRGBA rgb) => throw new System.NotImplementedException();

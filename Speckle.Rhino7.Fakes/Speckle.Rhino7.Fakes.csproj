@@ -4,4 +4,7 @@
     <IsPackable>true</IsPackable>
     <Nullable>disable</Nullable>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" />
+  </ItemGroup>
 </Project>

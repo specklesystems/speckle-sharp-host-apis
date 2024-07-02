@@ -12,9 +12,18 @@ public partial class CreatePreviewEventArgs : System.EventArgs
 	{
 		get => throw new System.NotImplementedException();
 	}
+	public virtual System.Drawing.Size PreviewImageSize
+	{
+		get => throw new System.NotImplementedException();
+	}
 	public virtual Rhino.Render.PreviewSceneQuality Quality
 	{
 		get => throw new System.NotImplementedException();
+	}
+	public virtual System.Drawing.Bitmap PreviewImage
+	{
+		get => throw new System.NotImplementedException();
+		set {}
 	}
 	public virtual System.Boolean Cancel
 	{
