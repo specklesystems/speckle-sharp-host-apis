@@ -67,7 +67,7 @@ public partial class Generator
       .Where(x => x.IsPublic)
       .Where(x => _namespaces.Any(y => x.FullName?.StartsWith(y) ?? false))
       .ToList();
-    foreach (var type in definedTypes) //.Where(x => x.FullName.EndsWith("DockablePaneId")))
+    foreach (var type in definedTypes)//.Where(x => x.FullName.EndsWith("NurbsSurface")))
     {
       try
       {
@@ -106,6 +106,16 @@ public partial class Generator
     if (!_namespaces.Contains(type.Namespace))
     {
       return type;
+    }
+
+    if (type.IsArray)
+    {
+      return RenderType(type.GetElementType().NotNull());
+    }
+
+    if (type.IsGenericType)
+    {
+      type = type.GetGenericTypeDefinition();
     }
 
     if (_boolDone.TryGetValue(type.FullName, out var isDone))

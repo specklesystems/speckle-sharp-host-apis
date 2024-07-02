@@ -19,7 +19,7 @@ public partial class Generator
     }
 
     var constructorSb = new StringBuilder();
-    constructorSb.Append($"\tpublic {clazz.Name}(");
+    constructorSb.Append($"\tpublic {FormNameOnly(clazz)}(");
     WriteMethodBody(constructorSb, [], clazz.BaseType, GeneratedType.Empty);
     sb.Append(constructorSb);
     generatedConstructor.Add(new GeneratedConstructor([]));
@@ -28,7 +28,7 @@ public partial class Generator
       try
       {
         constructorSb = new StringBuilder();
-        constructorSb.Append($"\tpublic {clazz.Name}(");
+        constructorSb.Append($"\tpublic {FormNameOnly(clazz)}(");
         var parameters = constructor.GetParameters();
         WriteMethodBody(constructorSb, parameters, clazz.BaseType, GeneratedType.Class);
         sb.Append(constructorSb);

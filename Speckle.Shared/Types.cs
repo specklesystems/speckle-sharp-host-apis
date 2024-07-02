@@ -47,37 +47,65 @@ public partial class Generator
     {
       (typeString, typeInfo) = WriteClass(type);
     }
-    File.WriteAllText(Path.Combine(_path, $"{type.FullName}.s.cs"), typeString);
+
+    try
+    {
+      File.WriteAllText(Path.Combine(_path, $"{type.FullName}.s.cs"), typeString);
+    }
+    catch (ArgumentException e)
+    {
+      Console.WriteLine(e);
+      throw;
+    }
+
     return typeInfo;
   }
 
   //can't get values from enum in reflection
   private (string, GeneratedTypeInfo) WriteEnum(Type clazz)
   {
+    var declaringClass = clazz.DeclaringType;
+    var leading = declaringClass is null ? string.Empty : "\t";
     StringBuilder sb = new();
     sb.AppendLine($"namespace {clazz.Namespace};").AppendLine();
-    sb.AppendLine($"public enum {clazz.Name}");
-    sb.AppendLine("{");
+    if (declaringClass is not null)
+    {
+      sb.AppendLine($"public partial class {FormNameOnly(declaringClass)}");
+      sb.AppendLine("{");
+    }
+    sb.AppendLine($"{leading}public enum {clazz.Name}");
+    sb.AppendLine($"{leading}{{");
     foreach (var field in clazz.GetFields(BindingFlags.Public | BindingFlags.Static))
     {
-      sb.AppendLine($"\t{field.Name},");
+      sb.AppendLine($"{leading}\t{field.Name},");
     }
-    sb.AppendLine("}");
+    sb.AppendLine($"{leading}}}");
+    if (declaringClass is not null)
+    {
+      sb.AppendLine("}");
+    }
     return (sb.ToString(), new(clazz.FullName, null, [], []));
   }
 
   private (string, GeneratedTypeInfo) WriteClass(Type clazz)
   {
+    var isOpenGeneric = clazz.GenericTypeArguments.Length > 0;
+    var declaringClass = clazz.DeclaringType;
+    var leading = declaringClass is null ? string.Empty : "\t";
     StringBuilder sb = new();
     sb.AppendLine($"namespace {clazz.Namespace};").AppendLine();
-    sb.Append($"public partial class {clazz.Name}");
+    if (declaringClass is not null)
+    {
+      sb.AppendLine($"{leading}public partial class {FormNameOnly(declaringClass)}");
+      sb.AppendLine($"{leading}{{");
+    }
+    sb.Append($"{leading}public partial class {FormGenericNameOnly(clazz)}");
     string? baseClazz = null;
     bool appended = false;
     bool isFirst = true;
     if (clazz.BaseType is not null && clazz.BaseType != typeof(object))
     {
-      RenderType(clazz.BaseType);
-      sb.Append($" : {clazz.BaseType.FullName}");
+      sb.Append($" : {FormGenericFullNameOnly(clazz.BaseType, isOpenGeneric)}");
       baseClazz = clazz.BaseType.FullName;
       appended = true;
       isFirst = false;
@@ -101,11 +129,15 @@ public partial class Generator
           ;
           isFirst = false;
         }
-        sb.Append(FormGenericType(i));
+        sb.Append(FormGenericType(i, isOpenGeneric));
       }
     }
 
     var (constructors, members) = WriteTypeBody(sb, clazz, GeneratedType.Class);
+    if (declaringClass is not null)
+    {
+      sb.AppendLine("}");
+    }
     return (sb.ToString(), new(clazz.FullName, baseClazz, constructors, members));
   }
 
@@ -122,7 +154,7 @@ public partial class Generator
   {
     StringBuilder sb = new();
     sb.AppendLine($"namespace {clazz.Namespace};").AppendLine();
-    sb.Append($"public partial interface {clazz.Name}");
+    sb.Append($"public partial interface {FormNameOnly(clazz)}");
     var (constructors, members) = WriteTypeBody(sb, clazz, GeneratedType.Interface);
     return (sb.ToString(), new(clazz.FullName, null, constructors, members));
   }
@@ -152,7 +184,7 @@ public partial class Generator
   {
     foreach (var field in clazz.GetFields(BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly))
     {
-      sb.AppendLine($"public {FormGenericType(field.FieldType)} {field.Name};");
+      sb.AppendLine($"public {FormGenericType(field.FieldType, false)} {field.Name};");
     }
   }
 }
