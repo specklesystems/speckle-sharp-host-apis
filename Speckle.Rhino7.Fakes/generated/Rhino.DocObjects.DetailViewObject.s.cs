@@ -13,6 +13,10 @@ public partial class DetailViewObject : Rhino.DocObjects.RhinoObject
 		get => throw new System.NotImplementedException();
 		set {}
 	}
+	public virtual Rhino.Display.RhinoViewport Viewport
+	{
+		get => throw new System.NotImplementedException();
+	}
 	public virtual System.String DescriptiveTitle
 	{
 		get => throw new System.NotImplementedException();

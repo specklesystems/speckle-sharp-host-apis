@@ -7,6 +7,7 @@ public partial class AnnotationBase : Rhino.Geometry.GeometryBase
 	public virtual System.Boolean ClearPropertyOverrides() => throw new System.NotImplementedException();
 	public virtual Rhino.DocObjects.DimensionStyle GetDimensionStyle(Rhino.DocObjects.DimensionStyle parentDimStyle) => throw new System.NotImplementedException();
 	public virtual System.Boolean SetOverrideDimStyle(Rhino.DocObjects.DimensionStyle OverrideStyle) => throw new System.NotImplementedException();
+	public static System.Double GetDimensionScale(Rhino.RhinoDoc doc,Rhino.DocObjects.DimensionStyle dimstyle,Rhino.Display.RhinoViewport vport) => throw new System.NotImplementedException();
 	public static System.String PlainTextToRtf(System.String str) => throw new System.NotImplementedException();
 	public virtual void SetRichText(System.String rtfText,Rhino.DocObjects.DimensionStyle dimstyle) => throw new System.NotImplementedException();
 	public static System.String FormatRtfString(System.String rtf_in,System.Boolean clear_bold,System.Boolean set_bold,System.Boolean clear_italic,System.Boolean set_italic,System.Boolean clear_underline,System.Boolean set_underline,System.Boolean clear_facename,System.Boolean set_facename,System.String facename) => throw new System.NotImplementedException();

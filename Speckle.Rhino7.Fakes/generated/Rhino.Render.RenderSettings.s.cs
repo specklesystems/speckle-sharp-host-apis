@@ -84,6 +84,11 @@ public partial class RenderSettings : Rhino.Runtime.CommonObject
 		get => throw new System.NotImplementedException();
 		set {}
 	}
+	public virtual Rhino.Display.BackgroundStyle BackgroundStyle
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 	public virtual Rhino.Render.LinearWorkflow LinearWorkflow
 	{
 		get => throw new System.NotImplementedException();

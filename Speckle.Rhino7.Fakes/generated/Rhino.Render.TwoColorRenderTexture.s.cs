@@ -3,6 +3,16 @@ namespace Rhino.Render;
 public partial class TwoColorRenderTexture : Rhino.Render.RenderTexture
 {
 	public TwoColorRenderTexture() {}
+	public virtual Rhino.Display.Color4f Color1
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual Rhino.Display.Color4f Color2
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 	public virtual System.Boolean Texture1On
 	{
 		get => throw new System.NotImplementedException();

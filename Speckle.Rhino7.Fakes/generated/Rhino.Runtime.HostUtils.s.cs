@@ -3,7 +3,7 @@ namespace Rhino.Runtime;
 public partial class HostUtils
 {
 	public HostUtils() {}
-	public static T GetPlatformService(System.String assemblyPath,System.String typeFullName) => throw new System.NotImplementedException();
+	public static T GetPlatformService<T>(System.String assemblyPath,System.String typeFullName) => throw new System.NotImplementedException();
 	public static System.Boolean IsManagedDll(System.String path) => throw new System.NotImplementedException();
 	public static void ClearFpuExceptionStatus() => throw new System.NotImplementedException();
 	public static void RegisterNamedCallback(System.String name,System.EventHandler<Rhino.Runtime.NamedParametersEventArgs> callback) => throw new System.NotImplementedException();

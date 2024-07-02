@@ -11,7 +11,17 @@ public partial class PhysicallyBasedMaterial
 	{
 		get => throw new System.NotImplementedException();
 	}
+	public virtual Rhino.Display.Color4f BaseColor
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 	public virtual Rhino.DocObjects.PhysicallyBasedMaterial.BRDFs BRDF
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual Rhino.Display.Color4f SubsurfaceScatteringColor
 	{
 		get => throw new System.NotImplementedException();
 		set {}
@@ -102,6 +112,11 @@ public partial class PhysicallyBasedMaterial
 		set {}
 	}
 	public virtual System.Boolean UseBaseColorTextureAlphaForObjectAlphaTransparencyTexture
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public virtual Rhino.Display.Color4f Emission
 	{
 		get => throw new System.NotImplementedException();
 		set {}

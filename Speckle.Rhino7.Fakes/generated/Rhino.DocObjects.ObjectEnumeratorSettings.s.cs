@@ -88,4 +88,9 @@ public partial class ObjectEnumeratorSettings
 		get => throw new System.NotImplementedException();
 		set {}
 	}
+	public virtual Rhino.Display.RhinoViewport ViewportFilter
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 }

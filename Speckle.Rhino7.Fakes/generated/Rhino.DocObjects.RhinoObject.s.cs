@@ -34,7 +34,10 @@ public partial class RhinoObject : Rhino.DocObjects.ModelComponent
 	public virtual System.Boolean HighlightSubObject(Rhino.Geometry.ComponentIndex componentIndex,System.Boolean highlight) => throw new System.NotImplementedException();
 	public virtual System.Int32 UnhighlightAllSubObjects() => throw new System.NotImplementedException();
 	public virtual Rhino.DocObjects.GripObject[] GetGrips() => throw new System.NotImplementedException();
+	public virtual System.Boolean EnableVisualAnalysisMode(Rhino.Display.VisualAnalysisMode mode,System.Boolean enable) => throw new System.NotImplementedException();
 	public virtual System.Boolean InVisualAnalysisMode() => throw new System.NotImplementedException();
+	public virtual System.Boolean InVisualAnalysisMode(Rhino.Display.VisualAnalysisMode mode) => throw new System.NotImplementedException();
+	public virtual Rhino.Display.VisualAnalysisMode[] GetActiveVisualAnalysisModes() => throw new System.NotImplementedException();
 	public virtual System.String ShortDescription(System.Boolean plural) => throw new System.NotImplementedException();
 	public virtual System.Boolean IsMeshable(Rhino.Geometry.MeshType meshType) => throw new System.NotImplementedException();
 	public virtual System.Boolean SetRenderMeshParameters(Rhino.Geometry.MeshingParameters mp) => throw new System.NotImplementedException();
@@ -44,7 +47,9 @@ public partial class RhinoObject : Rhino.DocObjects.ModelComponent
 	public virtual System.Int32 CreateMeshes(Rhino.Geometry.MeshType meshType,Rhino.Geometry.MeshingParameters parameters,System.Boolean ignoreCustomParameters) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Mesh[] GetMeshes(Rhino.Geometry.MeshType meshType) => throw new System.NotImplementedException();
 	public virtual System.Boolean SupportsRenderPrimitiveList(Rhino.DocObjects.ViewportInfo viewport,System.Boolean preview) => throw new System.NotImplementedException();
+	public virtual System.Boolean SupportsRenderPrimitiveList(Rhino.DocObjects.ViewportInfo viewport,Rhino.Display.DisplayPipelineAttributes attrs) => throw new System.NotImplementedException();
 	public virtual Rhino.Render.RenderPrimitiveList GetRenderPrimitiveList(Rhino.DocObjects.ViewportInfo viewport,System.Boolean preview) => throw new System.NotImplementedException();
+	public virtual Rhino.Render.RenderPrimitiveList GetRenderPrimitiveList(Rhino.DocObjects.ViewportInfo viewport,Rhino.Display.DisplayPipelineAttributes attrs) => throw new System.NotImplementedException();
 	public virtual Rhino.DocObjects.RhinoObject[] GetSubObjects() => throw new System.NotImplementedException();
 	public virtual Rhino.Render.TextureMapping GetTextureMapping(System.Int32 channel) => throw new System.NotImplementedException();
 	public virtual System.Int32 SetTextureMapping(System.Int32 channel,Rhino.Render.TextureMapping tm) => throw new System.NotImplementedException();
@@ -61,6 +66,7 @@ public partial class RhinoObject : Rhino.DocObjects.ModelComponent
 	public virtual Rhino.DocObjects.Material GetMaterial(Rhino.Geometry.ComponentIndex componentIndex) => throw new System.NotImplementedException();
 	public virtual System.IConvertible GetCustomRenderMeshParameter(System.Guid providerId,System.String parameterName) => throw new System.NotImplementedException();
 	public virtual void SetCustomRenderMeshParameter(System.Guid providerId,System.String parameterName,System.Object value) => throw new System.NotImplementedException();
+	public virtual System.Boolean IsActiveInViewport(Rhino.Display.RhinoViewport viewport) => throw new System.NotImplementedException();
 	public virtual void SetCopyHistoryOnReplace(System.Boolean bCopy) => throw new System.NotImplementedException();
 	public static  System.UInt32 NextRuntimeSerialNumber
 	{

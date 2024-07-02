@@ -3,6 +3,7 @@ namespace Rhino.DocObjects;
 public partial class ViewInfo : System.IDisposable
 {
 	public ViewInfo() {}
+	public ViewInfo(Rhino.Display.RhinoViewport rhinoViewPort) => throw new System.NotImplementedException();
 	public ViewInfo(System.UInt32 docRuntimeSerialNumber) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();
 	public virtual System.String Name

@@ -16,6 +16,8 @@ public partial class RhinoDoc : System.IDisposable
 	public virtual System.Boolean AddCustomUndoEvent(System.String description,System.EventHandler<Rhino.Commands.CustomUndoEventArgs> handler) => throw new System.NotImplementedException();
 	public virtual System.Boolean AddCustomUndoEvent(System.String description,System.EventHandler<Rhino.Commands.CustomUndoEventArgs> handler,System.Object tag) => throw new System.NotImplementedException();
 	public virtual System.Boolean EndUndoRecord(System.UInt32 undoRecordSerialNumber) => throw new System.NotImplementedException();
+	public virtual System.Boolean SupportsRenderPrimitiveList(Rhino.DocObjects.ViewportInfo viewport,Rhino.Display.DisplayPipelineAttributes attrs) => throw new System.NotImplementedException();
+	public virtual Rhino.Render.RenderPrimitiveList GetRenderPrimitiveList(Rhino.DocObjects.ViewportInfo viewport,Rhino.Display.DisplayPipelineAttributes attrs) => throw new System.NotImplementedException();
 	public static Rhino.RhinoDoc FromFilePath(System.String filePath) => throw new System.NotImplementedException();
 	public static System.Boolean OpenFile(System.String path) => throw new System.NotImplementedException();
 	public virtual void Dispose() => throw new System.NotImplementedException();

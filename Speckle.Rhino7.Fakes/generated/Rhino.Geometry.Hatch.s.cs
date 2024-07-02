@@ -10,6 +10,8 @@ public partial class Hatch : Rhino.Geometry.GeometryBase
 	public virtual Rhino.Geometry.GeometryBase[] Explode() => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Curve[] Get3dCurves(System.Boolean outer) => throw new System.NotImplementedException();
 	public virtual void ScalePattern(Rhino.Geometry.Transform xform) => throw new System.NotImplementedException();
+	public virtual Rhino.Display.ColorGradient GetGradientFill() => throw new System.NotImplementedException();
+	public virtual void SetGradientFill(Rhino.Display.ColorGradient fill) => throw new System.NotImplementedException();
 	public virtual System.Int32 PatternIndex
 	{
 		get => throw new System.NotImplementedException();

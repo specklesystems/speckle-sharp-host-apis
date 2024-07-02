@@ -4,6 +4,7 @@ public partial class ViewportInfo : Rhino.Runtime.CommonObject
 {
 	public ViewportInfo() {}
 	public ViewportInfo(Rhino.DocObjects.ViewportInfo other) => throw new System.NotImplementedException();
+	public ViewportInfo(Rhino.Display.RhinoViewport rhinoViewport) => throw new System.NotImplementedException();
 	public static System.Double CalculateCameraRotationAngle(Rhino.Geometry.Vector3d direction,Rhino.Geometry.Vector3d up) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.Vector3d CalculateCameraUpDirection(Rhino.Geometry.Point3d location,Rhino.Geometry.Vector3d direction,System.Double angle) => throw new System.NotImplementedException();
 	public virtual System.Boolean ChangeToParallelProjection(System.Boolean symmetricFrustum) => throw new System.NotImplementedException();

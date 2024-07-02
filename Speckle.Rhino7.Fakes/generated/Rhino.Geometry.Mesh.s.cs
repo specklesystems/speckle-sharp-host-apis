@@ -115,6 +115,7 @@ public partial class Mesh : Rhino.Geometry.GeometryBase
 	public virtual Rhino.Geometry.Mesh[] Split(Rhino.Geometry.Mesh mesh) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Mesh[] Split(System.Collections.Generic.IEnumerable<Rhino.Geometry.Mesh> meshes) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Polyline[] GetOutlines(Rhino.Geometry.Plane plane) => throw new System.NotImplementedException();
+	public virtual Rhino.Geometry.Polyline[] GetOutlines(Rhino.Display.RhinoViewport viewport) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Polyline[] GetOutlines(Rhino.DocObjects.ViewportInfo viewportInfo,Rhino.Geometry.Plane plane) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Polyline[] GetNakedEdges() => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Mesh[] ExplodeAtUnweldedEdges() => throw new System.NotImplementedException();

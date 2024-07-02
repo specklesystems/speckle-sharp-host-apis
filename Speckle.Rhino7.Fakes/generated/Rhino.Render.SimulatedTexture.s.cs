@@ -67,6 +67,11 @@ public partial class SimulatedTexture : System.IDisposable
 		get => throw new System.NotImplementedException();
 		set {}
 	}
+	public virtual Rhino.Display.Color4f TransparentColor
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 	public virtual System.Double TransparentColorSensitivity
 	{
 		get => throw new System.NotImplementedException();

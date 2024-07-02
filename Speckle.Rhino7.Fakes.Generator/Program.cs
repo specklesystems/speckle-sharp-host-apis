@@ -13,7 +13,7 @@ Generator generator =
     "Speckle.Rhino7.Fakes",
     [GetAssembly("RhinoCommon.dll")],
     [
-      "Rhino","Rhino.Geometry", "Rhino.Collections", "Rhino.Runtime","Rhino.DocObjects","Rhino.Commands","Rhino.Render"
+      "Rhino","Rhino.Geometry", "Rhino.Collections", "Rhino.Runtime","Rhino.DocObjects","Rhino.Commands","Rhino.Render","Rhino.Display"
     ],
     [
       new ("HostUtils", [new ("GetCustomComputeEndpoints")]),
@@ -29,6 +29,7 @@ Generator generator =
       new ("RunCommandDelegate", []),
       new ("ArchivableDictionary", []),
       new ("RenderMaterial", [new ("HandleTexturedValue")]),
+      new ("CustomRenderMeshProvider2", [new ("BoundingBox")]),
     ]
   );
 generator.Generate();

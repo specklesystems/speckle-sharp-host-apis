@@ -7,6 +7,8 @@ public partial class ObjectAttributes : Rhino.Runtime.CommonObject
 	public virtual System.Boolean Transform(Rhino.Geometry.Transform xform) => throw new System.NotImplementedException();
 	public virtual System.Boolean HasDisplayModeOverride(System.Guid viewportId) => throw new System.NotImplementedException();
 	public virtual System.Guid GetDisplayModeOverride(System.Guid viewportId) => throw new System.NotImplementedException();
+	public virtual System.Boolean SetDisplayModeOverride(Rhino.Display.DisplayModeDescription mode) => throw new System.NotImplementedException();
+	public virtual System.Boolean SetDisplayModeOverride(Rhino.Display.DisplayModeDescription mode,System.Guid rhinoViewportId) => throw new System.NotImplementedException();
 	public virtual void RemoveDisplayModeOverride() => throw new System.NotImplementedException();
 	public virtual void RemoveDisplayModeOverride(System.Guid rhinoViewportId) => throw new System.NotImplementedException();
 	public virtual System.Boolean AddHideInDetailOverride(System.Guid detailId) => throw new System.NotImplementedException();
