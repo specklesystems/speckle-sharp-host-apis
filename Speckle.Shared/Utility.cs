@@ -31,42 +31,66 @@ public partial class Generator
 
   private string FormGenericType(Type type, bool isOpenGeneric)
   {
-    type = RenderType(type, false);
-    
+    if (type.IsGenericParameter)
+    {
+      return type.Name;
+    }
+    var t = RenderType(type, false);
+    if (isOpenGeneric)
+    {
+      type = t;
+    }
+    var name = GetName(type);
     if (!type.IsGenericType)
     {
-      return type.FullName.Replace('+', '.').NotNull();
+      return name.Replace('+', '.').NotNull();
     }
 
-    var nonGenericName = type.FullName.Split('`').First();
+    var nonGenericName =name.Split('`').First();
     nonGenericName = nonGenericName.Replace('+', '.');
-    return $"{nonGenericName}<{string.Join(", ", type.GetGenericArguments().Select((ta, i) => isOpenGeneric ? $"T{i}" : FormGenericFullNameOnly(ta, isOpenGeneric)))}>";
+    
+    return $"{nonGenericName}<{string.Join(", ", type.GetGenericArguments().Select((ta, i) => isOpenGeneric ? ta.Name : FormGenericFullNameOnly(ta, isOpenGeneric)))}>";
+   // return $"{nonGenericName}<{string.Join(", ", type.GetGenericArguments().Select((ta, i) => isOpenGeneric ? $"T{i}" : FormGenericFullNameOnly(ta, isOpenGeneric)))}>";
   }
   
   private string FormGenericFullNameOnly(Type type, bool isOpenGeneric)
   {
-    if (type.FullName is null)
+    if (type.IsGenericParameter)
     {
-      return FormGenericNameOnly(type);
+      return type.Name;
     }
+    var t = RenderType(type, false);
+    if (isOpenGeneric)
+    {
+      type = t;
+    }
+    var name = GetName(type);
     if (!type.IsGenericType)
     {
-      return type.FullName.NotNull();
+      return name;
     }
-
-    var nonGenericName = type.FullName.Split('`').First();
+    var nonGenericName = name.Split('`').First();
     return $"{nonGenericName}<{string.Join(", ", type.GetGenericArguments().Select((ta,i) => isOpenGeneric ? $"T{i}" : FormGenericFullNameOnly(ta, isOpenGeneric)))}>";
   }
   
-  private string FormGenericNameOnly(Type type)
+  private string FormGenericNameOnly(Type type, bool isOpenGeneric)
   {
+    if (type.IsGenericParameter)
+    {
+      return type.Name;
+    }
+    var t = RenderType(type, false);
+    if (isOpenGeneric)
+    {
+      type = t;
+    }
     if (!type.IsGenericType)
     {
       return type.Name.NotNull();
     }
 
     var nonGenericName = type.Name.Split('`').First();
-    return $"{nonGenericName}<{string.Join(", ", type.GetGenericArguments().Select((ta,i) => $"T{i}"))}>";
+    return $"{nonGenericName}<{string.Join(", ", type.GetGenericArguments().Select(ta =>ta.Name))}>";
   }
   
   private string FormNameOnly(Type type)
@@ -86,4 +110,6 @@ public partial class Generator
       "lock" or "params" or "string" or "override" => "@" + name,
       _ => name
     };
+
+  private string GetName(Type type) => type.FullName ?? type.Name;
 }

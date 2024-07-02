@@ -87,9 +87,13 @@ public partial class Generator
     {
       throw new ApplicationException($"Type is excluded: {type.FullName}");
     }
+    if (type.IsGenericParameter)
+    {
+      return type;
+    }
     if (type.FullName is null)
     {
-      throw new ApplicationException("Type has a null full name");
+      return type;
     }
     if (type.FullName.StartsWith("System.Drawing."))
     {

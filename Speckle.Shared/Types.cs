@@ -99,7 +99,7 @@ public partial class Generator
       sb.AppendLine($"{leading}public partial class {FormNameOnly(declaringClass)}");
       sb.AppendLine($"{leading}{{");
     }
-    sb.Append($"{leading}public partial class {FormGenericNameOnly(clazz)}");
+    sb.Append($"{leading}public partial class {FormGenericNameOnly(clazz, false)}");
     string? baseClazz = null;
     bool appended = false;
     bool isFirst = true;
@@ -154,7 +154,7 @@ public partial class Generator
   {
     StringBuilder sb = new();
     sb.AppendLine($"namespace {clazz.Namespace};").AppendLine();
-    sb.Append($"public partial interface {FormGenericNameOnly(clazz)}");
+    sb.Append($"public partial interface {FormGenericNameOnly(clazz, false)}");
     var (constructors, members) = WriteTypeBody(sb, clazz, GeneratedType.Interface);
     return (sb.ToString(), new(clazz.FullName, null, constructors, members));
   }
