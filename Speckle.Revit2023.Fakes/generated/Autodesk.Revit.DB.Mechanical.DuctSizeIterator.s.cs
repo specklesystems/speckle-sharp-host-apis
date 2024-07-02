@@ -1,6 +1,9 @@
 namespace Autodesk.Revit.DB.Mechanical;
 
-public partial class DuctSizeIterator : System.Collections.Generic.IEnumerator<Autodesk.Revit.DB.MEPSize>
+public partial class DuctSizeIterator
+  : System.Collections.Generic.IEnumerator<Autodesk.Revit.DB.MEPSize>,
+    System.IDisposable,
+    System.Collections.IEnumerator
 {
   public DuctSizeIterator() { }
 

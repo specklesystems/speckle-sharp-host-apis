@@ -3,6 +3,13 @@ using System.Text;
 
 namespace Speckle.Shared;
 
+[Flags]
+public enum GeneratorOptions
+{
+  None = 0,
+  ExplicitProperties = 1,
+}
+
 public partial class Generator
 {
   private readonly Dictionary<string, bool> _boolDone = new();
@@ -11,13 +18,21 @@ public partial class Generator
   private readonly Assembly[] _assemblies;
   private readonly string[] _namespaces;
   private readonly ExcludedType[] _excludedTypes;
+  private readonly GeneratorOptions _options;
 
-  public Generator(string path, Assembly[] assemblies, string[] namespaces, ExcludedType[] excludedTypes)
+  public Generator(
+    string path,
+    Assembly[] assemblies,
+    string[] namespaces,
+    ExcludedType[] excludedTypes,
+    GeneratorOptions options = GeneratorOptions.None
+  )
   {
     _path = Path.Combine(Environment.CurrentDirectory, "..", "..", "..", "..", path, "generated");
     _assemblies = assemblies;
     _namespaces = namespaces;
     _excludedTypes = excludedTypes;
+    _options = options;
     AppDomain.CurrentDomain.ReflectionOnlyAssemblyResolve += CurrentDomainOnReflectionOnlyAssemblyResolve;
   }
 
@@ -67,11 +82,11 @@ public partial class Generator
       .Where(x => x.IsPublic)
       .Where(x => _namespaces.Any(y => x.FullName?.StartsWith(y) ?? false))
       .ToList();
-    foreach (var type in definedTypes) //.Where(x => x.FullName.EndsWith("DockablePaneId")))
+    foreach (var type in definedTypes) //.Where(x => x.FullName.EndsWith("NurbsSurface")))
     {
       try
       {
-        RenderType(type);
+        RenderType(type, false);
       }
       catch (ApplicationException)
       {
@@ -81,19 +96,23 @@ public partial class Generator
     }
   }
 
-  private Type RenderType(Type type)
+  private Type RenderType(Type type, bool isOpenGeneric)
   {
     if (IsExcluded(type.Name, string.Empty))
     {
       throw new ApplicationException($"Type is excluded: {type.FullName}");
     }
+    if (type.IsGenericParameter)
+    {
+      return type;
+    }
     if (type.FullName is null)
     {
-      throw new ApplicationException("Type has a null full name");
+      return type;
     }
     if (type.FullName.StartsWith("System.Drawing."))
     {
-      throw new ApplicationException($"Not dealing with base types: {type.FullName}");
+      return type;
     }
     if (type.FullName.StartsWith("System.Windows") || type.FullName.StartsWith("System.MulticastDelegate"))
     {
@@ -106,6 +125,16 @@ public partial class Generator
     if (!_namespaces.Contains(type.Namespace))
     {
       return type;
+    }
+
+    if (type.IsArray)
+    {
+      return RenderType(type.GetElementType().NotNull(), isOpenGeneric);
+    }
+
+    if (type.IsGenericType)
+    {
+      type = type.GetGenericTypeDefinition();
     }
 
     if (_boolDone.TryGetValue(type.FullName, out var isDone))

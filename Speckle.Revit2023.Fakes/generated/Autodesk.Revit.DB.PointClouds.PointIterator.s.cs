@@ -1,6 +1,9 @@
 namespace Autodesk.Revit.DB.PointClouds;
 
-public partial class PointIterator : System.Collections.Generic.IEnumerator<Autodesk.Revit.DB.PointClouds.CloudPoint>
+public partial class PointIterator
+  : System.Collections.Generic.IEnumerator<Autodesk.Revit.DB.PointClouds.CloudPoint>,
+    System.IDisposable,
+    System.Collections.IEnumerator
 {
   public PointIterator() { }
 

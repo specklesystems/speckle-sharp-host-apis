@@ -52,6 +52,9 @@ public partial class NumberingSchema : Autodesk.Revit.DB.Element
     System.String partitionName
   ) => throw new System.NotImplementedException();
 
+  public static System.Boolean IsValidPartitionName(System.String name, out System.String message) =>
+    throw new System.NotImplementedException();
+
   public static System.Int32 MaximumStartingNumber
   {
     get => throw new System.NotImplementedException();

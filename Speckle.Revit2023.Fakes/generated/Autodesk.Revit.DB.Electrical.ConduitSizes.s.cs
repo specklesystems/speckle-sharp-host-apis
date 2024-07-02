@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB.Electrical;
 
 public partial class ConduitSizes
   : System.Collections.Generic.IEnumerable<Autodesk.Revit.DB.Electrical.ConduitSize>,
+    System.Collections.IEnumerable,
     System.IDisposable
 {
   public ConduitSizes() { }

@@ -4,7 +4,9 @@ public partial class ExportPatternTableIterator
   : System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValuePair<
     Autodesk.Revit.DB.ExportPatternKey,
     Autodesk.Revit.DB.ExportPatternInfo
-  >>
+  >>,
+    System.IDisposable,
+    System.Collections.IEnumerator
 {
   public ExportPatternTableIterator() { }
 

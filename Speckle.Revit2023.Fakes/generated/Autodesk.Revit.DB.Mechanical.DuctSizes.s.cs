@@ -1,6 +1,9 @@
 namespace Autodesk.Revit.DB.Mechanical;
 
-public partial class DuctSizes : System.Collections.Generic.IEnumerable<Autodesk.Revit.DB.MEPSize>, System.IDisposable
+public partial class DuctSizes
+  : System.Collections.Generic.IEnumerable<Autodesk.Revit.DB.MEPSize>,
+    System.Collections.IEnumerable,
+    System.IDisposable
 {
   public DuctSizes() { }
 

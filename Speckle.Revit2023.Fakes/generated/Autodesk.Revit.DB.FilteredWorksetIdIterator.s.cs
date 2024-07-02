@@ -1,6 +1,9 @@
 namespace Autodesk.Revit.DB;
 
-public partial class FilteredWorksetIdIterator : System.Collections.Generic.IEnumerator<Autodesk.Revit.DB.WorksetId>
+public partial class FilteredWorksetIdIterator
+  : System.Collections.Generic.IEnumerator<Autodesk.Revit.DB.WorksetId>,
+    System.IDisposable,
+    System.Collections.IEnumerator
 {
   public FilteredWorksetIdIterator() { }
 

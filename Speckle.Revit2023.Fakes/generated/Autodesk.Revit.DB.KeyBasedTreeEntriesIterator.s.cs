@@ -1,7 +1,9 @@
 namespace Autodesk.Revit.DB;
 
 public partial class KeyBasedTreeEntriesIterator
-  : System.Collections.Generic.IEnumerator<Autodesk.Revit.DB.KeyBasedTreeEntry>
+  : System.Collections.Generic.IEnumerator<Autodesk.Revit.DB.KeyBasedTreeEntry>,
+    System.IDisposable,
+    System.Collections.IEnumerator
 {
   public KeyBasedTreeEntriesIterator() { }
 

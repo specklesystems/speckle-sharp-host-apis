@@ -4,6 +4,9 @@ public partial class ElementType : Autodesk.Revit.DB.Element
 {
   public ElementType() { }
 
+  public virtual System.Drawing.Bitmap GetPreviewImage(System.Drawing.Size size) =>
+    throw new System.NotImplementedException();
+
   public virtual System.Boolean IsSimilarType(Autodesk.Revit.DB.ElementId typeId) =>
     throw new System.NotImplementedException();
 

@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class Definitions
   : System.Collections.Generic.IEnumerable<Autodesk.Revit.DB.Definition>,
+    System.Collections.IEnumerable,
     System.IDisposable
 {
   public Definitions() { }

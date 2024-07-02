@@ -1,7 +1,9 @@
 namespace Autodesk.Revit.DB.Electrical;
 
 public partial class ConduitSizeIterator
-  : System.Collections.Generic.IEnumerator<Autodesk.Revit.DB.Electrical.ConduitSize>
+  : System.Collections.Generic.IEnumerator<Autodesk.Revit.DB.Electrical.ConduitSize>,
+    System.IDisposable,
+    System.Collections.IEnumerator
 {
   public ConduitSizeIterator() { }
 

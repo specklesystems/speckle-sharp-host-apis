@@ -4,7 +4,9 @@ public partial class ExportLineweightTableIterator
   : System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValuePair<
     Autodesk.Revit.DB.ExportLineweightKey,
     Autodesk.Revit.DB.ExportLineweightInfo
-  >>
+  >>,
+    System.IDisposable,
+    System.Collections.IEnumerator
 {
   public ExportLineweightTableIterator() { }
 

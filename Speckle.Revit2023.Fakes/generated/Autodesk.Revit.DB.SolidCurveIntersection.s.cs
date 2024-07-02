@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class SolidCurveIntersection
   : System.Collections.Generic.IEnumerable<Autodesk.Revit.DB.Curve>,
+    System.Collections.IEnumerable,
     System.IDisposable
 {
   public SolidCurveIntersection() { }

@@ -8,12 +8,14 @@ public partial class Generator
   private List<GeneratedMember> WriteMethods(StringBuilder sb, Type clazz, GeneratedType generatedType)
   {
     var members = new List<GeneratedMember>();
-
-    foreach (
-      var method in clazz.GetMethods(
-        BindingFlags.Instance | BindingFlags.Static | BindingFlags.DeclaredOnly | BindingFlags.Public
-      )
-    )
+    var publicMethods = clazz.GetMethods(
+      BindingFlags.Instance | BindingFlags.Static | BindingFlags.DeclaredOnly | BindingFlags.Public
+    );
+    var explicitMethods = clazz
+      .GetMethods(BindingFlags.NonPublic | BindingFlags.DeclaredOnly | BindingFlags.Instance)
+      .Where(mi => IsExplicit(mi.Name))
+      .ToArray();
+    foreach (var method in publicMethods.Concat(explicitMethods))
     {
       if (IsExcluded(clazz.Name, method.Name))
       {
@@ -21,16 +23,22 @@ public partial class Generator
       }
       try
       {
-        var parameters = method.GetParameters();
-
         if (method.IsSpecialName)
         {
-          if (
-            (method.Name.StartsWith("get_") && parameters.Any())
-            || (method.Name.StartsWith("set_") && parameters.Length != 1)
-          )
+          if (_options.HasFlag(GeneratorOptions.ExplicitProperties))
           {
-            //valid
+            var parameters = method.GetParameters();
+            if (
+              (method.Name.StartsWith("get_") && parameters.Any())
+              || (method.Name.StartsWith("set_") && parameters.Length != 1)
+            )
+            {
+              //valid
+            }
+            else
+            {
+              continue;
+            }
           }
           else
           {
@@ -40,7 +48,7 @@ public partial class Generator
 
         var methodSb = new StringBuilder();
         methodSb.Append("\t");
-        WriteMethod(methodSb, method, generatedType);
+        WriteMethod(methodSb, method, generatedType, false);
         sb.Append(methodSb);
         members.Add(new(method.Name));
       }
@@ -57,7 +65,7 @@ public partial class Generator
     return members;
   }
 
-  private void WriteMethod(StringBuilder sb, MethodInfo methodInfo, GeneratedType generatedType)
+  private void WriteMethod(StringBuilder sb, MethodInfo methodInfo, GeneratedType generatedType, bool nullable)
   {
     if (methodInfo.GetBaseDefinition().DeclaringType != methodInfo.DeclaringType)
     {
@@ -65,7 +73,12 @@ public partial class Generator
     }
 
     var extras = string.Empty;
-    if (generatedType != GeneratedType.Interface)
+    if (methodInfo.IsStatic)
+    {
+      extras = "static";
+    }
+
+    if (generatedType == GeneratedType.Class)
     {
       extras = "virtual";
       if (methodInfo.IsStatic)
@@ -79,15 +92,31 @@ public partial class Generator
       }
     }
 
-    sb.Append($"public {extras} {ReturnType(methodInfo.ReturnType)} {methodInfo.Name}(");
-    WriteMethodBody(sb, methodInfo.GetParameters(), null, generatedType);
+    var genericArguments = methodInfo.GetGenericArguments();
+    var genericString = string.Empty;
+    if (genericArguments.Any())
+    {
+      genericString = $"<{string.Join(", ", genericArguments.Select((ta, i) => ta.Name))}>";
+    }
+
+    if (methodInfo.Name.Contains("."))
+    {
+      sb.Append($"{ReturnType(methodInfo.ReturnType, nullable)} {methodInfo.Name}{genericString}(");
+    }
+    else
+    {
+      sb.Append($"public {extras} {ReturnType(methodInfo.ReturnType, nullable)} {methodInfo.Name}{genericString}(");
+    }
+
+    WriteMethodBody(sb, methodInfo.GetParameters(), null, generatedType, nullable);
   }
 
   private void WriteMethodBody(
     StringBuilder sb,
     ParameterInfo[] parameterInfos,
     Type? baseType,
-    GeneratedType generatedType
+    GeneratedType generatedType,
+    bool nullable
   )
   {
     bool isFirst = true;
@@ -101,7 +130,9 @@ public partial class Generator
       {
         sb.Append(",");
       }
-      sb.Append(ParameterType(parameter.ParameterType)).Append(" ").Append(FixName(parameter.Name));
+      sb.Append(ParameterType(parameter.ParameterType, parameter.IsOut, nullable))
+        .Append(" ")
+        .Append(FixName(parameter.Name));
     }
 
     if (baseType is not null)

@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class FilteredWorksetCollector
   : System.Collections.Generic.IEnumerable<Autodesk.Revit.DB.Workset>,
+    System.Collections.IEnumerable,
     System.IDisposable
 {
   public FilteredWorksetCollector() { }

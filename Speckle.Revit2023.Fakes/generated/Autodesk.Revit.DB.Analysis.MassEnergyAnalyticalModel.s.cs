@@ -25,6 +25,11 @@ public partial class MassEnergyAnalyticalModel : Autodesk.Revit.DB.Element
     Autodesk.Revit.DB.ElementId massInstanceId
   ) => throw new System.NotImplementedException();
 
+  public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.ElementId> GetValidSurfaceCategoryIdsForReference(
+    Autodesk.Revit.DB.Reference reference,
+    out Autodesk.Revit.DB.ElementId recommendedDefaultSubcategoryId
+  ) => throw new System.NotImplementedException();
+
   public virtual System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> GetJoinedMassEnergyAnalyticalModelElementIds() =>
     throw new System.NotImplementedException();
 

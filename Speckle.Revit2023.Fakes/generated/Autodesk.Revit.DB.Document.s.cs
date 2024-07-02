@@ -33,6 +33,13 @@ public partial class Document : System.IDisposable
     Autodesk.Revit.DB.DWFImportOptions options
   ) => throw new System.NotImplementedException();
 
+  public virtual System.Boolean Link(
+    System.String file,
+    Autodesk.Revit.DB.DGNImportOptions options,
+    Autodesk.Revit.DB.View pDBView,
+    out Autodesk.Revit.DB.ElementId elementId
+  ) => throw new System.NotImplementedException();
+
   public virtual Autodesk.Revit.DB.ElementId Link(
     System.String file,
     Autodesk.Revit.DB.ImportOptions3DM options,
@@ -61,6 +68,13 @@ public partial class Document : System.IDisposable
     System.String file,
     Autodesk.Revit.DB.SATImportOptions options,
     Autodesk.Revit.DB.View pDBView
+  ) => throw new System.NotImplementedException();
+
+  public virtual System.Boolean Link(
+    System.String file,
+    Autodesk.Revit.DB.DWGImportOptions options,
+    Autodesk.Revit.DB.View pDBView,
+    out Autodesk.Revit.DB.ElementId elementId
   ) => throw new System.NotImplementedException();
 
   public virtual Autodesk.Revit.DB.ElementId SaveToProjectAsImage(Autodesk.Revit.DB.ImageExportOptions options) =>
@@ -207,10 +221,32 @@ public partial class Document : System.IDisposable
   public virtual Autodesk.Revit.DB.Family LoadFamily(Autodesk.Revit.DB.Document targetDocument) =>
     throw new System.NotImplementedException();
 
+  public virtual System.Boolean LoadFamily(
+    System.String filename,
+    Autodesk.Revit.DB.IFamilyLoadOptions familyLoadOptions,
+    out Autodesk.Revit.DB.Family family
+  ) => throw new System.NotImplementedException();
+
+  public virtual System.Boolean LoadFamily(System.String filename, out Autodesk.Revit.DB.Family family) =>
+    throw new System.NotImplementedException();
+
   public virtual System.Boolean LoadFamily(System.String filename) => throw new System.NotImplementedException();
 
   public virtual Autodesk.Revit.DB.Document EditFamily(Autodesk.Revit.DB.Family loadedFamily) =>
     throw new System.NotImplementedException();
+
+  public virtual System.Boolean LoadFamilySymbol(
+    System.String filename,
+    System.String name,
+    Autodesk.Revit.DB.IFamilyLoadOptions familyLoadOptions,
+    out Autodesk.Revit.DB.FamilySymbol symbol
+  ) => throw new System.NotImplementedException();
+
+  public virtual System.Boolean LoadFamilySymbol(
+    System.String filename,
+    System.String name,
+    out Autodesk.Revit.DB.FamilySymbol symbol
+  ) => throw new System.NotImplementedException();
 
   public virtual System.Boolean LoadFamilySymbol(System.String filename, System.String name) =>
     throw new System.NotImplementedException();
@@ -341,6 +377,13 @@ public partial class Document : System.IDisposable
     Autodesk.Revit.DB.View pDBView
   ) => throw new System.NotImplementedException();
 
+  public virtual System.Boolean Import(
+    System.String file,
+    Autodesk.Revit.DB.DGNImportOptions options,
+    Autodesk.Revit.DB.View pDBView,
+    out Autodesk.Revit.DB.ElementId elementId
+  ) => throw new System.NotImplementedException();
+
   public virtual Autodesk.Revit.DB.ElementId Import(
     System.String file,
     Autodesk.Revit.DB.ImportOptions3DM options,
@@ -369,6 +412,13 @@ public partial class Document : System.IDisposable
     System.String file,
     Autodesk.Revit.DB.SATImportOptions options,
     Autodesk.Revit.DB.View pDBView
+  ) => throw new System.NotImplementedException();
+
+  public virtual System.Boolean Import(
+    System.String file,
+    Autodesk.Revit.DB.DWGImportOptions options,
+    Autodesk.Revit.DB.View pDBView,
+    out Autodesk.Revit.DB.ElementId elementId
   ) => throw new System.NotImplementedException();
 
   public virtual System.Boolean Import(System.String file, Autodesk.Revit.DB.GBXMLImportOptions options) =>

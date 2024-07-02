@@ -4,7 +4,9 @@ public partial class ConduitSizeSettingIterator
   : System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValuePair<
     System.String,
     Autodesk.Revit.DB.Electrical.ConduitSizes
-  >>
+  >>,
+    System.IDisposable,
+    System.Collections.IEnumerator
 {
   public ConduitSizeSettingIterator() { }
 

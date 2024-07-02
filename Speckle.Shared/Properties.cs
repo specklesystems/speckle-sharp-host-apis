@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+using System.Reflection;
 using System.Text;
 
 namespace Speckle.Shared;
@@ -8,11 +8,18 @@ public partial class Generator
   private List<GeneratedMember> WriteProperties(StringBuilder sb, Type clazz, GeneratedType generatedType)
   {
     var properities = new List<GeneratedMember>();
-    foreach (
-      var propertyInfo in clazz.GetProperties(
-        BindingFlags.Instance | BindingFlags.Static | BindingFlags.DeclaredOnly | BindingFlags.Public
-      )
-    )
+    var publicProperties = clazz.GetProperties(
+      BindingFlags.Instance | BindingFlags.Static | BindingFlags.DeclaredOnly | BindingFlags.Public
+    );
+    var explicitProperties = clazz
+      .GetProperties(BindingFlags.NonPublic | BindingFlags.DeclaredOnly | BindingFlags.Instance)
+      .Where(mi =>
+      {
+        int dot = mi.Name.LastIndexOf('.');
+        return dot > -1;
+      })
+      .ToArray();
+    foreach (var propertyInfo in publicProperties.Concat(explicitProperties))
     {
       if (IsExcluded(clazz.Name, propertyInfo.Name))
       {
@@ -41,10 +48,10 @@ public partial class Generator
   private void WriteProperty(StringBuilder sb, PropertyInfo propertyInfo, GeneratedType generatedType)
   {
     var wrotePropHeader = false;
-    var getMethod = propertyInfo.GetGetMethod(false);
+    var getMethod = propertyInfo.GetGetMethod(true);
     if (getMethod is not null)
     {
-      if (getMethod.GetParameters().Any())
+      if (_options.HasFlag(GeneratorOptions.ExplicitProperties) && getMethod.GetParameters().Any())
       {
         throw new ApplicationException($"getter has parameters {propertyInfo.Name}");
       }
@@ -63,11 +70,11 @@ public partial class Generator
         sb.AppendLine("\t\tget => throw new System.NotImplementedException();");
       }
     }
-    var setMethod = propertyInfo.GetSetMethod(false);
+    var setMethod = propertyInfo.GetSetMethod(true);
     if (setMethod is not null)
     {
       var parameters = setMethod.GetParameters();
-      if (parameters.Length > 1)
+      if (_options.HasFlag(GeneratorOptions.ExplicitProperties) && parameters.Length > 1)
       {
         throw new ApplicationException($"setter has more than one parameter {propertyInfo.Name}");
       }
@@ -93,7 +100,15 @@ public partial class Generator
         sb.AppendLine("\t\tset {}");
       }
     }
-    sb.AppendLine("\t}");
+
+    if (getMethod is not null || setMethod is not null)
+    {
+      sb.AppendLine("\t}");
+    }
+    else
+    {
+      Console.WriteLine();
+    }
   }
 
   private void WritePropertyHeader(
@@ -105,14 +120,15 @@ public partial class Generator
     Type returnType
   )
   {
+    var isIndexer = (property.Name.Length == 4 && property.Name.Equals("Item")) || property.Name.EndsWith(".Item");
     var extra = string.Empty;
+    if (isStatic)
+    {
+      extra += "static";
+    }
     if (generatedType == GeneratedType.Class)
     {
-      if (isStatic)
-      {
-        extra += "static ";
-      }
-      else
+      if (!isStatic)
       {
         extra = isOverriden ? "override" : "virtual";
         if (IsMemberOnBaseClass(property.DeclaringType?.BaseType?.FullName, new(property.Name)))
@@ -122,7 +138,27 @@ public partial class Generator
       }
     }
 
-    sb.AppendLine($"public {extra} {ReturnType(returnType)} {property.Name}");
+    ParameterInfo[] p = [];
+    if (isIndexer)
+    {
+      p = property.GetIndexParameters();
+    }
+
+    if (IsExplicit(property.Name))
+    {
+      var name = isIndexer
+        ? $"{property.Name.Substring(0, property.Name.Length - 4)}this[{ParameterType(p[0].ParameterType, false, false)} {FixName(p[0].Name)}]"
+        : property.Name;
+      sb.AppendLine($"{ReturnType(returnType, false)} {name}");
+    }
+    else
+    {
+      var name = isIndexer
+        ? $"this[{ParameterType(p[0].ParameterType, false, false)} {FixName(p[0].Name)}]"
+        : property.Name;
+      sb.AppendLine($"public {extra} {ReturnType(returnType, false)} {name}");
+    }
+
     sb.AppendLine("\t{");
   }
 }

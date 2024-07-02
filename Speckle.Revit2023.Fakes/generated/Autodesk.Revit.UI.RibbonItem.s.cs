@@ -41,5 +41,6 @@ public partial class RibbonItem
   public virtual System.String Name
   {
     get => throw new System.NotImplementedException();
+    set { }
   }
 }

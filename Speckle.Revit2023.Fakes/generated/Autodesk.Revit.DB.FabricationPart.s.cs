@@ -75,6 +75,13 @@ public partial class FabricationPart : Autodesk.Revit.DB.Element
   public virtual System.Boolean IsProductListEntryCompatibleSize(System.Int32 productEntry) =>
     throw new System.NotImplementedException();
 
+  public static Autodesk.Revit.DB.Fabrication.FabricationPartFitResult StretchAndFit(
+    Autodesk.Revit.DB.Document document,
+    Autodesk.Revit.DB.Connector stretchConnector,
+    Autodesk.Revit.DB.Fabrication.FabricationPartRouteEnd target,
+    out System.Collections.Generic.ISet<Autodesk.Revit.DB.ElementId> newPartIds
+  ) => throw new System.NotImplementedException();
+
   public static System.Collections.Generic.ISet<Autodesk.Revit.DB.ElementId> SaveAsFabricationJob(
     Autodesk.Revit.DB.Document document,
     System.Collections.Generic.ISet<Autodesk.Revit.DB.ElementId> ids,

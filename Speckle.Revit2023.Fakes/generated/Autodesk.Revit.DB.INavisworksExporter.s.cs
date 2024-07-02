@@ -8,4 +8,11 @@ public partial interface INavisworksExporter
     System.String name,
     Autodesk.Revit.DB.NavisworksExportOptions options
   );
+  public System.Boolean ValidateExportOptions(
+    Autodesk.Revit.DB.Document document,
+    System.String folder,
+    System.String name,
+    Autodesk.Revit.DB.NavisworksExportOptions options,
+    out System.String exceptionMessage
+  );
 }

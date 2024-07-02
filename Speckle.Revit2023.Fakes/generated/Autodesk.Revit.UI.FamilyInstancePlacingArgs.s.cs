@@ -28,5 +28,6 @@ public partial class FamilyInstancePlacingArgs : System.IDisposable
   public virtual Autodesk.Revit.DB.View ActiveView
   {
     get => throw new System.NotImplementedException();
+    set { }
   }
 }

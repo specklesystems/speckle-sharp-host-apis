@@ -5,6 +5,7 @@ public partial class ExportLayerTable
     Autodesk.Revit.DB.ExportLayerKey,
     Autodesk.Revit.DB.ExportLayerInfo
   >>,
+    System.Collections.IEnumerable,
     System.IDisposable
 {
   public ExportLayerTable() { }

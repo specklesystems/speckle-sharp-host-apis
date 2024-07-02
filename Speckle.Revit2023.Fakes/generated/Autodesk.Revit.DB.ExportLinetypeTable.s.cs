@@ -5,6 +5,7 @@ public partial class ExportLinetypeTable
     Autodesk.Revit.DB.ExportLinetypeKey,
     Autodesk.Revit.DB.ExportLinetypeInfo
   >>,
+    System.Collections.IEnumerable,
     System.IDisposable
 {
   public ExportLinetypeTable() { }

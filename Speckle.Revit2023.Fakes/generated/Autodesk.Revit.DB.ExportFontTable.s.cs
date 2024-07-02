@@ -5,6 +5,7 @@ public partial class ExportFontTable
     Autodesk.Revit.DB.ExportFontKey,
     Autodesk.Revit.DB.ExportFontInfo
   >>,
+    System.Collections.IEnumerable,
     System.IDisposable
 {
   public ExportFontTable() { }

@@ -1,7 +1,9 @@
 namespace Autodesk.Revit.DB;
 
 public partial class ComponentRepeaterIterator
-  : System.Collections.Generic.IEnumerator<Autodesk.Revit.DB.ComponentRepeaterSlot>
+  : System.Collections.Generic.IEnumerator<Autodesk.Revit.DB.ComponentRepeaterSlot>,
+    System.IDisposable,
+    System.Collections.IEnumerator
 {
   public ComponentRepeaterIterator() { }
 

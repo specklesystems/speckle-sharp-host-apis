@@ -4,7 +4,9 @@ public partial class ExportFontTableIterator
   : System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValuePair<
     Autodesk.Revit.DB.ExportFontKey,
     Autodesk.Revit.DB.ExportFontInfo
-  >>
+  >>,
+    System.IDisposable,
+    System.Collections.IEnumerator
 {
   public ExportFontTableIterator() { }
 

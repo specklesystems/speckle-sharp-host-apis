@@ -37,6 +37,7 @@ Generator generator =
       new("RebarSystemSpanSymbol", [new("Create")]),
       new("ProjectInfo", [new("Name")]),
       new("ImageView", [new("Create")])
-    ]
+    ],
+    GeneratorOptions.ExplicitProperties
   );
 generator.Generate();

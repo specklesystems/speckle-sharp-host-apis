@@ -4,6 +4,11 @@ public partial class FabricationServiceButton : System.IDisposable
 {
   public FabricationServiceButton() { }
 
+  public virtual System.Drawing.Bitmap GetImage() => throw new System.NotImplementedException();
+
+  public virtual System.Drawing.Bitmap GetConditionImage(System.Int32 condition) =>
+    throw new System.NotImplementedException();
+
   public static System.Boolean IsValidConditionIndex(
     Autodesk.Revit.DB.FabricationServiceButton button,
     System.Int32 condition
