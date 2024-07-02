@@ -110,8 +110,50 @@ public partial class Generator
       appended = true;
       isFirst = false;
     }
+
+    var interfaces = GetInterfaces(clazz);
+    if (interfaces.Any())
+    {
+      if (!appended)
+      {
+        sb.Append(" : ");
+      }
+      foreach (var i in interfaces)
+      {
+        if (!isFirst)
+        {
+          sb.Append(",");
+        }
+        else
+        {
+          isFirst = false;
+        }
+        sb.Append(FormGenericType(i, isOpenGeneric));
+      }
+    }
+
+    var (constructors, members) = WriteTypeBody(sb, clazz, GeneratedType.Class);
+    if (declaringClass is not null)
+    {
+      sb.AppendLine("}");
+    }
+    return (sb.ToString(), new(clazz.FullName, baseClazz, constructors, members));
+  }
+
+  private List<Type> GetInterfaces(Type clazz)
+  {
     var interfaces = clazz.GetInterfaces().Except(clazz.BaseType?.GetInterfaces() ?? Enumerable.Empty<Type>()).ToList();
-    interfaces = interfaces.Except(interfaces.SelectMany(i => i.GetInterfaces())).ToList();
+    return interfaces.Except(interfaces.SelectMany(i => i.GetInterfaces())).ToList();
+  }
+  private (string, GeneratedTypeInfo) WriteStruct(Type clazz)
+  {
+
+    StringBuilder sb = new();
+    sb.AppendLine($"namespace {clazz.Namespace};").AppendLine();
+    sb.Append($"public partial struct {clazz.Name}");
+    bool appended = false;
+    bool isFirst = true;
+    var interfaces = GetInterfaces(clazz);
     if (interfaces.Any())
     {
       if (!appended)
@@ -129,23 +171,9 @@ public partial class Generator
           ;
           isFirst = false;
         }
-        sb.Append(FormGenericType(i, isOpenGeneric));
+        sb.Append(FormGenericType(i, false));
       }
     }
-
-    var (constructors, members) = WriteTypeBody(sb, clazz, GeneratedType.Class);
-    if (declaringClass is not null)
-    {
-      sb.AppendLine("}");
-    }
-    return (sb.ToString(), new(clazz.FullName, baseClazz, constructors, members));
-  }
-
-  private (string, GeneratedTypeInfo) WriteStruct(Type clazz)
-  {
-    StringBuilder sb = new();
-    sb.AppendLine($"namespace {clazz.Namespace};").AppendLine();
-    sb.Append($"public partial struct {clazz.Name}");
     var (constructors, members) = WriteTypeBody(sb, clazz, GeneratedType.Struct);
     return (sb.ToString(), new(clazz.FullName, null, constructors, members));
   }

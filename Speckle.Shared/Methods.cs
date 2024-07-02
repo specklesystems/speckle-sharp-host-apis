@@ -8,12 +8,12 @@ public partial class Generator
   private List<GeneratedMember> WriteMethods(StringBuilder sb, Type clazz, GeneratedType generatedType)
   {
     var members = new List<GeneratedMember>();
-
-    foreach (
-      var method in clazz.GetMethods(
-        BindingFlags.Instance | BindingFlags.Static | BindingFlags.DeclaredOnly | BindingFlags.Public
-      )
-    )
+    var publicMethods = clazz.GetMethods(
+      BindingFlags.Instance | BindingFlags.Static | BindingFlags.DeclaredOnly | BindingFlags.Public
+    );
+    var explicitMethods = clazz.GetMethods(BindingFlags.NonPublic| BindingFlags.DeclaredOnly  | BindingFlags.Instance)
+      .Where(mi => IsExplicit(mi.Name)).ToArray();
+    foreach (var method in publicMethods.Concat(explicitMethods))
     {
       if (IsExcluded(clazz.Name, method.Name))
       {
@@ -25,17 +25,8 @@ public partial class Generator
 
         if (method.IsSpecialName)
         {
-          if (
-            (method.Name.StartsWith("get_") && parameters.Any())
-            || (method.Name.StartsWith("set_") && parameters.Length != 1)
-          )
-          {
-            //valid
-          }
-          else
-          {
             continue;
-          }
+          
         }
 
         var methodSb = new StringBuilder();
@@ -87,7 +78,15 @@ public partial class Generator
       
     }
 
-    sb.Append($"public {extras} {ReturnType(methodInfo.ReturnType, nullable)} {methodInfo.Name}{genericString}(");
+    if (methodInfo.Name.Contains("."))
+    {
+      sb.Append($"{ReturnType(methodInfo.ReturnType, nullable)} {methodInfo.Name}{genericString}(");
+    }
+    else
+    {
+      sb.Append($"public {extras} {ReturnType(methodInfo.ReturnType, nullable)} {methodInfo.Name}{genericString}(");
+    }
+
     WriteMethodBody(sb, methodInfo.GetParameters(), null, generatedType, nullable);
   }
 

@@ -131,4 +131,10 @@ public partial class Generator
 
     return type.FullName ?? $"{type.Namespace}.{type.Name}";
   }
+
+  public bool IsExplicit(string name)
+  {
+    int dot =name.LastIndexOf('.');
+    return dot > -1;
+  }
 }
