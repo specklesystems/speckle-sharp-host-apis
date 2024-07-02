@@ -2,7 +2,7 @@ namespace Rhino.Geometry;
 
 public enum PipeCapMode
 {
-	None,
-	Flat,
-	Round,
+  None,
+  Flat,
+  Round,
 }

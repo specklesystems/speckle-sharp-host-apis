@@ -2,8 +2,8 @@ namespace Rhino.Display;
 
 public enum StereoContext
 {
-	None,
-	LeftEye,
-	RightEye,
-	BothEyes,
+  None,
+  LeftEye,
+  RightEye,
+  BothEyes,
 }

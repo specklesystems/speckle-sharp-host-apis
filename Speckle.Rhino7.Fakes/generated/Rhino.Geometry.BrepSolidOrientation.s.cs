@@ -2,8 +2,8 @@ namespace Rhino.Geometry;
 
 public enum BrepSolidOrientation
 {
-	None,
-	Inward,
-	Outward,
-	Unknown,
+  None,
+  Inward,
+  Outward,
+  Unknown,
 }

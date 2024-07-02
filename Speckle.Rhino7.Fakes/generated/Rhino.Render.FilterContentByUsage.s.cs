@@ -2,7 +2,7 @@ namespace Rhino.Render;
 
 public enum FilterContentByUsage
 {
-	None,
-	Used,
-	Unused,
+  None,
+  Used,
+  Unused,
 }

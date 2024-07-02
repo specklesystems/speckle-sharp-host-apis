@@ -2,8 +2,8 @@ namespace Rhino.Render;
 
 public enum DecalMapping
 {
-	Planar,
-	Cylindrical,
-	Spherical,
-	UV,
+  Planar,
+  Cylindrical,
+  Spherical,
+  UV,
 }

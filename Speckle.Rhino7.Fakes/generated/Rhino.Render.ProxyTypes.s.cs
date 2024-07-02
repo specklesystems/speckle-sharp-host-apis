@@ -2,8 +2,8 @@ namespace Rhino.Render;
 
 public enum ProxyTypes
 {
-	None,
-	Single,
-	Multi,
-	Texture,
+  None,
+  Single,
+  Multi,
+  Texture,
 }

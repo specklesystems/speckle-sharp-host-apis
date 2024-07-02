@@ -2,10 +2,10 @@ namespace Rhino.DocObjects;
 
 public partial class DimensionStyle
 {
-	public enum CenterMarkStyle
-	{
-		None,
-		Mark,
-		MarkAndLines,
-	}
+  public enum CenterMarkStyle
+  {
+    None,
+    Mark,
+    MarkAndLines,
+  }
 }

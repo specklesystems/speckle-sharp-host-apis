@@ -2,8 +2,8 @@ namespace Rhino.Geometry;
 
 public enum Concavity
 {
-	None,
-	Tangent,
-	Convex,
-	Concave,
+  None,
+  Tangent,
+  Convex,
+  Concave,
 }

@@ -2,7 +2,7 @@ namespace Rhino.Geometry;
 
 public enum SmoothingCoordinateSystem
 {
-	World,
-	CPlane,
-	Object,
+  World,
+  CPlane,
+  Object,
 }

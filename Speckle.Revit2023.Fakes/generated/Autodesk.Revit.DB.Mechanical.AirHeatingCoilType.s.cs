@@ -2,8 +2,8 @@ namespace Autodesk.Revit.DB.Mechanical;
 
 public enum AirHeatingCoilType
 {
-	None,
-	ElectricResistance,
-	Furnace,
-	HotWater,
+  None,
+  ElectricResistance,
+  Furnace,
+  HotWater,
 }

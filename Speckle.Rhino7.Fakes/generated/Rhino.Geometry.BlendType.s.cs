@@ -2,7 +2,7 @@ namespace Rhino.Geometry;
 
 public enum BlendType
 {
-	Chamfer,
-	Fillet,
-	Blend,
+  Chamfer,
+  Fillet,
+  Blend,
 }

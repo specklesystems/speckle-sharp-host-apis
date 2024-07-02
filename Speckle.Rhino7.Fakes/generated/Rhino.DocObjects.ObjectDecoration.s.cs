@@ -2,8 +2,8 @@ namespace Rhino.DocObjects;
 
 public enum ObjectDecoration
 {
-	None,
-	StartArrowhead,
-	EndArrowhead,
-	BothArrowhead,
+  None,
+  StartArrowhead,
+  EndArrowhead,
+  BothArrowhead,
 }

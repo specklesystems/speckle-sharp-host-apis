@@ -2,7 +2,7 @@ namespace Rhino.Geometry;
 
 public enum SweepMiter
 {
-	None,
-	Trimmed,
-	Untrimmed,
+  None,
+  Trimmed,
+  Untrimmed,
 }

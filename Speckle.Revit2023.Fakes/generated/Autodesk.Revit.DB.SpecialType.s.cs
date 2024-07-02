@@ -2,9 +2,9 @@ namespace Autodesk.Revit.DB;
 
 public enum SpecialType
 {
-	Default,
-	InteriorWall,
-	ExteriorWall,
-	FoundationWall,
-	RetainingWall,
+  Default,
+  InteriorWall,
+  ExteriorWall,
+  FoundationWall,
+  RetainingWall,
 }

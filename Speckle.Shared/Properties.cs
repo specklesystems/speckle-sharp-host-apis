@@ -11,12 +11,14 @@ public partial class Generator
     var publicProperties = clazz.GetProperties(
       BindingFlags.Instance | BindingFlags.Static | BindingFlags.DeclaredOnly | BindingFlags.Public
     );
-    var explicitProperties = clazz.GetProperties(BindingFlags.NonPublic | BindingFlags.DeclaredOnly  | BindingFlags.Instance)
+    var explicitProperties = clazz
+      .GetProperties(BindingFlags.NonPublic | BindingFlags.DeclaredOnly | BindingFlags.Instance)
       .Where(mi =>
       {
         int dot = mi.Name.LastIndexOf('.');
         return dot > -1;
-      }).ToArray();
+      })
+      .ToArray();
     foreach (var propertyInfo in publicProperties.Concat(explicitProperties))
     {
       if (IsExcluded(clazz.Name, propertyInfo.Name))
@@ -110,7 +112,7 @@ public partial class Generator
     Type returnType
   )
   {
-    var isIndexer = (property.Name.Length == 4 && property.Name.Equals("Item")) || property.Name.EndsWith(".Item") ;
+    var isIndexer = (property.Name.Length == 4 && property.Name.Equals("Item")) || property.Name.EndsWith(".Item");
     var extra = string.Empty;
     if (isStatic)
     {
@@ -136,12 +138,16 @@ public partial class Generator
 
     if (IsExplicit(property.Name))
     {
-      var name = isIndexer ? $"{property.Name.Substring(0, property.Name.Length-4)}this[{ParameterType(p[0].ParameterType,false, false)} {FixName(p[0].Name)}]" : property.Name;
+      var name = isIndexer
+        ? $"{property.Name.Substring(0, property.Name.Length - 4)}this[{ParameterType(p[0].ParameterType, false, false)} {FixName(p[0].Name)}]"
+        : property.Name;
       sb.AppendLine($"{ReturnType(returnType, false)} {name}");
     }
     else
     {
-      var name = isIndexer ? $"this[{ParameterType(p[0].ParameterType, false, false)} {FixName(p[0].Name)}]" : property.Name;
+      var name = isIndexer
+        ? $"this[{ParameterType(p[0].ParameterType, false, false)} {FixName(p[0].Name)}]"
+        : property.Name;
       sb.AppendLine($"public {extra} {ReturnType(returnType, false)} {name}");
     }
 

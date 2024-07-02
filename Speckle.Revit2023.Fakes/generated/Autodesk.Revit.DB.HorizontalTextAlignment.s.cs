@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public enum HorizontalTextAlignment
 {
-	Left,
-	Right,
-	Center,
+  Left,
+  Right,
+  Center,
 }

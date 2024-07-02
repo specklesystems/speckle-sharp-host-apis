@@ -2,10 +2,10 @@ namespace Rhino;
 
 public enum RuntimeEnvironment
 {
-	Unset,
-	None,
-	Windows,
-	Apple,
-	Android,
-	Linux,
+  Unset,
+  None,
+  Windows,
+  Apple,
+  Android,
+  Linux,
 }

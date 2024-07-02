@@ -67,7 +67,7 @@ public partial class Generator
       .Where(x => x.IsPublic)
       .Where(x => _namespaces.Any(y => x.FullName?.StartsWith(y) ?? false))
       .ToList();
-    foreach (var type in definedTypes)//.Where(x => x.FullName.EndsWith("NurbsSurface")))
+    foreach (var type in definedTypes) //.Where(x => x.FullName.EndsWith("NurbsSurface")))
     {
       try
       {

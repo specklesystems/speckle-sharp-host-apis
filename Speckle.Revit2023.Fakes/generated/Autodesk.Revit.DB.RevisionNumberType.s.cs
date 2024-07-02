@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public enum RevisionNumberType
 {
-	Numeric,
-	None,
-	Alphanumeric,
+  Numeric,
+  None,
+  Alphanumeric,
 }

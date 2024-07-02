@@ -4,8 +4,7 @@ namespace Speckle.Shared;
 
 public partial class Generator
 {
-  private string ParameterType(Type type, bool isOut,
-    bool nullable)
+  private string ParameterType(Type type, bool isOut, bool nullable)
   {
     if (!isOut && (type.IsByRef || type.IsPointer))
     {
@@ -38,8 +37,7 @@ public partial class Generator
     return name;
   }
 
-  private string ReturnType(Type type,
-    bool nullable)
+  private string ReturnType(Type type, bool nullable)
   {
     if (type == typeof(void))
     {
@@ -65,13 +63,13 @@ public partial class Generator
       return name.Replace('+', '.').NotNull();
     }
 
-    var nonGenericName =name.Split('`').First();
+    var nonGenericName = name.Split('`').First();
     nonGenericName = nonGenericName.Replace('+', '.');
-    
+
     return $"{nonGenericName}<{string.Join(", ", type.GetGenericArguments().Select((ta, i) => isOpenGeneric ? ta.Name : FormGenericFullNameOnly(ta, isOpenGeneric)))}>";
-   // return $"{nonGenericName}<{string.Join(", ", type.GetGenericArguments().Select((ta, i) => isOpenGeneric ? $"T{i}" : FormGenericFullNameOnly(ta, isOpenGeneric)))}>";
+    // return $"{nonGenericName}<{string.Join(", ", type.GetGenericArguments().Select((ta, i) => isOpenGeneric ? $"T{i}" : FormGenericFullNameOnly(ta, isOpenGeneric)))}>";
   }
-  
+
   private string FormGenericFullNameOnly(Type type, bool isOpenGeneric)
   {
     if (type.IsGenericParameter)
@@ -89,9 +87,9 @@ public partial class Generator
       return name;
     }
     var nonGenericName = name.Split('`').First();
-    return $"{nonGenericName}<{string.Join(", ", type.GetGenericArguments().Select((ta,i) => isOpenGeneric ? $"T{i}" : FormGenericFullNameOnly(ta, isOpenGeneric)))}>";
+    return $"{nonGenericName}<{string.Join(", ", type.GetGenericArguments().Select((ta, i) => isOpenGeneric ? $"T{i}" : FormGenericFullNameOnly(ta, isOpenGeneric)))}>";
   }
-  
+
   private string FormGenericNameOnly(Type type, bool isOpenGeneric)
   {
     if (type.IsGenericParameter)
@@ -109,9 +107,9 @@ public partial class Generator
     }
 
     var nonGenericName = type.Name.Split('`').First();
-    return $"{nonGenericName}<{string.Join(", ", type.GetGenericArguments().Select(ta =>ta.Name))}>";
+    return $"{nonGenericName}<{string.Join(", ", type.GetGenericArguments().Select(ta => ta.Name))}>";
   }
-  
+
   private string FormNameOnly(Type type)
   {
     if (!type.IsGenericType)
@@ -134,7 +132,7 @@ public partial class Generator
   {
     if (type.IsGenericParameter || type.ContainsGenericParameters)
     {
-      var isCollection =  type.IsGenericType && (type.GetGenericTypeDefinition() != null);
+      var isCollection = type.IsGenericType && (type.GetGenericTypeDefinition() != null);
       if (!isCollection)
       {
         return type.Name;
@@ -146,7 +144,7 @@ public partial class Generator
 
   public bool IsExplicit(string name)
   {
-    int dot =name.LastIndexOf('.');
+    int dot = name.LastIndexOf('.');
     return dot > -1;
   }
 }

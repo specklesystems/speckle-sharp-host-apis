@@ -2,7 +2,7 @@ namespace Rhino.DocObjects;
 
 public enum HatchPatternFillType
 {
-	Solid,
-	Lines,
-	Gradient,
+  Solid,
+  Lines,
+  Gradient,
 }

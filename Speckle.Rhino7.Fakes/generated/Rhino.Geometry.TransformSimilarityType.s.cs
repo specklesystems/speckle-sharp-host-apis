@@ -2,7 +2,7 @@ namespace Rhino.Geometry;
 
 public enum TransformSimilarityType
 {
-	OrientationReversing,
-	NotSimilarity,
-	OrientationPreserving,
+  OrientationReversing,
+  NotSimilarity,
+  OrientationPreserving,
 }

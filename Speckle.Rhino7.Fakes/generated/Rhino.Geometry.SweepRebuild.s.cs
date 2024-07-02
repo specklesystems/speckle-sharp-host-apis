@@ -2,7 +2,7 @@ namespace Rhino.Geometry;
 
 public enum SweepRebuild
 {
-	None,
-	Rebuild,
-	Refit,
+  None,
+  Rebuild,
+  Refit,
 }

@@ -2,8 +2,8 @@ namespace Rhino.DocObjects;
 
 public enum TextureCombineMode
 {
-	None,
-	Modulate,
-	Decal,
-	Blend,
+  None,
+  Modulate,
+  Decal,
+  Blend,
 }

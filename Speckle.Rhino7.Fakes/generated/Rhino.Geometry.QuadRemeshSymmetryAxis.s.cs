@@ -2,8 +2,8 @@ namespace Rhino.Geometry;
 
 public enum QuadRemeshSymmetryAxis
 {
-	None,
-	X,
-	Y,
-	Z,
+  None,
+  X,
+  Y,
+  Z,
 }

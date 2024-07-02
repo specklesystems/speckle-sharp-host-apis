@@ -2,9 +2,9 @@ namespace Rhino.Render;
 
 public enum CreatePreviewReason
 {
-	ContentChanged,
-	ViewChanged,
-	RefreshDisplay,
-	UpdateBitmap,
-	Other,
+  ContentChanged,
+  ViewChanged,
+  RefreshDisplay,
+  UpdateBitmap,
+  Other,
 }

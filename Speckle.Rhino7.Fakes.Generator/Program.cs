@@ -13,25 +13,36 @@ Generator generator =
     "Speckle.Rhino7.Fakes",
     [GetAssembly("RhinoCommon.dll")],
     [
-      "Rhino","Rhino.Geometry", "Rhino.Collections", "Rhino.Runtime","Rhino.DocObjects","Rhino.Commands","Rhino.Render","Rhino.Display","Rhino.Geometry.Collections"
+      "Rhino",
+      "Rhino.Geometry",
+      "Rhino.Collections",
+      "Rhino.Runtime",
+      "Rhino.DocObjects",
+      "Rhino.Commands",
+      "Rhino.Render",
+      "Rhino.Display",
+      "Rhino.Geometry.Collections"
     ],
     [
-      new ("HostUtils", [new ("GetCustomComputeEndpoints")]),
-      new ("LinearDimension", [new ("AnnotationType")]),
-      new ("InstanceDefinition", [new ("ComponentType")]),
-      new ("Polyline", [new ("Duplicate"), new ("System.ICloneable.Clone")]),
-      new ("RadialDimension", [new ("AnnotationType")]),
-      new ("MaterialRefs", [new ("CopyTo")]),
-      new ("PersistentSettingsConverter", [new ("TryParseStringDictionary"), new ("ToString")]),
-      new ("PersistentSettings", [new ("TryGetStringDictionary"), new ("GetStringDictionary"), new ("SetStringDictionary"), new ("SetDefault")]),
-      new ("Dimension", [new ("TextFormula")]), 
-      new ("CreatePreviewEventArgs", [new ("Objects")]),
-      new ("RunCommandDelegate", []),
-      new ("ArchivableDictionary", []),
-      new ("RenderMaterial", [new ("HandleTexturedValue")]),
-      new ("CustomRenderMeshProvider2", [new ("BoundingBox")]),
-      new ("Color4f", [new ("GetObjectData")]),
-      new ("Point3dList", [new ("Duplicate"), new ("System.ICloneable.Clone")]),
+      new("HostUtils", [new("GetCustomComputeEndpoints")]),
+      new("LinearDimension", [new("AnnotationType")]),
+      new("InstanceDefinition", [new("ComponentType")]),
+      new("Polyline", [new("Duplicate"), new("System.ICloneable.Clone")]),
+      new("RadialDimension", [new("AnnotationType")]),
+      new("MaterialRefs", [new("CopyTo")]),
+      new("PersistentSettingsConverter", [new("TryParseStringDictionary"), new("ToString")]),
+      new(
+        "PersistentSettings",
+        [new("TryGetStringDictionary"), new("GetStringDictionary"), new("SetStringDictionary"), new("SetDefault")]
+      ),
+      new("Dimension", [new("TextFormula")]),
+      new("CreatePreviewEventArgs", [new("Objects")]),
+      new("RunCommandDelegate", []),
+      new("ArchivableDictionary", []),
+      new("RenderMaterial", [new("HandleTexturedValue")]),
+      new("CustomRenderMeshProvider2", [new("BoundingBox")]),
+      new("Color4f", [new("GetObjectData")]),
+      new("Point3dList", [new("Duplicate"), new("System.ICloneable.Clone")]),
     ]
   );
 generator.Generate();

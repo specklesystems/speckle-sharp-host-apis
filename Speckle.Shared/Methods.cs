@@ -11,8 +11,10 @@ public partial class Generator
     var publicMethods = clazz.GetMethods(
       BindingFlags.Instance | BindingFlags.Static | BindingFlags.DeclaredOnly | BindingFlags.Public
     );
-    var explicitMethods = clazz.GetMethods(BindingFlags.NonPublic| BindingFlags.DeclaredOnly  | BindingFlags.Instance)
-      .Where(mi => IsExplicit(mi.Name)).ToArray();
+    var explicitMethods = clazz
+      .GetMethods(BindingFlags.NonPublic | BindingFlags.DeclaredOnly | BindingFlags.Instance)
+      .Where(mi => IsExplicit(mi.Name))
+      .ToArray();
     foreach (var method in publicMethods.Concat(explicitMethods))
     {
       if (IsExcluded(clazz.Name, method.Name))
@@ -23,8 +25,7 @@ public partial class Generator
       {
         if (method.IsSpecialName)
         {
-            continue;
-          
+          continue;
         }
 
         var methodSb = new StringBuilder();
@@ -78,7 +79,6 @@ public partial class Generator
     if (genericArguments.Any())
     {
       genericString = $"<{string.Join(", ", genericArguments.Select((ta, i) => ta.Name))}>";
-      
     }
 
     if (methodInfo.Name.Contains("."))
@@ -112,7 +112,9 @@ public partial class Generator
       {
         sb.Append(",");
       }
-      sb.Append(ParameterType(parameter.ParameterType, parameter.IsOut, nullable)).Append(" ").Append(FixName(parameter.Name));
+      sb.Append(ParameterType(parameter.ParameterType, parameter.IsOut, nullable))
+        .Append(" ")
+        .Append(FixName(parameter.Name));
     }
 
     if (baseType is not null)

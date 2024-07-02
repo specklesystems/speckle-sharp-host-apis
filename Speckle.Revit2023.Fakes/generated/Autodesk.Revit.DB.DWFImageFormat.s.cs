@@ -2,6 +2,6 @@ namespace Autodesk.Revit.DB;
 
 public enum DWFImageFormat
 {
-	Lossless,
-	Lossy,
+  Lossless,
+  Lossy,
 }

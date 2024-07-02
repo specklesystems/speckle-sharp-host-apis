@@ -149,6 +149,7 @@ public partial class Generator
     var interfaces = clazz.GetInterfaces().Except(clazz.BaseType?.GetInterfaces() ?? Enumerable.Empty<Type>()).ToList();
     return interfaces.Except(interfaces.SelectMany(i => i.GetInterfaces())).ToList();
   }
+
   private (string, GeneratedTypeInfo) WriteStruct(Type clazz)
   {
     StringBuilder sb = new();

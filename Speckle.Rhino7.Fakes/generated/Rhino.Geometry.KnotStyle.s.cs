@@ -2,10 +2,10 @@ namespace Rhino.Geometry;
 
 public enum KnotStyle
 {
-	Unknown,
-	Uniform,
-	QuasiUniform,
-	PiecewiseBezier,
-	ClampedEnd,
-	NonUniform,
+  Unknown,
+  Uniform,
+  QuasiUniform,
+  PiecewiseBezier,
+  ClampedEnd,
+  NonUniform,
 }

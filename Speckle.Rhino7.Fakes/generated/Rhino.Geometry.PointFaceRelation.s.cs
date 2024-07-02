@@ -2,7 +2,7 @@ namespace Rhino.Geometry;
 
 public enum PointFaceRelation
 {
-	Exterior,
-	Interior,
-	Boundary,
+  Exterior,
+  Interior,
+  Boundary,
 }

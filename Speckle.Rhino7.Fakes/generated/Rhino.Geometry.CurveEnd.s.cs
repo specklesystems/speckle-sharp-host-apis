@@ -2,8 +2,8 @@ namespace Rhino.Geometry;
 
 public enum CurveEnd
 {
-	None,
-	Start,
-	End,
-	Both,
+  None,
+  Start,
+  End,
+  Both,
 }

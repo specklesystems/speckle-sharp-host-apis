@@ -2,7 +2,7 @@ namespace Rhino.Geometry;
 
 public enum SubDFromSurfaceMethods
 {
-	Unset,
-	SubDFriendlyFit,
-	FromNurbsControlNet,
+  Unset,
+  SubDFriendlyFit,
+  FromNurbsControlNet,
 }
