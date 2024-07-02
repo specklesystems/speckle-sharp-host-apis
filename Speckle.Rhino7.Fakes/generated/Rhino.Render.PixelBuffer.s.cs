@@ -7,5 +7,6 @@ public partial class PixelBuffer
 	public virtual System.IntPtr Buffer
 	{
 		get => throw new System.NotImplementedException();
+		set {}
 	}
 }

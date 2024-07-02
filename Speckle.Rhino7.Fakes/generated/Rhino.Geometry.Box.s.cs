@@ -1,6 +1,6 @@
 namespace Rhino.Geometry;
 
-public partial struct Box
+public partial struct Box : Rhino.IEpsilonComparable<Rhino.Geometry.Box>,System.ICloneable
 {
 	public Box() {}
 	public Box(Rhino.Geometry.Box other) => throw new System.NotImplementedException();
@@ -28,6 +28,7 @@ public partial struct Box
 	public  Rhino.Geometry.Brep ToBrep() => throw new System.NotImplementedException();
 	public  Rhino.Geometry.Extrusion ToExtrusion() => throw new System.NotImplementedException();
 	public  System.Boolean EpsilonEquals(Rhino.Geometry.Box other,System.Double epsilon) => throw new System.NotImplementedException();
+	System.Object System.ICloneable.Clone() => throw new System.NotImplementedException();
 	public  Rhino.Geometry.Box Empty
 	{
 		get => throw new System.NotImplementedException();

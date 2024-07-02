@@ -26,6 +26,7 @@ public partial class ReduceMeshParameters
 	public virtual System.String Error
 	{
 		get => throw new System.NotImplementedException();
+		set {}
 	}
 	public virtual System.Int32[] FaceTags
 	{

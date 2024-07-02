@@ -14,13 +14,16 @@ public partial class Silhouette
 	public virtual Rhino.Geometry.SilhouetteType SilhouetteType
 	{
 		get => throw new System.NotImplementedException();
+		set {}
 	}
 	public virtual Rhino.Geometry.ComponentIndex GeometryComponentIndex
 	{
 		get => throw new System.NotImplementedException();
+		set {}
 	}
 	public virtual Rhino.Geometry.Curve Curve
 	{
 		get => throw new System.NotImplementedException();
+		set {}
 	}
 }

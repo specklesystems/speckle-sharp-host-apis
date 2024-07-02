@@ -12,5 +12,6 @@ public partial class PersistentSettingsEventArgs<T> : Rhino.PersistentSettingsEv
 	public virtual T NewValue
 	{
 		get => throw new System.NotImplementedException();
+		set {}
 	}
 }

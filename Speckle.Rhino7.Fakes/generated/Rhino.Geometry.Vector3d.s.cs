@@ -1,6 +1,6 @@
 namespace Rhino.Geometry;
 
-public partial struct Vector3d
+public partial struct Vector3d : System.Runtime.Serialization.ISerializable,System.IEquatable<Rhino.Geometry.Vector3d>,System.IComparable<Rhino.Geometry.Vector3d>,System.IComparable,Rhino.IEpsilonComparable<Rhino.Geometry.Vector3d>,System.ICloneable,Rhino.Geometry.IValidable,System.IFormattable
 {
 	public Vector3d() {}
 	public Vector3d(System.Double x,System.Double y,System.Double z) => throw new System.NotImplementedException();
@@ -21,8 +21,6 @@ public partial struct Vector3d
 	public  System.Boolean AreOrthogonal(Rhino.Geometry.Vector3d x,Rhino.Geometry.Vector3d y,Rhino.Geometry.Vector3d z) => throw new System.NotImplementedException();
 	public  System.Boolean AreOrthonormal(Rhino.Geometry.Vector3d x,Rhino.Geometry.Vector3d y,Rhino.Geometry.Vector3d z) => throw new System.NotImplementedException();
 	public  System.Boolean AreRighthanded(Rhino.Geometry.Vector3d x,Rhino.Geometry.Vector3d y,Rhino.Geometry.Vector3d z) => throw new System.NotImplementedException();
-	public  System.Double get_Item(System.Int32 index) => throw new System.NotImplementedException();
-	public  void set_Item(System.Int32 index,System.Double value) => throw new System.NotImplementedException();
 	public  System.Boolean IsTiny(System.Double tolerance) => throw new System.NotImplementedException();
 	public  System.Boolean IsTiny() => throw new System.NotImplementedException();
 	public  System.Boolean Equals(Rhino.Geometry.Vector3d vector) => throw new System.NotImplementedException();
@@ -38,6 +36,9 @@ public partial struct Vector3d
 	public  System.Boolean IsPerpendicularTo(Rhino.Geometry.Vector3d other) => throw new System.NotImplementedException();
 	public  System.Boolean IsPerpendicularTo(Rhino.Geometry.Vector3d other,System.Double angleTolerance) => throw new System.NotImplementedException();
 	public  System.Boolean PerpendicularTo(Rhino.Geometry.Vector3d other) => throw new System.NotImplementedException();
+	void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info,System.Runtime.Serialization.StreamingContext context) => throw new System.NotImplementedException();
+	System.Int32 System.IComparable.CompareTo(System.Object obj) => throw new System.NotImplementedException();
+	System.Object System.ICloneable.Clone() => throw new System.NotImplementedException();
 	public  Rhino.Geometry.Vector3d Zero
 	{
 		get => throw new System.NotImplementedException();
@@ -69,6 +70,11 @@ public partial struct Vector3d
 		set {}
 	}
 	public  System.Double Z
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public  System.Double this[System.Int32 index]
 	{
 		get => throw new System.NotImplementedException();
 		set {}

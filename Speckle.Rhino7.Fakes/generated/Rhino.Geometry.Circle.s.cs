@@ -1,6 +1,6 @@
 namespace Rhino.Geometry;
 
-public partial struct Circle
+public partial struct Circle : Rhino.IEpsilonComparable<Rhino.Geometry.Circle>,System.ICloneable
 {
 	public Circle() {}
 	public Circle(System.Double radius) => throw new System.NotImplementedException();
@@ -27,6 +27,7 @@ public partial struct Circle
 	public  Rhino.Geometry.NurbsCurve ToNurbsCurve() => throw new System.NotImplementedException();
 	public  Rhino.Geometry.NurbsCurve ToNurbsCurve(System.Int32 degree,System.Int32 cvCount) => throw new System.NotImplementedException();
 	public  System.Boolean EpsilonEquals(Rhino.Geometry.Circle other,System.Double epsilon) => throw new System.NotImplementedException();
+	System.Object System.ICloneable.Clone() => throw new System.NotImplementedException();
 	public  Rhino.Geometry.Circle Unset
 	{
 		get => throw new System.NotImplementedException();

@@ -1,6 +1,6 @@
 namespace Rhino.Geometry;
 
-public partial struct Cylinder
+public partial struct Cylinder : Rhino.IEpsilonComparable<Rhino.Geometry.Cylinder>
 {
 	public Cylinder() {}
 	public Cylinder(Rhino.Geometry.Circle baseCircle) => throw new System.NotImplementedException();

@@ -1,6 +1,6 @@
 namespace Rhino.Geometry;
 
-public partial struct Point2d
+public partial struct Point2d : System.Runtime.Serialization.ISerializable,System.IEquatable<Rhino.Geometry.Point2d>,System.IComparable<Rhino.Geometry.Point2d>,System.IComparable,Rhino.IEpsilonComparable<Rhino.Geometry.Point2d>,Rhino.Geometry.IValidable,System.IFormattable
 {
 	public Point2d() {}
 	public Point2d(System.Double x,System.Double y) => throw new System.NotImplementedException();
@@ -19,16 +19,21 @@ public partial struct Point2d
 	public  System.Int32 CompareTo(Rhino.Geometry.Point2d other) => throw new System.NotImplementedException();
 	public  System.Boolean EpsilonEquals(Rhino.Geometry.Point2d other,System.Double epsilon) => throw new System.NotImplementedException();
 	public  System.String ToString(System.String format,System.IFormatProvider formatProvider) => throw new System.NotImplementedException();
-	public  System.Double get_Item(System.Int32 index) => throw new System.NotImplementedException();
-	public  void set_Item(System.Int32 index,System.Double value) => throw new System.NotImplementedException();
 	public  System.Double DistanceTo(Rhino.Geometry.Point2d other) => throw new System.NotImplementedException();
 	public  void Transform(Rhino.Geometry.Transform xform) => throw new System.NotImplementedException();
+	void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info,System.Runtime.Serialization.StreamingContext context) => throw new System.NotImplementedException();
+	System.Int32 System.IComparable.CompareTo(System.Object obj) => throw new System.NotImplementedException();
 	public  System.Double X
 	{
 		get => throw new System.NotImplementedException();
 		set {}
 	}
 	public  System.Double Y
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public  System.Double this[System.Int32 index]
 	{
 		get => throw new System.NotImplementedException();
 		set {}

@@ -9,8 +9,6 @@ public partial class RhinoList<T> : System.Collections.Generic.IList<T>,System.C
 	public RhinoList(Rhino.Collections.RhinoList<T> list) => throw new System.NotImplementedException();
 	public virtual T[] ToArray() => throw new System.NotImplementedException();
 	public virtual void TrimExcess() => throw new System.NotImplementedException();
-	public virtual T get_Item(System.Int32 index) => throw new System.NotImplementedException();
-	public virtual void set_Item(System.Int32 index,T value) => throw new System.NotImplementedException();
 	public virtual System.Int32 RemapIndex(System.Int32 index) => throw new System.NotImplementedException();
 	public virtual void Clear() => throw new System.NotImplementedException();
 	public virtual void Add(T item) => throw new System.NotImplementedException();
@@ -61,6 +59,14 @@ public partial class RhinoList<T> : System.Collections.Generic.IList<T>,System.C
 	public virtual void CopyTo(System.Int32 index,T[] array,System.Int32 arrayIndex,System.Int32 count) => throw new System.NotImplementedException();
 	public virtual Rhino.Collections.RhinoList<T> Duplicate() => throw new System.NotImplementedException();
 	public virtual System.Collections.Generic.IEnumerator<T> GetEnumerator() => throw new System.NotImplementedException();
+	System.Int32 System.Collections.IList.Add(System.Object item) => throw new System.NotImplementedException();
+	void System.Collections.IList.Insert(System.Int32 index,System.Object item) => throw new System.NotImplementedException();
+	void System.Collections.IList.Remove(System.Object item) => throw new System.NotImplementedException();
+	System.Int32 System.Collections.IList.IndexOf(System.Object item) => throw new System.NotImplementedException();
+	System.Boolean System.Collections.IList.Contains(System.Object item) => throw new System.NotImplementedException();
+	void System.Collections.ICollection.CopyTo(System.Array array,System.Int32 arrayIndex) => throw new System.NotImplementedException();
+	System.Object System.ICloneable.Clone() => throw new System.NotImplementedException();
+	System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() => throw new System.NotImplementedException();
 	public virtual System.Int32 Capacity
 	{
 		get => throw new System.NotImplementedException();
@@ -74,6 +80,11 @@ public partial class RhinoList<T> : System.Collections.Generic.IList<T>,System.C
 	{
 		get => throw new System.NotImplementedException();
 	}
+	public virtual T this[System.Int32 index]
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
 	public virtual T First
 	{
 		get => throw new System.NotImplementedException();
@@ -83,5 +94,30 @@ public partial class RhinoList<T> : System.Collections.Generic.IList<T>,System.C
 	{
 		get => throw new System.NotImplementedException();
 		set {}
+	}
+	System.Object System.Collections.IList.this[System.Int32 index]
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	System.Boolean System.Collections.IList.IsReadOnly
+	{
+		get => throw new System.NotImplementedException();
+	}
+	System.Boolean System.Collections.IList.IsFixedSize
+	{
+		get => throw new System.NotImplementedException();
+	}
+	System.Boolean System.Collections.Generic.ICollection<T>.IsReadOnly
+	{
+		get => throw new System.NotImplementedException();
+	}
+	System.Boolean System.Collections.ICollection.IsSynchronized
+	{
+		get => throw new System.NotImplementedException();
+	}
+	System.Object System.Collections.ICollection.SyncRoot
+	{
+		get => throw new System.NotImplementedException();
 	}
 }

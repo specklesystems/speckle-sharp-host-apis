@@ -1,6 +1,6 @@
 namespace Rhino.Geometry;
 
-public partial struct Transform
+public partial struct Transform : System.IComparable<Rhino.Geometry.Transform>,System.IEquatable<Rhino.Geometry.Transform>,System.ICloneable
 {
 	public Transform() {}
 	public Transform(System.Double diagonalValue) => throw new System.NotImplementedException();
@@ -27,8 +27,6 @@ public partial struct Transform
 	public  Rhino.Geometry.Transform ProjectAlong(Rhino.Geometry.Plane plane,Rhino.Geometry.Vector3d direction) => throw new System.NotImplementedException();
 	public  Rhino.Geometry.Transform Shear(Rhino.Geometry.Plane plane,Rhino.Geometry.Vector3d x,Rhino.Geometry.Vector3d y,Rhino.Geometry.Vector3d z) => throw new System.NotImplementedException();
 	public  Rhino.Geometry.Transform Multiply(Rhino.Geometry.Transform a,Rhino.Geometry.Transform b) => throw new System.NotImplementedException();
-	public  System.Double get_Item(System.Int32 row,System.Int32 column) => throw new System.NotImplementedException();
-	public  void set_Item(System.Int32 row,System.Int32 column,System.Double value) => throw new System.NotImplementedException();
 	public  System.Boolean IsZeroTransformaton(System.Double zeroTolerance) => throw new System.NotImplementedException();
 	public  System.Boolean IsZeroTransformationWithTolerance(System.Double zeroTolerance) => throw new System.NotImplementedException();
 	public  Rhino.Geometry.TransformSimilarityType IsSimilarity(System.Double tolerance) => throw new System.NotImplementedException();
@@ -43,6 +41,7 @@ public partial struct Transform
 	public  System.Single[] ToFloatArray(System.Boolean rowDominant) => throw new System.NotImplementedException();
 	public  Rhino.Geometry.Transform Clone() => throw new System.NotImplementedException();
 	public  System.Int32 CompareTo(Rhino.Geometry.Transform other) => throw new System.NotImplementedException();
+	System.Object System.ICloneable.Clone() => throw new System.NotImplementedException();
 	public  Rhino.Geometry.Transform Identity
 	{
 		get => throw new System.NotImplementedException();
@@ -131,6 +130,11 @@ public partial struct Transform
 		set {}
 	}
 	public  System.Double M33
+	{
+		get => throw new System.NotImplementedException();
+		set {}
+	}
+	public  System.Double this[System.Int32 row]
 	{
 		get => throw new System.NotImplementedException();
 		set {}

@@ -10,9 +10,11 @@ public partial class PageViewSpaceChangeEventArgs : System.EventArgs
 	public virtual System.Guid NewActiveDetailId
 	{
 		get => throw new System.NotImplementedException();
+		set {}
 	}
 	public virtual System.Guid OldActiveDetailId
 	{
 		get => throw new System.NotImplementedException();
+		set {}
 	}
 }

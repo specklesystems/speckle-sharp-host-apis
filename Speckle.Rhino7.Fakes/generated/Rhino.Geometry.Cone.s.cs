@@ -1,6 +1,6 @@
 namespace Rhino.Geometry;
 
-public partial struct Cone
+public partial struct Cone : Rhino.IEpsilonComparable<Rhino.Geometry.Cone>
 {
 	public Cone() {}
 	public Cone(Rhino.Geometry.Plane plane,System.Double height,System.Double radius) => throw new System.NotImplementedException();

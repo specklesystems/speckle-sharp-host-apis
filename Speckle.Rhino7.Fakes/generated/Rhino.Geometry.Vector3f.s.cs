@@ -1,6 +1,6 @@
 namespace Rhino.Geometry;
 
-public partial struct Vector3f
+public partial struct Vector3f : System.IEquatable<Rhino.Geometry.Vector3f>,System.IComparable<Rhino.Geometry.Vector3f>,System.IComparable,Rhino.IEpsilonFComparable<Rhino.Geometry.Vector3f>,Rhino.Geometry.IValidable,System.IFormattable
 {
 	public Vector3f() {}
 	public Vector3f(System.Single x,System.Single y,System.Single z) => throw new System.NotImplementedException();
@@ -23,6 +23,7 @@ public partial struct Vector3f
 	public  Rhino.Geometry.Vector3f Divide(Rhino.Geometry.Vector3f vector,System.Double t) => throw new System.NotImplementedException();
 	public  Rhino.Geometry.Vector3f Divide(Rhino.Geometry.Vector3f vector,System.Single t) => throw new System.NotImplementedException();
 	public  Rhino.Geometry.Vector3f CrossProduct(Rhino.Geometry.Vector3f a,Rhino.Geometry.Vector3f b) => throw new System.NotImplementedException();
+	System.Int32 System.IComparable.CompareTo(System.Object obj) => throw new System.NotImplementedException();
 	public  Rhino.Geometry.Vector3f Zero
 	{
 		get => throw new System.NotImplementedException();

@@ -19,6 +19,7 @@ public partial class CreatePreviewEventArgs : System.EventArgs
 	public virtual System.Boolean Cancel
 	{
 		get => throw new System.NotImplementedException();
+		set {}
 	}
 	public virtual System.Int32 Id
 	{

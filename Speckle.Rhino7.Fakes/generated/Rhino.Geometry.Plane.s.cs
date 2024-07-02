@@ -1,6 +1,6 @@
 namespace Rhino.Geometry;
 
-public partial struct Plane
+public partial struct Plane : System.IEquatable<Rhino.Geometry.Plane>,Rhino.IEpsilonComparable<Rhino.Geometry.Plane>,System.ICloneable,Rhino.Geometry.IValidable,System.IFormattable
 {
 	public Plane() {}
 	public Plane(Rhino.Geometry.Plane other) => throw new System.NotImplementedException();
@@ -26,6 +26,7 @@ public partial struct Plane
 	public  System.Boolean Rotate(System.Double sinAngle,System.Double cosAngle,Rhino.Geometry.Vector3d axis,Rhino.Geometry.Point3d centerOfRotation) => throw new System.NotImplementedException();
 	public  System.Boolean EpsilonEquals(Rhino.Geometry.Plane other,System.Double epsilon) => throw new System.NotImplementedException();
 	public  Rhino.Geometry.Plane Clone() => throw new System.NotImplementedException();
+	System.Object System.ICloneable.Clone() => throw new System.NotImplementedException();
 	public  Rhino.Geometry.Point3d Origin
 	{
 		get => throw new System.NotImplementedException();

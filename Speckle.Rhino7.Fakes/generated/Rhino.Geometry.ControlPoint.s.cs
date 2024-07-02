@@ -1,6 +1,6 @@
 namespace Rhino.Geometry;
 
-public partial struct ControlPoint
+public partial struct ControlPoint : Rhino.IEpsilonComparable<Rhino.Geometry.ControlPoint>,System.IEquatable<Rhino.Geometry.ControlPoint>
 {
 	public ControlPoint() {}
 	public ControlPoint(System.Double x,System.Double y,System.Double z) => throw new System.NotImplementedException();

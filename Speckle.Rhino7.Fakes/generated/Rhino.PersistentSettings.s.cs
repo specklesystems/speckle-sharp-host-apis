@@ -69,6 +69,7 @@ public partial class PersistentSettings : System.Runtime.Serialization.ISerializ
 	public virtual System.Guid GetGuid(System.String key,System.Guid defaultValue) => throw new System.NotImplementedException();
 	public virtual System.Guid GetGuid(System.String key,System.Guid defaultValue,System.Collections.Generic.IEnumerable<System.String> legacyKeyList) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Point3d GetPoint3d(System.String key) => throw new System.NotImplementedException();
+	void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info,System.Runtime.Serialization.StreamingContext context) => throw new System.NotImplementedException();
 	public virtual System.Boolean HiddenFromUserInterface
 	{
 		get => throw new System.NotImplementedException();

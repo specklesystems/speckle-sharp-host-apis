@@ -6,10 +6,12 @@ public partial class RenderWindowClonedEventArgs : System.EventArgs
 	public virtual System.Guid OldSessionId
 	{
 		get => throw new System.NotImplementedException();
+		set {}
 	}
 	public virtual System.Guid NewSessionId
 	{
 		get => throw new System.NotImplementedException();
+		set {}
 	}
 	public virtual Rhino.Render.RenderWindow OldRenderWindow
 	{

@@ -1,6 +1,6 @@
 namespace Rhino.Geometry;
 
-public partial struct Sphere
+public partial struct Sphere : Rhino.IEpsilonComparable<Rhino.Geometry.Sphere>
 {
 	public Sphere() {}
 	public Sphere(Rhino.Geometry.Point3d center,System.Double radius) => throw new System.NotImplementedException();

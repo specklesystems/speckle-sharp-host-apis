@@ -1,6 +1,6 @@
 namespace Rhino.Geometry;
 
-public partial struct Arc
+public partial struct Arc : System.IEquatable<Rhino.Geometry.Arc>,Rhino.IEpsilonComparable<Rhino.Geometry.Arc>,System.ICloneable
 {
 	public Arc() {}
 	public Arc(Rhino.Geometry.Circle circle,System.Double angleRadians) => throw new System.NotImplementedException();
@@ -22,6 +22,7 @@ public partial struct Arc
 	public  Rhino.Geometry.NurbsCurve ToNurbsCurve() => throw new System.NotImplementedException();
 	public  System.Boolean EpsilonEquals(Rhino.Geometry.Arc other,System.Double epsilon) => throw new System.NotImplementedException();
 	public  Rhino.Geometry.NurbsCurve ToNurbsCurve(System.Int32 degree,System.Int32 cvCount) => throw new System.NotImplementedException();
+	System.Object System.ICloneable.Clone() => throw new System.NotImplementedException();
 	public  Rhino.Geometry.Arc Unset
 	{
 		get => throw new System.NotImplementedException();

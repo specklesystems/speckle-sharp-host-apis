@@ -8,6 +8,7 @@ public partial class CustomRenderContentAttribute : System.Attribute
 	public virtual System.Guid RenderEngineId
 	{
 		get => throw new System.NotImplementedException();
+		set {}
 	}
 	public virtual System.Boolean ImageBased
 	{

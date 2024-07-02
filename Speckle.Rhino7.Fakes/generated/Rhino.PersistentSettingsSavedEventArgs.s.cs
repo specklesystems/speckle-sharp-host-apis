@@ -7,6 +7,7 @@ public partial class PersistentSettingsSavedEventArgs : System.EventArgs
 	public virtual System.Boolean SavedByThisRhino
 	{
 		get => throw new System.NotImplementedException();
+		set {}
 	}
 	public virtual Rhino.PersistentSettings PlugInSettings
 	{

@@ -14,8 +14,8 @@ public partial class Point3dList : Rhino.Collections.RhinoList<Rhino.Geometry.Po
 	public virtual void SetAllZ(System.Double zValue) => throw new System.NotImplementedException();
 	public static System.Int32 ClosestIndexInList(System.Collections.Generic.IList<Rhino.Geometry.Point3d> list,Rhino.Geometry.Point3d testPoint) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.Point3d ClosestPointInList(System.Collections.Generic.IList<Rhino.Geometry.Point3d> list,Rhino.Geometry.Point3d testPoint) => throw new System.NotImplementedException();
-	public virtual Rhino.Collections.Point3dList Duplicate() => throw new System.NotImplementedException();
 	public virtual System.Boolean Equals(Rhino.Collections.Point3dList other) => throw new System.NotImplementedException();
+	System.Object System.ICloneable.Clone() => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.BoundingBox BoundingBox
 	{
 		get => throw new System.NotImplementedException();

@@ -7,10 +7,12 @@ public partial class Particle
 	public virtual Rhino.Geometry.ParticleSystem ParentSystem
 	{
 		get => throw new System.NotImplementedException();
+		set {}
 	}
 	public virtual System.Int32 Index
 	{
 		get => throw new System.NotImplementedException();
+		set {}
 	}
 	public virtual Rhino.Geometry.Point3d Location
 	{

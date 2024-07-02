@@ -11,6 +11,7 @@ public partial class MaterialRef : System.IDisposable
 	public virtual System.Guid PlugInId
 	{
 		get => throw new System.NotImplementedException();
+		set {}
 	}
 	public virtual System.Guid FrontFaceMaterialId
 	{

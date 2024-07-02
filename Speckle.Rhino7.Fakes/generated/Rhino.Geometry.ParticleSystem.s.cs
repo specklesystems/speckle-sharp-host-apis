@@ -8,6 +8,7 @@ public partial class ParticleSystem : System.Collections.Generic.IEnumerable<Rhi
 	public virtual void Clear() => throw new System.NotImplementedException();
 	public virtual void Update() => throw new System.NotImplementedException();
 	public virtual System.Collections.Generic.IEnumerator<Rhino.Geometry.Particle> GetEnumerator() => throw new System.NotImplementedException();
+	System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() => throw new System.NotImplementedException();
 	public virtual System.Boolean DrawRequiresDepthSorting
 	{
 		get => throw new System.NotImplementedException();

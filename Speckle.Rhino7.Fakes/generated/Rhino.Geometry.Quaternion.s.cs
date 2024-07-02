@@ -1,6 +1,6 @@
 namespace Rhino.Geometry;
 
-public partial struct Quaternion
+public partial struct Quaternion : System.IEquatable<Rhino.Geometry.Quaternion>,Rhino.IEpsilonComparable<Rhino.Geometry.Quaternion>
 {
 	public Quaternion() {}
 	public Quaternion(System.Double a,System.Double b,System.Double c,System.Double d) => throw new System.NotImplementedException();

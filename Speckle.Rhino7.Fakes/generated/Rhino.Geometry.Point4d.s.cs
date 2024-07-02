@@ -1,6 +1,6 @@
 namespace Rhino.Geometry;
 
-public partial struct Point4d
+public partial struct Point4d : System.Runtime.Serialization.ISerializable,System.IEquatable<Rhino.Geometry.Point4d>,Rhino.IEpsilonComparable<Rhino.Geometry.Point4d>,Rhino.Geometry.IValidable,System.IFormattable
 {
 	public Point4d() {}
 	public Point4d(System.Double x,System.Double y,System.Double z,System.Double w) => throw new System.NotImplementedException();
@@ -13,6 +13,7 @@ public partial struct Point4d
 	public  System.Boolean EpsilonEquals(Rhino.Geometry.Point4d other,System.Double epsilon) => throw new System.NotImplementedException();
 	public  void Transform(Rhino.Geometry.Transform xform) => throw new System.NotImplementedException();
 	public  System.String ToString(System.String format,System.IFormatProvider formatProvider) => throw new System.NotImplementedException();
+	void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info,System.Runtime.Serialization.StreamingContext context) => throw new System.NotImplementedException();
 	public  System.Double X
 	{
 		get => throw new System.NotImplementedException();

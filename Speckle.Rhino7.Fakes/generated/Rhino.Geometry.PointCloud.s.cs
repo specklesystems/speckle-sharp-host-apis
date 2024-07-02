@@ -5,7 +5,6 @@ public partial class PointCloud : Rhino.Geometry.GeometryBase,System.Collections
 	public PointCloud() {}
 	public PointCloud(Rhino.Geometry.PointCloud other) => throw new System.NotImplementedException();
 	public PointCloud(System.Collections.Generic.IEnumerable<Rhino.Geometry.Point3d> points) => throw new System.NotImplementedException();
-	public virtual Rhino.Geometry.PointCloudItem get_Item(System.Int32 index) => throw new System.NotImplementedException();
 	public virtual void ClearColors() => throw new System.NotImplementedException();
 	public virtual void ClearNormals() => throw new System.NotImplementedException();
 	public virtual void ClearHiddenFlags() => throw new System.NotImplementedException();
@@ -33,7 +32,12 @@ public partial class PointCloud : Rhino.Geometry.GeometryBase,System.Collections
 	public virtual void ReleaseUnsafeLock(Rhino.Geometry.PointCloudUnsafeLock pointCloudData) => throw new System.NotImplementedException();
 	public virtual System.Collections.Generic.IReadOnlyList<Rhino.Geometry.Point3d> AsReadOnlyListOfPoints() => throw new System.NotImplementedException();
 	public virtual System.Collections.Generic.IEnumerator<Rhino.Geometry.PointCloudItem> GetEnumerator() => throw new System.NotImplementedException();
+	System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() => throw new System.NotImplementedException();
 	public virtual System.Int32 Count
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Rhino.Geometry.PointCloudItem this[System.Int32 index]
 	{
 		get => throw new System.NotImplementedException();
 	}

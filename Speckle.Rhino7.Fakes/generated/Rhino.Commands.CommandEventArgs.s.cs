@@ -26,6 +26,7 @@ public partial class CommandEventArgs : System.EventArgs
 	public virtual System.UInt32 DocumentRuntimeSerialNumber
 	{
 		get => throw new System.NotImplementedException();
+		set {}
 	}
 	public virtual Rhino.RhinoDoc Document
 	{

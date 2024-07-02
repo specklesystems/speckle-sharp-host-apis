@@ -7,21 +7,26 @@ public partial class FontQuartet
 	public virtual System.String QuartetName
 	{
 		get => throw new System.NotImplementedException();
+		set {}
 	}
 	public virtual System.Boolean HasRegularFont
 	{
 		get => throw new System.NotImplementedException();
+		set {}
 	}
 	public virtual System.Boolean HasBoldFont
 	{
 		get => throw new System.NotImplementedException();
+		set {}
 	}
 	public virtual System.Boolean HasItalicFont
 	{
 		get => throw new System.NotImplementedException();
+		set {}
 	}
 	public virtual System.Boolean HasBoldItalicFont
 	{
 		get => throw new System.NotImplementedException();
+		set {}
 	}
 }

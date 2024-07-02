@@ -1,6 +1,6 @@
 namespace Rhino.Geometry;
 
-public partial struct ComponentStatus
+public partial struct ComponentStatus : System.IEquatable<Rhino.Geometry.ComponentStatus>
 {
 	public ComponentStatus() {}
 	public  Rhino.Geometry.ComponentStatus WithStates(Rhino.Geometry.ComponentStatus additionalStatus) => throw new System.NotImplementedException();

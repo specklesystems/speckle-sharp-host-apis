@@ -110,7 +110,7 @@ public partial class Generator
     Type returnType
   )
   {
-    var isIndexer = property.Name.EndsWith("Item");
+    var isIndexer = (property.Name.Length == 4 && property.Name.Equals("Item")) || property.Name.EndsWith(".Item") ;
     var extra = string.Empty;
     if (generatedType == GeneratedType.Class)
     {

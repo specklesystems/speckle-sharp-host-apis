@@ -8,8 +8,12 @@ public partial class RenderTextureTable : Rhino.Render.IRenderContentTable<Rhino
 	public virtual void BeginChange(Rhino.Render.RenderContent.ChangeContexts changeContext) => throw new System.NotImplementedException();
 	public virtual void EndChange() => throw new System.NotImplementedException();
 	public virtual System.Collections.Generic.IEnumerator<Rhino.Render.RenderTexture> GetEnumerator() => throw new System.NotImplementedException();
-	public virtual Rhino.Render.RenderTexture get_Item(System.Int32 index) => throw new System.NotImplementedException();
+	System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() => throw new System.NotImplementedException();
 	public virtual System.Int32 Count
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Rhino.Render.RenderTexture this[System.Int32 index]
 	{
 		get => throw new System.NotImplementedException();
 	}

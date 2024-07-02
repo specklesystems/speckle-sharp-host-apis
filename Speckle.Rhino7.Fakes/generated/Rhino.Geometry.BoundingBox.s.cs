@@ -1,6 +1,6 @@
 namespace Rhino.Geometry;
 
-public partial struct BoundingBox
+public partial struct BoundingBox : System.ICloneable
 {
 	public BoundingBox() {}
 	public BoundingBox(Rhino.Geometry.Point3d min,Rhino.Geometry.Point3d max) => throw new System.NotImplementedException();
@@ -29,6 +29,7 @@ public partial struct BoundingBox
 	public  Rhino.Geometry.BoundingBox Union(Rhino.Geometry.BoundingBox a,Rhino.Geometry.BoundingBox b) => throw new System.NotImplementedException();
 	public  Rhino.Geometry.BoundingBox Intersection(Rhino.Geometry.BoundingBox a,Rhino.Geometry.BoundingBox b) => throw new System.NotImplementedException();
 	public  Rhino.Geometry.BoundingBox Union(Rhino.Geometry.BoundingBox box,Rhino.Geometry.Point3d point) => throw new System.NotImplementedException();
+	System.Object System.ICloneable.Clone() => throw new System.NotImplementedException();
 	public  Rhino.Geometry.BoundingBox Empty
 	{
 		get => throw new System.NotImplementedException();

@@ -15,5 +15,6 @@ public partial class AsyncRenderContext : System.IDisposable
 	public virtual System.Threading.Thread RenderThread
 	{
 		get => throw new System.NotImplementedException();
+		set {}
 	}
 }

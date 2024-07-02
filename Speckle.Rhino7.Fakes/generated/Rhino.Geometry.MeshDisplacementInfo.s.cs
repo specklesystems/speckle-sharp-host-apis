@@ -7,6 +7,7 @@ public partial class MeshDisplacementInfo
 	public virtual Rhino.Render.RenderTexture Texture
 	{
 		get => throw new System.NotImplementedException();
+		set {}
 	}
 	public virtual System.Double Black
 	{
@@ -21,6 +22,7 @@ public partial class MeshDisplacementInfo
 	public virtual Rhino.Render.TextureMapping Mapping
 	{
 		get => throw new System.NotImplementedException();
+		set {}
 	}
 	public virtual Rhino.Geometry.Transform MappingTransform
 	{

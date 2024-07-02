@@ -7,5 +7,6 @@ public partial class LicenseStateChangedEventArgs : System.EventArgs
 	public virtual System.Boolean CallingRhinoCommonAllowed
 	{
 		get => throw new System.NotImplementedException();
+		set {}
 	}
 }

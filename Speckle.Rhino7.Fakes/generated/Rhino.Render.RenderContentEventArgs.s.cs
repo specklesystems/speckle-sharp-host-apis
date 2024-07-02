@@ -10,13 +10,16 @@ public partial class RenderContentEventArgs : System.EventArgs
 	public virtual Rhino.RhinoDoc Document
 	{
 		get => throw new System.NotImplementedException();
+		set {}
 	}
 	public virtual Rhino.Render.RenderContentChangeReason Reason
 	{
 		get => throw new System.NotImplementedException();
+		set {}
 	}
 	public virtual Rhino.Render.RenderEnvironment.Usage EnvironmentUsage
 	{
 		get => throw new System.NotImplementedException();
+		set {}
 	}
 }

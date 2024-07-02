@@ -191,6 +191,7 @@ public partial class RhinoDoc : System.IDisposable
 	public virtual System.UInt32 RuntimeSerialNumber
 	{
 		get => throw new System.NotImplementedException();
+		set {}
 	}
 	public virtual Rhino.DocObjects.EarthAnchorPoint EarthAnchorPoint
 	{

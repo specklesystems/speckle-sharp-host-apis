@@ -1,6 +1,6 @@
 namespace Rhino.Geometry;
 
-public partial struct Torus
+public partial struct Torus : Rhino.IEpsilonComparable<Rhino.Geometry.Torus>
 {
 	public Torus() {}
 	public Torus(Rhino.Geometry.Plane basePlane,System.Double majorRadius,System.Double minorRadius) => throw new System.NotImplementedException();

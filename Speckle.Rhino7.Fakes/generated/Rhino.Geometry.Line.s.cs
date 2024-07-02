@@ -1,6 +1,6 @@
 namespace Rhino.Geometry;
 
-public partial struct Line
+public partial struct Line : System.IEquatable<Rhino.Geometry.Line>,Rhino.IEpsilonComparable<Rhino.Geometry.Line>,System.ICloneable,System.IFormattable
 {
 	public Line() {}
 	public Line(Rhino.Geometry.Point3d from,Rhino.Geometry.Point3d to) => throw new System.NotImplementedException();
@@ -27,6 +27,7 @@ public partial struct Line
 	public  System.Boolean ExtendThroughBox(Rhino.Geometry.BoundingBox box,System.Double additionalLength) => throw new System.NotImplementedException();
 	public  System.Boolean ExtendThroughBox(Rhino.Geometry.Box box) => throw new System.NotImplementedException();
 	public  System.Boolean ExtendThroughBox(Rhino.Geometry.Box box,System.Double additionalLength) => throw new System.NotImplementedException();
+	System.Object System.ICloneable.Clone() => throw new System.NotImplementedException();
 	public  Rhino.Geometry.Point3d From
 	{
 		get => throw new System.NotImplementedException();

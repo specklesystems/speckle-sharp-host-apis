@@ -30,6 +30,8 @@ Generator generator =
       new ("ArchivableDictionary", []),
       new ("RenderMaterial", [new ("HandleTexturedValue")]),
       new ("CustomRenderMeshProvider2", [new ("BoundingBox")]),
+      new ("Color4f", [new ("GetObjectData")]),
+      new ("Point3dList", [new ("Duplicate")]),
     ]
   );
 generator.Generate();

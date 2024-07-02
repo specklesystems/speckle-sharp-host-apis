@@ -1,6 +1,6 @@
 namespace Rhino.Geometry;
 
-public partial struct Rectangle3d
+public partial struct Rectangle3d : Rhino.IEpsilonComparable<Rhino.Geometry.Rectangle3d>,System.ICloneable
 {
 	public Rectangle3d() {}
 	public Rectangle3d(Rhino.Geometry.Plane plane,System.Double width,System.Double height) => throw new System.NotImplementedException();
@@ -21,6 +21,7 @@ public partial struct Rectangle3d
 	public  Rhino.Geometry.Polyline ToPolyline() => throw new System.NotImplementedException();
 	public  Rhino.Geometry.NurbsCurve ToNurbsCurve() => throw new System.NotImplementedException();
 	public  System.Boolean EpsilonEquals(Rhino.Geometry.Rectangle3d other,System.Double epsilon) => throw new System.NotImplementedException();
+	System.Object System.ICloneable.Clone() => throw new System.NotImplementedException();
 	public  Rhino.Geometry.Rectangle3d Unset
 	{
 		get => throw new System.NotImplementedException();

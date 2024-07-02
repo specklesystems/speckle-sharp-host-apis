@@ -100,6 +100,7 @@ public partial class RhinoObject : Rhino.DocObjects.ModelComponent
 	public virtual System.Boolean IsDeletable
 	{
 		get => throw new System.NotImplementedException();
+		set {}
 	}
 	public virtual System.Boolean IsDeleted
 	{

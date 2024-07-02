@@ -1,6 +1,6 @@
 namespace Rhino.Geometry;
 
-public partial struct Vector2d
+public partial struct Vector2d : System.Runtime.Serialization.ISerializable,System.IEquatable<Rhino.Geometry.Vector2d>,System.IComparable<Rhino.Geometry.Vector2d>,System.IComparable,Rhino.IEpsilonComparable<Rhino.Geometry.Vector2d>,Rhino.Geometry.IValidable,System.IFormattable
 {
 	public Vector2d() {}
 	public Vector2d(System.Double x,System.Double y) => throw new System.NotImplementedException();
@@ -19,6 +19,8 @@ public partial struct Vector2d
 	public  System.Boolean IsTiny() => throw new System.NotImplementedException();
 	public  System.Boolean Unitize() => throw new System.NotImplementedException();
 	public  System.Boolean Rotate(System.Double angleRadians) => throw new System.NotImplementedException();
+	void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info,System.Runtime.Serialization.StreamingContext context) => throw new System.NotImplementedException();
+	System.Int32 System.IComparable.CompareTo(System.Object obj) => throw new System.NotImplementedException();
 	public  System.Double X
 	{
 		get => throw new System.NotImplementedException();

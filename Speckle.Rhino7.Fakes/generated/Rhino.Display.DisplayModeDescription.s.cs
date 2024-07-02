@@ -15,6 +15,7 @@ public partial class DisplayModeDescription : System.IDisposable,System.Runtime.
 	public static System.Boolean DeleteDisplayMode(System.Guid id) => throw new System.NotImplementedException();
 	public static System.Guid ImportFromFile(System.String filename) => throw new System.NotImplementedException();
 	public static System.Boolean ExportToFile(Rhino.Display.DisplayModeDescription displayMode,System.String filename) => throw new System.NotImplementedException();
+	void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info,System.Runtime.Serialization.StreamingContext context) => throw new System.NotImplementedException();
 	public virtual System.Boolean InMenu
 	{
 		get => throw new System.NotImplementedException();

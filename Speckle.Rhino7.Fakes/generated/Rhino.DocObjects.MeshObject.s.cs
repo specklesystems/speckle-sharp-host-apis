@@ -7,6 +7,7 @@ public partial class MeshObject : Rhino.DocObjects.RhinoObject
 	public virtual System.Boolean IsCustomObject
 	{
 		get => throw new System.NotImplementedException();
+		set {}
 	}
 	public virtual Rhino.Geometry.Mesh MeshGeometry
 	{

@@ -1,6 +1,6 @@
 namespace Rhino.Display;
 
-public partial struct ColorRGBA
+public partial struct ColorRGBA : System.Runtime.Serialization.ISerializable,System.IFormattable,System.IComparable,System.IComparable<Rhino.Display.ColorRGBA>,System.IEquatable<Rhino.Display.ColorRGBA>,Rhino.IEpsilonComparable<Rhino.Display.ColorRGBA>
 {
 	public ColorRGBA() {}
 	public ColorRGBA(Rhino.Display.ColorRGBA color) => throw new System.NotImplementedException();
@@ -19,6 +19,8 @@ public partial struct ColorRGBA
 	public  System.Boolean Equals(Rhino.Display.ColorRGBA other) => throw new System.NotImplementedException();
 	public  Rhino.Display.ColorRGBA BlendTo(Rhino.Display.ColorRGBA col,System.Double coefficient) => throw new System.NotImplementedException();
 	public  Rhino.Display.ColorRGBA ApplyGamma(Rhino.Display.ColorRGBA col,System.Double gamma) => throw new System.NotImplementedException();
+	void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info,System.Runtime.Serialization.StreamingContext context) => throw new System.NotImplementedException();
+	System.Int32 System.IComparable.CompareTo(System.Object obj) => throw new System.NotImplementedException();
 	public  System.Double R
 	{
 		get => throw new System.NotImplementedException();
