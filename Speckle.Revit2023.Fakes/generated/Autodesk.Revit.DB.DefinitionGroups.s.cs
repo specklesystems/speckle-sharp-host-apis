@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class DefinitionGroups
   : System.Collections.Generic.IEnumerable<Autodesk.Revit.DB.DefinitionGroup>,
+    System.Collections.IEnumerable,
     System.IDisposable
 {
   public DefinitionGroups() { }

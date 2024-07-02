@@ -14,6 +14,9 @@ public partial class ElementId
 
   public static Autodesk.Revit.DB.ElementId Parse(System.String idStr) => throw new System.NotImplementedException();
 
+  public static System.Boolean TryParse(System.String idStr, out Autodesk.Revit.DB.ElementId id) =>
+    throw new System.NotImplementedException();
+
   public static Autodesk.Revit.DB.ElementId InvalidElementId
   {
     get => throw new System.NotImplementedException();

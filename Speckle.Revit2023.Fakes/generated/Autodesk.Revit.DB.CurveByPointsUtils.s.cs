@@ -36,6 +36,17 @@ public partial class CurveByPointsUtils : System.IDisposable
     Autodesk.Revit.DB.Reference referenceOfFace
   ) => throw new System.NotImplementedException();
 
+  public static void CreateRectangle(
+    Autodesk.Revit.DB.Document document,
+    Autodesk.Revit.DB.ReferencePoint startPoint,
+    Autodesk.Revit.DB.ReferencePoint endPoint,
+    Autodesk.Revit.DB.CurveProjectionType projectionType,
+    System.Boolean boundaryReferenceLines,
+    System.Boolean boundaryCurvesFollowSurface,
+    out System.Collections.Generic.IList<Autodesk.Revit.DB.ElementId> createdCurvesIds,
+    out System.Collections.Generic.IList<Autodesk.Revit.DB.ElementId> createdCornersIds
+  ) => throw new System.NotImplementedException();
+
   public static Autodesk.Revit.DB.CurveElement CreateArcThroughPoints(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.ReferencePoint startPoint,

@@ -84,6 +84,12 @@ public partial class PanelScheduleView : Autodesk.Revit.DB.TableView
   public virtual System.Int32 GetSlotNumberByCell(System.Int32 nRow, System.Int32 nCol) =>
     throw new System.NotImplementedException();
 
+  public virtual void GetCellsBySlotNumber(
+    System.Int32 nSlotNumber,
+    out System.Collections.Generic.IList<System.Int32> RowArr,
+    out System.Collections.Generic.IList<System.Int32> ColArr
+  ) => throw new System.NotImplementedException();
+
   public virtual void SetSpareLoadValue(
     System.Int32 row,
     System.Int32 column,

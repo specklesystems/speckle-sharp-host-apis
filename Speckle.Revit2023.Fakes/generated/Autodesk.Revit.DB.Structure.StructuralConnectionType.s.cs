@@ -11,6 +11,11 @@ public partial class StructuralConnectionType : Autodesk.Revit.DB.ElementType
     Autodesk.Revit.DB.ElementId familySymbolId
   ) => throw new System.NotImplementedException();
 
+  public static void GetAllStructuralConnectionTypeIds(
+    Autodesk.Revit.DB.Document cda,
+    out System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> ids
+  ) => throw new System.NotImplementedException();
+
   public virtual Autodesk.Revit.DB.ElementId GetFamilySymbolId() => throw new System.NotImplementedException();
 
   public virtual void SetFamilySymbolId(Autodesk.Revit.DB.ElementId familySymbolId) =>

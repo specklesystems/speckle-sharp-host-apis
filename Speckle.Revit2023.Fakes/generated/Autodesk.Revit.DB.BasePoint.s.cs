@@ -13,6 +13,7 @@ public partial class BasePoint : Autodesk.Revit.DB.Element
   public virtual Autodesk.Revit.DB.XYZ SharedPosition
   {
     get => throw new System.NotImplementedException();
+    set { }
   }
   public virtual System.Boolean Clipped
   {

@@ -1,7 +1,9 @@
 namespace Autodesk.Revit.DB.Structure;
 
 public partial class RebarContainerIterator
-  : System.Collections.Generic.IEnumerator<Autodesk.Revit.DB.Structure.RebarContainerItem>
+  : System.Collections.Generic.IEnumerator<Autodesk.Revit.DB.Structure.RebarContainerItem>,
+    System.IDisposable,
+    System.Collections.IEnumerator
 {
   public RebarContainerIterator() { }
 

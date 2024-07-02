@@ -4,7 +4,9 @@ public partial class DuctSizeSettingIterator
   : System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValuePair<
     Autodesk.Revit.DB.Mechanical.DuctShape,
     Autodesk.Revit.DB.Mechanical.DuctSizes
-  >>
+  >>,
+    System.IDisposable,
+    System.Collections.IEnumerator
 {
   public DuctSizeSettingIterator() { }
 

@@ -43,7 +43,15 @@ public partial class Curve : Autodesk.Revit.DB.GeometryObject
   public virtual Autodesk.Revit.DB.Transform ComputeDerivatives(System.Double parameter, System.Boolean normalized) =>
     throw new System.NotImplementedException();
 
+  public virtual System.Boolean IsInside(System.Double parameter, out System.Int32 end) =>
+    throw new System.NotImplementedException();
+
   public virtual System.Boolean IsInside(System.Double parameter) => throw new System.NotImplementedException();
+
+  public virtual Autodesk.Revit.DB.SetComparisonResult Intersect(
+    Autodesk.Revit.DB.Curve curve,
+    out Autodesk.Revit.DB.IntersectionResultArray resultArray
+  ) => throw new System.NotImplementedException();
 
   public virtual Autodesk.Revit.DB.SetComparisonResult Intersect(Autodesk.Revit.DB.Curve curve) =>
     throw new System.NotImplementedException();
@@ -54,6 +62,14 @@ public partial class Curve : Autodesk.Revit.DB.GeometryObject
   public virtual Autodesk.Revit.DB.Curve Clone() => throw new System.NotImplementedException();
 
   public virtual void SetGraphicsStyleId(Autodesk.Revit.DB.ElementId id) => throw new System.NotImplementedException();
+
+  public virtual void ComputeClosestPoints(
+    Autodesk.Revit.DB.Curve otherCurve,
+    System.Boolean withinThisCurveBounds,
+    System.Boolean withinOtherCurveBounds,
+    System.Boolean returnAllCriticalPnts,
+    out System.Collections.Generic.IList<Autodesk.Revit.DB.ClosestPointsPairBetweenTwoCurves> resultList
+  ) => throw new System.NotImplementedException();
 
   public virtual System.Double Period
   {

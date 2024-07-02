@@ -5,6 +5,7 @@ public partial class ExportLineweightTable
     Autodesk.Revit.DB.ExportLineweightKey,
     Autodesk.Revit.DB.ExportLineweightInfo
   >>,
+    System.Collections.IEnumerable,
     System.IDisposable
 {
   public ExportLineweightTable() { }

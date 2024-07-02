@@ -12,6 +12,12 @@ public partial class CompoundStructure : System.IDisposable
 
   public virtual System.Boolean IsVerticallyHomogeneous() => throw new System.NotImplementedException();
 
+  public virtual System.Boolean IsValid(
+    Autodesk.Revit.DB.Document doc,
+    out System.Collections.Generic.IDictionary<System.Int32, Autodesk.Revit.DB.CompoundStructureError> errMap,
+    out System.Collections.Generic.IDictionary<System.Int32, System.Int32> twoLayerErrorsMap
+  ) => throw new System.NotImplementedException();
+
   public virtual Autodesk.Revit.DB.CompoundStructure GetSimpleCompoundStructure(
     System.Double wallHeight,
     System.Double distAboveBase
@@ -122,6 +128,13 @@ public partial class CompoundStructure : System.IDisposable
   public virtual System.Double GetSegmentCoordinate(System.Int32 segmentId) =>
     throw new System.NotImplementedException();
 
+  public virtual void GetSegmentEndPoints(
+    System.Int32 segmentId,
+    System.Int32 regionId,
+    out Autodesk.Revit.DB.UV end1,
+    out Autodesk.Revit.DB.UV end2
+  ) => throw new System.NotImplementedException();
+
   public virtual System.Int32 MergeRegionsAdjacentToSegment(
     System.Int32 segmentId,
     System.Int32 layerIdxForMergedRegion
@@ -130,6 +143,19 @@ public partial class CompoundStructure : System.IDisposable
   public virtual System.Int32 SplitRegion(
     Autodesk.Revit.DB.UV gridUV,
     Autodesk.Revit.DB.RectangularGridSegmentOrientation splitDirection
+  ) => throw new System.NotImplementedException();
+
+  public virtual System.Int32 SplitRegion(
+    Autodesk.Revit.DB.UV gridUV,
+    Autodesk.Revit.DB.RectangularGridSegmentOrientation splitDirection,
+    out System.Int32 newSegmentId
+  ) => throw new System.NotImplementedException();
+
+  public virtual System.Int32 FindEnclosingRegionAndSegments(
+    Autodesk.Revit.DB.UV gridUV,
+    Autodesk.Revit.DB.RectangularGridSegmentOrientation splitDirection,
+    out System.Int32 segmentId1,
+    out System.Int32 segmentId2
   ) => throw new System.NotImplementedException();
 
   public virtual System.Collections.Generic.IList<System.Int32> GetExtendableRegionIds(System.Boolean top) =>

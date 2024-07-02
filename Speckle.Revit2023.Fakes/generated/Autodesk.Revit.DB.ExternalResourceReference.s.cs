@@ -43,10 +43,12 @@ public partial class ExternalResourceReference : System.IDisposable
   public virtual System.String InSessionPath
   {
     get => throw new System.NotImplementedException();
+    set { }
   }
   public virtual System.String Version
   {
     get => throw new System.NotImplementedException();
+    set { }
   }
   public virtual System.Guid ServerId
   {

@@ -4,6 +4,8 @@ public partial class FabricationItemFile : System.IDisposable
 {
   public FabricationItemFile() { }
 
+  public virtual System.Drawing.Bitmap GetImage() => throw new System.NotImplementedException();
+
   public virtual System.Boolean IsValid() => throw new System.NotImplementedException();
 
   public virtual System.Boolean IsLoaded() => throw new System.NotImplementedException();

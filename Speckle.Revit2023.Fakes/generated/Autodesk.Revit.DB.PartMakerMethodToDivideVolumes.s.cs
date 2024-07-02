@@ -4,6 +4,9 @@ public partial class PartMakerMethodToDivideVolumes : System.IDisposable
 {
   public PartMakerMethodToDivideVolumes() { }
 
+  public virtual void GetSketchCurves(out System.Collections.Generic.IList<Autodesk.Revit.DB.Curve> curveArray) =>
+    throw new System.NotImplementedException();
+
   public virtual Autodesk.Revit.DB.Plane GetPlaneOfSketch() => throw new System.NotImplementedException();
 
   public virtual System.Collections.Generic.IDictionary<

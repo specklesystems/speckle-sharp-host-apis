@@ -11,6 +11,12 @@ public partial class WorksharingDisplaySettings : Autodesk.Revit.DB.Element
   public virtual System.Boolean UserHasGraphicOverrides(System.String username) =>
     throw new System.NotImplementedException();
 
+  public virtual void RemoveUsers(
+    Autodesk.Revit.DB.Document document,
+    System.Collections.Generic.ICollection<System.String> usersToRemove,
+    out System.Collections.Generic.ICollection<System.String> usersActuallyRemoved
+  ) => throw new System.NotImplementedException();
+
   public virtual System.Boolean CanUserHaveOverrides(System.String username) =>
     throw new System.NotImplementedException();
 

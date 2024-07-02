@@ -4,6 +4,8 @@ public partial class ImageType : Autodesk.Revit.DB.ElementType
 {
   public ImageType() { }
 
+  public virtual System.Drawing.Bitmap GetImage() => throw new System.NotImplementedException();
+
   public static Autodesk.Revit.DB.ImageType Create(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.ImageTypeOptions options

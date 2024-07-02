@@ -10,6 +10,20 @@ public partial class PathOfTravel : Autodesk.Revit.DB.Element
     Autodesk.Revit.DB.XYZ pathEnd
   ) => throw new System.NotImplementedException();
 
+  public static Autodesk.Revit.DB.Analysis.PathOfTravel Create(
+    Autodesk.Revit.DB.View DBView,
+    Autodesk.Revit.DB.XYZ pathStart,
+    Autodesk.Revit.DB.XYZ pathEnd,
+    out Autodesk.Revit.DB.Analysis.PathOfTravelCalculationStatus resultStatus
+  ) => throw new System.NotImplementedException();
+
+  public static System.Collections.Generic.IList<Autodesk.Revit.DB.Analysis.PathOfTravel> CreateMultiple(
+    Autodesk.Revit.DB.View DBView,
+    System.Collections.Generic.IList<Autodesk.Revit.DB.XYZ> pathStarts,
+    System.Collections.Generic.IList<Autodesk.Revit.DB.XYZ> pathEnds,
+    out System.Collections.Generic.IList<Autodesk.Revit.DB.Analysis.PathOfTravelCalculationStatus> resultStatus
+  ) => throw new System.NotImplementedException();
+
   public static System.Collections.Generic.IList<Autodesk.Revit.DB.Analysis.PathOfTravel> CreateMultiple(
     Autodesk.Revit.DB.View DBView,
     System.Collections.Generic.IList<Autodesk.Revit.DB.XYZ> pathStarts,
@@ -20,6 +34,13 @@ public partial class PathOfTravel : Autodesk.Revit.DB.Element
     Autodesk.Revit.DB.View DBView,
     System.Collections.Generic.IList<Autodesk.Revit.DB.XYZ> pathStarts,
     System.Collections.Generic.IList<Autodesk.Revit.DB.XYZ> pathEnds
+  ) => throw new System.NotImplementedException();
+
+  public static System.Collections.Generic.IList<Autodesk.Revit.DB.Analysis.PathOfTravel> CreateMapped(
+    Autodesk.Revit.DB.View DBView,
+    System.Collections.Generic.IList<Autodesk.Revit.DB.XYZ> pathStarts,
+    System.Collections.Generic.IList<Autodesk.Revit.DB.XYZ> pathEnds,
+    out System.Collections.Generic.IList<Autodesk.Revit.DB.Analysis.PathOfTravelCalculationStatus> resultStatus
   ) => throw new System.NotImplementedException();
 
   public static System.Collections.Generic.IList<Autodesk.Revit.DB.XYZ> FindStartsOfLongestPathsFromRooms(
@@ -41,6 +62,12 @@ public partial class PathOfTravel : Autodesk.Revit.DB.Element
 
   public virtual Autodesk.Revit.DB.Analysis.PathOfTravelCalculationStatus Update() =>
     throw new System.NotImplementedException();
+
+  public static System.Int32 UpdateMultiple(
+    Autodesk.Revit.DB.Document adoc,
+    System.Collections.Generic.IList<Autodesk.Revit.DB.ElementId> elementsToUpdate,
+    out System.Collections.Generic.IList<Autodesk.Revit.DB.Analysis.PathOfTravelCalculationStatus> resultStatus
+  ) => throw new System.NotImplementedException();
 
   public static System.Int32 UpdateMultiple(
     Autodesk.Revit.DB.Document adoc,

@@ -14,6 +14,12 @@ public partial class WorksharingUtils : System.IDisposable
     Autodesk.Revit.DB.ElementId elementId
   ) => throw new System.NotImplementedException();
 
+  public static Autodesk.Revit.DB.CheckoutStatus GetCheckoutStatus(
+    Autodesk.Revit.DB.Document document,
+    Autodesk.Revit.DB.ElementId elementId,
+    out System.String owner
+  ) => throw new System.NotImplementedException();
+
   public static System.Collections.Generic.ISet<Autodesk.Revit.DB.ElementId> CheckoutElements(
     Autodesk.Revit.DB.Document document,
     System.Collections.Generic.ISet<Autodesk.Revit.DB.ElementId> elementsToCheckout,

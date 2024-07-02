@@ -1,6 +1,9 @@
 namespace Autodesk.Revit.DB;
 
-public partial class FilteredElementIdIterator : System.Collections.Generic.IEnumerator<Autodesk.Revit.DB.ElementId>
+public partial class FilteredElementIdIterator
+  : System.Collections.Generic.IEnumerator<Autodesk.Revit.DB.ElementId>,
+    System.IDisposable,
+    System.Collections.IEnumerator
 {
   public FilteredElementIdIterator() { }
 

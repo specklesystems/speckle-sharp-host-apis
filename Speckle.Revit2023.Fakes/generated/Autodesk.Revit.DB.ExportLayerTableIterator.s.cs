@@ -4,7 +4,9 @@ public partial class ExportLayerTableIterator
   : System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValuePair<
     Autodesk.Revit.DB.ExportLayerKey,
     Autodesk.Revit.DB.ExportLayerInfo
-  >>
+  >>,
+    System.IDisposable,
+    System.Collections.IEnumerator
 {
   public ExportLayerTableIterator() { }
 

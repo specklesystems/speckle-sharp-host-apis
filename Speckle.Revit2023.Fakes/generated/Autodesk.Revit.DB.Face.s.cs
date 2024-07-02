@@ -35,10 +35,23 @@ public partial class Face : Autodesk.Revit.DB.GeometryObject
   public virtual Autodesk.Revit.DB.XYZ ComputeNormal(Autodesk.Revit.DB.UV point) =>
     throw new System.NotImplementedException();
 
+  public virtual System.Boolean IsInside(Autodesk.Revit.DB.UV point, out Autodesk.Revit.DB.IntersectionResult result) =>
+    throw new System.NotImplementedException();
+
   public virtual System.Boolean IsInside(Autodesk.Revit.DB.UV point) => throw new System.NotImplementedException();
+
+  public virtual Autodesk.Revit.DB.FaceIntersectionFaceResult Intersect(
+    Autodesk.Revit.DB.Face face,
+    out Autodesk.Revit.DB.Curve result
+  ) => throw new System.NotImplementedException();
 
   public virtual Autodesk.Revit.DB.FaceIntersectionFaceResult Intersect(Autodesk.Revit.DB.Face face) =>
     throw new System.NotImplementedException();
+
+  public virtual Autodesk.Revit.DB.SetComparisonResult Intersect(
+    Autodesk.Revit.DB.Curve curve,
+    out Autodesk.Revit.DB.IntersectionResultArray results
+  ) => throw new System.NotImplementedException();
 
   public virtual Autodesk.Revit.DB.SetComparisonResult Intersect(Autodesk.Revit.DB.Curve curve) =>
     throw new System.NotImplementedException();

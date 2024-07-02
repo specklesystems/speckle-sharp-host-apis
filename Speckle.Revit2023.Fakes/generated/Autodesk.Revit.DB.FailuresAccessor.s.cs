@@ -34,6 +34,11 @@ public partial class FailuresAccessor : System.IDisposable
   public virtual System.Boolean IsFailureResolutionPermitted() => throw new System.NotImplementedException();
 
   public virtual System.Boolean IsElementsDeletionPermitted(
+    System.Collections.Generic.IList<Autodesk.Revit.DB.ElementId> idsToDelete,
+    out System.String reason
+  ) => throw new System.NotImplementedException();
+
+  public virtual System.Boolean IsElementsDeletionPermitted(
     System.Collections.Generic.IList<Autodesk.Revit.DB.ElementId> idsToDelete
   ) => throw new System.NotImplementedException();
 

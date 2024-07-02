@@ -1,6 +1,9 @@
 namespace Autodesk.Revit.DB;
 
-public partial class CurveLoopIterator : System.Collections.Generic.IEnumerator<Autodesk.Revit.DB.Curve>
+public partial class CurveLoopIterator
+  : System.Collections.Generic.IEnumerator<Autodesk.Revit.DB.Curve>,
+    System.IDisposable,
+    System.Collections.IEnumerator
 {
   public CurveLoopIterator() { }
 

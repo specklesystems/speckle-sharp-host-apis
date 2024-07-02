@@ -26,6 +26,9 @@ public partial class FillGrid : System.IDisposable
 
   public virtual Autodesk.Revit.DB.UV GetSegmentDirection() => throw new System.NotImplementedException();
 
+  public virtual System.Int32 GetPointLineZone(Autodesk.Revit.DB.UV point, out Autodesk.Revit.DB.UV nearestPoint) =>
+    throw new System.NotImplementedException();
+
   public virtual System.Int32 GetPointLineZone(Autodesk.Revit.DB.UV point) =>
     throw new System.NotImplementedException();
 

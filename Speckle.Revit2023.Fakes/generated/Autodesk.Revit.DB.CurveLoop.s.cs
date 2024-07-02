@@ -1,6 +1,9 @@
 namespace Autodesk.Revit.DB;
 
-public partial class CurveLoop : System.Collections.Generic.IEnumerable<Autodesk.Revit.DB.Curve>, System.IDisposable
+public partial class CurveLoop
+  : System.Collections.Generic.IEnumerable<Autodesk.Revit.DB.Curve>,
+    System.Collections.IEnumerable,
+    System.IDisposable
 {
   public CurveLoop() { }
 

@@ -5,6 +5,7 @@ public partial class ExportPatternTable
     Autodesk.Revit.DB.ExportPatternKey,
     Autodesk.Revit.DB.ExportPatternInfo
   >>,
+    System.Collections.IEnumerable,
     System.IDisposable
 {
   public ExportPatternTable() { }

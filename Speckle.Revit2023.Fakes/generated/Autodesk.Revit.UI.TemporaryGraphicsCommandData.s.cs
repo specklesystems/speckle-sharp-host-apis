@@ -13,9 +13,11 @@ public partial class TemporaryGraphicsCommandData : Autodesk.Revit.DB.ExternalSe
   public virtual System.Int32 Index
   {
     get => throw new System.NotImplementedException();
+    set { }
   }
   public virtual Autodesk.Revit.DB.Document Document
   {
     get => throw new System.NotImplementedException();
+    set { }
   }
 }

@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class FilteredElementCollector
   : System.Collections.Generic.IEnumerable<Autodesk.Revit.DB.Element>,
+    System.Collections.IEnumerable,
     System.IDisposable
 {
   public FilteredElementCollector() { }

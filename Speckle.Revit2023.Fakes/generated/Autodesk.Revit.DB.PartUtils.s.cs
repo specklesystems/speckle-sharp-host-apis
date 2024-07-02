@@ -34,6 +34,12 @@ public partial class PartUtils
 
   public static System.Collections.Generic.IList<Autodesk.Revit.DB.Curve> GetSplittingCurves(
     Autodesk.Revit.DB.Document document,
+    Autodesk.Revit.DB.ElementId partId,
+    out Autodesk.Revit.DB.Plane sketchPlane
+  ) => throw new System.NotImplementedException();
+
+  public static System.Collections.Generic.IList<Autodesk.Revit.DB.Curve> GetSplittingCurves(
+    Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.ElementId partId
   ) => throw new System.NotImplementedException();
 

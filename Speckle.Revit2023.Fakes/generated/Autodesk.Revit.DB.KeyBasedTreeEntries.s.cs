@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public partial class KeyBasedTreeEntries
   : System.Collections.Generic.IEnumerable<Autodesk.Revit.DB.KeyBasedTreeEntry>,
+    System.Collections.IEnumerable,
     System.IDisposable
 {
   public KeyBasedTreeEntries() { }

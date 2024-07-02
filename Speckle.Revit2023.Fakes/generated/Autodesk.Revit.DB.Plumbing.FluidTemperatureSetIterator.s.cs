@@ -1,7 +1,9 @@
 namespace Autodesk.Revit.DB.Plumbing;
 
 public partial class FluidTemperatureSetIterator
-  : System.Collections.Generic.IEnumerator<Autodesk.Revit.DB.Plumbing.FluidTemperature>
+  : System.Collections.Generic.IEnumerator<Autodesk.Revit.DB.Plumbing.FluidTemperature>,
+    System.IDisposable,
+    System.Collections.IEnumerator
 {
   public FluidTemperatureSetIterator() { }
 

@@ -6,6 +6,22 @@ public partial class Rebar : Autodesk.Revit.DB.Element
 
   public static Autodesk.Revit.DB.Structure.Rebar CreateFreeForm(
     Autodesk.Revit.DB.Document doc,
+    Autodesk.Revit.DB.Structure.RebarBarType barType,
+    Autodesk.Revit.DB.Element host,
+    System.Collections.Generic.IList<Autodesk.Revit.DB.CurveLoop> curves,
+    out Autodesk.Revit.DB.Structure.RebarFreeFormValidationResult error
+  ) => throw new System.NotImplementedException();
+
+  public static Autodesk.Revit.DB.Structure.Rebar CreateFreeForm(
+    Autodesk.Revit.DB.Document doc,
+    Autodesk.Revit.DB.Structure.RebarBarType barType,
+    Autodesk.Revit.DB.Element host,
+    System.Collections.Generic.IList<System.Collections.Generic.IList<Autodesk.Revit.DB.Curve>> curves,
+    out Autodesk.Revit.DB.Structure.RebarFreeFormValidationResult error
+  ) => throw new System.NotImplementedException();
+
+  public static Autodesk.Revit.DB.Structure.Rebar CreateFreeForm(
+    Autodesk.Revit.DB.Document doc,
     System.Guid serverGUID,
     Autodesk.Revit.DB.Structure.RebarBarType barType,
     Autodesk.Revit.DB.Element host
@@ -245,6 +261,13 @@ public partial class Rebar : Autodesk.Revit.DB.Element
   public virtual void EnableHookLengthOverride(System.Boolean enable) => throw new System.NotImplementedException();
 
   public virtual System.Boolean IsHookLengthOverrideEnabled() => throw new System.NotImplementedException();
+
+  public virtual void GetOverridableHookParameters(
+    out System.Collections.Generic.ISet<Autodesk.Revit.DB.ElementId> startHookLengthPrameters,
+    out System.Collections.Generic.ISet<Autodesk.Revit.DB.ElementId> startHookTangentLengthParameters,
+    out System.Collections.Generic.ISet<Autodesk.Revit.DB.ElementId> endHookLengthParameters,
+    out System.Collections.Generic.ISet<Autodesk.Revit.DB.ElementId> endHookTangentLengthParameters
+  ) => throw new System.NotImplementedException();
 
   public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.ElementId> GetAllRebarShapeIds() =>
     throw new System.NotImplementedException();

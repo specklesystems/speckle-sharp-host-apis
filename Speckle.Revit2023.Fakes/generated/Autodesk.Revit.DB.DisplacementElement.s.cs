@@ -38,6 +38,12 @@ public partial class DisplacementElement : Autodesk.Revit.DB.Element
     System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> elementIds
   ) => throw new System.NotImplementedException();
 
+  public static System.Boolean CanElementsBeDisplaced(
+    Autodesk.Revit.DB.View view,
+    System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> elementIds,
+    out Autodesk.Revit.DB.ElementId commonDisplacedElementId
+  ) => throw new System.NotImplementedException();
+
   public static System.Collections.Generic.ICollection<Autodesk.Revit.DB.ElementId> GetAdditionalElementsToDisplace(
     Autodesk.Revit.DB.Document document,
     Autodesk.Revit.DB.View view,

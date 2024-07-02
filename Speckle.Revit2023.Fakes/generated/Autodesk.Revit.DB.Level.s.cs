@@ -14,6 +14,12 @@ public partial class Level : Autodesk.Revit.DB.DatumPlane
     System.Double elevation
   ) => throw new System.NotImplementedException();
 
+  public static Autodesk.Revit.DB.ElementId GetNearestLevelId(
+    Autodesk.Revit.DB.Document document,
+    System.Double elevation,
+    out System.Double offset
+  ) => throw new System.NotImplementedException();
+
   public virtual Autodesk.Revit.DB.ElementId FindAssociatedPlanViewId() => throw new System.NotImplementedException();
 
   public virtual System.Double ProjectElevation

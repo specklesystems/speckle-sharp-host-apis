@@ -4,6 +4,14 @@ public partial class RebarCoupler : Autodesk.Revit.DB.Element
 {
   public RebarCoupler() { }
 
+  public static Autodesk.Revit.DB.Structure.RebarCoupler Create(
+    Autodesk.Revit.DB.Document doc,
+    Autodesk.Revit.DB.ElementId typeId,
+    Autodesk.Revit.DB.Structure.ReinforcementData pFirstData,
+    Autodesk.Revit.DB.Structure.ReinforcementData pSecondData,
+    out Autodesk.Revit.DB.Structure.RebarCouplerError error
+  ) => throw new System.NotImplementedException();
+
   public virtual System.Boolean CouplerLinkTwoBars() => throw new System.NotImplementedException();
 
   public virtual System.Collections.Generic.IList<Autodesk.Revit.DB.Structure.ReinforcementData> GetCoupledReinforcementData() =>

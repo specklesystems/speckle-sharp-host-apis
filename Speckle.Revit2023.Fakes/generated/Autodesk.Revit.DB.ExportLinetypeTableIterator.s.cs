@@ -4,7 +4,9 @@ public partial class ExportLinetypeTableIterator
   : System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValuePair<
     Autodesk.Revit.DB.ExportLinetypeKey,
     Autodesk.Revit.DB.ExportLinetypeInfo
-  >>
+  >>,
+    System.IDisposable,
+    System.Collections.IEnumerator
 {
   public ExportLinetypeTableIterator() { }
 

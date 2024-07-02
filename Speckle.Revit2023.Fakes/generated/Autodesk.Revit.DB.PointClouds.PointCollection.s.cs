@@ -2,6 +2,7 @@ namespace Autodesk.Revit.DB.PointClouds;
 
 public partial class PointCollection
   : System.Collections.Generic.IEnumerable<Autodesk.Revit.DB.PointClouds.CloudPoint>,
+    System.Collections.IEnumerable,
     System.IDisposable
 {
   public PointCollection() { }
