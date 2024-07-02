@@ -27,7 +27,6 @@ public partial class Polyline : Rhino.Collections.Point3dList
 	public static Rhino.Geometry.Polyline CreateStarPolygon(Rhino.Geometry.Circle circle,System.Double radius,System.Int32 cornerCount) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.MeshFace[] TriangulateClosedPolyline() => throw new System.NotImplementedException();
 	public virtual void RemoveNearlyEqualSubsequentPoints(System.Double tolerance) => throw new System.NotImplementedException();
-	System.Object System.ICloneable.Clone() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsValid
 	{
 		get => throw new System.NotImplementedException();

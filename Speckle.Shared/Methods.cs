@@ -21,8 +21,6 @@ public partial class Generator
       }
       try
       {
-        var parameters = method.GetParameters();
-
         if (method.IsSpecialName)
         {
             continue;

@@ -19,7 +19,7 @@ Generator generator =
       new ("HostUtils", [new ("GetCustomComputeEndpoints")]),
       new ("LinearDimension", [new ("AnnotationType")]),
       new ("InstanceDefinition", [new ("ComponentType")]),
-      new ("Polyline", [new ("Duplicate")]),
+      new ("Polyline", [new ("Duplicate"), new ("System.ICloneable.Clone")]),
       new ("RadialDimension", [new ("AnnotationType")]),
       new ("MaterialRefs", [new ("CopyTo")]),
       new ("PersistentSettingsConverter", [new ("ToString")]),
@@ -31,7 +31,7 @@ Generator generator =
       new ("RenderMaterial", [new ("HandleTexturedValue")]),
       new ("CustomRenderMeshProvider2", [new ("BoundingBox")]),
       new ("Color4f", [new ("GetObjectData")]),
-      new ("Point3dList", [new ("Duplicate")]),
+      new ("Point3dList", [new ("Duplicate"), new ("System.ICloneable.Clone")]),
     ]
   );
 generator.Generate();

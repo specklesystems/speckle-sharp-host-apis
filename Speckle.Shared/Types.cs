@@ -147,7 +147,6 @@ public partial class Generator
   }
   private (string, GeneratedTypeInfo) WriteStruct(Type clazz)
   {
-
     StringBuilder sb = new();
     sb.AppendLine($"namespace {clazz.Namespace};").AppendLine();
     sb.Append($"public partial struct {clazz.Name}");
