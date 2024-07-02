@@ -3,7 +3,7 @@ namespace Rhino.Geometry;
 public partial struct MeshCheckParameters
 {
 	public MeshCheckParameters() {}
-	public  Rhino.Geometry.MeshCheckParameters Defaults() => throw new System.NotImplementedException();
+	public static Rhino.Geometry.MeshCheckParameters Defaults() => throw new System.NotImplementedException();
 	public  System.Boolean CheckForDegenerateFaces
 	{
 		get => throw new System.NotImplementedException();

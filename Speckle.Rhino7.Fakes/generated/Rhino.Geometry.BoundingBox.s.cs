@@ -26,9 +26,9 @@ public partial struct BoundingBox : System.ICloneable
 	public  Rhino.Geometry.Brep ToBrep() => throw new System.NotImplementedException();
 	public  void Union(Rhino.Geometry.BoundingBox other) => throw new System.NotImplementedException();
 	public  void Union(Rhino.Geometry.Point3d point) => throw new System.NotImplementedException();
-	public  Rhino.Geometry.BoundingBox Union(Rhino.Geometry.BoundingBox a,Rhino.Geometry.BoundingBox b) => throw new System.NotImplementedException();
-	public  Rhino.Geometry.BoundingBox Intersection(Rhino.Geometry.BoundingBox a,Rhino.Geometry.BoundingBox b) => throw new System.NotImplementedException();
-	public  Rhino.Geometry.BoundingBox Union(Rhino.Geometry.BoundingBox box,Rhino.Geometry.Point3d point) => throw new System.NotImplementedException();
+	public static Rhino.Geometry.BoundingBox Union(Rhino.Geometry.BoundingBox a,Rhino.Geometry.BoundingBox b) => throw new System.NotImplementedException();
+	public static Rhino.Geometry.BoundingBox Intersection(Rhino.Geometry.BoundingBox a,Rhino.Geometry.BoundingBox b) => throw new System.NotImplementedException();
+	public static Rhino.Geometry.BoundingBox Union(Rhino.Geometry.BoundingBox box,Rhino.Geometry.Point3d point) => throw new System.NotImplementedException();
 	System.Object System.ICloneable.Clone() => throw new System.NotImplementedException();
 	public static Rhino.Geometry.BoundingBox Empty
 	{

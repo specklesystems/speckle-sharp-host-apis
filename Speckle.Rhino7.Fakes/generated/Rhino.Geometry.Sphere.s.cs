@@ -5,7 +5,7 @@ public partial struct Sphere : Rhino.IEpsilonComparable<Rhino.Geometry.Sphere>
 	public Sphere() {}
 	public Sphere(Rhino.Geometry.Point3d center,System.Double radius) => throw new System.NotImplementedException();
 	public Sphere(Rhino.Geometry.Plane equatorialPlane,System.Double radius) => throw new System.NotImplementedException();
-	public  Rhino.Geometry.Sphere FitSphereToPoints(System.Collections.Generic.IEnumerable<Rhino.Geometry.Point3d> points) => throw new System.NotImplementedException();
+	public static Rhino.Geometry.Sphere FitSphereToPoints(System.Collections.Generic.IEnumerable<Rhino.Geometry.Point3d> points) => throw new System.NotImplementedException();
 	public  Rhino.Geometry.Circle LatitudeRadians(System.Double radians) => throw new System.NotImplementedException();
 	public  Rhino.Geometry.Circle LatitudeDegrees(System.Double degrees) => throw new System.NotImplementedException();
 	public  Rhino.Geometry.Circle LongitudeRadians(System.Double radians) => throw new System.NotImplementedException();

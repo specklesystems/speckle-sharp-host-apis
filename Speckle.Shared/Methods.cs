@@ -54,6 +54,11 @@ public partial class Generator
     }
 
     var extras = string.Empty;
+    if (methodInfo.IsStatic)
+    {
+      extras = "static";
+    }
+
     if (generatedType == GeneratedType.Class)
     {
       extras = "virtual";

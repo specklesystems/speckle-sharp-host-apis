@@ -6,7 +6,7 @@ public partial struct Rectangle3d : Rhino.IEpsilonComparable<Rhino.Geometry.Rect
 	public Rectangle3d(Rhino.Geometry.Plane plane,System.Double width,System.Double height) => throw new System.NotImplementedException();
 	public Rectangle3d(Rhino.Geometry.Plane plane,Rhino.Geometry.Interval width,Rhino.Geometry.Interval height) => throw new System.NotImplementedException();
 	public Rectangle3d(Rhino.Geometry.Plane plane,Rhino.Geometry.Point3d cornerA,Rhino.Geometry.Point3d cornerB) => throw new System.NotImplementedException();
-	public  Rhino.Geometry.Rectangle3d CreateFromPolyline(System.Collections.Generic.IEnumerable<Rhino.Geometry.Point3d> polyline) => throw new System.NotImplementedException();
+	public static Rhino.Geometry.Rectangle3d CreateFromPolyline(System.Collections.Generic.IEnumerable<Rhino.Geometry.Point3d> polyline) => throw new System.NotImplementedException();
 	public  void MakeIncreasing() => throw new System.NotImplementedException();
 	public  Rhino.Geometry.Point3d Corner(System.Int32 index) => throw new System.NotImplementedException();
 	public  void RecenterPlane(System.Int32 index) => throw new System.NotImplementedException();

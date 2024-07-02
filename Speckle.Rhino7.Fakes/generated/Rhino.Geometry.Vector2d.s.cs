@@ -4,13 +4,13 @@ public partial struct Vector2d : System.Runtime.Serialization.ISerializable,Syst
 {
 	public Vector2d() {}
 	public Vector2d(System.Double x,System.Double y) => throw new System.NotImplementedException();
-	public  Rhino.Geometry.Vector2d Multiply(Rhino.Geometry.Vector2d vector,System.Double t) => throw new System.NotImplementedException();
-	public  Rhino.Geometry.Vector2d Multiply(System.Double t,Rhino.Geometry.Vector2d vector) => throw new System.NotImplementedException();
-	public  Rhino.Geometry.Vector2d Divide(Rhino.Geometry.Vector2d vector,System.Double t) => throw new System.NotImplementedException();
-	public  Rhino.Geometry.Vector2d Add(Rhino.Geometry.Vector2d vector1,Rhino.Geometry.Vector2d vector2) => throw new System.NotImplementedException();
-	public  Rhino.Geometry.Vector2d Subtract(Rhino.Geometry.Vector2d vector1,Rhino.Geometry.Vector2d vector2) => throw new System.NotImplementedException();
-	public  System.Double Multiply(Rhino.Geometry.Vector2d vector1,Rhino.Geometry.Vector2d vector2) => throw new System.NotImplementedException();
-	public  Rhino.Geometry.Vector2d Negate(Rhino.Geometry.Vector2d vector) => throw new System.NotImplementedException();
+	public static Rhino.Geometry.Vector2d Multiply(Rhino.Geometry.Vector2d vector,System.Double t) => throw new System.NotImplementedException();
+	public static Rhino.Geometry.Vector2d Multiply(System.Double t,Rhino.Geometry.Vector2d vector) => throw new System.NotImplementedException();
+	public static Rhino.Geometry.Vector2d Divide(Rhino.Geometry.Vector2d vector,System.Double t) => throw new System.NotImplementedException();
+	public static Rhino.Geometry.Vector2d Add(Rhino.Geometry.Vector2d vector1,Rhino.Geometry.Vector2d vector2) => throw new System.NotImplementedException();
+	public static Rhino.Geometry.Vector2d Subtract(Rhino.Geometry.Vector2d vector1,Rhino.Geometry.Vector2d vector2) => throw new System.NotImplementedException();
+	public static System.Double Multiply(Rhino.Geometry.Vector2d vector1,Rhino.Geometry.Vector2d vector2) => throw new System.NotImplementedException();
+	public static Rhino.Geometry.Vector2d Negate(Rhino.Geometry.Vector2d vector) => throw new System.NotImplementedException();
 	public  System.Boolean Equals(Rhino.Geometry.Vector2d vector) => throw new System.NotImplementedException();
 	public  System.Boolean EpsilonEquals(Rhino.Geometry.Vector2d other,System.Double epsilon) => throw new System.NotImplementedException();
 	public  System.Int32 CompareTo(Rhino.Geometry.Vector2d other) => throw new System.NotImplementedException();

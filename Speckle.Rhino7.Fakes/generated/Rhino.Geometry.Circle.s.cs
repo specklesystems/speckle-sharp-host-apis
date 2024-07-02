@@ -10,8 +10,8 @@ public partial struct Circle : Rhino.IEpsilonComparable<Rhino.Geometry.Circle>,S
 	public Circle(Rhino.Geometry.Point3d point1,Rhino.Geometry.Point3d point2,Rhino.Geometry.Point3d point3) => throw new System.NotImplementedException();
 	public Circle(Rhino.Geometry.Plane plane,Rhino.Geometry.Point3d center,System.Double radius) => throw new System.NotImplementedException();
 	public Circle(Rhino.Geometry.Point3d startPoint,Rhino.Geometry.Vector3d tangentAtP,Rhino.Geometry.Point3d pointOnCircle) => throw new System.NotImplementedException();
-	public  Rhino.Geometry.Circle TryFitCircleTT(Rhino.Geometry.Curve c1,Rhino.Geometry.Curve c2,System.Double t1,System.Double t2) => throw new System.NotImplementedException();
-	public  Rhino.Geometry.Circle TryFitCircleTTT(Rhino.Geometry.Curve c1,Rhino.Geometry.Curve c2,Rhino.Geometry.Curve c3,System.Double t1,System.Double t2,System.Double t3) => throw new System.NotImplementedException();
+	public static Rhino.Geometry.Circle TryFitCircleTT(Rhino.Geometry.Curve c1,Rhino.Geometry.Curve c2,System.Double t1,System.Double t2) => throw new System.NotImplementedException();
+	public static Rhino.Geometry.Circle TryFitCircleTTT(Rhino.Geometry.Curve c1,Rhino.Geometry.Curve c2,Rhino.Geometry.Curve c3,System.Double t1,System.Double t2,System.Double t3) => throw new System.NotImplementedException();
 	public  System.Boolean IsInPlane(Rhino.Geometry.Plane plane,System.Double tolerance) => throw new System.NotImplementedException();
 	public  Rhino.Geometry.Point3d PointAt(System.Double t) => throw new System.NotImplementedException();
 	public  Rhino.Geometry.Vector3d TangentAt(System.Double t) => throw new System.NotImplementedException();

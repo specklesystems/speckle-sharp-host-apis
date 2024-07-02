@@ -10,7 +10,7 @@ public partial struct Point3f : System.IEquatable<Rhino.Geometry.Point3f>,System
 	public  System.String ToString(System.String format,System.IFormatProvider formatProvider) => throw new System.NotImplementedException();
 	public  System.Double DistanceTo(Rhino.Geometry.Point3f other) => throw new System.NotImplementedException();
 	public  void Transform(Rhino.Geometry.Transform xform) => throw new System.NotImplementedException();
-	public  Rhino.Geometry.Vector3f Subtract(Rhino.Geometry.Point3f point1,Rhino.Geometry.Point3f point2) => throw new System.NotImplementedException();
+	public static Rhino.Geometry.Vector3f Subtract(Rhino.Geometry.Point3f point1,Rhino.Geometry.Point3f point2) => throw new System.NotImplementedException();
 	System.Int32 System.IComparable.CompareTo(System.Object obj) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.Point3f Origin
 	{

@@ -9,16 +9,16 @@ public partial struct Quaternion : System.IEquatable<Rhino.Geometry.Quaternion>,
 	public  void Set(System.Double a,System.Double b,System.Double c,System.Double d) => throw new System.NotImplementedException();
 	public  System.Boolean Invert() => throw new System.NotImplementedException();
 	public  System.Double DistanceTo(Rhino.Geometry.Quaternion q) => throw new System.NotImplementedException();
-	public  System.Double Distance(Rhino.Geometry.Quaternion p,Rhino.Geometry.Quaternion q) => throw new System.NotImplementedException();
+	public static System.Double Distance(Rhino.Geometry.Quaternion p,Rhino.Geometry.Quaternion q) => throw new System.NotImplementedException();
 	public  Rhino.Geometry.Transform MatrixForm() => throw new System.NotImplementedException();
 	public  System.Boolean Unitize() => throw new System.NotImplementedException();
 	public  void SetRotation(System.Double angle,Rhino.Geometry.Vector3d axisOfRotation) => throw new System.NotImplementedException();
-	public  Rhino.Geometry.Quaternion Rotation(System.Double angle,Rhino.Geometry.Vector3d axisOfRotation) => throw new System.NotImplementedException();
+	public static Rhino.Geometry.Quaternion Rotation(System.Double angle,Rhino.Geometry.Vector3d axisOfRotation) => throw new System.NotImplementedException();
 	public  void SetRotation(Rhino.Geometry.Plane plane0,Rhino.Geometry.Plane plane1) => throw new System.NotImplementedException();
-	public  Rhino.Geometry.Quaternion Rotation(Rhino.Geometry.Plane plane0,Rhino.Geometry.Plane plane1) => throw new System.NotImplementedException();
+	public static Rhino.Geometry.Quaternion Rotation(Rhino.Geometry.Plane plane0,Rhino.Geometry.Plane plane1) => throw new System.NotImplementedException();
 	public  Rhino.Geometry.Vector3d Rotate(Rhino.Geometry.Vector3d v) => throw new System.NotImplementedException();
-	public  Rhino.Geometry.Quaternion Product(Rhino.Geometry.Quaternion p,Rhino.Geometry.Quaternion q) => throw new System.NotImplementedException();
-	public  Rhino.Geometry.Quaternion CrossProduct(Rhino.Geometry.Quaternion p,Rhino.Geometry.Quaternion q) => throw new System.NotImplementedException();
+	public static Rhino.Geometry.Quaternion Product(Rhino.Geometry.Quaternion p,Rhino.Geometry.Quaternion q) => throw new System.NotImplementedException();
+	public static Rhino.Geometry.Quaternion CrossProduct(Rhino.Geometry.Quaternion p,Rhino.Geometry.Quaternion q) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.Quaternion Zero
 	{
 		get => throw new System.NotImplementedException();

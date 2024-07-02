@@ -13,16 +13,16 @@ public partial struct Vector3f : System.IEquatable<Rhino.Geometry.Vector3f>,Syst
 	public  System.Boolean Rotate(System.Double angleRadians,Rhino.Geometry.Vector3f rotationAxis) => throw new System.NotImplementedException();
 	public  System.Boolean Reverse() => throw new System.NotImplementedException();
 	public  System.Boolean PerpendicularTo(Rhino.Geometry.Vector3f other) => throw new System.NotImplementedException();
-	public  Rhino.Geometry.Vector3f Add(Rhino.Geometry.Vector3f vector1,Rhino.Geometry.Vector3f vector2) => throw new System.NotImplementedException();
-	public  Rhino.Geometry.Vector3f Subtract(Rhino.Geometry.Vector3f vector1,Rhino.Geometry.Vector3f vector2) => throw new System.NotImplementedException();
-	public  Rhino.Geometry.Vector3f Negate(Rhino.Geometry.Vector3f vector) => throw new System.NotImplementedException();
-	public  Rhino.Geometry.Point3f Add(Rhino.Geometry.Point3f point,Rhino.Geometry.Vector3f vector) => throw new System.NotImplementedException();
-	public  Rhino.Geometry.Vector3f Multiply(Rhino.Geometry.Vector3f vector,System.Single t) => throw new System.NotImplementedException();
-	public  Rhino.Geometry.Vector3f Multiply(System.Single t,Rhino.Geometry.Vector3f vector) => throw new System.NotImplementedException();
-	public  System.Double Multiply(Rhino.Geometry.Vector3f point1,Rhino.Geometry.Vector3f point2) => throw new System.NotImplementedException();
-	public  Rhino.Geometry.Vector3f Divide(Rhino.Geometry.Vector3f vector,System.Double t) => throw new System.NotImplementedException();
-	public  Rhino.Geometry.Vector3f Divide(Rhino.Geometry.Vector3f vector,System.Single t) => throw new System.NotImplementedException();
-	public  Rhino.Geometry.Vector3f CrossProduct(Rhino.Geometry.Vector3f a,Rhino.Geometry.Vector3f b) => throw new System.NotImplementedException();
+	public static Rhino.Geometry.Vector3f Add(Rhino.Geometry.Vector3f vector1,Rhino.Geometry.Vector3f vector2) => throw new System.NotImplementedException();
+	public static Rhino.Geometry.Vector3f Subtract(Rhino.Geometry.Vector3f vector1,Rhino.Geometry.Vector3f vector2) => throw new System.NotImplementedException();
+	public static Rhino.Geometry.Vector3f Negate(Rhino.Geometry.Vector3f vector) => throw new System.NotImplementedException();
+	public static Rhino.Geometry.Point3f Add(Rhino.Geometry.Point3f point,Rhino.Geometry.Vector3f vector) => throw new System.NotImplementedException();
+	public static Rhino.Geometry.Vector3f Multiply(Rhino.Geometry.Vector3f vector,System.Single t) => throw new System.NotImplementedException();
+	public static Rhino.Geometry.Vector3f Multiply(System.Single t,Rhino.Geometry.Vector3f vector) => throw new System.NotImplementedException();
+	public static System.Double Multiply(Rhino.Geometry.Vector3f point1,Rhino.Geometry.Vector3f point2) => throw new System.NotImplementedException();
+	public static Rhino.Geometry.Vector3f Divide(Rhino.Geometry.Vector3f vector,System.Double t) => throw new System.NotImplementedException();
+	public static Rhino.Geometry.Vector3f Divide(Rhino.Geometry.Vector3f vector,System.Single t) => throw new System.NotImplementedException();
+	public static Rhino.Geometry.Vector3f CrossProduct(Rhino.Geometry.Vector3f a,Rhino.Geometry.Vector3f b) => throw new System.NotImplementedException();
 	System.Int32 System.IComparable.CompareTo(System.Object obj) => throw new System.NotImplementedException();
 	public static Rhino.Geometry.Vector3f Zero
 	{
