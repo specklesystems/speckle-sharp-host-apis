@@ -3,6 +3,13 @@ using System.Text;
 
 namespace Speckle.Shared;
 
+[Flags]
+public enum GeneratorOptions
+{
+  None = 0,
+  ExplicitProperties = 1,
+}
+
 public partial class Generator
 {
   private readonly Dictionary<string, bool> _boolDone = new();
@@ -11,13 +18,21 @@ public partial class Generator
   private readonly Assembly[] _assemblies;
   private readonly string[] _namespaces;
   private readonly ExcludedType[] _excludedTypes;
+  private readonly GeneratorOptions _options;
 
-  public Generator(string path, Assembly[] assemblies, string[] namespaces, ExcludedType[] excludedTypes)
+  public Generator(
+    string path,
+    Assembly[] assemblies,
+    string[] namespaces,
+    ExcludedType[] excludedTypes,
+    GeneratorOptions options = GeneratorOptions.None
+  )
   {
     _path = Path.Combine(Environment.CurrentDirectory, "..", "..", "..", "..", path, "generated");
     _assemblies = assemblies;
     _namespaces = namespaces;
     _excludedTypes = excludedTypes;
+    _options = options;
     AppDomain.CurrentDomain.ReflectionOnlyAssemblyResolve += CurrentDomainOnReflectionOnlyAssemblyResolve;
   }
 

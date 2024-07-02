@@ -25,7 +25,25 @@ public partial class Generator
       {
         if (method.IsSpecialName)
         {
-          continue;
+          if (_options.HasFlag(GeneratorOptions.ExplicitProperties))
+          {
+            var parameters = method.GetParameters();
+            if (
+              (method.Name.StartsWith("get_") && parameters.Any())
+              || (method.Name.StartsWith("set_") && parameters.Length != 1)
+            )
+            {
+              //valid
+            }
+            else
+            {
+              continue;
+            }
+          }
+          else
+          {
+            continue;
+          }
         }
 
         var methodSb = new StringBuilder();

@@ -23,7 +23,12 @@ public partial class Generator
     string name;
     if (isOut)
     {
-      name = "out " + FormGenericType(type.GetElementType(), false);
+      name =
+        "out "
+        + FormGenericType(
+          type.GetElementType() ?? throw new ApplicationException($"Cannot make parameter {type}"),
+          false
+        );
     }
     else
     {

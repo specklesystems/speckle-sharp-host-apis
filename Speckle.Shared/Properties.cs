@@ -51,6 +51,10 @@ public partial class Generator
     var getMethod = propertyInfo.GetGetMethod(true);
     if (getMethod is not null)
     {
+      if (_options.HasFlag(GeneratorOptions.ExplicitProperties) && getMethod.GetParameters().Any())
+      {
+        throw new ApplicationException($"getter has parameters {propertyInfo.Name}");
+      }
       bool isOverriden = getMethod.GetBaseDefinition().DeclaringType != propertyInfo.DeclaringType;
       if (wrotePropHeader is false)
       {
@@ -70,6 +74,10 @@ public partial class Generator
     if (setMethod is not null)
     {
       var parameters = setMethod.GetParameters();
+      if (_options.HasFlag(GeneratorOptions.ExplicitProperties) && parameters.Length > 1)
+      {
+        throw new ApplicationException($"setter has more than one parameter {propertyInfo.Name}");
+      }
       bool isOverriden = setMethod.GetBaseDefinition().DeclaringType != propertyInfo.DeclaringType;
       if (wrotePropHeader is false)
       {
