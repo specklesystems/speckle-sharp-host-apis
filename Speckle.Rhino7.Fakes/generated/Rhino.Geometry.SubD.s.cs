@@ -20,6 +20,18 @@ public partial class SubD : Rhino.Geometry.GeometryBase
 	public virtual System.UInt32 UpdateAllTagsAndSectorCoefficients() => throw new System.NotImplementedException();
 	public virtual System.Boolean Subdivide(System.Int32 count) => throw new System.NotImplementedException();
 	public virtual System.Boolean InterpolateSurfacePoints(Rhino.Geometry.Point3d[] surfacePoints) => throw new System.NotImplementedException();
+	public virtual Rhino.Geometry.Collections.SubDFaceList Faces
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Rhino.Geometry.Collections.SubDVertexList Vertices
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Rhino.Geometry.Collections.SubDEdgeList Edges
+	{
+		get => throw new System.NotImplementedException();
+	}
 	public virtual System.Boolean IsSolid
 	{
 		get => throw new System.NotImplementedException();

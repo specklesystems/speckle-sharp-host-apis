@@ -145,6 +145,38 @@ public partial class Brep : Rhino.Geometry.GeometryBase
 	public virtual void Flip() => throw new System.NotImplementedException();
 	public virtual System.Boolean IsDuplicate(Rhino.Geometry.Brep other,System.Double tolerance) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.Point3d ClosestPoint(Rhino.Geometry.Point3d testPoint) => throw new System.NotImplementedException();
+	public virtual Rhino.Geometry.Collections.BrepVertexList Vertices
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Rhino.Geometry.Collections.BrepSurfaceList Surfaces
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Rhino.Geometry.Collections.BrepEdgeList Edges
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Rhino.Geometry.Collections.BrepTrimList Trims
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Rhino.Geometry.Collections.BrepLoopList Loops
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Rhino.Geometry.Collections.BrepFaceList Faces
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Rhino.Geometry.Collections.BrepCurveList Curves2D
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Rhino.Geometry.Collections.BrepCurveList Curves3D
+	{
+		get => throw new System.NotImplementedException();
+	}
 	public virtual System.Boolean IsSolid
 	{
 		get => throw new System.NotImplementedException();

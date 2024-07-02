@@ -27,6 +27,18 @@ public partial class NurbsSurface : Rhino.Geometry.Surface,Rhino.IEpsilonCompara
 	public virtual void CopyFrom(Rhino.Geometry.NurbsSurface other) => throw new System.NotImplementedException();
 	public virtual Rhino.Geometry.BezierSurface ConvertSpanToBezier(System.Int32 spanIndex0,System.Int32 spanIndex1) => throw new System.NotImplementedException();
 	public virtual System.Boolean EpsilonEquals(Rhino.Geometry.NurbsSurface other,System.Double epsilon) => throw new System.NotImplementedException();
+	public virtual Rhino.Geometry.Collections.NurbsSurfaceKnotList KnotsU
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Rhino.Geometry.Collections.NurbsSurfaceKnotList KnotsV
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Rhino.Geometry.Collections.NurbsSurfacePointList Points
+	{
+		get => throw new System.NotImplementedException();
+	}
 	public virtual System.Boolean IsRational
 	{
 		get => throw new System.NotImplementedException();

@@ -1,6 +1,6 @@
 namespace Rhino.Collections;
 
-public partial class RhinoList<T> : System.Collections.Generic.IList<T>,System.Collections.IList,System.ICloneable
+public partial class RhinoList<T> : System.Collections.Generic.IList<T>,System.Collections.Generic.ICollection<T>,System.Collections.Generic.IEnumerable<T>,System.Collections.IEnumerable,System.Collections.IList,System.Collections.ICollection,System.ICloneable
 {
 	public RhinoList() {}
 	public RhinoList(System.Int32 initialCapacity) => throw new System.NotImplementedException();

@@ -1,6 +1,6 @@
 namespace Rhino.Render;
 
-public partial class Decals : System.Collections.Generic.IEnumerable<Rhino.Render.Decal>
+public partial class Decals : System.Collections.Generic.IEnumerable<Rhino.Render.Decal>,System.Collections.IEnumerable
 {
 	public Decals() {}
 	public virtual System.UInt32 Add(Rhino.Render.Decal decal) => throw new System.NotImplementedException();

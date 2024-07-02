@@ -1,6 +1,6 @@
 namespace Rhino.Render;
 
-public partial class RenderMaterialTable : Rhino.Render.IRenderContentTable<Rhino.Render.RenderMaterial>,System.Collections.Generic.IEnumerable<Rhino.Render.RenderMaterial>,Rhino.Collections.IRhinoTable<Rhino.Render.RenderMaterial>
+public partial class RenderMaterialTable : Rhino.Render.IRenderContentTable<Rhino.Render.RenderMaterial>,System.Collections.Generic.IEnumerable<Rhino.Render.RenderMaterial>,System.Collections.IEnumerable,Rhino.Collections.IRhinoTable<Rhino.Render.RenderMaterial>
 {
 	public RenderMaterialTable() {}
 	public virtual System.Boolean Add(Rhino.Render.RenderMaterial c) => throw new System.NotImplementedException();

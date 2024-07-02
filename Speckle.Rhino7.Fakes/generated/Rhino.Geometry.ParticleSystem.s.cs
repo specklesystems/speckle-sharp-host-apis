@@ -1,6 +1,6 @@
 namespace Rhino.Geometry;
 
-public partial class ParticleSystem : System.Collections.Generic.IEnumerable<Rhino.Geometry.Particle>
+public partial class ParticleSystem : System.Collections.Generic.IEnumerable<Rhino.Geometry.Particle>,System.Collections.IEnumerable
 {
 	public ParticleSystem() {}
 	public virtual System.Boolean Add(Rhino.Geometry.Particle particle) => throw new System.NotImplementedException();

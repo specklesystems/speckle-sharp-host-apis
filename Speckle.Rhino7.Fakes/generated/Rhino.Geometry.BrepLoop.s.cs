@@ -21,4 +21,8 @@ public partial class BrepLoop : Rhino.Geometry.GeometryBase
 	{
 		get => throw new System.NotImplementedException();
 	}
+	public virtual Rhino.Geometry.Collections.BrepTrimList Trims
+	{
+		get => throw new System.NotImplementedException();
+	}
 }

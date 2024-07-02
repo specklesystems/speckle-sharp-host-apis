@@ -142,6 +142,10 @@ public partial class Generator
 
   private List<Type> GetInterfaces(Type clazz)
   {
+    if (clazz.BaseType is null || clazz.BaseType == typeof(object))
+    {
+      return clazz.GetInterfaces().ToList();
+    }
     var interfaces = clazz.GetInterfaces().Except(clazz.BaseType?.GetInterfaces() ?? Enumerable.Empty<Type>()).ToList();
     return interfaces.Except(interfaces.SelectMany(i => i.GetInterfaces())).ToList();
   }

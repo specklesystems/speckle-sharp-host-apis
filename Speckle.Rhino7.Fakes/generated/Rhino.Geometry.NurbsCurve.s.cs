@@ -47,6 +47,14 @@ public partial class NurbsCurve : Rhino.Geometry.Curve,Rhino.IEpsilonComparable<
 	{
 		get => throw new System.NotImplementedException();
 	}
+	public virtual Rhino.Geometry.Collections.NurbsCurveKnotList Knots
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Rhino.Geometry.Collections.NurbsCurvePointList Points
+	{
+		get => throw new System.NotImplementedException();
+	}
 	public virtual System.Boolean HasBezierSpans
 	{
 		get => throw new System.NotImplementedException();

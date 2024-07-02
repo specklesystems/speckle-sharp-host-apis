@@ -1,6 +1,6 @@
 namespace Rhino.Render;
 
-public partial class RenderTextureTable : Rhino.Render.IRenderContentTable<Rhino.Render.RenderTexture>,System.Collections.Generic.IEnumerable<Rhino.Render.RenderTexture>,Rhino.Collections.IRhinoTable<Rhino.Render.RenderTexture>
+public partial class RenderTextureTable : Rhino.Render.IRenderContentTable<Rhino.Render.RenderTexture>,System.Collections.Generic.IEnumerable<Rhino.Render.RenderTexture>,System.Collections.IEnumerable,Rhino.Collections.IRhinoTable<Rhino.Render.RenderTexture>
 {
 	public RenderTextureTable() {}
 	public virtual System.Boolean Add(Rhino.Render.RenderTexture c) => throw new System.NotImplementedException();

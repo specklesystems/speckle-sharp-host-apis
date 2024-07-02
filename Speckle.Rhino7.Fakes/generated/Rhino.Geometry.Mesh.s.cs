@@ -157,6 +157,42 @@ public partial class Mesh : Rhino.Geometry.GeometryBase
 	{
 		get => throw new System.NotImplementedException();
 	}
+	public virtual Rhino.Geometry.Collections.MeshVertexList Vertices
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Rhino.Geometry.Collections.MeshTopologyVertexList TopologyVertices
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Rhino.Geometry.Collections.MeshTopologyEdgeList TopologyEdges
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Rhino.Geometry.Collections.MeshVertexNormalList Normals
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Rhino.Geometry.Collections.MeshFaceList Faces
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Rhino.Geometry.Collections.MeshNgonList Ngons
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Rhino.Geometry.Collections.MeshFaceNormalList FaceNormals
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Rhino.Geometry.Collections.MeshTextureCoordinateList TextureCoordinates
+	{
+		get => throw new System.NotImplementedException();
+	}
+	public virtual Rhino.Geometry.Collections.MeshVertexStatusList ComponentStates
+	{
+		get => throw new System.NotImplementedException();
+	}
 	public virtual System.Int32 PartitionCount
 	{
 		get => throw new System.NotImplementedException();

@@ -44,6 +44,10 @@ public partial class BrepFace : Rhino.Geometry.SurfaceProxy
 	{
 		get => throw new System.NotImplementedException();
 	}
+	public virtual Rhino.Geometry.Collections.BrepLoopList Loops
+	{
+		get => throw new System.NotImplementedException();
+	}
 	public virtual Rhino.Geometry.BrepLoop OuterLoop
 	{
 		get => throw new System.NotImplementedException();

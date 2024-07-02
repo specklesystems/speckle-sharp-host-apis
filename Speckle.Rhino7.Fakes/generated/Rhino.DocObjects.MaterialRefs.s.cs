@@ -1,6 +1,6 @@
 namespace Rhino.DocObjects;
 
-public partial class MaterialRefs : System.Collections.Generic.IDictionary<System.Guid, Rhino.DocObjects.MaterialRef>
+public partial class MaterialRefs : System.Collections.Generic.IDictionary<System.Guid, Rhino.DocObjects.MaterialRef>,System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<System.Guid, Rhino.DocObjects.MaterialRef>>,System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<System.Guid, Rhino.DocObjects.MaterialRef>>,System.Collections.IEnumerable
 {
 	public MaterialRefs() {}
 	public virtual Rhino.DocObjects.MaterialRef Create(Rhino.DocObjects.MaterialRefCreateParams createParams) => throw new System.NotImplementedException();
