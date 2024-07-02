@@ -154,7 +154,7 @@ public partial class Generator
   {
     StringBuilder sb = new();
     sb.AppendLine($"namespace {clazz.Namespace};").AppendLine();
-    sb.Append($"public partial interface {FormNameOnly(clazz)}");
+    sb.Append($"public partial interface {FormGenericNameOnly(clazz)}");
     var (constructors, members) = WriteTypeBody(sb, clazz, GeneratedType.Interface);
     return (sb.ToString(), new(clazz.FullName, null, constructors, members));
   }

@@ -71,7 +71,7 @@ public partial class Generator
     {
       try
       {
-        RenderType(type);
+        RenderType(type, false);
       }
       catch (ApplicationException)
       {
@@ -81,7 +81,7 @@ public partial class Generator
     }
   }
 
-  private Type RenderType(Type type)
+  private Type RenderType(Type type, bool isOpenGeneric)
   {
     if (IsExcluded(type.Name, string.Empty))
     {
@@ -110,7 +110,7 @@ public partial class Generator
 
     if (type.IsArray)
     {
-      return RenderType(type.GetElementType().NotNull());
+      return RenderType(type.GetElementType().NotNull(), isOpenGeneric);
     }
 
     if (type.IsGenericType)

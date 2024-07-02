@@ -31,7 +31,7 @@ public partial class Generator
 
   private string FormGenericType(Type type, bool isOpenGeneric)
   {
-    type = RenderType(type);
+    type = RenderType(type, false);
     
     if (!type.IsGenericType)
     {
