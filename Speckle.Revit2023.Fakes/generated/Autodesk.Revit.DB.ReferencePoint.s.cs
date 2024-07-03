@@ -55,7 +55,7 @@ public partial class ReferencePoint : Autodesk.Revit.DB.Element
     get => throw new System.NotImplementedException();
     set { }
   }
-  public new System.String Name
+  public override System.String Name
   {
     get => throw new System.NotImplementedException();
     set { }

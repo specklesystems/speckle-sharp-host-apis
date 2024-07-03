@@ -71,4 +71,8 @@ public partial class UIControlledApplication
   {
     get => throw new System.NotImplementedException();
   }
+  public virtual Autodesk.Revit.ApplicationServices.ControlledApplication ControlledApplication
+  {
+    get => throw new System.NotImplementedException();
+  }
 }

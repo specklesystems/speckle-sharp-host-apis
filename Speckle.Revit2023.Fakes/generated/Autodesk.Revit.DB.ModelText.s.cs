@@ -30,7 +30,7 @@ public partial class ModelText : Autodesk.Revit.DB.Element
     get => throw new System.NotImplementedException();
     set { }
   }
-  public new Autodesk.Revit.DB.Location Location
+  public override Autodesk.Revit.DB.Location Location
   {
     get => throw new System.NotImplementedException();
   }

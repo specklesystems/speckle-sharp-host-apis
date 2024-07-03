@@ -163,7 +163,7 @@ public partial class FamilyInstance : Autodesk.Revit.DB.Instance
   {
     get => throw new System.NotImplementedException();
   }
-  public new Autodesk.Revit.DB.Location Location
+  public override Autodesk.Revit.DB.Location Location
   {
     get => throw new System.NotImplementedException();
   }
