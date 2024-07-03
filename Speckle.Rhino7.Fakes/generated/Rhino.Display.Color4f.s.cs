@@ -1,6 +1,6 @@
 namespace Rhino.Display;
 
-public partial struct Color4f : System.Runtime.Serialization.ISerializable
+public partial class Color4f : System.Runtime.Serialization.ISerializable
 {
   public Color4f() { }
 
@@ -19,13 +19,13 @@ public partial struct Color4f : System.Runtime.Serialization.ISerializable
   public static Rhino.Display.Color4f FromArgb(System.Single a, Rhino.Display.Color4f color) =>
     throw new System.NotImplementedException();
 
-  public Rhino.Display.Color4f BlendTo(System.Single t, Rhino.Display.Color4f col) =>
+  public virtual Rhino.Display.Color4f BlendTo(System.Single t, Rhino.Display.Color4f col) =>
     throw new System.NotImplementedException();
 
   public static Rhino.Display.Color4f ApplyGamma(Rhino.Display.Color4f col, System.Single gamma) =>
     throw new System.NotImplementedException();
 
-  public System.Drawing.Color AsSystemColor() => throw new System.NotImplementedException();
+  public virtual System.Drawing.Color AsSystemColor() => throw new System.NotImplementedException();
 
   void System.Runtime.Serialization.ISerializable.GetObjectData(
     System.Runtime.Serialization.SerializationInfo info,
@@ -44,23 +44,23 @@ public partial struct Color4f : System.Runtime.Serialization.ISerializable
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Single R
+  public virtual System.Single R
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Single G
+  public virtual System.Single G
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Single B
+  public virtual System.Single B
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Single A
+  public virtual System.Single A
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Single L
+  public virtual System.Single L
   {
     get => throw new System.NotImplementedException();
   }

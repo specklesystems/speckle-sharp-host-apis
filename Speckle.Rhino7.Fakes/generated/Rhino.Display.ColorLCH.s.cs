@@ -1,6 +1,6 @@
 namespace Rhino.Display;
 
-public partial struct ColorLCH
+public partial class ColorLCH
 {
   public ColorLCH() { }
 
@@ -27,24 +27,24 @@ public partial struct ColorLCH
   public static Rhino.Display.ColorLCH CreateFromLAB(Rhino.Display.ColorLAB lab) =>
     throw new System.NotImplementedException();
 
-  public void MakePositive() => throw new System.NotImplementedException();
+  public virtual void MakePositive() => throw new System.NotImplementedException();
 
-  public System.Double L
+  public virtual System.Double L
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double C
+  public virtual System.Double C
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double H
+  public virtual System.Double H
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double A
+  public virtual System.Double A
   {
     get => throw new System.NotImplementedException();
     set { }

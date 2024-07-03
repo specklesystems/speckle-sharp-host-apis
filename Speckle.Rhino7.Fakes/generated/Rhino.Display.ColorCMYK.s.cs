@@ -1,6 +1,6 @@
 namespace Rhino.Display;
 
-public partial struct ColorCMYK
+public partial class ColorCMYK
 {
   public ColorCMYK() { }
 
@@ -38,27 +38,27 @@ public partial struct ColorCMYK
   public static Rhino.Display.ColorCMYK CreateFromHSV(Rhino.Display.ColorHSV hsv) =>
     throw new System.NotImplementedException();
 
-  public System.Double C
+  public virtual System.Double C
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double M
+  public virtual System.Double M
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double Y
+  public virtual System.Double Y
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double K
+  public virtual System.Double K
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double A
+  public virtual System.Double A
   {
     get => throw new System.NotImplementedException();
     set { }

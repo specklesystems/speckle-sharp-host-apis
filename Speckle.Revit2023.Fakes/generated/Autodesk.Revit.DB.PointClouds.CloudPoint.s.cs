@@ -1,6 +1,6 @@
 namespace Autodesk.Revit.DB.PointClouds;
 
-public partial struct CloudPoint
+public partial class CloudPoint
 {
   public CloudPoint() { }
 

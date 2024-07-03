@@ -154,7 +154,7 @@ public partial class Generator
   {
     StringBuilder sb = new();
     sb.AppendLine($"namespace {clazz.Namespace};").AppendLine();
-    sb.Append($"public partial struct {clazz.Name}");
+    sb.Append($"public partial class {clazz.Name}");
     bool appended = false;
     bool isFirst = true;
     var interfaces = GetInterfaces(clazz);
@@ -204,7 +204,7 @@ public partial class Generator
     {
       constructors = WriteConstructors(sb, clazz);
     }
-    WriteFields(sb, clazz);
+    WriteFields(sb, clazz, generatedType);
 
     var methods = WriteMethods(sb, clazz, generatedType);
     var properties = WriteProperties(sb, clazz, generatedType);
@@ -212,9 +212,10 @@ public partial class Generator
     return (constructors, properties.Concat(methods).ToList());
   }
 
-  private void WriteFields(StringBuilder sb, Type clazz)
+  private void WriteFields(StringBuilder sb, Type clazz, GeneratedType generatedType)
   {
-    foreach (var field in clazz.GetFields(BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly))
+    var bindingAttributes = BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly;
+    foreach (var field in clazz.GetFields(bindingAttributes))
     {
       sb.AppendLine($"public {FormGenericType(field.FieldType, false)} {field.Name};");
     }

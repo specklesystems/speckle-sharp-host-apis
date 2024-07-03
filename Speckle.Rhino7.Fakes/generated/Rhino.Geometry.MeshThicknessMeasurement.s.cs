@@ -1,6 +1,6 @@
 namespace Rhino.Geometry;
 
-public partial struct MeshThicknessMeasurement
+public partial class MeshThicknessMeasurement
 {
   public MeshThicknessMeasurement() { }
 
@@ -12,23 +12,23 @@ public partial struct MeshThicknessMeasurement
     Rhino.Geometry.Point3d oppositePoint
   ) => throw new System.NotImplementedException();
 
-  public System.Int32 MeshIndex
+  public virtual System.Int32 MeshIndex
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Int32 VertexIndex
+  public virtual System.Int32 VertexIndex
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Double Thickness
+  public virtual System.Double Thickness
   {
     get => throw new System.NotImplementedException();
   }
-  public Rhino.Geometry.Point3d Point
+  public virtual Rhino.Geometry.Point3d Point
   {
     get => throw new System.NotImplementedException();
   }
-  public Rhino.Geometry.Point3d OppositePoint
+  public virtual Rhino.Geometry.Point3d OppositePoint
   {
     get => throw new System.NotImplementedException();
   }

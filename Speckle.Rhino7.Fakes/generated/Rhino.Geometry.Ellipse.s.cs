@@ -1,6 +1,6 @@
 namespace Rhino.Geometry;
 
-public partial struct Ellipse : Rhino.IEpsilonComparable<Rhino.Geometry.Ellipse>, System.ICloneable
+public partial class Ellipse : Rhino.IEpsilonComparable<Rhino.Geometry.Ellipse>, System.ICloneable
 {
   public Ellipse() { }
 
@@ -10,29 +10,29 @@ public partial struct Ellipse : Rhino.IEpsilonComparable<Rhino.Geometry.Ellipse>
   public Ellipse(Rhino.Geometry.Point3d center, Rhino.Geometry.Point3d second, Rhino.Geometry.Point3d third) =>
     throw new System.NotImplementedException();
 
-  public Rhino.Geometry.NurbsCurve ToNurbsCurve() => throw new System.NotImplementedException();
+  public virtual Rhino.Geometry.NurbsCurve ToNurbsCurve() => throw new System.NotImplementedException();
 
-  public System.Boolean EpsilonEquals(Rhino.Geometry.Ellipse other, System.Double epsilon) =>
+  public virtual System.Boolean EpsilonEquals(Rhino.Geometry.Ellipse other, System.Double epsilon) =>
     throw new System.NotImplementedException();
 
   System.Object System.ICloneable.Clone() => throw new System.NotImplementedException();
 
-  public Rhino.Geometry.Plane Plane
+  public virtual Rhino.Geometry.Plane Plane
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double Radius1
+  public virtual System.Double Radius1
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double Radius2
+  public virtual System.Double Radius2
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Boolean IsValid
+  public virtual System.Boolean IsValid
   {
     get => throw new System.NotImplementedException();
   }

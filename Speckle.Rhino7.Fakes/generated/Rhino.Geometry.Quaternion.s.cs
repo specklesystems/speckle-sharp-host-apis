@@ -1,6 +1,6 @@
 namespace Rhino.Geometry;
 
-public partial struct Quaternion
+public partial class Quaternion
   : System.IEquatable<Rhino.Geometry.Quaternion>,
     Rhino.IEpsilonComparable<Rhino.Geometry.Quaternion>
 {
@@ -9,45 +9,48 @@ public partial struct Quaternion
   public Quaternion(System.Double a, System.Double b, System.Double c, System.Double d) =>
     throw new System.NotImplementedException();
 
-  public System.Boolean Equals(Rhino.Geometry.Quaternion other) => throw new System.NotImplementedException();
+  public virtual System.Boolean Equals(Rhino.Geometry.Quaternion other) => throw new System.NotImplementedException();
 
-  public System.Boolean EpsilonEquals(Rhino.Geometry.Quaternion other, System.Double epsilon) =>
+  public virtual System.Boolean EpsilonEquals(Rhino.Geometry.Quaternion other, System.Double epsilon) =>
     throw new System.NotImplementedException();
 
-  public void Set(System.Double a, System.Double b, System.Double c, System.Double d) =>
+  public virtual void Set(System.Double a, System.Double b, System.Double c, System.Double d) =>
     throw new System.NotImplementedException();
 
-  public System.Boolean Invert() => throw new System.NotImplementedException();
+  public virtual System.Boolean Invert() => throw new System.NotImplementedException();
 
-  public System.Double DistanceTo(Rhino.Geometry.Quaternion q) => throw new System.NotImplementedException();
+  public virtual System.Double DistanceTo(Rhino.Geometry.Quaternion q) => throw new System.NotImplementedException();
 
   public static System.Double Distance(Rhino.Geometry.Quaternion p, Rhino.Geometry.Quaternion q) =>
     throw new System.NotImplementedException();
 
-  public Rhino.Geometry.Transform MatrixForm() => throw new System.NotImplementedException();
+  public virtual Rhino.Geometry.Transform MatrixForm() => throw new System.NotImplementedException();
 
-  public System.Boolean Unitize() => throw new System.NotImplementedException();
+  public virtual System.Boolean Unitize() => throw new System.NotImplementedException();
 
-  public void SetRotation(System.Double angle, Rhino.Geometry.Vector3d axisOfRotation) =>
+  public virtual void SetRotation(System.Double angle, Rhino.Geometry.Vector3d axisOfRotation) =>
     throw new System.NotImplementedException();
 
   public static Rhino.Geometry.Quaternion Rotation(System.Double angle, Rhino.Geometry.Vector3d axisOfRotation) =>
     throw new System.NotImplementedException();
 
-  public void SetRotation(Rhino.Geometry.Plane plane0, Rhino.Geometry.Plane plane1) =>
+  public virtual void SetRotation(Rhino.Geometry.Plane plane0, Rhino.Geometry.Plane plane1) =>
     throw new System.NotImplementedException();
 
   public static Rhino.Geometry.Quaternion Rotation(Rhino.Geometry.Plane plane0, Rhino.Geometry.Plane plane1) =>
     throw new System.NotImplementedException();
 
-  public System.Boolean GetRotation(out System.Double angle, out Rhino.Geometry.Vector3d axis) =>
+  public virtual System.Boolean GetRotation(out System.Double angle, out Rhino.Geometry.Vector3d axis) =>
     throw new System.NotImplementedException();
 
-  public System.Boolean GetRotation(out Rhino.Geometry.Plane plane) => throw new System.NotImplementedException();
+  public virtual System.Boolean GetRotation(out Rhino.Geometry.Plane plane) =>
+    throw new System.NotImplementedException();
 
-  public System.Boolean GetRotation(out Rhino.Geometry.Transform xform) => throw new System.NotImplementedException();
+  public virtual System.Boolean GetRotation(out Rhino.Geometry.Transform xform) =>
+    throw new System.NotImplementedException();
 
-  public Rhino.Geometry.Vector3d Rotate(Rhino.Geometry.Vector3d v) => throw new System.NotImplementedException();
+  public virtual Rhino.Geometry.Vector3d Rotate(Rhino.Geometry.Vector3d v) =>
+    throw new System.NotImplementedException();
 
   public static Rhino.Geometry.Quaternion Product(Rhino.Geometry.Quaternion p, Rhino.Geometry.Quaternion q) =>
     throw new System.NotImplementedException();
@@ -75,63 +78,63 @@ public partial struct Quaternion
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Double A
+  public virtual System.Double A
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double B
+  public virtual System.Double B
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double C
+  public virtual System.Double C
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double D
+  public virtual System.Double D
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Boolean IsValid
+  public virtual System.Boolean IsValid
   {
     get => throw new System.NotImplementedException();
   }
-  public Rhino.Geometry.Quaternion Conjugate
+  public virtual Rhino.Geometry.Quaternion Conjugate
   {
     get => throw new System.NotImplementedException();
   }
-  public Rhino.Geometry.Quaternion Inverse
+  public virtual Rhino.Geometry.Quaternion Inverse
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Double Length
+  public virtual System.Double Length
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Double LengthSquared
+  public virtual System.Double LengthSquared
   {
     get => throw new System.NotImplementedException();
   }
-  public Rhino.Geometry.Vector3d Vector
+  public virtual Rhino.Geometry.Vector3d Vector
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Double Scalar
+  public virtual System.Double Scalar
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Boolean IsZero
+  public virtual System.Boolean IsZero
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Boolean IsScalar
+  public virtual System.Boolean IsScalar
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Boolean IsVector
+  public virtual System.Boolean IsVector
   {
     get => throw new System.NotImplementedException();
   }

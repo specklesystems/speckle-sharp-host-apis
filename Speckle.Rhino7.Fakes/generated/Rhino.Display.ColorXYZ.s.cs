@@ -1,6 +1,6 @@
 namespace Rhino.Display;
 
-public partial struct ColorXYZ
+public partial class ColorXYZ
 {
   public ColorXYZ() { }
 
@@ -29,22 +29,22 @@ public partial struct ColorXYZ
   public static Rhino.Display.ColorXYZ CreateFromHSV(Rhino.Display.ColorHSV hsv) =>
     throw new System.NotImplementedException();
 
-  public System.Double X
+  public virtual System.Double X
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double Y
+  public virtual System.Double Y
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double Z
+  public virtual System.Double Z
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double A
+  public virtual System.Double A
   {
     get => throw new System.NotImplementedException();
     set { }

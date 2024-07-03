@@ -1,6 +1,6 @@
 namespace Rhino.Geometry;
 
-public partial struct Vector3f
+public partial class Vector3f
   : System.IEquatable<Rhino.Geometry.Vector3f>,
     System.IComparable<Rhino.Geometry.Vector3f>,
     System.IComparable,
@@ -12,26 +12,27 @@ public partial struct Vector3f
 
   public Vector3f(System.Single x, System.Single y, System.Single z) => throw new System.NotImplementedException();
 
-  public System.Boolean Equals(Rhino.Geometry.Vector3f vector) => throw new System.NotImplementedException();
+  public virtual System.Boolean Equals(Rhino.Geometry.Vector3f vector) => throw new System.NotImplementedException();
 
-  public System.Boolean EpsilonEquals(Rhino.Geometry.Vector3f other, System.Single epsilon) =>
+  public virtual System.Boolean EpsilonEquals(Rhino.Geometry.Vector3f other, System.Single epsilon) =>
     throw new System.NotImplementedException();
 
-  public System.Int32 CompareTo(Rhino.Geometry.Vector3f other) => throw new System.NotImplementedException();
+  public virtual System.Int32 CompareTo(Rhino.Geometry.Vector3f other) => throw new System.NotImplementedException();
 
-  public System.String ToString(System.String format, System.IFormatProvider formatProvider) =>
+  public virtual System.String ToString(System.String format, System.IFormatProvider formatProvider) =>
     throw new System.NotImplementedException();
 
-  public System.Boolean Unitize() => throw new System.NotImplementedException();
+  public virtual System.Boolean Unitize() => throw new System.NotImplementedException();
 
-  public void Transform(Rhino.Geometry.Transform transformation) => throw new System.NotImplementedException();
+  public virtual void Transform(Rhino.Geometry.Transform transformation) => throw new System.NotImplementedException();
 
-  public System.Boolean Rotate(System.Double angleRadians, Rhino.Geometry.Vector3f rotationAxis) =>
+  public virtual System.Boolean Rotate(System.Double angleRadians, Rhino.Geometry.Vector3f rotationAxis) =>
     throw new System.NotImplementedException();
 
-  public System.Boolean Reverse() => throw new System.NotImplementedException();
+  public virtual System.Boolean Reverse() => throw new System.NotImplementedException();
 
-  public System.Boolean PerpendicularTo(Rhino.Geometry.Vector3f other) => throw new System.NotImplementedException();
+  public virtual System.Boolean PerpendicularTo(Rhino.Geometry.Vector3f other) =>
+    throw new System.NotImplementedException();
 
   public static Rhino.Geometry.Vector3f Add(Rhino.Geometry.Vector3f vector1, Rhino.Geometry.Vector3f vector2) =>
     throw new System.NotImplementedException();
@@ -85,38 +86,38 @@ public partial struct Vector3f
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Single X
+  public virtual System.Single X
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Single Y
+  public virtual System.Single Y
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Single Z
+  public virtual System.Single Z
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Boolean IsZero
+  public virtual System.Boolean IsZero
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Boolean IsUnitVector
+  public virtual System.Boolean IsUnitVector
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Boolean IsValid
+  public virtual System.Boolean IsValid
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Single SquareLength
+  public virtual System.Single SquareLength
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Single Length
+  public virtual System.Single Length
   {
     get => throw new System.NotImplementedException();
   }

@@ -1,28 +1,29 @@
 namespace Rhino.Geometry;
 
-public partial struct ComponentStatus : System.IEquatable<Rhino.Geometry.ComponentStatus>
+public partial class ComponentStatus : System.IEquatable<Rhino.Geometry.ComponentStatus>
 {
   public ComponentStatus() { }
 
-  public Rhino.Geometry.ComponentStatus WithStates(Rhino.Geometry.ComponentStatus additionalStatus) =>
+  public virtual Rhino.Geometry.ComponentStatus WithStates(Rhino.Geometry.ComponentStatus additionalStatus) =>
     throw new System.NotImplementedException();
 
-  public System.Boolean HasSomeEqualStates(
+  public virtual System.Boolean HasSomeEqualStates(
     Rhino.Geometry.ComponentStatus statesFilter,
     Rhino.Geometry.ComponentStatus comparand
   ) => throw new System.NotImplementedException();
 
-  public System.Boolean HasAllEqualStates(
+  public virtual System.Boolean HasAllEqualStates(
     Rhino.Geometry.ComponentStatus statesFilter,
     Rhino.Geometry.ComponentStatus comparand
   ) => throw new System.NotImplementedException();
 
-  public System.Boolean HasNoEqualStates(
+  public virtual System.Boolean HasNoEqualStates(
     Rhino.Geometry.ComponentStatus statesFilter,
     Rhino.Geometry.ComponentStatus comparand
   ) => throw new System.NotImplementedException();
 
-  public System.Boolean Equals(Rhino.Geometry.ComponentStatus other) => throw new System.NotImplementedException();
+  public virtual System.Boolean Equals(Rhino.Geometry.ComponentStatus other) =>
+    throw new System.NotImplementedException();
 
   public static Rhino.Geometry.ComponentStatus Clear
   {
@@ -56,31 +57,31 @@ public partial struct ComponentStatus : System.IEquatable<Rhino.Geometry.Compone
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Boolean IsClear
+  public virtual System.Boolean IsClear
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Boolean IsDamaged
+  public virtual System.Boolean IsDamaged
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Boolean IsHighlighted
+  public virtual System.Boolean IsHighlighted
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Boolean IsHidden
+  public virtual System.Boolean IsHidden
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Boolean IsLocked
+  public virtual System.Boolean IsLocked
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Boolean IsSelected
+  public virtual System.Boolean IsSelected
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Boolean IsSelectedPersistent
+  public virtual System.Boolean IsSelectedPersistent
   {
     get => throw new System.NotImplementedException();
   }

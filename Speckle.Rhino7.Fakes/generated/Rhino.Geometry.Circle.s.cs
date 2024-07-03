@@ -1,6 +1,6 @@
 namespace Rhino.Geometry;
 
-public partial struct Circle : Rhino.IEpsilonComparable<Rhino.Geometry.Circle>, System.ICloneable
+public partial class Circle : Rhino.IEpsilonComparable<Rhino.Geometry.Circle>, System.ICloneable
 {
   public Circle() { }
 
@@ -40,47 +40,50 @@ public partial struct Circle : Rhino.IEpsilonComparable<Rhino.Geometry.Circle>, 
     System.Double t3
   ) => throw new System.NotImplementedException();
 
-  public System.Boolean IsInPlane(Rhino.Geometry.Plane plane, System.Double tolerance) =>
+  public virtual System.Boolean IsInPlane(Rhino.Geometry.Plane plane, System.Double tolerance) =>
     throw new System.NotImplementedException();
 
-  public Rhino.Geometry.Point3d PointAt(System.Double t) => throw new System.NotImplementedException();
+  public virtual Rhino.Geometry.Point3d PointAt(System.Double t) => throw new System.NotImplementedException();
 
-  public Rhino.Geometry.Vector3d TangentAt(System.Double t) => throw new System.NotImplementedException();
+  public virtual Rhino.Geometry.Vector3d TangentAt(System.Double t) => throw new System.NotImplementedException();
 
-  public Rhino.Geometry.Vector3d DerivativeAt(System.Int32 derivative, System.Double t) =>
+  public virtual Rhino.Geometry.Vector3d DerivativeAt(System.Int32 derivative, System.Double t) =>
     throw new System.NotImplementedException();
 
-  public System.Boolean ClosestParameter(Rhino.Geometry.Point3d testPoint, out System.Double t) =>
+  public virtual System.Boolean ClosestParameter(Rhino.Geometry.Point3d testPoint, out System.Double t) =>
     throw new System.NotImplementedException();
 
-  public Rhino.Geometry.Point3d ClosestPoint(Rhino.Geometry.Point3d testPoint) =>
+  public virtual Rhino.Geometry.Point3d ClosestPoint(Rhino.Geometry.Point3d testPoint) =>
     throw new System.NotImplementedException();
 
-  public System.Boolean Transform(Rhino.Geometry.Transform xform) => throw new System.NotImplementedException();
+  public virtual System.Boolean Transform(Rhino.Geometry.Transform xform) => throw new System.NotImplementedException();
 
-  public System.Boolean Rotate(System.Double sinAngle, System.Double cosAngle, Rhino.Geometry.Vector3d axis) =>
+  public virtual System.Boolean Rotate(System.Double sinAngle, System.Double cosAngle, Rhino.Geometry.Vector3d axis) =>
     throw new System.NotImplementedException();
 
-  public System.Boolean Rotate(
+  public virtual System.Boolean Rotate(
     System.Double sinAngle,
     System.Double cosAngle,
     Rhino.Geometry.Vector3d axis,
     Rhino.Geometry.Point3d point
   ) => throw new System.NotImplementedException();
 
-  public System.Boolean Rotate(System.Double angle, Rhino.Geometry.Vector3d axis) =>
+  public virtual System.Boolean Rotate(System.Double angle, Rhino.Geometry.Vector3d axis) =>
     throw new System.NotImplementedException();
 
-  public System.Boolean Rotate(System.Double angle, Rhino.Geometry.Vector3d axis, Rhino.Geometry.Point3d point) =>
-    throw new System.NotImplementedException();
+  public virtual System.Boolean Rotate(
+    System.Double angle,
+    Rhino.Geometry.Vector3d axis,
+    Rhino.Geometry.Point3d point
+  ) => throw new System.NotImplementedException();
 
-  public System.Boolean Translate(Rhino.Geometry.Vector3d delta) => throw new System.NotImplementedException();
+  public virtual System.Boolean Translate(Rhino.Geometry.Vector3d delta) => throw new System.NotImplementedException();
 
-  public void Reverse() => throw new System.NotImplementedException();
+  public virtual void Reverse() => throw new System.NotImplementedException();
 
-  public Rhino.Geometry.NurbsCurve ToNurbsCurve() => throw new System.NotImplementedException();
+  public virtual Rhino.Geometry.NurbsCurve ToNurbsCurve() => throw new System.NotImplementedException();
 
-  public Rhino.Geometry.NurbsCurve ToNurbsCurve(System.Int32 degree, System.Int32 cvCount) =>
+  public virtual Rhino.Geometry.NurbsCurve ToNurbsCurve(System.Int32 degree, System.Int32 cvCount) =>
     throw new System.NotImplementedException();
 
   public static System.Boolean TryFitCircleToPoints(
@@ -88,7 +91,7 @@ public partial struct Circle : Rhino.IEpsilonComparable<Rhino.Geometry.Circle>, 
     out Rhino.Geometry.Circle circle
   ) => throw new System.NotImplementedException();
 
-  public System.Boolean EpsilonEquals(Rhino.Geometry.Circle other, System.Double epsilon) =>
+  public virtual System.Boolean EpsilonEquals(Rhino.Geometry.Circle other, System.Double epsilon) =>
     throw new System.NotImplementedException();
 
   System.Object System.ICloneable.Clone() => throw new System.NotImplementedException();
@@ -97,40 +100,40 @@ public partial struct Circle : Rhino.IEpsilonComparable<Rhino.Geometry.Circle>, 
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Boolean IsValid
+  public virtual System.Boolean IsValid
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Double Radius
-  {
-    get => throw new System.NotImplementedException();
-    set { }
-  }
-  public System.Double Diameter
+  public virtual System.Double Radius
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public Rhino.Geometry.Plane Plane
+  public virtual System.Double Diameter
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public Rhino.Geometry.Point3d Center
+  public virtual Rhino.Geometry.Plane Plane
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public Rhino.Geometry.Vector3d Normal
-  {
-    get => throw new System.NotImplementedException();
-  }
-  public System.Double Circumference
+  public virtual Rhino.Geometry.Point3d Center
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public Rhino.Geometry.BoundingBox BoundingBox
+  public virtual Rhino.Geometry.Vector3d Normal
+  {
+    get => throw new System.NotImplementedException();
+  }
+  public virtual System.Double Circumference
+  {
+    get => throw new System.NotImplementedException();
+    set { }
+  }
+  public virtual Rhino.Geometry.BoundingBox BoundingBox
   {
     get => throw new System.NotImplementedException();
   }

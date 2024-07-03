@@ -1,6 +1,6 @@
 namespace Rhino.Geometry;
 
-public partial struct Arc
+public partial class Arc
   : System.IEquatable<Rhino.Geometry.Arc>,
     Rhino.IEpsilonComparable<Rhino.Geometry.Arc>,
     System.ICloneable
@@ -34,31 +34,32 @@ public partial struct Arc
   public Arc(Rhino.Geometry.Point3d pointA, Rhino.Geometry.Vector3d tangentA, Rhino.Geometry.Point3d pointB) =>
     throw new System.NotImplementedException();
 
-  public System.Boolean Trim(Rhino.Geometry.Interval domain) => throw new System.NotImplementedException();
+  public virtual System.Boolean Trim(Rhino.Geometry.Interval domain) => throw new System.NotImplementedException();
 
-  public System.Boolean Equals(Rhino.Geometry.Arc other) => throw new System.NotImplementedException();
+  public virtual System.Boolean Equals(Rhino.Geometry.Arc other) => throw new System.NotImplementedException();
 
-  public Rhino.Geometry.BoundingBox BoundingBox() => throw new System.NotImplementedException();
+  public virtual Rhino.Geometry.BoundingBox BoundingBox() => throw new System.NotImplementedException();
 
-  public Rhino.Geometry.Point3d PointAt(System.Double t) => throw new System.NotImplementedException();
+  public virtual Rhino.Geometry.Point3d PointAt(System.Double t) => throw new System.NotImplementedException();
 
-  public Rhino.Geometry.Vector3d TangentAt(System.Double t) => throw new System.NotImplementedException();
+  public virtual Rhino.Geometry.Vector3d TangentAt(System.Double t) => throw new System.NotImplementedException();
 
-  public System.Double ClosestParameter(Rhino.Geometry.Point3d testPoint) => throw new System.NotImplementedException();
-
-  public Rhino.Geometry.Point3d ClosestPoint(Rhino.Geometry.Point3d testPoint) =>
+  public virtual System.Double ClosestParameter(Rhino.Geometry.Point3d testPoint) =>
     throw new System.NotImplementedException();
 
-  public void Reverse() => throw new System.NotImplementedException();
-
-  public System.Boolean Transform(Rhino.Geometry.Transform xform) => throw new System.NotImplementedException();
-
-  public Rhino.Geometry.NurbsCurve ToNurbsCurve() => throw new System.NotImplementedException();
-
-  public System.Boolean EpsilonEquals(Rhino.Geometry.Arc other, System.Double epsilon) =>
+  public virtual Rhino.Geometry.Point3d ClosestPoint(Rhino.Geometry.Point3d testPoint) =>
     throw new System.NotImplementedException();
 
-  public Rhino.Geometry.NurbsCurve ToNurbsCurve(System.Int32 degree, System.Int32 cvCount) =>
+  public virtual void Reverse() => throw new System.NotImplementedException();
+
+  public virtual System.Boolean Transform(Rhino.Geometry.Transform xform) => throw new System.NotImplementedException();
+
+  public virtual Rhino.Geometry.NurbsCurve ToNurbsCurve() => throw new System.NotImplementedException();
+
+  public virtual System.Boolean EpsilonEquals(Rhino.Geometry.Arc other, System.Double epsilon) =>
+    throw new System.NotImplementedException();
+
+  public virtual Rhino.Geometry.NurbsCurve ToNurbsCurve(System.Int32 degree, System.Int32 cvCount) =>
     throw new System.NotImplementedException();
 
   System.Object System.ICloneable.Clone() => throw new System.NotImplementedException();
@@ -67,85 +68,85 @@ public partial struct Arc
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Boolean IsValid
+  public virtual System.Boolean IsValid
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Boolean IsCircle
+  public virtual System.Boolean IsCircle
   {
     get => throw new System.NotImplementedException();
   }
-  public Rhino.Geometry.Plane Plane
-  {
-    get => throw new System.NotImplementedException();
-    set { }
-  }
-  public System.Double Radius
+  public virtual Rhino.Geometry.Plane Plane
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double Diameter
+  public virtual System.Double Radius
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public Rhino.Geometry.Point3d Center
+  public virtual System.Double Diameter
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double Circumference
-  {
-    get => throw new System.NotImplementedException();
-  }
-  public System.Double Length
-  {
-    get => throw new System.NotImplementedException();
-  }
-  public Rhino.Geometry.Point3d StartPoint
-  {
-    get => throw new System.NotImplementedException();
-  }
-  public Rhino.Geometry.Point3d MidPoint
-  {
-    get => throw new System.NotImplementedException();
-  }
-  public Rhino.Geometry.Point3d EndPoint
-  {
-    get => throw new System.NotImplementedException();
-  }
-  public Rhino.Geometry.Interval AngleDomain
+  public virtual Rhino.Geometry.Point3d Center
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double StartAngle
+  public virtual System.Double Circumference
+  {
+    get => throw new System.NotImplementedException();
+  }
+  public virtual System.Double Length
+  {
+    get => throw new System.NotImplementedException();
+  }
+  public virtual Rhino.Geometry.Point3d StartPoint
+  {
+    get => throw new System.NotImplementedException();
+  }
+  public virtual Rhino.Geometry.Point3d MidPoint
+  {
+    get => throw new System.NotImplementedException();
+  }
+  public virtual Rhino.Geometry.Point3d EndPoint
+  {
+    get => throw new System.NotImplementedException();
+  }
+  public virtual Rhino.Geometry.Interval AngleDomain
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double EndAngle
+  public virtual System.Double StartAngle
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double Angle
+  public virtual System.Double EndAngle
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double StartAngleDegrees
+  public virtual System.Double Angle
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double EndAngleDegrees
+  public virtual System.Double StartAngleDegrees
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double AngleDegrees
+  public virtual System.Double EndAngleDegrees
+  {
+    get => throw new System.NotImplementedException();
+    set { }
+  }
+  public virtual System.Double AngleDegrees
   {
     get => throw new System.NotImplementedException();
     set { }
