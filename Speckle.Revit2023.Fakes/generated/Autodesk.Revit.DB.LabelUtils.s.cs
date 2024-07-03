@@ -4,6 +4,11 @@ public partial class LabelUtils : System.IDisposable
 {
   public LabelUtils() { }
 
+  public static System.String GetLabelForBuiltInParameter(
+    Autodesk.Revit.DB.ForgeTypeId parameterTypeId,
+    Autodesk.Revit.ApplicationServices.LanguageType language
+  ) => throw new System.NotImplementedException();
+
   public static System.String GetLabelForBuiltInParameter(Autodesk.Revit.DB.ForgeTypeId parameterTypeId) =>
     throw new System.NotImplementedException();
 
@@ -32,6 +37,11 @@ public partial class LabelUtils : System.IDisposable
 
   public static System.String GetLabelFor(Autodesk.Revit.DB.BuiltInParameterGroup builtInParamGroup) =>
     throw new System.NotImplementedException();
+
+  public static System.String GetLabelFor(
+    Autodesk.Revit.DB.BuiltInParameter builtInParam,
+    Autodesk.Revit.ApplicationServices.LanguageType language
+  ) => throw new System.NotImplementedException();
 
   public static System.String GetLabelFor(Autodesk.Revit.DB.BuiltInParameter builtInParam) =>
     throw new System.NotImplementedException();

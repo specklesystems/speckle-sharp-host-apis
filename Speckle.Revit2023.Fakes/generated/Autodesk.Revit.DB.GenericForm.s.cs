@@ -15,7 +15,7 @@ public partial class GenericForm : Autodesk.Revit.DB.CombinableElement
     get => throw new System.NotImplementedException();
     set { }
   }
-  public new System.String Name
+  public override System.String Name
   {
     set { }
   }

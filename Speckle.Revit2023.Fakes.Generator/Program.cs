@@ -15,6 +15,8 @@ Generator generator =
     [
       "Autodesk.Revit.DB",
       "Autodesk.Revit.DB.Architecture",
+      "Autodesk.Revit.ApplicationServices",
+      "Autodesk.Revit.Creation",
       "Autodesk.Revit.UI",
       "Autodesk.Revit.DB.ExtensibleStorage",
       "Autodesk.Revit.DB.ExternalService",
@@ -36,6 +38,8 @@ Generator generator =
       new("PathReinSpanSymbol", [new("Create")]),
       new("RebarSystemSpanSymbol", [new("Create")]),
       new("ProjectInfo", [new("Name")]),
+      new("Dimension", [new("Name")]),
+      new("ReferencePlane", [new("Name")]),
       new("ImageView", [new("Create")])
     ],
     GeneratorOptions.ExplicitProperties

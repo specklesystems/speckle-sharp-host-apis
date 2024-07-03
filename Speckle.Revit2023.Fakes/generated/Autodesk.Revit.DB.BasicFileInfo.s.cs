@@ -35,6 +35,10 @@ public partial class BasicFileInfo : System.IDisposable
   {
     get => throw new System.NotImplementedException();
   }
+  public virtual Autodesk.Revit.ApplicationServices.LanguageType LanguageWhenSaved
+  {
+    get => throw new System.NotImplementedException();
+  }
   public virtual System.String Format
   {
     get => throw new System.NotImplementedException();

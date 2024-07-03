@@ -556,6 +556,10 @@ public partial class Document : System.IDisposable
   {
     get => throw new System.NotImplementedException();
   }
+  public virtual Autodesk.Revit.ApplicationServices.Application Application
+  {
+    get => throw new System.NotImplementedException();
+  }
   public virtual Autodesk.Revit.DB.Family OwnerFamily
   {
     get => throw new System.NotImplementedException();
@@ -586,6 +590,14 @@ public partial class Document : System.IDisposable
     get => throw new System.NotImplementedException();
   }
   public virtual Autodesk.Revit.DB.FamilyManager FamilyManager
+  {
+    get => throw new System.NotImplementedException();
+  }
+  public virtual Autodesk.Revit.Creation.FamilyItemFactory FamilyCreate
+  {
+    get => throw new System.NotImplementedException();
+  }
+  public virtual Autodesk.Revit.Creation.Document Create
   {
     get => throw new System.NotImplementedException();
   }

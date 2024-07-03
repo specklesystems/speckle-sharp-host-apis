@@ -97,11 +97,6 @@ public partial class Dimension : Autodesk.Revit.DB.Element
     get => throw new System.NotImplementedException();
     set { }
   }
-  public new System.String Name
-  {
-    get => throw new System.NotImplementedException();
-    set { }
-  }
   public virtual Autodesk.Revit.DB.DimensionType DimensionType
   {
     get => throw new System.NotImplementedException();

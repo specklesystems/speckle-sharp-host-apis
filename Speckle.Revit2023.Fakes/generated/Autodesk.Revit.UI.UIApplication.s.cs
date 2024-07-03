@@ -4,6 +4,9 @@ public partial class UIApplication : System.IDisposable
 {
   public UIApplication() { }
 
+  public UIApplication(Autodesk.Revit.ApplicationServices.Application revitApp) =>
+    throw new System.NotImplementedException();
+
   public static void DoDragDrop(System.Object dropData, Autodesk.Revit.UI.IDropHandler handler) =>
     throw new System.NotImplementedException();
 
@@ -82,6 +85,10 @@ public partial class UIApplication : System.IDisposable
     get => throw new System.NotImplementedException();
   }
   public virtual System.Boolean IsViewerModeActive
+  {
+    get => throw new System.NotImplementedException();
+  }
+  public virtual Autodesk.Revit.ApplicationServices.Application Application
   {
     get => throw new System.NotImplementedException();
   }
