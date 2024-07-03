@@ -1,6 +1,6 @@
 namespace Rhino.Geometry;
 
-public partial struct Vector3d
+public partial class Vector3d
   : System.Runtime.Serialization.ISerializable,
     System.IEquatable<Rhino.Geometry.Vector3d>,
     System.IComparable<Rhino.Geometry.Vector3d>,
@@ -77,40 +77,42 @@ public partial struct Vector3d
     Rhino.Geometry.Vector3d z
   ) => throw new System.NotImplementedException();
 
-  public System.Boolean IsTiny(System.Double tolerance) => throw new System.NotImplementedException();
+  public virtual System.Boolean IsTiny(System.Double tolerance) => throw new System.NotImplementedException();
 
-  public System.Boolean IsTiny() => throw new System.NotImplementedException();
+  public virtual System.Boolean IsTiny() => throw new System.NotImplementedException();
 
-  public System.Boolean Equals(Rhino.Geometry.Vector3d vector) => throw new System.NotImplementedException();
+  public virtual System.Boolean Equals(Rhino.Geometry.Vector3d vector) => throw new System.NotImplementedException();
 
-  public System.Boolean EpsilonEquals(Rhino.Geometry.Vector3d other, System.Double epsilon) =>
+  public virtual System.Boolean EpsilonEquals(Rhino.Geometry.Vector3d other, System.Double epsilon) =>
     throw new System.NotImplementedException();
 
-  public System.Int32 CompareTo(Rhino.Geometry.Vector3d other) => throw new System.NotImplementedException();
+  public virtual System.Int32 CompareTo(Rhino.Geometry.Vector3d other) => throw new System.NotImplementedException();
 
-  public System.String ToString(System.String format, System.IFormatProvider formatProvider) =>
+  public virtual System.String ToString(System.String format, System.IFormatProvider formatProvider) =>
     throw new System.NotImplementedException();
 
-  public System.Boolean Unitize() => throw new System.NotImplementedException();
+  public virtual System.Boolean Unitize() => throw new System.NotImplementedException();
 
-  public void Transform(Rhino.Geometry.Transform transformation) => throw new System.NotImplementedException();
+  public virtual void Transform(Rhino.Geometry.Transform transformation) => throw new System.NotImplementedException();
 
-  public System.Boolean Rotate(System.Double angleRadians, Rhino.Geometry.Vector3d rotationAxis) =>
+  public virtual System.Boolean Rotate(System.Double angleRadians, Rhino.Geometry.Vector3d rotationAxis) =>
     throw new System.NotImplementedException();
 
-  public System.Boolean Reverse() => throw new System.NotImplementedException();
+  public virtual System.Boolean Reverse() => throw new System.NotImplementedException();
 
-  public System.Int32 IsParallelTo(Rhino.Geometry.Vector3d other) => throw new System.NotImplementedException();
+  public virtual System.Int32 IsParallelTo(Rhino.Geometry.Vector3d other) => throw new System.NotImplementedException();
 
-  public System.Int32 IsParallelTo(Rhino.Geometry.Vector3d other, System.Double angleTolerance) =>
+  public virtual System.Int32 IsParallelTo(Rhino.Geometry.Vector3d other, System.Double angleTolerance) =>
     throw new System.NotImplementedException();
 
-  public System.Boolean IsPerpendicularTo(Rhino.Geometry.Vector3d other) => throw new System.NotImplementedException();
-
-  public System.Boolean IsPerpendicularTo(Rhino.Geometry.Vector3d other, System.Double angleTolerance) =>
+  public virtual System.Boolean IsPerpendicularTo(Rhino.Geometry.Vector3d other) =>
     throw new System.NotImplementedException();
 
-  public System.Boolean PerpendicularTo(Rhino.Geometry.Vector3d other) => throw new System.NotImplementedException();
+  public virtual System.Boolean IsPerpendicularTo(Rhino.Geometry.Vector3d other, System.Double angleTolerance) =>
+    throw new System.NotImplementedException();
+
+  public virtual System.Boolean PerpendicularTo(Rhino.Geometry.Vector3d other) =>
+    throw new System.NotImplementedException();
 
   void System.Runtime.Serialization.ISerializable.GetObjectData(
     System.Runtime.Serialization.SerializationInfo info,
@@ -141,51 +143,51 @@ public partial struct Vector3d
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Double X
+  public virtual System.Double X
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double Y
+  public virtual System.Double Y
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double Z
+  public virtual System.Double Z
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double this[System.Int32 index]
+  public virtual System.Double this[System.Int32 index]
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Boolean IsValid
+  public virtual System.Boolean IsValid
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Double MinimumCoordinate
+  public virtual System.Double MinimumCoordinate
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Double MaximumCoordinate
+  public virtual System.Double MaximumCoordinate
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Double Length
+  public virtual System.Double Length
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Double SquareLength
+  public virtual System.Double SquareLength
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Boolean IsUnitVector
+  public virtual System.Boolean IsUnitVector
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Boolean IsZero
+  public virtual System.Boolean IsZero
   {
     get => throw new System.NotImplementedException();
   }

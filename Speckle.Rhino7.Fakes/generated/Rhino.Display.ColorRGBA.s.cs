@@ -1,6 +1,6 @@
 namespace Rhino.Display;
 
-public partial struct ColorRGBA
+public partial class ColorRGBA
   : System.Runtime.Serialization.ISerializable,
     System.IFormattable,
     System.IComparable,
@@ -40,17 +40,17 @@ public partial struct ColorRGBA
   public static Rhino.Display.ColorRGBA CreateFromLCH(Rhino.Display.ColorLCH lch) =>
     throw new System.NotImplementedException();
 
-  public System.String ToString(System.String format, System.IFormatProvider formatProvider) =>
+  public virtual System.String ToString(System.String format, System.IFormatProvider formatProvider) =>
     throw new System.NotImplementedException();
 
-  public System.Int32 CompareTo(Rhino.Display.ColorRGBA other) => throw new System.NotImplementedException();
+  public virtual System.Int32 CompareTo(Rhino.Display.ColorRGBA other) => throw new System.NotImplementedException();
 
-  public System.Boolean EpsilonEquals(Rhino.Display.ColorRGBA other, System.Double epsilon) =>
+  public virtual System.Boolean EpsilonEquals(Rhino.Display.ColorRGBA other, System.Double epsilon) =>
     throw new System.NotImplementedException();
 
-  public System.Boolean Equals(Rhino.Display.ColorRGBA other) => throw new System.NotImplementedException();
+  public virtual System.Boolean Equals(Rhino.Display.ColorRGBA other) => throw new System.NotImplementedException();
 
-  public Rhino.Display.ColorRGBA BlendTo(Rhino.Display.ColorRGBA col, System.Double coefficient) =>
+  public virtual Rhino.Display.ColorRGBA BlendTo(Rhino.Display.ColorRGBA col, System.Double coefficient) =>
     throw new System.NotImplementedException();
 
   public static Rhino.Display.ColorRGBA ApplyGamma(Rhino.Display.ColorRGBA col, System.Double gamma) =>
@@ -63,22 +63,22 @@ public partial struct ColorRGBA
 
   System.Int32 System.IComparable.CompareTo(System.Object obj) => throw new System.NotImplementedException();
 
-  public System.Double R
+  public virtual System.Double R
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double G
+  public virtual System.Double G
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double B
+  public virtual System.Double B
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double A
+  public virtual System.Double A
   {
     get => throw new System.NotImplementedException();
     set { }

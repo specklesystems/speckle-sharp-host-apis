@@ -1,139 +1,145 @@
 namespace Rhino.Geometry;
 
-public partial struct Triangle3d
+public partial class Triangle3d
 {
   public Triangle3d() { }
 
   public Triangle3d(Rhino.Geometry.Point3d a, Rhino.Geometry.Point3d b, Rhino.Geometry.Point3d c) =>
     throw new System.NotImplementedException();
 
-  public Rhino.Geometry.Triangle3d Transform(Rhino.Geometry.Transform transform) =>
+  public virtual Rhino.Geometry.Triangle3d Transform(Rhino.Geometry.Transform transform) =>
     throw new System.NotImplementedException();
 
-  public Rhino.Geometry.Polyline ToPolyline() => throw new System.NotImplementedException();
+  public virtual Rhino.Geometry.Polyline ToPolyline() => throw new System.NotImplementedException();
 
-  public Rhino.Geometry.Mesh ToMesh() => throw new System.NotImplementedException();
+  public virtual Rhino.Geometry.Mesh ToMesh() => throw new System.NotImplementedException();
 
-  public Rhino.Geometry.Triangle3d WithA(Rhino.Geometry.Point3d a) => throw new System.NotImplementedException();
-
-  public Rhino.Geometry.Triangle3d WithB(Rhino.Geometry.Point3d b) => throw new System.NotImplementedException();
-
-  public Rhino.Geometry.Triangle3d WithC(Rhino.Geometry.Point3d c) => throw new System.NotImplementedException();
-
-  public Rhino.Geometry.Point3d PointAtBarycentricCoords(Rhino.Geometry.Point2d coords) =>
+  public virtual Rhino.Geometry.Triangle3d WithA(Rhino.Geometry.Point3d a) =>
     throw new System.NotImplementedException();
 
-  public Rhino.Geometry.Point2d BarycentricCoordsAt(Rhino.Geometry.Point3d point, out System.Double signedHeight) =>
+  public virtual Rhino.Geometry.Triangle3d WithB(Rhino.Geometry.Point3d b) =>
     throw new System.NotImplementedException();
 
-  public Rhino.Geometry.Point3d PointAlongBoundary(System.Double t) => throw new System.NotImplementedException();
-
-  public System.Double ClosestParameterOnBoundary(Rhino.Geometry.Point3d point) =>
+  public virtual Rhino.Geometry.Triangle3d WithC(Rhino.Geometry.Point3d c) =>
     throw new System.NotImplementedException();
 
-  public Rhino.Geometry.Point3d ClosestPointOnBoundary(Rhino.Geometry.Point3d point) =>
+  public virtual Rhino.Geometry.Point3d PointAtBarycentricCoords(Rhino.Geometry.Point2d coords) =>
     throw new System.NotImplementedException();
 
-  public Rhino.Geometry.Point3d PointOnInterior(System.Double u, System.Double v) =>
+  public virtual Rhino.Geometry.Point2d BarycentricCoordsAt(
+    Rhino.Geometry.Point3d point,
+    out System.Double signedHeight
+  ) => throw new System.NotImplementedException();
+
+  public virtual Rhino.Geometry.Point3d PointAlongBoundary(System.Double t) =>
     throw new System.NotImplementedException();
 
-  public Rhino.Geometry.Point3d A
+  public virtual System.Double ClosestParameterOnBoundary(Rhino.Geometry.Point3d point) =>
+    throw new System.NotImplementedException();
+
+  public virtual Rhino.Geometry.Point3d ClosestPointOnBoundary(Rhino.Geometry.Point3d point) =>
+    throw new System.NotImplementedException();
+
+  public virtual Rhino.Geometry.Point3d PointOnInterior(System.Double u, System.Double v) =>
+    throw new System.NotImplementedException();
+
+  public virtual Rhino.Geometry.Point3d A
   {
     get => throw new System.NotImplementedException();
   }
-  public Rhino.Geometry.Point3d B
+  public virtual Rhino.Geometry.Point3d B
   {
     get => throw new System.NotImplementedException();
   }
-  public Rhino.Geometry.Point3d C
+  public virtual Rhino.Geometry.Point3d C
   {
     get => throw new System.NotImplementedException();
   }
-  public Rhino.Geometry.Circle Circumcircle
+  public virtual Rhino.Geometry.Circle Circumcircle
   {
     get => throw new System.NotImplementedException();
   }
-  public Rhino.Geometry.BoundingBox BoundingBox
+  public virtual Rhino.Geometry.BoundingBox BoundingBox
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Double AngleA
+  public virtual System.Double AngleA
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Double AngleB
+  public virtual System.Double AngleB
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Double AngleC
+  public virtual System.Double AngleC
   {
     get => throw new System.NotImplementedException();
   }
-  public Rhino.Geometry.Line AB
+  public virtual Rhino.Geometry.Line AB
   {
     get => throw new System.NotImplementedException();
   }
-  public Rhino.Geometry.Line BC
+  public virtual Rhino.Geometry.Line BC
   {
     get => throw new System.NotImplementedException();
   }
-  public Rhino.Geometry.Line CA
+  public virtual Rhino.Geometry.Line CA
   {
     get => throw new System.NotImplementedException();
   }
-  public Rhino.Geometry.Line MedianA
+  public virtual Rhino.Geometry.Line MedianA
   {
     get => throw new System.NotImplementedException();
   }
-  public Rhino.Geometry.Line MedianB
+  public virtual Rhino.Geometry.Line MedianB
   {
     get => throw new System.NotImplementedException();
   }
-  public Rhino.Geometry.Line MedianC
+  public virtual Rhino.Geometry.Line MedianC
   {
     get => throw new System.NotImplementedException();
   }
-  public Rhino.Geometry.Line AltitudeA
+  public virtual Rhino.Geometry.Line AltitudeA
   {
     get => throw new System.NotImplementedException();
   }
-  public Rhino.Geometry.Line AltitudeB
+  public virtual Rhino.Geometry.Line AltitudeB
   {
     get => throw new System.NotImplementedException();
   }
-  public Rhino.Geometry.Line AltitudeC
+  public virtual Rhino.Geometry.Line AltitudeC
   {
     get => throw new System.NotImplementedException();
   }
-  public Rhino.Geometry.Line PerpendicularAB
+  public virtual Rhino.Geometry.Line PerpendicularAB
   {
     get => throw new System.NotImplementedException();
   }
-  public Rhino.Geometry.Line PerpendicularBC
+  public virtual Rhino.Geometry.Line PerpendicularBC
   {
     get => throw new System.NotImplementedException();
   }
-  public Rhino.Geometry.Line PerpendicularCA
+  public virtual Rhino.Geometry.Line PerpendicularCA
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Double Perimeter
+  public virtual System.Double Perimeter
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Double Area
+  public virtual System.Double Area
   {
     get => throw new System.NotImplementedException();
   }
-  public Rhino.Geometry.Point3d AreaCenter
+  public virtual Rhino.Geometry.Point3d AreaCenter
   {
     get => throw new System.NotImplementedException();
   }
-  public Rhino.Geometry.Point3d Orthocenter
+  public virtual Rhino.Geometry.Point3d Orthocenter
   {
     get => throw new System.NotImplementedException();
   }
-  public Rhino.Geometry.Point3d Circumcenter
+  public virtual Rhino.Geometry.Point3d Circumcenter
   {
     get => throw new System.NotImplementedException();
   }

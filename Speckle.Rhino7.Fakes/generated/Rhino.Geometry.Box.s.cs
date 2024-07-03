@@ -1,6 +1,6 @@
 namespace Rhino.Geometry;
 
-public partial struct Box : Rhino.IEpsilonComparable<Rhino.Geometry.Box>, System.ICloneable
+public partial class Box : Rhino.IEpsilonComparable<Rhino.Geometry.Box>, System.ICloneable
 {
   public Box() { }
 
@@ -24,50 +24,50 @@ public partial struct Box : Rhino.IEpsilonComparable<Rhino.Geometry.Box>, System
   public Box(Rhino.Geometry.Plane basePlane, Rhino.Geometry.BoundingBox boundingbox) =>
     throw new System.NotImplementedException();
 
-  public Rhino.Geometry.Point3d PointAt(System.Double x, System.Double y, System.Double z) =>
+  public virtual Rhino.Geometry.Point3d PointAt(System.Double x, System.Double y, System.Double z) =>
     throw new System.NotImplementedException();
 
-  public Rhino.Geometry.Point3d ClosestPoint(Rhino.Geometry.Point3d point) =>
+  public virtual Rhino.Geometry.Point3d ClosestPoint(Rhino.Geometry.Point3d point) =>
     throw new System.NotImplementedException();
 
-  public Rhino.Geometry.Point3d FurthestPoint(Rhino.Geometry.Point3d point) =>
+  public virtual Rhino.Geometry.Point3d FurthestPoint(Rhino.Geometry.Point3d point) =>
     throw new System.NotImplementedException();
 
-  public void Inflate(System.Double amount) => throw new System.NotImplementedException();
+  public virtual void Inflate(System.Double amount) => throw new System.NotImplementedException();
 
-  public void Inflate(System.Double xAmount, System.Double yAmount, System.Double zAmount) =>
+  public virtual void Inflate(System.Double xAmount, System.Double yAmount, System.Double zAmount) =>
     throw new System.NotImplementedException();
 
-  public System.Boolean Contains(Rhino.Geometry.Point3d point) => throw new System.NotImplementedException();
+  public virtual System.Boolean Contains(Rhino.Geometry.Point3d point) => throw new System.NotImplementedException();
 
-  public System.Boolean Contains(Rhino.Geometry.Point3d point, System.Boolean strict) =>
+  public virtual System.Boolean Contains(Rhino.Geometry.Point3d point, System.Boolean strict) =>
     throw new System.NotImplementedException();
 
-  public System.Boolean Contains(Rhino.Geometry.BoundingBox box) => throw new System.NotImplementedException();
+  public virtual System.Boolean Contains(Rhino.Geometry.BoundingBox box) => throw new System.NotImplementedException();
 
-  public System.Boolean Contains(Rhino.Geometry.BoundingBox box, System.Boolean strict) =>
+  public virtual System.Boolean Contains(Rhino.Geometry.BoundingBox box, System.Boolean strict) =>
     throw new System.NotImplementedException();
 
-  public System.Boolean Contains(Rhino.Geometry.Box box) => throw new System.NotImplementedException();
+  public virtual System.Boolean Contains(Rhino.Geometry.Box box) => throw new System.NotImplementedException();
 
-  public System.Boolean Contains(Rhino.Geometry.Box box, System.Boolean strict) =>
+  public virtual System.Boolean Contains(Rhino.Geometry.Box box, System.Boolean strict) =>
     throw new System.NotImplementedException();
 
-  public void Union(Rhino.Geometry.Point3d point) => throw new System.NotImplementedException();
+  public virtual void Union(Rhino.Geometry.Point3d point) => throw new System.NotImplementedException();
 
-  public System.Boolean MakeValid() => throw new System.NotImplementedException();
+  public virtual System.Boolean MakeValid() => throw new System.NotImplementedException();
 
-  public Rhino.Geometry.Point3d[] GetCorners() => throw new System.NotImplementedException();
+  public virtual Rhino.Geometry.Point3d[] GetCorners() => throw new System.NotImplementedException();
 
-  public System.Boolean Transform(Rhino.Geometry.Transform xform) => throw new System.NotImplementedException();
+  public virtual System.Boolean Transform(Rhino.Geometry.Transform xform) => throw new System.NotImplementedException();
 
-  public void RepositionBasePlane(Rhino.Geometry.Point3d origin) => throw new System.NotImplementedException();
+  public virtual void RepositionBasePlane(Rhino.Geometry.Point3d origin) => throw new System.NotImplementedException();
 
-  public Rhino.Geometry.Brep ToBrep() => throw new System.NotImplementedException();
+  public virtual Rhino.Geometry.Brep ToBrep() => throw new System.NotImplementedException();
 
-  public Rhino.Geometry.Extrusion ToExtrusion() => throw new System.NotImplementedException();
+  public virtual Rhino.Geometry.Extrusion ToExtrusion() => throw new System.NotImplementedException();
 
-  public System.Boolean EpsilonEquals(Rhino.Geometry.Box other, System.Double epsilon) =>
+  public virtual System.Boolean EpsilonEquals(Rhino.Geometry.Box other, System.Double epsilon) =>
     throw new System.NotImplementedException();
 
   System.Object System.ICloneable.Clone() => throw new System.NotImplementedException();
@@ -80,43 +80,43 @@ public partial struct Box : Rhino.IEpsilonComparable<Rhino.Geometry.Box>, System
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Boolean IsValid
+  public virtual System.Boolean IsValid
   {
     get => throw new System.NotImplementedException();
   }
-  public Rhino.Geometry.Plane Plane
-  {
-    get => throw new System.NotImplementedException();
-    set { }
-  }
-  public Rhino.Geometry.Interval X
+  public virtual Rhino.Geometry.Plane Plane
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public Rhino.Geometry.Interval Y
+  public virtual Rhino.Geometry.Interval X
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public Rhino.Geometry.Interval Z
+  public virtual Rhino.Geometry.Interval Y
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public Rhino.Geometry.Point3d Center
+  public virtual Rhino.Geometry.Interval Z
+  {
+    get => throw new System.NotImplementedException();
+    set { }
+  }
+  public virtual Rhino.Geometry.Point3d Center
   {
     get => throw new System.NotImplementedException();
   }
-  public Rhino.Geometry.BoundingBox BoundingBox
+  public virtual Rhino.Geometry.BoundingBox BoundingBox
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Double Area
+  public virtual System.Double Area
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Double Volume
+  public virtual System.Double Volume
   {
     get => throw new System.NotImplementedException();
   }

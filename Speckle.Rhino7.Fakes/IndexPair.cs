@@ -1,6 +1,6 @@
 ﻿namespace Rhino;
 
-public partial struct IndexPair
+public partial class IndexPair
 {
   int System.Collections.Generic.IList<System.Int32>.this[int x]
   {

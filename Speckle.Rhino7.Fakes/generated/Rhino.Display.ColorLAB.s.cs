@@ -1,6 +1,6 @@
 namespace Rhino.Display;
 
-public partial struct ColorLAB
+public partial class ColorLAB
 {
   public ColorLAB() { }
 
@@ -30,22 +30,22 @@ public partial struct ColorLAB
   public static Rhino.Display.ColorLAB CreateFromHSV(Rhino.Display.ColorHSV hsv) =>
     throw new System.NotImplementedException();
 
-  public System.Double L
+  public virtual System.Double L
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double A
+  public virtual System.Double A
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double B
+  public virtual System.Double B
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double Alpha
+  public virtual System.Double Alpha
   {
     get => throw new System.NotImplementedException();
     set { }

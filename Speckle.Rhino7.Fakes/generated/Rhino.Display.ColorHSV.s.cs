@@ -1,6 +1,6 @@
 namespace Rhino.Display;
 
-public partial struct ColorHSV
+public partial class ColorHSV
 {
   public ColorHSV() { }
 
@@ -30,24 +30,24 @@ public partial struct ColorHSV
   public static Rhino.Display.ColorHSV CreateFromLCH(Rhino.Display.ColorLCH lch) =>
     throw new System.NotImplementedException();
 
-  public System.Drawing.Color ToArgbColor() => throw new System.NotImplementedException();
+  public virtual System.Drawing.Color ToArgbColor() => throw new System.NotImplementedException();
 
-  public System.Double H
+  public virtual System.Double H
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double S
+  public virtual System.Double S
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double V
+  public virtual System.Double V
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double A
+  public virtual System.Double A
   {
     get => throw new System.NotImplementedException();
     set { }

@@ -126,7 +126,7 @@ public partial class Generator
     {
       extra += "static";
     }
-    if (generatedType == GeneratedType.Class)
+    if (generatedType != GeneratedType.Interface)
     {
       if (!isStatic)
       {

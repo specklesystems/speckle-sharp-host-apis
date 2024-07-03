@@ -1,6 +1,6 @@
 namespace Rhino.Geometry;
 
-public partial struct Point2d
+public partial class Point2d
   : System.Runtime.Serialization.ISerializable,
     System.IEquatable<Rhino.Geometry.Point2d>,
     System.IComparable<Rhino.Geometry.Point2d>,
@@ -43,19 +43,19 @@ public partial struct Point2d
   public static Rhino.Geometry.Vector2d Subtract(Rhino.Geometry.Point2d point1, Rhino.Geometry.Point2d point2) =>
     throw new System.NotImplementedException();
 
-  public System.Boolean Equals(Rhino.Geometry.Point2d point) => throw new System.NotImplementedException();
+  public virtual System.Boolean Equals(Rhino.Geometry.Point2d point) => throw new System.NotImplementedException();
 
-  public System.Int32 CompareTo(Rhino.Geometry.Point2d other) => throw new System.NotImplementedException();
+  public virtual System.Int32 CompareTo(Rhino.Geometry.Point2d other) => throw new System.NotImplementedException();
 
-  public System.Boolean EpsilonEquals(Rhino.Geometry.Point2d other, System.Double epsilon) =>
+  public virtual System.Boolean EpsilonEquals(Rhino.Geometry.Point2d other, System.Double epsilon) =>
     throw new System.NotImplementedException();
 
-  public System.String ToString(System.String format, System.IFormatProvider formatProvider) =>
+  public virtual System.String ToString(System.String format, System.IFormatProvider formatProvider) =>
     throw new System.NotImplementedException();
 
-  public System.Double DistanceTo(Rhino.Geometry.Point2d other) => throw new System.NotImplementedException();
+  public virtual System.Double DistanceTo(Rhino.Geometry.Point2d other) => throw new System.NotImplementedException();
 
-  public void Transform(Rhino.Geometry.Transform xform) => throw new System.NotImplementedException();
+  public virtual void Transform(Rhino.Geometry.Transform xform) => throw new System.NotImplementedException();
 
   void System.Runtime.Serialization.ISerializable.GetObjectData(
     System.Runtime.Serialization.SerializationInfo info,
@@ -64,30 +64,30 @@ public partial struct Point2d
 
   System.Int32 System.IComparable.CompareTo(System.Object obj) => throw new System.NotImplementedException();
 
-  public System.Double X
+  public virtual System.Double X
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double Y
+  public virtual System.Double Y
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double this[System.Int32 index]
+  public virtual System.Double this[System.Int32 index]
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Boolean IsValid
+  public virtual System.Boolean IsValid
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Double MinimumCoordinate
+  public virtual System.Double MinimumCoordinate
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Double MaximumCoordinate
+  public virtual System.Double MaximumCoordinate
   {
     get => throw new System.NotImplementedException();
   }

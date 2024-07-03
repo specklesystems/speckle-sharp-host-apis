@@ -1,6 +1,6 @@
 namespace Rhino.Geometry;
 
-public partial struct Vector2d
+public partial class Vector2d
   : System.Runtime.Serialization.ISerializable,
     System.IEquatable<Rhino.Geometry.Vector2d>,
     System.IComparable<Rhino.Geometry.Vector2d>,
@@ -34,23 +34,23 @@ public partial struct Vector2d
   public static Rhino.Geometry.Vector2d Negate(Rhino.Geometry.Vector2d vector) =>
     throw new System.NotImplementedException();
 
-  public System.Boolean Equals(Rhino.Geometry.Vector2d vector) => throw new System.NotImplementedException();
+  public virtual System.Boolean Equals(Rhino.Geometry.Vector2d vector) => throw new System.NotImplementedException();
 
-  public System.Boolean EpsilonEquals(Rhino.Geometry.Vector2d other, System.Double epsilon) =>
+  public virtual System.Boolean EpsilonEquals(Rhino.Geometry.Vector2d other, System.Double epsilon) =>
     throw new System.NotImplementedException();
 
-  public System.Int32 CompareTo(Rhino.Geometry.Vector2d other) => throw new System.NotImplementedException();
+  public virtual System.Int32 CompareTo(Rhino.Geometry.Vector2d other) => throw new System.NotImplementedException();
 
-  public System.String ToString(System.String format, System.IFormatProvider formatProvider) =>
+  public virtual System.String ToString(System.String format, System.IFormatProvider formatProvider) =>
     throw new System.NotImplementedException();
 
-  public System.Boolean IsTiny(System.Double tolerance) => throw new System.NotImplementedException();
+  public virtual System.Boolean IsTiny(System.Double tolerance) => throw new System.NotImplementedException();
 
-  public System.Boolean IsTiny() => throw new System.NotImplementedException();
+  public virtual System.Boolean IsTiny() => throw new System.NotImplementedException();
 
-  public System.Boolean Unitize() => throw new System.NotImplementedException();
+  public virtual System.Boolean Unitize() => throw new System.NotImplementedException();
 
-  public System.Boolean Rotate(System.Double angleRadians) => throw new System.NotImplementedException();
+  public virtual System.Boolean Rotate(System.Double angleRadians) => throw new System.NotImplementedException();
 
   void System.Runtime.Serialization.ISerializable.GetObjectData(
     System.Runtime.Serialization.SerializationInfo info,
@@ -59,17 +59,17 @@ public partial struct Vector2d
 
   System.Int32 System.IComparable.CompareTo(System.Object obj) => throw new System.NotImplementedException();
 
-  public System.Double X
+  public virtual System.Double X
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double Y
+  public virtual System.Double Y
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double Length
+  public virtual System.Double Length
   {
     get => throw new System.NotImplementedException();
   }
@@ -81,11 +81,11 @@ public partial struct Vector2d
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Boolean IsValid
+  public virtual System.Boolean IsValid
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Double SquareLength
+  public virtual System.Double SquareLength
   {
     get => throw new System.NotImplementedException();
   }

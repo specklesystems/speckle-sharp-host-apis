@@ -1,6 +1,6 @@
 namespace Rhino.Geometry;
 
-public partial struct Point3d
+public partial class Point3d
   : System.Runtime.Serialization.ISerializable,
     System.IEquatable<Rhino.Geometry.Point3d>,
     System.IComparable<Rhino.Geometry.Point3d>,
@@ -52,24 +52,25 @@ public partial struct Point3d
   public static Rhino.Geometry.Point3d FromPoint3f(Rhino.Geometry.Point3f point) =>
     throw new System.NotImplementedException();
 
-  public System.Boolean EpsilonEquals(Rhino.Geometry.Point3d other, System.Double epsilon) =>
+  public virtual System.Boolean EpsilonEquals(Rhino.Geometry.Point3d other, System.Double epsilon) =>
     throw new System.NotImplementedException();
 
-  public System.Int32 CompareTo(Rhino.Geometry.Point3d other) => throw new System.NotImplementedException();
+  public virtual System.Int32 CompareTo(Rhino.Geometry.Point3d other) => throw new System.NotImplementedException();
 
-  public System.Boolean Equals(Rhino.Geometry.Point3d point) => throw new System.NotImplementedException();
+  public virtual System.Boolean Equals(Rhino.Geometry.Point3d point) => throw new System.NotImplementedException();
 
-  public void Interpolate(Rhino.Geometry.Point3d pA, Rhino.Geometry.Point3d pB, System.Double t) =>
+  public virtual void Interpolate(Rhino.Geometry.Point3d pA, Rhino.Geometry.Point3d pB, System.Double t) =>
     throw new System.NotImplementedException();
 
-  public System.String ToString(System.String format, System.IFormatProvider formatProvider) =>
+  public virtual System.String ToString(System.String format, System.IFormatProvider formatProvider) =>
     throw new System.NotImplementedException();
 
-  public System.Double DistanceTo(Rhino.Geometry.Point3d other) => throw new System.NotImplementedException();
+  public virtual System.Double DistanceTo(Rhino.Geometry.Point3d other) => throw new System.NotImplementedException();
 
-  public System.Double DistanceToSquared(Rhino.Geometry.Point3d other) => throw new System.NotImplementedException();
+  public virtual System.Double DistanceToSquared(Rhino.Geometry.Point3d other) =>
+    throw new System.NotImplementedException();
 
-  public void Transform(Rhino.Geometry.Transform xform) => throw new System.NotImplementedException();
+  public virtual void Transform(Rhino.Geometry.Transform xform) => throw new System.NotImplementedException();
 
   public static Rhino.Geometry.Point3d[] CullDuplicates(
     System.Collections.Generic.IEnumerable<Rhino.Geometry.Point3d> points,
@@ -106,35 +107,35 @@ public partial struct Point3d
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Double X
+  public virtual System.Double X
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double Y
+  public virtual System.Double Y
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double Z
+  public virtual System.Double Z
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double this[System.Int32 index]
+  public virtual System.Double this[System.Int32 index]
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Boolean IsValid
+  public virtual System.Boolean IsValid
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Double MinimumCoordinate
+  public virtual System.Double MinimumCoordinate
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Double MaximumCoordinate
+  public virtual System.Double MaximumCoordinate
   {
     get => throw new System.NotImplementedException();
   }

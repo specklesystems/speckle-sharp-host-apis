@@ -95,7 +95,7 @@ namespace Autodesk.Revit.DB.PointClouds
     object IEnumerator.Current => throw new System.NotImplementedException();
   }
 
-  public partial struct CloudPoint
+  public partial class CloudPoint
   {
     public static implicit operator XYZ(CloudPoint cp) => new(cp.X, cp.Y, cp.Z);
   }

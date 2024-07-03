@@ -1,6 +1,6 @@
 namespace Rhino.Geometry;
 
-public partial struct Line
+public partial class Line
   : System.IEquatable<Rhino.Geometry.Line>,
     Rhino.IEpsilonComparable<Rhino.Geometry.Line>,
     System.ICloneable,
@@ -29,95 +29,103 @@ public partial struct Line
     out Rhino.Geometry.Line fitLine
   ) => throw new System.NotImplementedException();
 
-  public System.Boolean Equals(Rhino.Geometry.Line other) => throw new System.NotImplementedException();
+  public virtual System.Boolean Equals(Rhino.Geometry.Line other) => throw new System.NotImplementedException();
 
-  public System.Boolean EpsilonEquals(Rhino.Geometry.Line other, System.Double epsilon) =>
+  public virtual System.Boolean EpsilonEquals(Rhino.Geometry.Line other, System.Double epsilon) =>
     throw new System.NotImplementedException();
 
-  public System.String ToString(System.String format, System.IFormatProvider formatProvider) =>
+  public virtual System.String ToString(System.String format, System.IFormatProvider formatProvider) =>
     throw new System.NotImplementedException();
 
-  public void Flip() => throw new System.NotImplementedException();
+  public virtual void Flip() => throw new System.NotImplementedException();
 
-  public Rhino.Geometry.Point3d PointAt(System.Double t) => throw new System.NotImplementedException();
+  public virtual Rhino.Geometry.Point3d PointAt(System.Double t) => throw new System.NotImplementedException();
 
-  public System.Double ClosestParameter(Rhino.Geometry.Point3d testPoint) => throw new System.NotImplementedException();
-
-  public Rhino.Geometry.Point3d ClosestPoint(Rhino.Geometry.Point3d testPoint, System.Boolean limitToFiniteSegment) =>
+  public virtual System.Double ClosestParameter(Rhino.Geometry.Point3d testPoint) =>
     throw new System.NotImplementedException();
 
-  public System.Double DistanceTo(Rhino.Geometry.Point3d testPoint, System.Boolean limitToFiniteSegment) =>
+  public virtual Rhino.Geometry.Point3d ClosestPoint(
+    Rhino.Geometry.Point3d testPoint,
+    System.Boolean limitToFiniteSegment
+  ) => throw new System.NotImplementedException();
+
+  public virtual System.Double DistanceTo(Rhino.Geometry.Point3d testPoint, System.Boolean limitToFiniteSegment) =>
     throw new System.NotImplementedException();
 
-  public System.Double MinimumDistanceTo(Rhino.Geometry.Point3d testPoint) =>
+  public virtual System.Double MinimumDistanceTo(Rhino.Geometry.Point3d testPoint) =>
     throw new System.NotImplementedException();
 
-  public System.Double MinimumDistanceTo(Rhino.Geometry.Line testLine) => throw new System.NotImplementedException();
-
-  public System.Double MaximumDistanceTo(Rhino.Geometry.Point3d testPoint) =>
+  public virtual System.Double MinimumDistanceTo(Rhino.Geometry.Line testLine) =>
     throw new System.NotImplementedException();
 
-  public System.Double MaximumDistanceTo(Rhino.Geometry.Line testLine) => throw new System.NotImplementedException();
-
-  public System.Boolean Transform(Rhino.Geometry.Transform xform) => throw new System.NotImplementedException();
-
-  public Rhino.Geometry.NurbsCurve ToNurbsCurve() => throw new System.NotImplementedException();
-
-  public Rhino.Geometry.Point3d PointAtLength(System.Double distance) => throw new System.NotImplementedException();
-
-  public System.Boolean Extend(System.Double startLength, System.Double endLength) =>
+  public virtual System.Double MaximumDistanceTo(Rhino.Geometry.Point3d testPoint) =>
     throw new System.NotImplementedException();
 
-  public System.Boolean ExtendThroughBox(Rhino.Geometry.BoundingBox box) => throw new System.NotImplementedException();
-
-  public System.Boolean ExtendThroughBox(Rhino.Geometry.BoundingBox box, System.Double additionalLength) =>
+  public virtual System.Double MaximumDistanceTo(Rhino.Geometry.Line testLine) =>
     throw new System.NotImplementedException();
 
-  public System.Boolean ExtendThroughBox(Rhino.Geometry.Box box) => throw new System.NotImplementedException();
+  public virtual System.Boolean Transform(Rhino.Geometry.Transform xform) => throw new System.NotImplementedException();
 
-  public System.Boolean ExtendThroughBox(Rhino.Geometry.Box box, System.Double additionalLength) =>
+  public virtual Rhino.Geometry.NurbsCurve ToNurbsCurve() => throw new System.NotImplementedException();
+
+  public virtual Rhino.Geometry.Point3d PointAtLength(System.Double distance) =>
     throw new System.NotImplementedException();
 
-  public System.Boolean TryGetPlane(out Rhino.Geometry.Plane plane) => throw new System.NotImplementedException();
+  public virtual System.Boolean Extend(System.Double startLength, System.Double endLength) =>
+    throw new System.NotImplementedException();
+
+  public virtual System.Boolean ExtendThroughBox(Rhino.Geometry.BoundingBox box) =>
+    throw new System.NotImplementedException();
+
+  public virtual System.Boolean ExtendThroughBox(Rhino.Geometry.BoundingBox box, System.Double additionalLength) =>
+    throw new System.NotImplementedException();
+
+  public virtual System.Boolean ExtendThroughBox(Rhino.Geometry.Box box) => throw new System.NotImplementedException();
+
+  public virtual System.Boolean ExtendThroughBox(Rhino.Geometry.Box box, System.Double additionalLength) =>
+    throw new System.NotImplementedException();
+
+  public virtual System.Boolean TryGetPlane(out Rhino.Geometry.Plane plane) =>
+    throw new System.NotImplementedException();
 
   System.Object System.ICloneable.Clone() => throw new System.NotImplementedException();
 
-  public Rhino.Geometry.Point3d From
+  public virtual Rhino.Geometry.Point3d From
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double FromX
+  public virtual System.Double FromX
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double FromY
+  public virtual System.Double FromY
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double FromZ
+  public virtual System.Double FromZ
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public Rhino.Geometry.Point3d To
+  public virtual Rhino.Geometry.Point3d To
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double ToX
+  public virtual System.Double ToX
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double ToY
+  public virtual System.Double ToY
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double ToZ
+  public virtual System.Double ToZ
   {
     get => throw new System.NotImplementedException();
     set { }
@@ -126,24 +134,24 @@ public partial struct Line
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Boolean IsValid
+  public virtual System.Boolean IsValid
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Double Length
+  public virtual System.Double Length
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public Rhino.Geometry.Vector3d Direction
+  public virtual Rhino.Geometry.Vector3d Direction
   {
     get => throw new System.NotImplementedException();
   }
-  public Rhino.Geometry.Vector3d UnitTangent
+  public virtual Rhino.Geometry.Vector3d UnitTangent
   {
     get => throw new System.NotImplementedException();
   }
-  public Rhino.Geometry.BoundingBox BoundingBox
+  public virtual Rhino.Geometry.BoundingBox BoundingBox
   {
     get => throw new System.NotImplementedException();
   }

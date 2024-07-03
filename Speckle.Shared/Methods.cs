@@ -78,7 +78,7 @@ public partial class Generator
       extras = "static";
     }
 
-    if (generatedType == GeneratedType.Class)
+    if (generatedType != GeneratedType.Interface)
     {
       extras = "virtual";
       if (methodInfo.IsStatic)

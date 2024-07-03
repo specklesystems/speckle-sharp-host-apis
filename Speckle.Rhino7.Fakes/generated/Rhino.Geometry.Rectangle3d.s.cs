@@ -1,6 +1,6 @@
 namespace Rhino.Geometry;
 
-public partial struct Rectangle3d : Rhino.IEpsilonComparable<Rhino.Geometry.Rectangle3d>, System.ICloneable
+public partial class Rectangle3d : Rhino.IEpsilonComparable<Rhino.Geometry.Rectangle3d>, System.ICloneable
 {
   public Rectangle3d() { }
 
@@ -23,37 +23,38 @@ public partial struct Rectangle3d : Rhino.IEpsilonComparable<Rhino.Geometry.Rect
     out System.Double angleDeviation
   ) => throw new System.NotImplementedException();
 
-  public void MakeIncreasing() => throw new System.NotImplementedException();
+  public virtual void MakeIncreasing() => throw new System.NotImplementedException();
 
-  public Rhino.Geometry.Point3d Corner(System.Int32 index) => throw new System.NotImplementedException();
+  public virtual Rhino.Geometry.Point3d Corner(System.Int32 index) => throw new System.NotImplementedException();
 
-  public void RecenterPlane(System.Int32 index) => throw new System.NotImplementedException();
+  public virtual void RecenterPlane(System.Int32 index) => throw new System.NotImplementedException();
 
-  public void RecenterPlane(Rhino.Geometry.Point3d origin) => throw new System.NotImplementedException();
+  public virtual void RecenterPlane(Rhino.Geometry.Point3d origin) => throw new System.NotImplementedException();
 
-  public Rhino.Geometry.Point3d PointAt(System.Double x, System.Double y) => throw new System.NotImplementedException();
-
-  public Rhino.Geometry.Point3d PointAt(System.Double t) => throw new System.NotImplementedException();
-
-  public Rhino.Geometry.Point3d ClosestPoint(Rhino.Geometry.Point3d point) =>
+  public virtual Rhino.Geometry.Point3d PointAt(System.Double x, System.Double y) =>
     throw new System.NotImplementedException();
 
-  public Rhino.Geometry.Point3d ClosestPoint(Rhino.Geometry.Point3d point, System.Boolean includeInterior) =>
+  public virtual Rhino.Geometry.Point3d PointAt(System.Double t) => throw new System.NotImplementedException();
+
+  public virtual Rhino.Geometry.Point3d ClosestPoint(Rhino.Geometry.Point3d point) =>
     throw new System.NotImplementedException();
 
-  public Rhino.Geometry.PointContainment Contains(Rhino.Geometry.Point3d pt) =>
+  public virtual Rhino.Geometry.Point3d ClosestPoint(Rhino.Geometry.Point3d point, System.Boolean includeInterior) =>
     throw new System.NotImplementedException();
 
-  public Rhino.Geometry.PointContainment Contains(System.Double x, System.Double y) =>
+  public virtual Rhino.Geometry.PointContainment Contains(Rhino.Geometry.Point3d pt) =>
     throw new System.NotImplementedException();
 
-  public System.Boolean Transform(Rhino.Geometry.Transform xform) => throw new System.NotImplementedException();
+  public virtual Rhino.Geometry.PointContainment Contains(System.Double x, System.Double y) =>
+    throw new System.NotImplementedException();
 
-  public Rhino.Geometry.Polyline ToPolyline() => throw new System.NotImplementedException();
+  public virtual System.Boolean Transform(Rhino.Geometry.Transform xform) => throw new System.NotImplementedException();
 
-  public Rhino.Geometry.NurbsCurve ToNurbsCurve() => throw new System.NotImplementedException();
+  public virtual Rhino.Geometry.Polyline ToPolyline() => throw new System.NotImplementedException();
 
-  public System.Boolean EpsilonEquals(Rhino.Geometry.Rectangle3d other, System.Double epsilon) =>
+  public virtual Rhino.Geometry.NurbsCurve ToNurbsCurve() => throw new System.NotImplementedException();
+
+  public virtual System.Boolean EpsilonEquals(Rhino.Geometry.Rectangle3d other, System.Double epsilon) =>
     throw new System.NotImplementedException();
 
   System.Object System.ICloneable.Clone() => throw new System.NotImplementedException();
@@ -62,46 +63,46 @@ public partial struct Rectangle3d : Rhino.IEpsilonComparable<Rhino.Geometry.Rect
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Boolean IsValid
+  public virtual System.Boolean IsValid
   {
     get => throw new System.NotImplementedException();
   }
-  public Rhino.Geometry.Plane Plane
-  {
-    get => throw new System.NotImplementedException();
-    set { }
-  }
-  public Rhino.Geometry.Interval X
+  public virtual Rhino.Geometry.Plane Plane
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public Rhino.Geometry.Interval Y
+  public virtual Rhino.Geometry.Interval X
   {
     get => throw new System.NotImplementedException();
     set { }
   }
-  public System.Double Width
+  public virtual Rhino.Geometry.Interval Y
+  {
+    get => throw new System.NotImplementedException();
+    set { }
+  }
+  public virtual System.Double Width
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Double Height
+  public virtual System.Double Height
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Double Area
+  public virtual System.Double Area
   {
     get => throw new System.NotImplementedException();
   }
-  public System.Double Circumference
+  public virtual System.Double Circumference
   {
     get => throw new System.NotImplementedException();
   }
-  public Rhino.Geometry.BoundingBox BoundingBox
+  public virtual Rhino.Geometry.BoundingBox BoundingBox
   {
     get => throw new System.NotImplementedException();
   }
-  public Rhino.Geometry.Point3d Center
+  public virtual Rhino.Geometry.Point3d Center
   {
     get => throw new System.NotImplementedException();
   }
