@@ -1,0 +1,31 @@
+namespace Autodesk.Revit.DB;
+
+public enum BehaviorType
+{
+  Invalid,
+  Normal,
+  Bend,
+  Branch,
+  Intersection,
+  Inline,
+  BreakInto,
+  OrientToObject,
+  OrientToCenterLine,
+  OrientToFace,
+  SystemMember,
+  BaseObject,
+  EndCap,
+  Valve,
+  Flange,
+  MechanicalCoupling,
+  VerticalBend,
+  ElectricalBaseObject,
+  Straight,
+  Flex,
+  Hanger,
+  Flat_Tap,
+  Coupling,
+  Round_CentreLine_Tap,
+  Oval_CentreLine_Tap,
+  Damper,
+}

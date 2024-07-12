@@ -10,7 +10,7 @@ Assembly GetAssembly(string name)
 
 Generator generator =
   new(
-    "Speckle.Revit2023.Fakes",
+    "Speckle.Revit2024.Fakes",
     [GetAssembly("RevitAPI.dll"), GetAssembly("RevitAPIUI.dll")],
     [
       "Autodesk.Revit.DB",

@@ -1,0 +1,30 @@
+namespace Autodesk.Revit.DB;
+
+public enum ViewType
+{
+  Undefined,
+  FloorPlan,
+  EngineeringPlan,
+  AreaPlan,
+  CeilingPlan,
+  Elevation,
+  Section,
+  Detail,
+  ThreeD,
+  Schedule,
+  DraftingView,
+  DrawingSheet,
+  Legend,
+  Report,
+  ProjectBrowser,
+  SystemBrowser,
+  CostReport,
+  LoadsReport,
+  PresureLossReport,
+  PanelSchedule,
+  ColumnSchedule,
+  Walkthrough,
+  Rendering,
+  SystemsAnalysisReport,
+  Internal,
+}
