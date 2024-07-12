@@ -3,6 +3,9 @@ name: .NET Build and Publish
 on:
   push:
     branches: ["main"] 
+on:
+  release:
+    types: [published]
 
 jobs:
   build:
