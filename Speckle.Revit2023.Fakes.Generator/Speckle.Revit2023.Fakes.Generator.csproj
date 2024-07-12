@@ -3,6 +3,7 @@
     <PropertyGroup>
       <OutputType>Exe</OutputType>
       <TargetFramework>net48</TargetFramework>
+      <PlatformTarget>x64</PlatformTarget>
     </PropertyGroup>
   <Import Project="..\Speckle.Shared\Speckle.Shared.projitems" Label="Shared" />
   <ItemGroup> 
