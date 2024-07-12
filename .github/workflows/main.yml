@@ -2,8 +2,7 @@ name: .NET Build and Publish
 
 on:
   push:
-    branches: ["main"] 
-on:
+    branches: ["main"]
   release:
     types: [published]
 
