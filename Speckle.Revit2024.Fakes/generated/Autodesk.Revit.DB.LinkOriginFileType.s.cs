@@ -2,6 +2,6 @@ namespace Autodesk.Revit.DB;
 
 public enum LinkOriginFileType
 {
-  RVT,
-  IFC,
+	RVT,
+	IFC,
 }

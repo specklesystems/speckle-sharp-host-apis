@@ -2,6 +2,6 @@ namespace Autodesk.Revit.DB;
 
 public enum ViewportPositioning
 {
-  ViewportCenter,
-  ViewOrigin,
+	ViewportCenter,
+	ViewOrigin,
 }
