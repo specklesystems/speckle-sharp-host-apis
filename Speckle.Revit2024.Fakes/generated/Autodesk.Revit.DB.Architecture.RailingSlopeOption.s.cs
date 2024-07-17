@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB.Architecture;
 
 public enum RailingSlopeOption
 {
-	ByHost,
-	Flat,
-	Sloped,
+  ByHost,
+  Flat,
+  Sloped,
 }

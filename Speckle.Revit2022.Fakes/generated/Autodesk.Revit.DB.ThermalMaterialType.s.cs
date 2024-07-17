@@ -2,8 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public enum ThermalMaterialType
 {
-	Undefined,
-	Gas,
-	Liquid,
-	Solid,
+  Undefined,
+  Gas,
+  Liquid,
+  Solid,
 }

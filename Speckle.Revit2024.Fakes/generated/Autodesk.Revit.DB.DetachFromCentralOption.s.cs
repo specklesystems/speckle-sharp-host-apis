@@ -2,8 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public enum DetachFromCentralOption
 {
-	DoNotDetach,
-	DetachAndPreserveWorksets,
-	DetachAndDiscardWorksets,
-	ClearTransmittedSaveAsNewCentral,
+  DoNotDetach,
+  DetachAndPreserveWorksets,
+  DetachAndDiscardWorksets,
+  ClearTransmittedSaveAsNewCentral,
 }

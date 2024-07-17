@@ -2,8 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public enum LeadersPresentationMode
 {
-	ShowAll,
-	HideAll,
-	ShowOnlyOne,
-	ShowSpecificLeaders,
+  ShowAll,
+  HideAll,
+  ShowOnlyOne,
+  ShowSpecificLeaders,
 }

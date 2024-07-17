@@ -2,7 +2,7 @@ namespace Autodesk.Revit.DB;
 
 public enum AlternateUnits
 {
-	None,
-	Right,
-	Below,
+  None,
+  Right,
+  Below,
 }

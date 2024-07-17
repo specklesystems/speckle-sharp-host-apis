@@ -2,10 +2,10 @@ namespace Autodesk.Revit.DB;
 
 public enum LayerCategoryType
 {
-	Unsorted,
-	Model,
-	Annotation,
-	AnalyticalModel,
-	Imported,
-	Modifier,
+  Unsorted,
+  Model,
+  Annotation,
+  AnalyticalModel,
+  Imported,
+  Modifier,
 }

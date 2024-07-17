@@ -2,14 +2,15 @@ namespace Autodesk.Revit.DB.Architecture;
 
 public partial class StairsLandingType : Autodesk.Revit.DB.ElementType
 {
-	public StairsLandingType() {}
-	public virtual System.Double Thickness
-	{
-		get => throw new System.NotImplementedException();
-		set {}
-	}
-	public virtual System.Boolean IsMonolithic
-	{
-		get => throw new System.NotImplementedException();
-	}
+  public StairsLandingType() { }
+
+  public virtual System.Double Thickness
+  {
+    get => throw new System.NotImplementedException();
+    set { }
+  }
+  public virtual System.Boolean IsMonolithic
+  {
+    get => throw new System.NotImplementedException();
+  }
 }

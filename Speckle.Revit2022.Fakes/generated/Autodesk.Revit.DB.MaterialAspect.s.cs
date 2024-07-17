@@ -2,6 +2,6 @@ namespace Autodesk.Revit.DB;
 
 public enum MaterialAspect
 {
-	Structural,
-	Thermal,
+  Structural,
+  Thermal,
 }

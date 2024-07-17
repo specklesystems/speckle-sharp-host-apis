@@ -2,5 +2,5 @@ namespace Autodesk.Revit.DB;
 
 public partial class WallFoundationType : Autodesk.Revit.DB.HostObjAttributes
 {
-	public WallFoundationType() {}
+  public WallFoundationType() { }
 }

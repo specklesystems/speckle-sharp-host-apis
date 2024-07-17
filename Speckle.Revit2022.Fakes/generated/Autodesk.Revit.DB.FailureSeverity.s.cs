@@ -2,8 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public enum FailureSeverity
 {
-	None,
-	Warning,
-	Error,
-	DocumentCorruption,
+  None,
+  Warning,
+  Error,
+  DocumentCorruption,
 }

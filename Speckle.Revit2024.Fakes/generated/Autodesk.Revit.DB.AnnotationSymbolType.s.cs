@@ -2,5 +2,5 @@ namespace Autodesk.Revit.DB;
 
 public partial class AnnotationSymbolType : Autodesk.Revit.DB.FamilySymbol
 {
-	public AnnotationSymbolType() {}
+  public AnnotationSymbolType() { }
 }

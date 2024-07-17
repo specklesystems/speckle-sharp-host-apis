@@ -2,6 +2,6 @@ namespace Autodesk.Revit.DB;
 
 public enum DatumEnds
 {
-	End0,
-	End1,
+  End0,
+  End1,
 }

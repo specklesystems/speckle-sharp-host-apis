@@ -2,8 +2,8 @@ namespace Autodesk.Revit.DB;
 
 public enum SpatialElementType
 {
-	Room,
-	Area,
-	Space,
-	LoadArea,
+  Room,
+  Area,
+  Space,
+  LoadArea,
 }
