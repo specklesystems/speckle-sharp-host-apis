@@ -21,7 +21,8 @@ Generator generator =
       "Rhino.Commands",
       "Rhino.Render",
       "Rhino.Display",
-      "Rhino.Geometry.Collections"
+      "Rhino.Geometry.Collections",
+      "Rhino.FileIO"
     ],
     [
       new("HostUtils", [new("GetCustomComputeEndpoints")]),
