@@ -79,6 +79,9 @@ public partial class MeshNgonList
 
   public virtual System.UInt32 IsValid(System.Int32 index) => throw new System.NotImplementedException();
 
+  public virtual System.UInt32 IsValid(System.Int32 index, Rhino.FileIO.TextLog textLog) =>
+    throw new System.NotImplementedException();
+
   public virtual System.Collections.Generic.IEnumerator<Rhino.Geometry.MeshNgon> GetEnumerator() =>
     throw new System.NotImplementedException();
 

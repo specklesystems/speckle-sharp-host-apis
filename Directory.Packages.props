@@ -6,9 +6,9 @@
     <PackageVersion Include="Speckle.Revit.API" Version="2023.0.0" />
     <PackageVersion Include="RhinoCommon" Version="7.13.21348.13001" />
     <PackageVersion Include="RhinoWindows" Version="7.13.21348.13001" />
-    <GlobalPackageReference Include="PolySharp" Version="1.14.1" />
-    <GlobalPackageReference Include="MinVer" Version="5.0.0" />
-    <GlobalPackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" />
     <PackageVersion Include="System.Drawing.Common" Version="8.0.6" />
+    <GlobalPackageReference Include="PolySharp" Version="1.14.1" />
+    <GlobalPackageReference Include="MinVer" Version="6.0.0" />
+    <GlobalPackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" />
   </ItemGroup>
 </Project>

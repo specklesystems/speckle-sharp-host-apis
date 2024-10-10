@@ -27,7 +27,7 @@ Generator generator =
       "Autodesk.Revit.DB.Mechanical",
       "Autodesk.Revit.DB.Analysis",
       "Autodesk.Revit.DB.PointClouds",
-      "Autodesk.Revit.Exceptions"
+      "Autodesk.Revit.Exceptions",
     ],
     [
       new("WallSweepInfo", []),
@@ -40,7 +40,7 @@ Generator generator =
       new("ProjectInfo", [new("Name")]),
       new("Dimension", [new("Name")]),
       new("ReferencePlane", [new("Name")]),
-      new("ImageView", [new("Create")])
+      new("ImageView", [new("Create")]),
     ],
     GeneratorOptions.ExplicitProperties
   );

@@ -135,7 +135,7 @@ public partial class Generator
         .Append(FixName(parameter.Name));
     }
 
-    if (baseType is not null)
+    if (baseType?.FullName is not null)
     {
       if (_info.TryGetValue(baseType.FullName, out var info))
       {

@@ -27,6 +27,9 @@ public partial class CommonObject : System.IDisposable, System.Runtime.Serializa
     System.Collections.Generic.Dictionary<System.String, System.String> jsonDictionary
   ) => throw new System.NotImplementedException();
 
+  public virtual System.String ToJSON(Rhino.FileIO.SerializationOptions options) =>
+    throw new System.NotImplementedException();
+
   public static System.Boolean PerformCorruptionTesting
   {
     get => throw new System.NotImplementedException();

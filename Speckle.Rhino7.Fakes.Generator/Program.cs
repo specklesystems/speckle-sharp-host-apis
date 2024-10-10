@@ -21,7 +21,8 @@ Generator generator =
       "Rhino.Commands",
       "Rhino.Render",
       "Rhino.Display",
-      "Rhino.Geometry.Collections"
+      "Rhino.Geometry.Collections",
+      "Rhino.FileIO",
     ],
     [
       new("HostUtils", [new("GetCustomComputeEndpoints")]),
@@ -43,6 +44,7 @@ Generator generator =
       new("CustomRenderMeshProvider2", [new("BoundingBox")]),
       new("Color4f", [new("GetObjectData")]),
       new("Point3dList", [new("Duplicate"), new("System.ICloneable.Clone")]),
+      new("File3dmCommonComponentTable`1", [new("System.Collections.Generic.ICollection<T>.Add")]),
     ]
   );
 generator.Generate();
