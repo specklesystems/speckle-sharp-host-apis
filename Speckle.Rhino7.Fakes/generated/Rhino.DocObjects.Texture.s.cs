@@ -33,6 +33,11 @@ public partial class Texture : Rhino.Runtime.CommonObject
     get => throw new System.NotImplementedException();
     set { }
   }
+  public virtual Rhino.FileIO.FileReference FileReference
+  {
+    get => throw new System.NotImplementedException();
+    set { }
+  }
   public virtual System.Guid Id
   {
     get => throw new System.NotImplementedException();

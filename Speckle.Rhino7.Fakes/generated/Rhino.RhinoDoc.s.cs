@@ -79,6 +79,9 @@ public partial class RhinoDoc : System.IDisposable
 
   public static System.Boolean OpenFile(System.String path) => throw new System.NotImplementedException();
 
+  public static System.Boolean ReadFile(System.String path, Rhino.FileIO.FileReadOptions options) =>
+    throw new System.NotImplementedException();
+
   public virtual void Dispose() => throw new System.NotImplementedException();
 
   public static Rhino.RhinoDoc CreateHeadless(System.String file3dmTemplatePath) =>
@@ -104,6 +107,12 @@ public partial class RhinoDoc : System.IDisposable
   public virtual System.Boolean Export(System.String filePath) => throw new System.NotImplementedException();
 
   public virtual System.Boolean ExportSelected(System.String filePath) => throw new System.NotImplementedException();
+
+  public virtual System.Boolean WriteFile(System.String path, Rhino.FileIO.FileWriteOptions options) =>
+    throw new System.NotImplementedException();
+
+  public virtual System.Boolean Write3dmFile(System.String path, Rhino.FileIO.FileWriteOptions options) =>
+    throw new System.NotImplementedException();
 
   public virtual System.String FindFile(System.String filename) => throw new System.NotImplementedException();
 
@@ -362,6 +371,10 @@ public partial class RhinoDoc : System.IDisposable
     set { }
   }
   public virtual Rhino.DocObjects.Worksession Worksession
+  {
+    get => throw new System.NotImplementedException();
+  }
+  public virtual Rhino.FileIO.ManifestTable Manifest
   {
     get => throw new System.NotImplementedException();
   }

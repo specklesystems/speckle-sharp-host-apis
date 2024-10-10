@@ -41,6 +41,12 @@ public partial class Interop
   public static Rhino.DocObjects.RhinoObject RhinoObjectFromPointer(System.IntPtr pRhinoObject) =>
     throw new System.NotImplementedException();
 
+  public static System.IntPtr FileWriteOptionsConstPointer(Rhino.FileIO.FileWriteOptions options) =>
+    throw new System.NotImplementedException();
+
+  public static System.IntPtr FileReadOptionsConstPointer(Rhino.FileIO.FileReadOptions options) =>
+    throw new System.NotImplementedException();
+
   public static Rhino.Geometry.GeometryBase CreateFromNativePointer(System.IntPtr pGeometry) =>
     throw new System.NotImplementedException();
 

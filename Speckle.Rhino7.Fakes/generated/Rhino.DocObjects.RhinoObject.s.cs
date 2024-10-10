@@ -152,6 +152,8 @@ public partial class RhinoObject : Rhino.DocObjects.ModelComponent
 
   public virtual System.String ShortDescription(System.Boolean plural) => throw new System.NotImplementedException();
 
+  public virtual void Description(Rhino.FileIO.TextLog textLog) => throw new System.NotImplementedException();
+
   public virtual System.Boolean IsMeshable(Rhino.Geometry.MeshType meshType) =>
     throw new System.NotImplementedException();
 

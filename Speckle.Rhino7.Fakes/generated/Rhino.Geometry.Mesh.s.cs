@@ -203,6 +203,18 @@ public partial class Mesh : Rhino.Geometry.GeometryBase
     System.Double tolerance
   ) => throw new System.NotImplementedException();
 
+  public virtual System.Boolean GetSelfIntersections(
+    System.Double tolerance,
+    out Rhino.Geometry.Polyline[] perforations,
+    System.Boolean overlapsPolylines,
+    out Rhino.Geometry.Polyline[] overlapsPolylinesResult,
+    System.Boolean overlapsMesh,
+    out Rhino.Geometry.Mesh overlapsMeshResult,
+    Rhino.FileIO.TextLog textLog,
+    System.Threading.CancellationToken cancel,
+    System.IProgress<System.Double> progress
+  ) => throw new System.NotImplementedException();
+
   public static Rhino.Geometry.Mesh CreateFromLines(
     Rhino.Geometry.Curve[] lines,
     System.Int32 maxFaceValence,
@@ -570,6 +582,25 @@ public partial class Mesh : Rhino.Geometry.GeometryBase
   public virtual Rhino.Geometry.Mesh[] Split(System.Collections.Generic.IEnumerable<Rhino.Geometry.Mesh> meshes) =>
     throw new System.NotImplementedException();
 
+  public virtual Rhino.Geometry.Mesh[] Split(
+    System.Collections.Generic.IEnumerable<Rhino.Geometry.Mesh> meshes,
+    System.Double tolerance,
+    System.Boolean splitAtCoplanar,
+    Rhino.FileIO.TextLog textLog,
+    System.Threading.CancellationToken cancel,
+    System.IProgress<System.Double> progress
+  ) => throw new System.NotImplementedException();
+
+  public virtual Rhino.Geometry.Mesh[] Split(
+    System.Collections.Generic.IEnumerable<Rhino.Geometry.Mesh> meshes,
+    System.Double tolerance,
+    System.Boolean splitAtCoplanar,
+    System.Boolean createNgons,
+    Rhino.FileIO.TextLog textLog,
+    System.Threading.CancellationToken cancel,
+    System.IProgress<System.Double> progress
+  ) => throw new System.NotImplementedException();
+
   public virtual Rhino.Geometry.Polyline[] GetOutlines(Rhino.Geometry.Plane plane) =>
     throw new System.NotImplementedException();
 
@@ -654,6 +685,14 @@ public partial class Mesh : Rhino.Geometry.GeometryBase
   public virtual Rhino.Geometry.Mesh[] SplitWithProjectedPolylines(
     System.Collections.Generic.IEnumerable<Rhino.Geometry.PolylineCurve> curves,
     System.Double tolerance
+  ) => throw new System.NotImplementedException();
+
+  public virtual Rhino.Geometry.Mesh[] SplitWithProjectedPolylines(
+    System.Collections.Generic.IEnumerable<Rhino.Geometry.PolylineCurve> curves,
+    System.Double tolerance,
+    Rhino.FileIO.TextLog textLog,
+    System.Threading.CancellationToken cancel,
+    System.IProgress<System.Double> progress
   ) => throw new System.NotImplementedException();
 
   public virtual Rhino.Geometry.Mesh Offset(System.Double distance) => throw new System.NotImplementedException();
