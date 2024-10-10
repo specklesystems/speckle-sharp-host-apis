@@ -1,0 +1,33 @@
+namespace Rhino.Runtime;
+
+public enum AdvancedSetting
+{
+  UseNewDraftAngleAnalysisUi,
+  UseCompressionWhenSaving,
+  TestAdvancedString,
+  TestAdvancedInt,
+  PdfOptionalContentGroups,
+  LeaveFloatingPanelsHiddenOnMac,
+  DisableFileWatchers,
+  EnableCheckForUpdates,
+  LeftJustifyNumericText,
+  EnableWindowsGestures,
+  MakeInteriorNgonVertexesSelectable,
+  MacDisplayOldVersionAutosaveWarning,
+  UseNewMissingFontUI,
+  ExportDocumentUserText,
+  CommandsToIgnoreWhenAutoHidingToolPalettes,
+  DisplayNonOriginModelBasepointWarning,
+  UseEntireWidthForTopBand,
+  UseMFCMenuBar,
+  IgnoreRUIPlatform,
+  EnableMcNeelOnlyFeatures,
+  UseRhinoColorsForModalDialogs,
+  AcadExportSelectUnexportableObjects,
+  AcadExportSortLayers,
+  AcadExportWriteEmptyLayers,
+  DisableModelAndPageUnitsDifferDialog,
+  DisablePageUnitsNotInchesOrMMDialog,
+  UseLegacyCurveJoiner,
+  UseLegacyBrepCapper,
+}
