@@ -130,7 +130,7 @@ public partial class Generator
     name switch
     {
       "lock" or "params" or "string" or "override" => "@" + name,
-      _ => name
+      _ => name,
     };
 
   private string GetName(Type type)

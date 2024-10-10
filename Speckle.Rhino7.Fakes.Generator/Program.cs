@@ -22,7 +22,7 @@ Generator generator =
       "Rhino.Render",
       "Rhino.Display",
       "Rhino.Geometry.Collections",
-      "Rhino.FileIO"
+      "Rhino.FileIO",
     ],
     [
       new("HostUtils", [new("GetCustomComputeEndpoints")]),

@@ -59,7 +59,9 @@ public partial class File3dmNamedConstructionPlanes
   {
     get => throw new System.NotImplementedException();
   }
-  Rhino.DocObjects.ConstructionPlane System.Collections.Generic.IList<Rhino.DocObjects.ConstructionPlane>.this[System.Int32 index]
+  Rhino.DocObjects.ConstructionPlane System.Collections.Generic.IList<Rhino.DocObjects.ConstructionPlane>.this[
+    System.Int32 index
+  ]
   {
     get => throw new System.NotImplementedException();
     set { }
